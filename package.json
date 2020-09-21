@@ -1,0 +1,49 @@
+{
+  "name": "styli",
+  "version": "0.0.0",
+  "description": "Make style easy",
+  "scripts": {
+    "dev": "lerna run --parallel --stream dev",
+    "test": "lerna run --parallel --stream test",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "publish": "lerna pubish -- -f"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/",
+      "/.history/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forsigner/styli.git"
+  },
+  "author": "@forsigner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forsigner/styli/issues"
+  },
+  "homepage": "https://github.com/forsigner/styli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/jest": "^26.0.14",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
+}

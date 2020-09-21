@@ -1,0 +1,19 @@
+{
+  "packages": ["packages/*"],
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md", "*.tsconfg.json"],
+      "message": "chore(release): publish",
+      "registry": "http://registry.npmjs.org"
+    },
+    "bootstrap": {
+      "npmClientArgs": [
+        "--registry",
+        "https://registry.npm.taobao.org",
+        "--no-package-lock"
+      ]
+    }
+  },
+  "version": "1.5.0"
+}

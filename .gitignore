@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+
+node_modules/
+build/
+
+yarn-error.log
+npm-debug.log
+lerna-debug.log
+
+yarn.lock
+package-lock.json
