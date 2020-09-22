@@ -11,6 +11,7 @@ import {
   isBgColorKey,
   isValueBgColorKey,
   isFlexKey,
+  isValueFlexKey,
   isPositionKey,
   isValuePositionKey,
 } from './utils'
@@ -73,11 +74,12 @@ export function toSizes(props: Props) {
 
   return keys.reduce((result, cur) => {
     const [key, value] = cur.split('-')
-    const sizeValue = isValueSizeKey(cur) ? props[key] : value
-    return {
-      ...result,
-      [sizeMaps[key]]: getValue(sizeValue, ModifierType.size),
-    }
+    sizeMaps[key].forEach((k) => {
+      const sizeValue = isValueSizeKey(cur) ? props[key] : value
+      result[k] = getValue(sizeValue, ModifierType.size)
+    })
+
+    return result
   }, {} as Props)
 }
 
@@ -147,8 +149,8 @@ export function toFlexs(props: Props) {
   const wraps = ['nowrap', 'wrap']
   const { row, column } = props
 
-  if (row) flexs.flexDirection = 'row'
-  if (column) flexs.flexDirection = 'column'
+  if (row) flexs.flexDirection = G.row
+  if (column) flexs.flexDirection = G.column
 
   // 自动 display: flex
   if (row || column) flexs.display = G.flex
@@ -159,10 +161,9 @@ export function toFlexs(props: Props) {
 
     // set flex-flow、flex-shrink、flex-basic
     if (isFlexKey(key)) {
-      // TODO: handle for react-native
-      const flexValue = key.replace(/^flex-/, '').replace('-', ' ')
-      // flexs.flex = key.replace(/^flex-/, '').replace('-', ' ')
-      flexs.flex = Number(flexValue)
+      const [, value] = key.split('-')
+      const flexValue = isValueFlexKey(key) ? props[key] : value
+      flexs.flex = getValue(flexValue)
     }
 
     // justify-content
@@ -188,7 +189,7 @@ export function toAlignments(props: Props) {
   const rules: { [key: string]: string[] } = {}
 
   if (row) {
-    alignments.flexDirection = 'row'
+    alignments.flexDirection = G.row
     rules.justifyContent = [G.left, G.right, centerX, G.between, G.around, G.evenly]
     rules.alignItems = [G.top, G.bottom, centerY]
   } else {
@@ -200,7 +201,7 @@ export function toAlignments(props: Props) {
       if (!props[p]) continue // need match props key
 
       // 统一默认值为 row
-      if (alignments.flexDirection) alignments.flexDirection = 'row'
+      if (alignments.flexDirection) alignments.flexDirection = G.row
 
       // 触发 flex
       alignments.display = G.flex

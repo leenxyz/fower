@@ -5,7 +5,7 @@ interface MarginMaps {
 }
 
 interface SizeMaps {
-  [key: string]: string
+  [key: string]: string[]
 }
 
 interface PaddingMaps {
@@ -27,6 +27,8 @@ export const G = {
   evenly: 'evenly',
   center: 'center',
   space: 'space',
+  row: 'row',
+  column: 'column',
 }
 
 export const P = {
@@ -68,12 +70,13 @@ export const flexMaps: any = {
 }
 
 export const sizeMaps: SizeMaps = {
-  w: 'width',
-  h: 'height',
-  minW: 'minWidth',
-  maxW: 'maxWidth',
-  minH: 'minHeight',
-  maxH: 'maxHeight',
+  w: ['width'],
+  h: ['height'],
+  s: ['width', 'height'],
+  minW: ['minWidth'],
+  maxW: ['maxWidth'],
+  minH: ['minHeight'],
+  maxH: ['maxHeight'],
 }
 
 export const roundedMaps: any = {

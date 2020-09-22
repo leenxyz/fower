@@ -2,8 +2,16 @@ import { noCase } from 'no-case'
 import { Styli } from './styli'
 import { ModifierType } from './types'
 
+export function isBooleanFlexKey(key: string) {
+  return /^[TLRB]-.*/.test(key)
+}
+
+export function isValueFlexKey(key: string) {
+  return /^[TLRB]$/.test(key)
+}
+
 export function isFlexKey(key: string) {
-  return /^flex-.*/.test(key)
+  return isBooleanFlexKey(key) || isValueFlexKey(key)
 }
 
 export function isBooleanPositionKey(key: string) {
@@ -19,11 +27,11 @@ export function isPositionKey(key: string) {
 }
 
 export function isBooleanSizeKey(key: string) {
-  return /^([wh]|min[HW]|max[HW])-.*/.test(key)
+  return /^([whs]|min[HW]|max[HW])-.*/.test(key)
 }
 
 export function isValueSizeKey(key: string) {
-  return /^[wh]$|^min[WH]$|^max[WH]$/.test(key)
+  return /^[whs]$|^min[WH]$|^max[WH]$/.test(key)
 }
 
 export function isSizeKey(key: string) {
