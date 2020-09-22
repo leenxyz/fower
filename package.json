@@ -1,12 +1,12 @@
 {
   "name": "styli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Make style easy",
   "scripts": {
     "dev": "lerna run --parallel --stream dev",
     "test": "lerna run --parallel --stream test",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "publish": "lerna pubish -- -f"
+    "publish": "lerna publish --force-publish=*"
   },
   "jest": {
     "preset": "ts-jest",
