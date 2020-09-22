@@ -1,8 +1,9 @@
 .DS_Store
 *.swp
+.cache
 
 node_modules/
-build/
+dist
 
 yarn-error.log
 npm-debug.log

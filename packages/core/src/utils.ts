@@ -89,7 +89,9 @@ export function isNumber(s: string) {
 export function getValue(value: string, modifierType?: ModifierType) {
   if (isNumber(value)) {
     if (Styli.configs.transformUnit) {
-      return Styli.configs.transformUnit(parseInt(value, 10), modifierType)
+      return Styli.configs.transformUnit(Number(value), modifierType)
+    } else {
+      return value + Styli.unit
     }
     return value
   }

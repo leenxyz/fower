@@ -28,17 +28,19 @@ const centerX = `${G.center}X`
 const centerY = `${G.center}Y`
 
 export function toStyle(props: any): any {
-  const attr = modifierToStyle(props)
-  if (Array.isArray(props.style)) return [attr, ...props.style]
-  return { ...attr, ...(props || {}) }
+  const style = modifierToStyle(props)
+  if (Array.isArray(props.style)) return [style, ...props.style]
+  return { ...style, ...(props.style || {}) }
 }
 
 export function toFinalProps(props: any) {
   const finalProps = Object.keys(props).reduce((result, key) => {
     if (/style|.*-.*/.test(key)) return result
+
     return { ...result, [key]: (props as any)[key] }
   }, {} as any)
   finalProps.style = toStyle(props)
+
   return finalProps
 }
 
