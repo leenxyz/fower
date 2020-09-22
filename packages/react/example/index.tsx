@@ -7,15 +7,26 @@ const App = () => {
   return (
     <div>
       <View
-        bgRed400
-        p-40px
-        w-200
+        // bgRed400
+        // column
+        // centerY
+        // bottom
+        // right
+        // centerX
+        // right
+        s-600
+        borderBlack-10
         textCenter
         onClick={() => {
           console.log('click......')
         }}
       >
-        this is a View
+        <View s-80 bgBlue400>
+          Box1
+        </View>
+        <View w-120 h-120 bgGreen400>
+          Box2
+        </View>
       </View>
     </div>
   )

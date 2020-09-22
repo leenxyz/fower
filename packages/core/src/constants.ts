@@ -1,4 +1,6 @@
-import { upFirst } from './utils'
+function upFirst(s: string) {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
 
 interface MarginMaps {
   [key: string]: string[]
@@ -29,6 +31,14 @@ export const G = {
   space: 'space',
   row: 'row',
   column: 'column',
+  nowrap: 'nowrap',
+  wrap: 'wrap',
+
+  static: 'static',
+  fixed: 'fixed',
+  absolute: 'absolute',
+  relative: 'relative',
+  sticky: 'sticky',
 }
 
 export const P = {
@@ -36,6 +46,15 @@ export const P = {
   Right: upFirst(G.right),
   Bottom: upFirst(G.bottom),
   Left: upFirst(G.left),
+}
+
+export const positionKeys = [G.static, G.fixed, G.absolute, G.relative, G.sticky]
+
+export const positionMaps: any = {
+  T: G.top,
+  L: G.left,
+  R: G.right,
+  B: G.bottom,
 }
 
 export const paddingMaps: PaddingMaps = {
@@ -95,3 +114,7 @@ export const roundedMaps: any = {
   roundedBL: [`${P.Bottom}${P.Left}`],
   roundedBR: [`${P.Bottom}${P.Right}`],
 }
+
+export const centerX = `${G.center}X`
+
+export const centerY = `${G.center}Y`

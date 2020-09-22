@@ -1,6 +1,49 @@
 import { noCase } from 'no-case'
+import { centerX, centerY, G, positionKeys } from './constants'
 import { Styli } from './styli'
 import { ModifierType } from './types'
+
+export function isFlexboxKey(key: string) {
+  return (
+    [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
+    isFlexKey(key) ||
+    key.startsWith('justify') ||
+    key.startsWith('align')
+  )
+}
+
+export function isAlignmentKey(key: string) {
+  return [
+    G.row,
+    G.column,
+    G.center,
+    centerX,
+    centerY,
+    G.left,
+    G.right,
+    G.top,
+    G.bottom,
+    G.between,
+    G.around,
+    G.evenly,
+  ].includes(key)
+}
+
+export function isBorderKey(key: string) {
+  return key.startsWith('border')
+}
+
+export function isBooleanRoundedKey(key: string) {
+  return /^rounded([TLRB]|T[LR]|B[LR])-.*/.test(key)
+}
+
+export function isValueRoundedKey(key: string) {
+  return /^rounded([TLRB]|T[LR]|B[LR])$/.test(key)
+}
+
+export function isRoundedKey(key: string) {
+  return isBooleanRoundedKey(key) || isValueRoundedKey(key)
+}
 
 export function isBooleanFlexKey(key: string) {
   return /^[TLRB]-.*/.test(key)
@@ -23,7 +66,7 @@ export function isValuePositionKey(key: string) {
 }
 
 export function isPositionKey(key: string) {
-  return isBooleanPositionKey(key) || isValuePositionKey(key)
+  return isBooleanPositionKey(key) || isValuePositionKey(key) || positionKeys.includes(key)
 }
 
 export function isBooleanSizeKey(key: string) {
@@ -78,10 +121,6 @@ export function kebab(s: string) {
   return noCase(s).replace(/\s/g, '-')
 }
 
-export function upFirst(s: string) {
-  return s.charAt(0).toUpperCase() + s.slice(1)
-}
-
 export function isNumber(s: string) {
   return /^-?\d+$/.test(s)
 }
@@ -93,7 +132,6 @@ export function getValue(value: string, modifierType?: ModifierType) {
     } else {
       return value + Styli.unit
     }
-    return value
   }
   return value
 }
