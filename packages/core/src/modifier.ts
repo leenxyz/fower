@@ -20,9 +20,10 @@ import {
   isFlexboxKey,
   isAlignmentKey,
 } from './utils'
-import { presetColors, ColorType } from './colors'
+import { ColorType } from './colors'
 import { weights, fontSizes, leadings } from './typo'
 import { ModifierType } from './types'
+import { Styli } from './styli'
 import {
   G,
   P,
@@ -53,6 +54,8 @@ const postionMaps: any = {
   b: P.Bottom,
   l: P.Left,
 }
+
+const Colors = Styli.Colors
 
 export function toStyle(style: any, propStyle: any = {}): any {
   if (Array.isArray(style)) return [style, ...propStyle]
@@ -154,8 +157,8 @@ export function parseModifiers(props: Props): ParsedModifiers {
       continue
     }
 
-    if (presetColors[prop as ColorType]) {
-      style.color = presetColors[prop as ColorType]
+    if (Colors[prop as ColorType]) {
+      style.color = Colors[prop as ColorType]
       styleKeys.push(prop)
       continue
     }
@@ -241,7 +244,7 @@ export function bgPropToStyle(prop: string, propValue: any) {
     backgroundColor = propValue
   } else {
     const colorKey = prop.replace(/^bg/, '').replace('-', '').toLowerCase() as ColorType
-    backgroundColor = presetColors[colorKey]
+    backgroundColor = Colors[colorKey]
   }
 
   if (!backgroundColor) return {}
@@ -265,8 +268,8 @@ export function borderPropToStyle(prop: string) {
   let [, second, third] = kebab(prop).split('-')
 
   // is border color
-  if (presetColors[second as ColorType]) {
-    style.borderColor = presetColors[second as ColorType]
+  if (Colors[second as ColorType]) {
+    style.borderColor = Colors[second as ColorType]
   } else if (borderStyles.includes(second)) {
     style.borderStyle = second
   } else if (postionMaps[second]) {
