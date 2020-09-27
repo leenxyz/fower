@@ -697,6 +697,8 @@ export interface Texts {
   leadingRelaxed?: boolean
   leadingLoose?: boolean
 
+  color?: string
+
   black?: boolean
 
   white?: boolean
@@ -820,6 +822,8 @@ export interface Texts {
 }
 
 export interface Backgrounds {
+  bg?: string
+
   bgBlack?: boolean
 
   bgWhite?: boolean

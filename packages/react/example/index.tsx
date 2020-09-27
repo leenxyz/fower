@@ -21,7 +21,7 @@ const App = () => {
           console.log('click......')
         }}
       >
-        <View s-80 bgBlue400>
+        <View s-80 bgBlue400 color="red">
           Box1
         </View>
         <View w-120 h-120 bgGreen400>

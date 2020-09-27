@@ -163,6 +163,12 @@ export function parseModifiers(props: Props): ParsedModifiers {
       continue
     }
 
+    if (prop === 'color') {
+      style.color = propValue
+      styleKeys.push(prop)
+      continue
+    }
+
     if (/^text-.*/.test(prop)) {
       const [, value] = prop.split('-')
       if (fontSizes[value]) {
