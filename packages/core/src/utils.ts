@@ -34,11 +34,11 @@ export function isBorderKey(key: string) {
 }
 
 export function isBooleanRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])-.*/.test(key)
+  return /^rounded([TLRB]|T[LR]|B[LR])?-.*/.test(key)
 }
 
 export function isValueRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])$/.test(key)
+  return /^rounded([TLRB]|T[LR]|B[LR])?$/.test(key)
 }
 
 export function isRoundedKey(key: string) {
