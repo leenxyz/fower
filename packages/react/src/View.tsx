@@ -1,7 +1,9 @@
-import React, { FC, HTMLAttributes } from 'react'
+import React, { FC } from 'react'
 import { toFinalProps, Modifiers } from '@styli/core'
 
-export interface ViewProps extends HTMLAttributes<HTMLDivElement>, Modifiers {}
+export interface ViewProps
+  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+    Modifiers {}
 
 export const View: FC<ViewProps> = ({ children, ...props }) => {
   const finalProps = toFinalProps(props)
