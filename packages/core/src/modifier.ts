@@ -19,6 +19,8 @@ import {
   isBorderKey,
   isFlexboxKey,
   isAlignmentKey,
+  isZIndexKey,
+  isValueZIndexKey,
 } from './utils'
 import { ColorType } from './colors'
 import { weights, fontSizes, leadings } from './typo'
@@ -144,6 +146,13 @@ export function parseModifiers(props: Props): ParsedModifiers {
     /** Get position style */
     if (isPositionKey(prop)) {
       style = { ...style, ...positionPropToStyle(prop, propValue) }
+      styleKeys.push(prop)
+      continue
+    }
+
+    /** Get z-indec style */
+    if (isZIndexKey(prop)) {
+      style = { ...style, ...zIndexPropToStyle(prop, propValue) }
       styleKeys.push(prop)
       continue
     }
@@ -392,5 +401,13 @@ export function positionPropToStyle(prop: string, propValue: any) {
   const positionValue = isValuePositionKey(prop) ? propValue : value
   style[positionMaps[key]] = getValue(positionValue, ModifierType.position)
 
+  return style
+}
+
+export function zIndexPropToStyle(prop: string, propValue: any) {
+  let style: any = {}
+  const [, value] = prop.split('-')
+  const zIndexValue = isValueZIndexKey(prop) ? propValue : value
+  style.zIndex = zIndexValue
   return style
 }

@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom'
 import { View } from '../.'
 import { createStyle } from '@styli/core'
 
-const divStyle = createStyle('bgYellow s-120 black center rounded-10')
+const divStyle = createStyle('bgYellow s-120 black center rounded-10 zIndex-10')
 console.log('divStyle:', divStyle)
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
         // right
         // centerX
         // right
+        zIndex-2
         s-600
         borderBlack-10
         textCenter

@@ -29,6 +29,18 @@ export function isAlignmentKey(key: string) {
   ].includes(key)
 }
 
+export function isBooleanZIndexKey(key: string) {
+  return /^zIndex-\d+$/.test(key)
+}
+
+export function isValueZIndexKey(key: string) {
+  return /^zIndex$/.test(key)
+}
+
+export function isZIndexKey(key: string) {
+  return isBooleanZIndexKey(key) || isValueZIndexKey(key)
+}
+
 export function isBorderKey(key: string) {
   return key.startsWith('border')
 }

@@ -5,6 +5,7 @@ export enum ModifierType {
   position = 'position',
   text = 'text',
   size = 'size',
+  ZInde = 'ZIndex',
 }
 
 export interface Modifiers
@@ -15,7 +16,8 @@ export interface Modifiers
     Borders,
     Positions,
     Backgrounds,
-    Texts {}
+    Texts,
+    ZIndex {}
 
 export interface Sizes {
   /**
@@ -1077,4 +1079,17 @@ export interface Borders {
   borderPink700?: boolean // #b83280
   borderPjink800?: boolean // #97266d
   borderPink900?: boolean // #702459
+}
+
+export interface ZIndex {
+  /**
+   * Set z-index
+   *
+   * 用 View 作为示例:
+   * ```tsx
+   * <View zIndex-10></View>
+   * <View zIndex={10}></View>
+   * ```
+   */
+  zIndex?: boolean | number
 }
