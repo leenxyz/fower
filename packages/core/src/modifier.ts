@@ -243,10 +243,11 @@ export function paddingPropToStyle(prop: string, propValue: any) {
 
 export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, value] = prop.split('-')
+  const [key, symbol = '', value] = prop.split(/\b-*?/)
+  const [, minus = ''] = symbol.split('')
 
   marginMaps[key].forEach((k) => {
-    const marginValue = isValueMarginKey(prop) ? propValue : value
+    const marginValue = isValueMarginKey(prop) ? propValue : minus + value
     style[k] = getValue(marginValue, ModifierType.margin)
   })
 
