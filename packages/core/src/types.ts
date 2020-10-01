@@ -658,11 +658,15 @@ export interface Texts {
 
   body?: boolean | number | string
 
-  h1?: boolean | number | string
-
-  h2?: boolean | number | string
-
-  h3?: boolean | number | string
+  /**
+    h1-h6 级标题
+   */
+  h1?: boolean
+  h2?: boolean
+  h3?: boolean
+  h4?: boolean
+  h5?: boolean
+  h6?: boolean
 
   /**
     text-xs

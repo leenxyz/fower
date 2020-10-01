@@ -39,6 +39,7 @@ import {
   positionKeys,
   positionMaps,
 } from './constants'
+import { defaultTagStyle, TagType } from './defaultTagStyle'
 
 interface Props {
   [key: string]: any
@@ -59,13 +60,14 @@ const postionMaps: any = {
 
 const Colors = Styli.Colors
 
-export function toStyle(style: any, propStyle: any = {}): any {
-  if (Array.isArray(style)) return [style, ...propStyle]
-  return { ...style, ...propStyle }
+export function toStyle(defaultStyle: any, style: any, propStyle: any = {}): any {
+  if (Array.isArray(propStyle)) return [defaultStyle, style, ...propStyle]
+  return { ...defaultStyle, ...style, ...propStyle }
 }
 
-export function toFinalProps(props: any) {
+export function toFinalProps(props: any, tag: TagType = 'empty') {
   const { styleKeys = [], style } = parseModifiers(props)
+  const defaultStyle = defaultTagStyle[tag]
 
   const finalProps = Object.keys(props).reduce((result, key) => {
     if (styleKeys.includes(key)) return result
@@ -73,7 +75,7 @@ export function toFinalProps(props: any) {
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  finalProps.style = toStyle(style, props.style)
+  finalProps.style = toStyle(defaultStyle, style, props.style)
 
   return finalProps
 }
@@ -159,6 +161,13 @@ export function parseModifiers(props: Props): ParsedModifiers {
 
     /** Get text style */
     const aligns = ['textLeft', 'textCenter', 'textRight', 'textJustify']
+    const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+
+    if (headings.includes(prop)) {
+      style = { ...defaultTagStyle[prop as TagType], ...style }
+      styleKeys.push(prop)
+      continue
+    }
 
     if (aligns.includes(prop)) {
       style.textAlign = prop.replace('text', '').toLowerCase() as any
@@ -213,6 +222,7 @@ export function parseModifiers(props: Props): ParsedModifiers {
       continue
     }
   }
+
 
   return { styleKeys, style }
 }
