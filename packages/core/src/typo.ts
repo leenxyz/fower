@@ -32,3 +32,12 @@ export const leadings: any = {
   relaxed: 1.625,
   loose: 2,
 }
+
+export const headings: any = {
+  h1: 2,
+  h2: 1.5,
+  h3: 1.17,
+  h4: 1.12,
+  h5: 0.83,
+  h6: 0.75
+}

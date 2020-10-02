@@ -2,28 +2,18 @@ import {
   isNumber,
   kebab,
   getValue,
-  isPaddingKey,
   isValuePaddingKey,
-  isSizeKey,
   isValueSizeKey,
-  isMarginKey,
   isValueMarginKey,
-  isBgColorKey,
   isValueBgColorKey,
   isFlexKey,
   isValueFlexKey,
-  isRoundedKey,
   isValueRoundedKey,
-  isPositionKey,
   isValuePositionKey,
-  isBorderKey,
-  isFlexboxKey,
-  isAlignmentKey,
-  isZIndexKey,
   isValueZIndexKey,
 } from './utils'
 import { ColorType } from './colors'
-import { weights, fontSizes, leadings } from './typo'
+import { weights, fontSizes, leadings, headings } from './typo'
 import { ModifierType } from './types'
 import { Styli } from './styli'
 import {
@@ -39,7 +29,7 @@ import {
   positionKeys,
   positionMaps,
 } from './constants'
-import { defaultTagStyle, TagType } from './defaultTagStyle'
+import { covertMap } from './covertMap'
 
 interface Props {
   [key: string]: any
@@ -60,14 +50,13 @@ const postionMaps: any = {
 
 const Colors = Styli.Colors
 
-export function toStyle(defaultStyle: any, style: any, propStyle: any = {}): any {
-  if (Array.isArray(propStyle)) return [defaultStyle, style, ...propStyle]
-  return { ...defaultStyle, ...style, ...propStyle }
+export function toStyle(style: any, propStyle: any = {}): any {
+  if (Array.isArray(propStyle)) return [style, ...propStyle]
+  return { ...style, ...propStyle }
 }
 
-export function toFinalProps(props: any, tag: TagType = 'empty') {
+export function toFinalProps(props: any) {
   const { styleKeys = [], style } = parseModifiers(props)
-  const defaultStyle = defaultTagStyle[tag]
 
   const finalProps = Object.keys(props).reduce((result, key) => {
     if (styleKeys.includes(key)) return result
@@ -75,7 +64,7 @@ export function toFinalProps(props: any, tag: TagType = 'empty') {
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  finalProps.style = toStyle(defaultStyle, style, props.style)
+  finalProps.style = toStyle(style, props.style)
 
   return finalProps
 }
@@ -84,145 +73,17 @@ export function parseModifiers(props: Props): ParsedModifiers {
   let style: any = {}
   const styleKeys: string[] = []
 
+  const covertMaps = [...covertMap, ...(Styli.configs.customCovertMap || [])]
   for (const [prop, propValue] of Object.entries(props)) {
-    /** Get size style */
-    if (isSizeKey(prop)) {
-      styleKeys.push(prop)
-      style = { ...style, ...sizePropToStyle(prop, propValue) }
-      continue
-    }
-
-    /** Get padding style */
-    if (isPaddingKey(prop)) {
-      style = { ...style, ...paddingPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get margin style */
-    if (isMarginKey(prop)) {
-      style = { ...style, ...marginPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get bg style */
-    if (isBgColorKey(prop)) {
-      style = { ...style, ...bgPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get rounded style */
-    if (isRoundedKey(prop)) {
-      style = { ...style, ...roundedPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get boder style */
-    if (isBorderKey(prop)) {
-      style = { ...style, ...borderPropToStyle(prop) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get flexbox style */
-    if (isFlexboxKey(prop)) {
-      style = { ...style, ...flexPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get flexbox style */
-    if (isAlignmentKey(prop)) {
-      const newProps = props.row || props.column ? props : { ...props, row: true }
-      style = {
-        ...style,
-        ...alignmentPropToStyle(newProps),
+    for (let i = 0; i < covertMaps.length; i++) {
+      const { isKey, propToStyle } = covertMaps[i]
+      if (isKey(prop, propValue, props)) {
+        styleKeys.push(prop)
+        style = {...style, ...propToStyle(prop, propValue, props)}
+        break
       }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get position style */
-    if (isPositionKey(prop)) {
-      style = { ...style, ...positionPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get z-indec style */
-    if (isZIndexKey(prop)) {
-      style = { ...style, ...zIndexPropToStyle(prop, propValue) }
-      styleKeys.push(prop)
-      continue
-    }
-
-    /** Get text style */
-    const aligns = ['textLeft', 'textCenter', 'textRight', 'textJustify']
-    const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
-
-    if (headings.includes(prop)) {
-      style = { ...defaultTagStyle[prop as TagType], ...style }
-      styleKeys.push(prop)
-      continue
-    }
-
-    if (aligns.includes(prop)) {
-      style.textAlign = prop.replace('text', '').toLowerCase() as any
-      styleKeys.push(prop)
-      continue
-    }
-
-    if (Colors[prop as ColorType]) {
-      style.color = Colors[prop as ColorType]
-      styleKeys.push(prop)
-      continue
-    }
-
-    if (prop === 'color') {
-      style.color = propValue
-      styleKeys.push(prop)
-      continue
-    }
-
-    if (/^text-.*/.test(prop)) {
-      const [, value] = prop.split('-')
-      if (fontSizes[value]) {
-        style.fontSize = fontSizes[value]
-      } else {
-        style.fontSize = getValue(value, ModifierType.text)
-      }
-
-      styleKeys.push(prop)
-      continue
-    }
-
-    if (prop.startsWith('font')) {
-      const weightKey = prop.replace(/^font/, '').toLocaleLowerCase()
-      if (weights[weightKey]) style.fontWeight = weights[weightKey]
-
-      styleKeys.push(prop)
-      continue
-    }
-
-    const fontSize = parseInt((style.fontSize || '16px') as any, 10)
-
-    if (prop.startsWith('leading')) {
-      if (prop.startsWith('leading-')) {
-        const [, value] = prop.split('-')
-        style.lineHeight = value + 'px'
-      } else {
-        const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
-        if (leadings[leadingKey]) style.lineHeight = leadings[leadingKey] * fontSize + 'px'
-      }
-
-      styleKeys.push(prop)
-      continue
     }
   }
-
 
   return { styleKeys, style }
 }
@@ -421,4 +282,39 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
   const zIndexValue = isValueZIndexKey(prop) ? propValue : value
   style.zIndex = zIndexValue
   return style
+}
+
+export function textAlignPropToStyle(prop: string) {
+  return { textAlign: prop.replace('text', '').toLowerCase() as any }
+}
+
+export function textHeadingPropToStyle(prop: string) {
+  return { display: 'block', fontWeight: 'bold', fontSize: headings[prop] + 'em' }
+}
+
+export function colorPropToStyle(prop: string, propValue: any) {
+  return { color: propValue || Colors[prop] }
+}
+
+export function textSizePropToStyle(prop: string) {
+  const [, value] = prop.split('-')
+  return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
+}
+
+export function textWeightPropToStyle(prop: string) {
+  const weightKey = prop.replace(/^font/, '').toLocaleLowerCase()
+  return { fontWeight: weights[weightKey] }
+}
+
+export function textLineWeightPropToStyle(prop: string) {
+  if (prop.startsWith('leading-')) {
+    const [, value] = prop.split('-')
+    return { lineHeight: getValue(value) }
+  } else {
+    const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
+    const fontSizeStr = getValue('' + (Styli.configs.baseFontSize || 16))
+    const fontSize = Number.parseInt(fontSizeStr)
+    if (leadings[leadingKey]) return { lineHeight: leadings[leadingKey] * fontSize + 'px' }
+  }
+  return {}
 }

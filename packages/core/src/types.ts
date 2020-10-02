@@ -5,7 +5,7 @@ export enum ModifierType {
   position = 'position',
   text = 'text',
   size = 'size',
-  ZInde = 'ZIndex',
+  ZIndex = 'ZIndex',
 }
 
 export interface Modifiers
@@ -17,7 +17,8 @@ export interface Modifiers
     Positions,
     Backgrounds,
     Texts,
-    ZIndex {}
+    ZIndex,
+    CustomAttr {}
 
 export interface Sizes {
   /**
@@ -1096,4 +1097,9 @@ export interface ZIndex {
    * ```
    */
   zIndex?: boolean | number
+}
+
+// 自定义属性
+export interface CustomAttr {
+  [key: string]: any
 }

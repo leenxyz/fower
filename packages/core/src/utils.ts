@@ -1,7 +1,8 @@
 import { noCase } from 'no-case'
 import { centerX, centerY, G, positionKeys } from './constants'
-import { Styli } from './styli'
+import { Colors, Styli } from './styli'
 import { ModifierType } from './types'
+import { weights } from './typo'
 
 export function isFlexboxKey(key: string) {
   return (
@@ -127,6 +128,33 @@ export function isValueBgColorKey(key: string) {
 
 export function isBgColorKey(key: string) {
   return isBooleanBgColorKey(key) || isValueBgColorKey(key)
+}
+
+export function isTextAlign(key: string) {
+  const types = ['textLeft', 'textCenter', 'textRight', 'textJustify']
+  return types.includes(key)
+}
+
+export function isTextHeading(key: string) {
+  const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+  return headings.includes(key)
+}
+
+export function isColorKey(key: string) {
+  return key === 'color' || !!Colors[key]
+}
+
+export function isTextSizeKey(key: string) {
+  return /^text-.*/.test(key)
+}
+
+export function isTextWeightKey(key: string) {
+  const weightKey = key.replace(/^font/, '').toLocaleLowerCase()
+  return !!weights[weightKey]
+}
+
+export function isTextLineHeightKey(key: string) {
+  return key.startsWith('leading')
 }
 
 export function kebab(s: string) {
