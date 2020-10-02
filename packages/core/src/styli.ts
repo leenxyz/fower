@@ -1,11 +1,11 @@
 import { presetColors, IColors } from './colors'
-import { CovertMap } from './covertMap'
+import { CovertConfig } from './covertConfigs'
 import { ModifierType } from './types'
 
 interface Configs {
   baseFontSize?: number
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
-  customCovertMap?: CovertMap[]
+  covertConfig?: CovertConfig[]
 }
 
 class StyliFactory {

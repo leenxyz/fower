@@ -2,94 +2,94 @@ import { CSSProperties } from "react"
 import { alignmentPropToStyle, bgPropToStyle, borderPropToStyle, colorPropToStyle, flexPropToStyle, marginPropToStyle, paddingPropToStyle, positionPropToStyle, roundedPropToStyle, sizePropToStyle, textAlignPropToStyle, textHeadingPropToStyle, textLineWeightPropToStyle, textSizePropToStyle, textWeightPropToStyle, zIndexPropToStyle } from './modifier'
 import { isAlignmentKey, isBgColorKey, isBorderKey, isColorKey, isFlexboxKey, isMarginKey, isPaddingKey, isPositionKey, isRoundedKey, isSizeKey, isTextAlign, isTextHeading, isTextLineHeightKey, isTextSizeKey, isTextWeightKey, isZIndexKey } from './utils'
 
-export interface CovertMap {
+export interface CovertConfig {
   name?: string
-  isKey: (prop: string, propValue: any, props: any) => boolean,
-  propToStyle: (prop: string, propValue: any, props: any) => CSSProperties
+  key: string | ((prop: string, propValue: any, props: any) => boolean),
+  style: CSSProperties | ((prop: string, propValue: any, props: any) => CSSProperties)
 }
 
-export const covertMap: CovertMap[] = [
+export const covertConfigs: CovertConfig[] = [
   {
-    name: 'width-height',
-    isKey: isSizeKey,
-    propToStyle: sizePropToStyle
+    name: 'size',
+    key: isSizeKey,
+    style: sizePropToStyle
   },
   {
     name: 'padding',
-    isKey: isPaddingKey,
-    propToStyle: paddingPropToStyle
+    key: isPaddingKey,
+    style: paddingPropToStyle
   },
   {
     name: 'margin',
-    isKey: isMarginKey,
-    propToStyle: marginPropToStyle
+    key: isMarginKey,
+    style: marginPropToStyle
   },
   {
     name: 'bgColor',
-    isKey: isBgColorKey,
-    propToStyle: bgPropToStyle
+    key: isBgColorKey,
+    style: bgPropToStyle
   },
   {
     name: 'rounded',
-    isKey: isRoundedKey,
-    propToStyle: roundedPropToStyle,
+    key: isRoundedKey,
+    style: roundedPropToStyle,
   },
   {
     name: 'border',
-    isKey: isBorderKey,
-    propToStyle: borderPropToStyle
+    key: isBorderKey,
+    style: borderPropToStyle
   },
   {
     name: 'flexbox',
-    isKey: isFlexboxKey,
-    propToStyle: flexPropToStyle
+    key: isFlexboxKey,
+    style: flexPropToStyle
   },
   {
     name: 'flexbox-align',
-    isKey: isAlignmentKey,
-    propToStyle: (prop, propValue, props) => {
+    key: isAlignmentKey,
+    style: (prop, propValue, props) => {
       const newProps = props.row || props.column ? props : { ...props, row: true }
       return alignmentPropToStyle(newProps)
     },
   },
   {
     name: 'position',
-    isKey: isPositionKey,
-    propToStyle: positionPropToStyle
+    key: isPositionKey,
+    style: positionPropToStyle
   },
   {
     name: 'zIndex',
-    isKey: isZIndexKey,
-    propToStyle: zIndexPropToStyle
+    key: isZIndexKey,
+    style: zIndexPropToStyle
   },
   {
     name: 'text-align',
-    isKey: isTextAlign,
-    propToStyle: textAlignPropToStyle
+    key: isTextAlign,
+    style: textAlignPropToStyle
   },
   {
     name: 'text-heading',
-    isKey: isTextHeading,
-    propToStyle: textHeadingPropToStyle
+    key: isTextHeading,
+    style: textHeadingPropToStyle
   },
   {
     name: 'color',
-    isKey: isColorKey,
-    propToStyle: colorPropToStyle,
+    key: isColorKey,
+    style: colorPropToStyle,
   },
   {
     name: 'text-size',
-    isKey: isTextSizeKey,
-    propToStyle: textSizePropToStyle
+    key: isTextSizeKey,
+    style: textSizePropToStyle
   },
   {
     name: 'text-weight',
-    isKey: isTextWeightKey,
-    propToStyle: textWeightPropToStyle
+    key: isTextWeightKey,
+    style: textWeightPropToStyle
   },
   {
     name: 'text-line-height',
-    isKey: isTextLineHeightKey,
-    propToStyle: textLineWeightPropToStyle
+    key: isTextLineHeightKey,
+    style: textLineWeightPropToStyle
   }
 ]
