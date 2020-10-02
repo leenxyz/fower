@@ -5,6 +5,8 @@
 node_modules/
 dist
 
+coverage
+
 yarn-error.log
 npm-debug.log
 lerna-debug.log

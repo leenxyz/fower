@@ -1,6 +1,5 @@
 {
-  "name": "@styli/core",
-  "version": "0.3.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,19 +14,28 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "test:watch": "tsdx test --watch",
-    "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "vue",
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/vue.esm.js",
   "devDependencies": {
-    "tsdx": "^0.13.3",
+    "husky": "^4.3.0",
+    "tsdx": "^0.14.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
-  },
-  "dependencies": {
-    "no-case": "^3.0.3"
   }
 }
