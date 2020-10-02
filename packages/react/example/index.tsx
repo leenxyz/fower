@@ -3,32 +3,22 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { View } from '../.'
 import { createStyle } from '@styli/core'
-
-const divStyle = createStyle('bgYellow s-120 black center rounded-10 zIndex-10')
-console.log('divStyle:', divStyle)
+import { flexPropToStyle } from '@styli/core/dist/modifier'
 
 const App = () => {
   return (
-    <div>
+    <div className="box">
       <View
-        // bgRed400
-        // column
-        // centerY
-        // bottom
-        // right
-        // centerX
-        // right
-        zIndex-2
+        // s-600
+        // borderBlack-10
+        // textCenter
         s-600
-        borderBlack-10
         textCenter
-        onClick={() => {
-          console.log('click......')
-        }}
+        bgGray300
+        between
+        centerY
       >
-        <div style={divStyle}>这是一个 Div</div>
-
-        <View s-80 bgBlue400 color="red" rounded-10>
+        <View s-80 bgBlue400 p-50>
           Box1
         </View>
         <View w-120 h-120 bgGreen400>
