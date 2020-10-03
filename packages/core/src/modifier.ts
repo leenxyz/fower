@@ -322,9 +322,8 @@ export function textLineWeightPropToStyle(prop: string) {
     return { lineHeight: getValue(value) }
   } else {
     const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
-    const fontSizeStr = getValue('' + (Styli.configs.baseFontSize || 16))
-    const fontSize = Number.parseInt(fontSizeStr)
-    if (leadings[leadingKey]) return { lineHeight: leadings[leadingKey] * fontSize + 'px' }
+    // TODO: should get current node fontSize
+    if (leadings[leadingKey]) return { lineHeight: `calc(${leadings[leadingKey]} * 1em)` }
   }
   return {}
 }

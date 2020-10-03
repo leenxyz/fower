@@ -3,7 +3,6 @@ import { CovertConfig } from './covertConfigs'
 import { ModifierType } from './types'
 
 interface Configs {
-  baseFontSize?: number
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
   covertConfig?: CovertConfig[]
 }
