@@ -1,6 +1,6 @@
 import { presetColors, IColors } from './colors'
 import { CovertConfig } from './covertConfigs'
-import { ModifierType } from './types'
+import { ModifierType } from './types/Modifiers'
 
 interface Configs {
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string

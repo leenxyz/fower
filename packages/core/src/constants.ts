@@ -1,18 +1,5 @@
-function upFirst(s: string) {
-  return s.charAt(0).toUpperCase() + s.slice(1)
-}
-
-interface MarginMaps {
-  [key: string]: string[]
-}
-
-interface SizeMaps {
-  [key: string]: string[]
-}
-
-interface PaddingMaps {
-  [key: string]: string[]
-}
+import { upFirst } from './utils'
+import { MarginMaps, PaddingMaps, SizeMaps } from './types'
 
 export const G = {
   padding: 'padding',
@@ -42,39 +29,39 @@ export const G = {
 }
 
 export const P = {
-  Top: upFirst(G.top),
-  Right: upFirst(G.right),
-  Bottom: upFirst(G.bottom),
-  Left: upFirst(G.left),
+  top: upFirst(G.top),
+  right: upFirst(G.right),
+  bottom: upFirst(G.bottom),
+  left: upFirst(G.left),
 }
 
 export const positionKeys = [G.static, G.fixed, G.absolute, G.relative, G.sticky]
 
 export const positionMaps: any = {
-  T: G.top,
-  L: G.left,
-  R: G.right,
-  B: G.bottom,
+  t: G.top,
+  l: G.left,
+  r: G.right,
+  b: G.bottom,
 }
 
 export const paddingMaps: PaddingMaps = {
   p: [G.padding],
-  pl: [`${G.padding}${P.Left}`],
-  pt: [`${G.padding}${P.Top}`],
-  pr: [`${G.padding}${P.Right}`],
-  pb: [`${G.padding}${P.Bottom}`],
-  px: [`${G.padding}${P.Left}`, `${G.padding}${P.Right}`],
-  py: [`${G.padding}${P.Top}`, `${G.padding}${P.Bottom}`],
+  pl: [`${G.padding}${P.left}`],
+  pt: [`${G.padding}${P.top}`],
+  pr: [`${G.padding}${P.right}`],
+  pb: [`${G.padding}${P.bottom}`],
+  px: [`${G.padding}${P.left}`, `${G.padding}${P.right}`],
+  py: [`${G.padding}${P.top}`, `${G.padding}${P.bottom}`],
 }
 
 export const marginMaps: MarginMaps = {
   m: [G.margin],
-  ml: [`${G.margin}${P.Left}`],
-  mt: [`${G.margin}${P.Top}`],
-  mr: [`${G.margin}${P.Right}`],
-  mb: [`${G.margin}${P.Bottom}`],
-  mx: [`${G.margin}${P.Left}`, `${G.margin}${P.Right}`],
-  my: [`${G.margin}${P.Top}`, `${G.margin}${P.Bottom}`],
+  ml: [`${G.margin}${P.left}`],
+  mt: [`${G.margin}${P.top}`],
+  mr: [`${G.margin}${P.right}`],
+  mb: [`${G.margin}${P.bottom}`],
+  mx: [`${G.margin}${P.left}`, `${G.margin}${P.right}`],
+  my: [`${G.margin}${P.top}`, `${G.margin}${P.bottom}`],
 }
 
 export const flexMaps: any = {
@@ -100,21 +87,25 @@ export const sizeMaps: SizeMaps = {
 
 export const roundedMaps: any = {
   rounded: [
-    `${P.Top}${P.Left}`,
-    `${P.Top}${P.Right}`,
-    `${P.Bottom}${P.Left}`,
-    `${P.Bottom}${P.Right}`,
+    `${P.top}${P.left}`,
+    `${P.top}${P.right}`,
+    `${P.bottom}${P.left}`,
+    `${P.bottom}${P.right}`,
   ],
-  roundedT: [`${P.Top}${P.Left}`, `${P.Top}${P.Right}`],
-  roundedR: [`${P.Top}${P.Right}`, `${P.Bottom}${P.Right}`],
-  roundedB: [`${P.Bottom}${P.Left}`, `${P.Bottom}${P.Right}`],
-  roundedL: [`${P.Top}${P.Left}`, `${P.Bottom}${P.Left}`],
-  roundedTL: [`${P.Top}${P.Left}`],
-  roundedTR: [`${P.Top}${P.Right}`],
-  roundedBL: [`${P.Bottom}${P.Left}`],
-  roundedBR: [`${P.Bottom}${P.Right}`],
+  roundedT: [`${P.top}${P.left}`, `${P.top}${P.right}`],
+  roundedR: [`${P.top}${P.right}`, `${P.bottom}${P.right}`],
+  roundedB: [`${P.bottom}${P.left}`, `${P.bottom}${P.right}`],
+  roundedL: [`${P.top}${P.left}`, `${P.bottom}${P.left}`],
+  roundedTL: [`${P.top}${P.left}`],
+  roundedTR: [`${P.top}${P.right}`],
+  roundedBL: [`${P.bottom}${P.left}`],
+  roundedBR: [`${P.bottom}${P.right}`],
 }
 
 export const centerX = `${G.center}X`
 
 export const centerY = `${G.center}Y`
+
+export const borderStyles = ['solid', 'dashed', 'dotted', 'double', 'none']
+
+export const headingTypes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']

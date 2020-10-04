@@ -1,10 +1,44 @@
-import { CSSProperties } from "react"
-import { alignmentPropToStyle, bgPropToStyle, borderPropToStyle, colorPropToStyle, flexPropToStyle, marginPropToStyle, paddingPropToStyle, positionPropToStyle, roundedPropToStyle, sizePropToStyle, textAlignPropToStyle, textHeadingPropToStyle, textLineWeightPropToStyle, textSizePropToStyle, textWeightPropToStyle, zIndexPropToStyle } from './modifier'
-import { isAlignmentKey, isBgColorKey, isBorderKey, isColorKey, isFlexboxKey, isMarginKey, isPaddingKey, isPositionKey, isRoundedKey, isSizeKey, isTextAlign, isTextHeading, isTextLineHeightKey, isTextSizeKey, isTextWeightKey, isZIndexKey } from './utils'
+import { CSSProperties } from 'react'
+import {
+  alignmentPropToStyle,
+  bgPropToStyle,
+  borderPropToStyle,
+  colorPropToStyle,
+  flexPropToStyle,
+  marginPropToStyle,
+  paddingPropToStyle,
+  positionPropToStyle,
+  roundedPropToStyle,
+  sizePropToStyle,
+  textAlignPropToStyle,
+  textHeadingPropToStyle,
+  textLineWeightPropToStyle,
+  textSizePropToStyle,
+  textWeightPropToStyle,
+  zIndexPropToStyle,
+} from './propToStyle'
+import {
+  isAlignmentKey,
+  isBgColorKey,
+  isBorderKey,
+  isColorKey,
+  isFlexboxKey,
+  isMarginKey,
+  isPaddingKey,
+  isPositionKey,
+  isRoundedKey,
+  isSizeKey,
+  isTextAlign,
+  isTextHeadingKey,
+  isTextLineHeightKey,
+  isTextSizeKey,
+  isTextWeightKey,
+  isZIndexKey,
+} from './propKey'
 
 export interface CovertConfig {
   name?: string
-  key: string | ((prop: string, propValue: any, props: any) => boolean),
+  key: string | ((prop: string, propValue: any, props: any) => boolean)
   style: CSSProperties | ((prop: string, propValue: any, props: any) => CSSProperties)
 }
 
@@ -12,22 +46,22 @@ export const covertConfigs: CovertConfig[] = [
   {
     name: 'size',
     key: isSizeKey,
-    style: sizePropToStyle
+    style: sizePropToStyle,
   },
   {
     name: 'padding',
     key: isPaddingKey,
-    style: paddingPropToStyle
+    style: paddingPropToStyle,
   },
   {
     name: 'margin',
     key: isMarginKey,
-    style: marginPropToStyle
+    style: marginPropToStyle,
   },
   {
     name: 'bgColor',
     key: isBgColorKey,
-    style: bgPropToStyle
+    style: bgPropToStyle,
   },
   {
     name: 'rounded',
@@ -37,12 +71,12 @@ export const covertConfigs: CovertConfig[] = [
   {
     name: 'border',
     key: isBorderKey,
-    style: borderPropToStyle
+    style: borderPropToStyle,
   },
   {
     name: 'flexbox',
     key: isFlexboxKey,
-    style: flexPropToStyle
+    style: flexPropToStyle,
   },
   {
     name: 'flexbox-align',
@@ -55,22 +89,22 @@ export const covertConfigs: CovertConfig[] = [
   {
     name: 'position',
     key: isPositionKey,
-    style: positionPropToStyle
+    style: positionPropToStyle,
   },
   {
     name: 'zIndex',
     key: isZIndexKey,
-    style: zIndexPropToStyle
+    style: zIndexPropToStyle,
   },
   {
     name: 'text-align',
     key: isTextAlign,
-    style: textAlignPropToStyle
+    style: textAlignPropToStyle,
   },
   {
     name: 'text-heading',
-    key: isTextHeading,
-    style: textHeadingPropToStyle
+    key: isTextHeadingKey,
+    style: textHeadingPropToStyle,
   },
   {
     name: 'color',
@@ -80,16 +114,16 @@ export const covertConfigs: CovertConfig[] = [
   {
     name: 'text-size',
     key: isTextSizeKey,
-    style: textSizePropToStyle
+    style: textSizePropToStyle,
   },
   {
     name: 'text-weight',
     key: isTextWeightKey,
-    style: textWeightPropToStyle
+    style: textWeightPropToStyle,
   },
   {
     name: 'text-line-height',
     key: isTextLineHeightKey,
-    style: textLineWeightPropToStyle
-  }
+    style: textLineWeightPropToStyle,
+  },
 ]

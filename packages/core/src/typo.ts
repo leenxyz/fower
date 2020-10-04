@@ -39,5 +39,5 @@ export const headings: any = {
   h3: 1.17,
   h4: 1.12,
   h5: 0.83,
-  h6: 0.75
+  h6: 0.75,
 }
