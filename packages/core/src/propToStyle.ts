@@ -102,11 +102,9 @@ export function borderPropToStyle(prop: string) {
   const isBorderWidth = (val: string) => isNumber(val)
 
   if (isBorderWidth(second) || isBorderWidth(third)) {
-    const borderKey = isBorderPosition(second)
-      ? `border${upFirst(positionMaps[second])}Width`
-      : 'borderWidth'
-    style[borderKey] = getValue(third || second)
-    style.borderStyle = 'solid'
+    const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
+    style[`border${position}Width`] = getValue(third || second)
+    style[`border${position}Style`] = 'solid'
   }
   if (isBorderColor(second)) {
     style.borderColor = Colors[second as ColorType]
