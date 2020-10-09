@@ -41,7 +41,7 @@ export function parseModifiers(props: Props): ParsedModifiers {
       const { key, style: covertStyle } = allCovertConfigs[i]
       if (isPropKey(key, prop, propValue, props)) {
         styleKeys.push(prop)
-        style = { ...style, ...getPropStyle(covertStyle, prop, propValue, props) }
+        if (propValue) style = { ...style, ...getPropStyle(covertStyle, prop, propValue, props) }
         break
       }
     }
