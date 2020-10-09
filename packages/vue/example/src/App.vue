@@ -9,7 +9,7 @@
 
 <script>
 import Hello from './components/HelloWorld';
-import Div from './styli-vue/View/index';
+import Div from './styli-vue/Div/index';
 export default {
   name: 'App',
   components: {
