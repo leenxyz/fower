@@ -1,29 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld styli="white s-500 bgBlack" msg="Welcome to Your Vue.js App" />
-    Te
-  </div>
+<div id="app">
+  <Div>
+    <div>222</div>
+  </Div>
+  <Hello styli="white s-500 bgBlack" />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
+import Hello from './components/HelloWorld';
+import Div from './styli-vue/View/index';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Div,
+    Hello,
+  },
+  mounted() {
+    console.log("view1", Div)
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
