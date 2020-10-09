@@ -14,7 +14,11 @@
     "@docusaurus/core": "2.0.0-alpha.65",
     "@docusaurus/preset-classic": "2.0.0-alpha.65",
     "@mdx-js/react": "^1.5.8",
+    "@styli/core": "^0.3.0",
+    "@styli/react": "^0.3.0",
     "clsx": "^1.1.1",
+    "entity-form": "^0.1.1",
+    "entity-form-pristine": "0.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
@@ -31,6 +35,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.51",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.51",
