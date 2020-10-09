@@ -56,16 +56,8 @@ export function isRoundedKey(key: string) {
   return isBooleanRoundedKey(key) || isValueRoundedKey(key)
 }
 
-export function isBooleanFlexKey(key: string) {
-  return /^[TLRB]-.*/.test(key)
-}
-
-export function isValueFlexKey(key: string) {
-  return /^[TLRB]$/.test(key)
-}
-
-export function isFlexKey(key: string) {
-  return isBooleanFlexKey(key) || isValueFlexKey(key)
+export function isFlexItemKey(key: string) {
+  return /^flex(-\d+)?$/.test(key)
 }
 
 export function isBooleanPositionKey(key: string) {

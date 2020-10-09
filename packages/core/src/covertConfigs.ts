@@ -16,6 +16,7 @@ import {
   textSizePropToStyle,
   textWeightPropToStyle,
   zIndexPropToStyle,
+  flexItemPropToStyle,
 } from './propToStyle'
 import {
   isAlignmentKey,
@@ -23,6 +24,7 @@ import {
   isBorderKey,
   isColorKey,
   isFlexboxKey,
+  isFlexItemKey,
   isMarginKey,
   isPaddingKey,
   isPositionKey,
@@ -77,6 +79,11 @@ export const covertConfigs: CovertConfig[] = [
     name: 'flexbox',
     key: isFlexboxKey,
     style: flexPropToStyle,
+  },
+  {
+    name: 'flex-item',
+    key: isFlexItemKey,
+    style: flexItemPropToStyle,
   },
   {
     name: 'flexbox-align',

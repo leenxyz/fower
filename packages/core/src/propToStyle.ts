@@ -5,8 +5,6 @@ import {
   isValueSizeKey,
   isValueMarginKey,
   isValueBgColorKey,
-  isFlexKey,
-  isValueFlexKey,
   isValueRoundedKey,
   isValuePositionKey,
   isValueZIndexKey,
@@ -15,7 +13,6 @@ import { weights, fontSizes, leadings, headings } from './typo'
 import { ModifierType } from './types/Modifiers'
 import {
   G,
-  P,
   paddingMaps,
   marginMaps,
   flexMaps,
@@ -116,7 +113,7 @@ export function borderPropToStyle(prop: string) {
   return style
 }
 
-export function flexPropToStyle(prop: string, propValue: any) {
+export function flexPropToStyle(prop: string) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
 
@@ -129,13 +126,6 @@ export function flexPropToStyle(prop: string, propValue: any) {
   // set flex-wrap
   if (wraps.includes(prop)) style.flexWrap = prop as any
 
-  // set flex-flow、flex-shrink、flex-basic
-  if (isFlexKey(prop)) {
-    const [, value] = prop.split('-')
-    const flexValue = isValueFlexKey(prop) ? propValue : value
-    style.flex = getValue(flexValue)
-  }
-
   // justify-content
   if (prop.startsWith('justify')) {
     style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
@@ -146,6 +136,13 @@ export function flexPropToStyle(prop: string, propValue: any) {
   }
 
   return style
+}
+
+// set flex-flow、flex-shrink、flex-basic
+export function flexItemPropToStyle(prop: any, propValue: any) {
+  const [, value] = prop.split('-')
+  const flexValue = value || (propValue === true ? 1 : propValue)
+  return { flex: flexValue }
 }
 
 export function alignmentPropToStyle(props: any) {
