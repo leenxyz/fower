@@ -1,20 +1,20 @@
 # Styli
 
-Styli 是一个将样式集成在组件属性上的工具。它可以帮助您方便快捷的开发出满意的UI。
+Styli 是一个将样式集成在组件属性上的工具。它可以帮助您方便快捷的开发出满意的 UI。
 
 ## 特点
 
 传统样式开发有以下特点
 
->* 样式与组件分离。分离的好处在于代码可维护性强，但当一个元素有四五个类名是常见的事，我们修改一个样式时，可能不得不在多个文件中跳来跳去找到样式位置进行修改。这极大影响了开发效率。
->* 复用性。观察项目代码可以发现，很多样式是可以复用的，但当我们提取出来取个类名，再应用到不同地方时，往往显的类名词不达意。
->* 繁琐。面对一个仅仅需要修改字体的元素，我们需要给它想一个类名，并将其添加到样式表中。
+> - 样式与组件分离。分离的好处在于代码可维护性强，但当一个元素有四五个类名是常见的事，我们修改一个样式时，可能不得不在多个文件中跳来跳去找到样式位置进行修改。这极大影响了开发效率。
+> - 复用性。观察项目代码可以发现，很多样式是可以复用的，但当我们提取出来取个类名，再应用到不同地方时，往往显的类名词不达意。
+> - 繁琐。面对一个仅仅需要修改字体的元素，我们需要给它想一个类名，并将其添加到样式表中。
 
-针对以上弊端，我们研究开发了 Styli, 它将一些常用 CSS 属性集成到了组件上，并内置了大量的简写属性，同时提供了完整的类型支持，在 VSCode 的强力支持下可以很方便的满足您快速还原UI的需求。为了满足您多样化的需求，我们也提供了个性化配置选项，您可以实现您的自定义样式属性。在使用 Styli 的同时，您也依旧可以同时使用传统内联style和外部css的方式。
+针对以上弊端，我们研究开发了 Styli, 它将一些常用 CSS 属性集成到了组件上，并内置了大量的简写属性，同时提供了完整的类型支持，在 VSCode 的强力支持下可以很方便的满足您快速还原 UI 的需求。为了满足您多样化的需求，我们也提供了个性化配置选项，您可以实现您的自定义样式属性。在使用 Styli 的同时，您也依旧可以同时使用传统内联 style 和外部 css 的方式。
 
 ## 开始
 
-首先从npm安装 Styli 核心库
+首先从 npm 安装 Styli 核心库
 
 ```bash
 npm i @styli/core
@@ -35,7 +35,9 @@ import { View } from '@styli/react'
 
 export const Demo = () => {
   return (
-    <View text-16 gray100 borderSolid-1 style={{ backgroundColor: 'red' }} className="demo">哈哈哈</View>
+    <View text-16 gray100 borderSolid-1 style={{ backgroundColor: 'red' }} className="demo">
+      哈哈哈
+    </View>
   )
 }
 ```
@@ -133,13 +135,13 @@ import React, { FC } from 'react'
 import { View as StyliView, ViewProps as StyliViewProps } from '@styli/react'
 
 interface CustomProps {
-  themeColor: true,
+  themeColor: true
   disabledStyle: true
 }
 
-interface ViewProps extends StyliViewProps, CustomProps { }
+interface ViewProps extends StyliViewProps, CustomProps {}
 
-export const View: FC<ViewProps> = ({children, ...props}) => {
+export const View: FC<ViewProps> = ({ children, ...props }) => {
   return <StyliView {...props}>{children}</StyliView>
 }
 ```
@@ -153,11 +155,14 @@ import React, { FC } from 'react'
 import { toFinalProps, Modifiers } from '@styli/core'
 
 interface CustomProp {
-  themeColor: true,
+  themeColor: true
   disabledStyle: true
 }
 
-export interface HeadingProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>, Modifiers, CustomProp { }
+export interface HeadingProps
+  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>,
+    Modifiers,
+    CustomProp {}
 
 export const H1: FC<HeadingProps> = ({ children, ...props }) => {
   const finalProps: any = toFinalProps({ h1: true, ...props })
@@ -179,10 +184,10 @@ import { View, H1 } from '@/styli/components'
 
 ## 文档
 
->* [Flex](!#)
->* [Position](!#)
->* [Margin](!#)
->* [Padding](!#)
->* [Text](!#)
->* [Border](!#)
->* [Size](!#)
+> - [Flex](!#)
+> - [Position](!#)
+> - [Margin](!#)
+> - [Padding](!#)
+> - [Text](!#)
+> - [Border](!#)
+> - [Size](!#)
