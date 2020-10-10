@@ -16,7 +16,15 @@ export default () => {
       </View>
       <View row centerY my-20>
         <View mr-20>Square Value: </View>
-        <input type="range" value={s} max="100" min="0" onChange={(e) => { setS(+e.target.value) }} />
+        <input
+          type="range"
+          value={s}
+          max="100"
+          min="0"
+          onChange={(e) => {
+            setS(+e.target.value)
+          }}
+        />
         <View>{s}</View>
       </View>
     </View>

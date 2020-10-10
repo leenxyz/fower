@@ -83,60 +83,131 @@ export default () => {
 
       <View row centerY my-20>
         <View mr-20>Round Value: </View>
-        <input type="range" value={r} max="50" min="0" onChange={(e) => { setR(+e.target.value) }} />
+        <input
+          type="range"
+          value={r}
+          max="50"
+          min="0"
+          onChange={(e) => {
+            setR(+e.target.value)
+          }}
+        />
         <View>{r}</View>
       </View>
 
       <View between wrap>
         <View row centerY my-20>
           <View mr-20>Round Top Value: </View>
-          <input type="range" value={rt} max="50" min="0" onChange={(e) => { setRT(+e.target.value) }} />
+          <input
+            type="range"
+            value={rt}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRT(+e.target.value)
+            }}
+          />
           <View>{rt}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Right Value: </View>
-          <input type="range" value={rr} max="50" min="0" onChange={(e) => { setRR(+e.target.value) }} />
+          <input
+            type="range"
+            value={rr}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRR(+e.target.value)
+            }}
+          />
           <View>{rr}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Bottom Value: </View>
-          <input type="range" value={rb} max="50" min="0" onChange={(e) => { setRB(+e.target.value) }} />
+          <input
+            type="range"
+            value={rb}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRB(+e.target.value)
+            }}
+          />
           <View>{rb}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Left Value: </View>
-          <input type="range" value={rl} max="50" min="0" onChange={(e) => { setRL(+e.target.value) }} />
+          <input
+            type="range"
+            value={rl}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRL(+e.target.value)
+            }}
+          />
           <View>{rl}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Top Left Value: </View>
-          <input type="range" value={rtl} max="50" min="0" onChange={(e) => { setRTL(+e.target.value) }} />
+          <input
+            type="range"
+            value={rtl}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRTL(+e.target.value)
+            }}
+          />
           <View>{rtl}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Top Right Value: </View>
-          <input type="range" value={rtr} max="50" min="0" onChange={(e) => { setRTR(+e.target.value) }} />
+          <input
+            type="range"
+            value={rtr}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRTR(+e.target.value)
+            }}
+          />
           <View>{rtr}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Bottom Left Value: </View>
-          <input type="range" value={rbl} max="50" min="0" onChange={(e) => { setRBL(+e.target.value) }} />
+          <input
+            type="range"
+            value={rbl}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRBL(+e.target.value)
+            }}
+          />
           <View>{rbl}</View>
         </View>
 
         <View row centerY my-20>
           <View mr-20>Round Top Left Value: </View>
-          <input type="range" value={rbr} max="50" min="0" onChange={(e) => { setRBR(+e.target.value) }} />
+          <input
+            type="range"
+            value={rbr}
+            max="50"
+            min="0"
+            onChange={(e) => {
+              setRBR(+e.target.value)
+            }}
+          />
           <View>{rbr}</View>
         </View>
       </View>
-
     </View>
   )
 }

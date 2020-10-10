@@ -18,17 +18,39 @@ export default () => {
       </View>
       <View row centerY my-20>
         <View mr-20>Width Value: </View>
-        <input type="range" value={w} max={maxW} min={minW} onChange={(e) => { setW(+e.target.value) }} />
+        <input
+          type="range"
+          value={w}
+          max={maxW}
+          min={minW}
+          onChange={(e) => {
+            setW(+e.target.value)
+          }}
+        />
         <View>{w}</View>
       </View>
       <View row centerY my-20>
         <View mr-20>MinWidth Value: </View>
-        <input type="range" value={minW} max="100" onChange={(e) => { setMinW(+e.target.value) }} />
+        <input
+          type="range"
+          value={minW}
+          max="100"
+          onChange={(e) => {
+            setMinW(+e.target.value)
+          }}
+        />
         <View>{minW}</View>
       </View>
       <View row centerY my-20>
         <View mr-20>MaxWidth Value: </View>
-        <input type="range" value={maxW} max="100" onChange={(e) => { setMaxW(+e.target.value) }} />
+        <input
+          type="range"
+          value={maxW}
+          max="100"
+          onChange={(e) => {
+            setMaxW(+e.target.value)
+          }}
+        />
         <View>{maxW}</View>
       </View>
     </View>
