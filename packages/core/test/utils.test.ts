@@ -1,7 +1,7 @@
-import { isBgColorKey } from '../src/utils'
+import { isNumber } from '../src/utils'
 
 describe('utils', () => {
   it('isBgColorKey', () => {
-    expect(isBgColorKey('bg')).toEqual(true)
+    expect(isNumber('10')).toEqual(true)
   })
 })
