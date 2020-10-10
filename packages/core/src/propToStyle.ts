@@ -236,10 +236,10 @@ export function textWeightPropToStyle(prop: string) {
   return { fontWeight: weights[weightKey] }
 }
 
-export function textLineHeightPropToStyle(prop: string) {
+export function textLineHeightPropToStyle(prop: string, propValue: any) {
   if (prop.startsWith('leading-')) {
     const [, value] = prop.split('-')
-    return { lineHeight: getValue(value) }
+    return { lineHeight: getValue(value || propValue) }
   } else {
     const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
     // TODO: should get current node fontSize

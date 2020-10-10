@@ -1,11 +1,11 @@
 ---
-id: font-size
-title: Font Size
+id: line-height
+title: Line Height
 ---
 
-import { FontSize } from '../src/components/Font'
+import LineHeight from '../src/components/LineHeight'
 
-<FontSize />
+<LineHeight />
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
@@ -28,9 +28,8 @@ import { View } from '@styli/react'
 export default () => {
   return (
     <View row between>
-      <View s-100 text-20>
-        text-20
-      </View>
+      <View leading-20> leading-20 </View>
+      <View leadingNone> leadingNone </View>
     </View>
   )
 }
@@ -55,9 +54,8 @@ import { View } from '@styli/react-native'
 export default () => {
   return (
     <View row between>
-      <View s-100 text-20>
-        text-20
-      </View>
+      <View leading-20> leading-20 </View>
+      <View leadingNone> leadingNone </View>
     </View>
   )
 }

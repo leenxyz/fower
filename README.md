@@ -183,13 +183,3 @@ import { View, H1 } from '@/styli/components'
 <View themeColor disabledStyle>哈哈哈</View>
 <H1>哈哈哈</H1>
 ```
-
-## 文档
-
-> - [Flex](!#)
-> - [Position](!#)
-> - [Margin](!#)
-> - [Padding](!#)
-> - [Text](!#)
-> - [Border](!#)
-> - [Size](!#)

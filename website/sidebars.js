@@ -7,6 +7,6 @@ module.exports = {
     Flexbox: ['flex'],
     Color: ['preset-color', 'font-color', 'border-color', 'background-color'],
     Size: ['width', 'height', 'square', 'round'],
-    Typography: ['font-size'],
+    Typography: ['font-size', 'font-weight', 'text-align', 'line-height', 'title'],
   },
 }
