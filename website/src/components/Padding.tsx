@@ -53,6 +53,7 @@ export default () => {
             setM(+e.target.value)
           }}
         />
+        <View>{m}</View>
       </View>
     </View>
   )
