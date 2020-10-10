@@ -3,6 +3,8 @@ import { View } from '@styli/react'
 import { entity, field, useForm, EntityForm, Field } from 'entity-form'
 import { ArrayMaxSize } from 'class-validator'
 import { registerAll } from './entity-form-antd'
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/github'
 import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 
 registerAll()
@@ -56,6 +58,14 @@ export const FlexLayout = () => {
     { [direction]: true } as any,
   )
 
+  const propsString = `${direction} ${alignment.join(' ')}`
+
+  const exampleCode = `<View bgGray300 h-300 ${propsString}>
+  <View s-50 bgBlue300>A</View>
+  <View s-120 bgGreen300>B</View>
+  <View s-80 bgOrange300>C</View>
+</View>`
+
   return (
     <View>
       <View bgGray300 h-300 {...containerProps}>
@@ -79,6 +89,19 @@ export const FlexLayout = () => {
           </View>
         </View>
       </EntityForm>
+      <Highlight {...defaultProps} theme={theme} code={exampleCode} language="jsx">
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className={className} style={style}>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
     </View>
   )
 }
