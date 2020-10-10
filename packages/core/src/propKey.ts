@@ -5,7 +5,6 @@ import { weights } from './typo'
 export function isFlexboxKey(key: string) {
   return (
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    isFlexKey(key) ||
     key.startsWith('justify') ||
     key.startsWith('align')
   )
