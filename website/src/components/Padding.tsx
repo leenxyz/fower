@@ -45,9 +45,15 @@ export default () => {
       </View>
       <View row centerY my-20>
         <View mr-20>Padding Value: </View>
-        <input type="range" value={m} max="20" onChange={(e) => { setM(+e.target.value) }} />
+        <input
+          type="range"
+          value={m}
+          max="20"
+          onChange={(e) => {
+            setM(+e.target.value)
+          }}
+        />
       </View>
     </View>
-
   )
 }
