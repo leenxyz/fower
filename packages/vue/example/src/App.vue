@@ -1,7 +1,10 @@
 <template>
 <div id="app">
   <Div>
-    <div>222</div>
+    <div>
+      222
+      <Div>test</Div>
+    </div>
   </Div>
   <Hello styli="white s-500 bgBlack" />
 </div>
@@ -9,15 +12,12 @@
 
 <script>
 import Hello from './components/HelloWorld';
-import Div from './styli-vue/Div/index';
 export default {
   name: 'App',
   components: {
-    Div,
     Hello,
   },
   mounted() {
-    console.log("view1", Div)
   },
 };
 </script>
