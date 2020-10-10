@@ -24,7 +24,7 @@ class LayoutEntity {
 
   @field({
     label: 'Layout Alignment',
-    value: ['center'],
+    value: ['centerX'],
     component: 'Checkbox',
     enum: [
       { label: 'center', value: 'center' },
@@ -47,6 +47,10 @@ export const FlexLayout = () => {
   const direction = helpers.getValue('direction')
 
   useEffect(() => {
+    if (alignment.length == 1 && alignment[0] === 'center') {
+      actions.setDisableds({ alignment: true })
+      return
+    }
     actions.setDisableds({ alignment: state.values.alignment.length == 2 })
   }, [alignment])
 

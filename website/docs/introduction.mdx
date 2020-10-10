@@ -5,8 +5,35 @@ sidebar_label: 简介
 slug: /
 ---
 
-```jsx title="/src/components/HelloCodeTitle.js"
-function HelloCodeTitle(props) {
-  return <h1>Hello, {props.name}</h1>
-}
-```
+Styli 是一个 utility-first 的 style framework，它让你更高效地构界面，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
+
+## 特点
+
+- **utility-first**
+
+  这方面我非常赞同 tailwindcss 的理念，让样式原子化和工具化。 Styli 也使用了类似的理念，不同的是，Styli 的 utility 是 CSS 一个很小的子集，Styli 非常克制，不期望能解决 100% 的场景，我们希望 Styli 的 utility 能覆盖 80% 高频率场即可。
+
+- **cross-framework，跨框架**
+
+  这是我们研发 Styli 重要动机(Motivation)之一，我们团队的产品同时需要支持 Web、App、小程序等平台，我们没找到可以跨框架的样式解决方案，为了团队能在不同框进行 UI 开发中使用统一的写法，我们创建了 Styli。
+
+- **Type Safe，类型安全**
+
+  我们团队是 TypeScript 的深度使用者，夸张是到了离开 Type Safe 就不会写代码的地步。Styli 是完全类型安全的，特别是配合 jsx，开发体验会非常棒，类型提供很好的智能提示和文档，且不需借助特定的编辑器插件实现智能提示。
+
+- **Less Code，更少的代码**
+
+  使用 Styli，同样的 UI，你可以使用更少的代码实现，特别是在 jsx 中，布尔类型的 props 值是可以省略的，让 Styli 实现了 "[key as value](TODO:)" 的模式，让样式代码量大大减少。
+
+- **Less CSS，更少的 CSS**
+  请逐渐忘记 CSS，我们希望 utility 能覆盖 80%以上常规场景，对于特殊场景比如复杂 CSS animation、CSS Transform，或者是小众场景比如 User Select 等，我们仍建议使用原生 CSSj 解决
+
+- **Programmable，可编程性**
+  Styli 是一种 CSS in JS 解决方，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。
+
+## 灵感
+
+Inspired by:
+
+- [tailwindcss](https://tailwindcss.com/)
+- [radium](https://github.com/FormidableLabs/radium)
