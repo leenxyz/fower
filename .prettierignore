@@ -1,10 +1,5 @@
 node_modules
-
-website/node_modules
-website/.docusaurus
-
-packages/react/example/.cache
-packages/**/node_modules
-packages/**/dist
-
+dist
+.docusaurus
+.cache
 *.html
