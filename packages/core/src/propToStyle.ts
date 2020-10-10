@@ -9,8 +9,8 @@ import {
   isValuePositionKey,
   isValueZIndexKey,
 } from './propKey'
-import { weights, fontSizes, leadings, headings } from './typo'
 import { ModifierType } from './types/Modifiers'
+import { weights, fontSizes, leadings, headings } from './typo'
 import {
   G,
   paddingMaps,
@@ -236,7 +236,7 @@ export function textWeightPropToStyle(prop: string) {
   return { fontWeight: weights[weightKey] }
 }
 
-export function textLineWeightPropToStyle(prop: string) {
+export function textLineHeightPropToStyle(prop: string) {
   if (prop.startsWith('leading-')) {
     const [, value] = prop.split('-')
     return { lineHeight: getValue(value) }

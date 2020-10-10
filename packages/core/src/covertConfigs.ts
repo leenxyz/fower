@@ -12,7 +12,7 @@ import {
   sizePropToStyle,
   textAlignPropToStyle,
   textHeadingPropToStyle,
-  textLineWeightPropToStyle,
+  textLineHeightPropToStyle,
   textSizePropToStyle,
   textWeightPropToStyle,
   zIndexPropToStyle,
@@ -131,6 +131,6 @@ export const covertConfigs: CovertConfig[] = [
   {
     name: 'text-line-height',
     key: isTextLineHeightKey,
-    style: textLineWeightPropToStyle,
+    style: textLineHeightPropToStyle,
   },
 ]

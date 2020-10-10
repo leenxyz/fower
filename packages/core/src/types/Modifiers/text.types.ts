@@ -42,7 +42,6 @@ export interface Texts {
   fontSemibold?: boolean
   fontBold?: boolean
   fontExtrabold?: boolean
-  fontBlack?: boolean
 
   leading?: boolean
 
