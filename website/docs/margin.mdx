@@ -3,15 +3,61 @@ id: margin
 title: Margin
 ---
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
+import Margin from '../src/components/Margin'
 
-export const Highlight = ({children, color}) => ( <span style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>{children}</span> );
+<Margin />
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-I can write **Markdown** alongside my _JSX_!
+<Tabs
+  defaultValue="react"
+  values={[
+    { label: 'React', value: 'react' },
+    { label: 'Vue', value: 'vue' },
+    { label: 'React Native', value: 'react-native' },
+  ]}
+>
+  <TabItem value="react">
+
+
+```jsx
+import React from 'react'
+import { View } from '@styli/react'
+
+export default () => {
+  return (
+    <View row between>
+      <View s-100 m-10></View>
+      <View s-100 m-10rem></View>
+      <View s-100 m={10}></View>
+      <View s-100 m="10px 20px"></View>
+    </View>    
+  )
+}
+```
+
+  </TabItem>
+  <TabItem value="vue">This is an orange 🍊</TabItem>
+  <TabItem value="react-native">
+
+
+```jsx
+import React from 'react'
+import { View } from '@styli/react-native'
+
+export default () => {
+  return (
+    <View row between>
+      <View s-100 m-10></View>
+      <View s-100 m-10rem></View>
+      <View s-100 m={10}></View>
+      <View s-100 m="10px 20px"></View>
+    </View>
+  )
+}
+```
+
+  </TabItem>
+</Tabs>
+

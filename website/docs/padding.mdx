@@ -28,17 +28,23 @@ import { View } from '@styli/react'
 export default () => {
   return (
     <View row between>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
+      <View s-100 p-10></View>
+      <View s-100 p-10rem></View>
+      <View s-100 p={10}></View>
+      <View s-100 p="10px 20px"></View>
     </View>
   )
 }
 ```
 
   </TabItem>
-  <TabItem value="vue">This is an orange 🍊</TabItem>
+  <TabItem value="vue">
+
+```vue
+
+```
+
+  </TabItem>
   <TabItem value="react-native">
 
 
@@ -49,10 +55,10 @@ import { View } from '@styli/react-native'
 export default () => {
   return (
     <View row between>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
-      <View s-100 bgBlue100></View>
+      <View s-100 p-10></View>
+      <View s-100 p-10rem></View>
+      <View s-100 p={10}></View>
+      <View s-100 p="10px 20px"></View>
     </View>
   )
 }
