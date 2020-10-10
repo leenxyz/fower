@@ -1,11 +1,11 @@
 ---
-id: square
-title: square
+id: round
+title: round
 ---
 
-import Square from '../src/components/Square'
+import Round from '../src/components/Round'
 
-<Square />
+<Round />
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
@@ -28,10 +28,10 @@ import { View } from '@styli/react'
 export default () => {
   return (
     <View row between>
-      <View s-100></View>
-      <View s-10rem></View>
-      <View s="10px"></View>
-      <View s={10}></View>
+      <View s-100 rounded-50></View>
+      <View s-100 rounded-50px></View>
+      <View s-100 rounded={50}></View>
+      <View s-100 rounded="50px"></View>
     </View>
   )
 }
@@ -55,10 +55,10 @@ import { View } from '@styli/react-native'
 export default () => {
   return (
     <View row between>
-      <View s-100></View>
-      <View s-10rem></View>
-      <View s="10px"></View>
-      <View s={10}></View>
+      <View s-100 rounded-50></View>
+      <View s-100 rounded-50px></View>
+      <View s-100 rounded={50}></View>
+      <View s-100 rounded="50px"></View>
     </View>
   )
 }
