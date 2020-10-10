@@ -1,18 +1,15 @@
 <template>
-<div class="hello" :style="style">
-  <h1 class="box">{{ msg }}</h1>
-  <p>
-    For a guide and recipes on how to configure / customize this project,<br />
-    check out the
-  </p>
-</div>
+  <div class="hello" :style="style">
+    <h1 class="box">{{ msg }}</h1>
+    <p>
+      For a guide and recipes on how to configure / customize this project,<br />
+      check out the
+    </p>
+  </div>
 </template>
 
 <script>
-import {
-  createStyle,
-  Styli
-} from '@styli/core';
+import { createStyle, Styli } from '@styli/core';
 
 Styli.setUnit('px');
 

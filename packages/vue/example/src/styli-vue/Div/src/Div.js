@@ -4,18 +4,18 @@ export default {
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: 'div',
     },
     gutter: Number,
     type: String,
     justify: {
       type: String,
-      default: 'start'
+      default: 'start',
     },
     align: {
       type: String,
-      default: 'top'
-    }
+      default: 'top',
+    },
   },
   computed: {
     style() {
@@ -25,18 +25,22 @@ export default {
         ret.marginRight = ret.marginLeft;
       }
       return ret;
-    }
+    },
   },
 
   render(h) {
-    return h(this.tag, {
-      class: [
-        'test-class',
-        this.justify !== 'start' ? `is-justify-${this.justify}` : '',
-        this.align !== 'top' ? `is-align-${this.align}` : '',
-        { 'test-class--flex': this.type === 'flex' }
-      ],
-      style: this.style
-    }, this.$slots.default);
-  }
+    return h(
+      this.tag,
+      {
+        class: [
+          'test-class',
+          this.justify !== 'start' ? `is-justify-${this.justify}` : '',
+          this.align !== 'top' ? `is-align-${this.align}` : '',
+          { 'test-class--flex': this.type === 'flex' },
+        ],
+        style: this.style,
+      },
+      this.$slots.default
+    );
+  },
 };

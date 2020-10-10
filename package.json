@@ -6,7 +6,8 @@
     "dev": "lerna run --parallel --stream dev",
     "test": "lerna run --parallel --stream test",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "publish": "lerna publish --force-publish=*"
+    "publish": "lerna publish --force-publish=*",
+    "format": "prettier --write ."
   },
   "jest": {
     "preset": "ts-jest",

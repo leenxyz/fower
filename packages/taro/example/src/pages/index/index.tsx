@@ -9,7 +9,7 @@ Styli.config({
     {
       key: 'disabledStyle',
       style: {
-        color: 'gray'
+        color: 'gray',
       },
     },
     {
@@ -20,7 +20,8 @@ Styli.config({
         const [, value] = prop.match(/test-(\d+)/)
         return { fontSize: value + 'px', color: 'red' }
       },
-    }]
+    },
+  ],
 })
 
 configColors({
@@ -41,7 +42,9 @@ export default class Index extends Component {
   render() {
     return (
       <View className="index" s-200 center column borderGray700-4>
-        <Text bgBlue500 disabledStyle text-16>Hello!</Text>
+        <Text bgBlue500 disabledStyle text-16>
+          Hello!
+        </Text>
         <Text bgGreen500>world!</Text>
       </View>
     )
