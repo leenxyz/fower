@@ -1,11 +1,11 @@
 ---
-id: background-color
-title: Background Color
+id: border-color
+title: Border Color
 ---
 
-import BgColor from '../src/components/BgColor'
+import { BorderColor } from '../src/components/Border'
 
-<BgColor />
+<BorderColor />
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
@@ -28,10 +28,7 @@ import { View } from '@styli/react'
 export default () => {
   return (
     <View row between>
-      <View s-100 bg="#ed8936">
-        #ed8936
-      </View>
-      <View s-100 bgBlue300>
+      <View s-100 borderBlue300-1>
         blue300
       </View>
     </View>
@@ -58,10 +55,7 @@ import { View } from '@styli/react-native'
 export default () => {
   return (
     <View row between>
-      <View s-100 bg="#ed8936">
-        #ed8936
-      </View>
-      <View s-100 bgBlue300>
+      <View s-100 borderBlue300-1>
         blue300
       </View>
     </View>

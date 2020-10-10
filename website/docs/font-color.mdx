@@ -1,11 +1,11 @@
 ---
-id: background-color
-title: Background Color
+id: font-color
+title: Font Color
 ---
 
-import BgColor from '../src/components/BgColor'
+import { FontColor } from '../src/components/Font'
 
-<BgColor />
+<FontColor />
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
@@ -28,11 +28,14 @@ import { View } from '@styli/react'
 export default () => {
   return (
     <View row between>
-      <View s-100 bg="#ed8936">
-        #ed8936
-      </View>
-      <View s-100 bgBlue300>
+      <View s-100 blue300>
         blue300
+      </View>
+      <View s-100 primaryColor>
+        primaryColor
+      </View>
+      <View s-100 color="#000">
+        #000
       </View>
     </View>
   )
@@ -58,11 +61,14 @@ import { View } from '@styli/react-native'
 export default () => {
   return (
     <View row between>
-      <View s-100 bg="#ed8936">
-        #ed8936
-      </View>
-      <View s-100 bgBlue300>
+      <View s-100 blue300>
         blue300
+      </View>
+      <View s-100 primaryColor>
+        primaryColor
+      </View>
+      <View s-100 color="#000">
+        #000
       </View>
     </View>
   )
