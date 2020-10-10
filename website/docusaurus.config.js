@@ -1,20 +1,20 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Styli',
+  tagline: 'A Utility-First Style Framework for building UI',
+  url: 'styli.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'forsigner', // Usually your GitHub org/user name.
+  projectName: 'styli', // Usually your repo name.
   themeConfig: {
     prism: {
       theme: require('prism-react-renderer/themes/github'),
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
-    sidebarCollapsible: false,
+    // sidebarCollapsible: false,
     navbar: {
-      title: 'My Site',
+      title: 'Styli',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -23,12 +23,11 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Documentation',
           position: 'left',
         },
-        { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/forsigner/styli',
           label: 'GitHub',
           position: 'right',
         },
