@@ -1,11 +1,14 @@
 <template>
-  <div class="hello" :style="style">
-    <h1 class="box">{{ msg }}aaa</h1>
-  </div>
+<div class="hello" :style="style">
+  <h1 class="box">{{ msg }}aaa</h1>
+</div>
 </template>
 
 <script>
-import { createStyle, Styli } from '@styli/core';
+import {
+  createStyle,
+  Styli
+} from '@styli/core';
 Styli.setUnit('px');
 export default {
   name: 'View',
@@ -22,14 +25,14 @@ export default {
   computed: {
     obj1() {
       return createStyle(this.styli);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
 .box {
-  width: 40px;
+  with: 40px;
   height: 40px;
 }
 </style>
