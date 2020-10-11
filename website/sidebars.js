@@ -1,7 +1,15 @@
 module.exports = {
   someSidebar: {
     Styli: ['introduction', 'installation', 'getting-started'],
-    Philosophy: ['utility-first'],
+    Philosophy: [
+      'customization-color',
+      'utility-first',
+      'cross-framework',
+      'type-safe',
+      'less-code',
+      'less-css',
+      'programmable',
+    ],
     Customization: ['customization-color'],
     Spacing: ['padding', 'margin'],
     Layout: ['flex-layout'],
