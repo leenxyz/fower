@@ -5,7 +5,20 @@ export interface Texts {
   textJustify?: boolean
 
   /**
-    h1-h6 级标题
+   * Set heading
+   *
+   * h1
+   * ```css
+   * {
+   *   font-size: 2em;
+   *   font-weight: bold;
+   * }
+   * ```
+   *
+   * 用 View 作为示例:
+   * ```tsx
+   * <View h1></View>
+   * ```
    */
   h1?: boolean
   h2?: boolean
@@ -15,20 +28,22 @@ export interface Texts {
   h6?: boolean
 
   /**
-    text-xs
-    text-sm
-    text-base
-    text-lg
-    text-xl
-    text-2xl
-    text-3xl
-    text-4xl
-    text-5xl
-    text-6xl
-
-    或则具体数值 text-12、text-16
+   * Set fontSize
+   *
+   * f-[xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|number]
+   *
+   * ```css
+   * {
+   *   font-size: number;
+   * }
+   * ```
+   *
+   * 用 View 作为示例:
+   * ```tsx
+   * <View f-xs></View>
+   * ```
    */
-  text?: boolean
+  f?: boolean
 
   fontHairline?: boolean
   fontThin?: boolean

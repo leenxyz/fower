@@ -24,14 +24,14 @@ export const FontSize = () => {
   const [size, setSize] = useState(20)
 
   const fSize = {
-    [`text-${size}`]: true,
+    [`f-${size}`]: true,
   }
 
   return (
     <View>
       <View row between>
         <View s-100 bgBlue100 center {...fSize}>
-          text-{size}
+          f-{size}
         </View>
       </View>
       <View row centerY my-20>

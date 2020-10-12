@@ -133,7 +133,7 @@ export function isColorKey(key: string) {
 }
 
 export function isTextSizeKey(key: string) {
-  return /^text-.*/.test(key)
+  return /^f-.*/.test(key)
 }
 
 export function isTextWeightKey(key: string) {
