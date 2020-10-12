@@ -2,7 +2,6 @@ module.exports = {
   someSidebar: {
     Styli: ['introduction', 'installation', 'getting-started'],
     Philosophy: [
-      'customization-color',
       'utility-first',
       'cross-framework',
       'type-safe',
