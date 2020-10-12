@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Styli',
   tagline: 'A Utility-First Style Framework for building UI',
-  url: 'styli.vercel.app',
+  url: 'https://styli.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -21,8 +21,10 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/introduction',
-          activeBasePath: 'docs',
+          to: 'docs/installation',
+          // activeBasePath: 'docs',
+          activeBasePath: 'docs/introduction',
+
           label: 'Documentation',
           position: 'left',
         },
