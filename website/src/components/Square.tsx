@@ -8,7 +8,7 @@ export default () => {
   return (
     <View>
       <View row between white>
-        <View s-100 bgBlue100>
+        <View s-100 bgBlue100 center>
           <View s={s} bgBlue300 center>
             s-{s}
           </View>
