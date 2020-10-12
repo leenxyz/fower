@@ -22,12 +22,12 @@ export default () => {
     <View>
       <View row between>
         <View s-100 bgBlue100>
-          <View bgBlue300 text-14 {...fLineHeight}>
+          <View bgBlue300 f-14 {...fLineHeight}>
             leading-{lineHeight}
           </View>
         </View>
         <View s-100 bgBlue100>
-          <View bgBlue300 text-14 {...{ [leadingType]: true }}>
+          <View bgBlue300 f-14 {...{ [leadingType]: true }}>
             {leadingType}
           </View>
         </View>

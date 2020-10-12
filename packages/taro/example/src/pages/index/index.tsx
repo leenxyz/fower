@@ -22,7 +22,7 @@ export default class Index extends Component {
   render() {
     return (
       <View className="index" s-200 center column borderGray700-4>
-        <Text bgBlue500 disabledStyle text-16>
+        <Text bgBlue500 disabledStyle f-16>
           Hello!
         </Text>
         <Text bgGreen500>world!</Text>

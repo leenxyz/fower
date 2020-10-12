@@ -37,7 +37,7 @@ import { View } from '@styli/react'
 
 export const Demo = () => {
   return (
-    <View text-16 gray100 borderSolid-1 style={{ backgroundColor: 'red' }} className="demo">
+    <View f-16 gray100 borderSolid-1 style={{ backgroundColor: 'red' }} className="demo">
       哈哈哈
     </View>
   )
@@ -55,7 +55,7 @@ import { Modifiers } from '@styli/core'
 
 const styleProps: Modifiers = {
   dangerColor: true,
-  ['text-16']: true,
+  ['f-16']: true,
   ['gray100']: true,
   ['borderSolid-1']: true,
 }
@@ -69,7 +69,7 @@ createStyle 方法提供了一种快捷处理方法
 ```typescript
 import { Modifiers, createStyle } from '@styli/core'
 
-const style = createStyle('text-16 gray100 borderSolid-1', {
+const style = createStyle('f-16 gray100 borderSolid-1', {
   backgroundColor: 'red'
 })
 
@@ -112,7 +112,7 @@ Styli.config({
       },
       style: (prop) => {
         const [, value] = prop.match(/test-(\d+)/)
-        return createStyle(`text-${value} fontBold`)
+        return createStyle(`f-${value} fontBold`)
       },
     },
   ],
