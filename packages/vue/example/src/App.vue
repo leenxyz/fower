@@ -1,13 +1,13 @@
 <template>
-<div id="app">
-  <Div>
-    <div>
-      222
-      <Div>test</Div>
-    </div>
-  </Div>
-  <Hello styli="white s-500 bgBlack" />
-</div>
+  <div id="app">
+    <Div>
+      <div>
+        222
+        <Div>test</Div>
+      </div>
+    </Div>
+    <Hello styli="white s-500 bgBlack" />
+  </div>
 </template>
 
 <script>
@@ -17,10 +17,8 @@ export default {
   components: {
     Hello,
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 
-<style>
-</style>
+<style></style>
