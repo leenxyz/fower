@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Radio as AntdRadio } from 'antd'
 import { FormItem } from '../FormItem'
-import { RegisterFieldProps, Enum, GqlConfig } from 'entity-form'
+import { RegisterFieldProps, Enum } from 'entity-form'
 
 export const Radio: FC<RegisterFieldProps> = (props) => {
   const { field } = props

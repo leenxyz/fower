@@ -4,4 +4,90 @@ title: Utility-First
 sidebar_label: Utility-First
 ---
 
-一直以来，样式和内容分离逐渐在前端中变成了感觉上的政治正确。人们提倡使用语义化的 CSS 类名，然后把样式放在独立的 CSS 文件管理，个人认为这是非常繁琐解决方案，首先取好语义化的 CSS 类名并简单，取名浪费时精力，很可能吃力不讨好，其次你需要为。随着 React 的发展，特别是 CSS in JS 方案崛起，我觉的
+import { UtilityFirstRaw } from '../src/components/UtilityFirstRaw'
+import { UtilityFirstStyli } from '../src/components/UtilityFirstStyli'
+
+Styli 用 Utility-First 的里面来快速构建复杂的界面。
+
+## 语义化的类名
+
+相信从 JQuery 时代走过来的老前端，都知道 "结构、样式、行为分离"原则, 它可以说是前端中的政治正确，这个原则提倡我们使用语义化的 CSS 类名，并且独立管理 CSS 样式。
+
+传统的 CSS 使用方式：
+
+<UtilityFirstRaw />
+
+```html
+<div className="profile-card">
+  <img className="profile-avatar" src="/img/jobs.webp" />
+  <div className="profile-content">
+    <div className="profile-username">Steve Jobs</div>
+    <span className="profile-introduction">Co-founder of Apple Inc.</span>
+  </div>
+</div>
+
+<style>
+  .profile-container {
+    background-color: #edf2f7;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+  .profile-content {
+    margin-left: 10px;
+  }
+  .profile-username {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .profile-introduction {
+    color: #2d3748;
+  }
+</style>
+```
+
+## 原子 Props
+
+Styli 是违背"结构、样式、行为分离" 原则的，我们通过直接设置组件的 Props 来实现样式，Styli 消灭了 CSS，没有 CSS 语句，没有 CSS 类名，没有 CSS 文件。
+
+Styli 构建界面的方式：
+
+<UtilityFirstStyli />
+
+```jsx
+<View centerY p-20 w-300 bgWhite rounded-10>
+  <Image s-60 rounded-8 src="/img/jobs.webp" />
+  <View ml-10>
+    <View text-22 fontBold>
+      Steve Jobs
+    </View>
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
+```
+
+初看 `centerY p-20 w-300 bgWhite rounded-10` 这类缩写，你可能很不习惯，有点简单粗暴，但我保证，它会让你爽。
+
+和传统的方式相比，这种原子 Props 的方式有很多好处：
+
+- **更少的代码**，这能直接感观到，上面传统语义化方式的代码行数 40，字符个数为 847，Styli 方式代码行数 9，字符个数为 232，代码量相差巨大，更少的代码带来更高的开发效率，实际上，使用 Styli，每一个字符都是有意义的，没有任何冗余的字符和符号。
+
+- **不用在浪费时间取名字**，给 CSS 类取名非常烦人且浪费精力，每个人取名习惯不一样，很多场景也很难用一个语义化的名字来描述，Styli 不浪费时间做这些事，取而代之的是通过添加属性声明式的创建样式。
+
+- **结构和样式变得内聚**，传统的方式，你给一个元素创建样式，你需要先创建一个中间人(CSS class name)，然后复制类名到 CSS 文件中开始写样式，这个过程你要经历 "想名字->模板中编写类名->复制类名到 CSS 文件->开始写 CSS 代码" 这样的烦人链路，同时还要在结构和样式两处文件频繁跳来跳去，修改样式也是一样，这极大影响了开发效率和开发心情。Styli 没有这些问题，你要设置样式，直接设置原子 Props 即可。这和直接内联样式有区别？答案是有的，请看 [相比内联样式](TODO：)
+
+- **CSS 停止膨胀**，使用传统的方式，随着项目增大，CSS 会逐渐膨胀，最终应用体积变得越来越大，越来越难维护，使用 Styli，样式代码几乎不会膨胀。

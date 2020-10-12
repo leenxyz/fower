@@ -1,0 +1,35 @@
+.profile-container {
+  background-color: #edf2f7;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.profile-content {
+  margin-left: 10px;
+}
+
+.profile-username {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-introduction {
+  color: #2d3748;
+}
