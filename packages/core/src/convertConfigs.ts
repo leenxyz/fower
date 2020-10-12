@@ -38,13 +38,13 @@ import {
   isZIndexKey,
 } from './propKey'
 
-export interface CovertConfig {
+export interface ConvertConfig {
   name?: string
   key: string | ((prop: string, propValue: any, props: any) => boolean)
   style: CSSProperties | ((prop: string, propValue: any, props: any) => CSSProperties)
 }
 
-export const covertConfigs: CovertConfig[] = [
+export const convertConfigs: ConvertConfig[] = [
   {
     name: 'size',
     key: isSizeKey,

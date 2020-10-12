@@ -1,5 +1,5 @@
 import { Styli } from './styli'
-import { covertConfigs, CovertConfig } from './covertConfigs'
+import { convertConfigs, ConvertConfig } from './convertConfigs'
 
 interface Props {
   [key: string]: any
@@ -33,12 +33,12 @@ export function parseModifiers(props: Props): ParsedModifiers {
   let style: any = {}
   const styleKeys: string[] = []
 
-  const allCovertConfigs = [...covertConfigs, ...(Styli.configs.covertConfig || [])]
-  const allCovertConfigsLength = allCovertConfigs.length
+  const convertMap = [...convertConfigs, ...(Styli.configs.ConvertConfig || [])]
+  const convertMapsLength = convertMap.length
 
   for (const [prop, propValue] of Object.entries(props)) {
-    for (let i = 0; i < allCovertConfigsLength; i++) {
-      const { key, style: covertStyle } = allCovertConfigs[i]
+    for (let i = 0; i < convertMapsLength; i++) {
+      const { key, style: covertStyle } = convertMap[i]
       if (isPropKey(key, prop, propValue, props)) {
         styleKeys.push(prop)
         if (propValue) style = { ...style, ...getPropStyle(covertStyle, prop, propValue, props) }
@@ -50,12 +50,12 @@ export function parseModifiers(props: Props): ParsedModifiers {
   return { styleKeys, style }
 }
 
-function isPropKey(key: CovertConfig['key'], prop: string, propValue: any, props: any) {
+function isPropKey(key: ConvertConfig['key'], prop: string, propValue: any, props: any) {
   return typeof key === 'string' ? prop === key : key(prop, propValue, props)
 }
 
 function getPropStyle(
-  covertStyle: CovertConfig['style'],
+  covertStyle: ConvertConfig['style'],
   prop: string,
   propValue: any,
   props: any,

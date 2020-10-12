@@ -99,7 +99,7 @@ Styli.configColors({
 import { Styli, createStyle } from '@styli/core'
 
 Styli.config({
-  covertConfig: [
+  convertConfig: [
     {
       key: 'disabledStyle',
       style: {

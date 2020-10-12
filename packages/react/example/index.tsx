@@ -4,24 +4,6 @@ import * as ReactDOM from 'react-dom'
 import { View } from '../.'
 import { createStyle, Styli } from '@styli/core'
 
-Styli.config({
-  covertConfig: [
-    {
-      key: 'disabledStyle',
-      style: createStyle('bgGray600'),
-    },
-    {
-      key: (prop) => {
-        return /test-\d+/.test(prop)
-      },
-      style: (prop) => {
-        const [, value] = prop.match(/test-(\d+)/)
-        return { fontSize: value + 'px', color: 'red' }
-      },
-    },
-  ],
-})
-
 const App = () => {
   return (
     <div className="box">

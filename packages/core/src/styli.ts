@@ -1,10 +1,10 @@
 import { presetColors, IColors } from './colors'
-import { CovertConfig } from './covertConfigs'
+import { ConvertConfig } from './convertConfigs'
 import { ModifierType } from './types/Modifiers'
 
 interface Configs {
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
-  covertConfig?: CovertConfig[]
+  ConvertConfig?: ConvertConfig[]
 }
 
 class StyliFactory {
