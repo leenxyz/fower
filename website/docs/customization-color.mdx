@@ -3,4 +3,26 @@ id: customization-color
 title: Color 自定义颜色
 ---
 
-installation
+我们预设了[数百种色值简写](preset-color)来满足各种需求。但这对您来说可能远远不够，因而我们提供了自定义能力来帮助您。
+
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
+
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View bgGray300 h-300>
+  <View s-50 bgBlue300>A</View>
+  <View s-120 bgGreen300>B</View>
+  <View s-80 bgOrange300>C</View>
+</View>
+`}
+        />
+      ),
+    },
+  ]}
+/>

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { Form as AntdForm } from 'antd'
 import { RegisterFormProps } from 'entity-form'
 
-export const Form: FC<RegisterFormProps> = props => {
+export const Form: FC<RegisterFormProps> = (props) => {
   const { formProps = {} } = props.result.state.entityConfig
   return (
     <AntdForm

@@ -4,7 +4,7 @@ import { FormItem } from '../FormItem'
 import { useQuery } from 'stook-graphql'
 import { RegisterFieldProps, Enum, GqlConfig } from 'entity-form'
 
-const GqlItem: FC<RegisterFieldProps> = props => {
+const GqlItem: FC<RegisterFieldProps> = (props) => {
   const gql = props.field.gql as GqlConfig
   const { loading, data = [] } = useQuery(gql.query, gql.variables || {})
 
@@ -14,7 +14,7 @@ const GqlItem: FC<RegisterFieldProps> = props => {
     optionsData = gql.mapToEnum(data)
   } else {
     const { value, label } = gql.mapToEnum
-    optionsData = data.map(i => ({ value: i[value], label: i[label] }))
+    optionsData = data.map((i) => ({ value: i[value], label: i[label] }))
   }
 
   return (
@@ -30,13 +30,12 @@ const GqlItem: FC<RegisterFieldProps> = props => {
   )
 }
 
-export const Radio: FC<RegisterFieldProps> = props => {
+export const Radio: FC<RegisterFieldProps> = (props) => {
   const { field } = props
   const gql = props.field.gql as GqlConfig
   if (gql) return <GqlItem {...props}></GqlItem>
 
-  const optionsData: Enum =
-    typeof field.enum === 'function' ? field.enum() : field.enum || []
+  const optionsData: Enum = typeof field.enum === 'function' ? field.enum() : field.enum || []
   return (
     <FormItem {...props}>
       <AntdRadio.Group>

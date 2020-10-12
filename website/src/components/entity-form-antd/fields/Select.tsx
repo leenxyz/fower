@@ -7,7 +7,7 @@ import get from 'lodash.get'
 
 const { Option } = AntdSelect
 
-const GqlItem: FC<RegisterFieldProps> = props => {
+const GqlItem: FC<RegisterFieldProps> = (props) => {
   let valueProps: any = {}
   const gql = props.field.gql as GqlConfig
   const { loading, data = [] } = useQuery<any>(gql.query, gql.variables || {})
@@ -44,7 +44,7 @@ const GqlItem: FC<RegisterFieldProps> = props => {
   )
 }
 
-export const Select: FC<RegisterFieldProps> = props => {
+export const Select: FC<RegisterFieldProps> = (props) => {
   const { field } = props
   const { componentProps = {} } = field
 

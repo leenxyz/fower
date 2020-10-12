@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Button } from 'antd'
 
-export const Rest: FC<any> = props => {
+export const Rest: FC<any> = (props) => {
   return (
     <Button
       type="primary"

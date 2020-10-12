@@ -4,77 +4,32 @@ title: Font Color
 ---
 
 import { FontColor } from '../src/components/Font'
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
 
 <FontColor />
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View row between>
+  <View s-100 blue300>
+    blue300
+  </View>
+  <View s-100 primaryColor>
+    primaryColor
+  </View>
+  <View s-100 color="#000">
+    #000
+  </View>
+</View>
+`}
+        />
+      ),
+    },
   ]}
->
-  <TabItem value="react">
-
-
-```jsx
-import React from 'react'
-import { View } from '@styli/react'
-
-export default () => {
-  return (
-    <View row between>
-      <View s-100 blue300>
-        blue300
-      </View>
-      <View s-100 primaryColor>
-        primaryColor
-      </View>
-      <View s-100 color="#000">
-        #000
-      </View>
-    </View>
-  )
-}
-```
-
-  </TabItem>
-  <TabItem value="vue">
-
-
-```vue
-
-```
-
-  </TabItem>
-  <TabItem value="react-native">
-
-
-```jsx
-import React from 'react'
-import { View } from '@styli/react-native'
-
-export default () => {
-  return (
-    <View row between>
-      <View s-100 blue300>
-        blue300
-      </View>
-      <View s-100 primaryColor>
-        primaryColor
-      </View>
-      <View s-100 color="#000">
-        #000
-      </View>
-    </View>
-  )
-}
-```
-
-  </TabItem>
-</Tabs>
-
+/>

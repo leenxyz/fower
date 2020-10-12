@@ -4,87 +4,35 @@ title: Width
 ---
 
 import Width from '../src/components/Width'
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
 
 <Width />
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View row between>
+  <View h-100 w-10></View>
+  <View h-100 w-10rem></View>
+  <View h-100 w={10}></View>
+  <View h-100 w="10px"></View>
+  <View h-100 minW-10></View>
+  <View h-100 minW-10rem></View>
+  <View h-100 minW={10}></View>
+  <View h-100 minW="10px"></View>
+  <View h-100 maxW-10></View>
+  <View h-100 maxW-10rem></View>
+  <View h-100 maxW={10}></View>
+  <View h-100 maxW="10px"></View>
+</View>        
+`}
+        />
+      ),
+    },
   ]}
->
-  <TabItem value="react">
-
-
-```jsx
-import React from 'react'
-import { View } from '@styli/react'
-
-export default () => {
-  return (
-    <View row between>
-      <View h-100 w-10></View>
-      <View h-100 w-10rem></View>
-      <View h-100 w={10}></View>
-      <View h-100 w="10px"></View>
-
-      <View h-100 minW-10></View>
-      <View h-100 minW-10rem></View>
-      <View h-100 minW={10}></View>
-      <View h-100 minW="10px"></View>
-
-      <View h-100 maxW-10></View>
-      <View h-100 maxW-10rem></View>
-      <View h-100 maxW={10}></View>
-      <View h-100 maxW="10px"></View>
-    </View>
-  )
-}
-```
-
-  </TabItem>
-  <TabItem value="vue">
-
-
-```vue
-
-```
-
-  </TabItem>
-  <TabItem value="react-native">
-
-
-```jsx
-import React from 'react'
-import { View } from '@styli/react-native'
-
-export default () => {
-  return (
-    <View row between>
-      <View h-100 w-10></View>
-      <View h-100 w-10rem></View>
-      <View h-100 w={10}></View>
-      <View h-100 w="10px"></View>
-
-      <View h-100 minW-10></View>
-      <View h-100 minW-10rem></View>
-      <View h-100 minW={10}></View>
-      <View h-100 minW="10px"></View>
-
-      <View h-100 maxW-10></View>
-      <View h-100 maxW-10rem></View>
-      <View h-100 maxW={10}></View>
-      <View h-100 maxW="10px"></View>
-    </View>
-  )
-}
-```
-
-  </TabItem>
-</Tabs>
-
+/>

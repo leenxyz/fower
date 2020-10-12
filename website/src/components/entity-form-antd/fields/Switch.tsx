@@ -3,7 +3,7 @@ import { Switch as AntdSwitch } from 'antd'
 import { FormItem } from '../FormItem'
 import { RegisterFieldProps } from 'entity-form'
 
-export const Switch: FC<RegisterFieldProps> = props => {
+export const Switch: FC<RegisterFieldProps> = (props) => {
   function onChange(checked: boolean) {
     props.result.handlerBuilder.createChangeHandler(props.name)(checked)
   }

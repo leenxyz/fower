@@ -8,7 +8,7 @@ export default () => {
   return (
     <View>
       <View row between>
-        <View s-100 bgBlue100 h1 center>
+        <View s-100 bgBlue100 center {...{ [title]: true }}>
           {title}
         </View>
       </View>
