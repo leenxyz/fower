@@ -20,7 +20,7 @@ const tabTypes = [
 export const TabType = ({ items, types = tabTypes }: { items: Item[]; types: TabType[] }) => {
   return (
     <Tabs defaultValue="react" values={types}>
-      {tabTypes.map((tabType) => {
+      {types.map((tabType) => {
         const tab = items.find((item) => item.type === tabType.value)
         return (
           <TabItem key={tabType.value} value={tabType.value}>
