@@ -3,4 +3,56 @@ id: installation
 title: 安装
 ---
 
-installation
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+## 安装核心库
+
+@styli/core 是 styli 的核心库，主要提供 styli 样式转换、主题配置等核心功能。
+
+```js
+npm i @styli/core
+```
+
+## 安装框架组件库
+
+Styli 是支持多个框架，包括 React、Vue、React Native 等。
+
+<Tabs
+  defaultValue="react"
+  values={[
+    { label: 'React', value: 'react' },
+    { label: 'Vue', value: 'vue' },
+    { label: 'React Native', value: 'react-native' },
+  ]}
+>
+  <TabItem value="react">
+
+
+```bash
+npm i @styli/react
+```
+
+  </TabItem>
+  <TabItem value="vue">
+
+
+```js
+npm i @styli/vue
+```
+
+  </TabItem>
+
+
+  <TabItem value="react-native">
+
+
+```js
+npm i @styli/react-native
+```
+
+  </TabItem>
+</Tabs>
+
+
+安装完后，你就可以开始愉快地使用 Styli 了，去 [快速开始](/docs/getting-started)。
