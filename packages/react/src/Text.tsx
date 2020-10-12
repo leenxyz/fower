@@ -7,5 +7,5 @@ export interface TextProps
 
 export const Text: FC<TextProps> = ({ children, ...props }) => {
   const finalProps = toFinalProps(props)
-  return <span style={...finalProps}>{children}</span>
+  return <span {...finalProps}>{children}</span>
 }
