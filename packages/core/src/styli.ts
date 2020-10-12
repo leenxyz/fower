@@ -4,7 +4,7 @@ import { ModifierType } from './types/Modifiers'
 
 interface Configs {
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
-  ConvertConfig?: ConvertConfig[]
+  convertConfig?: ConvertConfig[]
 }
 
 class StyliFactory {

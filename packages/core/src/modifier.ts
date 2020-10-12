@@ -33,7 +33,7 @@ export function parseModifiers(props: Props): ParsedModifiers {
   let style: any = {}
   const styleKeys: string[] = []
 
-  const convertMap = [...convertConfigs, ...(Styli.configs.ConvertConfig || [])]
+  const convertMap = [...convertConfigs, ...(Styli.configs.convertConfig || [])]
   const convertMapsLength = convertMap.length
 
   for (const [prop, propValue] of Object.entries(props)) {
