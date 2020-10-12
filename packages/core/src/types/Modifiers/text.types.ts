@@ -4,10 +4,6 @@ export interface Texts {
   textRight?: boolean
   textJustify?: boolean
 
-  lineHeight?: boolean
-
-  body?: boolean | number | string
-
   /**
     h1-h6 级标题
    */
