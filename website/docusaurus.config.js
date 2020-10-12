@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Styli',
-  tagline: 'A Utility-First Style Framework for building UI',
+  tagline: 'A Utility-First Style Framework for building UI quickly',
   url: 'https://styli.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',

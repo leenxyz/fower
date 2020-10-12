@@ -9,7 +9,7 @@ module.exports = {
       'less-css',
       'programmable',
     ],
-    Customization: ['customization-color'],
+    Customization: ['customization-color', 'extend'],
     Spacing: ['padding', 'margin'],
     Layout: ['flex-layout'],
     Flexbox: ['flex'],

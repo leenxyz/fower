@@ -1,0 +1,97 @@
+---
+id: extend
+title: 扩展
+---
+
+### 自定义属性
+
+我们内置了多种样式属性来帮助您快捷开发，但这对您来说可能远远不够，因而我们提供了自定义属性的能力来帮助您。
+
+```typescript
+import { Styli, createStyle } from '@styli/core'
+
+Styli.config({
+  convertConfig: [
+    {
+      key: 'disabledStyle',
+      style: {
+        color: 'themeColor',
+      },
+    },
+    {
+      key: (prop) => {
+        return /test-\d+/.test(prop)
+      },
+      style: (prop) => {
+        const [, value] = prop.match(/test-(\d+)/)
+        return createStyle(`text-${value} fontBold`)
+      },
+    },
+  ],
+})
+
+...
+<View disabledStyle test-16>取消</View>
+```
+
+### 自定义组件
+
+当使用自定义功能时，没有办法在组件库导出的组件上利用 VSCode 的自动补全自定义属性。因而您需要定义类型，再重新包装一层
+
+#### 定义组件
+
+方式一:
+
+包装组件库组件
+
+```typescript
+import React, { FC } from 'react'
+import { View as StyliView, ViewProps as StyliViewProps } from '@styli/react'
+
+interface CustomProps {
+  themeColor: true
+  disabledStyle: true
+}
+
+interface ViewProps extends StyliViewProps, CustomProps {}
+
+export const View: FC<ViewProps> = ({ children, ...props }) => {
+  return <StyliView {...props}>{children}</StyliView>
+}
+```
+
+方式二:
+
+包装原始标签
+
+```typescript
+import React, { FC } from 'react'
+import { toFinalProps, Modifiers } from '@styli/core'
+
+interface CustomProp {
+  themeColor: true
+  disabledStyle: true
+}
+
+export interface HeadingProps
+  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>,
+    Modifiers,
+    CustomProp {}
+
+export const H1: FC<HeadingProps> = ({ children, ...props }) => {
+  const finalProps: any = toFinalProps({ h1: true, ...props })
+  return <div {...finalProps}>{children}</div>
+}
+```
+
+我们的组件库中可能没有覆盖到您需要的标签、或者您想将样式属性能力添加到您的自定义组件中，您可以通过 toFinalProps 方法进行转换过滤
+
+#### 使用组件
+
+```typescript
+import { View, H1 } from '@/styli/components'
+
+...
+<View themeColor disabledStyle>哈哈哈</View>
+<H1>哈哈哈</H1>
+```
