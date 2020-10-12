@@ -79,6 +79,7 @@ export const sizeMaps: SizeMaps = {
   w: ['width'],
   h: ['height'],
   s: ['width', 'height'],
+  c: ['width', 'height', 'borderRadius'],
   minW: ['minWidth'],
   maxW: ['maxWidth'],
   minH: ['minHeight'],

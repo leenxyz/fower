@@ -52,6 +52,29 @@ export interface Sizes {
   s?: boolean | number | string
 
   /**
+   * Set circle size
+   *
+   * c-10 相当于下面：
+   *
+   * ```css
+   * {
+   *   width: 10px;
+   *   height: 10px;
+   *   border-radius: 10px;
+   * }
+   * ```
+   *
+   * 用 View 作为示例:
+   * ```tsx
+   * <View c-10></View>
+   * <View c-1rem></View>
+   * <View c-10p></View>
+   * <View c={a + b}></View>
+   * ```
+   */
+  c?: boolean | number | string
+
+  /**
    * Set min-width
    *
    * 用 View 作为示例:

@@ -1,0 +1,28 @@
+---
+id: circle
+title: Circle
+---
+
+import Circle from '../src/components/Circle'
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
+
+<Circle />
+
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View c-100></View>
+<View c-10rem></View>
+<View c="10px"></View>
+<View c={10}></View>
+`}
+        />
+      ),
+    },
+  ]}
+/>

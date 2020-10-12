@@ -14,7 +14,7 @@ module.exports = {
     Layout: ['flex-layout'],
     Flexbox: ['flex'],
     Color: ['preset-color', 'font-color', 'border-color', 'background-color'],
-    Size: ['width', 'height', 'square', 'round'],
+    Size: ['width', 'height', 'square', 'circle', 'round'],
     Typography: ['font-size', 'font-weight', 'text-align', 'line-height', 'title'],
   },
 }

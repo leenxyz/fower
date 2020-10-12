@@ -72,11 +72,11 @@ export function isPositionKey(key: string) {
 }
 
 export function isBooleanSizeKey(key: string) {
-  return /^([whs]|min[HW]|max[HW])-.*/.test(key)
+  return /^([whsc]|min[HW]|max[HW])-.*/.test(key)
 }
 
 export function isValueSizeKey(key: string) {
-  return /^[whs]$|^min[WH]$|^max[WH]$/.test(key)
+  return /^[whsc]$|^min[WH]$|^max[WH]$/.test(key)
 }
 
 export function isSizeKey(key: string) {
