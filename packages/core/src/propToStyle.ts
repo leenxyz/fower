@@ -223,7 +223,7 @@ export function textHeadingPropToStyle(prop: string) {
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
-  return { color: propValue || Colors[prop] }
+  return { color: Colors[prop] || propValue }
 }
 
 export function textSizePropToStyle(prop: string) {
