@@ -242,8 +242,59 @@ export function textLineHeightPropToStyle(prop: string, propValue: any) {
     return { lineHeight: getValue(value || propValue) }
   } else {
     const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
-    // TODO: should get current node fontSize
     if (leadings[leadingKey]) return { lineHeight: `calc(${leadings[leadingKey]} * 1em)` }
   }
   return {}
+}
+
+export function shadowPropToStyle(prop: string, propValue: any) {
+  const [, value] = prop.split('-')
+
+  if (typeof propValue === 'string' && propValue) return { boxShadow: propValue }
+
+  const gv = getValue
+  switch (value) {
+    case 'xs':
+      return { boxShadow: `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)` }
+    case 'sm':
+      return { boxShadow: `0 ${gv(1)} ${gv(2)} 0 rgba(0, 0, 0, 0.05)` }
+    case 'md':
+      return {
+        boxShadow: `0 ${gv(4)} ${gv(6)} -${gv(1)} rgba(0, 0, 0, 0.1), 0 ${gv(2)} ${gv(4)} -${gv(
+          1,
+        )} rgba(0, 0, 0, 0.06)`,
+      }
+    case 'lg':
+      return {
+        boxShadow: `0 ${gv(10)} ${gv(14)} -${gv(3)} rgba(0, 0, 0, 0.1), 0 ${gv(4)} ${gv(6)} -${gv(
+          2,
+        )} rgba(0, 0, 0, 0.05)`,
+      }
+    case 'xl':
+      return {
+        boxShadow: `0 ${gv(20)} ${gv(25)} -${gv(5)} rgba(0, 0, 0, 0.1), 0 ${gv(10)} ${gv(10)} -${gv(
+          5,
+        )} rgba(0, 0, 0, 0.04)`,
+      }
+    case '2xl':
+      return { boxShadow: `0 ${gv(25)} ${gv(50)} -${gv(12)} rgba(0, 0, 0, 0.25)` }
+    case 'inner':
+      return { boxShadow: `inset 0 ${gv(2)} ${gv(4)} 0 rgba(0, 0, 0, 0.06)` }
+    case 'outline':
+      return { boxShadow: `0 0 0 ${gv(3)} rgba(66, 153, 225, 0.5)` }
+    case 'none':
+      return { boxShadow: 'none' }
+    case 'base':
+      return {
+        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+          2,
+        )} 0 rgba(0, 0, 0, 0.06)`,
+      }
+    default:
+      return {
+        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+          2,
+        )} 0 rgba(0, 0, 0, 0.06)`,
+      }
+  }
 }

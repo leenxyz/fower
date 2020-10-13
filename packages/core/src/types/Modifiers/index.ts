@@ -6,6 +6,7 @@ export * from './size.types'
 export * from './text.types'
 export * from './margin.types'
 export * from './flex.types'
+export * from './shadow.types'
 
 import { Backgrounds } from './background.types'
 import { Borders } from './border.types'
@@ -15,6 +16,7 @@ import { Paddings } from './padding.types'
 import { Sizes } from './size.types'
 import { Texts } from './text.types'
 import { Positions, ZIndex } from './position.types'
+import { Shadows } from './shadow.types'
 
 export enum ModifierType {
   margin = 'margin',
@@ -36,6 +38,7 @@ export interface Modifiers
     Backgrounds,
     Texts,
     ZIndex,
+    Shadows,
     CustomProps {}
 
 // 自定义属性

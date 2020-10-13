@@ -10,11 +10,11 @@ export function kebab(s: string) {
   return noCase(s).replace(/\s/g, '-')
 }
 
-export function isNumber(s: string) {
-  return /^-?\d+$/.test(s)
+export function isNumber(s: string | number) {
+  return /^-?\d+$/.test('' + s)
 }
 
-export function getValue(value: string, modifierType?: ModifierType) {
+export function getValue(value: string | number, modifierType?: ModifierType) {
   if (isNumber(value)) {
     if (Styli.configs.transformUnit) {
       return Styli.configs.transformUnit(Number(value), modifierType)

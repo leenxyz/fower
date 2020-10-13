@@ -17,6 +17,7 @@ import {
   textWeightPropToStyle,
   zIndexPropToStyle,
   flexItemPropToStyle,
+  shadowPropToStyle,
 } from './propToStyle'
 import {
   isAlignmentKey,
@@ -29,6 +30,7 @@ import {
   isPaddingKey,
   isPositionKey,
   isRoundedKey,
+  isShadowKey,
   isSizeKey,
   isTextAlign,
   isTextHeadingKey,
@@ -132,5 +134,10 @@ export const convertConfigs: ConvertConfig[] = [
     name: 'text-line-height',
     key: isTextLineHeightKey,
     style: textLineHeightPropToStyle,
+  },
+  {
+    name: 'shadow',
+    key: isShadowKey,
+    style: shadowPropToStyle,
   },
 ]

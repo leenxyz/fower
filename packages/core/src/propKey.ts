@@ -144,3 +144,7 @@ export function isTextWeightKey(key: string) {
 export function isTextLineHeightKey(key: string) {
   return key.startsWith('leading')
 }
+
+export function isShadowKey(key: string) {
+  return /^shadow.*/.test(key)
+}
