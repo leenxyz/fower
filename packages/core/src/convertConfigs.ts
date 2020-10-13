@@ -88,7 +88,7 @@ export const convertConfigs: ConvertConfig[] = [
   {
     name: 'flexbox-align',
     key: isAlignmentKey,
-    style: (prop, propValue, props) => {
+    style: (_, __, props) => {
       const newProps = props.row || props.column ? props : { ...props, row: true }
       return alignmentPropToStyle(newProps)
     },
