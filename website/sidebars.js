@@ -1,6 +1,7 @@
 module.exports = {
   someSidebar: {
     Styli: ['introduction', 'installation', 'getting-started'],
+    Guides: ['basic', 'adavanced', 'extend'],
     Philosophy: [
       'utility-first',
       'cross-framework',
@@ -9,13 +10,18 @@ module.exports = {
       'less-css',
       'programmable',
     ],
-    Customization: ['customization-color', 'extend'],
+    Customization: ['customization-color'],
+    Api: ['css'],
+    Components: ['view', 'text', 'image', 'anchor'],
     Spacing: ['padding', 'margin'],
+    Size: ['width', 'height', 'square', 'circle'],
     Layout: ['flex-layout'],
     Flexbox: ['flex'],
-    Color: ['preset-color', 'font-color', 'border-color', 'background-color'],
-    Size: ['width', 'height', 'square', 'circle'],
-    Border: ['rounded'],
-    Typography: ['font-size', 'font-weight', 'text-align', 'line-height', 'title'],
+    Typography: ['font-size', 'font-color', 'font-weight', 'text-align', 'line-height', 'title'],
+    Border: ['rounded', 'border-color'],
+    Color: ['preset-color'],
+    Background: [],
+    Position: ['background-color'],
+    Shadow: [],
   },
 }
