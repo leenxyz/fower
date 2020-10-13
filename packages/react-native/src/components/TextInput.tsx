@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInputProps as RNTextInputProps, TextInput as RNTextInput } from 'react-native'
-import { toFinalProps, Modifiers } from '@styli/core'
+import { toFinalProps, Modifiers } from '../styli-core'
 
 export interface TextInputProps extends RNTextInputProps, Modifiers {}
 

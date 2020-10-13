@@ -3,7 +3,7 @@ import {
   TouchableWithoutFeedback as RNTouchableWithoutFeedback,
   TouchableWithoutFeedbackProps as RNTouchableWithoutFeedbackProps,
 } from 'react-native'
-import { toFinalProps, Modifiers } from '@styli/core'
+import { toFinalProps, Modifiers } from '../styli-core'
 
 export interface TouchableWithoutFeedbackProps extends RNTouchableWithoutFeedbackProps, Modifiers {}
 

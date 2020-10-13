@@ -15,6 +15,6 @@ import { Styli } from './styli-core'
 // TODO: 需要优化
 Styli.config({
   transformUnit(value) {
-    return value
+    return value as any
   },
 })

@@ -3,7 +3,7 @@ import {
   ImageBackgroundProps as RNImageBackgroundProps,
   ImageBackground as RNImageBackground,
 } from 'react-native'
-import { toFinalProps, Modifiers } from '@styli/core'
+import { toFinalProps, Modifiers } from '../styli-core'
 
 export interface ImageBackgroundProps extends RNImageBackgroundProps, Modifiers {}
 

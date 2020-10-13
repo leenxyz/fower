@@ -1,6 +1,7 @@
 import React from 'react'
-import { SafeAreaView as RNScrollView, ScrollViewProps as RNScrollViewProps } from 'react-native'
-import { toFinalProps, Modifiers } from '@styli/core'
+import { ScrollView as RNScrollView, ScrollViewProps as RNScrollViewProps } from 'react-native'
+
+import { toFinalProps, Modifiers } from '../styli-core'
 
 export interface ScrollViewProps extends RNScrollViewProps, Modifiers {}
 
