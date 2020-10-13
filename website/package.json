@@ -13,6 +13,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.65",
     "@docusaurus/preset-classic": "2.0.0-alpha.65",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.65",
     "@mdx-js/react": "^1.5.8",
     "@styli/react": "^0.3.0",
     "antd": "^4.6.6",
@@ -37,7 +38,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.51",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.65",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.51",
     "@types/react-helmet": "^6.1.0",

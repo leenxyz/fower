@@ -1,7 +1,7 @@
 module.exports = {
   someSidebar: {
     Styli: ['introduction', 'installation', 'getting-started'],
-    Guides: ['basic', 'adavanced', 'extend'],
+    Guides: ['adavanced', 'extend'],
     Philosophy: [
       'utility-first',
       'cross-framework',
