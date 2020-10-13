@@ -11,7 +11,7 @@ import { TabType } from '../src/components/TabType'
 
 ## Margin Props
 
-margin 是非常高频率使用的属性，所以我们使用缩写。
+margin 是高频率使用的属性，所以我们使用缩写。
 
 - `m` margin
 - `mt` margin-top
@@ -27,6 +27,9 @@ margin 是非常高频率使用的属性，所以我们使用缩写。
 
 ```jsx
 <View m-10>Hello</View>
+<View m={10}>Hello</View>
+<View m="10px">Hello</View>
+<View m="10px 20px">Hello</View>
 ```
 
 ### 设置一边的 margin
@@ -67,8 +70,8 @@ margin 是非常高频率使用的属性，所以我们使用缩写。
 <View my--10px>Hello</View>
 <View my--10rem>Hello</View>
 <View my={-10}>Hello</View>
-<View my={-10px}>Hello</View>
-<View my={-10rem}>Hello</View>
+<View my="-10px">Hello</View>
+<View my="-10rem">Hello</View>
 ```
 
 <Margin />
