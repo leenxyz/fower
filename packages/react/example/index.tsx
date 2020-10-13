@@ -16,7 +16,7 @@ export const View: React.FC<ViewProps> = ({ children, ...props }) => {
 Styli.setUnit('px')
 
 const NewView = styled(View)('f-20 fontBold', 'gray600', {
-  background: 'red'
+  background: 'red',
 })
 
 const App = () => {
