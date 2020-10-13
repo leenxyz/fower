@@ -1,20 +1,29 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { View } from '../.'
-import { createStyle, Styli } from '@styli/core'
+import { styled } from '../../core/src/styled'
+import { toFinalProps, Modifiers, Styli } from '../../core/src'
+
+export interface ViewProps
+  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+    Modifiers {}
+
+export const View: React.FC<ViewProps> = ({ children, ...props }) => {
+  const finalProps = toFinalProps(props)
+  return <div {...finalProps}>{children}</div>
+}
+
+Styli.setUnit('px')
+
+const NewView = styled(View)('f-20 fontBold', 'gray600', {
+  background: 'red'
+})
 
 const App = () => {
   return (
     <div className="box">
-      <View s-600 borderB-10 between center disabledStyle test-18>
-        <View s-80 bgBlue400 p-50>
-          Box1
-        </View>
-        <View w-120 h-120 bgGreen400>
-          Box2
-        </View>
-      </View>
+      <View f-10 />
+      <NewView>就哈哈哈哈哈哈哈哈哈</NewView>
     </div>
   )
 }

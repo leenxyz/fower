@@ -1,16 +1,18 @@
-import { CSSProperties } from 'react'
 import { parseModifiers } from './modifier'
 
-interface Style {
+export interface Style {
   [key: string]: any
 }
 
-export function createStyle(modifiers: string, objectStyle?: CSSProperties): Style {
-  if (!modifiers) return {}
-
-  const props = modifiers
-    .split(/\s+/)
-    .reduce((result, cur) => ({ ...result, [cur]: true }), {} as any)
-  const { style } = parseModifiers(props)
-  return { ...style, ...objectStyle }
+export function createStyle(...args: any): Style {
+  return args.reduce((t: Style, c: any) => {
+    if (typeof c === 'string') {
+      const props = c
+        .split(/[\s|\t|\n]+/)
+        .reduce((result, cur) => ({ ...result, [cur]: true }), {} as any)
+      const { style } = parseModifiers(props)
+      return { ...t, ...style }
+    }
+    return { ...t, ...c }
+  }, {})
 }
