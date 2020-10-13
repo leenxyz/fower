@@ -298,3 +298,9 @@ export function shadowPropToStyle(prop: string, propValue: any) {
       }
   }
 }
+
+export function opacityPropToStyle(prop: string, propValue: any) {
+  const [, value = 50] = prop.split('-')
+  if (typeof propValue !== 'boolean' && propValue) return { opacity: Number(propValue) / 100 }
+  return { opacity: Number(value) / 100 }
+}

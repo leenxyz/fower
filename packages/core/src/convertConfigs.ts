@@ -18,6 +18,7 @@ import {
   zIndexPropToStyle,
   flexItemPropToStyle,
   shadowPropToStyle,
+  opacityPropToStyle,
 } from './propToStyle'
 import {
   isAlignmentKey,
@@ -27,6 +28,7 @@ import {
   isFlexboxKey,
   isFlexItemKey,
   isMarginKey,
+  isOpacityKey,
   isPaddingKey,
   isPositionKey,
   isRoundedKey,
@@ -139,5 +141,10 @@ export const convertConfigs: ConvertConfig[] = [
     name: 'shadow',
     key: isShadowKey,
     style: shadowPropToStyle,
+  },
+  {
+    name: 'opacity',
+    key: isOpacityKey,
+    style: opacityPropToStyle,
   },
 ]
