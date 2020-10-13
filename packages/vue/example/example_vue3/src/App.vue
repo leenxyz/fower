@@ -1,25 +1,25 @@
 <template>
-<div>
   <div>
-    <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
+    <div>
+      <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import Div from './styli-vue/Div/index.js'
+import Div from './styli-vue/Div/index.js';
 export default {
   name: 'App',
   components: {
-    Div
+    Div,
   },
   methods: {
     divClick() {
       // console.log("事件测试")
-      alert("console")
-    }
+      alert('console');
+    },
   },
-}
+};
 </script>
 
 <style>

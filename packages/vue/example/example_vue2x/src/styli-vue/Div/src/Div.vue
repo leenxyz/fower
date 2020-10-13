@@ -1,33 +1,30 @@
 <template>
   <div :style="stylier" @click="handleClick">
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <script>
-import {
-  createStyle,
-  Styli
-} from '@styli/core';
+import { createStyle, Styli } from '@styli/core';
 Styli.setUnit('px');
-  export default {
-    name: 'Div',
-    componentName: 'Div',
+export default {
+  name: 'Div',
+  componentName: 'Div',
   props: {
     styli: {
       type: String,
       default: '',
-    }
+    },
   },
   computed: {
     stylier() {
-      return createStyle(this.styli)
-    }
+      return createStyle(this.styli);
+    },
   },
-      methods: {
-      handleClick(evt) {
-        this.$emit('click', evt);
-      }
-    }
-  };
+  methods: {
+    handleClick(evt) {
+      this.$emit('click', evt);
+    },
+  },
+};
 </script>

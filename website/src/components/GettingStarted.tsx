@@ -8,9 +8,7 @@ export const GettingStarted = () => {
       <View centerY p-10 w-260 bgWhite rounded-10>
         <Image s-48 rounded-8 src="/img/jobs.webp" />
         <View ml-10>
-          <View f-20>
-            Steve Jobs
-          </View>
+          <View f-20>Steve Jobs</View>
           <Text gray800>Co-founder of Apple Inc.</Text>
         </View>
       </View>
