@@ -29,7 +29,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "vue",
+  "name": "@styli/vue",
   "author": "forsigner",
   "module": "dist/vue.esm.js",
   "devDependencies": {
