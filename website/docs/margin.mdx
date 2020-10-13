@@ -7,6 +7,70 @@ import Margin from '../src/components/Margin'
 import { JSXHighLight } from '../src/components/HighLight'
 import { TabType } from '../src/components/TabType'
 
+使用 m{t|r|b|l|x|y}-{size}格式的 Props 可以控制元素的 margin。
+
+## Margin Props
+
+margin 是非常高频率使用的属性，所以我们使用缩写。
+
+- `m` margin
+- `mt` margin-top
+- `mr` margin-right
+- `mb` margin-bottom
+- `ml` margin-left
+- `mx` margin-left and margin-right
+- `my` margin-top and margin-bottom
+
+### 设置四周的 margin
+
+使用 m-{size}格式的 Props 可以控制元素四周的 margin。
+
+```jsx
+<View m-10>Hello</View>
+```
+
+### 设置一边的 margin
+
+使用 m{t|r|b|l}-{size}格式的 Props 可以控制元素某一边的 margin。
+
+```jsx
+<View mt-10>Hello</View>
+<View mr-10>Hello</View>
+<View mb-10>Hello</View>
+<View ml-10>Hello</View>
+```
+
+### 设置水平方向的 margin
+
+使用 px-{size}格式的 Props 可以控制元素水平方向的 margin。
+
+```jsx
+<View mx-10>Hello</View>
+```
+
+### 设置垂直方向的 margin
+
+使用 my-{size}格式的 Props 可以控制元素垂直方向的 margin。
+
+```jsx
+<View my-10>Hello</View>
+```
+
+### 设置负 margin
+
+使用 m{t|r|b|l|x|y}--{size}格式的 Props 可以设置元素的 负 margin。
+
+当然，你也可以使用 `m={-10}` 这样的方式为元素设置负 margin。
+
+```jsx
+<View my--10>Hello</View>
+<View my--10px>Hello</View>
+<View my--10rem>Hello</View>
+<View my={-10}>Hello</View>
+<View my={-10px}>Hello</View>
+<View my={-10rem}>Hello</View>
+```
+
 <Margin />
 
 <TabType

@@ -97,7 +97,7 @@ export function isPaddingKey(key: string) {
 
 export function isBooleanMarginKey(key: string) {
   return /^m[ltrbxy]?-([0-9]*)/.test(key)
-}
+}u
 
 export function isValueMarginKey(key: string) {
   return /^m[ltrbxy]?$/.test(key)
