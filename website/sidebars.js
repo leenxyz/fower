@@ -20,8 +20,9 @@ module.exports = {
     Typography: ['font-size', 'font-color', 'font-weight', 'text-align', 'line-height', 'title'],
     Border: ['rounded', 'border-color'],
     Color: ['preset-color'],
-    Background: [],
-    Position: ['background-color'],
-    Shadow: [],
+    Background: ['background-color'],
+    Position: [],
+    Shadow: ['shadow'],
+    Opacity: ['opacity'],
   },
 }
