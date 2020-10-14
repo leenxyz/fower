@@ -1,25 +1,27 @@
 <template>
+<div>
   <div>
-    <div>
-      <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
-    </div>
+    <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
+    <P styli="w-100 bgRed">
+    <P></P>
+    <div>22</div>
+    </P>
   </div>
+</div>
 </template>
 
 <script>
-import Div from './styli-vue/Div/index.js';
+// import Div from './styli-vue/Div/index.js'
+// import P from './styli-vue/P/P.jsx'
 export default {
   name: 'App',
-  components: {
-    Div,
-  },
+  components: {},
   methods: {
     divClick() {
-      // console.log("事件测试")
-      alert('console');
-    },
+      alert("console")
+    }
   },
-};
+}
 </script>
 
 <style>

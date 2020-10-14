@@ -1,4 +1,7 @@
-import { createStyle, Styli } from '@styli/core';
+import {
+  createStyle,
+  Styli
+} from '@styli/core';
 Styli.setUnit('px');
 
 export default {
@@ -8,16 +11,16 @@ export default {
     styli: {
       type: String,
       default: '',
-    },
+    }
   },
   computed: {
     stylier() {
-      return createStyle(this.styli);
-    },
+      return createStyle(this.styli)
+    }
   },
   render(h) {
     return h(
-      'div',
+      "div",
       {
         style: this.stylier,
       },
