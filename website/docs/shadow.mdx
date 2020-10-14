@@ -1,0 +1,27 @@
+---
+id: shadow
+title: Shadow
+---
+
+import Shadow from '../src/components/Shadow'
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
+
+<Shadow />
+
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View s-100 shadow></View>
+<View s-100 shadow-base></View>
+<View s-100 shadow="0 0 1px 2px"></View>
+`}
+        />
+      ),
+    },
+  ]}
+/>
