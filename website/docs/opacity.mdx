@@ -1,0 +1,26 @@
+---
+id: opacity
+title: Opacity
+---
+
+import Opacity from '../src/components/Opacity'
+import { JSXHighLight } from '../src/components/HighLight'
+import { TabType } from '../src/components/TabType'
+
+<Opacity />
+
+<TabType
+  items={[
+    {
+      type: 'react',
+      value: (
+        <JSXHighLight
+          code={`
+<View s-100 opacity-100></View>
+<View s-100 opacity={100}></View>
+`}
+        />
+      ),
+    },
+  ]}
+/>
