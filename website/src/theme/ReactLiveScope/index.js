@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View } from '@styli/react'
+import { Text, View, Image, Anchor } from '@styli/react'
 
 const ButtonExample = (props) => (
   <button
@@ -22,6 +22,8 @@ const ReactLiveScope = {
   ButtonExample,
   Text,
   View,
+  Image,
+  Anchor,
 }
 
 export default ReactLiveScope
