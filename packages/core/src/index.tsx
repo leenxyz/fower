@@ -1,4 +1,5 @@
 export * from './styli'
 export * from './createStyle'
 export * from './types/Modifiers'
+export * from './styled'
 export { toStyle, toFinalProps } from './modifier'
