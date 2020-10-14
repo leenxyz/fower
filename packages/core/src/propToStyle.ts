@@ -1,14 +1,5 @@
-import { isNumber, kebab, upFirst, getValue } from './utils'
+import { isNumber, kebab, upFirst, getValue, isValidPropValue } from './utils'
 import { ColorType } from './colors'
-import {
-  isValuePaddingKey,
-  isValueSizeKey,
-  isValueMarginKey,
-  isValueBgColorKey,
-  isValueRoundedKey,
-  isValuePositionKey,
-  isValueZIndexKey,
-} from './propKey'
 import { ModifierType } from './types/Modifiers'
 import { weights, fontSizes, leadings, headings } from './typo'
 import {
@@ -33,7 +24,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
   const [key, value] = prop.split('-')
 
   sizeMaps[key].forEach((k) => {
-    const sizeValue = isValueSizeKey(prop) ? propValue : value
+    const sizeValue = isValidPropValue(prop) ? propValue : value
     style[k] = getValue(sizeValue, ModifierType.size)
   })
 
@@ -45,7 +36,7 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   const [key, value] = prop.split('-')
 
   paddingMaps[key].forEach((k) => {
-    const paddingValue = isValuePaddingKey(prop) ? propValue : value
+    const paddingValue = isValidPropValue(propValue) ? propValue : value
     style[k] = getValue(paddingValue, ModifierType.padding)
   })
 
@@ -58,7 +49,7 @@ export function marginPropToStyle(prop: string, propValue: any) {
   const [, minus = ''] = symbol.split('')
 
   marginMaps[key].forEach((k) => {
-    const marginValue = isValueMarginKey(prop) ? propValue : minus + value
+    const marginValue = isValidPropValue(propValue) ? propValue : minus + value
     style[k] = getValue(marginValue, ModifierType.margin)
   })
 
@@ -66,23 +57,17 @@ export function marginPropToStyle(prop: string, propValue: any) {
 }
 
 export function bgPropToStyle(prop: string, propValue: any) {
-  let backgroundColor = ''
-  if (isValueBgColorKey(prop)) {
-    backgroundColor = propValue
-  } else {
-    const colorKey = prop.replace(/^bg/, '').replace('-', '').toLowerCase() as ColorType
-    backgroundColor = Colors[colorKey]
-  }
-
-  if (!backgroundColor) return {}
-  return { backgroundColor }
+  if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
+  const [, color = ''] = prop.match(/^bg(\w+)/) || []
+  const lowerColor = color.toLocaleLowerCase()
+  return { backgroundColor: Colors[lowerColor] }
 }
 
 export function roundedPropToStyle(prop: string, propValue: any) {
   let style: any = {}
   const [key, value] = prop.split('-')
   for (const p of roundedMaps[key]) {
-    const roundedValue = isValueRoundedKey(prop) ? propValue : value
+    const roundedValue = isValidPropValue(propValue) ? propValue : value
     style[`border${p}Radius`] = getValue(roundedValue, ModifierType.border)
   }
   return style
@@ -195,23 +180,17 @@ export function alignmentPropToStyle(props: any) {
 }
 
 export function positionPropToStyle(prop: string, propValue: any) {
-  let style: any = {}
-
-  if (positionKeys.includes(prop)) style.position = prop
-
-  const [key, value] = prop.split('-')
-  const positionValue = isValuePositionKey(prop) ? propValue : value
-  style[positionMaps[key.toLocaleLowerCase()]] = getValue(positionValue, ModifierType.position)
-
-  return style
+  if (positionKeys.includes(prop)) return { position: prop }
+  const [key = '', value = ''] = prop.split('-')
+  const lowerKey = key.toLocaleLowerCase()
+  if (isValidPropValue(propValue)) return { [positionMaps[lowerKey]]: propValue }
+  return { [positionMaps[lowerKey]]: getValue(value, ModifierType.position) }
 }
 
 export function zIndexPropToStyle(prop: string, propValue: any) {
-  let style: any = {}
+  if (isValidPropValue(propValue)) return { zIndex: propValue }
   const [, value] = prop.split('-')
-  const zIndexValue = isValueZIndexKey(prop) ? propValue : value
-  style.zIndex = zIndexValue
-  return style
+  return { zIndex: value }
 }
 
 export function textAlignPropToStyle(prop: string) {
@@ -226,32 +205,31 @@ export function colorPropToStyle(prop: string, propValue: any) {
   return { color: Colors[prop] || propValue }
 }
 
-export function textSizePropToStyle(prop: string) {
+export function textSizePropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { fontSize: getValue(propValue) }
   const [, value] = prop.split('-')
   return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
 }
 
-export function textWeightPropToStyle(prop: string) {
-  const weightKey = prop.replace(/^font/, '').toLocaleLowerCase()
-  return { fontWeight: weights[weightKey] }
+export function textWeightPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { fontWeight: propValue }
+  const [, value = ''] = prop.match(/font(\w+)?/) || []
+  const lowerValue = value.toLocaleLowerCase()
+  return { fontWeight: weights[lowerValue] || getValue(value) }
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
-  if (prop.startsWith('leading-')) {
-    const [, value] = prop.split('-')
-    return { lineHeight: getValue(value || propValue) }
-  } else {
-    const leadingKey = prop.replace(/^leading/, '').toLocaleLowerCase()
-    if (leadings[leadingKey]) return { lineHeight: `calc(${leadings[leadingKey]} * 1em)` }
+  if (isValidPropValue(propValue)) return { lineHeight: getValue(propValue) }
+  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
+  const lowerValue = value.toLocaleLowerCase()
+  return {
+    lineHeight: !!leadings[lowerValue] ? `calc(${leadings[lowerValue]} * 1em)` : getValue(value),
   }
-  return {}
 }
 
 export function shadowPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { boxShadow: propValue }
   const [, value] = prop.split('-')
-
-  if (typeof propValue === 'string' && propValue) return { boxShadow: propValue }
-
   const gv = getValue
   switch (value) {
     case 'xs':
@@ -300,7 +278,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 }
 
 export function opacityPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { opacity: Number(propValue) / 100 }
   const [, value = 50] = prop.split('-')
-  if (typeof propValue !== 'boolean' && propValue) return { opacity: Number(propValue) / 100 }
   return { opacity: Number(value) / 100 }
 }

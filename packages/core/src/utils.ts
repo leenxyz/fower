@@ -14,6 +14,11 @@ export function isNumber(s: string | number) {
   return /^-?\d+$/.test('' + s)
 }
 
+export function isValidPropValue(v: any) {
+  const type = typeof v
+  return (type !== 'boolean' && type == 'string') || type === 'number'
+}
+
 export function getValue(value: string | number, modifierType?: ModifierType) {
   if (isNumber(value)) {
     if (Styli.configs.transformUnit) {

@@ -1,6 +1,5 @@
-import { centerX, centerY, G, positionKeys, headingTypes } from './constants'
+import { centerX, centerY, G, positionKeys, headingTypes, textAlign } from './constants'
 import { Colors } from './styli'
-import { weights } from './typo'
 
 export function isFlexboxKey(key: string) {
   return (
@@ -27,101 +26,45 @@ export function isAlignmentKey(key: string) {
   ].includes(key)
 }
 
-export function isBooleanZIndexKey(key: string) {
-  return /^zIndex-\d+$/.test(key)
-}
-
-export function isValueZIndexKey(key: string) {
-  return /^zIndex$/.test(key)
-}
-
 export function isZIndexKey(key: string) {
-  return isBooleanZIndexKey(key) || isValueZIndexKey(key)
+  return /^zIndex(-\d+)?$/.test(key)
 }
 
+// TODO: need refactor
 export function isBorderKey(key: string) {
   return key.startsWith('border')
 }
 
-export function isBooleanRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])?-.*/.test(key)
-}
-
-export function isValueRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])?$/.test(key)
-}
-
 export function isRoundedKey(key: string) {
-  return isBooleanRoundedKey(key) || isValueRoundedKey(key)
+  return /^rounded([TLRB]|T[LR]|B[LR])?(-.+)?$/.test(key)
 }
 
 export function isFlexItemKey(key: string) {
   return /^flex(-\d+)?$/.test(key)
 }
 
-export function isBooleanPositionKey(key: string) {
-  return /^[TLRB]-.*/.test(key)
-}
-
-export function isValuePositionKey(key: string) {
-  return /^[TLRB]$/.test(key)
-}
-
 export function isPositionKey(key: string) {
-  return isBooleanPositionKey(key) || isValuePositionKey(key) || positionKeys.includes(key)
-}
-
-export function isBooleanSizeKey(key: string) {
-  return /^([whsc]|min[HW]|max[HW])-.*/.test(key)
-}
-
-export function isValueSizeKey(key: string) {
-  return /^[whsc]$|^min[WH]$|^max[WH]$/.test(key)
+  return /^[TLRB](-.+)?$/.test(key) || positionKeys.includes(key)
 }
 
 export function isSizeKey(key: string) {
-  return isBooleanSizeKey(key) || isValueSizeKey(key)
-}
-
-export function isBooleanPaddingKey(key: string) {
-  return /^p[ltrbxy]?-([0-9]*)/.test(key)
-}
-
-export function isValuePaddingKey(key: string) {
-  return /^p[ltrbxy]?$/.test(key)
+  return /^([whsc]|min[HW]|max[HW])(-.+)?$/.test(key)
 }
 
 export function isPaddingKey(key: string) {
-  return isBooleanPaddingKey(key) || isValuePaddingKey(key)
-}
-
-export function isBooleanMarginKey(key: string) {
-  return /^m[ltrbxy]?-([0-9]*)/.test(key)
-}
-
-export function isValueMarginKey(key: string) {
-  return /^m[ltrbxy]?$/.test(key)
+  return /^p[ltrbxy]?(-.+)?$/.test(key)
 }
 
 export function isMarginKey(key: string) {
-  return isBooleanMarginKey(key) || isValueMarginKey(key)
-}
-
-export function isBooleanBgColorKey(key: string) {
-  return /^bg.*/.test(key)
-}
-
-export function isValueBgColorKey(key: string) {
-  return /^bg$/.test(key)
+  return /^m[ltrbxy]?(-.+)?$/.test(key)
 }
 
 export function isBgColorKey(key: string) {
-  return isBooleanBgColorKey(key) || isValueBgColorKey(key)
+  return /^bg(.+)?$/.test(key)
 }
 
 export function isTextAlign(key: string) {
-  const types = ['textLeft', 'textCenter', 'textRight', 'textJustify']
-  return types.includes(key)
+  return textAlign.includes(key)
 }
 
 export function isTextHeadingKey(key: string) {
@@ -133,22 +76,23 @@ export function isColorKey(key: string) {
 }
 
 export function isTextSizeKey(key: string) {
-  return /^f-.*/.test(key)
+  return /^f(-.+)?$/.test(key)
 }
 
 export function isTextWeightKey(key: string) {
-  const weightKey = key.replace(/^font/, '').toLocaleLowerCase()
-  return !!weights[weightKey]
+  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|black)?$|^fontWeight$/.test(
+    key,
+  )
 }
 
 export function isTextLineHeightKey(key: string) {
-  return key.startsWith('leading')
+  return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/.test(key)
 }
 
 export function isShadowKey(key: string) {
-  return /^shadow.*/.test(key)
+  return /^shadow(-(xs|sm|md|base|xl|2xl|outline|none|inner))?$/.test(key)
 }
 
 export function isOpacityKey(key: string) {
-  return /^opacity.*/.test(key)
+  return /^opacity(-\d+)?$/.test(key)
 }

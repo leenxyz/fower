@@ -18,7 +18,6 @@ export const weights: any = {
   normal: 400,
   medium: 500,
   semibold: 600,
-  // bold: 700,
   bold: 'bold',
   extrabold: 800,
   black: 900,

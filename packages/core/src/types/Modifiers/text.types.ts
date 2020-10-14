@@ -43,8 +43,9 @@ export interface Texts {
    * <View f-xs></View>
    * ```
    */
-  f?: boolean
+  f?: boolean | number | string
 
+  fontWeight?: string | number
   fontHairline?: boolean
   fontThin?: boolean
   fontLight?: boolean
@@ -54,7 +55,7 @@ export interface Texts {
   fontBold?: boolean
   fontExtrabold?: boolean
 
-  leading?: boolean
+  leading?: boolean | number | string
 
   leadingNone?: boolean
   leadingTight?: boolean
