@@ -1,13 +1,13 @@
 <template>
-<div>
   <div>
-    <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
-    <P styli="w-100 bgRed">
-    <P></P>
-    <div>22</div>
-    </P>
+    <div>
+      <Div styli="w-100 bgRed" @click="divClick">事件测试</Div>
+      <P styli="w-100 bgRed">
+        <P></P>
+        <div>22</div>
+      </P>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -18,10 +18,10 @@ export default {
   components: {},
   methods: {
     divClick() {
-      alert("console")
-    }
+      alert('console');
+    },
   },
-}
+};
 </script>
 
 <style>

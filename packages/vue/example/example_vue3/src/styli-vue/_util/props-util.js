@@ -1,5 +1,5 @@
 // import { isVNode, Fragment, Comment, Text, h } from 'vue';
-import { isVNode, Fragment} from 'vue';
+import { isVNode, Fragment } from 'vue';
 import isValid from './isValid';
 
 const getSlot = (self, name = 'default', options = {}) => {
@@ -19,7 +19,7 @@ const getSlot = (self, name = 'default', options = {}) => {
 const flattenChildren = (children = [], filterEmpty = true) => {
   const temp = Array.isArray(children) ? children : [children];
   const res = [];
-  temp.forEach(child => {
+  temp.forEach((child) => {
     if (Array.isArray(child)) {
       res.push(...flattenChildren(child, filterEmpty));
     } else if (child && child.type === Fragment) {
@@ -43,6 +43,4 @@ export function isEmptyElement(c) {
     (c.type === Text && c.children.trim() === '')
   );
 }
-export {
-  getSlot,
-};
+export { getSlot };

@@ -1,14 +1,11 @@
 <template>
-<div :style="stylier">
-  <slot />
-</div>
+  <div :style="stylier">
+    <slot />
+  </div>
 </template>
 
 <script>
-import {
-  createStyle,
-  Styli
-} from '@styli/core';
+import { createStyle, Styli } from '@styli/core';
 Styli.setUnit('px');
 export default {
   name: 'Div',
@@ -17,12 +14,12 @@ export default {
     styli: {
       type: String,
       default: '',
-    }
+    },
   },
   computed: {
     stylier() {
-      return createStyle(this.styli)
-    }
-  }
+      return createStyle(this.styli);
+    },
+  },
 };
 </script>

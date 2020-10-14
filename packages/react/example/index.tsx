@@ -22,8 +22,9 @@ const NewView = styled(View)('f-20 fontBold', 'gray600', {
 const App = () => {
   return (
     <div className="box">
-      <View f-10 />
-      <NewView>就哈哈哈哈哈哈哈哈哈</NewView>
+      <View s-100 bgGray100 roundedT="100px" center p-10>
+        哈哈哈哈
+      </View>
     </div>
   )
 }

@@ -1,9 +1,6 @@
 // import { defineComponent, ref } from 'vue'
-import { defineComponent} from 'vue'
-import {
-  createStyle,
-  Styli
-} from '@styli/core';
+import { defineComponent } from 'vue';
+import { createStyle, Styli } from '@styli/core';
 import { getSlot } from '../_util/props-util';
 Styli.setUnit('px');
 const Demo = defineComponent({
@@ -12,11 +9,11 @@ const Demo = defineComponent({
     styli: {
       type: String,
       default: '',
-    }
+    },
   },
   computed: {
     stylier() {
-      return createStyle(this.styli)
+      return createStyle(this.styli);
     },
   },
   /*
@@ -33,18 +30,18 @@ const Demo = defineComponent({
     }
   },
   */
-  render () {
-    console.log("render",this.stylier)
-    console.log("getSlot",getSlot)
+  render() {
+    console.log('render', this.stylier);
+    console.log('getSlot', getSlot);
     return (
       <>
-        <div style = {this.stylier}>
+        <div style={this.stylier}>
           组件内部
-        {getSlot(this)}
+          {getSlot(this)}
         </div>
       </>
-    )
-  }
-})
+    );
+  },
+});
 
-export default Demo
+export default Demo;
