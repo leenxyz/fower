@@ -1,7 +1,6 @@
 module.exports = {
   someSidebar: {
-    Styli: ['introduction', 'installation', 'getting-started'],
-    Guides: ['adavanced', 'extend'],
+    Styli: ['introduction', 'installation', 'getting-started', 'guide', 'configuration', 'extend'],
     Philosophy: [
       'utility-first',
       'cross-framework',
@@ -10,7 +9,6 @@ module.exports = {
       'less-css',
       'programmable',
     ],
-    Customization: ['customization-color'],
     Api: ['css'],
     Components: ['view', 'text', 'image', 'anchor'],
     Spacing: ['padding', 'margin'],
@@ -24,5 +22,6 @@ module.exports = {
     Position: [],
     Shadow: ['shadow'],
     Opacity: ['opacity'],
+    FAQS: ['opacity'],
   },
 }
