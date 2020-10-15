@@ -3,38 +3,92 @@ id: configuration
 title: 配置
 ---
 
-在[快速开始](/docs/getting-started)中，我们体验了 Styli 的最基本用法，接下来我们看看 Styli 的其他用法。
+### 单位
 
-### 配置
+Styli 默认单位为 `px`，它将在您书写时没有显式设置单位的情况下，自动为您添加单位。
 
 ```jsx
-import { config } from '@styli/core'
+<View f-20></View>
 
-config({
-  theme: {},
+// equal with
+<View style={{ fontSize: '20px' }}></View>
+```
+
+您可以在 `Styli.config` 中对默认单位进行修改。
+
+```jsx
+Styli.config({
+  unit: 'px',
 })
 ```
 
-我们预设了[数百种色值简写](preset-color)来满足各种需求。但这对您来说可能远远不够，因而我们提供了自定义能力来帮助您。
+### 颜色
 
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
+Styli 预设了[数百种色值简写](preset-color)来满足各种需求，但这对您来说可能远远不够，您可以自行添加颜色。
 
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View bgGray300 h-300>
-  <View s-50 bgBlue300>A</View>
-  <View s-120 bgGreen300>B</View>
-  <View s-80 bgOrange300>C</View>
+```jsx
+Styli.config({
+  colors: {
+    themeLight: '#FFF',
+    themeDark: '#000',
+  },
+})
+```
+
+之后您可以这样使用
+
+```jsx
+<View themeLight>
+  set font color is #FFF
 </View>
-`}
-        />
-      ),
+<View bgThemeLight>
+  set background color is #FFF
+</View>
+<View borderThemeLight-1>
+  set border color is #FFF
+</View>
+```
+
+### 自定义指令
+
+Styli 内置了大量的快捷指令来帮助您快速构建 UI，但有时候您可能需要自定义指令来满足需求
+
+```jsx
+Styli.config({
+  convertConfig: [
+    {
+      name: 'disabledStyle',
+      key: 'disabledStyle',
+      style: {
+        fontSize: '22px',
+        color: 'red',
+      },
     },
-  ]}
-/>
+    {
+      name: 'theme',
+      key: (prop) => /^theme-\w+$/.test(prop),
+      style: (prop, propValue) => {
+        const [, value = ''] = prop.match(/^theme-(\w+)$/) || []
+        if (value === 'dark') return createStyle('bgGray500 white')
+        if (value === 'light') return createStyle('bgGray200 black')
+        return {}
+      },
+    },
+  ],
+})
+```
+
+如上我们配置了 `disabledStyle` 和 `theme` 两个自定义指令，自定义指令与内置指令使用完全一致
+
+```jsx
+<View theme-dark>
+  <View disabledStyle>cancel</View>
+  <View>confirm</View>
+</View>
+```
+
+配置项中提供了三个属性: `name`, `key`与 `style`
+
+> - name 可选。通常用来标识该配置指令作用。
+> - key 必选。值为指令名称字符串或者返回 boolean 值函数。
+> - style 必选。值为 CSSProperties 对象或者返回 CSSProperties 对象的函数。
