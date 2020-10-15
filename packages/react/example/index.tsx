@@ -15,7 +15,7 @@ Styli.config({
       key: 'disableStyle',
       style: {
         fontSize: 22,
-        color: 'red'
+        color: 'red',
       },
     },
   ],
@@ -23,7 +23,7 @@ Styli.config({
 
 Styli.config({
   colors: {
-    themeColor: '#000'
+    themeColor: '#000',
   },
   convertConfig: [
     {
@@ -33,12 +33,12 @@ Styli.config({
       },
       style: (prop, propValue) => {
         const [, value = ''] = prop.match(/^theme-(\w+)$/) || []
-        if(value === 'dark') return createStyle('bgGray500 white')
+        if (value === 'dark') return createStyle('bgGray500 white')
         if (value === 'light') return createStyle('bgGray200 black')
         return {}
-      }
-    }
-  ]
+      },
+    },
+  ],
 })
 
 console.log('-------->', Styli.getConfig('convertConfig'))

@@ -13,7 +13,7 @@ class StyliFactory {
   private configs: Configs = {
     unit: 'px', // set default unit
     colors: presetColors, // set default color
-    convertConfig: []
+    convertConfig: [],
   }
 
   config(config: Partial<Configs>) {
@@ -21,10 +21,7 @@ class StyliFactory {
     this.configs = {
       ...this.configs,
       ...config,
-      convertConfig: [
-        ...this.configs.convertConfig,
-        ...convertConfig
-      ],
+      convertConfig: [...this.configs.convertConfig, ...convertConfig],
       colors: {
         ...this.configs.colors,
         ...colors,
