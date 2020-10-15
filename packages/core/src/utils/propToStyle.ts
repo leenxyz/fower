@@ -1,7 +1,8 @@
-import { isNumber, kebab, upFirst, getValue, isValidPropValue } from './utils'
-import { ColorType } from './colors'
-import { ModifierType } from './types/Modifiers'
-import { weights, fontSizes, leadings, headings } from './typo'
+import { isNumber, kebab, upFirst, getValue, isValidPropValue } from './'
+
+import { ColorType } from '../constants/colors'
+import { ModifierType } from '../types/Modifiers'
+import { weights, fontSizes, leadings, headings } from '../constants/typo'
 import {
   G,
   paddingMaps,
@@ -14,8 +15,8 @@ import {
   positionKeys,
   positionMaps,
   borderStyles,
-} from './constants'
-import { Styli } from './styli'
+} from '../constants'
+import { Styli } from '../styli'
 
 const Colors = Styli.Colors
 

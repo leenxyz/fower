@@ -41,10 +41,4 @@ export interface Modifiers
     Texts,
     ZIndex,
     Shadows,
-    Opacity,
-    CustomProps {}
-
-// 自定义属性
-export interface CustomProps {
-  [key: string]: any
-}
+    Opacity {}

@@ -1,5 +1,5 @@
-import { presetColors, IColors } from './colors'
-import { ConvertConfig } from './convertConfigs'
+import { presetColors, IColors } from './constants/colors'
+import { ConvertConfig } from './utils/convertConfigs'
 import { ModifierType } from './types/Modifiers'
 
 interface Configs {

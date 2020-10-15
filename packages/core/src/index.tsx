@@ -1,5 +1,7 @@
 export * from './styli'
-export * from './createStyle'
 export * from './types/Modifiers'
-export * from './styled'
-export { toStyle, toFinalProps } from './modifier'
+
+export { createStyle } from './api/createStyle'
+export { styled } from './api/styled'
+export { parseModifiers } from './api/parseModifiers'
+export { toFinalProps } from './api/toFinalProps'

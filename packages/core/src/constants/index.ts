@@ -1,5 +1,5 @@
-import { upFirst } from './utils'
-import { MarginMaps, PaddingMaps, SizeMaps } from './types'
+import { upFirst } from '../utils'
+import { MarginMaps, PaddingMaps, SizeMaps } from '../types'
 
 export const G = {
   padding: 'padding',

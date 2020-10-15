@@ -1,6 +1,6 @@
-import { G, positionKeys, headingTypes, textAlign, flexMaps, flexAlign } from './constants'
-import { Colors } from './styli'
-import { upFirst } from './utils'
+import { G, positionKeys, headingTypes, textAlign, flexMaps, flexAlign } from '../constants'
+import { Colors } from '../styli'
+import { upFirst } from '.'
 
 export function isFlexBoxKeyWrapper() {
   const getFlexKeys = (prefix: 'justify' | 'align') =>

@@ -1,6 +1,6 @@
 import { noCase } from 'no-case'
-import { Styli } from './styli'
-import { ModifierType } from './types/Modifiers'
+import { Styli } from '../styli'
+import { ModifierType } from '../types/Modifiers'
 
 export function upFirst(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1)
