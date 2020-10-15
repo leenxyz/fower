@@ -1,5 +1,5 @@
-import { isOpacityKey } from '../src/propKey'
-import { opacityPropToStyle } from '../src/propToStyle'
+import { isOpacityKey } from '../src/utils/propKey'
+import { opacityPropToStyle } from '../src/utils/propToStyle'
 
 describe('opacity', () => {
   it('isOpacityKey', () => {

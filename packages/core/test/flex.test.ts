@@ -1,6 +1,10 @@
 import { flexMaps, flexAlign } from '../src/constants'
-import { isFlexBoxKey, isFlexItemKey, isAlignmentKey } from '../src/propKey'
-import { flexPropToStyle, flexItemPropToStyle, alignmentPropToStyle } from '../src/propToStyle'
+import { isFlexBoxKey, isFlexItemKey, isAlignmentKey } from '../src/utils/propKey'
+import {
+  flexPropToStyle,
+  flexItemPropToStyle,
+  alignmentPropToStyle,
+} from '../src/utils/propToStyle'
 import { upFirst } from '../src/utils'
 
 describe('flex-box', () => {

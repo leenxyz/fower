@@ -1,6 +1,6 @@
 import { positionKeys } from '../src/constants'
-import { isPositionKey } from '../src/propKey'
-import { positionPropToStyle } from '../src/propToStyle'
+import { isPositionKey } from '../src/utils/propKey'
+import { positionPropToStyle } from '../src/utils/propToStyle'
 
 describe('position', () => {
   it('isPositionKey', () => {

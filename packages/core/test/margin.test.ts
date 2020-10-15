@@ -1,5 +1,5 @@
-import { isMarginKey } from '../src/propKey'
-import { marginPropToStyle } from '../src/propToStyle'
+import { isMarginKey } from '../src/utils/propKey'
+import { marginPropToStyle } from '../src/utils/propToStyle'
 
 describe('margin', () => {
   it('isMarginKey', () => {

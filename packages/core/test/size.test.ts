@@ -1,5 +1,5 @@
-import { isSizeKey } from '../src/propKey'
-import { sizePropToStyle } from '../src/propToStyle'
+import { isSizeKey } from '../src/utils/propKey'
+import { sizePropToStyle } from '../src/utils/propToStyle'
 
 describe('size', () => {
   it('isSizeKey', () => {

@@ -1,5 +1,5 @@
-import { isPaddingKey } from '../src/propKey'
-import { paddingPropToStyle } from '../src/propToStyle'
+import { isPaddingKey } from '../src/utils/propKey'
+import { paddingPropToStyle } from '../src/utils/propToStyle'
 
 describe('padding', () => {
   it('isPaddingKey', () => {

@@ -4,15 +4,15 @@ import {
   isTextWeightKey,
   isTextLineHeightKey,
   isTextHeadingKey,
-} from '../src/propKey'
+} from '../src/utils/propKey'
 import {
   textSizePropToStyle,
   textAlignPropToStyle,
   textHeadingPropToStyle,
   textLineHeightPropToStyle,
   textWeightPropToStyle,
-} from '../src/propToStyle'
-import { headings, leadings } from '../src/typo'
+} from '../src/utils/propToStyle'
+import { headings, leadings } from '../src/constants/typo'
 import { upFirst } from '../src/utils'
 
 describe('text-size', () => {
