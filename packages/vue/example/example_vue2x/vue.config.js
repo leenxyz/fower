@@ -9,11 +9,11 @@ module.exports = {
   devServer: {
     open: true,
     host: '0.0.0.0',
-    port: 1831,
+    port: 1832,
   },
   chainWebpack: (config) => {
     config.plugin('html').tap((args) => {
-      args[0].title = 'vue-styli';
+      args[0].title = 'vue2x-styli';
       return args;
     });
   },

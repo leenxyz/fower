@@ -5,8 +5,8 @@ import {
 } from '@styli/core';
 import { getSlot } from '../_util/props-util';
 Styli.setUnit('px');
-const P = defineComponent({
-  name: 'P',
+const Abbr = defineComponent({
+  name: 'Abbr',
   props: {
     styli: {
       type: String,
@@ -18,29 +18,15 @@ const P = defineComponent({
       return createStyle(this.styli)
     },
   },
-  /*
-  setup (props) {
-    const input = ref(null)
-    const click = (e) => {
-      console.log(e)
-      console.log(input.value)
-      console.log("jsx-tesx-props",props)
-    }
-    return {
-      click,
-      input
-    }
-  },
-  */
   render () {
     return (
       <>
-        <p style = {this.stylier}>
+        <abbr style = {this.stylier}>
         {getSlot(this)}
-        </p>
+        </abbr>
       </>
     )
   }
 })
 
-export default P
+export default Abbr
