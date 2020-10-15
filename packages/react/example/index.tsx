@@ -75,7 +75,7 @@ const Input = styled('input', {
 const App = () => {
   return (
     <div className="box">
-      <Div p-20 white>
+      <Div p-20 white css={{ backgroundColor: 'yellow' }}>
         Div
       </Div>
       <Input />

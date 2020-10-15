@@ -11,11 +11,11 @@ import { Modifiers } from '../types/Modifiers'
 import { toFinalProps } from './toFinalProps'
 import { createStyle } from './createStyle'
 
-/**
- * styled
- */
-
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
+
+interface CSSProps {
+  css?: CSSProperties
+}
 
 /**
  * style any Component
@@ -37,11 +37,12 @@ type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   component: C,
   ...args: (string | CSSProperties)[]
-): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers> {
+): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & CSSProps> {
   const StyledComponent = forwardRef((props, ref) => {
-    const finalProps = toFinalProps(props)
-    finalProps.style = { ...createStyle(...args), ...finalProps.style }
-
+    // TODO: handle css props
+    const { css = {}, ...rest } = props as any
+    const finalProps = toFinalProps(rest)
+    finalProps.style = { ...createStyle(...args), ...finalProps.style, ...css }
     return createElement(component, { ref, ...finalProps })
   })
 
