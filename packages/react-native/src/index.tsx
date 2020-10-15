@@ -25,9 +25,4 @@ export const TouchableHighlight = styled(RNTouchableHighlight)
 export const TouchableOpacity = styled(RNTouchableOpacity)
 export const TouchableWithoutFeedback = styled(RNTouchableWithoutFeedback)
 
-// TODO: 需要优化
-Styli.config({
-  transformUnit(value) {
-    return value as any
-  },
-})
+Styli.config({ unit: '' })
