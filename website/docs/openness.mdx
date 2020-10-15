@@ -1,0 +1,50 @@
+---
+id: openness
+title: 开放能力
+---
+
+Styli 提供了 `styled` 方法来为各种组件提供使用 styli 的能力，且提供了完整的类型支持。
+
+```jsx
+import React from 'react'
+import { styled } from '@styli/core'
+
+const Button = styled('div')
+
+<Button f-20 center rounded-20 w-100 s-50>confirm</Button>
+```
+
+当赋值自定义组件时，注意提供 style props
+
+```jsx
+import React, { FC } from 'react'
+import { styled } from '@styli/core'
+
+interface ButtonProps {
+  style: CSSProperties  // It required when custom component wrapped by styled
+  children: any
+}
+
+// custom component
+const Button:FC<ButtonProps> = ({ style }) => <div style={style}>{children}</div>
+
+// wrapped by styld
+const NewButton = styled(Button)
+
+// use newButton with styli
+<NewButton f-20 center rounded-20 w-100 s-50>confirm</NewButton>
+```
+
+`styled` 方法还支持接收任意多个参数用来初始化你的组件
+
+```jsx
+import React, { FC } from 'react'
+import { styled } from '@styli/core'
+
+const Button = styled('div', 'f-20 fontBold', 'textCenter', 'gray100', 'bgRed', {
+  display: 'inline-block',
+  lineHeight: '30px'
+})
+
+<Button>confirm</Button>
+```

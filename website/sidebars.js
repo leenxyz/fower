@@ -1,6 +1,13 @@
 module.exports = {
   someSidebar: {
-    Styli: ['introduction', 'installation', 'getting-started', 'guide', 'configuration', 'extend'],
+    Styli: [
+      'introduction',
+      'installation',
+      'getting-started',
+      'guide',
+      'configuration',
+      'openness',
+    ],
     Philosophy: [
       'utility-first',
       'framework-agnostic',
