@@ -3,7 +3,9 @@ id: openness
 title: 开放能力
 ---
 
-Styli 提供了 `styled` 方法来为各种组件提供使用 styli 的能力，且提供了完整的类型支持。
+### Styli 组件
+
+为了满足赋予各种组件 Styli 能力的需求，我们提供了 `styled` 方法来快速创建 Styli 组件
 
 ```jsx
 import React from 'react'
@@ -14,7 +16,7 @@ const Button = styled('div')
 <Button f-20 center rounded-20 w-100 s-50>confirm</Button>
 ```
 
-当赋值自定义组件时，注意提供 style props
+当赋值自定义组件时，请注意提供 style props
 
 ```jsx
 import React, { FC } from 'react'
@@ -48,3 +50,7 @@ const Button = styled('div', 'f-20 fontBold', 'textCenter', 'gray100', 'bgRed', 
 
 <Button>confirm</Button>
 ```
+
+### createStyle
+
+[createStyle](createStyle) 允许您在不创建 styli 组件的情况下使用 Styli 的能力。
