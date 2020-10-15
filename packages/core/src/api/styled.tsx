@@ -13,7 +13,9 @@ import { createStyle } from './createStyle'
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
-export interface CSSProps {
+export interface InjectedProps {
+  // TODO: handle any
+  children?: any
   css?: CSSProperties
 }
 
@@ -37,7 +39,7 @@ export interface CSSProps {
 export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   component: C,
   ...args: (string | CSSProperties)[]
-): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & CSSProps> {
+): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props, ref) => {
     // TODO: handle css props
     const { css = {}, ...rest } = props as any
