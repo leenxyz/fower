@@ -27,30 +27,10 @@ export function styled<C extends ElementType>(
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers> {
   const StyledComponent = forwardRef((props, ref) => {
     const finalProps = toFinalProps(props)
-    finalProps.style = { ...getStyles(...args), ...finalProps.style }
+    finalProps.style = { ...createStyle(...args), ...finalProps.style }
     return <Component ref={ref} {...finalProps} />
   })
 
   hoistNonReactStatics(StyledComponent, Component as any)
   return StyledComponent
-}
-
-export function templateStrToCommonStr(literals: string[], ...values: any[]) {
-  let output = ''
-  let index = 0
-  for (index = 0; index < values.length; index++) {
-    output += literals[index] + values[index]
-  }
-  output += literals[index]
-  return output.replace(/\n+/g, '')
-}
-
-// 解析样式
-export function getStyles(...args: any): CSSProperties {
-  // 从模板字符串解析
-  if (Array.isArray(args[0])) {
-    const [literals, ...values] = args
-    return createStyle(templateStrToCommonStr(literals, ...values))
-  }
-  return createStyle(...args)
 }

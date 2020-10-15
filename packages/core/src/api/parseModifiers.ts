@@ -36,11 +36,11 @@ export function parseModifiers(props: Props): ParsedModifiers {
   return { styleKeys, style }
 }
 
-function isPropKey(key: ConvertConfig['key'], prop: string, propValue: any, props: any) {
+export function isPropKey(key: ConvertConfig['key'], prop: string, propValue: any, props: any) {
   return typeof key === 'string' ? prop === key : key(prop, propValue, props)
 }
 
-function getPropStyle(
+export function getPropStyle(
   covertStyle: ConvertConfig['style'],
   prop: string,
   propValue: any,
