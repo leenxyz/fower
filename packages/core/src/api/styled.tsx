@@ -13,7 +13,7 @@ import { createStyle } from './createStyle'
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
-interface CSSProps {
+export interface CSSProps {
   css?: CSSProperties
 }
 
