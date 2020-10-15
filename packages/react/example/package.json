@@ -10,7 +10,11 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@styli/react": "^0.4.0",
-    "react-app-polyfill": "^1.0.0"
+    "@types/styletron-react": "^5.0.2",
+    "jss": "^10.4.0",
+    "jss-preset-default": "^10.4.0",
+    "react-app-polyfill": "^1.0.0",
+    "styletron-react": "^5.2.7"
   },
   "alias": {
     "react": "../node_modules/react",

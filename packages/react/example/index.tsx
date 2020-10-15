@@ -2,7 +2,7 @@ import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { createStyle, styled, Styli } from '../../core/src'
-import { View } from '../src'
+import { View, Text } from '../src'
 import { Button } from '@material-ui/core'
 
 Styli.config({
@@ -55,15 +55,33 @@ export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
   )
 }
 
+// const StyledButton = styled(Button, 'p-10')
 const StyledButton = styled(Button, 'p-10')
 
 const NewView = styled(MyView, 'fontBold')
 
+// const Div = myStyled('div', {
+//   background: 'red',
+// })
+
+const Div = styled('div', {
+  background: 'red',
+})
+
+const Input = styled('input', {
+  background: 'grey',
+})
+
 const App = () => {
   return (
     <div className="box">
-      <NewView theme-light>=============View</NewView>
-      <NewView foo="foo" gooo={11} bgBandColor themeColor p-20>
+      <Div p-20 white>
+        Div
+      </Div>
+      <Input />
+      <View red500>View</View>
+      <Text green500>Text</Text>
+      <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
         就哈哈哈哈哈哈哈哈哈
       </NewView>
       <Button variant="contained" style={{ padding: '40px' }}>
