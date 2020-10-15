@@ -3,35 +3,37 @@ import { ConvertConfig } from './utils/convertConfigs'
 import { ModifierType } from './types/Modifiers'
 
 interface Configs {
+  unit: string
+  colors: Partial<IColors>
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
   convertConfig?: ConvertConfig[]
 }
 
 class StyliFactory {
-  unit: string = ''
-
-  Colors: IColors = presetColors
-
-  configs: Configs = {}
-
-  config = (c: Configs) => {
-    this.configs = c
+  private configs: Configs = {
+    unit: 'px', // set default unit
+    colors: presetColors, // set default color
   }
 
-  configColors = (colors: Partial<IColors>) => {
-    this.Colors = {
-      ...presetColors,
-      ...colors,
+  config(config: Partial<Configs>) {
+    const { colors } = config || {}
+    this.configs = {
+      ...this.configs,
+      ...config,
+      colors: {
+        ...presetColors,
+        ...colors,
+      },
     }
   }
 
-  setUnit = (unit: string) => {
-    this.unit = unit
+  getConfigs(): Configs {
+    return this.configs
+  }
+
+  getConfig(type: keyof Configs) {
+    return this.configs[type]
   }
 }
 
 export const Styli = new StyliFactory()
-
-export const Colors = Styli.Colors
-
-export const configColors = Styli.configColors

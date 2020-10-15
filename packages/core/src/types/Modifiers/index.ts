@@ -28,6 +28,10 @@ export enum ModifierType {
   text = 'text',
   size = 'size',
   ZIndex = 'ZIndex',
+  opacity = 'opacity',
+  shadow = 'shadow',
+  flex = 'flex',
+  flexItem = 'flexItem',
 }
 
 export interface Modifiers

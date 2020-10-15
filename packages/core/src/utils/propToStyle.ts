@@ -1,6 +1,6 @@
-import { isNumber, kebab, upFirst, getValue, isValidPropValue } from './'
+import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst } from './'
 
-import { ColorType } from '../constants/colors'
+import { ColorType, IColors } from '../constants/colors'
 import { ModifierType } from '../types/Modifiers'
 import { weights, fontSizes, leadings, headings } from '../constants/typo'
 import {
@@ -17,8 +17,6 @@ import {
   borderStyles,
 } from '../constants'
 import { Styli } from '../styli'
-
-const Colors = Styli.Colors
 
 export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
@@ -58,10 +56,10 @@ export function marginPropToStyle(prop: string, propValue: any) {
 }
 
 export function bgPropToStyle(prop: string, propValue: any) {
+  const Colors = Styli.getConfig('colors') as IColors
   if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
   const [, color = ''] = prop.match(/^bg(\w+)/) || []
-  const lowerColor = color.toLocaleLowerCase()
-  return { backgroundColor: Colors[lowerColor] }
+  return { backgroundColor: Colors[downFirst(color)] }
 }
 
 export function roundedPropToStyle(prop: string, propValue: any) {
@@ -78,7 +76,7 @@ export function borderPropToStyle(prop: string) {
   let style: any = {}
 
   let [, second, third] = kebab(prop).split('-')
-
+  const Colors = Styli.getConfig('colors') as IColors
   const isBorderColor = (val: string) => !!Colors[val as ColorType]
   const isBorderStyle = (val: string) => borderStyles.includes(val)
   const isBorderPosition = (val: string) => !!positionMaps[val]
@@ -86,7 +84,7 @@ export function borderPropToStyle(prop: string) {
 
   if (isBorderWidth(second) || isBorderWidth(third)) {
     const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
-    style[`border${position}Width`] = getValue(third || second)
+    style[`border${position}Width`] = getValue(third || second, ModifierType.border)
     style[`border${position}Style`] = 'solid'
   }
   if (isBorderColor(second)) {
@@ -129,7 +127,7 @@ export function flexItemPropToStyle(prop: any, propValue: any) {
   if (isValidPropValue(propValue)) return { flex: propValue }
   const [, value] = prop.split('-')
   const flexValue = value || (propValue === true ? 1 : propValue)
-  return { flex: getValue(flexValue) }
+  return { flex: flexValue }
 }
 
 export function alignmentPropToStyle(props: any) {
@@ -205,11 +203,12 @@ export function textHeadingPropToStyle(prop: string) {
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
+  const Colors = Styli.getConfig('colors') as IColors
   return { color: Colors[prop] || propValue }
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontSize: getValue(propValue) }
+  if (isValidPropValue(propValue)) return { fontSize: getValue(propValue, ModifierType.text) }
   const [, value] = prop.split('-')
   return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
 }
@@ -217,16 +216,16 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 export function textWeightPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { fontWeight: '' + propValue }
   const [, value = ''] = prop.match(/font(\w+)?/) || []
-  const lowerValue = value.toLocaleLowerCase()
-  return { fontWeight: '' + weights[lowerValue] || getValue(value) }
+  return { fontWeight: '' + weights[downFirst(value)] || value }
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { lineHeight: getValue(propValue) }
   const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
-  const lowerValue = value.toLocaleLowerCase()
   return {
-    lineHeight: !!leadings[lowerValue] ? `calc(${leadings[lowerValue]} * 1em)` : getValue(value),
+    lineHeight: !!leadings[downFirst(value)]
+      ? `calc(${leadings[downFirst(value)]} * 1em)`
+      : getValue(value),
   }
 }
 

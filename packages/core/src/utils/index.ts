@@ -6,6 +6,10 @@ export function upFirst(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
+export function downFirst(s: string) {
+  return s.charAt(0).toLowerCase() + s.slice(1)
+}
+
 export function kebab(s: string) {
   return noCase(s).replace(/\s/g, '-')
 }
@@ -21,11 +25,8 @@ export function isValidPropValue(v: any) {
 
 export function getValue(value: string | number, modifierType?: ModifierType) {
   if (isNumber(value)) {
-    if (Styli.configs.transformUnit) {
-      return Styli.configs.transformUnit(Number(value), modifierType)
-    } else {
-      return value + Styli.unit
-    }
+    const { transformUnit, unit } = Styli.getConfigs()
+    return transformUnit ? transformUnit(Number(value), modifierType) : value + unit
   }
   return value
 }

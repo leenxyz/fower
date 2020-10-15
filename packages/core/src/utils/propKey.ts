@@ -1,6 +1,7 @@
 import { G, positionKeys, headingTypes, textAlign, flexMaps, flexAlign } from '../constants'
-import { Colors } from '../styli'
+import { Styli } from '../styli'
 import { upFirst } from '.'
+import { IColors } from '../constants/colors'
 
 export function isFlexBoxKeyWrapper() {
   const getFlexKeys = (prefix: 'justify' | 'align') =>
@@ -65,6 +66,7 @@ export function isTextHeadingKey(key: string) {
 }
 
 export function isColorKey(key: string) {
+  const Colors = Styli.getConfig('colors') as IColors
   return key === 'color' || !!Colors[key]
 }
 
