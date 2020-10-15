@@ -3,7 +3,7 @@ module.exports = {
     Styli: ['introduction', 'installation', 'getting-started', 'guide', 'configuration', 'extend'],
     Philosophy: [
       'utility-first',
-      'cross-framework',
+      'framework-agnostic',
       'type-safe',
       'less-code',
       'less-css',

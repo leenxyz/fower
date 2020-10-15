@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@styli/core": "^0.4.1",
     "@styli/react-native": "^0.3.0",
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",
