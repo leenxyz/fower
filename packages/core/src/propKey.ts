@@ -1,29 +1,22 @@
-import { centerX, centerY, G, positionKeys, headingTypes, textAlign } from './constants'
+import { G, positionKeys, headingTypes, textAlign, flexMaps, flexAlign } from './constants'
 import { Colors } from './styli'
+import { upFirst } from './utils'
 
-export function isFlexboxKey(key: string) {
-  return (
+export function isFlexBoxKeyWrapper() {
+  const getFlexKeys = (prefix: 'justify' | 'align') =>
+    Object.keys(flexMaps).map((flexKey) => `${prefix}${upFirst(flexKey)}`)
+  const justifyKeys = getFlexKeys('justify')
+  const alignKeys = getFlexKeys('align')
+  return (key: string) =>
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    key.startsWith('justify') ||
-    key.startsWith('align')
-  )
+    justifyKeys.includes(key) ||
+    alignKeys.includes(key)
 }
 
+export const isFlexBoxKey = isFlexBoxKeyWrapper()
+
 export function isAlignmentKey(key: string) {
-  return [
-    G.row,
-    G.column,
-    G.center,
-    centerX,
-    centerY,
-    G.left,
-    G.right,
-    G.top,
-    G.bottom,
-    G.between,
-    G.around,
-    G.evenly,
-  ].includes(key)
+  return flexAlign.includes(key)
 }
 
 export function isZIndexKey(key: string) {
@@ -64,7 +57,7 @@ export function isBgColorKey(key: string) {
 }
 
 export function isTextAlign(key: string) {
-  return textAlign.includes(key)
+  return textAlign.includes(key) || /^textAlign$/.test(key)
 }
 
 export function isTextHeadingKey(key: string) {
@@ -80,7 +73,7 @@ export function isTextSizeKey(key: string) {
 }
 
 export function isTextWeightKey(key: string) {
-  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|black)?$|^fontWeight$/.test(
+  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|Black)?$|^fontWeight$/.test(
     key,
   )
 }

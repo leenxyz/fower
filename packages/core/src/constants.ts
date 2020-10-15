@@ -114,3 +114,18 @@ export const headingTypes = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 export const shadowSize = ['xs', 'sm', 'md', 'base', 'xl', '2xl', 'outline', 'none', 'inner']
 
 export const textAlign = ['textLeft', 'textCenter', 'textRight', 'textJustify']
+
+export const flexAlign = [
+  G.row,
+  G.column,
+  G.center,
+  centerX,
+  centerY,
+  G.left,
+  G.right,
+  G.top,
+  G.bottom,
+  G.between,
+  G.around,
+  G.evenly,
+]

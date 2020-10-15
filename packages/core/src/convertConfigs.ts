@@ -25,7 +25,7 @@ import {
   isBgColorKey,
   isBorderKey,
   isColorKey,
-  isFlexboxKey,
+  isFlexBoxKey,
   isFlexItemKey,
   isMarginKey,
   isOpacityKey,
@@ -81,7 +81,7 @@ export const convertConfigs: ConvertConfig[] = [
   },
   {
     name: 'flexbox',
-    key: isFlexboxKey,
+    key: isFlexBoxKey,
     style: flexPropToStyle,
   },
   {

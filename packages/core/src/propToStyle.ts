@@ -24,7 +24,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
   const [key, value] = prop.split('-')
 
   sizeMaps[key].forEach((k) => {
-    const sizeValue = isValidPropValue(prop) ? propValue : value
+    const sizeValue = isValidPropValue(propValue) ? propValue : value
     style[k] = getValue(sizeValue, ModifierType.size)
   })
 
@@ -125,6 +125,7 @@ export function flexPropToStyle(prop: string) {
 
 // set flex-flow、flex-shrink、flex-basic
 export function flexItemPropToStyle(prop: any, propValue: any) {
+  if (isValidPropValue(propValue)) return { flex: propValue }
   const [, value] = prop.split('-')
   const flexValue = value || (propValue === true ? 1 : propValue)
   return { flex: getValue(flexValue) }
@@ -193,7 +194,8 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
   return { zIndex: value }
 }
 
-export function textAlignPropToStyle(prop: string) {
+export function textAlignPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { textAlign: propValue }
   return { textAlign: prop.replace('text', '').toLowerCase() as any }
 }
 
@@ -212,10 +214,10 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 }
 
 export function textWeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontWeight: propValue }
+  if (isValidPropValue(propValue)) return { fontWeight: '' + propValue }
   const [, value = ''] = prop.match(/font(\w+)?/) || []
   const lowerValue = value.toLocaleLowerCase()
-  return { fontWeight: weights[lowerValue] || getValue(value) }
+  return { fontWeight: '' + weights[lowerValue] || getValue(value) }
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
