@@ -1,4 +1,11 @@
-import React, { ReactElement, ElementType, forwardRef, ComponentProps, CSSProperties } from 'react'
+import {
+  createElement,
+  ReactElement,
+  ElementType,
+  forwardRef,
+  ComponentProps,
+  CSSProperties,
+} from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { Modifiers } from '../types/Modifiers'
 import { toFinalProps } from './toFinalProps'
@@ -6,6 +13,15 @@ import { createStyle } from './createStyle'
 
 /**
  * styled
+ */
+
+type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
+
+/**
+ * style any Component
+ * @param component tag name or React Component
+ * @param args
+ *
  * @example
  *
  * ```
@@ -18,19 +34,17 @@ import { createStyle } from './createStyle'
  * })
  * ```
  */
-
-type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
-
-export function styled<C extends ElementType>(
-  Component: C,
+export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
+  component: C,
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers> {
   const StyledComponent = forwardRef((props, ref) => {
     const finalProps = toFinalProps(props)
     finalProps.style = { ...createStyle(...args), ...finalProps.style }
-    return <Component ref={ref} {...finalProps} />
+
+    return createElement(component, { ref, ...finalProps })
   })
 
-  hoistNonReactStatics(StyledComponent, Component as any)
+  hoistNonReactStatics(StyledComponent, component as any)
   return StyledComponent
 }
