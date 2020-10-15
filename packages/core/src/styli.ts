@@ -5,23 +5,28 @@ import { ModifierType } from './types/Modifiers'
 interface Configs {
   unit: string
   colors: Partial<IColors>
+  convertConfig: ConvertConfig[]
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
-  convertConfig?: ConvertConfig[]
 }
 
 class StyliFactory {
   private configs: Configs = {
     unit: 'px', // set default unit
     colors: presetColors, // set default color
+    convertConfig: []
   }
 
   config(config: Partial<Configs>) {
-    const { colors } = config || {}
+    const { colors, convertConfig = [] } = config || {}
     this.configs = {
       ...this.configs,
       ...config,
+      convertConfig: [
+        ...this.configs.convertConfig,
+        ...convertConfig
+      ],
       colors: {
-        ...presetColors,
+        ...this.configs.colors,
         ...colors,
       },
     }
