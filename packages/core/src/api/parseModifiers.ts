@@ -1,4 +1,5 @@
 import { Styli } from '../styli'
+import { memorize } from '../utils'
 import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
 
 interface Props {
@@ -27,27 +28,30 @@ export function parseModifiers(props: Props): ParsedModifiers {
 
   for (const [prop, propValue] of Object.entries(props)) {
     for (let i = 0; i < convertMapsLength; i++) {
-      const { key, style: covertStyle } = convertMap[i]
-      if (isPropKey(key, prop, propValue, props)) {
+      const { key, style: convertStyle } = convertMap[i]
+      const cacheKey = `${prop}${propValue}`
+      if (isPropKey(cacheKey, key, prop, propValue, props)) {
         styleKeys.push(prop)
-        if (propValue) style = { ...style, ...getPropStyle(covertStyle, prop, propValue, props) }
+        if (propValue !== false)
+          style = {
+            ...style,
+            ...getPropStyle(cacheKey, convertStyle, prop, propValue, props),
+          }
         break
       }
     }
   }
-
   return { styleKeys, style }
 }
 
-export function isPropKey(key: ConvertConfig['key'], prop: string, propValue: any, props: any) {
-  return typeof key === 'string' ? prop === key : key(prop, propValue, props)
-}
+const getPropStyle = memorize(
+  (convertStyle: ConvertConfig['style'], prop: string, propValue: any, props: any) => {
+    return typeof convertStyle === 'object' ? convertStyle : convertStyle(prop, propValue, props)
+  },
+)
 
-export function getPropStyle(
-  covertStyle: ConvertConfig['style'],
-  prop: string,
-  propValue: any,
-  props: any,
-) {
-  return typeof covertStyle === 'object' ? covertStyle : covertStyle(prop, propValue, props)
-}
+const isPropKey = memorize(
+  (key: ConvertConfig['key'], prop: string, propValue: any, props: any) => {
+    return typeof key === 'string' ? prop === key : key(prop, propValue, props)
+  },
+)
