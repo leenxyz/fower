@@ -9,3 +9,7 @@ export interface SizeMaps {
 export interface PaddingMaps {
   [key: string]: string[]
 }
+
+export interface PlainObject {
+  [key: string]: any
+}

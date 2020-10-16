@@ -1,12 +1,13 @@
 import { presetColors, IColors } from './constants/colors'
 import { ConvertConfig } from './utils/convertConfigs'
 import { ModifierType } from './types/Modifiers'
+import { mergeWithDefaultOptions } from './utils'
 
 interface Configs {
   unit: string
   colors: Partial<IColors>
   convertConfig: ConvertConfig[]
-  transformUnit?: (value: number | string, modifierType?: ModifierType) => string
+  transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }
 
 class StyliFactory {
@@ -14,19 +15,11 @@ class StyliFactory {
     unit: 'px', // set default unit
     colors: presetColors, // set default color
     convertConfig: [],
+    transformUnit: (value) => value + (this.getConfig('unit') as string),
   }
 
   config(config: Partial<Configs>) {
-    const { colors, convertConfig = [] } = config || {}
-    this.configs = {
-      ...this.configs,
-      ...config,
-      convertConfig: [...this.configs.convertConfig, ...convertConfig],
-      colors: {
-        ...this.configs.colors,
-        ...colors,
-      },
-    }
+    this.configs = mergeWithDefaultOptions(config, this.configs)
   }
 
   getConfigs(): Configs {
