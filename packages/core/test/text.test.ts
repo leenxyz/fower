@@ -23,8 +23,8 @@ describe('text-size', () => {
   })
 
   it('textSizePropToStyle', () => {
-    expect(textSizePropToStyle('f', '10')).toMatchObject({ fontSize: '10' })
-    expect(textSizePropToStyle('f-10', true)).toMatchObject({ fontSize: '10' })
+    expect(textSizePropToStyle('f', '10')).toMatchObject({ fontSize: '10px' })
+    expect(textSizePropToStyle('f-10', true)).toMatchObject({ fontSize: '10px' })
     expect(textSizePropToStyle('f-10rem', true)).toMatchObject({ fontSize: '10rem' })
   })
 })
@@ -132,8 +132,8 @@ describe('text-line-height', () => {
         lineHeight: `calc(${leadings[i]} * 1em)`,
       })
     }
-    expect(textLineHeightPropToStyle('leading', '10')).toMatchObject({ lineHeight: '10' })
-    expect(textLineHeightPropToStyle('leading-10', true)).toMatchObject({ lineHeight: '10' })
+    expect(textLineHeightPropToStyle('leading', '10')).toMatchObject({ lineHeight: '10px' })
+    expect(textLineHeightPropToStyle('leading-10', true)).toMatchObject({ lineHeight: '10px' })
     expect(textLineHeightPropToStyle('leading-10rem', true)).toMatchObject({ lineHeight: '10rem' })
   })
 })

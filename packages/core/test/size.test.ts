@@ -18,13 +18,13 @@ describe('size', () => {
   })
 
   it('sizePropToStyle', () => {
-    expect(sizePropToStyle('w', '10')).toMatchObject({ width: '10' })
-    expect(sizePropToStyle('w-10', true)).toMatchObject({ width: '10' })
-    expect(sizePropToStyle('s-10', true)).toMatchObject({ width: '10', height: '10' })
+    expect(sizePropToStyle('w', '10')).toMatchObject({ width: '10px' })
+    expect(sizePropToStyle('w-10', true)).toMatchObject({ width: '10px' })
+    expect(sizePropToStyle('s-10', true)).toMatchObject({ width: '10px', height: '10px' })
     expect(sizePropToStyle('c-10', true)).toMatchObject({
-      width: '10',
-      height: '10',
-      borderRadius: '10',
+      width: '10px',
+      height: '10px',
+      borderRadius: '10px',
     })
   })
 })

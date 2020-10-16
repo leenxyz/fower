@@ -21,7 +21,7 @@ describe('position', () => {
         position: positionKeys[i],
       })
     }
-    expect(positionPropToStyle('T', '10')).toMatchObject({ top: '10' })
+    expect(positionPropToStyle('T', '10')).toMatchObject({ top: '10px' })
     expect(positionPropToStyle('T', '10rem')).toMatchObject({ top: '10rem' })
   })
 })

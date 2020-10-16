@@ -33,8 +33,8 @@ describe('padding', () => {
   })
 
   it('paddingPropToStyle', () => {
-    expect(paddingPropToStyle('p', '10')).toMatchObject({ padding: '10' })
-    expect(paddingPropToStyle('p-10', true)).toMatchObject({ padding: '10' })
+    expect(paddingPropToStyle('p', '10')).toMatchObject({ padding: '10px' })
+    expect(paddingPropToStyle('p-10', true)).toMatchObject({ padding: '10px' })
     expect(paddingPropToStyle('pl-10rem', true)).toMatchObject({ paddingLeft: '10rem' })
   })
 })

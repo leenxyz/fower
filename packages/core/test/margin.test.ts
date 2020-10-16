@@ -40,9 +40,9 @@ describe('margin', () => {
   })
 
   it('marginPropToStyle', () => {
-    expect(marginPropToStyle('m', '10')).toMatchObject({ margin: '10' })
-    expect(marginPropToStyle('m-10', true)).toMatchObject({ margin: '10' })
-    expect(marginPropToStyle('ml--10', true)).toMatchObject({ marginLeft: '-10' })
+    expect(marginPropToStyle('m', '10')).toMatchObject({ margin: '10px' })
+    expect(marginPropToStyle('m-10', true)).toMatchObject({ margin: '10px' })
+    expect(marginPropToStyle('ml--10', true)).toMatchObject({ marginLeft: '-10px' })
     expect(marginPropToStyle('ml-10rem', true)).toMatchObject({ marginLeft: '10rem' })
   })
 })
