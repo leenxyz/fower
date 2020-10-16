@@ -127,7 +127,7 @@ export function flexItemPropToStyle(prop: any, propValue: any) {
   if (isValidPropValue(propValue)) return { flex: propValue }
   const [, value] = prop.split('-')
   const flexValue = value || (propValue === true ? 1 : propValue)
-  return { flex: flexValue }
+  return { flex: isNumber(flexValue) ? Number(flexValue) : flexValue }
 }
 
 export function alignmentPropToStyle(props: any) {

@@ -38,7 +38,7 @@ describe('flex-item', () => {
 
   it('flexItemPropToStyle', () => {
     expect(flexItemPropToStyle('flex', '5')).toMatchObject({ flex: '5' })
-    expect(flexItemPropToStyle('flex-1', true)).toMatchObject({ flex: '1' })
+    expect(flexItemPropToStyle('flex-1', true)).toMatchObject({ flex: 1 })
   })
 })
 
