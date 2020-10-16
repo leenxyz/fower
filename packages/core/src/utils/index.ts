@@ -42,14 +42,14 @@ export function memorize(fn: Function) {
   return s
 }
 
-export const elementType = (ele: any) => {
+export function elementType(ele: any) {
   const typeStr = Object.prototype.toString.call(ele)
   const reg = /^\[object\s([A-Za-z]+)\]$/
   reg.test(typeStr)
   return RegExp.$1.toLowerCase()
 }
 
-export const mergeWithDefaultOptions = (options: PlainObject, defaultOptions: PlainObject): any => {
+export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: PlainObject): any {
   const targetOptions: PlainObject = options
   for (let key in defaultOptions) {
     const defaultOptionsKeyTypeStr = elementType(defaultOptions[key])
@@ -64,7 +64,7 @@ export const mergeWithDefaultOptions = (options: PlainObject, defaultOptions: Pl
     } else if (defaultOptionsKeyTypeStr === 'array') {
       targetOptions[key] = [
         ...defaultOptions[key],
-        ...(Array.isArray(options[key]) ? options[key] : []),
+        ...(optionsKeyTypeStr === 'array' ? options[key] : []),
       ]
     } else {
       targetOptions[key] = optionsKeyIsUndefined ? defaultOptions[key] : options[key]

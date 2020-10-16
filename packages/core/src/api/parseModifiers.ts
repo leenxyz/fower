@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface ParsedModifiers {
-  styleKeys: string[]
+  styliKeys: string[]
   style: any
 }
 
@@ -16,14 +16,30 @@ export function toStyle(style: any, propStyle: any = {}): any {
   return { ...style, ...propStyle }
 }
 
+// cache styli key
+const isPropKey = memorize(
+  (key: ConvertConfig['key'], prop: string, propValue: any, props: any) => {
+    return typeof key === 'string' ? prop === key : key(prop, propValue, props)
+  },
+)
+
+// cache styli style
+const getPropStyle = memorize(
+  (convertStyle: ConvertConfig['style'], prop: string, propValue: any, props: any) => {
+    return typeof convertStyle === 'object' ? convertStyle : convertStyle(prop, propValue, props)
+  },
+)
+
+const getConvertConfigs = () => {
+  const customConvertConfig = Styli.getConfig('convertConfig') as ConvertConfig[]
+  return convertConfigs.concat(customConvertConfig)
+}
+
 export function parseModifiers(props: Props): ParsedModifiers {
   let style: any = {}
-  const styleKeys: string[] = []
+  const styliKeys: string[] = []
 
-  const convertMap = [
-    ...convertConfigs,
-    ...((Styli.getConfig('convertConfig') as ConvertConfig[]) || []),
-  ]
+  const convertMap = getConvertConfigs()
   const convertMapsLength = convertMap.length
 
   for (const [prop, propValue] of Object.entries(props)) {
@@ -31,27 +47,16 @@ export function parseModifiers(props: Props): ParsedModifiers {
       const { key, style: convertStyle } = convertMap[i]
       const cacheKey = `${prop}${propValue}`
       if (isPropKey(cacheKey, key, prop, propValue, props)) {
-        styleKeys.push(prop)
-        if (propValue !== false)
+        styliKeys.push(prop)
+        if (propValue !== false) {
           style = {
             ...style,
             ...getPropStyle(cacheKey, convertStyle, prop, propValue, props),
           }
+        }
         break
       }
     }
   }
-  return { styleKeys, style }
+  return { styliKeys, style }
 }
-
-const getPropStyle = memorize(
-  (convertStyle: ConvertConfig['style'], prop: string, propValue: any, props: any) => {
-    return typeof convertStyle === 'object' ? convertStyle : convertStyle(prop, propValue, props)
-  },
-)
-
-const isPropKey = memorize(
-  (key: ConvertConfig['key'], prop: string, propValue: any, props: any) => {
-    return typeof key === 'string' ? prop === key : key(prop, propValue, props)
-  },
-)
