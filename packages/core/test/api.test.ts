@@ -1,4 +1,5 @@
-import { createStyle, toFinalProps } from '../src'
+import { toFinalProps } from '../src/api/toFinalProps'
+import { createStyle } from '../src/api/createStyle'
 
 describe('api', () => {
   it('createStyle', () => {
