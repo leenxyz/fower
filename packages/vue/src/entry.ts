@@ -2,6 +2,7 @@ import _Vue, { PluginFunction } from 'vue';
 
 // Import vue components
 import * as components from '@/components/index';
+import vStyli from '@/v-styli';
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -11,11 +12,19 @@ interface InstallFunction extends PluginFunction<any> {
 
 // install function executed by Vue.use()
 const install: InstallFunction = function installStyli(Vue: typeof _Vue) {
+
+
   if (install.installed) return;
   install.installed = true;
+
+  Vue.directive(vStyli.name, { bind: vStyli.bind })
+
+
   Object.entries(components).forEach(([componentName, component]) => {
     Vue.component(componentName, component);
   });
+
+
 };
 
 // Create module definition for Vue.use()
