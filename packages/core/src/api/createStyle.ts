@@ -7,8 +7,8 @@ export function createStyle(...args: (string | CSSProperties)[]): CSSProperties 
       const props = c
         .split(/[\s|\t|\n]+/)
         .reduce((result, cur) => ({ ...result, [cur]: true }), {} as any)
-      const { style } = parseModifiers(props)
-      return { ...t, ...style }
+      const { styliStyle } = parseModifiers(props)
+      return { ...t, ...styliStyle }
     }
     return { ...t, ...c }
   }, {} as any)
