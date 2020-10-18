@@ -1,5 +1,15 @@
 import { Styli } from '../src/styli'
-import { isNumber, upFirst, downFirst, kebab, isValidPropValue, getValue, memorize, elementType, mergeWithDefaultOptions } from '../src/utils'
+import {
+  isNumber,
+  upFirst,
+  downFirst,
+  kebab,
+  isValidPropValue,
+  getValue,
+  memorize,
+  elementType,
+  mergeWithDefaultOptions,
+} from '../src/utils'
 
 describe('utils', () => {
   it('isNumber', () => {
@@ -37,7 +47,7 @@ describe('utils', () => {
   it('memorize', () => {
     const fn = memorize((state: any) => state)
     fn('key', { state: 1 })
-    expect(fn.cache).toMatchObject({ key: { state: 1 }})
+    expect(fn.cache).toMatchObject({ key: { state: 1 } })
   })
   it('elementType', () => {
     expect(elementType(1)).toEqual('number')
@@ -56,7 +66,11 @@ describe('utils', () => {
   })
   it('mergeWithDefaultOptions', () => {
     const defaultOption = { a: 1, b: { c: 2 } }
-    const option = { a: 2, d: { e: 1 }}
-    expect(mergeWithDefaultOptions(option, defaultOption)).toMatchObject({ a: 2, b: { c: 2 }, d: { e: 1 }})
+    const option = { a: 2, d: { e: 1 } }
+    expect(mergeWithDefaultOptions(option, defaultOption)).toMatchObject({
+      a: 2,
+      b: { c: 2 },
+      d: { e: 1 },
+    })
   })
 })

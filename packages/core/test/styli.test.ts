@@ -7,7 +7,7 @@ describe('styli', () => {
     Styli.config({
       unit: '',
       colors: {
-        themeColor: '#FCD423'
+        themeColor: '#FCD423',
       },
       convertConfig: [
         {
@@ -15,19 +15,21 @@ describe('styli', () => {
           style: (prop) => {
             const [, value] = prop.match(/^theme-(\w+)$/) || []
             switch (value) {
-              case 'dark': return { color: '#000' }
-              case 'light': return { color: '#FFF' }
+              case 'dark':
+                return { color: '#000' }
+              case 'light':
+                return { color: '#FFF' }
             }
             return {}
-          }
-        }
+          },
+        },
       ],
       transformUnit(value) {
         if (isNumber(value)) {
           return Number(value) * 2 + (Styli.getConfig('unit') as 'string')
         }
         return '' + value
-      }
+      },
     })
     expect(Styli.getConfig('unit')).toEqual('')
     expect(Styli.getConfig('colors')).toHaveProperty('themeColor', '#FCD423')

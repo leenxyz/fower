@@ -16,7 +16,9 @@ describe('api', () => {
   })
 
   it('parseModifiers', () => {
-    expect(parseModifiers({ 'p-10': true })).toMatchObject({ style: { padding: '10px' }, styliKeys: ['p-10']})
+    expect(parseModifiers({ 'p-10': true })).toMatchObject({
+      style: { padding: '10px' },
+      styliKeys: ['p-10'],
+    })
   })
 })
-
