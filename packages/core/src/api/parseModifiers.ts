@@ -1,19 +1,11 @@
 import { Styli } from '../styli'
+import { PlainObject } from '../types'
 import { memorize } from '../utils'
 import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
 
-interface Props {
-  [key: string]: any
-}
-
 interface ParsedModifiers {
   styliKeys: string[]
-  style: any
-}
-
-export function toStyle(style: any, propStyle: any = {}): any {
-  if (Array.isArray(propStyle)) return [style, ...propStyle]
-  return { ...style, ...propStyle }
+  styliStyle: any
 }
 
 // cache styli key
@@ -30,13 +22,13 @@ const getPropStyle = memorize(
   },
 )
 
-const getConvertConfigs = () => {
+function getConvertConfigs() {
   const customConvertConfig = Styli.getConfig('convertConfig') as ConvertConfig[]
   return convertConfigs.concat(customConvertConfig)
 }
 
-export function parseModifiers(props: Props): ParsedModifiers {
-  let style: any = {}
+export function parseModifiers(props: PlainObject): ParsedModifiers {
+  let styliStyle: any = {}
   const styliKeys: string[] = []
 
   const convertMap = getConvertConfigs()
@@ -44,19 +36,18 @@ export function parseModifiers(props: Props): ParsedModifiers {
 
   for (const [prop, propValue] of Object.entries(props)) {
     for (let i = 0; i < convertMapsLength; i++) {
-      const { key, style: convertStyle } = convertMap[i]
+      const { key, style } = convertMap[i]
       const cacheKey = `${prop}${propValue}`
       if (isPropKey(cacheKey, key, prop, propValue, props)) {
         styliKeys.push(prop)
         if (propValue !== false) {
-          style = {
-            ...style,
-            ...getPropStyle(cacheKey, convertStyle, prop, propValue, props),
-          }
+          const unitStyle = getPropStyle(cacheKey, style, prop, propValue, props)
+          Object.assign(styliStyle, unitStyle)
         }
         break
       }
     }
   }
-  return { styliKeys, style }
+
+  return { styliKeys, styliStyle }
 }

@@ -1,15 +1,20 @@
-import { parseModifiers, toStyle } from './parseModifiers'
+import { Styli } from '../styli'
+import { Plugin } from '../types'
+import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
-  const { styliKeys = [], style } = parseModifiers(props)
+  const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
 
   const finalProps = Object.keys(props).reduce((result, key) => {
     if (styliKeys.includes(key)) return result
-
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  finalProps.style = toStyle(style, props.style)
+  const plugins = Styli.getConfig('plugins') as Plugin[]
 
-  return finalProps
+  return plugins.reduce((finalProps, plugin) => {
+    const { name, exec } = plugin
+    finalProps[name] = exec(styliStyle, props)
+    return finalProps
+  }, finalProps)
 }
