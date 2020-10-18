@@ -1,5 +1,5 @@
 import { Styli } from '../src/styli'
-import { isNumber, upFirst, kebab, isValidPropValue, getValue } from '../src/utils'
+import { isNumber, upFirst, downFirst, kebab, isValidPropValue, getValue, memorize, elementType, mergeWithDefaultOptions } from '../src/utils'
 
 describe('utils', () => {
   it('isNumber', () => {
@@ -11,6 +11,10 @@ describe('utils', () => {
   it('upFirst', () => {
     expect(upFirst('aaabbb')).toEqual('Aaabbb')
     expect(upFirst('AAAbbb')).toEqual('AAAbbb')
+  })
+  it('downFirst', () => {
+    expect(downFirst('Aaabbb')).toEqual('aaabbb')
+    expect(downFirst('aaabbb')).toEqual('aaabbb')
   })
   it('kebab', () => {
     expect(kebab('fontWeight')).toEqual('font-weight')
@@ -29,5 +33,30 @@ describe('utils', () => {
     })
     expect(getValue('1px')).toEqual('1px')
     expect(getValue('2')).toEqual('4')
+  })
+  it('memorize', () => {
+    const fn = memorize((state: any) => state)
+    fn('key', { state: 1 })
+    expect(fn.cache).toMatchObject({ key: { state: 1 }})
+  })
+  it('elementType', () => {
+    expect(elementType(1)).toEqual('number')
+    expect(elementType(NaN)).toEqual('number')
+    expect(elementType('1')).toEqual('string')
+    expect(elementType(true)).toEqual('boolean')
+    expect(elementType([])).toEqual('array')
+    expect(elementType({})).toEqual('object')
+    expect(elementType(Symbol('a'))).toEqual('symbol')
+    expect(elementType(new Date())).toEqual('date')
+    expect(elementType(new RegExp(''))).toEqual('regexp')
+    expect(elementType(new Set())).toEqual('set')
+    expect(elementType(new WeakSet())).toEqual('weakset')
+    expect(elementType(new Map())).toEqual('map')
+    expect(elementType(new WeakMap())).toEqual('weakmap')
+  })
+  it('mergeWithDefaultOptions', () => {
+    const defaultOption = { a: 1, b: { c: 2 } }
+    const option = { a: 2, d: { e: 1 }}
+    expect(mergeWithDefaultOptions(option, defaultOption)).toMatchObject({ a: 2, b: { c: 2 }, d: { e: 1 }})
   })
 })

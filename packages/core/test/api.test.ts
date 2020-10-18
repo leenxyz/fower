@@ -1,5 +1,4 @@
-import { toFinalProps } from '../src/api/toFinalProps'
-import { createStyle } from '../src/api/createStyle'
+import { toFinalProps, createStyle, parseModifiers } from '../src/api'
 
 describe('api', () => {
   it('createStyle', () => {
@@ -15,4 +14,9 @@ describe('api', () => {
   it('toFinalProps', () => {
     expect(toFinalProps({ 'p-10': true })).toMatchObject({ style: { padding: '10px' } })
   })
+
+  it('parseModifiers', () => {
+    expect(parseModifiers({ 'p-10': true })).toMatchObject({ style: { padding: '10px' }, styliKeys: ['p-10']})
+  })
 })
+
