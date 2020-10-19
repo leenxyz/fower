@@ -20,8 +20,7 @@ export function isNumber(s: string | number) {
 }
 
 export function isValidPropValue(v: any) {
-  const type = typeof v
-  return (type !== 'boolean' && type == 'string') || type === 'number'
+  return typeof v !== 'boolean'
 }
 
 export function getValue(value: string | number, modifierType?: ModifierType) {
