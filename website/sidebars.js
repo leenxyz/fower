@@ -16,7 +16,7 @@ module.exports = {
       'less-css',
       'programmable',
     ],
-    Api: ['createStyle'],
+    Api: ['styled', 'createStyle'],
     Components: ['view', 'text', 'image', 'anchor'],
     Spacing: ['padding', 'margin'],
     Size: ['width', 'height', 'square', 'circle'],

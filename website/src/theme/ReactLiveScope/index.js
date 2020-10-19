@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { createStyle, toFinalProps } from '@styli/core'
+import { createStyle, toFinalProps, styled } from '@styli/core'
 import { Text, View, Image, Anchor } from '@styli/react'
 
 export const Button = forwardRef((props, ref) => {
@@ -26,6 +26,7 @@ const ReactLiveScope = {
   ...React,
   ButtonExample,
   createStyle,
+  styled,
   Text,
   View,
   Image,

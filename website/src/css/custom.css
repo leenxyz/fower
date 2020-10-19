@@ -69,6 +69,7 @@ body {
 code {
   vertical-align: middle;
   background-color: #f7f7f7;
+  border-radius: 2px;
   color: #e96900;
   font-size: 0.9em !important;
 }
