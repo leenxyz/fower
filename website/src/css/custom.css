@@ -18,6 +18,10 @@
   /* --ifm-font-size-base: 16px; */
 }
 
+body {
+  font-size: 16px !important;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -60,4 +64,11 @@
   border: 1px solid var(--ifm-color-emphasis-200);
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+code {
+  vertical-align: middle;
+  background-color: #f7f7f7;
+  color: #e96900;
+  font-size: 0.9em !important;
 }
