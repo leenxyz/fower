@@ -3,6 +3,7 @@ import { ConvertConfig } from './utils/convertConfigs'
 import { ModifierType } from './types/Modifiers'
 import { mergeWithDefaultOptions } from './utils'
 import { Plugin } from './types'
+import { toStyle } from './plugins'
 
 interface Configs {
   unit: string
@@ -17,7 +18,7 @@ export class StyliFactory {
     unit: 'px',
     colors: presetColors,
     convertConfig: [],
-    plugins: [],
+    plugins: [toStyle],
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }
 

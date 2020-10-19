@@ -1,47 +1,16 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { createStyle, styled, Styli } from '../../core/src'
+import { styled, Styli } from '../../core/src'
 import { toCss } from '../../core/src/plugins'
-import { View, Text } from '../src'
 import { Button } from '@material-ui/core'
 
 Styli.config({
-  unit: 'px',
-  colors: {
-    bandColor: '#FCD423',
-  },
-  convertConfig: [
-    {
-      key: 'disableStyle',
-      style: {
-        fontSize: 22,
-        color: 'red',
-      },
-    },
-  ],
   plugins: [toCss],
 })
 
-Styli.config({
-  colors: {
-    themeColor: '#000',
-  },
-  convertConfig: [
-    {
-      name: 'theme',
-      key: (prop) => {
-        return /^theme-\w+$/.test(prop)
-      },
-      style: (prop, propValue) => {
-        const [, value = ''] = prop.match(/^theme-(\w+)$/) || []
-        if (value === 'dark') return createStyle('bgGray500 white')
-        if (value === 'light') return createStyle('bgGray200 black')
-        return {}
-      },
-    },
-  ],
-})
+const View = styled('div')
+const Text = styled('span')
 
 export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
   children,
@@ -72,23 +41,11 @@ const Input = styled('input', {
   background: 'grey',
 })
 
-const mql = window.matchMedia('(max-width: 600px)')
-
-mql.addEventListener('change', (e) => {
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    console.log('This is a narrow screen — less than 600px wide.')
-  } else {
-    /* the viewport is more than than 600 pixels wide */
-    console.log('This is a wide screen — more than 600px wide.')
-  }
-})
-
 const App = () => {
   return (
     <div className="box">
       <Div p-20 white bgBlue100>
-        <View shadowXXL c-40 p-20 bgWhite>
+        <View c-40 p-20 bgWhite>
           HH
         </View>
       </Div>
