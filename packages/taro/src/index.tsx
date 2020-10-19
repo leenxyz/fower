@@ -16,5 +16,3 @@ export const MovableView = styled(TaroMovableView)
 export const ScrollView = styled(TaroScrollView)
 export const Swiper = styled(TaroSwiper)
 export const SwiperItem = styled(TaroSwiperItem)
-
-Styli.setUnit('px')

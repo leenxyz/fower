@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
-// import { View, Image, Text } from '@styli/react'
-import { View, Image, Text } from './styli-react'
+import { View, Image, Text } from '@styli/react'
 
 export const GettingStarted = () => {
   const ref = useRef()

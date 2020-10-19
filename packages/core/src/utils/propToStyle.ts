@@ -223,6 +223,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { lineHeight: getValue(propValue) }
   const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
+  // TODO: calc 是否支持 RN
   return {
     lineHeight: !!leadings[downFirst(value)]
       ? `calc(${leadings[downFirst(value)]} * 1em)`
@@ -234,7 +235,6 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { boxShadow: propValue }
   const value = prop.replace('shadow', '')
   const gv = getValue
-  console.log('value---:', value);
   switch (value) {
     case 'XXS':
       return { boxShadow: `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)` }
