@@ -38,6 +38,7 @@ export function parseModifiers(props: PlainObject): ParsedModifiers {
     for (let i = 0; i < convertMapsLength; i++) {
       const { key, style } = convertMap[i]
       const cacheKey = `${prop}${propValue}`
+
       if (isPropKey(cacheKey, key, prop, propValue, props)) {
         styliKeys.push(prop)
         if (propValue !== false) {

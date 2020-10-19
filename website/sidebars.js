@@ -25,7 +25,7 @@ module.exports = {
       'circle',
       'layout-engine',
       'flexbox',
-      'font-size',
+      'typography',
       'font-color',
       'font-weight',
       'text-align',

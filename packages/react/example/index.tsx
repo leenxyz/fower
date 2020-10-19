@@ -27,15 +27,13 @@ export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
 // const StyledButton = styled(Button, 'p-10')
 const StyledButton = styled(Button, 'p-10')
 
-const NewView = styled(MyView, 'fontBold')
+const NewView = styled(MyView)
 
 // const Div = myStyled('div', {
 //   background: 'red',
 // })
 
-const Div = styled('div', {
-  background: 'red',
-})
+const Div = styled('div', {})
 
 const Input = styled('input', {
   background: 'grey',
@@ -52,6 +50,10 @@ const App = () => {
       <Input />
       <View red500>View</View>
       <Text green500>Text</Text>
+      <Div f-24>
+        <Div fontWeight-400>落霞与孤鹜齐飞，秋水共长天一色。</Div>
+        <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>
+      </Div>
       <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
         就哈哈哈哈哈哈哈哈哈
       </NewView>

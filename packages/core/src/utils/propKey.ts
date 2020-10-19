@@ -75,7 +75,7 @@ export function isTextSizeKey(key: string) {
 }
 
 export function isTextWeightKey(key: string) {
-  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|Black)?$|^fontWeight$/.test(
+  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|Black)?$|^fontWeight(-.+)?$/.test(
     key,
   )
 }

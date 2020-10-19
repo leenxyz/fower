@@ -20,37 +20,6 @@ export const FontColor = () => {
   )
 }
 
-export const FontSize = () => {
-  const [size, setSize] = useState(20)
-
-  const fSize = {
-    [`f-${size}`]: true,
-  }
-
-  return (
-    <View>
-      <View row between>
-        <View s-100 bgBlue100 center {...fSize}>
-          f-{size}
-        </View>
-      </View>
-      <View row centerY my-20>
-        <View mr-20>FontSize Value: </View>
-        <input
-          type="range"
-          value={size}
-          max="40"
-          min="5"
-          onChange={(e) => {
-            setSize(+e.target.value)
-          }}
-        />
-        <View>{size}</View>
-      </View>
-    </View>
-  )
-}
-
 export const FontWeight = () => {
   const [weight, setWeight] = useState('fontHairline')
 

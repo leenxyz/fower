@@ -68,7 +68,7 @@ body {
 
 code {
   vertical-align: middle;
-  background-color: #f7f7f7;
+  background-color: rgb(100, 100, 100, 0.05);
   border-radius: 2px;
   color: #e96900;
   font-size: 0.9em !important;
