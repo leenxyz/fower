@@ -12,7 +12,7 @@ interface Configs {
   transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }
 
-class StyliFactory {
+export class StyliFactory {
   private configs: Configs = {
     unit: 'px',
     colors: presetColors,
