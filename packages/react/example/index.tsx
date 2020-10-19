@@ -43,8 +43,6 @@ Styli.config({
   ],
 })
 
-console.log('-------->', Styli.getConfig('convertConfig'))
-
 export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
   children,
   ...props
@@ -89,8 +87,10 @@ mql.addEventListener('change', (e) => {
 const App = () => {
   return (
     <div className="box">
-      <Div p-20 white css={{ backgroundColor: 'yellow' }}>
-        Div
+      <Div p-20 white bgBlue100>
+        <View shadowXXL c-40 p-20 bgWhite>
+          HH
+        </View>
       </Div>
       <Input />
       <View red500>View</View>

@@ -23,7 +23,8 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/core": "^0.4.2"
+    "@styli/core": "^0.4.2",
+    "hoist-non-react-statics": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^16.9.49",

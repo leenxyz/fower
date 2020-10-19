@@ -8,7 +8,7 @@ export default () => {
   return (
     <View>
       <View row between>
-        <View s-100 bgBlue100 center {...{ [`shadow-${size}`]: true }}>
+        <View s-100 bgWhite center {...{ [`shadow-${size}`]: true }}>
           {size}
         </View>
       </View>

@@ -85,7 +85,7 @@ export function isTextLineHeightKey(key: string) {
 }
 
 export function isShadowKey(key: string) {
-  return /^shadow(-(xs|sm|md|base|xl|2xl|outline|none|inner))?$/.test(key)
+  return /^shadow(XXS|XS|S|M|L|XL|XXL|Outline|None|Inner)?$/.test(key)
 }
 
 export function isOpacityKey(key: string) {
