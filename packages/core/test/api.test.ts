@@ -1,6 +1,4 @@
 import { createStyle, parseModifiers, toFinalProps } from '../src/api'
-import { Styli } from '../src/styli'
-import { toStyle } from '../src/plugins'
 
 describe('api', () => {
   it('createStyle', () => {
@@ -14,7 +12,6 @@ describe('api', () => {
   })
 
   it('toFinalProps', () => {
-    Styli.config({ plugins: [toStyle] })
     expect(toFinalProps({ 'p-10': true })).toMatchObject({ style: { padding: '10px' } })
   })
 
