@@ -5,12 +5,12 @@ import { styled, Styli } from '../../core/src'
 import { toCss } from '../../core/src/plugins'
 import { Button } from '@material-ui/core'
 
+export const View = styled('div')
+export const Text = styled('span')
+
 Styli.config({
   plugins: [toCss],
 })
-
-const View = styled('div')
-const Text = styled('span')
 
 export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
   children,
@@ -51,7 +51,7 @@ const App = () => {
       <View red500>View</View>
       <Text green500>Text</Text>
       <Div f-24>
-        <Div fontWeight-400>落霞与孤鹜齐飞，秋水共长天一色。</Div>
+        <Div fontWeight-200>落霞与孤鹜齐飞，秋水共长天一色。</Div>
         <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>
       </Div>
       <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
