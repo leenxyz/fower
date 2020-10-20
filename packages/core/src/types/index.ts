@@ -21,7 +21,7 @@ export interface Plugin {
    * 将要挂载到组件 props 的属性名
    */
   name: string
-  version: string
+  version?: string
   /**
    * @param styliStyle - 表示根据指令转换出的样式
    * @param props - 表示组件上的所有原始属性

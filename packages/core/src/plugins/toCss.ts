@@ -1,4 +1,4 @@
-import { PlainObject, Plugin, StyliStyle } from '../types'
+import { PlainObject, StyliStyle } from '../types'
 import { kebab, memorize } from '../utils'
 
 const canUseDom = !!(
@@ -7,41 +7,66 @@ const canUseDom = !!(
   window.document.createElement
 )
 
-const getClassName = (function () {
-  let seed = 0
-  let cache: any = {}
-  return (key: string) => {
-    cache[key] = cache[key] || `styli-${seed++}`
-    return cache[key]
-  }
-})()
-
-function styleToCss(style: StyliStyle) {
-  const className = getClassName(JSON.stringify(style))
-  let cssFragment = ''
-  for (let [key, value] of Object.entries(style)) {
-    const cssKeyName = kebab(key)
-    cssFragment = `${cssFragment} ${cssKeyName}: ${value};`
-  }
-  cssFragment = `.${className} { ${cssFragment} }`
-  return { cssFragment, className }
+interface ToCSSConfig {
+  mediaList?: number[]
 }
 
-const createStyliTag = memorize(() => {
-  const tag = document.createElement('style')
-  tag.dataset.styli = 'styli'
-  document.querySelector('head')?.append(tag)
-  return tag
-})
+export class ToCss {
+  name: string
+  version: string
+  config: ToCSSConfig
 
-export const toCss: Plugin = {
-  name: 'className',
-  version: '1.0.0',
-  exec: (styliStyle: StyliStyle, props: PlainObject) => {
-    if (!canUseDom) return console.error('current environment is not support')
-    const tag = createStyliTag('tag')
-    const { cssFragment, className } = styleToCss(styliStyle)
+  constructor(config: ToCSSConfig) {
+    this.name = 'className'
+    this.version = '1.0.0'
+    this.config = config
+  }
+
+  getClassName = (function () {
+    let seed = 0
+    let cache: any = {}
+    return (key: string) => {
+      cache[key] = cache[key] || `styli-${seed++}`
+      return cache[key]
+    }
+  })()
+
+  /**
+   * use memorize function cache style tag
+   */
+  createStyliTag = memorize(() => {
+    const tag = document.createElement('style')
+    tag.dataset.styli = 'styli'
+    document.querySelector('head')?.append(tag)
+    return tag
+  })
+
+  /**
+   * convert styliStyle to CSS
+   */
+  styleToCss(style: StyliStyle) {
+    const className = this.getClassName(JSON.stringify(style))
+    let cssFragment = ''
+    for (let [key, value] of Object.entries(style)) {
+      const cssKeyName = kebab(key)
+      // TODO: media query
+      if (Array.isArray(value)) {
+      } else {
+        cssFragment = `${cssFragment} ${cssKeyName}: ${value};`
+      }
+    }
+    cssFragment = `.${className} { ${cssFragment} }`
+    return { cssFragment, className }
+  }
+
+  exec(styliStyle: StyliStyle, props: PlainObject) {
+    if (!canUseDom) {
+      throw new Error('current environment is not support this plugin')
+    }
+    const tag = this.createStyliTag('tag')
+    const { cssFragment, className } = this.styleToCss(styliStyle)
     tag.innerHTML = tag.innerHTML + cssFragment
+
     return `${className} ${props.className || ''}`
-  },
+  }
 }

@@ -14,8 +14,7 @@ export function toFinalProps(props: any) {
   const plugins = Styli.getConfig('plugins') as Plugin[]
 
   return plugins.reduce((finalProps, plugin) => {
-    const { name, exec } = plugin
-    finalProps[name] = exec(styliStyle, props)
+    finalProps[plugin.name] = plugin.exec(styliStyle, props)
     return finalProps
   }, finalProps)
 }
