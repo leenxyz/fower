@@ -11,8 +11,8 @@ describe('styli', () => {
       },
       convertConfig: [
         {
-          key: (prop) => /^theme-\w+$/.test(prop),
-          style: (prop) => {
+          isMatch: (prop) => /^theme-\w+$/.test(prop),
+          toStyle: (prop) => {
             const [, value] = prop.match(/^theme-(\w+)$/) || []
             switch (value) {
               case 'dark':
