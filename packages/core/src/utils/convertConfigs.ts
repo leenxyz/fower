@@ -44,107 +44,107 @@ import {
 
 export interface ConvertConfig {
   name?: string
-  key: string | ((prop: string, propValue: any, props: any) => boolean)
-  style: CSSProperties | ((prop: string, propValue: any, props: any) => CSSProperties)
+  isMatch: ((prop: string, propValue: any, props?: any) => boolean)
+  toStyle: ((prop: string, propValue: any, props: any) => CSSProperties)
 }
 
 export const convertConfigs: ConvertConfig[] = [
   {
     name: 'size',
-    key: isSizeKey,
-    style: sizePropToStyle,
+    isMatch: isSizeKey,
+    toStyle: sizePropToStyle,
   },
   {
     name: 'padding',
-    key: isPaddingKey,
-    style: paddingPropToStyle,
+    isMatch: isPaddingKey,
+    toStyle: paddingPropToStyle,
   },
   {
     name: 'margin',
-    key: isMarginKey,
-    style: marginPropToStyle,
+    isMatch: isMarginKey,
+    toStyle: marginPropToStyle,
   },
   {
     name: 'bgColor',
-    key: isBgColorKey,
-    style: bgPropToStyle,
+    isMatch: isBgColorKey,
+    toStyle: bgPropToStyle,
   },
   {
     name: 'rounded',
-    key: isRoundedKey,
-    style: roundedPropToStyle,
+    isMatch: isRoundedKey,
+    toStyle: roundedPropToStyle,
   },
   {
     name: 'border',
-    key: isBorderKey,
-    style: borderPropToStyle,
+    isMatch: isBorderKey,
+    toStyle: borderPropToStyle,
   },
   {
     name: 'flexbox',
-    key: isFlexBoxKey,
-    style: flexPropToStyle,
+    isMatch: isFlexBoxKey,
+    toStyle: flexPropToStyle,
   },
   {
     name: 'flex-item',
-    key: isFlexItemKey,
-    style: flexItemPropToStyle,
+    isMatch: isFlexItemKey,
+    toStyle: flexItemPropToStyle,
   },
   {
     name: 'flexbox-align',
-    key: isAlignmentKey,
-    style: (_, __, props) => {
+    isMatch: isAlignmentKey,
+    toStyle: (_, __, props) => {
       const newProps = props.row || props.column ? props : { ...props, row: true }
       return alignmentPropToStyle(newProps)
     },
   },
   {
     name: 'position',
-    key: isPositionKey,
-    style: positionPropToStyle,
+    isMatch: isPositionKey,
+    toStyle: positionPropToStyle,
   },
   {
     name: 'zIndex',
-    key: isZIndexKey,
-    style: zIndexPropToStyle,
+    isMatch: isZIndexKey,
+    toStyle: zIndexPropToStyle,
   },
   {
     name: 'text-align',
-    key: isTextAlign,
-    style: textAlignPropToStyle,
+    isMatch: isTextAlign,
+    toStyle: textAlignPropToStyle,
   },
   {
     name: 'text-heading',
-    key: isTextHeadingKey,
-    style: textHeadingPropToStyle,
-  },
-  {
-    name: 'color',
-    key: isColorKey,
-    style: colorPropToStyle,
-  },
-  {
-    name: 'text-size',
-    key: isTextSizeKey,
-    style: textSizePropToStyle,
+    isMatch: isTextHeadingKey,
+    toStyle: textHeadingPropToStyle,
   },
   {
     name: 'text-weight',
-    key: isTextWeightKey,
-    style: textWeightPropToStyle,
+    isMatch: isTextWeightKey,
+    toStyle: textWeightPropToStyle,
+  },
+  {
+    name: 'color',
+    isMatch: isColorKey,
+    toStyle: colorPropToStyle,
+  },
+  {
+    name: 'text-size',
+    isMatch: isTextSizeKey,
+    toStyle: textSizePropToStyle,
   },
   {
     name: 'text-line-height',
-    key: isTextLineHeightKey,
-    style: textLineHeightPropToStyle,
+    isMatch: isTextLineHeightKey,
+    toStyle: textLineHeightPropToStyle,
   },
   {
     name: 'shadow',
-    key: isShadowKey,
-    style: shadowPropToStyle,
+    isMatch: isShadowKey,
+    toStyle: shadowPropToStyle,
   },
   {
     name: 'opacity',
-    key: isOpacityKey,
-    style: opacityPropToStyle,
+    isMatch: isOpacityKey,
+    toStyle: opacityPropToStyle,
   },
 ]

@@ -44,6 +44,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
     // TODO: handle css props
     const { css = {}, ...rest } = props as any
     const finalProps = toFinalProps(rest)
+    console.log('finalProps:', finalProps)
     finalProps.style = { ...createStyle(...args), ...finalProps.style, ...css }
 
     return createElement(component, { ref, ...finalProps })

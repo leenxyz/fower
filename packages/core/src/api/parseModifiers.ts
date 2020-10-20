@@ -1,6 +1,5 @@
 import { Styli } from '../styli'
 import { PlainObject } from '../types'
-import { memorize } from '../utils'
 import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
 
 interface ParsedModifiers {
@@ -8,46 +7,41 @@ interface ParsedModifiers {
   styliStyle: any
 }
 
-// cache styli key
-const isPropKey = memorize(
-  (key: ConvertConfig['key'], prop: string, propValue: any, props: any) => {
-    return typeof key === 'string' ? prop === key : key(prop, propValue, props)
-  },
-)
-
-// cache styli style
-const getPropStyle = memorize(
-  (convertStyle: ConvertConfig['style'], prop: string, propValue: any, props: any) => {
-    return typeof convertStyle === 'object' ? convertStyle : convertStyle(prop, propValue, props)
-  },
-)
-
 function getConvertConfigs() {
   const customConvertConfig = Styli.getConfig('convertConfig') as ConvertConfig[]
   return convertConfigs.concat(customConvertConfig)
 }
 
+function isFalsyProp(propValue: any) {
+  return typeof propValue == 'boolean' && !propValue
+}
+
 export function parseModifiers(props: PlainObject): ParsedModifiers {
   let styliStyle: any = {}
   const styliKeys: string[] = []
-
   const convertMap = getConvertConfigs()
-  const convertMapsLength = convertMap.length
 
   for (const [prop, propValue] of Object.entries(props)) {
-    for (let i = 0; i < convertMapsLength; i++) {
-      const { key, style } = convertMap[i]
-      const cacheKey = `${prop}${propValue}`
+    // ignore false value
+    if (isFalsyProp(propValue)) continue
 
-      if (isPropKey(cacheKey, key, prop, propValue, props)) {
+    let convertConfig: ConvertConfig | null = null
+
+    for (const item of convertMap) {
+      const { isMatch } = item
+      if (isMatch(prop, propValue, props)) {
+        convertConfig = item
         styliKeys.push(prop)
-        if (propValue !== false) {
-          const unitStyle = getPropStyle(cacheKey, style, prop, propValue, props)
-          Object.assign(styliStyle, unitStyle)
-        }
         break
       }
     }
+
+    if (!convertConfig) continue
+
+    const { toStyle } = convertConfig
+    const style = toStyle(prop, propValue, props)
+
+    styliStyle = { ...styliStyle, ...style }
   }
 
   return { styliKeys, styliStyle }

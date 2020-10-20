@@ -53,6 +53,7 @@ const App = () => {
       <Div f-24>
         <Div fontWeight-200>落霞与孤鹜齐飞，秋水共长天一色。</Div>
         <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>
+        <Div fontBold>落霞与孤鹜齐飞，秋水共长天一色。</Div>
       </Div>
       <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
         就哈哈哈哈哈哈哈哈哈

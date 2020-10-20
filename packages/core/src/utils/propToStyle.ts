@@ -21,7 +21,6 @@ import { Styli } from '../styli'
 export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const [key, value] = prop.split('-')
-  console.log('prop:', prop, 'key:', key);
 
   sizeMaps[key].forEach((k) => {
     const sizeValue = isValidPropValue(propValue) ? propValue : value
@@ -219,7 +218,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { fontWeight: '' + propValue }
   const [, second, third] = kebab(prop).split('-')
   if (second === 'weight') return { fontWeight: '' + third }
-  return { fontWeight: '' + weights[downFirst(third)] || third }
+  return { fontWeight: '' + weights[downFirst(second)] || second }
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
