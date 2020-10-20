@@ -48,10 +48,8 @@ const App = () => {
         </View>
       </Div>
       <Input />
-      <View red500>View</View>
-      <Text f-40 colorBlanchedalmond>
-        color Text
-      </Text>
+      <View colorDeepskyblue>View</View>
+      <Text f-40>color Text</Text>
       <Div f-24>
         <Div fontWeight-200>落霞与孤鹜齐飞，秋水共长天一色。</Div>
         <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>
@@ -60,12 +58,6 @@ const App = () => {
       <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
         就哈哈哈哈哈哈哈哈哈
       </NewView>
-      <Button variant="contained" style={{ padding: '40px' }}>
-        Default
-      </Button>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
       <StyledButton variant="contained" p-20>
         StyledButton
       </StyledButton>

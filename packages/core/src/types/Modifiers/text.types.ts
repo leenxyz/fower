@@ -1,3 +1,5 @@
+import { Property } from 'csstype'
+
 export interface Texts {
   textLeft?: boolean
   textCenter?: boolean
@@ -64,7 +66,7 @@ export interface Texts {
   leadingRelaxed?: boolean
   leadingLoose?: boolean
 
-  color?: string
+  color?: Property.Color
 
   primaryColor?: boolean // '#2364AA'
   secondaryColor?: boolean // '#81C3D7'
