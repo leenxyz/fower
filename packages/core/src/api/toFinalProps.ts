@@ -10,14 +10,8 @@ export function toFinalProps(props: any) {
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  // TODO: @qianjin 未处理 empty plugin
+  // use default plugin toStyle if custom plugins not provide
   const plugins = Styli.getConfig('plugins') as Plugin[]
-
-  // 临时代码
-  if (!plugins.length) {
-    finalProps.style = styliStyle
-    return finalProps
-  }
 
   return plugins.reduce((finalProps, plugin) => {
     const { name, exec } = plugin
