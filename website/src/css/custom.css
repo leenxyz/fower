@@ -73,3 +73,12 @@ code {
   color: #e96900;
   font-size: 0.9em !important;
 }
+
+.admonition h5 {
+  color: white !important;
+}
+
+table {
+  display: table;
+  width: 100%;
+}

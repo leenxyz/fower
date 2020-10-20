@@ -1,9 +1,9 @@
 ---
 id: typography
-title: typography
+title: Typography
 ---
 
-排版
+import { LineHeight } from '../src/components/LineHeight'
 
 ## Font Size
 
@@ -47,5 +47,71 @@ title: typography
   <View fontWeight-100>落霞与孤鹜齐飞，秋水共长天一色。</View>
   <View fontWeight-400>落霞与孤鹜齐飞，秋水共长天一色。</View>
   <View fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Line Height
+
+有两种方式可以控制文本的行高，一种是使用预设值，另外一种是使用精确的传值。
+
+使用预设值 `leadingNone`、`leadingTight`、`leadingSnug`、`leadingNormal`、`leadingRelaxed`、`leadingLoose`:
+
+<LineHeight1 />
+
+```jsx
+<View>
+  <View leadingNone>Lorem ipsum dolor sit amet ...</View>
+  <View leadingTight>Lorem ipsum dolor sit amet ...</View>
+  <View leadingSnug>Lorem ipsum dolor sit amet ...</View>
+  <View leadingNormal>Lorem ipsum dolor sit amet ...</View>
+  <View leadingRelaxed>Lorem ipsum dolor sit amet ...</View>
+  <View leadingLoose>Lorem ipsum dolor sit amet ...</View>
+</View>
+```
+
+使用精确传值:
+
+```jsx live
+<View f-20>
+  <View leading-20>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View leading-3em>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View leading="1.5em">落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Text Alignment
+
+使用 `textLeft`、`textCenter`、`textRight`、`textJustify` 控制文办的对齐方式。
+
+```jsx live
+<View f-20>
+  <View textLeft>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textCenter>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textRight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textJustify>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Text Color
+
+有两种方式可以设置文本的颜色。
+
+使用预设的颜色：
+
+```jsx live
+<View f-20>
+  <Text gray600>王勃</Text>
+  <Text primaryColor> 李白</Text>
+  <Text green400> 杜甫</Text>
+</View>
+```
+
+使用 `color` props，传入颜色：
+
+```jsx live
+<View f-20>
+  <Text color="#999">王勃</Text>
+  <Text color="deeppink"> 李白</Text>
+  <Text color="#20B2AA"> 杜甫</Text>
 </View>
 ```

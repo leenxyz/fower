@@ -1,68 +1,56 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View } from '@styli/react'
 
-export default () => {
-  const [lineHeight, setLineHeight] = useState(20)
-  const [leadingType, setLeadingType] = useState('leadingNone')
-
-  const fLineHeight = {
-    [`leading-${lineHeight}`]: true,
-  }
-
-  const types = [
-    'leadingNone',
-    'leadingTight',
-    'leadingSnug',
-    'leadingNormal',
-    'leadingRelaxed',
-    'leadingLoose',
-  ]
-
+export const LineHeight = () => {
   return (
-    <View>
-      <View row between>
-        <View s-100 bgBlue100>
-          <View bgBlue300 f-14 {...fLineHeight}>
-            leading-{lineHeight}
-          </View>
+    <View f-16 borderGray200-1 p-20>
+      <View leadingNone mb-20>
+        <View gray600 f-14 mb-4>
+          leadingNone
         </View>
-        <View s-100 bgBlue100>
-          <View bgBlue300 f-14 {...{ [leadingType]: true }}>
-            {leadingType}
-          </View>
-        </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
       </View>
-      <View row centerY my-20>
-        <View mr-20>LineHeight Value: </View>
-        <input
-          type="range"
-          value={lineHeight}
-          max="50"
-          onChange={(e) => {
-            setLineHeight(+e.target.value)
-          }}
-        />
-        <View>{lineHeight}</View>
-      </View>
-      <View row centerY my-20>
-        <View mr-20>FontWeight Value: </View>
-        <View row wrap>
-          {types.map((type, idx) => {
-            return (
-              <View key={type} w-200>
-                <input
-                  type="radio"
-                  id={type}
-                  defaultChecked={!idx}
-                  name="font-weight"
-                  value={type}
-                  onChange={(e) => setLeadingType(e.currentTarget.value)}
-                />
-                <label htmlFor={type}>{type}</label>
-              </View>
-            )
-          })}
+      <View leadingTight mb-20>
+        <View gray600 f-14 mb-4>
+          leadingTight
         </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
+      </View>
+      <View leadingSnug mb-20>
+        <View gray600 f-14 mb-4>
+          leadingSnug
+        </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
+      </View>
+      <View leadingNormal mb-20>
+        <View gray600 f-14 mb-4>
+          leadingNormal
+        </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
+      </View>
+      <View leadingRelaxed mb-20>
+        <View gray600 f-14 mb-4>
+          leadingRelaxed
+        </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
+      </View>
+      <View leadingLoose>
+        <View gray600 f-14 mb-4>
+          leadingLoose
+        </View>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
+        a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+        voluptatum quae eum fugit earum.
       </View>
     </View>
   )
