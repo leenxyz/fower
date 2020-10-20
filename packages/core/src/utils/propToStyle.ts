@@ -205,7 +205,16 @@ export function textHeadingPropToStyle(prop: string) {
 
 export function colorPropToStyle(prop: string, propValue: any) {
   const Colors = Styli.getConfig('colors') as IColors
-  return { color: Colors[prop] || propValue }
+  let color: string
+  if (Colors[prop]) {
+    color = Colors[prop]
+  } else if (prop === 'color') {
+    color = propValue
+  } else {
+    color = prop.replace('color', '').toLowerCase()
+  }
+
+  return { color }
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {

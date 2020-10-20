@@ -42,14 +42,16 @@ const Input = styled('input', {
 const App = () => {
   return (
     <div className="box">
-      <Div p-20 white bgBlue100>
+      <Div p-20 black white bgBlue100>
         <View c-40 p-20 bgWhite>
           HH
         </View>
       </Div>
       <Input />
       <View red500>View</View>
-      <Text green500>Text</Text>
+      <Text f-40 colorBlanchedalmond>
+        color Text
+      </Text>
       <Div f-24>
         <Div fontWeight-200>落霞与孤鹜齐飞，秋水共长天一色。</Div>
         <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>

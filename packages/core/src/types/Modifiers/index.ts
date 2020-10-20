@@ -19,6 +19,7 @@ import { Texts } from './text.types'
 import { Positions, ZIndex } from './position.types'
 import { Shadows } from './shadow.types'
 import { Opacity } from './opacity.types'
+import { Colors } from './color.types'
 
 export enum ModifierType {
   margin = 'margin',
@@ -41,6 +42,7 @@ export interface Modifiers
     Flexs,
     Borders,
     Positions,
+    Colors,
     Backgrounds,
     Texts,
     ZIndex,
