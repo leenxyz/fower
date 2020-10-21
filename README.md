@@ -3,6 +3,7 @@
 A style library for rapid UI development.
 
 [![npm](https://img.shields.io/npm/v/@styli/core.svg)](https://www.npmjs.com/package/@styli/core)
+[![Build Status](https://travis-ci.org/forsigner/styli.svg?branch=master)](https://travis-ci.org/forsigner/styli)
 [![Coverage Status](https://coveralls.io/repos/github/forsigner/styli/badge.svg?branch=master)](https://coveralls.io/github/forsigner/styli?branch=master)
 [![Minzipped size](https://img.shields.io/bundlephobia/minzip/@styli/core.svg)](https://bundlephobia.com/result?p=@styli/core)
 [![NPM Downloads](https://img.shields.io/npm/dm/@styli/core.svg?style=flat)](https://www.npmjs.com/package/@styli/core)

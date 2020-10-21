@@ -13,10 +13,10 @@ module.exports = {
     'Getting Started': [
       'installation',
       'getting-started',
-      'use-in-react',
-      'use-in-vue',
-      'use-in-react-native',
-      'use-in-taro',
+      'use-with-react',
+      'use-with-vue',
+      'use-with-react-native',
+      'use-with-taro',
     ],
     Guides: ['guide', 'openness'],
     Props: [

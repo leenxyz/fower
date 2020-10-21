@@ -1,0 +1,77 @@
+---
+id: use-with-react
+title: 在 React 中使用
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+import { GettingStarted } from '../src/components/GettingStarted'
+
+Styli 非常适合在 React 中使用，接下来我们看看如何在 React 中优雅的使用 Styli。
+
+## 安装
+
+```bash
+npm i @styli/core @styli/react
+```
+
+注意，除了需要 `@styli/core`，你还需安装和 React 对应的组件包 `@styli/react`。
+
+## 使用
+
+下面我们使用 `View`、`Image`、`Text` 三个组件，实现一个用户信息卡片界面。
+
+```jsx live
+<View centerY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image c-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View f-20 fontBold>
+      Steve Jobs
+    </View>
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
+```
+
+可以看到，我们用非常简洁的代码，实现了一个比较复杂的界面。咋一看，你可能会说："这不是变相的内联样式吗？"，这确实和内联样式相似，把样式写在 JSX 上，但这也许这是他们唯一的相似点。Styli 编写样式的方式，我们况且称之为 "Atomic props" 吧。
+
+相比内联样式，"Atomic props"有很多优点：
+
+- **代码更简洁**，使用内联样式代码量更大，很容易让 JSX 变得乱糟糟，但使用 "Atomic props" 保留了 JSX 的简洁性，可读性更好。
+
+- **样式复用**，使用内联样式，很容易让代码快速膨胀，使用 "Atomic props"，代码大小并不会随着项目的大小膨胀太多。
+
+## @styli/react
+
+`@styli/react` 的代码非常简单，里面没有任何黑魔法，只是用 `styled` 对 html 元素进行简单包裹。
+
+```jsx title="@styli/react 源码"
+import { styled } from '@styli/core'
+
+export const View = styled('div')
+export const Text = styled('span')
+export const Image = styled('img')
+export const Anchor = styled('a')
+export const Heading = styled('h2')
+```
+
+你也可以直接在 Github 中查看`@styli/react`的源码：[Souce code](https://github.com/forsigner/styli/blob/master/packages/react/src/index.tsx)。
+
+我们可以看到，`@styli/react` 只提供了 `View`、`Text`、`Image`、`Anchor`、`Heading` 几个组件。在开发的过程中，我们建议根据自己的需要封装属于自己的组件。
+
+例如，你可以喜欢 html 元素的风格，那可以封装一套这样的组件：
+
+```jsx title="@styli/react 源码"
+import { styled } from '@styli/core'
+
+export const Div = styled('div')
+export const Span = styled('span')
+export const Img = styled('img')
+export const Button = styled('button')
+export const Input = styled('input')
+export const P = styled('p')
+export const H1 = styled('h1')
+export const H2 = styled('h2')
+
+// more....
+```

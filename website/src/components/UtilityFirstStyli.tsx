@@ -5,7 +5,7 @@ export const UtilityFirstStyli = () => {
   return (
     <View center bgGray200 h-200>
       <View centerY p-20 w-300 bgWhite rounded-10>
-        <Image s-60 rounded-8 src="/img/jobs.webp" />
+        <Image s-60 rounded-8 src="/img/jobs.jpg" />
         <View ml-10>
           <View text-22 fontBold>
             Steve Jobs
