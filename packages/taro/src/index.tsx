@@ -1,4 +1,4 @@
-import { Styli, styled } from '@styli/core'
+import { styled } from '@styli/core'
 import {
   Text as TaroText,
   View as TaroView,

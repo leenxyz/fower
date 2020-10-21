@@ -1,0 +1,27 @@
+---
+id: theme
+title: 主题
+---
+
+## 配置
+
+```jsx
+config({
+  theme: {
+    colors: {
+      blue: '#07c',
+      green: '#0fa',
+      primary: ['#276EF1', '#174EB6', '#9CBCF8'],
+    },
+    sizing: ['2px', '6px', '10px', '16px', '24px'],
+  },
+})
+```
+
+## 使用
+
+```jsx
+export default (props) => {
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+}
+```

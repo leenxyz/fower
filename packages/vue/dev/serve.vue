@@ -6,12 +6,17 @@ Vue.use(styli)
 
 export default Vue.extend({
   name: 'ServeDev',
+  data: () => {
+    return {
+      foo: '100',
+    }
+  },
 })
 </script>
 
 <template>
   <div id="app">
-    <div v-styli="'bgRed400 p-40 center  f-30'" c-100 mb-10 p="10">haha</div>
+    <div v-styli="'bgRed400 p-40 center f-30'" c-100 mb-10 p="10">haha</div>
     <Div center f-20 bgGreen500 p-30 c-200>
       haha
       <Span bgYellow400 p="30" white>My Text</Span>

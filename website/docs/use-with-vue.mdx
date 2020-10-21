@@ -3,122 +3,82 @@ id: use-with-vue
 title: 在 Vue 中使用
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-import { GettingStarted } from '../src/components/GettingStarted'
-
-Styli 是开箱即用的，不需要需要任何 webpack 配置，下面我们看看如何在不同框架使用 Styli。
+Styli 非常适合在 React 中使用，接下来我们看看如何在 React 中优雅的使用 Styli。
 
 ## 安装
 
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
-  ]}
->
-  <TabItem value="react">
-
-
 ```bash
-npm i @styli/core @styli/react
-```
-
-  </TabItem>
-  <TabItem value="vue">
-
-
-```js
 npm i @styli/core @styli/vue
 ```
 
-  </TabItem>
-
-
-  <TabItem value="react-native">
-
-
-```js
-npm i @styli/core @styli/react-native
-```
-
-  </TabItem>
-</Tabs>
-
+注意，除了需要 `@styli/core`，你还需安装和 Vue 对应的组件包 `@styli/vue`。
 
 ## 使用
 
-Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提供的 View、Text、Image 等组件，你可以快速实现复杂界面。
-
-<GettingStarted />
-
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
-  ]}
->
-  <TabItem value="react">
-
+首先，你需要注册 Styli 的 Vue 插件:
 
 ```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react'
+import Vue from 'vue'
+import styli from '@styli/vue'
 
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image c-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
-  )
-}
+Vue.use(styli)
 ```
 
-  </TabItem>
-  <TabItem value="vue">
+然后怎么使用呢? Styli 在 Vue 有两种使用方式：
 
+- 使用 `v-styli` 指令
+- 使用自定义组件
 
-```js
-TODO: vue
-```
+### 使用 `v-styli` 指令
 
-  </TabItem>
-
-
-  <TabItem value="react-native">
-
+使用指令的方式，你可以给 `v-styli` 传递你想要的 modifiers：
 
 ```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react-native'
-
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image c-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
-  )
-}
+<template>
+  <div v-styli="'centerY p-10 w-260 bgWhite rounded-10 shadow'">
+    <img v-styli="'c-48'" src="/img/jobs.jpg" />
+    <div v-styli="'ml-10'">
+      <div v-styli="'f-20 fontBold'">Steve Jobs</div>
+      <span v-styli="'gray800'">Co-founder of Apple Inc.</span>
+    </div>
+  </div>
+</template>
 ```
 
-  </TabItem>
-</Tabs>
+你也可以不给 `v-styli` 传值，通过给 html 元素添加属性实现样式:
 
+```jsx
+<template>
+  <div v-styli centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <img v-styli c-48 src="/img/jobs.jpg" />
+    <div v-styli ml-10>
+      <div v-styli f-20 fontBold>
+        Steve Jobs
+      </div>
+      <span v-styli gray800>
+        Co-founder of Apple Inc.
+      </span>
+    </div>
+  </div>
+</template>
+```
 
-Styli 巧妙地利用了 JSX 的 boolean(true) 类型 props 可以省略值的特性，实现了 "Key as Value" 模式，让 Styli 在是构建界面时更加简洁，同时由于使用了 tsx，我们得到了强类型的 "CSS in JS"。
+### 使用自定义组件
+
+你可以使用 `@styli/vue` 提供的自定义组件，例如 `Div`、`Image`、`Span`:
+
+```jsx
+<template>
+  <Div centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <Image c-48 src="/img/jobs.jpg" />
+    <Div ml-10>
+      <Div f-20 fontBold>
+        Steve Jobs
+      </Div>
+      <Span gray800>Co-founder of Apple Inc.</Span>
+    </Div>
+  </Div>
+</template>
+```
+
+两种方式怎么选择呢？如果你想在的代码中保留传统的 html 标签，你可以使用指令的方式；如果你是 React 用户，你也许会喜欢自定义组件的方式。

@@ -13,7 +13,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.65",
     "@docusaurus/preset-classic": "2.0.0-alpha.65",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.65",
+    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.65",
     "@mdx-js/react": "^1.5.8",
     "@styli/react": "^0.4.2",
     "antd": "^4.6.6",
