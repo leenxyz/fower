@@ -18,7 +18,7 @@ export class ToCss {
     this.name = 'className'
     this.version = '1.0.0'
     this.config = {
-      breakpoints: [640, 768, 1024, 1280],  // set default breakpoints
+      breakpoints: [640, 768, 1024, 1280], // set default breakpoints
       ...config,
     }
 
@@ -84,9 +84,7 @@ export class ToCss {
   // set media size content
   setMediaTagContent(idx: number, content: string) {
     const breakpoints = this.config.breakpoints || []
-    this.mediaStyliTag[idx].innerHTML = `@media (min-width: ${getValue(
-      breakpoints[idx],
-    )}) {${content}}`
+    this.mediaStyliTag[idx].innerHTML = `@media (min-width: ${breakpoints[idx]}px) {${content}}`
   }
 
   // set common content
