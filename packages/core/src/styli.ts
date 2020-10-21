@@ -3,7 +3,7 @@ import { ConvertConfig } from './utils/convertConfigs'
 import { ModifierType } from './types/Modifiers'
 import { mergeWithDefaultOptions } from './utils'
 import { Plugin } from './types'
-import toStyle from './plugins/toStyle'
+import { toStyle } from './plugins/toStyle'
 
 interface Configs {
   unit: string

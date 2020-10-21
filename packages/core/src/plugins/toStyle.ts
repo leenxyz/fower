@@ -1,6 +1,6 @@
 import { PlainObject } from '../types'
 
-export default function (
+export function toStyle(
   finalProps: PlainObject,
   styliStyle: PlainObject,
   props: PlainObject,

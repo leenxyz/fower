@@ -1,110 +1,93 @@
 import { PlainObject, StyliStyle } from '../types'
 import { kebab } from '../utils'
 
-const canUseDom = !!window?.document?.createElement
-
-interface ToCSSConfig {
-  breakpoints?: number[]
+function generateStyliTag(name: string) {
+  const tag = document.createElement('style')
+  tag.dataset.styli = name
+  document.querySelector('head')?.append(tag)
+  return tag
 }
 
-export class ToCss {
-  name: string
-  version: string
-  config: ToCSSConfig
-  styliTag: any
-  mediaStyliTag: any
+function generateMediaStyliTag(value: number) {
+  const tag = generateStyliTag(`mediaStyli${value}`)
+  tag.innerHTML = `@media (min-width: ${value}px}) {}`
+  return tag
+}
 
-  constructor(config?: ToCSSConfig) {
-    this.name = 'className'
-    this.version = '1.0.0'
-    this.config = {
-      breakpoints: [640, 768, 1024, 1280], // set default breakpoints
-      ...config,
-    }
-
-    this.styliTag = this.generateStyliTag('styli')
-    this.mediaStyliTag = (this.config.breakpoints || []).map((v) => this.generateMediaStyliTag(v))
+const generateClassName = (function () {
+  let seed = 0
+  let cache: any = {}
+  return (key: string) => {
+    cache[key] = cache[key] || `styli-${seed++}`
+    return cache[key]
   }
+})()
 
-  generateStyliTag(name: string) {
-    const tag = document.createElement('style')
-    tag.dataset.styli = name
-    document.querySelector('head')?.append(tag)
-    return tag
-  }
-
-  generateMediaStyliTag(value: number) {
-    const tag = this.generateStyliTag(`mediaStyli${value}`)
-    tag.innerHTML = `@media (min-width: ${value}px}) {}`
-    return tag
-  }
-
-  generateClassName = (function () {
-    let seed = 0
-    let cache: any = {}
-    return (key: string) => {
-      cache[key] = cache[key] || `styli-${seed++}`
-      return cache[key]
-    }
-  })()
-
-  styliStyleToCss(style: StyliStyle) {
-    let className = this.generateClassName(JSON.stringify(style))
-    let cssFragment = ''
-    let cssFragmentList: string[] = []
-    for (let [key, value] of Object.entries(style)) {
-      const cssKeyName = kebab(key)
-      // media queries
-      if (Array.isArray(value)) {
-        const breakpoints = this.config.breakpoints
-        if (!breakpoints || !breakpoints.length) {
-          throw new Error('breakpoints is not provide, array value is not support')
-        }
-        for (let i = 0; i < breakpoints.length; i++) {
-          cssFragmentList[i] = `${cssFragmentList[i] || ''} ${cssKeyName}: ${value[i]};`
-        }
-      } else {
-        cssFragment = `${cssFragment} ${cssKeyName}: ${value};`
+function styliStyleToCss(style: StyliStyle, breakpoints?: number[]) {
+  let className = generateClassName(JSON.stringify(style))
+  let cssFragment = ''
+  let cssFragmentList: string[] = []
+  for (let [key, value] of Object.entries(style)) {
+    const cssKeyName = kebab(key)
+    // media queries
+    if (Array.isArray(value)) {
+      if (!breakpoints || !breakpoints.length) {
+        throw new Error('breakpoints is not provide, array value is not support')
       }
+      for (let i = 0; i < breakpoints.length; i++) {
+        cssFragmentList[i] = `${cssFragmentList[i] || ''} ${cssKeyName}: ${value[i]};`
+      }
+    } else {
+      cssFragment = `${cssFragment} ${cssKeyName}: ${value};`
     }
-
-    cssFragmentList = cssFragmentList.map((fragment) => `.${className} { ${fragment} }`)
-    cssFragment = `.${className} { ${cssFragment} }`
-
-    return { cssFragment, className, cssFragmentList }
   }
 
-  // get media size content
-  getMediaTagContent(idx: number) {
-    const content = this.mediaStyliTag[idx].innerHTML
-    const [, match = ''] = content.match(/{(.*)}/) || []
-    return match
-  }
+  cssFragmentList = cssFragmentList.map((fragment) => `.${className} { ${fragment} }`)
+  cssFragment = `.${className} { ${cssFragment} }`
 
-  // set media size content
-  setMediaTagContent(idx: number, content: string) {
-    const breakpoints = this.config.breakpoints || []
-    this.mediaStyliTag[idx].innerHTML = `@media (min-width: ${breakpoints[idx]}px) {${content}}`
-  }
+  return { cssFragment, className, cssFragmentList }
+}
 
-  // set common content
-  setStyliTagContent(content: string) {
-    this.styliTag.innerHTML = this.styliTag.innerHTML + content
-  }
+function getMediaTagContent(tag: any) {
+  const content = tag.innerHTML
+  const [, match = ''] = content.match(/{(.*)}/) || []
+  return match
+}
 
-  exec(styliStyle: StyliStyle, props: PlainObject) {
+function setMediaTagContent(tag: any, breakpoint: number, content: string) {
+  tag.innerHTML = `@media (min-width: ${breakpoint}px) {${content}}`
+}
+
+function setStyliTagContent(tag: any, content: string) {
+  tag.innerHTML = tag.innerHTML + content
+}
+
+function toCSS() {
+  const breakpoints = [640, 768, 1024, 1280]
+  const styliTag = generateStyliTag('styli')
+  const mediaStyliTag = breakpoints.map((v) => generateMediaStyliTag(v))
+  const canUseDom = !!window?.document?.createElement
+
+  return function (finalProps: PlainObject, styliStyle: PlainObject, props: PlainObject) {
     if (!canUseDom) {
       throw new Error('current environment is not support this plugin')
     }
-    const { cssFragment, className, cssFragmentList } = this.styliStyleToCss(styliStyle)
 
-    this.setStyliTagContent(cssFragment)
+    const { cssFragment, className, cssFragmentList } = styliStyleToCss(styliStyle, breakpoints)
+
+    setStyliTagContent(styliTag, cssFragment)
 
     cssFragmentList.forEach((mediaCSSFragment, idx) => {
-      const content = this.getMediaTagContent(idx)
-      this.setMediaTagContent(idx, `${content} ${mediaCSSFragment}`)
+      const tag = mediaStyliTag[idx]
+      const breakpoint = breakpoints[idx]
+      const content = getMediaTagContent(tag)
+      setMediaTagContent(tag, breakpoint, `${content} ${mediaCSSFragment}`)
     })
 
-    return `${className} ${props.className || ''}`
+    finalProps.className = `${className} ${props.className || ''}`
+
+    return finalProps
   }
 }
+
+export const toCss = toCSS()

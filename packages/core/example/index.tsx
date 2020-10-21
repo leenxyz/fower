@@ -1,7 +1,12 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { styled } from '../../core/src'
+import { styled, Styli } from '../../core/src'
+import { toCss, toStyle } from '../../core/src/plugins'
+
+Styli.config({
+  plugins: [toCss, toStyle],
+})
 
 export const View = styled('div')
 export const Text = styled('span')
@@ -9,7 +14,7 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
-      {/* <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']} hover_={createStyle()}>
+      <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']}>
         <View
           s={[40, 50, 60, 70]}
           bgBlue300
@@ -24,7 +29,7 @@ const App = () => {
       </View>
       <View red s="100" center mt-100>
         哈哈哈
-      </View> */}
+      </View>
       <View red s="100" center mt-100>
         哈哈哈
       </View>
