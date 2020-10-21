@@ -5,91 +5,86 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
+import { View } from '@styli/react'
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and used to get your
-        website up and running quickly.
-      </>
-    ),
+    title: 'Utility-first',
+    description: <>在Styli，你只需通过 Utility Props 组合实现各种复杂的UI，不需写原生的CSS。</>,
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your
-        docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Framework-agnostic',
+    description: <>可以任何主流框架中使用，如 React、Vue、Angular、React native、Taro。</>,
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can be extended while
-        reusing the same header and footer.
-      </>
-    ),
+    title: 'Type Safe',
+    description: <>完美支持TypeScript，完整的类型定义，精确的智能提示，友好的文档辅助。</>,
+  },
+  {
+    title: 'Less Code, Write faster',
+    description: <>Styli的原子Prop 和 "key as value"模式，让你用更少的代码实现复杂样式。</>,
+  },
+  {
+    title: 'Less CSS, More JS',
+    description: <>使用 Styli，你大部分是在写JS，请逐渐忘记复杂的 CSS。</>,
+  },
+  {
+    title: 'Programmable',
+    description: <>Styli 是一种 CSS in JS 解决方，你可以完整利用 JS 的语言特性。</>,
   },
 ]
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, description, idx }) {
   const imgUrl = useBaseUrl(imageUrl)
   return (
-    <div className={clsx('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
+    <View
+      mb-40
+      pr={(idx + 1) % 3 === 0 ? 0 : '40px'}
+      className={clsx('col col--4', styles.feature)}
+    >
       <h3>{title}</h3>
       <p>{description}</p>
-    </div>
+    </View>
   )
 }
 
 function Home() {
   const context = useDocusaurusContext()
-  const { siteConfig = {} } = context
+  const { siteConfig = {}, tagline } = context
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/introduction')}
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header>
+    <Layout title={tagline} description={tagline}>
+      <View w-800 center column textCenter mx-auto mb-40 py-60>
+        <View py-50 f-80 fontBold leadingNone black>
+          {siteConfig.tagline}
+        </View>
+        <View center mt-20>
+          <Link
+            className={clsx('button button--primary button--lg', styles.getStarted)}
+            to={useBaseUrl('docs/introduction')}
+          >
+            Get Started
+          </Link>
+          <iframe
+            className={styles.indexCtasGitHubButton}
+            src="https://ghbtns.com/github-btn.html?user=forsigner&amp;repo=styli&amp;type=star&amp;count=true&amp;size=large"
+            width={160}
+            height={30}
+            title="GitHub Stars"
+          />
+        </View>
+      </View>
+
       <main>
         {features && features.length > 0 && (
-          <section className={styles.features}>
+          <View center px-2rem mb-40>
             <div className="container">
               <div className="row">
                 {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
+                  <Feature key={idx} idx={idx} {...props} />
                 ))}
               </div>
             </div>
-          </section>
+          </View>
         )}
       </main>
     </Layout>

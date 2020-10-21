@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Styli',
-  tagline: 'A Utility-First Style Framework for building UI quickly',
+  tagline: 'A style library for rapid UI development',
   url: 'https://styli.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -14,11 +14,12 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     // sidebarCollapsible: false,
+    disableSwitch: true,
     navbar: {
       title: 'Styli',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -42,14 +43,14 @@ module.exports = {
         {
           title: 'Docs',
           items: [
-            // {
-            //   label: 'Style Guide',
-            //   to: 'docs/',
-            // },
-            // {
-            //   label: 'Second Doc',
-            //   to: 'docs/doc2/',
-            // },
+            {
+              label: 'Introduction',
+              to: 'docs/introduction',
+            },
+            {
+              label: 'Getting started',
+              to: 'docs/getting-started',
+            },
           ],
         },
         {
@@ -57,15 +58,11 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/styli',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Github',
+              href: 'https://github.com/forsigner/styli',
             },
           ],
         },
@@ -76,14 +73,14 @@ module.exports = {
               label: 'Blog',
               to: 'blog',
             },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            // {
+            //   label: 'GitHub',
+            //   href: 'https://github.com/forsigner/styli',
+            // },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Styli`,
     },
   },
   presets: [
@@ -93,13 +90,13 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/forsigner/styli/edit/master/website/',
           remarkPlugins: [require('./src/plugins/remark-npm2yarn')],
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          editUrl: 'https://github.com/forsigner/styli/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
