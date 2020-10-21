@@ -2,17 +2,13 @@ import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { styled, Styli } from '../../core/src'
-import { ToCss } from '../../core/src/plugins'
+import { ToCss, toStyle } from '../../core/src/plugins'
 
 export const View = styled('div')
 export const Text = styled('span')
 
 Styli.config({
-  plugins: [
-    new ToCss({
-      mediaList: [640, 768, 1024, 1280],
-    }),
-  ],
+  plugins: [new ToCss()],
 })
 
 const App = () => {

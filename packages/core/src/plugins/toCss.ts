@@ -1,14 +1,10 @@
 import { PlainObject, StyliStyle } from '../types'
 import { getValue, kebab } from '../utils'
 
-const canUseDom = !!(
-  typeof window !== 'undefined' &&
-  window.document &&
-  window.document.createElement
-)
+const canUseDom = !!window?.document?.createElement
 
 interface ToCSSConfig {
-  mediaList?: number[]
+  breakpoints?: number[]
 }
 
 export class ToCss {
@@ -18,13 +14,16 @@ export class ToCss {
   styliTag: any
   mediaStyliTag: any
 
-  constructor(config: ToCSSConfig) {
+  constructor(config?: ToCSSConfig) {
     this.name = 'className'
     this.version = '1.0.0'
-    this.config = config
+    this.config = {
+      breakpoints: [640, 768, 1024, 1280],  // set default breakpoints
+      ...config,
+    }
 
     this.styliTag = this.generateStyliTag('styli')
-    this.mediaStyliTag = (this.config.mediaList || []).map((v) => this.generateMediaStyliTag(v))
+    this.mediaStyliTag = (this.config.breakpoints || []).map((v) => this.generateMediaStyliTag(v))
   }
 
   generateStyliTag(name: string) {
@@ -49,7 +48,7 @@ export class ToCss {
     }
   })()
 
-  styleToCss(style: StyliStyle) {
+  styliStyleToCss(style: StyliStyle) {
     let className = this.generateClassName(JSON.stringify(style))
     let cssFragment = ''
     let cssFragmentList: string[] = []
@@ -57,11 +56,11 @@ export class ToCss {
       const cssKeyName = kebab(key)
       // media queries
       if (Array.isArray(value)) {
-        const mediaList = this.config.mediaList
-        if (!mediaList || !mediaList.length) {
-          throw new Error('mediaList is not provide, array value is not support')
+        const breakpoints = this.config.breakpoints
+        if (!breakpoints || !breakpoints.length) {
+          throw new Error('breakpoints is not provide, array value is not support')
         }
-        for (let i = 0; i < mediaList.length; i++) {
+        for (let i = 0; i < breakpoints.length; i++) {
           cssFragmentList[i] = `${cssFragmentList[i] || ''} ${cssKeyName}: ${value[i]};`
         }
       } else {
@@ -84,9 +83,9 @@ export class ToCss {
 
   // set media size content
   setMediaTagContent(idx: number, content: string) {
-    const mediaList = this.config.mediaList || []
+    const breakpoints = this.config.breakpoints || []
     this.mediaStyliTag[idx].innerHTML = `@media (min-width: ${getValue(
-      mediaList[idx],
+      breakpoints[idx],
     )}) {${content}}`
   }
 
@@ -99,7 +98,7 @@ export class ToCss {
     if (!canUseDom) {
       throw new Error('current environment is not support this plugin')
     }
-    const { cssFragment, className, cssFragmentList } = this.styleToCss(styliStyle)
+    const { cssFragment, className, cssFragmentList } = this.styliStyleToCss(styliStyle)
 
     this.setStyliTagContent(cssFragment)
 
