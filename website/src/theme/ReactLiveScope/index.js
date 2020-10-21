@@ -6,6 +6,8 @@ export const Button = forwardRef((props, ref) => {
   return <button {...toFinalProps(props)} ref={ref} />
 })
 
+const Heading = styled('h2', { lineHeight: '1em' })
+
 const ButtonExample = (props) => (
   <button
     {...props}
@@ -30,6 +32,7 @@ const ReactLiveScope = {
   Text,
   View,
   Image,
+  Heading,
   Anchor,
   Button,
 }

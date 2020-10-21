@@ -2,13 +2,7 @@ module.exports = {
   someSidebar: {
     Styli: [
       'introduction',
-      'installation',
-      'getting-started',
-      'guide',
       'configuration',
-      'openness',
-    ],
-    Philosophy: [
       'utility-first',
       'framework-agnostic',
       'type-safe',
@@ -16,6 +10,15 @@ module.exports = {
       'less-css',
       'programmable',
     ],
+    'Getting Started': [
+      'installation',
+      'getting-started',
+      'use-in-react',
+      'use-in-vue',
+      'use-in-react-native',
+      'use-in-taro',
+    ],
+    Guides: ['guide', 'openness'],
     Props: [
       'padding',
       'margin',
@@ -36,6 +39,7 @@ module.exports = {
     ],
     Api: ['styled', 'createStyle'],
     Components: ['view', 'text', 'image', 'anchor'],
+    Examples: ['example-avatar', 'example-media-object'],
     FAQS: ['opacity'],
   },
 }
