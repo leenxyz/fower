@@ -12,7 +12,7 @@ export interface Margins {
    * <View m={a + b}></View>
    * ```
    */
-  m?: boolean | number | string
+  m?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin horizontal
@@ -32,7 +32,7 @@ export interface Margins {
    * <View mx={a + b}></View>
    * ```
    */
-  mx?: boolean | number | string
+  mx?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin vertical
@@ -52,7 +52,7 @@ export interface Margins {
    * <View my={a + b}></View>
    * ```
    */
-  my?: boolean | number | string
+  my?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin top, mt is margin-top
@@ -67,7 +67,7 @@ export interface Margins {
    * <View mt={a + b}></View>
    * ```
    */
-  mt?: boolean | number | string
+  mt?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin bottom, mb is margin-bottom
@@ -82,7 +82,7 @@ export interface Margins {
    * <View mb={a + b}></View>
    * ```
    */
-  mb?: boolean | number | string
+  mb?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin right, mr is margin-right
@@ -97,7 +97,7 @@ export interface Margins {
    * <View mr={a + b}></View>
    * ```
    */
-  mr?: boolean | number | string
+  mr?: boolean | number | string | number[] | string[]
 
   /**
    * Set margin left, ml is margin-left
@@ -112,5 +112,5 @@ export interface Margins {
    * <View ml={a + b}></View>
    * ```
    */
-  ml?: boolean | number | string
+  ml?: boolean | number | string | number[] | string[]
 }

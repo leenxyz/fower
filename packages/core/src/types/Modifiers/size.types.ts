@@ -12,7 +12,7 @@ export interface Sizes {
    * <View w={a + b}></View>
    * ```
    */
-  w?: boolean | number | string
+  w?: boolean | number | string | number[] | string[]
 
   /**
    * Set height, h is height
@@ -27,7 +27,7 @@ export interface Sizes {
    * <View h={a + b}></View>
    * ```
    */
-  h?: boolean | number | string
+  h?: boolean | number | string | number[] | string[]
 
   /**
    * Set square size
@@ -49,7 +49,7 @@ export interface Sizes {
    * <View s={a + b}></View>
    * ```
    */
-  s?: boolean | number | string
+  s?: boolean | number | string | number[] | string[]
 
   /**
    * Set circle size
@@ -72,7 +72,7 @@ export interface Sizes {
    * <View c={a + b}></View>
    * ```
    */
-  c?: boolean | number | string
+  c?: boolean | number | string | number[] | string[]
 
   /**
    * Set min-width
@@ -87,7 +87,7 @@ export interface Sizes {
    * <View minW={a + b}></View>
    * ```
    */
-  minW?: boolean | number | string
+  minW?: boolean | number | string | number[] | string[]
 
   /**
    * Set max-height
@@ -102,7 +102,7 @@ export interface Sizes {
    * <View maxW={a + b}></View>
    * ```
    */
-  maxW?: boolean | number | string
+  maxW?: boolean | number | string | number[] | string[]
 
   /**
    * Set min-height
@@ -117,7 +117,7 @@ export interface Sizes {
    * <View minH={a + b}></View>
    * ```
    */
-  minH?: boolean | number | string
+  minH?: boolean | number | string | number[] | string[]
 
   /**
    * Set max-height
@@ -132,5 +132,5 @@ export interface Sizes {
    * <View maxH={a + b}></View>
    * ```
    */
-  maxH?: boolean | number | string
+  maxH?: boolean | number | string | number[] | string[]
 }

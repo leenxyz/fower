@@ -45,9 +45,9 @@ export interface Texts {
    * <View f-xs></View>
    * ```
    */
-  f?: boolean | number | string
+  f?: boolean | number | string | number[] | string[]
 
-  fontWeight?: string | number
+  fontWeight?: string | number | number[] | string[]
   fontHairline?: boolean
   fontThin?: boolean
   fontLight?: boolean
@@ -57,7 +57,7 @@ export interface Texts {
   fontBold?: boolean
   fontExtrabold?: boolean
 
-  leading?: boolean | number | string
+  leading?: boolean | number | string | number[] | string[]
 
   leadingNone?: boolean
   leadingTight?: boolean
@@ -66,7 +66,7 @@ export interface Texts {
   leadingRelaxed?: boolean
   leadingLoose?: boolean
 
-  color?: Property.Color
+  color?: Property.Color | Property.Color[]
 
   primaryColor?: boolean // '#2364AA'
   secondaryColor?: boolean // '#81C3D7'

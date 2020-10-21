@@ -9,7 +9,7 @@ export interface Shadows {
    * ```
    */
 
-  shadow?: boolean | string
+  shadow?: boolean | string | string[]
 
   /**
    * Set shadow

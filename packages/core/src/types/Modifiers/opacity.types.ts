@@ -11,5 +11,5 @@ export interface Opacity {
    * ```
    */
 
-  opacity?: boolean | string | number
+  opacity?: boolean | string | number | number[] | string[]
 }

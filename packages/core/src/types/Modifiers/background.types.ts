@@ -1,7 +1,7 @@
 import { Property } from 'csstype'
 
 export interface Backgrounds {
-  bg?: Property.Color
+  bg?: Property.Color | Property.Color[]
 
   bgBlack?: boolean
 

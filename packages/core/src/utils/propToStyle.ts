@@ -22,9 +22,12 @@ export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const [key, value] = prop.split('-')
 
+  const sizeValue = isValidPropValue(propValue) ? propValue : value
+
   sizeMaps[key].forEach((k) => {
-    const sizeValue = isValidPropValue(propValue) ? propValue : value
-    style[k] = getValue(sizeValue, ModifierType.size)
+    style[k] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.size))
+      : getValue(sizeValue, ModifierType.size)
   })
 
   return style
@@ -34,9 +37,12 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const [key, value] = prop.split('-')
 
+  const paddingValue = isValidPropValue(propValue) ? propValue : value
+
   paddingMaps[key].forEach((k) => {
-    const paddingValue = isValidPropValue(propValue) ? propValue : value
-    style[k] = getValue(paddingValue, ModifierType.padding)
+    style[k] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.padding))
+      : getValue(paddingValue, ModifierType.padding)
   })
 
   return style
@@ -46,10 +52,12 @@ export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const [key, symbol = '', value] = prop.split(/\b-*?/)
   const [, minus = ''] = symbol.split('')
+  const marginValue = isValidPropValue(propValue) ? propValue : minus + value
 
   marginMaps[key].forEach((k) => {
-    const marginValue = isValidPropValue(propValue) ? propValue : minus + value
-    style[k] = getValue(marginValue, ModifierType.margin)
+    style[k] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.margin))
+      : getValue(marginValue, ModifierType.margin)
   })
 
   return style
@@ -65,9 +73,11 @@ export function bgPropToStyle(prop: string, propValue: any) {
 export function roundedPropToStyle(prop: string, propValue: any) {
   let style: any = {}
   const [key, value] = prop.split('-')
+  const roundedValue = isValidPropValue(propValue) ? propValue : value
   for (const p of roundedMaps[key]) {
-    const roundedValue = isValidPropValue(propValue) ? propValue : value
-    style[`border${p}Radius`] = getValue(roundedValue, ModifierType.border)
+    style[`border${p}Radius`] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.border))
+      : getValue(roundedValue, ModifierType.border)
   }
   return style
 }
@@ -218,20 +228,32 @@ export function colorPropToStyle(prop: string, propValue: any) {
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontSize: getValue(propValue, ModifierType.text) }
+  if (isValidPropValue(propValue)) {
+    return {
+      fontSize: Array.isArray(propValue)
+        ? propValue.map((v) => getValue(v, ModifierType.text))
+        : getValue(propValue, ModifierType.text),
+    }
+  }
   const [, value] = prop.split('-')
   return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
 }
 
 export function textWeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontWeight: '' + propValue }
+  if (isValidPropValue(propValue)) return { fontWeight: propValue }
   const [, second, third] = kebab(prop).split('-')
   if (second === 'weight') return { fontWeight: '' + third }
   return { fontWeight: '' + weights[downFirst(second)] || second }
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { lineHeight: getValue(propValue) }
+  if (isValidPropValue(propValue)) {
+    return {
+      lineHeight: Array.isArray(propValue)
+        ? propValue.map((v) => getValue(v))
+        : getValue(propValue),
+    }
+  }
   const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
   // TODO: calc 是否支持 RN
   return {
@@ -292,7 +314,13 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 }
 
 export function opacityPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { opacity: Number(propValue) / 100 }
+  if (isValidPropValue(propValue)) {
+    return {
+      opacity: Array.isArray(propValue)
+        ? propValue.map((v) => Number(v) / 100)
+        : Number(propValue) / 100,
+    }
+  }
   const [, value = 50] = prop.split('-')
   return { opacity: Number(value) / 100 }
 }
@@ -308,12 +336,13 @@ export function overFlowPropToStyle(prop: string, propValue: any) {
   const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
   if (isValidPropValue(propValue)) return { [prop]: propValue }
 
+  const val = downFirst(value)
   switch (key) {
     case 'ox':
-      return { overflowX: value }
+      return { overflowX: val }
     case 'oy':
-      return { overflowY: value }
+      return { overflowY: val }
     default:
-      return { overflow: value }
+      return { overflow: val }
   }
 }

@@ -2,8 +2,7 @@ import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { styled, Styli } from '../../core/src'
-import { ToCss, toStyle } from '../../core/src/plugins'
-import { Button } from '@material-ui/core'
+import { ToCss } from '../../core/src/plugins'
 
 export const View = styled('div')
 export const Text = styled('span')
@@ -16,55 +15,25 @@ Styli.config({
   ],
 })
 
-export const MyView: React.FC<{ style?: any; gooo?: number; foo?: string }> = ({
-  children,
-  ...props
-}) => {
-  return (
-    <div style={props.style}>
-      {children}
-      {props.foo || ''}
-    </div>
-  )
-}
-
-// const StyledButton = styled(Button, 'p-10')
-const StyledButton = styled(Button, 'p-10')
-
-const NewView = styled(MyView)
-
-// const Div = myStyled('div', {
-//   background: 'red',
-// })
-
-const Div = styled('div', {})
-
-const Input = styled('input', {
-  background: 'grey',
-})
-
 const App = () => {
   return (
     <div className="box">
-      <Div p-20 black white bgBlue100>
-        <View c-40 p-20 dBlock red oxScroll>
+      <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']}>
+        <View
+          s={[40, 50, 60, 70]}
+          bgBlue300
+          p-20
+          f={[44, 55, 66, 77]}
+          opacity={[40, 60, 80, 100]}
+          ml={[10, 30, 60, 80]}
+          rounded={[10, 20, 30, 40]}
+        >
           HH
         </View>
-      </Div>
-      <Input />
-      <View colorDeepskyblue>View</View>
-      <Text f-40>color Text</Text>
-      <Div f-24>
-        <Div fontWeight-200>落霞与孤鹜齐飞，秋水共长天一色。</Div>
-        <Div fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</Div>
-        <Div fontBold>落霞与孤鹜齐飞，秋水共长天一色。</Div>
-      </Div>
-      <NewView foo="foo" gooo={11} pink500 bgGray200 p-20>
-        就哈哈哈哈哈哈哈哈哈
-      </NewView>
-      <StyledButton variant="contained" p-20>
-        StyledButton
-      </StyledButton>
+      </View>
+      <View red s="100" center mt-100>
+        哈哈哈
+      </View>
     </div>
   )
 }

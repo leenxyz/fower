@@ -1,15 +1,15 @@
 export interface Borders {
-  rounded?: boolean | number | string
+  rounded?: boolean | number | string | number[] | string[]
 
-  roundedT?: boolean | number | string
-  roundedR?: boolean | number | string
-  roundedB?: boolean | number | string
-  roundedL?: boolean | number | string
+  roundedT?: boolean | number | string | number[] | string[]
+  roundedR?: boolean | number | string | number[] | string[]
+  roundedB?: boolean | number | string | number[] | string[]
+  roundedL?: boolean | number | string | number[] | string[]
 
-  roundedTL?: boolean | number | string
-  roundedTR?: boolean | number | string
-  roundedBL?: boolean | number | string
-  roundedBR?: boolean | number | string
+  roundedTL?: boolean | number | string | number[] | string[]
+  roundedTR?: boolean | number | string | number[] | string[]
+  roundedBL?: boolean | number | string | number[] | string[]
+  roundedBR?: boolean | number | string | number[] | string[]
 
   border?: boolean | number | string
   borderT?: boolean | number | string
