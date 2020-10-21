@@ -1,5 +1,5 @@
 import { Styli } from '../styli'
-import { Plugin } from '../types'
+import { PlainObject, Plugin } from '../types'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
@@ -10,11 +10,18 @@ export function toFinalProps(props: any) {
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  // use default plugin toStyle if custom plugins not provide
   const plugins = Styli.getConfig('plugins') as Plugin[]
+  return traversingPlugins(plugins.slice(), finalProps, styliStyle, props)
+}
 
-  return plugins.reduce((finalProps, plugin) => {
-    finalProps[plugin.name] = plugin.exec(styliStyle, props)
-    return finalProps
-  }, finalProps)
+function traversingPlugins(
+  plugins: Plugin[],
+  finalProps: PlainObject,
+  styliStyle: PlainObject,
+  props: PlainObject,
+): PlainObject {
+  if (!plugins.length) return finalProps
+  const fn = plugins.shift() as Plugin
+  finalProps = fn(finalProps, styliStyle, props)
+  return traversingPlugins(plugins, finalProps, styliStyle, props)
 }

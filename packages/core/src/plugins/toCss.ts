@@ -1,5 +1,5 @@
 import { PlainObject, StyliStyle } from '../types'
-import { getValue, kebab } from '../utils'
+import { kebab } from '../utils'
 
 const canUseDom = !!window?.document?.createElement
 

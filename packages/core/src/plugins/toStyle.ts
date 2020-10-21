@@ -1,10 +1,14 @@
-import { PlainObject, Plugin, StyliStyle } from '../types'
+import { PlainObject } from '../types'
 
-export const toStyle: Plugin = {
-  name: 'style',
-  version: '1.0.0',
-  exec: (styliStyle: StyliStyle, props: PlainObject) => {
-    if (Array.isArray(props.style)) return [styliStyle, ...props.style]
-    return { ...styliStyle, ...props.style }
-  },
+export default function (
+  finalProps: PlainObject,
+  styliStyle: PlainObject,
+  props: PlainObject,
+): PlainObject {
+  if (Array.isArray(props.style)) {
+    finalProps.style = [styliStyle, ...props.style]
+  } else {
+    finalProps.style = { ...styliStyle, ...props.style }
+  }
+  return finalProps
 }
