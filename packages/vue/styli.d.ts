@@ -1,12 +1,11 @@
-import Vue, { PluginFunction, VueConstructor } from 'vue';
-
+import Vue, { PluginFunction, VueConstructor } from 'vue'
 
 interface InstallFunction extends PluginFunction<any> {
-  installed?: boolean;
+  installed?: boolean
 }
 
-declare const Styli: { install: InstallFunction };
-export default Styli;
+declare const Styli: { install: InstallFunction }
+export default Styli
 
-export const Div: VueConstructor<Vue>;
-export const Span: VueConstructor<Vue>;
+export const Div: VueConstructor<Vue>
+export const Span: VueConstructor<Vue>

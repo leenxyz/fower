@@ -1,4 +1,3 @@
-
 <script lang="ts">
 import Vue from 'vue'
 import { toFinalProps } from '@styli/core'

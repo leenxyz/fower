@@ -3,4 +3,3 @@ dist
 .docusaurus
 .cache
 *.html
-packages/vue/*

@@ -44,8 +44,8 @@ import {
 
 export interface ConvertConfig {
   name?: string
-  isMatch: ((prop: string, propValue: any, props?: any) => boolean)
-  toStyle: ((prop: string, propValue: any, props: any) => CSSProperties)
+  isMatch: (prop: string, propValue: any, props?: any) => boolean
+  toStyle: (prop: string, propValue: any, props: any) => CSSProperties
 }
 
 export const convertConfigs: ConvertConfig[] = [

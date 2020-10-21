@@ -47,18 +47,15 @@ body {
   flex-direction: column-reverse;
 }
 
-
 .playgroundPreviewHeader_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground- {
   display: none;
 }
-
 
 .playgroundEditorHeader_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground- {
   /* display: none; */
   background-color: rgb(246, 248, 250) !important;
   color: #25c2a0 !important;
 }
-
 
 .playgroundPreview_node_modules-\@docusaurus-theme-live-codeblock-src-theme-Playground- {
   border: 1px solid var(--ifm-color-emphasis-200);
