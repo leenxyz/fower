@@ -36,7 +36,7 @@ $ npm install @styli/react
 $ npm install @styli/vue
 
 # or
-$ npm install @styli/angular
+$ npm install @styli/react-native
 ```
 
 ## Example
