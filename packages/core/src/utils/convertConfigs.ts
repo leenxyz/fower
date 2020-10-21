@@ -19,6 +19,8 @@ import {
   flexItemPropToStyle,
   shadowPropToStyle,
   opacityPropToStyle,
+  displayPropToStyle,
+  overFlowPropToStyle,
 } from './propToStyle'
 import {
   isAlignmentKey,
@@ -40,6 +42,8 @@ import {
   isTextSizeKey,
   isTextWeightKey,
   isZIndexKey,
+  isDisplayKey,
+  isOverFlowKey,
 } from './propKey'
 
 export interface ConvertConfig {
@@ -80,7 +84,7 @@ export const convertConfigs: ConvertConfig[] = [
     toStyle: borderPropToStyle,
   },
   {
-    name: 'flexbox',
+    name: 'flex-box',
     isMatch: isFlexBoxKey,
     toStyle: flexPropToStyle,
   },
@@ -90,7 +94,7 @@ export const convertConfigs: ConvertConfig[] = [
     toStyle: flexItemPropToStyle,
   },
   {
-    name: 'flexbox-align',
+    name: 'flex-box-align',
     isMatch: isAlignmentKey,
     toStyle: (_, __, props) => {
       const newProps = props.row || props.column ? props : { ...props, row: true }
@@ -146,5 +150,15 @@ export const convertConfigs: ConvertConfig[] = [
     name: 'opacity',
     isMatch: isOpacityKey,
     toStyle: opacityPropToStyle,
+  },
+  {
+    name: 'display',
+    isMatch: isDisplayKey,
+    toStyle: displayPropToStyle,
+  },
+  {
+    name: 'overflow',
+    isMatch: isOverFlowKey,
+    toStyle: overFlowPropToStyle,
   },
 ]

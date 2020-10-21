@@ -296,3 +296,24 @@ export function opacityPropToStyle(prop: string, propValue: any) {
   const [, value = 50] = prop.split('-')
   return { opacity: Number(value) / 100 }
 }
+
+export function displayPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { display: propValue }
+  const [, value] = prop.match(/^d(\w+)$/) || []
+  const dKey = downFirst(value)
+  return { display: dKey }
+}
+
+export function overFlowPropToStyle(prop: string, propValue: any) {
+  const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
+  if (isValidPropValue(propValue)) return { [prop]: propValue }
+
+  switch (key) {
+    case 'ox':
+      return { overflowX: value }
+    case 'oy':
+      return { overflowY: value }
+    default:
+      return { overflow: value }
+  }
+}

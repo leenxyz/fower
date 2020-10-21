@@ -13,7 +13,6 @@ Styli.config({
     new ToCss({
       mediaList: [640, 768, 1024, 1280],
     }),
-    toStyle,
   ],
 })
 
@@ -48,7 +47,7 @@ const App = () => {
   return (
     <div className="box">
       <Div p-20 black white bgBlue100>
-        <View c-40 p-20 bgWhite>
+        <View c-40 p-20 dBlock red oxScroll>
           HH
         </View>
       </Div>

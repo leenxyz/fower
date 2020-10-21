@@ -129,3 +129,32 @@ export const flexAlign = [
   G.around,
   G.evenly,
 ]
+
+export const displayTypes = [
+  'block',
+  'inline',
+  'none',
+  'inlineBlock',
+  'flow',
+  'flowRoot',
+  'table',
+  'flex',
+  'grid',
+  'ruby',
+  'tableRowGroup',
+  'tableHeaderGroup',
+  'tableFooterGroup',
+  'tableRow',
+  'tableCell',
+  'tableColumnGroup',
+  'tableColumn',
+  'tableCaption',
+  'inlineTable',
+  'inlineFlex',
+  'inlineGrid',
+  'inherit',
+  'initial',
+  'unset',
+]
+
+export const overFlowTypes = ['visible', 'hidden', 'scroll', 'auto', 'inherit', 'initial', 'unset']

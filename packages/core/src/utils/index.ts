@@ -3,11 +3,11 @@ import { Styli } from '../styli'
 import { PlainObject } from '../types'
 import { ModifierType } from '../types/Modifiers'
 
-export function upFirst(s: string) {
+export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
-export function downFirst(s: string) {
+export function downFirst(s: string = '') {
   return s.charAt(0).toLowerCase() + s.slice(1)
 }
 

@@ -1,6 +1,15 @@
-import { G, positionKeys, headingTypes, textAlign, flexMaps, flexAlign } from '../constants'
+import {
+  G,
+  positionKeys,
+  headingTypes,
+  textAlign,
+  flexMaps,
+  flexAlign,
+  displayTypes,
+  overFlowTypes,
+} from '../constants'
 import { Styli } from '../styli'
-import { upFirst } from '.'
+import { downFirst, upFirst } from '.'
 import { IColors } from '../constants/colors'
 
 export function isFlexBoxKeyWrapper() {
@@ -90,4 +99,17 @@ export function isShadowKey(key: string) {
 
 export function isOpacityKey(key: string) {
   return /^opacity(-\d+)?$/.test(key)
+}
+
+export function isDisplayKey(key: string) {
+  if (/^display$/.test(key)) return true
+  const [, value] = key.match(/^d(\w+)$/) || []
+  const dKey = downFirst(value)
+  return displayTypes.includes(dKey)
+}
+
+export function isOverFlowKey(key: string) {
+  if (/^overflow[XY]?$/.test(key)) return true
+  const [, value] = key.match(/^o[xy]?([A-Z]\w+)$/) || []
+  return overFlowTypes.includes(downFirst(value))
 }

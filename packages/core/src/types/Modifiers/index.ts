@@ -8,6 +8,8 @@ export * from './margin.types'
 export * from './flex.types'
 export * from './shadow.types'
 export * from './opacity.types'
+export * from './display.types'
+export * from './overflow.types'
 
 import { Backgrounds } from './background.types'
 import { Borders } from './border.types'
@@ -20,6 +22,8 @@ import { Positions, ZIndex } from './position.types'
 import { Shadows } from './shadow.types'
 import { Opacity } from './opacity.types'
 import { Colors } from './color.types'
+import { Displays } from './display.types'
+import { OverFlows } from './overflow.types'
 
 export enum ModifierType {
   margin = 'margin',
@@ -47,4 +51,6 @@ export interface Modifiers
     Texts,
     ZIndex,
     Shadows,
+    Displays,
+    OverFlows,
     Opacity {}
