@@ -1,5 +1,5 @@
 import { PlainObject, StyliStyle } from '../types'
-import { kebab } from '../utils'
+import { kebab, canUseDom } from '../utils'
 
 function generateStyliTag(name: string) {
   const tag = document.createElement('style')
@@ -66,7 +66,6 @@ function toCSS() {
   const breakpoints = [640, 768, 1024, 1280]
   const styliTag = generateStyliTag('styli')
   const mediaStyliTag = breakpoints.map((v) => generateMediaStyliTag(v))
-  const canUseDom = !!window?.document?.createElement
 
   return function (finalProps: PlainObject, styliStyle: PlainObject, props: PlainObject) {
     if (!canUseDom) {

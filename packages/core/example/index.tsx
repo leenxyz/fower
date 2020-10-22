@@ -1,12 +1,7 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { styled, Styli } from '../../core/src'
-import { toCss, toStyle } from '../../core/src/plugins'
-
-Styli.config({
-  plugins: [toCss, toStyle],
-})
+import { styled } from '../../core/src'
 
 export const View = styled('div')
 export const Text = styled('span')
