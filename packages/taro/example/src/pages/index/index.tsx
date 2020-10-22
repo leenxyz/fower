@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import { configColors } from '@styli/core'
 import { View, Text } from './taro'
 
 import './index.css'
 
-configColors({
-  black: '#9090',
-})
 
 export default class Index extends Component {
   componentWillMount() {}
@@ -22,7 +18,7 @@ export default class Index extends Component {
   render() {
     return (
       <View className="index" s-200 center column borderGray700-4>
-        <Text bgBlue500 disabledStyle f-16>
+        <Text bgBlue500 f-16>
           Hello!
         </Text>
         <Text bgGreen500>world!</Text>
