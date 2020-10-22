@@ -62,8 +62,12 @@ function setStyliTagContent(tag: any, content: string) {
   tag.innerHTML = tag.innerHTML + content
 }
 
-function toCSS() {
-  const breakpoints = [640, 768, 1024, 1280]
+interface ToCSSConfig {
+  breakpoints?: number[]
+}
+
+export function toCss(config?: ToCSSConfig) {
+  const breakpoints = config?.breakpoints || [640, 768, 1024, 1280]
   const styliTag = generateStyliTag('styli')
   const mediaStyliTag = breakpoints.map((v) => generateMediaStyliTag(v))
 
@@ -88,5 +92,3 @@ function toCSS() {
     return finalProps
   }
 }
-
-export const toCss = toCSS()

@@ -18,7 +18,7 @@ export class StyliFactory {
     unit: 'px',
     colors: presetColors,
     convertConfig: [],
-    plugins: [canUseDom ? toCss : toStyle],
+    plugins: [canUseDom ? toCss() : toStyle()],
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }
 
