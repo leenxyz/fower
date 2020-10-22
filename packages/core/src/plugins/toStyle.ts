@@ -1,8 +1,8 @@
-import { PlainObject } from '../types'
+import { PlainObject, StyliStyle } from '../types'
 
 export function toStyle(
   finalProps: PlainObject,
-  styliStyle: PlainObject,
+  styliStyle: StyliStyle,
   props: PlainObject,
 ): PlainObject {
   if (Array.isArray(props.style)) {

@@ -67,7 +67,7 @@ function toCSS() {
   const styliTag = generateStyliTag('styli')
   const mediaStyliTag = breakpoints.map((v) => generateMediaStyliTag(v))
 
-  return function (finalProps: PlainObject, styliStyle: PlainObject, props: PlainObject) {
+  return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
     if (!canUseDom) {
       throw new Error('current environment is not support this plugin')
     }

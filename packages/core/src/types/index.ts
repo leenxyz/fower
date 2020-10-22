@@ -18,7 +18,7 @@ export interface PlainObject {
 
 export type Plugin = (
   finalProps: PlainObject,
-  styliStyle: PlainObject,
+  styliStyle: StyliStyle,
   props: PlainObject,
 ) => PlainObject
 
