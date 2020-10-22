@@ -3,122 +3,94 @@ id: use-with-taro
 title: 在 Taro 中使用
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-import { GettingStarted } from '../src/components/GettingStarted'
-
-Styli 是开箱即用的，不需要需要任何 webpack 配置，下面我们看看如何在不同框架使用 Styli。
+Taro 是一个 React-like 的框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
 
 ## 安装
 
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
-  ]}
->
-  <TabItem value="react">
-
-
 ```bash
-npm i @styli/core @styli/react
+npm i @styli/core @styli/taro
 ```
 
-  </TabItem>
-  <TabItem value="vue">
-
-
-```js
-npm i @styli/core @styli/vue
-```
-
-  </TabItem>
-
-
-  <TabItem value="react-native">
-
-
-```js
-npm i @styli/core @styli/react-native
-```
-
-  </TabItem>
-</Tabs>
-
+注意，除了需要 `@styli/core`，你还需安装和 Taro 对应的组件包 `@styli/taro`。
 
 ## 使用
 
-Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提供的 View、Text、Image 等组件，你可以快速实现复杂界面。
+下面我们使用 `View`、`Image`、`Text` 三个组件，实现一个用户信息卡片界面。
 
-<GettingStarted />
-
-<Tabs
-  defaultValue="react"
-  values={[
-    { label: 'React', value: 'react' },
-    { label: 'Vue', value: 'vue' },
-    { label: 'React Native', value: 'react-native' },
-  ]}
->
-  <TabItem value="react">
-
-
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react'
-
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image c-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
+```jsx live
+<View centerY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image c-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View f-20 fontBold>
+      Steve Jobs
     </View>
-  )
-}
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
 ```
 
-  </TabItem>
-  <TabItem value="vue">
+可以看到，我们用非常简洁的代码，实现了一个比较复杂的界面。咋一看，你可能会说："这不是变相的内联样式吗？"，这确实和内联样式相似，把样式写在 JSX 上，但这也许这是他们唯一的相似点。Styli 编写样式的方式，我们况且称之为 "Atomic props" 吧。
 
+相比内联样式，"Atomic props"有很多优点：
 
-```js
-TODO: vue
+- **代码更简洁**，使用内联样式代码量更大，很容易让 JSX 变得乱糟糟，但使用 "Atomic props" 保留了 JSX 的简洁性，可读性更好。
+
+- **样式复用**，使用内联样式，很容易让代码快速膨胀，使用 "Atomic props"，代码大小并不会随着项目的大小膨胀太多。
+
+## @styli/taro
+
+`@styli/taro` 的代码非常简单，里面没有任何黑魔法，只是用 `styled` 对 `@tarojs/components` 进行简单包裹。
+
+```jsx title="@styli/taro 源码"
+import { styled } from '@styli/core'
+import Taro from '@tarojs/components'
+
+export const View = styled(Taro.View)
+export const MovableView = styled(Taro.MovableView)
+export const ScrollView = styled(Taro.ScrollView)
+export const Swiper = styled(Taro.Swiper)
+export const SwiperItem = styled(Taro.SwiperItem)
+export const Block = styled(Taro.Block)
+export const MovableArea = styled(Taro.MovableArea)
+export const CoverView = styled(Taro.CoverView)
+export const CoverImage = styled(Taro.CoverImage)
+export const Icon = styled(Taro.Icon)
+export const Text = styled(Taro.Text)
+export const RichText = styled(Taro.RichText)
+export const Progress = styled(Taro.Progress)
+export const Button = styled(Taro.Button)
+export const Checkbox = styled(Taro.Checkbox)
+export const CheckboxGroup = styled(Taro.CheckboxGroup)
+export const Editor = styled(Taro.Editor)
+export const Form = styled(Taro.Form)
+export const Input = styled(Taro.Input)
+export const Label = styled(Taro.Label)
+export const Picker = styled(Taro.Picker)
+export const PickerView = styled(Taro.PickerView)
+export const PickerViewColumn = styled(Taro.PickerViewColumn)
+export const Radio = styled(Taro.Radio)
+export const RadioGroup = styled(Taro.RadioGroup)
+export const Slider = styled(Taro.Slider)
+export const Switch = styled(Taro.Switch)
+export const Textarea = styled(Taro.Textarea)
+export const Image = styled(Taro.Image)
+export const Navigator = styled(Taro.Navigator)
+export const Camera = styled(Taro.Camera)
+export const Canvas = styled(Taro.Canvas)
+export const OpenData = styled(Taro.OpenData)
+export const Ad = styled(Taro.Ad)
+export const Video = styled(Taro.Video)
+export const Audio = styled(Taro.Audio)
+export const FunctionalPageNavigator = styled(Taro.FunctionalPageNavigator)
+export const LivePlayer = styled(Taro.LivePlayer)
+export const LivePusher = styled(Taro.LivePusher)
+export const Map = styled(Taro.Map)
+export const WebView = styled(Taro.WebView)
+export const OfficialAccount = styled(Taro.OfficialAccount)
+export const NavigationBar = styled(Taro.NavigationBar)
+export const PageMeta = styled(Taro.PageMeta)
 ```
 
-  </TabItem>
+你也可以直接在 Github 中查看`@styli/taro`的源码：[Souce code](https://github.com/forsigner/styli/blob/master/packages/taro/src/index.tsx)。
 
-
-  <TabItem value="react-native">
-
-
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react-native'
-
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image c-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
-  )
-}
-```
-
-  </TabItem>
-</Tabs>
-
-
-Styli 巧妙地利用了 JSX 的 boolean(true) 类型 props 可以省略值的特性，实现了 "Key as Value" 模式，让 Styli 在是构建界面时更加简洁，同时由于使用了 tsx，我们得到了强类型的 "CSS in JS"。
+大部分场景，你都可以用 `@styli/taro` 代替 `@tarojs/components`。
