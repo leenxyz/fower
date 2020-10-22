@@ -1,5 +1,5 @@
 import { PlainObject, StyliStyle } from '../types'
-import { kebab, canUseDom } from '../utils'
+import { kebab, canUseDom, hash } from '../utils'
 
 function generateStyliTag(name: string) {
   const tag = document.createElement('style')
@@ -15,15 +15,14 @@ function generateMediaStyliTag(value: number) {
 }
 
 const generateClassName = (function () {
-  let seed = 0
   let cache: any = {}
   return (key: string) => {
-    cache[key] = cache[key] || `styli-${seed++}`
+    cache[key] = cache[key] || `styli-${hash(key)}`
     return cache[key]
   }
 })()
 
-function styliStyleToCss(style: StyliStyle, breakpoints?: number[]) {
+function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
   let className = generateClassName(JSON.stringify(style))
   let cssFragment = ''
   let cssFragmentList: string[] = []
@@ -31,7 +30,7 @@ function styliStyleToCss(style: StyliStyle, breakpoints?: number[]) {
     const cssKeyName = kebab(key)
     // media queries
     if (Array.isArray(value)) {
-      if (!breakpoints || !breakpoints.length) {
+      if (!breakpoints.length) {
         throw new Error('breakpoints is not provide, array value is not support')
       }
       for (let i = 0; i < breakpoints.length; i++) {

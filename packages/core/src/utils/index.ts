@@ -68,3 +68,16 @@ export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: Pl
   }
   return targetOptions
 }
+
+// https://github.com/MatthewBarker/hash-string/blob/master/source/hash-string.js
+export function hash(text: string): string {
+  let hashValue = 5381
+  let index = text.length - 1
+
+  while (index) {
+    hashValue = (hashValue * 33) ^ text.charCodeAt(index)
+    index -= 1
+  }
+
+  return (hashValue >>> 0).toString(16)
+}
