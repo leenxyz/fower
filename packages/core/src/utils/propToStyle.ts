@@ -328,8 +328,7 @@ export function opacityPropToStyle(prop: string, propValue: any) {
 export function displayPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { display: propValue }
   const [, value] = prop.match(/^d(\w+)$/) || []
-  const dKey = downFirst(value)
-  return { display: dKey }
+  return { display: kebab(value) }
 }
 
 export function overFlowPropToStyle(prop: string, propValue: any) {
