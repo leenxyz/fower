@@ -1,5 +1,5 @@
 import { PlainObject, StyliStyle } from '../types'
-import { kebab, canUseDom, hash } from '../utils'
+import { kebab, canUseDom, hash, memorize } from '../utils'
 
 function generateStyliTag(name: string) {
   const tag = document.createElement('style')
@@ -8,11 +8,11 @@ function generateStyliTag(name: string) {
   return tag
 }
 
-function generateMediaStyliTag(value: number) {
-  const tag = generateStyliTag(`mediaStyli${value}`)
+const getMediaStyliTag = memorize((value: number) => {
+  const tag = generateStyliTag(`media-styli-${value}`)
   tag.innerHTML = `@media (min-width: ${value}px}) {}`
   return tag
-}
+})
 
 const generateClassName = (function () {
   let cache: any = {}
@@ -68,7 +68,6 @@ interface ToCSSConfig {
 export function toCss(config?: ToCSSConfig) {
   const breakpoints = config?.breakpoints || [640, 768, 1024, 1280]
   const styliTag = generateStyliTag('styli')
-  const mediaStyliTag = breakpoints.map((v) => generateMediaStyliTag(v))
 
   return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
     if (!canUseDom) {
@@ -80,8 +79,8 @@ export function toCss(config?: ToCSSConfig) {
     setStyliTagContent(styliTag, cssFragment)
 
     cssFragmentList.forEach((mediaCSSFragment, idx) => {
-      const tag = mediaStyliTag[idx]
       const breakpoint = breakpoints[idx]
+      const tag = getMediaStyliTag('' + idx, breakpoint)
       const content = getMediaTagContent(tag)
       setMediaTagContent(tag, breakpoint, `${content} ${mediaCSSFragment}`)
     })
