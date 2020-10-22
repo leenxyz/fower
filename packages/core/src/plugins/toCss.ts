@@ -63,14 +63,14 @@ interface ToCSSConfig {
 }
 
 export function toCss(config?: ToCSSConfig) {
+  if (!canUseDom) {
+    throw new Error('current environment is not support this plugin')
+  }
+
   const breakpoints = config?.breakpoints || [640, 768, 1024, 1280]
   const styliTag = generateStyliTag('styli')
 
   return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
-    if (!canUseDom) {
-      throw new Error('current environment is not support this plugin')
-    }
-
     const { cssFragment, className, cssFragmentList } = styliStyleToCss(styliStyle, breakpoints)
 
     /**
