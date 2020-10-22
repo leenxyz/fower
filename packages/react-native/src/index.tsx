@@ -1,28 +1,33 @@
 import { Styli, styled } from '@styli/core'
-import {
-  Text as RNText,
-  View as RNView,
-  Button as RNButton,
-  FlatList as RNFlatList,
-  Image as RNImage,
-  ImageBackground as RNImageBackground,
-  ScrollView as RNScrollView,
-  TextInput as RNTextInput,
-  TouchableHighlight as RNTouchableHighlight,
-  TouchableOpacity as RNTouchableOpacity,
-  TouchableWithoutFeedback as RNTouchableWithoutFeedback,
-} from 'react-native'
+import RN from 'react-native'
 
-export const Text = styled(RNText)
-export const View = styled(RNView)
-export const Button = styled(RNButton)
-export const FlatList = styled(RNFlatList)
-export const Image = styled(RNImage)
-export const ImageBackground = styled(RNImageBackground)
-export const ScrollView = styled(RNScrollView)
-export const TextInput = styled(RNTextInput)
-export const TouchableHighlight = styled(RNTouchableHighlight)
-export const TouchableOpacity = styled(RNTouchableOpacity)
-export const TouchableWithoutFeedback = styled(RNTouchableWithoutFeedback)
+export const ActivityIndicator = styled(RN.ActivityIndicator)
+export const Button = styled(RN.Button)
+export const DrawerLayoutAndroid = styled(RN.DrawerLayoutAndroid)
+export const Image = styled(RN.Image)
+export const ImageBackground = styled(RN.ImageBackground)
+export const KeyboardAvoidingView = styled(RN.KeyboardAvoidingView)
+export const Modal = styled(RN.Modal)
+export const NavigatorIOS = styled(RN.NavigatorIOS)
+export const ProgressBarAndroid = styled(RN.ProgressBarAndroid)
+export const ScrollView = styled(RN.ScrollView)
+export const SnapshotViewIOS = styled(RN.SnapshotViewIOS)
+export const Switch = styled(RN.Switch)
+export const RecyclerViewBackedScrollView = styled(RN.RecyclerViewBackedScrollView)
+export const RefreshControl = styled(RN.RefreshControl)
+export const SafeAreaView = styled(RN.SafeAreaView)
+export const StatusBar = styled(RN.StatusBar)
+export const SwitchIOS = styled(RN.SwitchIOS)
+export const TabBarIOS = styled(RN.TabBarIOS)
+export const Text = styled(RN.Text)
+export const TextInput = styled(RN.TextInput)
+export const TouchableHighlight = styled(RN.TouchableHighlight)
+export const TouchableNativeFeedback = styled(RN.TouchableNativeFeedback)
+export const TouchableOpacity = styled(RN.TouchableOpacity)
+export const TouchableWithoutFeedback = styled(RN.TouchableWithoutFeedback)
+export const View = styled(RN.View)
+export const FlatList = styled(RN.FlatList)
+export const SectionList = styled(RN.SectionList)
+export const VirtualizedList = styled(RN.VirtualizedList)
 
 Styli.config({ unit: '' })
