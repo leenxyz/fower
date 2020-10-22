@@ -43,6 +43,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@types/jest": "^26.0.14",
     "coveralls": "^3.1.0",
     "eslint-config-tie-app": "0.0.5",
@@ -52,5 +53,8 @@
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
     "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.12.1"
   }
 }

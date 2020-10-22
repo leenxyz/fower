@@ -5,7 +5,16 @@ import { PragmaDemo } from './PragmaDemo'
 
 const App = () => {
   return (
-    <div className="box">
+    <div
+      css={{
+        backgroundColor: 'hotpink',
+        '&:hover': {
+          color: 'lightgreen',
+        },
+      }}
+      className="box"
+    >
+      <div>Home page</div>
       <PragmaDemo></PragmaDemo>
     </div>
   )
