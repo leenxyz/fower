@@ -5,3 +5,5 @@ export const Text = styled('span')
 export const Image = styled('img')
 export const Anchor = styled('a')
 export const Heading = styled('h2')
+
+export * from './jsx'
