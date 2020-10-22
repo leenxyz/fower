@@ -1,5 +1,6 @@
+import hash from 'string-hash'
 import { PlainObject, StyliStyle } from '../types'
-import { kebab, canUseDom, hash, memorize } from '../utils'
+import { kebab, canUseDom, memorize } from '../utils'
 
 function generateStyliTag(name: string) {
   const tag = document.createElement('style')
