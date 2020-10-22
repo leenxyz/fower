@@ -3,7 +3,7 @@ import { toFinalProps } from '@styli/core'
 
 /**
  * JSX Pragma
- * TODO: this minimal version
+ * TODO: this is minimal version
  * @param element element type
  * @param props element props
  * @param children  element children
