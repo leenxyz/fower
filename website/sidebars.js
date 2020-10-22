@@ -18,7 +18,7 @@ module.exports = {
       'use-with-react-native',
       'use-with-taro',
     ],
-    Guides: ['guide', 'openness'],
+    Guides: ['guide', 'openness', 'typescript'],
     Props: [
       'padding',
       'margin',

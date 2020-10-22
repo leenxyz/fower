@@ -11,7 +11,7 @@ A style library for rapid UI development.
 
 ## Docs
 
-Documentation website: [styli.vercel.app](https://styli.vercel.app/).
+Documentation website: [styli.js.org](https://styli.js.org/).
 
 Frequently viewed docs:
 

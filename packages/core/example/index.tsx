@@ -22,7 +22,7 @@ const App = () => {
           HH
         </View>
       </View> */}
-      <View red s="100" center mt-100 f={[44, 55, 66, 77]}>
+      <View red s="100" center mt-100 f={[44, 55, 66, 77]} css={{}}>
         哈哈哈
       </View>
       <View red s="100" center mt-100 f={[44, 55, 66, 77]}>

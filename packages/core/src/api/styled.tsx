@@ -16,6 +16,7 @@ type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 export interface InjectedProps {
   // TODO: handle any
   children?: any
+  // css?: CSS.Properties
   css?: CSSProperties
 }
 
