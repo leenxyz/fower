@@ -9,7 +9,7 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
-      <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']}>
+      {/* <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']}>
         <View
           s={[40, 50, 60, 70]}
           bgBlue300
@@ -21,11 +21,11 @@ const App = () => {
         >
           HH
         </View>
-      </View>
-      <View red s="100" center mt-100>
+      </View> */}
+      <View red s="100" center mt-100 f={[44, 55, 66, 77]}>
         哈哈哈
       </View>
-      <View red s="100" center mt-100>
+      <View red s="100" center mt-100 f={[44, 55, 66, 77]}>
         哈哈哈
       </View>
     </div>

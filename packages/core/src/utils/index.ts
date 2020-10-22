@@ -36,7 +36,7 @@ export function getValue(value: string | number, modifierType?: ModifierType) {
 export function memorize(fn: Function) {
   const cache: any = {}
   const s = (key: string, ...args: any) => {
-    cache[key] = cache[key] || fn.apply(fn, args)
+    cache[key] = cache[key] || fn.apply(fn, args.length ? args : [key])
     return cache[key]
   }
   s.cache = cache
