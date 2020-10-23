@@ -1,5 +1,5 @@
 import { Styli } from '../styli'
-import { PlainObject, Plugin } from '../types'
+import { PlainObject, Plugin, PluginWrapper } from '../types'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
@@ -21,7 +21,11 @@ function traversingPlugins(
   props: PlainObject,
 ): PlainObject {
   if (!plugins.length) return finalProps
-  const fn = plugins.shift() as Plugin
-  finalProps = fn(finalProps, styliStyle, props)
+
+  const plugin = plugins.shift()
+
+  const [fn, config] = Array.isArray(plugin) ? plugin : [plugin as PluginWrapper]
+  finalProps = fn(config)(finalProps, styliStyle, props)
+
   return traversingPlugins(plugins, finalProps, styliStyle, props)
 }

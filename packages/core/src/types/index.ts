@@ -1,4 +1,5 @@
 export * from './Modifiers'
+export * from './Plugin'
 
 export interface MarginMaps {
   [key: string]: string[]
@@ -15,12 +16,6 @@ export interface PaddingMaps {
 export interface PlainObject {
   [key: string]: any
 }
-
-export type Plugin = (
-  finalProps: PlainObject,
-  styliStyle: StyliStyle,
-  props: PlainObject,
-) => PlainObject
 
 /**
  * 可接受数组，已满足响应式需求
