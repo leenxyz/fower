@@ -26,8 +26,31 @@ module.exports = {
           to: 'docs/installation',
           // activeBasePath: 'docs',
           activeBasePath: 'docs/introduction',
-
           label: 'Documentation',
+          position: 'left',
+        },
+        {
+          to: 'docs/use-with-react',
+          activeBasePath: 'docs/use-with-react',
+          label: 'React',
+          position: 'left',
+        },
+        {
+          to: 'docs/use-with-vue',
+          activeBasePath: 'docs/use-with-vue',
+          label: 'Vue',
+          position: 'left',
+        },
+        {
+          to: 'docs/use-with-react-native',
+          activeBasePath: 'docs/use-with-react-native',
+          label: 'React native',
+          position: 'left',
+        },
+        {
+          to: 'docs/use-with-taro',
+          activeBasePath: 'docs/use-with-taro',
+          label: 'Taro',
           position: 'left',
         },
         {
