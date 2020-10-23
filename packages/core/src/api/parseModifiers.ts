@@ -17,6 +17,10 @@ function isFalsyProp(propValue: any) {
 }
 
 export function parseModifiers(props: PlainObject): ParsedModifiers {
+  if (!props) {
+    return { styliKeys: [], styliStyle: {} }
+  }
+
   let styliStyle: any = {}
   const styliKeys: string[] = []
   const convertMap = getConvertConfigs()

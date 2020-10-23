@@ -3,6 +3,7 @@ import { PlainObject, Plugin, PluginWrapper } from '../types'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
+  if (!props) return {}
   const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
 
   const finalProps = Object.keys(props).reduce((result, key) => {
