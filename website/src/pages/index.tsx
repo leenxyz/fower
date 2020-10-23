@@ -34,8 +34,7 @@ const features = [
   },
 ]
 
-function Feature({ imageUrl, title, description, idx }) {
-  const imgUrl = useBaseUrl(imageUrl)
+function Feature({ title, description, idx }) {
   return (
     <View
       mb-40
