@@ -1,8 +1,10 @@
 import { PlainObject, StyliStyle } from '../../types'
-import { kebab } from '../../utils'
+import { isEmptyObj, kebab } from '../../utils'
 import { generateClassName } from './generateClassName'
 
 export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
+  if (isEmptyObj(style)) return {}
+
   let className = generateClassName(JSON.stringify(style))
   let cssFragment = ''
   let cssFragmentList: string[] = []

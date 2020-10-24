@@ -23,10 +23,12 @@ export function toCss(config?: ToCSSConfig) {
   const styliTag = getStyliTag('styli')
 
   return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
-    const { cssFragment, className, cssMediaFragmentList, cssFragmentList } = styliStyleToCss(
-      styliStyle,
-      breakpoints,
-    )
+    const {
+      cssFragment = '',
+      className = '',
+      cssMediaFragmentList = [],
+      cssFragmentList = [],
+    } = styliStyleToCss(styliStyle, breakpoints)
 
     /**
      * if cssFragment has been inserted into dom, ignore next same cssFragment
