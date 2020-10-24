@@ -30,8 +30,8 @@ export class StyliFactory {
     return this.configs
   }
 
-  getConfig(type: keyof Configs) {
-    return this.configs[type]
+  getConfig<T>(type: keyof Configs): T {
+    return this.configs[type] as T
   }
 }
 

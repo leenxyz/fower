@@ -26,7 +26,7 @@ describe('styli', () => {
       ],
       transformUnit(value) {
         if (isNumber(value)) {
-          return Number(value) * 2 + (Styli.getConfig('unit') as 'string')
+          return Number(value) * 2 + Styli.getConfig<string>('unit')
         }
         return '' + value
       },

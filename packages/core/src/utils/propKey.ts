@@ -75,7 +75,7 @@ export function isTextHeadingKey(key: string) {
 }
 
 export function isColorKey(key: string) {
-  const Colors = Styli.getConfig('colors') as IColors
+  const Colors = Styli.getConfig<IColors>('colors')
   return /^color(.+)?$/.test(key) || !!Colors[key]
 }
 

@@ -1,9 +1,11 @@
 import { Styli } from '../styli'
 import { PlainObject, Plugin, PluginWrapper } from '../types'
+import { isEmptyProps } from '../utils'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
-  if (!props) return {}
+  if (isEmptyProps(props)) return {}
+
   const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
 
   const finalProps = Object.keys(props).reduce((result, key) => {
@@ -11,7 +13,7 @@ export function toFinalProps(props: any) {
     return { ...result, [key]: props[key] }
   }, {} as any)
 
-  const plugins = Styli.getConfig('plugins') as Plugin[]
+  const plugins = Styli.getConfig<Plugin[]>('plugins')
   return traversingPlugins(plugins.slice(), finalProps, styliStyle, props)
 }
 

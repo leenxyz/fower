@@ -64,7 +64,7 @@ export function marginPropToStyle(prop: string, propValue: any) {
 }
 
 export function bgPropToStyle(prop: string, propValue: any) {
-  const Colors = Styli.getConfig('colors') as IColors
+  const Colors = Styli.getConfig<IColors>('colors')
   if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
   const [, color = ''] = prop.match(/^bg(\w+)/) || []
   return { backgroundColor: Colors[downFirst(color)] }
@@ -86,7 +86,7 @@ export function borderPropToStyle(prop: string) {
   let style: any = {}
 
   let [, second, third] = kebab(prop).split('-')
-  const Colors = Styli.getConfig('colors') as IColors
+  const Colors = Styli.getConfig<IColors>('colors')
   const isBorderColor = (val: string) => !!Colors[val as ColorType]
   const isBorderStyle = (val: string) => borderStyles.includes(val)
   const isBorderPosition = (val: string) => !!positionMaps[val]
@@ -214,7 +214,7 @@ export function textHeadingPropToStyle(prop: string) {
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
-  const Colors = Styli.getConfig('colors') as IColors
+  const Colors = Styli.getConfig<IColors>('colors')
   let color: string
   if (Colors[prop]) {
     color = Colors[prop]
