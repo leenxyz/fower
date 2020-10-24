@@ -16,8 +16,6 @@ type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 export interface InjectedProps {
   // TODO: handle any
   children?: any
-  // css?: CSS.Properties
-  css?: CSSProperties
 }
 
 /**
@@ -42,10 +40,8 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props, ref) => {
-    // TODO: handle css props
-    const { css = {}, ...rest } = props as any
-    const finalProps = toFinalProps(rest)
-    finalProps.style = { ...createStyle(...args), ...finalProps.style, ...css }
+    const finalProps = toFinalProps(props)
+    finalProps.style = { ...createStyle(...args), ...finalProps.style }
 
     return createElement(component, { ref, ...finalProps })
   })
