@@ -3,7 +3,6 @@ import { View, Text } from './taro'
 
 import './index.css'
 
-
 export default class Index extends Component {
   componentWillMount() {}
 
