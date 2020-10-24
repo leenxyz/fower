@@ -1,4 +1,4 @@
-import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst } from './'
+import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst, hexToRgba } from './'
 
 import { ColorType, IColors } from '../constants/colors'
 import { ModifierType } from '../types/Modifiers'
@@ -219,7 +219,8 @@ export function colorPropToStyle(prop: string, propValue: any) {
   if (Colors[prop]) {
     color = Colors[prop]
   } else if (prop === 'color') {
-    color = propValue
+    const [hex, opacity] = propValue.split('.')
+    color = hexToRgba(hex, opacity)
   } else {
     color = prop.replace('color', '').toLowerCase()
   }

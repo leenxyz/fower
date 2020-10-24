@@ -21,6 +21,7 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
+      <View color="#000.57">哈哈哈哈</View>
       <View
         red
         s="100"
