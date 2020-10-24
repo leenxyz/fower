@@ -17,9 +17,9 @@ export interface PlainObject {
   [key: string]: any
 }
 
-/**
- * 可接受数组，已满足响应式需求
- */
+type CommonStyliValue = number | string
+type MediaQueryStyliValue = number[] | string[]
+
 export interface StyliStyle {
-  [key: string]: number | string | number[] | string[]
+  [key: string]: CommonStyliValue | MediaQueryStyliValue | PlainObject | undefined
 }
