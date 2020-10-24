@@ -68,10 +68,46 @@ export interface Texts {
 
   color?: Property.Color | Property.Color[]
 
+  // TODO: 改掉: 用 color 开头
   primaryColor?: boolean // '#2364AA'
   secondaryColor?: boolean // '#81C3D7'
   errorColor?: boolean // '#E63B2E'
   successColor?: boolean // '#ADC76F'
   dangerColor?: boolean // '#E63B2E'
   warningColor?: boolean // '#FF963C'
+
+  // 上面的替换成下面
+
+  // Organization or company brand color.
+  colorbrand?: boolean
+
+  // Primary color. Typically buttons, links, bars, active states, etc.
+  colorprimary?: boolean
+
+  // Accent color. Provides emphasis and contrast to the primary color.
+  colorsecondary?: boolean
+
+  // Additional complementary color for more variation.
+  colortertiary?: boolean
+
+  // Whites, grays, blacks, etc that make up background, border, shadow, and other layout related pieces.
+  colorneutral?: boolean
+
+  // Disabled and empty like states.
+  colormuted?: boolean
+
+  // State that denotes something as informational.
+  colorinfo?: boolean
+
+  // State that warns the user of something minor.
+  colorwarning?: boolean
+
+  // State that indicates a destructive, atomic, or irreversible action.
+  colordanger?: boolean
+
+  // State when something errors or fails.
+  colorfailure?: boolean
+
+  // State when something succeeds or passes
+  colorsuccess?: boolean
 }

@@ -1,15 +1,6 @@
 module.exports = {
   someSidebar: {
-    Styli: [
-      'introduction',
-      'configuration',
-      'utility-first',
-      'framework-agnostic',
-      'type-safe',
-      'less-code',
-      'less-css',
-      'programmable',
-    ],
+    Styli: ['introduction', 'design-principles', 'comparison', 'configuration'],
     'Getting Started': [
       'installation',
       'getting-started',
@@ -18,7 +9,7 @@ module.exports = {
       'use-with-react-native',
       'use-with-taro',
     ],
-    Guides: ['guide', 'openness', 'typescript'],
+    Guides: ['guide', 'programmable', 'openness', 'typescript', 'theme', 'plugin'],
     Props: [
       'padding',
       'margin',
@@ -40,6 +31,6 @@ module.exports = {
     Api: ['styled', 'createStyle'],
     Components: ['view', 'text', 'image', 'anchor'],
     Examples: ['example-avatar', 'example-media-object'],
-    FAQS: ['opacity'],
+    FAQS: ['faq-1'],
   },
 }

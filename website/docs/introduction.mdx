@@ -6,6 +6,15 @@ sidebar_label: 简介
 
 Styli 是一个 utility-first 的 style framework，它让你更高效地构界面，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
 
+## 古老的最佳实践
+
+关注点分离
+
+在组件化时代变了.
+
+“I’m really bad at CSS.”
+
+
 ## 特点
 
 - **Utility-first**
@@ -31,6 +40,22 @@ Styli 是一个 utility-first 的 style framework，它让你更高效地构界�
 - **Programmable**
 
   Styli 是一种 CSS in JS 解决方，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。
+
+## A quick example
+
+下面我们看看使用 Styli 时，我们的代码是怎样写的？
+
+```jsx live
+<View centerY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image c-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View f-20 fontBold>
+      Steve Jobs
+    </View>
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
+```
 
 ## 灵感
 

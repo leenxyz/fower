@@ -56,6 +56,7 @@ function Home() {
         <View py-50 f-80 fontBold leadingNone black>
           {siteConfig.tagline}
         </View>
+        <p>CSS is painful，let's use JS.</p>
         <View center mt-20>
           <Link
             className={clsx('button button--primary button--lg', styles.getStarted)}
