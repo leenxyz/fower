@@ -68,3 +68,7 @@ export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: Pl
   }
   return targetOptions
 }
+
+export function isEmptyProps(props: any) {
+  return !props || !Object.keys(props).length
+}
