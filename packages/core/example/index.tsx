@@ -21,24 +21,39 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
-      <View p-20 color={['red', 'yellow', 'blue', 'green']} bg={['yellow', 'blue', 'green', 'red']}>
-        <View
-          s={[40, 50, 60, 70]}
-          bgBlue300
-          p-20
-          f={[44, 55, 66, 77]}
-          opacity={[40, 60, 80, 100]}
-          ml={[10, 30, 60, 80]}
-          rounded={[10, 20, 30, 40]}
-        >
-          HH
-        </View>
-      </View>
-      <View red s="100" center mt-100 f={[44, 55, 66, 77]}>
+      <View
+        red
+        s="100"
+        center
+        mt-100
+        f={[44, 55, 66, 77]}
+        css={{
+          background: 'red',
+          ':hover': {
+            fontSize: '12px',
+            color: 'yellow',
+          },
+          '::before': {
+            content: '" "',
+            display: 'block',
+            width: '100px',
+            height: '100px',
+            backgroundColor: 'green',
+          },
+          '.p1': {
+            fontSize: '22px',
+            '.p2': {
+              fontSize: '11px',
+              color: 'blue',
+            },
+          },
+        }}
+      >
         哈哈哈
-      </View>
-      <View red s="100" center mt-100 f={[44, 55, 66, 77]}>
-        哈哈哈
+        <div className="p1">
+          小字
+          <View className="p2">蓝字</View>
+        </div>
       </View>
     </div>
   )

@@ -1,10 +1,10 @@
 import { Styli } from '../styli'
 import { PlainObject, Plugin, PluginWrapper } from '../types'
-import { isEmptyProps } from '../utils'
+import { isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
-  if (isEmptyProps(props)) return {}
+  if (isEmptyObj(props)) return {}
 
   const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
 

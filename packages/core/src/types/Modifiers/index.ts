@@ -24,6 +24,7 @@ import { Opacity } from './opacity.types'
 import { Colors } from './color.types'
 import { Displays } from './display.types'
 import { OverFlows } from './overflow.types'
+import { PlainObject } from '..'
 
 export enum ModifierType {
   margin = 'margin',
@@ -37,6 +38,10 @@ export enum ModifierType {
   shadow = 'shadow',
   flex = 'flex',
   flexItem = 'flexItem',
+}
+
+interface Directive {
+  css?: PlainObject
 }
 
 export interface Modifiers
@@ -53,4 +58,5 @@ export interface Modifiers
     Shadows,
     Displays,
     OverFlows,
-    Opacity {}
+    Opacity,
+    Directive {}

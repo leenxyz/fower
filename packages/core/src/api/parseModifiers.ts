@@ -1,6 +1,6 @@
 import { Styli } from '../styli'
 import { PlainObject, StyliStyle } from '../types'
-import { isEmptyProps } from '../utils'
+import { isEmptyObj } from '../utils'
 import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
 
 interface ParsedModifiers {
@@ -21,7 +21,7 @@ export function parseModifiers(props: PlainObject): ParsedModifiers {
   let styliStyle: StyliStyle = {}
   const styliKeys: string[] = []
 
-  if (isEmptyProps(props)) {
+  if (isEmptyObj(props)) {
     return { styliKeys, styliStyle }
   }
 
