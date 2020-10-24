@@ -14,7 +14,7 @@ export function generateStyliTag(name: string) {
   return tag
 }
 
-export const getStyliTag = () => generateStyliTag('styli')
+export const getStyliTag = memorize(generateStyliTag)
 
 export const getStyliTagContent = (tag: any) => tag.innerHTML
 
