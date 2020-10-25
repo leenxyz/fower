@@ -27,24 +27,24 @@ export function toCss(config?: ToCSSConfig) {
       cssFragment = '',
       className = '',
       cssMediaFragmentList = [],
-      cssFragmentList = [],
+      cssPropFragmentList = [],
     } = styliStyleToCss(styliStyle, breakpoints)
 
     /**
      * if cssFragment has been inserted into dom, ignore next same cssFragment
      */
-    const key = cssFragment
-    if (!setStyliTagContent.cache[key]) {
+    if (!setStyliTagContent.cache[cssFragment]) {
       const content = getStyliTagContent(styliTag)
-      setStyliTagContent(key, styliTag, `${content} ${cssFragment}`)
+      setStyliTagContent(cssFragment, styliTag, `${content} ${cssFragment}`)
     }
 
-    cssFragmentList.forEach((cssFragment) => {
-      if (!setStyliTagContent.cache[cssFragment]) {
+    if (cssPropFragmentList.length) {
+      const cssStr = cssPropFragmentList.join(' ')
+      if (!setStyliTagContent.cache[cssStr]) {
         const content = getStyliTagContent(styliTag)
-        setStyliTagContent(cssFragment, styliTag, `${content} ${cssFragment}`)
+        setStyliTagContent(cssStr, styliTag, `${content} ${cssStr}`)
       }
-    })
+    }
 
     cssMediaFragmentList.forEach((mediaCSSFragment, idx) => {
       const breakpoint = breakpoints[idx]

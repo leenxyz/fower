@@ -7,7 +7,7 @@ export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
 
   let className = generateClassName(JSON.stringify(style))
   let cssFragment = ''
-  let cssFragmentList: string[] = []
+  let cssPropFragmentList: string[] = []
   let cssMediaFragmentList: string[] = []
 
   for (let [key, value] of Object.entries(style)) {
@@ -23,7 +23,7 @@ export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
     } else if (typeof value === 'object') {
       switch (key) {
         case 'css': {
-          cssFragmentList = getPaths(value)
+          cssPropFragmentList = getPaths(value)
             .reduce((result: any, path: string[]) => {
               const attrValue = path.reduce((obj: any, c: string) => obj[c], value)
               const attr = kebab('' + path.pop())
@@ -58,7 +58,7 @@ export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
   cssMediaFragmentList = cssMediaFragmentList.map((fragment) => `.${className} { ${fragment} }`)
   cssFragment = `.${className} { ${cssFragment} }`
 
-  return { cssFragment, className, cssMediaFragmentList, cssFragmentList }
+  return { cssFragment, className, cssMediaFragmentList, cssPropFragmentList }
 }
 
 // find all attr paths
