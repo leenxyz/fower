@@ -43,9 +43,17 @@ const App = () => {
           },
           '.p1': {
             fontSize: '22px',
+            border: '1px solid yellow',
             '.p2': {
               fontSize: '11px',
               color: 'blue',
+              ':hover': {
+                fontSize: '18px',
+                color: 'black',
+              },
+              '>span': {
+                color: 'green',
+              },
             },
           },
         }}
@@ -53,7 +61,10 @@ const App = () => {
         哈哈哈
         <div className="p1">
           小字
-          <View className="p2">蓝字</View>
+          <View className="p2">
+            蓝字
+            <span>哈哈哈哈哈</span>
+          </View>
         </div>
       </View>
     </div>

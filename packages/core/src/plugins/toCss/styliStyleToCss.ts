@@ -23,13 +23,18 @@ export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
     } else if (typeof value === 'object') {
       switch (key) {
         case 'css': {
+          const getPrefix = (v: string) => (/^::?.*/.test(v) ? '' : ' ')
           cssPropFragmentList = getPaths(value)
             .reduce((result: any, path: string[]) => {
               const attrValue = path.reduce((obj: any, c: string) => obj[c], value)
               const attr = kebab('' + path.pop())
-              const str = path.join(' ')
+              // pseudo-class pseudo-element connect selector string directly
+              const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')
 
-              const obj = { key: `.${className} ${str}`, value: { [attr]: attrValue } }
+              const obj = {
+                key: `.${className}${getPrefix(str)}${str}`,
+                value: { [attr]: attrValue },
+              }
 
               // merge same class
               const idx = result.findIndex((a: any) => a.key === obj.key)
