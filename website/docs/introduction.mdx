@@ -4,22 +4,27 @@ title: 简介
 sidebar_label: 简介
 ---
 
-Styli 是一个 utility-first 的 style framework，它让你更高效地构界面，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
+承认吧，骚年，写 CSS 是一件痛苦的事情。
 
-## 古老的最佳实践
+在我多年的打码经历中，大部分人都为写 CSS 而感到痛苦，大部分前端觉得写 CSS 很枯燥，大部分后端解决精通 CSS 很难。
 
-关注点分离
+CSS 不是一门编程语言，但它却庞大而复杂，及其多的样式属性，新特性还在不多增加中。回想你学习并精通 CSS 的过程，除了要学习基本 padding、margin、color 等基础知识，你还要熟悉选择器 (熟悉全部高级选择器够你搞一阵了)，CSS3 各种新特性 (从基本的阴影渐变到各种动画)，用于布局控制的 flexbox 和 grid 等，新的 CSS 变量，还有旧时的浮动等黑科技...CSS 发展了 20 多年了，里面既有精华也有糟粕，要熟悉 CSS 的全貌，是一件非常费时的事情。最重要的是，对于大部分人，要完成界面的开发，只需使用 CSS 中的很小一部分样式属性。
 
-在组件化时代变了.
+Styli 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不在痛苦。
 
-“I’m really bad at CSS.”
+在 Styli 中我们通过 ”原子属性“ 直接在 Markup 中编写样式，Styli 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。
 
+Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
+
+## 问什么？
+
+我们什么不用现有的 CSS 框架和 UI 框架呢？
 
 ## 特点
 
-- **Utility-first**
+- **Atomic Props**
 
-  这方面我非常赞同 tailwindcss 的理念，让样式原子化和工具化。 Styli 也使用了类似的理念，不同的是，Styli 的 utility 是 CSS 一个很小的子集，Styli 非常克制，不期望能解决 100% 的场景，我们希望 Styli 的 utility 能覆盖 80% 高频率场即可。
+  Styli 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我觉得我们应该重新思考什么是最佳实践。
 
 - **Framework-agnostic，框架无关**
 
