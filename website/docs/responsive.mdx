@@ -1,0 +1,71 @@
+---
+id: responsive
+title: Responsive
+---
+
+## 关于响应式
+
+很多 CSS 框架，都会声称自己是 Mobile-first，是响应式的。比如两个非常知名的 CSS 框架，Bootstrap、Bulma，是这样描述自己的:
+
+> Quickly design and customize responsive mobile-first sites with Bootstrap.
+
+> Bulma is a mobile-first framework.
+
+这是传统 CSS 框架的响应式，大部分都是只 Grid System 的响应式，我觉得这是狭义的响应式。真正的响应式应该每个样式都能响应式的的，而不是只是支持 Grid System 响应式。
+
+Styli 每个原子属性都支持响应式，也就是说每个原子属性可以在不懂断点精细的控制，不会是仅仅控制某个容器，这可以让你更轻松的实现复杂的响应式界面。
+
+## 响应式用法
+
+Styli 提供一种非常快捷方面的写法编写响应式样式，这种写法叫做数组属性 (Array Props)，这样写法咋看貌似很奇怪，实际上它非常简洁高效:
+
+```jsx
+<View>
+  <View
+    w={[
+      1, // 100% below the smallest breakpoint
+      1 / 2, // 50% from the next breakpoint and up
+      1 / 3, // 33.33% from the next breakpoint and up
+      1 / 4, // 25% from the next breakpoint and up
+    ]}
+  />
+
+  {/* responsive font size */}
+  <View f={[1, 2, 3, 4]} />
+
+  {/* responsive margin */}
+  <View m={[1, 2, 3, 4]} />
+
+  {/* responsive padding */}
+  <View p={[1, 2, 3, 4]} />
+</View>
+```
+
+上面的字体大小，边距，填充和宽度都是响应式，实际上，任何原子属性都可以用这种写法实现响应式。
+
+数组写法借鉴于 [styled-system](https://styled-system.com/)，感谢 styled-system 发明如此优雅的 Api。
+
+## 响应式断点
+
+默认情况下，响应式有四个断点：
+
+```css
+/* Small (sm) */
+@media (min-width: 640px) {
+  /* ... */
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  /* ... */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  /* ... */
+}
+```
