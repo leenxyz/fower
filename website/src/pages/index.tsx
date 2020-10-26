@@ -9,8 +9,13 @@ import { View } from '@styli/react'
 
 const features = [
   {
-    title: 'Utility-first',
-    description: <>在Styli，你只需通过 Utility Props 组合实现各种复杂的UI，不需写原生的CSS。</>,
+    title: 'Atomic Props',
+    description: (
+      <>
+        Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式在Styli，通过 Atomic Props
+        的组合可以实现各种复杂的UI，不需写原生的CSS。
+      </>
+    ),
   },
   {
     title: 'Framework-agnostic',
