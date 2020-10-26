@@ -1,4 +1,3 @@
-import { CSSProperties } from 'react'
 import {
   alignmentPropToStyle,
   bgPropToStyle,
@@ -45,11 +44,12 @@ import {
   isDisplayKey,
   isOverFlowKey,
 } from './propKey'
+import { StyliStyle } from '../types'
 
 export interface ConvertConfig {
   name?: string
   isMatch: (prop: string, propValue: any, props?: any) => boolean
-  toStyle: (prop: string, propValue: any, props: any) => CSSProperties
+  toStyle: (prop: string, propValue: any, props: any) => StyliStyle
 }
 
 export const convertConfigs: ConvertConfig[] = [
