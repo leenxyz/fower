@@ -9,7 +9,7 @@ module.exports = {
       'use-with-react-native',
       'use-with-taro',
     ],
-    Guides: ['guide', 'programmable', 'openness', 'typescript', 'theme', 'plugin'],
+    Guides: ['guide', 'programmable', 'typescript', 'theme', 'plugin'],
     Props: [
       'padding',
       'margin',
@@ -27,6 +27,7 @@ module.exports = {
       'shadow',
       'opacity',
       'preset-color',
+      'css',
     ],
     Api: ['styled', 'createStyle'],
     Components: ['view', 'text', 'image', 'anchor'],

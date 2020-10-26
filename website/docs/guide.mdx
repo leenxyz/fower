@@ -163,6 +163,8 @@ function Demo() {
 }
 ```
 
+**_ 注意: _** styled 包裹的组件需支持传入 style, className
+
 ### createStyle
 
 ```jsx live
@@ -188,36 +190,4 @@ import { Button } from '@styli/react'
 export default (props) => {
   return <Button {...props} p-10 f-18 bgYello400 white rounded-8 />
 }
-```
-
-### CSS Props
-
-```jsx
-<Text
-  p-10
-  css={{
-    textShadow: '1px 1px 2px pink',
-    textTransform: 'uppercase',
-  }}
->
-  Hi, Styli
-</Text>
-```
-
-### 伪类
-
-```jsx
-<Text
-  p-10
-  pink
-  css={{
-    textShadow: '1px 1px 2px pink',
-    textTransform: 'uppercase',
-    '&:hover': {
-      color: 'red',
-    },
-  }}
->
-  Hi, Styli
-</Text>
 ```

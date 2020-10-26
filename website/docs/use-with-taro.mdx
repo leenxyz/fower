@@ -3,7 +3,7 @@ id: use-with-taro
 title: 在 Taro 中使用
 ---
 
-Taro 是一个 React-like 的框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
+[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) 是一个 React-like 的框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
 
 ## 安装
 
@@ -12,6 +12,16 @@ npm i @styli/core @styli/taro
 ```
 
 注意，除了需要 `@styli/core`，你还需安装和 Taro 对应的组件包 `@styli/taro`。
+
+## 配置
+
+Taro 框架中模拟了相关 DOM API，但支持并不完全，不支持将 css 插入到 DOM，因而需要您手动配置插件
+
+```jsx
+Styli.config({
+  plugins: [toStyle],
+})
+```
 
 ## 使用
 
