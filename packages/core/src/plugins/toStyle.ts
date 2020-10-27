@@ -6,10 +6,10 @@ export function toStyle() {
     styliUnits: StyliUnit[],
     props: PlainObject,
   ): PlainObject {
-    const style: any = {}
-    styliUnits.forEach((item) => {
-      style[item.attr] = item.value
-    })
+    const style = styliUnits.reduce((style: any, cur: StyliUnit) => {
+      style[cur.attr] = cur.value
+      return style
+    }, {})
     finalProps.style = { ...style, ...props.style }
     return finalProps
   }
