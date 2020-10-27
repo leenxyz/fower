@@ -89,7 +89,7 @@ export function hexToRgba(sColor: string, opacity?: string) {
     for (let i = 1; i < 7; i += 2) {
       sColorChange.push(parseInt('0x' + sColor.slice(i, i + 2)))
     }
-    return `rgba(${sColorChange.join(',')},${opacity ? `.${opacity}` : '1'})}`
+    return `rgba(${sColorChange.join(',')},${opacity ? '.' + opacity : '1'})`
   }
 
   return sColor
