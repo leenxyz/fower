@@ -94,3 +94,15 @@ export function hexToRgba(sColor: string, opacity?: string) {
 
   return sColor
 }
+
+export function getPlainObjectPaths(object: PlainObject): any {
+  return (
+    object &&
+    typeof object === 'object' &&
+    Object.keys(object).reduce(
+      (p, k) =>
+        (getPlainObjectPaths(object[k]) || [[]]).reduce((r: any, a: any) => [...r, [k, ...a]], p),
+      [],
+    )
+  )
+}

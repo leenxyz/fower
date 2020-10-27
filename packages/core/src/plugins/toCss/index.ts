@@ -10,6 +10,7 @@ import {
 } from './styliTag'
 import { generateClassName } from './generateClassName'
 import { Styli } from '../../styli'
+import { parseCssProp } from './parseCssProp'
 
 export function toCss() {
   if (!canUseDom) {
@@ -51,6 +52,20 @@ export function toCss() {
         setMediaTagContent(cssF, tag, breakpoints[idx], `${content || ''} .${className} {${cssF}}`)
       }
     })
+
+    // handle css prop
+    if (!!finalProps.css) {
+      const cssPropFragmentList = parseCssProp(className, finalProps.css)
+      const cssStr = cssPropFragmentList.join(' ')
+
+      if (!setStyliTagContent.cache[cssStr] && cssStr) {
+        const content = getStyliTagContent(styliTag)
+        setStyliTagContent(cssStr, styliTag, `${content || ''} ${cssStr}`)
+      }
+
+      // to avoid render css
+      delete finalProps.css
+    }
 
     finalProps.className = `${className} ${finalProps.className || ''} ${props.className || ''}`
 

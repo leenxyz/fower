@@ -31,12 +31,6 @@ export function parseModifiers(props: PlainObject): ParsedModifiers {
     // ignore false value
     if (isFalsyProp(propValue)) continue
 
-    // if (['css'].includes(prop)) {
-    //   styliUnit = { ...styliUnit, ...{ [prop]: propValue } }
-    //   styliKeys.push(prop)
-    //   continue
-    // }
-
     for (const item of convertMap) {
       const { isMatch, toStyle } = item
       if (isMatch(prop, propValue, props)) {
