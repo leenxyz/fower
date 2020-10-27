@@ -1,5 +1,5 @@
-import { PlainObject, StyliStyle } from '../../types'
-import { canUseDom } from '../../utils'
+import { PlainObject, StyliUnit } from '../../types'
+import { canUseDom, kebab } from '../../utils'
 import {
   getStyliTag,
   getStyliTagContent,
@@ -8,56 +8,51 @@ import {
   getMediaTagContent,
   setMediaTagContent,
 } from './styliTag'
-import { styliStyleToCss } from './styliStyleToCss'
+import { generateClassName } from './generateClassName'
+import { Styli } from '../../styli'
 
-interface ToCSSConfig {
-  breakpoints?: number[]
-}
-
-export function toCss(config?: ToCSSConfig) {
+export function toCss() {
   if (!canUseDom) {
     throw new Error('current environment is not support this plugin')
   }
 
-  const breakpoints = config?.breakpoints || [0, 640, 768, 1024, 1280]
   const styliTag = getStyliTag('styli')
+  const breakpoints = Styli.getConfig<number[]>('breakpoints')
 
-  return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
-    const {
-      cssFragment = '',
-      className = '',
-      cssMediaFragmentList = [],
-      cssPropFragmentList = [],
-    } = styliStyleToCss(styliStyle, breakpoints)
+  return function (finalProps: PlainObject, styliUnits: StyliUnit[], props: PlainObject) {
+    const className = generateClassName(JSON.stringify(styliUnits))
 
-    /**
-     * if cssFragment has been inserted into dom, ignore next same cssFragment
-     */
-    if (!setStyliTagContent.cache[cssFragment]) {
-      const content = getStyliTagContent(styliTag)
-      setStyliTagContent(cssFragment, styliTag, `${content} ${cssFragment}`)
-    }
+    let cssF = ''
+    let cssFList: any = []
 
-    if (cssPropFragmentList.length) {
-      const cssStr = cssPropFragmentList.join(' ')
-      if (!setStyliTagContent.cache[cssStr]) {
-        const content = getStyliTagContent(styliTag)
-        setStyliTagContent(cssStr, styliTag, `${content} ${cssStr}`)
-      }
-    }
-
-    cssMediaFragmentList.forEach((mediaCSSFragment, idx) => {
-      const breakpoint = breakpoints[idx]
-      const cacheKey = breakpoint + mediaCSSFragment
-
-      if (!setMediaTagContent.cache[cacheKey]) {
-        const tag = getMediaStyliTag('' + idx, breakpoint)
-        const content = getMediaTagContent(tag)
-        setMediaTagContent(cacheKey, tag, breakpoint, `${content} ${mediaCSSFragment}`)
+    // handle common or media queries cssFragment
+    styliUnits.forEach((styli) => {
+      const { attr, value, media } = styli
+      const name = kebab(attr)
+      if (media) {
+        const idx = breakpoints.findIndex((v) => '' + v === media + '')
+        cssFList[idx] = `${cssFList[idx] || ''}${name}:${value};`
+      } else {
+        cssF = `${cssF}${name}:${value};`
       }
     })
 
-    finalProps.className = `${className || ''} ${props.className || ''}`
+    // render common cssFragment
+    if (!setStyliTagContent.cache[cssF] && cssF) {
+      const content = getStyliTagContent(styliTag)
+      setStyliTagContent(cssF, styliTag, `${content || ''} .${className} {${cssF}}`)
+    }
+
+    // render media queries cssFragment
+    cssFList.forEach((cssF: string, idx: number) => {
+      if (!setMediaTagContent.cache[cssF] && cssF) {
+        const tag = getMediaStyliTag('' + breakpoints[idx])
+        const content = getMediaTagContent(tag)
+        setMediaTagContent(cssF, tag, breakpoints[idx], `${content || ''} .${className} {${cssF}}`)
+      }
+    })
+
+    finalProps.className = `${className} ${finalProps.className || ''} ${props.className || ''}`
 
     return finalProps
   }

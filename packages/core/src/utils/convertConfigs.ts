@@ -44,12 +44,12 @@ import {
   isDisplayKey,
   isOverFlowKey,
 } from './propKey'
-import { StyliStyle } from '../types'
+import { StyliUnit } from '../types'
 
 export interface ConvertConfig {
   name?: string
   isMatch: (prop: string, propValue: any, props?: any) => boolean
-  toStyle: (prop: string, propValue: any, props: any) => StyliStyle
+  toStyle: (prop: string, propValue: any, props: any) => StyliUnit[]
 }
 
 export const convertConfigs: ConvertConfig[] = [
@@ -122,14 +122,14 @@ export const convertConfigs: ConvertConfig[] = [
     toStyle: textHeadingPropToStyle,
   },
   {
-    name: 'text-weight',
-    isMatch: isTextWeightKey,
-    toStyle: textWeightPropToStyle,
-  },
-  {
     name: 'color',
     isMatch: isColorKey,
     toStyle: colorPropToStyle,
+  },
+  {
+    name: 'text-weight',
+    isMatch: isTextWeightKey,
+    toStyle: textWeightPropToStyle,
   },
   {
     name: 'text-size',

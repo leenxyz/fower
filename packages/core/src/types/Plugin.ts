@@ -1,8 +1,8 @@
-import { PlainObject, StyliStyle } from './index'
+import { PlainObject, StyliUnit } from './index'
 
 export type PluginFn = (
   finalProps: PlainObject,
-  styliStyle: StyliStyle,
+  styliUnits: StyliUnit[],
   props: PlainObject,
 ) => PlainObject
 

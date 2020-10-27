@@ -12,6 +12,7 @@ export interface Colors {
    * <Text black>Hello world</Text>
    * ```
    */
+
   black?: boolean
 
   white?: boolean

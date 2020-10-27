@@ -48,7 +48,7 @@ export interface Flexs {
    * <View flex-none></View> // flex: none;
    * ```
    */
-  flex?: boolean
+  flex?: boolean | number | string | number[] | string[]
 
   /**
    * Flex items nowrap

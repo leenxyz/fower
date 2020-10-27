@@ -2,7 +2,7 @@ import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst, hexToR
 
 import { ColorType, IColors } from '../constants/colors'
 import { ModifierType } from '../types/Modifiers'
-import { weights, fontSizes, leadings, headings } from '../constants/typo'
+import { weights, leadings, headings, fontSizes } from '../constants/typo'
 import {
   G,
   paddingMaps,
@@ -17,73 +17,140 @@ import {
   borderStyles,
 } from '../constants'
 import { Styli } from '../styli'
+import { StyliUnit } from '../types'
 
-export function sizePropToStyle(prop: string, propValue: any) {
-  const style: any = {}
+const getMediaList = () => Styli.getConfig<number[]>('breakpoints')
+
+export function sizePropToStyle(prop: string, propValue: any): StyliUnit[] {
+  const units: StyliUnit[] = []
   const [key, value] = prop.split('-')
-
-  const sizeValue = isValidPropValue(propValue) ? propValue : value
 
   sizeMaps[key].forEach((k) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.size))
-      : getValue(sizeValue, ModifierType.size)
+    if (Array.isArray(propValue)) {
+      propValue.forEach((value, idx) => {
+        units.push({
+          attr: k,
+          value: getValue(value, ModifierType.size),
+          media: '' + getMediaList()[idx],
+        })
+      })
+    } else {
+      const attrValue = isValidPropValue(propValue) ? propValue : value
+      units.push({
+        attr: k,
+        value: getValue(attrValue, ModifierType.size),
+        media: '',
+      })
+    }
   })
 
-  return style
+  return units
 }
 
-export function paddingPropToStyle(prop: string, propValue: any) {
-  const style: any = {}
+export function paddingPropToStyle(prop: string, propValue: any): StyliUnit[] {
+  const units: StyliUnit[] = []
   const [key, value] = prop.split('-')
 
-  const paddingValue = isValidPropValue(propValue) ? propValue : value
-
   paddingMaps[key].forEach((k) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.padding))
-      : getValue(paddingValue, ModifierType.padding)
+    if (Array.isArray(propValue)) {
+      propValue.forEach((value, idx) => {
+        units.push({
+          attr: k,
+          value: getValue(value, ModifierType.padding),
+          media: '' + getMediaList()[idx],
+        })
+      })
+    } else {
+      const attrValue = isValidPropValue(propValue) ? propValue : value
+      units.push({
+        attr: k,
+        value: getValue(attrValue, ModifierType.padding),
+        media: '',
+      })
+    }
   })
 
-  return style
+  return units
 }
 
 export function marginPropToStyle(prop: string, propValue: any) {
-  const style: any = {}
+  const units: StyliUnit[] = []
   const [key, symbol = '', value] = prop.split(/\b-*?/)
   const [, minus = ''] = symbol.split('')
-  const marginValue = isValidPropValue(propValue) ? propValue : minus + value
 
   marginMaps[key].forEach((k) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.margin))
-      : getValue(marginValue, ModifierType.margin)
+    if (Array.isArray(propValue)) {
+      propValue.forEach((value, idx) => {
+        units.push({
+          attr: k,
+          value: getValue(value, ModifierType.margin),
+          media: '' + getMediaList()[idx],
+        })
+      })
+    } else {
+      const attrValue = isValidPropValue(propValue) ? propValue : minus + value
+      units.push({
+        attr: k,
+        value: getValue(attrValue, ModifierType.margin),
+        media: '',
+      })
+    }
   })
 
-  return style
+  return units
 }
 
 export function bgPropToStyle(prop: string, propValue: any) {
   const Colors = Styli.getConfig<IColors>('colors')
-  if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
-  const [, color = ''] = prop.match(/^bg(\w+)/) || []
-  return { backgroundColor: Colors[downFirst(color)] }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'backgroundColor',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, color = ''] = prop.match(/^bg(\w+)$/) || []
+    const value = isValidPropValue(propValue) ? propValue : downFirst(color)
+    units.push({
+      attr: 'backgroundColor',
+      value: Colors[value] || value,
+      media: '',
+    })
+  }
+  return units
 }
 
 export function roundedPropToStyle(prop: string, propValue: any) {
-  let style: any = {}
+  const units: StyliUnit[] = []
   const [key, value] = prop.split('-')
-  const roundedValue = isValidPropValue(propValue) ? propValue : value
-  for (const p of roundedMaps[key]) {
-    style[`border${p}Radius`] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.border))
-      : getValue(roundedValue, ModifierType.border)
-  }
-  return style
+
+  roundedMaps[key].forEach((k: string) => {
+    if (Array.isArray(propValue)) {
+      propValue.forEach((value, idx) => {
+        units.push({
+          attr: `border${k}Radius`,
+          value: getValue(value),
+          media: '' + getMediaList()[idx],
+        })
+      })
+    } else {
+      const attrValue = isValidPropValue(propValue) ? propValue : value
+      units.push({
+        attr: `border${k}Radius`,
+        value: getValue(attrValue),
+        media: '',
+      })
+    }
+  })
+  return units
 }
 
+// TODO: refactor
 export function borderPropToStyle(prop: string) {
-  let style: any = {}
+  const units: StyliUnit[] = []
 
   let [, second, third] = kebab(prop).split('-')
   const Colors = Styli.getConfig<IColors>('colors')
@@ -94,54 +161,98 @@ export function borderPropToStyle(prop: string) {
 
   if (isBorderWidth(second) || isBorderWidth(third)) {
     const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
-    style[`border${position}Width`] = getValue(third || second, ModifierType.border)
-    style[`border${position}Style`] = 'solid'
+    units.push(
+      ...[
+        {
+          attr: `border${position}Width`,
+          value: getValue(third || second, ModifierType.border),
+          media: '',
+        },
+        {
+          attr: `border${position}Style`,
+          value: 'solid',
+          media: '',
+        },
+      ],
+    )
   }
   if (isBorderColor(second)) {
-    style.borderColor = Colors[second as ColorType]
+    units.push({
+      attr: 'borderColor',
+      value: Colors[second as ColorType],
+      media: '',
+    })
   }
   if (isBorderStyle(second)) {
-    style.borderStyle = second
+    units.push({
+      attr: 'borderStyle',
+      value: second,
+      media: '',
+    })
   }
-
-  return style
+  return units
 }
 
 export function flexPropToStyle(prop: string) {
-  const style: any = {}
+  const units: StyliUnit[] = []
+
   const wraps = [G.nowrap, G.wrap]
 
-  if (prop === G.row) style.flexDirection = G.row
-  if (prop === G.column) style.flexDirection = G.column
+  if (prop === G.row) units.push({ attr: 'flexDirection', value: G.row })
+  if (prop === G.column) units.push({ attr: 'flexDirection', value: G.row })
 
   // 自动 display: flex
-  if (prop === G.row || prop === G.column) style.display = G.flex
+  if (prop === G.row || prop === G.column) units.push({ attr: 'display', value: G.flex })
 
   // set flex-wrap
-  if (wraps.includes(prop)) style.flexWrap = prop as any
+  if (wraps.includes(prop)) units.push({ attr: 'flexWrap', value: prop })
 
   // justify-content
   if (prop.startsWith('justify')) {
-    style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
+    units.push({
+      attr: 'justifyContent',
+      value: flexMaps[prop.replace('justify', '').toLocaleLowerCase()],
+    })
   }
 
   if (prop.startsWith('align')) {
-    style.alignItems = flexMaps[prop.replace('align', '').toLocaleLowerCase()]
+    units.push({
+      attr: 'alignItems',
+      value: flexMaps[prop.replace('align', '').toLocaleLowerCase()],
+    })
   }
 
-  return style
+  return units
 }
 
 // set flex-flow、flex-shrink、flex-basic
 export function flexItemPropToStyle(prop: any, propValue: any) {
-  if (isValidPropValue(propValue)) return { flex: propValue }
-  const [, value] = prop.split('-')
-  const flexValue = value || (propValue === true ? 1 : propValue)
-  return { flex: isNumber(flexValue) ? Number(flexValue) : flexValue }
+  const units: StyliUnit[] = []
+
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'flex',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    if (isValidPropValue(propValue)) {
+      units.push({ attr: 'flex', value: propValue })
+    } else {
+      const [, value] = prop.split('-')
+      const flexValue = value || (propValue === true ? 1 : propValue)
+      units.push({ attr: 'flex', value: flexValue })
+    }
+  }
+  return units
 }
 
 export function alignmentPropToStyle(props: any) {
+  let units: StyliUnit[] = []
   const { row, center } = props
+
   const style: any = {}
   const rules: { [key: string]: string[] } = {}
 
@@ -186,163 +297,352 @@ export function alignmentPropToStyle(props: any) {
     style.alignItems = G.center
   }
 
-  return style
+  units = Object.keys(style).map((attr) => ({ attr, value: style[attr] }))
+  return units
 }
 
 export function positionPropToStyle(prop: string, propValue: any) {
-  if (positionKeys.includes(prop)) return { position: prop }
+  const units: StyliUnit[] = []
   const [key = '', value = ''] = prop.split('-')
   const lowerKey = key.toLocaleLowerCase()
-  if (isValidPropValue(propValue))
-    return { [positionMaps[lowerKey]]: getValue(propValue, ModifierType.position) }
-  return { [positionMaps[lowerKey]]: getValue(value, ModifierType.position) }
+
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: positionMaps[lowerKey],
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const attrValue = isValidPropValue(propValue)
+      ? propValue
+      : getValue(value, ModifierType.position)
+    units.push({
+      attr: positionMaps[lowerKey],
+      value: positionKeys.includes(prop) ? prop : attrValue,
+    })
+  }
+
+  return units
 }
 
 export function zIndexPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { zIndex: propValue }
-  const [, value] = prop.split('-')
-  return { zIndex: value }
+  const units: StyliUnit[] = []
+  const [, symbol = '', value] = prop.split(/\b-*?/)
+  const [, minus = ''] = symbol.split('')
+
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'zIndex',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const attrValue = isValidPropValue(propValue) ? propValue : minus + value
+    units.push({
+      attr: 'zIndex',
+      value: attrValue,
+    })
+  }
+  return units
 }
 
 export function textAlignPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { textAlign: propValue }
-  return { textAlign: prop.replace('text', '').toLowerCase() as any }
+  const units: StyliUnit[] = []
+
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'textAlign',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const attrValue = isValidPropValue(propValue)
+      ? propValue
+      : (prop.replace('text', '').toLowerCase() as any)
+    units.push({
+      attr: 'textAlign',
+      value: attrValue,
+    })
+  }
+
+  return units
 }
 
-export function textHeadingPropToStyle(prop: string) {
-  return { display: 'block', fontWeight: 'bold', fontSize: headings[prop] + 'em' }
+export function textHeadingPropToStyle(prop: string, propValue: any) {
+  const units: StyliUnit[] = []
+  units.push(
+    ...[
+      { attr: 'display', value: 'block' },
+      { attr: 'fontWeight', value: 'bold' },
+    ],
+  )
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'fontSize',
+        value: headings[value] + 'em',
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const attrValue = isValidPropValue(propValue)
+      ? propValue
+      : (prop.replace('text', '').toLowerCase() as any)
+    units.push({
+      attr: 'fontSize',
+      value: headings[attrValue] + 'em',
+    })
+  }
+  return units
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
   const Colors = Styli.getConfig<IColors>('colors')
-  let color: string
-  if (Colors[prop]) {
-    color = Colors[prop]
-  } else if (prop === 'color') {
-    const [hex, opacity] = propValue.split('.')
-    color = hexToRgba(hex, opacity)
+  const units: StyliUnit[] = []
+
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'color',
+        value: Colors[value] || value,
+        media: '' + getMediaList()[idx],
+      })
+    })
   } else {
-    color = prop.replace('color', '').toLowerCase()
+    let color = ''
+    if (isValidPropValue(propValue)) {
+      const [hex, opacity] = propValue.split('.')
+      color = opacity ? hexToRgba(hex, opacity) : hex
+    } else {
+      color = prop.replace('color', '').toLowerCase()
+    }
+    units.push({ attr: 'color', value: Colors[color] || color })
   }
 
-  return { color }
+  return units
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) {
-    return {
-      fontSize: Array.isArray(propValue)
-        ? propValue.map((v) => getValue(v, ModifierType.text))
-        : getValue(propValue, ModifierType.text),
-    }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'font-size',
+        value: getValue(value, ModifierType.text),
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, value] = prop.split('-')
+    const attrValue = isValidPropValue(propValue) ? propValue : value
+    units.push({
+      attr: 'font-size',
+      value: fontSizes[attrValue] || getValue(attrValue, ModifierType.text),
+    })
   }
-  const [, value] = prop.split('-')
-  return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
+
+  return units
 }
 
 export function textWeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontWeight: propValue }
-  const [, second, third] = kebab(prop).split('-')
-  if (second === 'weight') return { fontWeight: '' + third }
-  return { fontWeight: '' + weights[downFirst(second)] || second }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'font-weight',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, second, third] = kebab(prop).split('-')
+    if (isValidPropValue(propValue)) {
+      units.push({
+        attr: 'font-weight',
+        value: propValue,
+      })
+    } else {
+      units.push({
+        attr: 'font-weight',
+        value: second === 'weight' ? third : weights[downFirst(second)] || second,
+      })
+    }
+  }
+  return units
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) {
-    return {
-      lineHeight: Array.isArray(propValue)
-        ? propValue.map((v) => getValue(v))
-        : getValue(propValue),
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'line-height',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    if (isValidPropValue(propValue)) {
+      units.push({
+        attr: 'line-height',
+        value: getValue(propValue, ModifierType.lineHeight),
+      })
+    } else {
+      const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
+      !!leadings[downFirst(value)]
+      units.push({
+        attr: 'line-height',
+        value: !!leadings[downFirst(value)] ? `${leadings[downFirst(value)]}em` : getValue(value),
+      })
     }
   }
-  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
-  // TODO: calc 是否支持 RN
-  return {
-    lineHeight: !!leadings[downFirst(value)]
-      ? `calc(${leadings[downFirst(value)]} * 1em)`
-      : getValue(value),
-  }
+  return units
 }
 
 export function shadowPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { boxShadow: propValue }
-  const value = prop.replace('shadow', '')
-  const gv = getValue
-  switch (value) {
-    case 'XXS':
-      return { boxShadow: `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)` }
-    case 'XS':
-      return { boxShadow: `0 ${gv(1)} ${gv(2)} 0 rgba(0, 0, 0, 0.05)` }
-    case 'S':
-      return {
-        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
-          2,
-        )} 0 rgba(0, 0, 0, 0.06)`,
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'boxShadow',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    if (isValidPropValue(propValue)) {
+      units.push({
+        attr: 'boxShadow',
+        value: propValue,
+      })
+    } else {
+      const value = prop.replace('shadow', '')
+      const gv = (v: number) => getValue(v, ModifierType.shadow)
+      const obj: any = { attr: 'boxShadow' }
+      switch (value) {
+        case 'XXS':
+          obj.value = `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)`
+          break
+        case 'XS':
+          obj.value = `0 ${gv(1)} ${gv(2)} 0 rgba(0, 0, 0, 0.05)`
+          break
+        case 'S':
+          obj.value = `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+            2,
+          )} 0 rgba(0, 0, 0, 0.06)`
+          break
+        case 'M':
+          obj.value = `0 ${gv(4)} ${gv(6)} -${gv(1)} rgba(0, 0, 0, 0.1), 0 ${gv(2)} ${gv(4)} -${gv(
+            1,
+          )} rgba(0, 0, 0, 0.06)`
+          break
+        case 'L':
+          obj.value = `0 ${gv(10)} ${gv(14)} -${gv(3)} rgba(0, 0, 0, 0.1), 0 ${gv(4)} ${gv(
+            6,
+          )} -${gv(2)} rgba(0, 0, 0, 0.05)`
+          break
+        case 'XL':
+          obj.value = `0 ${gv(20)} ${gv(25)} -${gv(5)} rgba(0, 0, 0, 0.1), 0 ${gv(10)} ${gv(
+            10,
+          )} -${gv(5)} rgba(0, 0, 0, 0.04)`
+          break
+        case 'XXL':
+          obj.value = `0 ${gv(25)} ${gv(50)} -${gv(12)} rgba(0, 0, 0, 0.25)`
+          break
+        case 'Inner':
+          obj.value = `inset 0 ${gv(2)} ${gv(4)} 0 rgba(0, 0, 0, 0.06)`
+          break
+        case 'Outline':
+          obj.value = `0 0 0 ${gv(3)} rgba(66, 153, 225, 0.5)`
+          break
+        case 'None':
+          obj.value = 'none'
+          break
+        default:
+          obj.value = `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+            2,
+          )} 0 rgba(0, 0, 0, 0.06)`
       }
-    case 'M':
-      return {
-        boxShadow: `0 ${gv(4)} ${gv(6)} -${gv(1)} rgba(0, 0, 0, 0.1), 0 ${gv(2)} ${gv(4)} -${gv(
-          1,
-        )} rgba(0, 0, 0, 0.06)`,
-      }
-    case 'L':
-      return {
-        boxShadow: `0 ${gv(10)} ${gv(14)} -${gv(3)} rgba(0, 0, 0, 0.1), 0 ${gv(4)} ${gv(6)} -${gv(
-          2,
-        )} rgba(0, 0, 0, 0.05)`,
-      }
-    case 'XL':
-      return {
-        boxShadow: `0 ${gv(20)} ${gv(25)} -${gv(5)} rgba(0, 0, 0, 0.1), 0 ${gv(10)} ${gv(10)} -${gv(
-          5,
-        )} rgba(0, 0, 0, 0.04)`,
-      }
-    case 'XXL':
-      return { boxShadow: `0 ${gv(25)} ${gv(50)} -${gv(12)} rgba(0, 0, 0, 0.25)` }
-    case 'Inner':
-      return { boxShadow: `inset 0 ${gv(2)} ${gv(4)} 0 rgba(0, 0, 0, 0.06)` }
-    case 'Outline':
-      return { boxShadow: `0 0 0 ${gv(3)} rgba(66, 153, 225, 0.5)` }
-    case 'None':
-      return { boxShadow: 'none' }
-    default:
-      return {
-        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
-          2,
-        )} 0 rgba(0, 0, 0, 0.06)`,
-      }
+      units.push(obj)
+    }
   }
+  return units
 }
 
 export function opacityPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) {
-    return {
-      opacity: Array.isArray(propValue)
-        ? propValue.map((v) => Number(v) / 100)
-        : Number(propValue) / 100,
-    }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'opacity',
+        value: Number(value) / 100,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, value = 50] = prop.split('-')
+    units.push({
+      attr: 'opacity',
+      value: Number(isValidPropValue(propValue) ? propValue : value) / 100,
+    })
   }
-  const [, value = 50] = prop.split('-')
-  return { opacity: Number(value) / 100 }
+  return units
 }
 
 export function displayPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { display: propValue }
-  const [, value] = prop.match(/^d(\w+)$/) || []
-  return { display: kebab(value) }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'display',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, value] = prop.match(/^d(\w+)$/) || []
+    units.push({
+      attr: 'display',
+      value: isValidPropValue(propValue) ? propValue : kebab(value),
+    })
+  }
+  return units
 }
 
 export function overFlowPropToStyle(prop: string, propValue: any) {
-  const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
-  if (isValidPropValue(propValue)) return { [prop]: propValue }
-
-  const val = downFirst(value)
-  switch (key) {
-    case 'ox':
-      return { overflowX: val }
-    case 'oy':
-      return { overflowY: val }
-    default:
-      return { overflow: val }
+  const units: StyliUnit[] = []
+  if (Array.isArray(propValue)) {
+    propValue.forEach((value, idx) => {
+      units.push({
+        attr: 'overflow',
+        value,
+        media: '' + getMediaList()[idx],
+      })
+    })
+  } else {
+    const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
+    if (isValidPropValue(propValue)) {
+      units.push({ attr: prop, value: propValue })
+    } else {
+      const val = downFirst(value)
+      switch (key) {
+        case 'ox':
+          units.push({ attr: 'overflowX', value: val })
+          break
+        case 'oy':
+          units.push({ attr: 'overflowY', value: val })
+          break
+        default:
+          units.push({ attr: 'overflow', value: val })
+      }
+    }
   }
+
+  return units
 }

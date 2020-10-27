@@ -1,8 +1,8 @@
-import { PlainObject, StyliStyle } from '../../types'
+import { PlainObject, StyliUnit } from '../../types'
 import { isEmptyObj, kebab } from '../../utils'
 import { generateClassName } from './generateClassName'
 
-export function styliStyleToCss(style: StyliStyle, breakpoints: number[]) {
+export function styliUnitToCss(style: StyliUnit, breakpoints: number[]) {
   if (isEmptyObj(style)) return {}
 
   let className = generateClassName(JSON.stringify(style))

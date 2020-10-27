@@ -1,12 +1,12 @@
 import { Styli } from '../styli'
-import { PlainObject, Plugin, PluginWrapper } from '../types'
+import { PlainObject, Plugin, PluginWrapper, StyliUnit } from '../types'
 import { isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
 
 export function toFinalProps(props: any) {
   if (isEmptyObj(props)) return {}
 
-  const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
+  const { styliKeys = [], styliUnits = [] } = parseModifiers(props)
 
   const finalProps = Object.keys(props).reduce((result, key) => {
     if (styliKeys.includes(key)) return result
@@ -14,13 +14,13 @@ export function toFinalProps(props: any) {
   }, {} as any)
 
   const plugins = Styli.getConfig<Plugin[]>('plugins')
-  return traversingPlugins(plugins.slice(), finalProps, styliStyle, props)
+  return traversingPlugins(plugins.slice(), finalProps, styliUnits, props)
 }
 
 function traversingPlugins(
   plugins: Plugin[],
   finalProps: PlainObject,
-  styliStyle: PlainObject,
+  styliUnits: StyliUnit[],
   props: PlainObject,
 ): PlainObject {
   if (!plugins.length) return finalProps
@@ -28,7 +28,7 @@ function traversingPlugins(
   const plugin = plugins.shift()
 
   const [fn, config] = Array.isArray(plugin) ? plugin : [plugin as PluginWrapper]
-  finalProps = fn(config)(finalProps, styliStyle, props)
+  finalProps = fn(config)(finalProps, styliUnits, props)
 
-  return traversingPlugins(plugins, finalProps, styliStyle, props)
+  return traversingPlugins(plugins, finalProps, styliUnits, props)
 }

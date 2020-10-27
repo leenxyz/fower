@@ -1,11 +1,11 @@
 import { Styli } from '../styli'
-import { PlainObject, StyliStyle } from '../types'
+import { PlainObject, StyliUnit } from '../types'
 import { isEmptyObj } from '../utils'
 import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
 
 interface ParsedModifiers {
   styliKeys: string[]
-  styliStyle: any
+  styliUnits: StyliUnit[]
 }
 
 function getConvertConfigs() {
@@ -18,11 +18,11 @@ function isFalsyProp(propValue: any) {
 }
 
 export function parseModifiers(props: PlainObject): ParsedModifiers {
-  let styliStyle: StyliStyle = {}
+  let styliUnits: StyliUnit[] = []
   const styliKeys: string[] = []
 
   if (isEmptyObj(props)) {
-    return { styliKeys, styliStyle }
+    return { styliKeys, styliUnits }
   }
 
   const convertMap = getConvertConfigs()
@@ -31,21 +31,23 @@ export function parseModifiers(props: PlainObject): ParsedModifiers {
     // ignore false value
     if (isFalsyProp(propValue)) continue
 
-    if (['css'].includes(prop)) {
-      styliStyle = { ...styliStyle, ...{ [prop]: propValue } }
-      styliKeys.push(prop)
-      continue
-    }
+    // if (['css'].includes(prop)) {
+    //   styliUnit = { ...styliUnit, ...{ [prop]: propValue } }
+    //   styliKeys.push(prop)
+    //   continue
+    // }
 
     for (const item of convertMap) {
       const { isMatch, toStyle } = item
       if (isMatch(prop, propValue, props)) {
         styliKeys.push(prop)
-        styliStyle = { ...styliStyle, ...toStyle(prop, propValue, props) }
+        styliUnits = styliUnits.concat(
+          toStyle(prop, propValue, props).map((o) => ({ ...o, prop, propValue })),
+        )
         break
       }
     }
   }
 
-  return { styliKeys, styliStyle }
+  return { styliKeys, styliUnits }
 }

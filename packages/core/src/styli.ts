@@ -7,6 +7,7 @@ import { toCss, toStyle } from './plugins'
 
 interface Configs {
   unit: string
+  breakpoints: number[]
   colors: Partial<IColors>
   plugins: Plugin[]
   convertConfig: ConvertConfig[]
@@ -18,6 +19,7 @@ export class StyliFactory {
     unit: 'px',
     colors: presetColors,
     convertConfig: [],
+    breakpoints: [0, 640, 768, 1024, 1280],
     plugins: [canUseDom ? toCss : toStyle],
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }

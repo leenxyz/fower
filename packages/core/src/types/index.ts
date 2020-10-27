@@ -17,9 +17,10 @@ export interface PlainObject {
   [key: string]: any
 }
 
-type CommonStyliValue = number | string
-type MediaQueryStyliValue = number[] | string[]
-
-export interface StyliStyle {
-  [key: string]: CommonStyliValue | MediaQueryStyliValue | PlainObject | undefined
+export interface StyliUnit {
+  attr: string
+  value: string | number
+  prop?: string
+  propValue?: number | string | boolean | number[] | string[]
+  media?: string
 }
