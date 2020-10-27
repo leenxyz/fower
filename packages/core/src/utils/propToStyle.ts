@@ -39,7 +39,6 @@ export function sizePropToStyle(prop: string, propValue: any): StyliUnit[] {
       units.push({
         attr: k,
         value: getValue(attrValue, ModifierType.size),
-        media: '',
       })
     }
   })
@@ -65,7 +64,6 @@ export function paddingPropToStyle(prop: string, propValue: any): StyliUnit[] {
       units.push({
         attr: k,
         value: getValue(attrValue, ModifierType.padding),
-        media: '',
       })
     }
   })
@@ -92,7 +90,6 @@ export function marginPropToStyle(prop: string, propValue: any) {
       units.push({
         attr: k,
         value: getValue(attrValue, ModifierType.margin),
-        media: '',
       })
     }
   })
@@ -117,7 +114,6 @@ export function bgPropToStyle(prop: string, propValue: any) {
     units.push({
       attr: 'backgroundColor',
       value: Colors[value] || value,
-      media: '',
     })
   }
   return units
@@ -141,7 +137,6 @@ export function roundedPropToStyle(prop: string, propValue: any) {
       units.push({
         attr: `border${k}Radius`,
         value: getValue(attrValue),
-        media: '',
       })
     }
   })
@@ -166,12 +161,10 @@ export function borderPropToStyle(prop: string) {
         {
           attr: `border${position}Width`,
           value: getValue(third || second, ModifierType.border),
-          media: '',
         },
         {
           attr: `border${position}Style`,
           value: 'solid',
-          media: '',
         },
       ],
     )
@@ -180,14 +173,12 @@ export function borderPropToStyle(prop: string) {
     units.push({
       attr: 'borderColor',
       value: Colors[second as ColorType],
-      media: '',
     })
   }
   if (isBorderStyle(second)) {
     units.push({
       attr: 'borderStyle',
       value: second,
-      media: '',
     })
   }
   return units
@@ -303,6 +294,12 @@ export function alignmentPropToStyle(props: any) {
 
 export function positionPropToStyle(prop: string, propValue: any) {
   const units: StyliUnit[] = []
+
+  if (positionKeys.includes(prop)) {
+    units.push({ attr: 'position', value: prop })
+    return units
+  }
+
   const [key = '', value = ''] = prop.split('-')
   const lowerKey = key.toLocaleLowerCase()
 
@@ -318,9 +315,10 @@ export function positionPropToStyle(prop: string, propValue: any) {
     const attrValue = isValidPropValue(propValue)
       ? propValue
       : getValue(value, ModifierType.position)
+
     units.push({
       attr: positionMaps[lowerKey],
-      value: positionKeys.includes(prop) ? prop : attrValue,
+      value: attrValue,
     })
   }
 
@@ -420,7 +418,7 @@ export function colorPropToStyle(prop: string, propValue: any) {
       const [hex, opacity] = propValue.split('.')
       color = opacity ? hexToRgba(hex, opacity) : hex
     } else {
-      color = prop.replace('color', '').toLowerCase()
+      color = prop.replace('color', '')
     }
     units.push({ attr: 'color', value: Colors[color] || color })
   }
@@ -433,7 +431,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
   if (Array.isArray(propValue)) {
     propValue.forEach((value, idx) => {
       units.push({
-        attr: 'font-size',
+        attr: 'fontSize',
         value: getValue(value, ModifierType.text),
         media: '' + getMediaList()[idx],
       })
@@ -442,7 +440,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
     const [, value] = prop.split('-')
     const attrValue = isValidPropValue(propValue) ? propValue : value
     units.push({
-      attr: 'font-size',
+      attr: 'fontSize',
       value: fontSizes[attrValue] || getValue(attrValue, ModifierType.text),
     })
   }
@@ -455,7 +453,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   if (Array.isArray(propValue)) {
     propValue.forEach((value, idx) => {
       units.push({
-        attr: 'font-weight',
+        attr: 'fontWeight',
         value,
         media: '' + getMediaList()[idx],
       })
@@ -464,12 +462,12 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
     const [, second, third] = kebab(prop).split('-')
     if (isValidPropValue(propValue)) {
       units.push({
-        attr: 'font-weight',
+        attr: 'fontWeight',
         value: propValue,
       })
     } else {
       units.push({
-        attr: 'font-weight',
+        attr: 'fontWeight',
         value: second === 'weight' ? third : weights[downFirst(second)] || second,
       })
     }
@@ -479,10 +477,11 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
 
 export function textLineHeightPropToStyle(prop: string, propValue: any) {
   const units: StyliUnit[] = []
+  const attr = 'lineHeight'
   if (Array.isArray(propValue)) {
     propValue.forEach((value, idx) => {
       units.push({
-        attr: 'line-height',
+        attr,
         value,
         media: '' + getMediaList()[idx],
       })
@@ -490,14 +489,14 @@ export function textLineHeightPropToStyle(prop: string, propValue: any) {
   } else {
     if (isValidPropValue(propValue)) {
       units.push({
-        attr: 'line-height',
+        attr,
         value: getValue(propValue, ModifierType.lineHeight),
       })
     } else {
       const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
       !!leadings[downFirst(value)]
       units.push({
-        attr: 'line-height',
+        attr,
         value: !!leadings[downFirst(value)] ? `${leadings[downFirst(value)]}em` : getValue(value),
       })
     }
@@ -507,10 +506,11 @@ export function textLineHeightPropToStyle(prop: string, propValue: any) {
 
 export function shadowPropToStyle(prop: string, propValue: any) {
   const units: StyliUnit[] = []
+  const attr = 'boxShadow'
   if (Array.isArray(propValue)) {
     propValue.forEach((value, idx) => {
       units.push({
-        attr: 'boxShadow',
+        attr,
         value,
         media: '' + getMediaList()[idx],
       })
@@ -518,13 +518,13 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   } else {
     if (isValidPropValue(propValue)) {
       units.push({
-        attr: 'boxShadow',
+        attr,
         value: propValue,
       })
     } else {
       const value = prop.replace('shadow', '')
       const gv = (v: number) => getValue(v, ModifierType.shadow)
-      const obj: any = { attr: 'boxShadow' }
+      const obj: any = { attr }
       switch (value) {
         case 'XXS':
           obj.value = `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)`
