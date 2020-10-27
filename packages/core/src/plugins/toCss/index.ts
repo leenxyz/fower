@@ -54,8 +54,10 @@ export function toCss() {
     })
 
     // handle css prop
-    if (!!finalProps.css) {
-      const cssPropFragmentList = parseCssProp(className, finalProps.css)
+    if (!!finalProps.css || finalProps.debug) {
+      const { css, debug } = finalProps
+      const value = { ...css, ...(debug ? { div: { border: '1px solid gray' } } : {}) }
+      const cssPropFragmentList = parseCssProp(className, value)
       const cssStr = cssPropFragmentList.join(' ')
 
       if (!setStyliTagContent.cache[cssStr] && cssStr) {
@@ -65,6 +67,7 @@ export function toCss() {
 
       // to avoid render css
       delete finalProps.css
+      delete finalProps.debug
     }
 
     finalProps.className = `${className} ${finalProps.className || ''} ${props.className || ''}`
