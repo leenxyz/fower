@@ -1,51 +1,37 @@
+import { Sheet } from '../Sheet'
 import { Styli } from '../styli'
-import { PlainObject, StyliStyle } from '../types'
-import { isEmptyObj } from '../utils'
-import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
+import { PlainObject, Plugin } from '../types'
+import { isEmptyObj, isFalsyProp } from '../utils'
 
-interface ParsedModifiers {
-  styliKeys: string[]
-  styliStyle: any
-}
-
-function getConvertConfigs() {
-  const customConvertConfig = Styli.getConfig<ConvertConfig[]>('convertConfig')
-  return convertConfigs.concat(customConvertConfig)
-}
-
-function isFalsyProp(propValue: any) {
-  return typeof propValue == 'boolean' && !propValue
-}
-
-export function parseModifiers(props: PlainObject): ParsedModifiers {
-  let styliStyle: StyliStyle = {}
-  const styliKeys: string[] = []
+export function parseModifiers(props: PlainObject = {}): Sheet {
+  let sheet = new Sheet(props)
 
   if (isEmptyObj(props)) {
-    return { styliKeys, styliStyle }
+    return sheet
   }
 
-  const convertMap = getConvertConfigs()
+  const plugins = Styli.getConfig<Plugin[]>('plugins')
 
-  for (const [prop, propValue] of Object.entries(props)) {
+  for (const [propKey, propValue] of Object.entries(props)) {
+    /** register plugin */
+    for (const plugin of plugins) {
+      if (plugin.onVisitProp) {
+        sheet = plugin.onVisitProp({ key: propKey, value: propValue }, sheet)
+      }
+    }
+
     // ignore false value
     if (isFalsyProp(propValue)) continue
 
-    if (['css'].includes(prop)) {
-      styliStyle = { ...styliStyle, ...{ [prop]: propValue } }
-      styliKeys.push(prop)
-      continue
-    }
+    if (['css'].includes(propKey)) {
+      sheet.addRule({
+        name: 'css',
+        style: propValue,
+      })
 
-    for (const item of convertMap) {
-      const { isMatch, toStyle } = item
-      if (isMatch(prop, propValue, props)) {
-        styliKeys.push(prop)
-        styliStyle = { ...styliStyle, ...toStyle(prop, propValue, props) }
-        break
-      }
+      continue
     }
   }
 
-  return { styliKeys, styliStyle }
+  return sheet
 }

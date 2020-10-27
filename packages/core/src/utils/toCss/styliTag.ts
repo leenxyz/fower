@@ -1,22 +1,22 @@
 import { memorize } from '../../utils'
 
-export function generateStyliTag(name: string) {
-  const tag = document.createElement('style')
-  tag.dataset.styli = name
+export function generateStyleElement(name: string) {
+  const $style = document.createElement('style')
+  $style.dataset.styli = name
 
   // TODO: if user can config mounted tag
   const mountedTag = document.querySelector('head')
 
   if (!mountedTag) throw new Error('can not find <head> tag to mounted')
 
-  mountedTag.append(tag)
+  mountedTag.append($style)
 
-  return tag
+  return $style
 }
 
-export const getStyliTag = memorize(generateStyliTag)
+export const getStyleElement = memorize(generateStyleElement)
 
-export const getStyliTagContent = (tag: any) => tag.innerHTML
+export const getStylieElementContent = (tag: any) => tag.innerHTML
 
 export const setStyliTagContent = memorize((tag: any, content: string) => {
   tag.innerHTML = content
@@ -24,7 +24,7 @@ export const setStyliTagContent = memorize((tag: any, content: string) => {
 })
 
 export const getMediaStyliTag = memorize((value: number) => {
-  const tag = generateStyliTag(`media-styli-${value}`)
+  const tag = generateStyleElement(`media-styli-${value}`)
   tag.innerHTML = `@media (min-width: ${value}px}) {}`
   return tag
 })

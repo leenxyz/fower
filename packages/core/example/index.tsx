@@ -2,17 +2,14 @@ import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { styled, Styli } from '../../core/src'
-import { toCss } from '../src/plugins'
+import hidePlugin from '../src/plugins/styli-plugin-hide'
+import casePlugin from '../src/plugins/styli-plugin-case'
+import jss from 'jss'
+
+const s = jss.createStyleSheet({})
 
 Styli.config({
-  plugins: [
-    [
-      toCss,
-      {
-        breakpoints: [0, 640, 768, 1024],
-      },
-    ],
-  ],
+  plugins: [hidePlugin(), casePlugin()],
 })
 
 export const View = styled('div')
@@ -21,13 +18,26 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
-      <View color="#000.57">哈哈哈哈</View>
+      <View
+        uppercase
+        row
+        flex-1
+        center
+        bgGray300
+        p-100
+        color="#00ff00.47"
+        css={{
+          fontSize: '20px',
+        }}
+      >
+        Hello world
+      </View>
       <View
         red
         s="100"
         center
         mt-100
-        f={[44, 55, 66, 77]}
+        f={[10, 20, 30, 40]}
         css={{
           background: 'red',
           ':hover': {

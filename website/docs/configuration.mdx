@@ -49,39 +49,6 @@ Styli.config({
 </View>
 ```
 
-### 自定义指令
-
-Styli 内置了大量的快捷指令来帮助您快速构建 UI，但有时候您可能需要自定义指令来满足需求
-
-```jsx
-Styli.config({
-  convertConfig: [
-    {
-      name: 'theme',
-      key: (prop) => /^theme-\w+$/.test(prop),
-      style: (prop, propValue) => {
-        const [, value = ''] = prop.match(/^theme-(\w+)$/) || []
-        if (value === 'dark') return createStyle('bgGray500 white')
-        if (value === 'light') return createStyle('bgGray200 black')
-        return {}
-      },
-    },
-  ],
-})
-```
-
-如上我们配置了 `disabledStyle` 和 `theme` 两个自定义指令，自定义指令与内置指令使用完全一致
-
-```jsx
-<View theme-dark>ok</View>
-```
-
-配置项中提供了三个属性: `name`, `key`与 `style`
-
-> - name 可选。通常用来标识该配置指令作用。
-> - key 必选。值为指令名称字符串或者返回 boolean 值函数。
-> - style 必选。值为 CSSProperties 对象或者返回 CSSProperties 对象的函数。
-
 ### 插件
 
 Styli 内置了 `toCss` 和 `toStyle` 两个插件。当代码运行在支持 DOM 的环境中，会自动使用内置 `toCss` 插件，将 styli 指令转化为 `class`。在不支持 DOM 的环境中会自动使用内置的 `toStyle` 插件将 styli 指令转化为内联 style。

@@ -1,34 +1,29 @@
-import { Styli } from '../styli'
-import { PlainObject, Plugin, PluginWrapper } from '../types'
-import { isEmptyObj } from '../utils'
+import { toCss } from '../utils/toCss'
+import { toStyle } from '../utils/toStyle'
+import { Props } from '../types'
+import { canUseDom, isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
 
+/**
+ * Go get finanl props with style
+ * @param props component props
+ */
 export function toFinalProps(props: any) {
   if (isEmptyObj(props)) return {}
 
-  const { styliKeys = [], styliStyle = {} } = parseModifiers(props)
+  const sheet = parseModifiers(props)
+
+  const keys = sheet.rules.map((i) => i.name)
 
   const finalProps = Object.keys(props).reduce((result, key) => {
-    if (styliKeys.includes(key)) return result
+    if (keys.includes(key)) return result
     return { ...result, [key]: props[key] }
-  }, {} as any)
+  }, {} as Props)
 
-  const plugins = Styli.getConfig<Plugin[]>('plugins')
-  return traversingPlugins(plugins.slice(), finalProps, styliStyle, props)
-}
+  let style = sheet.toStyles()
 
-function traversingPlugins(
-  plugins: Plugin[],
-  finalProps: PlainObject,
-  styliStyle: PlainObject,
-  props: PlainObject,
-): PlainObject {
-  if (!plugins.length) return finalProps
-
-  const plugin = plugins.shift()
-
-  const [fn, config] = Array.isArray(plugin) ? plugin : [plugin as PluginWrapper]
-  finalProps = fn(config)(finalProps, styliStyle, props)
-
-  return traversingPlugins(plugins, finalProps, styliStyle, props)
+  if (canUseDom) {
+    return toCss()(finalProps, style, sheet)
+  }
+  return toStyle()(finalProps, style)
 }

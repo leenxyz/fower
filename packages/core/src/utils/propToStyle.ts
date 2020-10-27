@@ -17,6 +17,7 @@ import {
   borderStyles,
 } from '../constants'
 import { Styli } from '../styli'
+import { CSSProperties } from 'react'
 
 export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
@@ -189,7 +190,7 @@ export function alignmentPropToStyle(props: any) {
   return style
 }
 
-export function positionPropToStyle(prop: string, propValue: any) {
+export function positionPropToStyle(prop: string, propValue: any): any {
   if (positionKeys.includes(prop)) return { position: prop }
   const [key = '', value = ''] = prop.split('-')
   const lowerKey = key.toLocaleLowerCase()
@@ -209,7 +210,7 @@ export function textAlignPropToStyle(prop: string, propValue: any) {
   return { textAlign: prop.replace('text', '').toLowerCase() as any }
 }
 
-export function textHeadingPropToStyle(prop: string) {
+export function textHeadingPropToStyle(prop: string): any {
   return { display: 'block', fontWeight: 'bold', fontSize: headings[prop] + 'em' }
 }
 
@@ -247,7 +248,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   return { fontWeight: '' + weights[downFirst(second)] || second }
 }
 
-export function textLineHeightPropToStyle(prop: string, propValue: any) {
+export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
     return {
       lineHeight: Array.isArray(propValue)
@@ -314,7 +315,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   }
 }
 
-export function opacityPropToStyle(prop: string, propValue: any) {
+export function opacityPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
     return {
       opacity: Array.isArray(propValue)
@@ -332,11 +333,11 @@ export function displayPropToStyle(prop: string, propValue: any) {
   return { display: kebab(value) }
 }
 
-export function overFlowPropToStyle(prop: string, propValue: any) {
+export function overFlowPropToStyle(prop: string, propValue: any): CSSProperties {
   const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
   if (isValidPropValue(propValue)) return { [prop]: propValue }
 
-  const val = downFirst(value)
+  const val: any = downFirst(value)
   switch (key) {
     case 'ox':
       return { overflowX: val }

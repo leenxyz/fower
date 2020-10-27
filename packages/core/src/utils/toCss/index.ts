@@ -1,14 +1,15 @@
-import { PlainObject, StyliStyle } from '../../types'
+import { PlainObject } from '../../types'
 import { canUseDom } from '../../utils'
 import {
-  getStyliTag,
-  getStyliTagContent,
+  getStyleElement,
+  getStylieElementContent,
   setStyliTagContent,
   getMediaStyliTag,
   getMediaTagContent,
   setMediaTagContent,
 } from './styliTag'
 import { styliStyleToCss } from './styliStyleToCss'
+import { Sheet } from '../../Sheet'
 
 interface ToCSSConfig {
   breakpoints?: number[]
@@ -20,30 +21,21 @@ export function toCss(config?: ToCSSConfig) {
   }
 
   const breakpoints = config?.breakpoints || [0, 640, 768, 1024, 1280]
-  const styliTag = getStyliTag('styli')
+  const styleElement = getStyleElement('styli')
 
-  return function (finalProps: PlainObject, styliStyle: StyliStyle, props: PlainObject) {
-    const {
-      cssFragment = '',
-      className = '',
-      cssMediaFragmentList = [],
-      cssPropFragmentList = [],
-    } = styliStyleToCss(styliStyle, breakpoints)
+  return function (finalProps: PlainObject, styliStyle: any, sheet: Sheet) {
+    const result = styliStyleToCss(styliStyle, breakpoints, sheet)
+    const { cssMediaFragmentList = [] } = result
+    const cssFragment = sheet.toCss()
+
+    let className = sheet.getClassNames()
 
     /**
      * if cssFragment has been inserted into dom, ignore next same cssFragment
      */
     if (!setStyliTagContent.cache[cssFragment]) {
-      const content = getStyliTagContent(styliTag)
-      setStyliTagContent(cssFragment, styliTag, `${content} ${cssFragment}`)
-    }
-
-    if (cssPropFragmentList.length) {
-      const cssStr = cssPropFragmentList.join(' ')
-      if (!setStyliTagContent.cache[cssStr]) {
-        const content = getStyliTagContent(styliTag)
-        setStyliTagContent(cssStr, styliTag, `${content} ${cssStr}`)
-      }
+      const content = getStylieElementContent(styleElement)
+      setStyliTagContent(cssFragment, styleElement, `${content} ${cssFragment}`)
     }
 
     cssMediaFragmentList.forEach((mediaCSSFragment, idx) => {
@@ -57,7 +49,7 @@ export function toCss(config?: ToCSSConfig) {
       }
     })
 
-    finalProps.className = `${className || ''} ${props.className || ''}`
+    finalProps.className = `${className || ''} ${finalProps.className || ''}`
 
     return finalProps
   }

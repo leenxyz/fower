@@ -1,5 +1,9 @@
+import { Sheet } from '../Sheet'
 export * from './Modifiers'
-export * from './Plugin'
+
+export interface Props {
+  [key: string]: string
+}
 
 export interface MarginMaps {
   [key: string]: string[]
@@ -17,9 +21,12 @@ export interface PlainObject {
   [key: string]: any
 }
 
-type CommonStyliValue = number | string
-type MediaQueryStyliValue = number[] | string[]
+export interface Prop {
+  key: string
+  value: any
+}
 
-export interface StyliStyle {
-  [key: string]: CommonStyliValue | MediaQueryStyliValue | PlainObject | undefined
+export interface Plugin {
+  onVisitProp?(prop: Prop, sheet: Sheet): Sheet
+  onStylesCreated?(): void
 }
