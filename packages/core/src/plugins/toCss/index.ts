@@ -56,7 +56,10 @@ export function toCss() {
     // handle css prop
     if (!!finalProps.css || finalProps.debug) {
       const { css, debug } = finalProps
-      const value = { ...css, ...(debug ? { border: '1px solid gray', div: { border: '1px solid gray' } } : {}) }
+      const value = {
+        ...css,
+        ...(debug ? { border: '1px solid gray', div: { border: '1px solid gray' } } : {}),
+      }
       const cssPropFragmentList = parseCssProp(className, value)
       const cssStr = cssPropFragmentList.join(' ')
 
@@ -70,7 +73,7 @@ export function toCss() {
       delete finalProps.debug
     }
 
-    finalProps.className = `${className} ${finalProps.className || ''} ${props.className || ''}`
+    finalProps.className = `${className}${finalProps.className ? ' ' + finalProps.className : ''}`
 
     return finalProps
   }
