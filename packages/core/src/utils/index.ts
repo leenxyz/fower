@@ -21,6 +21,10 @@ export function isNumber(s: string | number) {
   return /^-?\d+$/.test('' + s)
 }
 
+export function isPercentNumber(s: string | number) {
+  return /^-?\d+p$/.test('' + s)
+}
+
 export function isValidPropValue(v: any) {
   return typeof v !== 'boolean'
 }
@@ -30,7 +34,7 @@ export function getValue(value: string | number, modifierType?: ModifierType) {
     const { transformUnit } = Styli.getConfigs()
     return transformUnit(Number(value), modifierType)
   }
-  return value
+  return isPercentNumber(value) ? ('' + value).replace('p', '%') : value
 }
 
 export function memorize(fn: Function) {
