@@ -15,20 +15,16 @@ export function isTextHeadingKey(key: string) {
   return headingTypes.includes(key) || /^heading$/.test(key)
 }
 
+export function textHeadingPropToStyle(prop: string): any {
+  return { display: 'block', fontWeight: 'bold', fontSize: headings[prop] + 'em' }
+}
+
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
+    onVisitProp({ propKey }, rule) {
       if (!isTextHeadingKey(propKey)) return
 
-      const style: any = {
-        display: 'block',
-        fontWeight: 'bold',
-        fontSize: headings[propValue] + 'em',
-      }
-
-      rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${c}:${style[c]};`, '')
-      rule.style = style
-
+      rule.style = textHeadingPropToStyle(propKey)
       return rule
     },
   }

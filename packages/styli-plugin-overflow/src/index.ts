@@ -1,5 +1,5 @@
 import { Plugin } from '@styli/core'
-import { downFirst, isValidPropValue, kebab } from '@styli/utils'
+import { downFirst, isValidPropValue } from '@styli/utils'
 
 export const overFlowTypes = ['visible', 'hidden', 'scroll', 'auto', 'inherit', 'initial', 'unset']
 
@@ -9,40 +9,26 @@ export function isOverFlowKey(key: string) {
   return overFlowTypes.includes(downFirst(value))
 }
 
+export function overFlowPropToStyle(prop: string, propValue: any): any {
+  const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
+  if (isValidPropValue(propValue)) return { [prop]: propValue }
+
+  const val: any = downFirst(value)
+  switch (key) {
+    case 'ox':
+      return { overflowX: val }
+    case 'oy':
+      return { overflowY: val }
+    default:
+      return { overflow: val }
+  }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isOverFlowKey(propKey)) return
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${propKey}:${value};`
-        })
-      } else {
-        if (isValidPropValue(propValue)) {
-          rule.style = { ...rule.style, [propKey]: propValue }
-          rule.cssFragment = `${rule.cssFragment}${propKey}:${propValue};`
-        } else {
-          const [, key, value] = propKey.match(/^(o[xy]?)([A-Z]\w+)$/) || []
-          const val: any = downFirst(value)
-          let _key = 'overflow'
-          switch (key) {
-            case 'ox':
-              _key = 'overflowX'
-              break
-            case 'oy':
-              _key = 'overflowY'
-              break
-            default:
-              _key = 'overflow'
-          }
-
-          rule.style = { ...rule.style, [_key]: val }
-          rule.cssFragment = `${rule.cssFragment}${kebab(_key)}:${val};`
-        }
-      }
-
+      rule.style = overFlowPropToStyle(propKey, propValue)
       return rule
     },
   }

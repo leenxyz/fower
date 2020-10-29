@@ -1,14 +1,16 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { styled, styli } from '../../core/src'
-import hidePlugin from '../src/plugins/styli-plugin-hide'
-import casePlugin from '../src/plugins/styli-plugin-case'
+import { styled } from '../../core/src/api/styled'
+import { styli } from '../../core/src/styli'
 import presetDefault from './src'
+// import presetDefault from '../../preset-default/src'
 
 // styli.setup({
 //   plugins: [hidePlugin(), casePlugin()],
 // })
+
+console.log('presetDefault:', presetDefault)
 
 styli.setup(presetDefault)
 

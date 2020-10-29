@@ -41,29 +41,20 @@ export function isPositionKey(key: string) {
   return /^[TLRB](-.+)?$/.test(key) || positionKeys.includes(key)
 }
 
+export function positionPropToStyle(prop: string, propValue: any): any {
+  if (positionKeys.includes(prop)) return { position: prop }
+  const [key = '', value = ''] = prop.split('-')
+  const lowerKey = key.toLocaleLowerCase()
+  if (isValidPropValue(propValue))
+    return { [positionMaps[lowerKey]]: getValue(propValue, ModifierType.position) }
+  return { [positionMaps[lowerKey]]: getValue(value, ModifierType.position) }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isPositionKey(propKey)) return
-
-      const [key = '', value = ''] = propKey.split('-')
-      const lowerKey = key.toLocaleLowerCase()
-      const _key = positionMaps[lowerKey]
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          const attrValue = getValue(value, ModifierType.position)
-          rule.cssFragmentList![idx] = `${cssFragment}${_key}:${attrValue};`
-        })
-      } else {
-        if (isValidPropValue(propValue) && positionMaps.includes(propKey)) {
-          rule.style = { [key]: propValue }
-        } else {
-          rule.style = { [key]: getValue(value, ModifierType.position) }
-        }
-      }
-
+      rule.style = positionPropToStyle(propKey, propValue)
       return rule
     },
   }

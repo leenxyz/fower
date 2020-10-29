@@ -1,5 +1,5 @@
 import { Plugin } from '@styli/core'
-import { upFirst, kebab } from '@styli/utils'
+import { upFirst } from '@styli/utils'
 
 export const G = {
   flex: 'flex',
@@ -40,35 +40,36 @@ export function isFlexBoxKeyWrapper() {
 
 export const isFlexBoxKey = isFlexBoxKeyWrapper()
 
+export function flexPropToStyle(prop: string) {
+  const style: any = {}
+  const wraps = [G.nowrap, G.wrap]
+
+  if (prop === G.row) style.flexDirection = G.row
+  if (prop === G.column) style.flexDirection = G.column
+
+  // 自动 display: flex
+  if (prop === G.row || prop === G.column) style.display = G.flex
+
+  // set flex-wrap
+  if (wraps.includes(prop)) style.flexWrap = prop as any
+
+  // justify-content
+  if (prop.startsWith('justify')) {
+    style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
+  }
+
+  if (prop.startsWith('align')) {
+    style.alignItems = flexMaps[prop.replace('align', '').toLocaleLowerCase()]
+  }
+
+  return style
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey }, rule) {
       if (!isFlexBoxKey(propKey)) return
-
-      const style: any = {}
-      const wraps = [G.nowrap, G.wrap]
-
-      if (propKey === G.row) style.flexDirection = G.row
-      if (propKey === G.column) style.flexDirection = G.column
-
-      // display: flex
-      if (propKey === G.row || propKey === G.column) style.display = G.flex
-
-      // set flex-wrap
-      if (wraps.includes(propKey)) style.flexWrap = propKey as any
-
-      // justify-content
-      if (propKey.startsWith('justify')) {
-        style.justifyContent = flexMaps[propKey.replace('justify', '').toLocaleLowerCase()]
-      }
-
-      if (propKey.startsWith('align')) {
-        style.alignItems = flexMaps[propKey.replace('align', '').toLocaleLowerCase()]
-      }
-
-      rule.style = style
-      rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${kebab(c)}:${style[c]};`, '')
-
+      rule.style = flexPropToStyle(propKey)
       return rule
     },
   }

@@ -1,8 +1,6 @@
-import { colors } from './colors'
 import background from 'styli-plugin-background'
 import border from 'styli-plugin-border'
 import color from 'styli-plugin-color'
-import css from 'styli-plugin-css'
 import display from 'styli-plugin-display'
 import flexItem from 'styli-plugin-flex-item'
 import flexbox from 'styli-plugin-flexbox'
@@ -23,12 +21,13 @@ import textTransform from 'styli-plugin-text-transform'
 import textWeight from 'styli-plugin-text-weight'
 import zIndex from 'styli-plugin-z-index'
 
+import { colors } from './colors'
+
 export const presetDefault: any = {
   plugins: [
     background(),
     border(),
     color(),
-    css(),
     display(),
     flexItem(),
     flexbox(),

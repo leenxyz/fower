@@ -1,5 +1,6 @@
-import { Plugin, styli } from '@styli/core'
-import { downFirst, isValidPropValue } from '@styli/utils'
+import { styli } from '../../src/styli'
+import { Plugin } from '../../src/types/index'
+import { downFirst, isValidPropValue, kebab } from '@styli/utils'
 
 export function isBgColorKey(key: string) {
   return /^bg(.+)?$/.test(key)

@@ -1,5 +1,5 @@
 import { Plugin } from '@styli/core'
-import { isValidPropValue, kebab } from '@styli/utils'
+import { isValidPropValue } from '@styli/utils'
 
 export const textAlign = ['textLeft', 'textCenter', 'textRight', 'textJustify']
 
@@ -7,26 +7,16 @@ export function isTextAlign(key: string) {
   return textAlign.includes(key) || /^textAlign$/.test(key)
 }
 
+export function textAlignPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { textAlign: propValue }
+  return { textAlign: prop.replace('text', '').toLowerCase() as any }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isTextAlign(propKey)) return
-
-      const key = 'textAlign'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${kebab(key)}:${value};`
-        })
-      } else {
-        const attrValue = isValidPropValue(propValue)
-          ? propValue
-          : (propValue.replace('text', '').toLowerCase() as any)
-        rule.style = { [key]: attrValue }
-        rule.cssFragment = `${kebab(key)}: ${attrValue};}`
-      }
-
+      rule.style = textAlignPropToStyle(propKey, propValue)
       return rule
     },
   }

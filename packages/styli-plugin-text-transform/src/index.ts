@@ -1,5 +1,4 @@
 import { Plugin } from '@styli/core'
-import { kebab } from '@styli/utils'
 
 export default (): Plugin => {
   return {
@@ -13,7 +12,6 @@ export default (): Plugin => {
 
       const key = 'textTransform'
       rule.style = { [key]: value }
-      rule.cssFragment = `${kebab(key)}:${value}`
 
       return rule
     },

@@ -1,5 +1,5 @@
-import { ModifierType, Plugin, getValue } from '@styli/core'
-import { downFirst, isValidPropValue, kebab } from '@styli/utils'
+import { Plugin, getValue } from '@styli/core'
+import { downFirst, isValidPropValue } from '@styli/utils'
 
 export const leadings: any = {
   none: 1,
@@ -14,29 +14,28 @@ export function isTextLineHeightKey(key: string) {
   return /^lh(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/.test(key)
 }
 
-export const pluginLineHeight = (): Plugin => {
+export function textLineHeightPropToStyle(prop: string, propValue: any): any {
+  if (isValidPropValue(propValue)) {
+    return {
+      lineHeight: Array.isArray(propValue)
+        ? propValue.map((v) => getValue(v))
+        : getValue(propValue),
+    }
+  }
+  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
+  // TODO: calc 是否支持 RN
+  return {
+    lineHeight: !!leadings[downFirst(value)]
+      ? `calc(${leadings[downFirst(value)]} * 1em)`
+      : getValue(value),
+  }
+}
+
+export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isTextLineHeightKey(propKey)) return
-
-      const key = 'lineHeight'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${kebab(key)}:${value};`
-        })
-      } else {
-        if (isValidPropValue(propValue)) {
-          rule.style = { [key]: getValue(propValue, ModifierType.lineHeight) }
-        } else {
-          const [, value = ''] = propKey.match(/lh-?(\w+)?/) || []
-          const preset = leadings[downFirst(value)]
-
-          rule.style = { [key]: preset ? `${preset}em` : getValue(value) }
-          rule.cssFragment = `${kebab(key)}:${preset ? `${preset}em` : getValue(value)}`
-        }
-      }
+      rule.style = textLineHeightPropToStyle(propKey, propValue)
       return rule
     },
   }

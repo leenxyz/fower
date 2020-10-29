@@ -1,5 +1,5 @@
-import { Plugin, getValue } from '@styli/core'
-import { isValidPropValue, kebab, upFirst } from '@styli/utils'
+import { Plugin, getValue, ModifierType } from '@styli/core'
+import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
   top: 'top',
@@ -36,29 +36,23 @@ export function isRoundedKey(key: string) {
   return /^rounded([TLRB]|T[LR]|B[LR])?(-.+)?$/.test(key)
 }
 
+export function roundedPropToStyle(prop: string, propValue: any) {
+  let style: any = {}
+  const [key, value] = prop.split('-')
+  const roundedValue = isValidPropValue(propValue) ? propValue : value
+  for (const p of roundedMaps[key]) {
+    style[`border${p}Radius`] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.border))
+      : getValue(roundedValue, ModifierType.border)
+  }
+  return style
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isRoundedKey(propKey)) return
-
-      const [key, value] = propKey.split('-')
-
-      roundedMaps[key].forEach((k: string) => {
-        const attrKey = `border${k}Radius`
-        if (Array.isArray(propValue)) {
-          propValue.forEach((value, idx) => {
-            const cssFragment = rule.cssFragmentList![idx] || ''
-            const attrValue = getValue(value)
-            rule.cssFragmentList![idx] = `${cssFragment}${attrKey}:${attrValue};`
-          })
-        } else {
-          const rValue = isValidPropValue(propValue) ? propValue : value
-          const attrValue = getValue(rValue)
-          rule.style = { [attrKey]: attrValue }
-          rule.cssFragment = `${kebab(attrKey)}:${attrValue};`
-        }
-      })
-
+      rule.style = roundedPropToStyle(propKey, propValue)
       return rule
     },
   }

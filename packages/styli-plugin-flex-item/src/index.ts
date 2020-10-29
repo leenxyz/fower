@@ -1,32 +1,23 @@
 import { Plugin } from '@styli/core'
-import { isValidPropValue } from '@styli/utils'
+import { isValidPropValue, isNumber } from '@styli/utils'
 
 export function isFlexItemKey(key: string) {
   return /^flex(-\d+)?$/.test(key)
+}
+
+// set flex-flow、flex-shrink、flex-basic
+export function flexItemPropToStyle(prop: any, propValue: any) {
+  if (isValidPropValue(propValue)) return { flex: propValue }
+  const [, value] = prop.split('-')
+  const flexValue = value || (propValue === true ? 1 : propValue)
+  return { flex: isNumber(flexValue) ? Number(flexValue) : flexValue }
 }
 
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isFlexItemKey(propKey)) return
-
-      const key = 'flex'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${key}:${value};`
-        })
-      } else {
-        if (isValidPropValue(propValue)) {
-          rule.style![key] = propValue
-        } else {
-          const [, value] = propKey.split('-')
-          const flexValue = value || (propValue === true ? 1 : propValue)
-          rule.style![key] = flexValue
-        }
-      }
-
+      rule.style = flexItemPropToStyle(propKey, propValue)
       return rule
     },
   }

@@ -46,9 +46,6 @@ export interface Plugin {
 export interface Rule {
   name: 'css' | ({} & string)
   style?: CSSProperties
-  cssFragment?: string
-  cssFragmentList?: string[] // media queries
-  cssFragmentWithSelector?: string // css prop
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
   type?: 'style' | 'font' | 'keyframe'
   className?: string

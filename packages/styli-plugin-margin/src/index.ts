@@ -1,5 +1,5 @@
 import { getValue, ModifierType, Plugin } from '@styli/core'
-import { isValidPropValue, kebab, upFirst } from '@styli/utils'
+import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
   padding: 'padding',
@@ -49,29 +49,26 @@ export function isMarginKey(key: string) {
   return /^m[ltrbxy]?(-.+)?$/.test(key)
 }
 
+export function marginPropToStyle(prop: string, propValue: any) {
+  const style: any = {}
+  const [key, symbol = '', value] = prop.split(/\b-*?/)
+  const [, minus = ''] = symbol.split('')
+  const marginValue = isValidPropValue(propValue) ? propValue : minus + value
+
+  marginMaps[key].forEach((k: any) => {
+    style[k] = Array.isArray(propValue)
+      ? propValue.map((v) => getValue(v, ModifierType.margin))
+      : getValue(marginValue, ModifierType.margin)
+  })
+
+  return style
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isMarginKey(propKey)) return
-
-      const [key, value] = propKey.split('-')
-
-      marginMaps[key].forEach((k: any) => {
-        const cssAttrKey = kebab(k)
-        if (Array.isArray(propValue)) {
-          propValue.forEach((v: any, idx: number) => {
-            const cssFragment = rule.cssFragmentList![idx] || ''
-            const attrValue = getValue(v, ModifierType.margin)
-            rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${attrValue};`
-          })
-        } else {
-          const mValue = isValidPropValue(propValue) ? propValue : value
-          const attrValue = getValue(mValue, ModifierType.margin)
-          rule.style = { ...rule.style, [k]: attrValue }
-          rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${attrValue};`
-        }
-      })
-
+      rule.style = marginPropToStyle(propKey, propValue)
       return rule
     },
   }

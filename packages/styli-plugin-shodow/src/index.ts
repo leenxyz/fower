@@ -1,78 +1,65 @@
-import { Plugin, getValue, ModifierType } from '@styli/core'
-import { isValidPropValue, kebab } from '@styli/utils'
+import { Plugin, getValue } from '@styli/core'
+import { isValidPropValue } from '@styli/utils'
 
 export function isShadowKey(key: string) {
   return /^shadow(XXS|XS|S|M|L|XL|XXL|Outline|None|Inner)?$/.test(key)
 }
 
-const gv = (v: number) => getValue(v, ModifierType.shadow)
+export function shadowPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { boxShadow: propValue }
+  const value = prop.replace('shadow', '')
+  const gv = getValue
+  switch (value) {
+    case 'XXS':
+      return { boxShadow: `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)` }
+    case 'XS':
+      return { boxShadow: `0 ${gv(1)} ${gv(2)} 0 rgba(0, 0, 0, 0.05)` }
+    case 'S':
+      return {
+        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+          2,
+        )} 0 rgba(0, 0, 0, 0.06)`,
+      }
+    case 'M':
+      return {
+        boxShadow: `0 ${gv(4)} ${gv(6)} -${gv(1)} rgba(0, 0, 0, 0.1), 0 ${gv(2)} ${gv(4)} -${gv(
+          1,
+        )} rgba(0, 0, 0, 0.06)`,
+      }
+    case 'L':
+      return {
+        boxShadow: `0 ${gv(10)} ${gv(14)} -${gv(3)} rgba(0, 0, 0, 0.1), 0 ${gv(4)} ${gv(6)} -${gv(
+          2,
+        )} rgba(0, 0, 0, 0.05)`,
+      }
+    case 'XL':
+      return {
+        boxShadow: `0 ${gv(20)} ${gv(25)} -${gv(5)} rgba(0, 0, 0, 0.1), 0 ${gv(10)} ${gv(10)} -${gv(
+          5,
+        )} rgba(0, 0, 0, 0.04)`,
+      }
+    case 'XXL':
+      return { boxShadow: `0 ${gv(25)} ${gv(50)} -${gv(12)} rgba(0, 0, 0, 0.25)` }
+    case 'Inner':
+      return { boxShadow: `inset 0 ${gv(2)} ${gv(4)} 0 rgba(0, 0, 0, 0.06)` }
+    case 'Outline':
+      return { boxShadow: `0 0 0 ${gv(3)} rgba(66, 153, 225, 0.5)` }
+    case 'None':
+      return { boxShadow: 'none' }
+    default:
+      return {
+        boxShadow: `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
+          2,
+        )} 0 rgba(0, 0, 0, 0.06)`,
+      }
+  }
+}
 
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isShadowKey(propKey)) return
-
-      const key = 'boxShadow'
-      const style: any = {}
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${key}:${value};`
-        })
-      } else {
-        if (isValidPropValue(propValue)) {
-          style[key] = propValue
-        } else {
-          const value = propKey.replace('shadow', '')
-          switch (value) {
-            case 'XXS':
-              style[key] = `0 0 0 ${gv(1)} rgba(0, 0, 0, 0.05)`
-              break
-            case 'XS':
-              style[key] = `0 ${gv(1)} ${gv(2)} 0 rgba(0, 0, 0, 0.05)`
-              break
-            case 'S':
-              style[key] = `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
-                2,
-              )} 0 rgba(0, 0, 0, 0.06)`
-              break
-            case 'M':
-              style[key] = `0 ${gv(4)} ${gv(6)} -${gv(1)} rgba(0, 0, 0, 0.1), 0 ${gv(2)} ${gv(
-                4,
-              )} -${gv(1)} rgba(0, 0, 0, 0.06)`
-              break
-            case 'L':
-              style[key] = `0 ${gv(10)} ${gv(14)} -${gv(3)} rgba(0, 0, 0, 0.1), 0 ${gv(4)} ${gv(
-                6,
-              )} -${gv(2)} rgba(0, 0, 0, 0.05)`
-              break
-            case 'XL':
-              style[key] = `0 ${gv(20)} ${gv(25)} -${gv(5)} rgba(0, 0, 0, 0.1), 0 ${gv(10)} ${gv(
-                10,
-              )} -${gv(5)} rgba(0, 0, 0, 0.04)`
-              break
-            case 'XXL':
-              style[key] = `0 ${gv(25)} ${gv(50)} -${gv(12)} rgba(0, 0, 0, 0.25)`
-              break
-            case 'Inner':
-              style[key] = `inset 0 ${gv(2)} ${gv(4)} 0 rgba(0, 0, 0, 0.06)`
-              break
-            case 'Outline':
-              style[key] = `0 0 0 ${gv(3)} rgba(66, 153, 225, 0.5)`
-              break
-            case 'None':
-              style[key] = 'none'
-              break
-            default:
-              style[key] = `0 ${gv(1)} ${gv(3)} 0 rgba(0, 0, 0, 0.1), 0 ${gv(1)} ${gv(
-                2,
-              )} 0 rgba(0, 0, 0, 0.06)`
-          }
-          rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${kebab(c)}:${style[c]};`, '')
-          rule.style = style
-        }
-      }
+      rule.style = shadowPropToStyle(propKey, propValue)
       return rule
     },
   }

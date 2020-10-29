@@ -19,29 +19,18 @@ export function isTextWeightKey(key: string) {
   )
 }
 
+export function textWeightPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { fontWeight: propValue }
+  const [, second, third] = kebab(prop).split('-')
+  if (second === 'weight') return { fontWeight: '' + third }
+  return { fontWeight: '' + weights[downFirst(second)] || second }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isTextWeightKey(propKey)) return
-
-      const key = 'fontWeight'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${kebab(key)}:${value};`
-        })
-      } else {
-        const [, second, third] = kebab(propKey).split('-')
-        if (isValidPropValue(propValue)) {
-          rule.style = { [key]: propValue }
-          rule.cssFragment = `${kebab(key)}:${propValue};`
-        } else {
-          const value = second === 'weight' ? third : weights[downFirst(second)] || second
-          rule.style = { [key]: value }
-          rule.cssFragment = `${kebab(key)}:${value};`
-        }
-      }
+      rule.style = textWeightPropToStyle(propKey, propValue)
       return rule
     },
   }

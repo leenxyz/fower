@@ -1,5 +1,5 @@
 import { Plugin, getValue, ModifierType } from '@styli/core'
-import { isValidPropValue, kebab } from '@styli/utils'
+import { isValidPropValue } from '@styli/utils'
 
 export const fontSizes: any = {
   xs: 10,
@@ -18,28 +18,23 @@ export function isTextSizeKey(key: string) {
   return /^f(-.+)?$/.test(key)
 }
 
+export function textSizePropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) {
+    return {
+      fontSize: Array.isArray(propValue)
+        ? propValue.map((v) => getValue(v, ModifierType.text))
+        : getValue(propValue, ModifierType.text),
+    }
+  }
+  const [, value] = prop.split('-')
+  return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isTextSizeKey(propKey)) return
-
-      const key = 'fontSize'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          const attrValue = getValue(value, ModifierType.text)
-          rule.cssFragmentList![idx] = `${cssFragment}${key}:${attrValue};`
-        })
-      } else {
-        const [, value] = propKey.split('-')
-        const sValue = isValidPropValue(propValue) ? propValue : value
-        const attrValue = fontSizes[sValue] || getValue(sValue, ModifierType.text)
-
-        rule.style = { [key]: attrValue }
-        rule.cssFragment = `${kebab(key)}: ${attrValue};}`
-      }
-
+      rule.style = textSizePropToStyle(propKey, propValue)
       return rule
     },
   }

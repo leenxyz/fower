@@ -1,5 +1,5 @@
 import { Plugin } from '@styli/core'
-import { isValidPropValue, downFirst } from '@styli/utils'
+import { isValidPropValue, downFirst, kebab } from '@styli/utils'
 
 export const displayTypes = [
   'block',
@@ -35,25 +35,18 @@ export function isDisplayKey(key: string) {
   return displayTypes.includes(dKey)
 }
 
+export function displayPropToStyle(prop: string, propValue: any) {
+  if (isValidPropValue(propValue)) return { display: propValue }
+  const [, value] = prop.match(/^d(\w+)$/) || []
+  return { display: kebab(value) }
+}
+
 export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isDisplayKey(propKey)) return
 
-      const key = 'display'
-
-      if (Array.isArray(propValue)) {
-        propValue.forEach((value, idx) => {
-          const cssFragment = rule.cssFragmentList![idx] || ''
-          rule.cssFragmentList![idx] = `${cssFragment}${key}:${value};`
-        })
-      } else {
-        const [, dValue] = propKey.match(/^d(\w+)$/) || []
-        const value = isValidPropValue(propValue) ? propValue : dValue
-        rule.style = { ...rule.style, [key]: value }
-        rule.cssFragment = `${rule.cssFragment}${key}:${value};`
-      }
-
+      rule.style = displayPropToStyle(propKey, propValue)
       return rule
     },
   }

@@ -11,7 +11,6 @@ class Styli {
   }
 
   setup(preset: Preset) {
-    console.log('preset:', preset)
     this.config = {
       ...this.config,
       ...preset,
