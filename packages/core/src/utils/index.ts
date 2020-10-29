@@ -66,6 +66,8 @@ export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: Pl
         optionsKeyIsUndefined ? {} : options[key],
         defaultOptions[key],
       )
+    } else if (defaultOptionsKeyTypeStr === 'array') {
+      targetOptions[key] = defaultOptions[key].concat(options[key] || [])
     } else {
       targetOptions[key] = optionsKeyIsUndefined ? defaultOptions[key] : options[key]
     }

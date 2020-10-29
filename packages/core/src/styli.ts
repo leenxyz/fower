@@ -35,7 +35,29 @@ export class StyliFactory {
   private configs: Configs = {
     unit: 'px',
     colors: presetColors,
-    plugins: [],
+    plugins: [
+      sizePlugin(),
+      paddingPlugin(),
+      colorPlugin(),
+      bgPlugin(),
+      alignmentPlugin(),
+      displayPlugin(),
+      lineHeightPlugin(),
+      positionPlugin(),
+      textHeadingPlugin(),
+      flexItemPlugin(),
+      marginPlugin(),
+      roundedPlugin(),
+      textSizePlugin(),
+      borderPlugin(),
+      flexboxPlugin(),
+      opacityPlugin(),
+      shadowPlugin(),
+      textWeightPlugin(),
+      headingPlugin(),
+      overflowPlugin(),
+      zIndexPlugin(),
+    ],
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }
 
@@ -43,30 +65,6 @@ export class StyliFactory {
     // TODO: config improve
     this.configs = {
       ...mergeWithDefaultOptions(config, this.configs),
-      plugins: [
-        paddingPlugin(),
-        colorPlugin(),
-        bgPlugin(),
-        alignmentPlugin(),
-        displayPlugin(),
-        lineHeightPlugin(),
-        positionPlugin(),
-        textHeadingPlugin(),
-        flexItemPlugin(),
-        marginPlugin(),
-        roundedPlugin(),
-        textSizePlugin(),
-        borderPlugin(),
-        flexboxPlugin(),
-        opacityPlugin(),
-        shadowPlugin(),
-        textWeightPlugin(),
-        headingPlugin(),
-        overflowPlugin(),
-        sizePlugin(),
-        zIndexPlugin(),
-        ...(config.plugins || []),
-      ],
     }
   }
 
@@ -77,6 +75,7 @@ export class StyliFactory {
   getConfig<T>(type: keyof Configs): T {
     return this.configs[type] as T
   }
+
   use(...plugins: Plugin[]) {
     return plugins
   }
