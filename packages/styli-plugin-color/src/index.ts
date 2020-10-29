@@ -23,10 +23,10 @@ export function colorPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isColorKey(propKey)) return
-      rule.style = colorPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isColorKey(atom.propKey)) return
+      atom.style = colorPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

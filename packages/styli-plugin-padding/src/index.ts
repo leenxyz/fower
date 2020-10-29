@@ -47,10 +47,10 @@ export function paddingPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isPaddingKey(propKey)) return
-      rule.style = paddingPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isPaddingKey(atom.propKey)) return
+      atom.style = paddingPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

@@ -1,4 +1,4 @@
-import { Styli, styled } from '@styli/core'
+import { styled } from '@styli/core'
 import RN from 'react-native'
 
 export const ActivityIndicator = styled(RN.ActivityIndicator)
@@ -29,5 +29,3 @@ export const View = styled(RN.View)
 export const FlatList = styled(RN.FlatList)
 export const SectionList = styled(RN.SectionList)
 export const VirtualizedList = styled(RN.VirtualizedList)
-
-Styli.config({ unit: '' })

@@ -28,10 +28,10 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isTextWeightKey(propKey)) return
-      rule.style = textWeightPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isTextWeightKey(atom.propKey)) return
+      atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

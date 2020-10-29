@@ -57,10 +57,10 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isShadowKey(propKey)) return
-      rule.style = shadowPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isShadowKey(atom.propKey)) return
+      atom.style = shadowPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

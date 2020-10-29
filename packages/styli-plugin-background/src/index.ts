@@ -5,22 +5,20 @@ export function isBgColorKey(key: string) {
   return /^bg(.+)?$/.test(key)
 }
 
-export function bgPropToStyle(prop: string, propValue: any) {
+export function bgPropToStyle(propKey: string, propValue: any) {
   const Colors = styli.getColors()
   if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
-  const [, color = ''] = prop.match(/^bg(\w+)/) || []
+  const [, color = ''] = propKey.match(/^bg(\w+)/) || []
   return { backgroundColor: Colors[downFirst(color)] }
 }
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isBgColorKey(propKey)) return
+    onVisitProp(atom) {
+      if (!isBgColorKey(atom.propKey)) return
 
-      return {
-        ...rule,
-        style: bgPropToStyle(propKey, propValue),
-      }
+      atom.style = bgPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

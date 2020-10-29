@@ -14,10 +14,10 @@ export function textAlignPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isTextAlign(propKey)) return
-      rule.style = textAlignPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isTextAlign(atom.propKey)) return
+      atom.style = textAlignPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

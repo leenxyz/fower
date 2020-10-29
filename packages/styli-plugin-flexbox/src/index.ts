@@ -67,10 +67,10 @@ export function flexPropToStyle(prop: string) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey }, rule) {
-      if (!isFlexBoxKey(propKey)) return
-      rule.style = flexPropToStyle(propKey)
-      return rule
+    onVisitProp(atom) {
+      if (!isFlexBoxKey(atom.propKey)) return
+      atom.style = flexPropToStyle(atom.propKey)
+      return atom
     },
   }
 }

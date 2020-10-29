@@ -66,10 +66,10 @@ export function marginPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isMarginKey(propKey)) return
-      rule.style = marginPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isMarginKey(atom.propKey)) return
+      atom.style = marginPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

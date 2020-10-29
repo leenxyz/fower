@@ -13,10 +13,10 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isZIndexKey(propKey)) return
-      rule.style = zIndexPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isZIndexKey(atom.propKey)) return
+      atom.style = zIndexPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

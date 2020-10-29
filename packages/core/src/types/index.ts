@@ -20,11 +20,6 @@ export interface PaddingMaps {
   [key: string]: string[]
 }
 
-export interface Prop {
-  propKey: string
-  propValue: any
-}
-
 interface Theme {
   [key: string]: any
 }
@@ -39,13 +34,14 @@ export interface Config {
 export type Preset = Partial<Config>
 
 export interface Plugin {
-  onVisitProp?(prop: Prop, rule: Rule, sheet: Sheet): Rule | undefined | null
+  onVisitProp?(atom: Atom, sheet: Sheet): Atom | undefined | null
   onStylesCreated?(): void
 }
 
-export interface Rule {
-  name: 'css' | ({} & string)
-  style?: CSSProperties
+export interface Atom {
+  propKey: 'css' | ({} & string)
+  propValue: string
+  style: CSSProperties
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
   type?: 'style' | 'font' | 'keyframe'
   className?: string

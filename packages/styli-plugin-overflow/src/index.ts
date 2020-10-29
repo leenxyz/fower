@@ -26,10 +26,10 @@ export function overFlowPropToStyle(prop: string, propValue: any): any {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isOverFlowKey(propKey)) return
-      rule.style = overFlowPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isOverFlowKey(atom.propKey)) return
+      atom.style = overFlowPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

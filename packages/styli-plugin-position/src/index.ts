@@ -52,10 +52,10 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isPositionKey(propKey)) return
-      rule.style = positionPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isPositionKey(atom.propKey)) return
+      atom.style = positionPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

@@ -43,11 +43,11 @@ export function displayPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isDisplayKey(propKey)) return
+    onVisitProp(atom) {
+      if (!isDisplayKey(atom.propKey)) return
 
-      rule.style = displayPropToStyle(propKey, propValue)
-      return rule
+      atom.style = displayPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

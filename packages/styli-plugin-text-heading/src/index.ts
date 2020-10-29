@@ -21,11 +21,11 @@ export function textHeadingPropToStyle(prop: string): any {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey }, rule) {
-      if (!isTextHeadingKey(propKey)) return
+    onVisitProp(atom) {
+      if (!isTextHeadingKey(atom.propKey)) return
 
-      rule.style = textHeadingPropToStyle(propKey)
-      return rule
+      atom.style = textHeadingPropToStyle(atom.propKey)
+      return atom
     },
   }
 }

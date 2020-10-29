@@ -19,10 +19,10 @@ export function opacityPropToStyle(prop: string, propValue: any): any {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isOpacityKey(propKey)) return
-      rule.style = opacityPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isOpacityKey(atom.propKey)) return
+      atom.style = opacityPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

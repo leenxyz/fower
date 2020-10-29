@@ -32,10 +32,10 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isTextSizeKey(propKey)) return
-      rule.style = textSizePropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isTextSizeKey(atom.propKey)) return
+      atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

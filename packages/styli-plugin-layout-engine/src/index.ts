@@ -104,12 +104,12 @@ export function alignmentPropToStyle(props: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey }, rule, sheet) {
-      if (!isAlignmentKey(propKey)) return
+    onVisitProp(atom, sheet) {
+      if (!isAlignmentKey(atom.propKey)) return
 
-      rule.style = alignmentPropToStyle(sheet.props)
+      atom.style = alignmentPropToStyle(sheet.props)
 
-      return rule
+      return atom
     },
   }
 }

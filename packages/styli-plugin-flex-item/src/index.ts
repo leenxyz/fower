@@ -15,10 +15,10 @@ export function flexItemPropToStyle(prop: any, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isFlexItemKey(propKey)) return
-      rule.style = flexItemPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isFlexItemKey(atom.propKey)) return
+      atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

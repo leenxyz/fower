@@ -13,7 +13,7 @@ export function toFinalProps(props: any) {
 
   const sheet = parseModifiers(props)
 
-  const keys = sheet.rules.map((i) => i.name)
+  const keys = sheet.atoms.map((i) => i.propKey)
 
   const finalProps: Props = {}
   for (let i in props) {

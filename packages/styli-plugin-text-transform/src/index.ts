@@ -2,8 +2,10 @@ import { Plugin } from '@styli/core'
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey }, rule) {
+    onVisitProp(atom) {
+      const { propKey } = atom
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
+
       const isCaseKey = caseKeys.includes(propKey)
 
       if (!isCaseKey) return
@@ -11,9 +13,9 @@ export default (): Plugin => {
       const value: any = propKey === 'normalcase' ? 'none' : propKey
 
       const key = 'textTransform'
-      rule.style = { [key]: value }
+      atom.style = { [key]: value }
 
-      return rule
+      return atom
     },
   }
 }

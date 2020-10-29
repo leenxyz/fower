@@ -33,10 +33,10 @@ export function sizePropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isSizeKey(propKey)) return
-      rule.style = sizePropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isSizeKey(atom.propKey)) return
+      atom.style = sizePropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

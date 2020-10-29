@@ -50,10 +50,10 @@ export function roundedPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, rule) {
-      if (!isRoundedKey(propKey)) return
-      rule.style = roundedPropToStyle(propKey, propValue)
-      return rule
+    onVisitProp(atom) {
+      if (!isRoundedKey(atom.propKey)) return
+      atom.style = roundedPropToStyle(atom.propKey, atom.propValue)
+      return atom
     },
   }
 }

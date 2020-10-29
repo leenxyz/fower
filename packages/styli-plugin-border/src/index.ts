@@ -49,10 +49,10 @@ export function borderPropToStyle(prop: string) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ propKey }, rule) {
-      if (!isBorderKey(propKey)) return
-      rule.style = borderPropToStyle(propKey)
-      return rule
+    onVisitProp(atom) {
+      if (!isBorderKey(atom.propKey)) return
+      atom.style = borderPropToStyle(atom.propKey)
+      return atom
     },
   }
 }
