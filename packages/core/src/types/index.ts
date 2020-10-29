@@ -46,3 +46,15 @@ export interface Config {
 }
 
 export type Preset = Partial<Config>
+
+export interface Rule {
+  name: 'css' | ({} & string)
+  // style?: CSSProperties
+  style?: any
+  cssFragment?: string
+  cssFragmentList?: string[] // media queries
+  cssFragmentWithSelector?: string // css prop
+  pseudo?: 'link' | 'visited' | 'hover' | 'active'
+  type?: 'style' | 'font' | 'keyframe'
+  className?: string
+}

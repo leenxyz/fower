@@ -1,4 +1,4 @@
-import { upFirst } from '../utils'
+import { upFirst } from '@styli/utils'
 import { MarginMaps, PaddingMaps, SizeMaps } from '../types'
 
 export const G = {

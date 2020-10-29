@@ -1,3 +1,6 @@
 export * from './styli'
 export * from './types/Modifiers'
-export { createStyle, styled, toFinalProps, parseModifiers } from './api'
+export * from './types'
+export * from './Sheet'
+export * from './api'
+export { getValue } from './utils'

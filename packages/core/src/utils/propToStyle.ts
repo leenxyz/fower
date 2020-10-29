@@ -1,4 +1,5 @@
-import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst, hexToRgba } from './'
+import { isNumber, kebab, upFirst, isValidPropValue, downFirst, hexToRgba } from '@styli/utils'
+import { getValue } from '../utils'
 
 import { ModifierType } from '../types/Modifiers'
 import { weights, fontSizes, leadings, headings } from '../constants/typo'

@@ -1,6 +1,6 @@
 {
-  "name": "@styli/core",
-  "version": "0.5.0",
+  "name": "styli-plugin-typography",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -23,21 +23,12 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "devDependencies": {
-    "@types/lodash.memoize": "^4.1.6",
-    "@types/react": "^16.9.52",
-    "@types/string-hash": "^1.1.1",
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "@types/hoist-non-react-statics": "^3.3.1",
-    "@styli/utils": "^0.0.1",
-    "hoist-non-react-statics": "^3.3.2",
-    "is-in-browser": "^1.1.3",
-    "lodash.memoize": "^4.1.2",
-    "no-case": "^3.0.3",
-    "react": "^16.13.1",
-    "string-hash": "^1.1.3"
+    "@styli/core": "^0.5.0",
+    "@styli/utils": "^0.0.1"
   }
 }

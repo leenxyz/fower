@@ -1,19 +1,7 @@
 import hash from 'string-hash'
 import { CSSProperties } from 'react'
-import { Props } from './types'
-import { kebab } from './utils'
-
-export interface Rule {
-  name: 'css' | ({} & string)
-  // style?: CSSProperties
-  style?: any
-  cssFragment?: string
-  cssFragmentList?: string[] // media queries
-  cssFragmentWithSelector?: string // css prop
-  pseudo?: 'link' | 'visited' | 'hover' | 'active'
-  type?: 'style' | 'font' | 'keyframe'
-  className?: string
-}
+import { Props, Rule } from './types'
+import { kebab } from '@styli/utils'
 
 /**
  * Sheet, one Props map to one Sheet

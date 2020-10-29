@@ -9,7 +9,7 @@ import {
   overFlowTypes,
 } from '../constants'
 import { styli } from '../styli'
-import { downFirst, upFirst } from '.'
+import { downFirst, upFirst } from '@styli/utils'
 
 export function isFlexBoxKeyWrapper() {
   const getFlexKeys = (prefix: 'justify' | 'align') =>

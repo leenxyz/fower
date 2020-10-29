@@ -1,7 +1,7 @@
 import { Sheet } from '../Sheet'
 import { styli } from '../styli'
 import { Plugin, Props } from '../types'
-import { isEmptyObj, isFalsyProp } from '../utils'
+import { isEmptyObj, isFalsyProp } from '@styli/utils'
 
 export function parseModifiers(props: Props = {}): Sheet {
   let sheet = new Sheet(props)

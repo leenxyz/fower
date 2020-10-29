@@ -1,6 +1,6 @@
 import isBrowser from 'is-in-browser'
 import { Props } from '../types'
-import { isEmptyObj } from '../utils'
+import { isEmptyObj } from '@styli/utils'
 import { parseModifiers } from './parseModifiers'
 import { styleManager } from '../styleManager'
 
