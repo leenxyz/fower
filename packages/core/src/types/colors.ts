@@ -21,17 +21,12 @@ export interface PaddingMaps {
 }
 
 export interface Prop {
-  propKey: string
-  propValue: any
-}
-
-export interface PluginReturn {
-  sheet: Sheet
-  matched?: boolean
+  key: string
+  value: any
 }
 
 export interface Plugin {
-  onVisitProp?(prop: Prop, sheet: Sheet): PluginReturn
+  onVisitProp?(prop: Prop, sheet: Sheet): Sheet
   onStylesCreated?(): void
 }
 
@@ -40,10 +35,9 @@ interface Theme {
 }
 
 export interface Config {
-  plugins: Plugin[]
-  unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
-  theme: Theme
+  plugins?: Plugin[]
+  unit?: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
+  theme?: Theme
+  colors: Partial<IColors>
   transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }
-
-export type Preset = Partial<Config>

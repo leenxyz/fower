@@ -1,4 +1,4 @@
-import { Styli } from '../src/styli'
+import { styli } from '../src/styli'
 import {
   isNumber,
   upFirst,
@@ -7,7 +7,6 @@ import {
   isValidPropValue,
   getValue,
   elementType,
-  mergeWithDefaultOptions,
 } from '../src/utils'
 
 describe('utils', () => {
@@ -34,7 +33,7 @@ describe('utils', () => {
     expect(isValidPropValue(1)).toEqual(true)
   })
   it('getValue', () => {
-    Styli.config({
+    styli.config({
       transformUnit(value) {
         if (typeof value === 'string') return value
         return '' + value * 2
@@ -57,14 +56,5 @@ describe('utils', () => {
     expect(elementType(new WeakSet())).toEqual('weakset')
     expect(elementType(new Map())).toEqual('map')
     expect(elementType(new WeakMap())).toEqual('weakmap')
-  })
-  it('mergeWithDefaultOptions', () => {
-    const defaultOption = { a: 1, b: { c: 2 } }
-    const option = { a: 2, d: { e: 1 } }
-    expect(mergeWithDefaultOptions(option, defaultOption)).toMatchObject({
-      a: 2,
-      b: { c: 2 },
-      d: { e: 1 },
-    })
   })
 })

@@ -1,5 +1,5 @@
 import { noCase } from 'no-case'
-import { Styli } from '../styli'
+import { styli } from '../styli'
 import { ModifierType } from '../types/Modifiers'
 
 export function upFirst(s: string = '') {
@@ -28,7 +28,7 @@ export function isFalsyProp(propValue: any) {
 
 export function getValue(value: string | number, modifierType?: ModifierType) {
   if (isNumber(value)) {
-    const { transformUnit } = Styli.getConfigs()
+    const { transformUnit } = styli.getConfig()
     return transformUnit(Number(value), modifierType)
   }
   return value
@@ -39,27 +39,6 @@ export function elementType(ele: any) {
   const reg = /^\[object\s([A-Za-z]+)\]$/
   reg.test(typeStr)
   return RegExp.$1.toLowerCase()
-}
-
-export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: PlainObject): any {
-  const targetOptions: PlainObject = options
-  for (let key in defaultOptions) {
-    const defaultOptionsKeyTypeStr = elementType(defaultOptions[key])
-    const optionsKeyTypeStr = elementType(options[key])
-    const optionsKeyIsUndefined = optionsKeyTypeStr === 'undefined'
-
-    if (defaultOptionsKeyTypeStr === 'object') {
-      targetOptions[key] = mergeWithDefaultOptions(
-        optionsKeyIsUndefined ? {} : options[key],
-        defaultOptions[key],
-      )
-    } else if (defaultOptionsKeyTypeStr === 'array') {
-      targetOptions[key] = defaultOptions[key].concat(options[key] || [])
-    } else {
-      targetOptions[key] = optionsKeyIsUndefined ? defaultOptions[key] : options[key]
-    }
-  }
-  return targetOptions
 }
 
 export function isEmptyObj(props: any) {

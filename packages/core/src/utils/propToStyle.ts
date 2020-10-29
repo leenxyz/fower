@@ -1,6 +1,5 @@
 import { isNumber, kebab, upFirst, getValue, isValidPropValue, downFirst, hexToRgba } from './'
 
-import { ColorType, IColors } from '../constants/colors'
 import { ModifierType } from '../types/Modifiers'
 import { weights, fontSizes, leadings, headings } from '../constants/typo'
 import {
@@ -16,7 +15,7 @@ import {
   positionMaps,
   borderStyles,
 } from '../constants'
-import { Styli } from '../styli'
+import { styli } from '../styli'
 import { CSSProperties } from 'react'
 
 export function sizePropToStyle(prop: string, propValue: any) {
@@ -65,7 +64,7 @@ export function marginPropToStyle(prop: string, propValue: any) {
 }
 
 export function bgPropToStyle(prop: string, propValue: any) {
-  const Colors = Styli.getConfig<IColors>('colors')
+  const Colors = styli.getColors()
   if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
   const [, color = ''] = prop.match(/^bg(\w+)/) || []
   return { backgroundColor: Colors[downFirst(color)] }
@@ -87,8 +86,8 @@ export function borderPropToStyle(prop: string) {
   let style: any = {}
 
   let [, second, third] = kebab(prop).split('-')
-  const Colors = Styli.getConfig<IColors>('colors')
-  const isBorderColor = (val: string) => !!Colors[val as ColorType]
+  const Colors = styli.getColors()
+  const isBorderColor = (val: string) => !!Colors[val as any]
   const isBorderStyle = (val: string) => borderStyles.includes(val)
   const isBorderPosition = (val: string) => !!positionMaps[val]
   const isBorderWidth = (val: string) => isNumber(val)
@@ -99,7 +98,7 @@ export function borderPropToStyle(prop: string) {
     style[`border${position}Style`] = 'solid'
   }
   if (isBorderColor(second)) {
-    style.borderColor = Colors[second as ColorType]
+    style.borderColor = Colors[second as any]
   }
   if (isBorderStyle(second)) {
     style.borderStyle = second
@@ -215,8 +214,8 @@ export function textHeadingPropToStyle(prop: string): any {
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
-  const Colors = Styli.getConfig<IColors>('colors')
   let color: string
+  const Colors = styli.getColors()
   if (Colors[prop]) {
     color = Colors[prop]
   } else if (prop === 'color') {

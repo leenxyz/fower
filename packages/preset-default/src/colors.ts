@@ -1,4 +1,4 @@
-export const presetColors = {
+export const colors = {
   black: '#000000',
   white: '#ffffff',
 
@@ -119,11 +119,3 @@ export const presetColors = {
   pink800: '#97266d',
   pink900: '#702459',
 }
-
-interface Dict {
-  [key: string]: string
-}
-
-export type ColorType = keyof typeof presetColors
-
-export type IColors = typeof presetColors & Dict

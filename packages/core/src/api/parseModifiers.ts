@@ -1,5 +1,5 @@
 import { Sheet } from '../Sheet'
-import { Styli } from '../styli'
+import { styli } from '../styli'
 import { Plugin, Props } from '../types'
 import { isEmptyObj, isFalsyProp } from '../utils'
 
@@ -8,7 +8,7 @@ export function parseModifiers(props: Props = {}): Sheet {
 
   if (isEmptyObj(props)) return sheet
 
-  const plugins = Styli.getConfig<Plugin[]>('plugins')
+  const plugins = styli.getConfig<Plugin[]>('plugins')
 
   for (const [propKey, propValue] of Object.entries(props)) {
     if (isFalsyProp(propValue)) continue

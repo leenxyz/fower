@@ -8,9 +8,8 @@ import {
   displayTypes,
   overFlowTypes,
 } from '../constants'
-import { Styli } from '../styli'
+import { styli } from '../styli'
 import { downFirst, upFirst } from '.'
-import { IColors } from '../constants/colors'
 
 export function isFlexBoxKeyWrapper() {
   const getFlexKeys = (prefix: 'justify' | 'align') =>
@@ -75,7 +74,7 @@ export function isTextHeadingKey(key: string) {
 }
 
 export function isColorKey(key: string) {
-  const Colors = Styli.getConfig<IColors>('colors')
+  const Colors = styli.getColors()
   return /^color(.+)?$/.test(key) || !!Colors[key]
 }
 

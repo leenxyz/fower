@@ -1,40 +1,80 @@
-import { presetColors, IColors } from './constants/colors'
-import { ModifierType } from './types/Modifiers'
-import { mergeWithDefaultOptions } from './utils'
-import { Plugin } from './types'
-import { pluginSize, pluginMargin, pluginPadding, pluginBg, pluginCss } from './plugins'
+import { Plugin, Config, Preset } from './types'
+import paddingPlugin from '../src/plugins/styli-plugin-padding'
+import colorPlugin from '../src/plugins/styli-plugin-color'
+import bgPlugin from '../src/plugins/styli-plugin-bg'
+import alignmentPlugin from '../src/plugins/styli-plugin-alignment'
+import displayPlugin from '../src/plugins/styli-plugin-display'
+import lineHeightPlugin from '../src/plugins/styli-plugin-line-height'
+import positionPlugin from '../src/plugins/styli-plugin-position'
+import textHeadingPlugin from '../src/plugins/styli-plugin-text-heading'
+import flexItemPlugin from '../src/plugins/styli-plugin-flex-item'
+import marginPlugin from '../src/plugins/styli-plugin-margin'
+import roundedPlugin from '../src/plugins/styli-plugin-rounded'
+import textSizePlugin from '../src/plugins/styli-plugin-text-size'
+import borderPlugin from '../src/plugins/styli-plugin-border'
+import flexboxPlugin from '../src/plugins/styli-plugin-flexbox'
+import opacityPlugin from '../src/plugins/styli-plugin-opacity'
+import shadowPlugin from '../src/plugins/styli-plugin-shadow'
+import textWeightPlugin from '../src/plugins/styli-plugin-text-weight'
+import headingPlugin from '../src/plugins/styli-plugin-heading'
+import overflowPlugin from '../src/plugins/styli-plugin-overflow'
+import sizePlugin from '../src/plugins/styli-plugin-size'
+import zIndexPlugin from '../src/plugins/styli-plugin-z-index'
 
-interface Configs {
-  unit: string
-  canUseDom: boolean
-  colors: Partial<IColors>
-  plugins: Plugin[]
-  breakpoints: number[]
-  transformUnit: (value: number | string, modifierType?: ModifierType) => string
-}
-
-export class StyliFactory {
-  private configs: Configs = {
+class Styli {
+  config: Config = {
     unit: 'px',
-    colors: presetColors,
-    canUseDom: !!window && !!window?.document?.createElement,
-    plugins: [pluginSize(), pluginMargin(), pluginPadding(), pluginBg(), pluginCss()],
-    breakpoints: [0, 640, 768, 1024, 1280],
+    plugins: [],
+    theme: {
+      colors: {},
+    },
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }
 
-  config(config: Partial<Configs>) {
-    this.configs = {
-      ...mergeWithDefaultOptions(config, this.configs),
+  setup(preset: Preset) {
+    console.log('preset:', preset)
+    this.config = {
+      ...this.config,
+      ...preset,
     }
+
+    this.config.plugins = [
+      paddingPlugin(),
+      colorPlugin(),
+      bgPlugin(),
+      alignmentPlugin(),
+      displayPlugin(),
+      lineHeightPlugin(),
+      positionPlugin(),
+      textHeadingPlugin(),
+      flexItemPlugin(),
+      marginPlugin(),
+      roundedPlugin(),
+      textSizePlugin(),
+      borderPlugin(),
+      flexboxPlugin(),
+      opacityPlugin(),
+      shadowPlugin(),
+      textWeightPlugin(),
+      headingPlugin(),
+      overflowPlugin(),
+      sizePlugin(),
+      zIndexPlugin(),
+      ...this.config.plugins,
+    ]
   }
 
-  getConfigs(): Configs {
-    return this.configs
+  getTheme<T = any>(themeKey: string): T {
+    return this.config.theme[themeKey]
   }
 
-  getConfig<T>(type: keyof Configs): T {
-    return this.configs[type] as T
+  getColors() {
+    return styli.config.theme.colors || {}
+  }
+
+  getConfig<T = any>(type?: keyof Config): T {
+    if (!type) return this.config as any
+    return this.config[type] as any
   }
 
   use(...plugins: Plugin[]) {
@@ -42,4 +82,4 @@ export class StyliFactory {
   }
 }
 
-export const Styli = new StyliFactory()
+export const styli = new Styli()

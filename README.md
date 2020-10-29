@@ -28,7 +28,7 @@ Install styli core package:
 $ npm install @styli/core
 ```
 
-Install on of framework binding packages:
+Install one of framework binding package:
 
 ```bash
 $ npm install @styli/react
