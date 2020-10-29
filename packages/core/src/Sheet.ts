@@ -5,7 +5,8 @@ import { kebab } from './utils'
 
 export interface Rule {
   name: 'css' | ({} & string)
-  style?: CSSProperties
+  // style?: CSSProperties
+  style?: any
   cssFragment?: string
   cssFragmentList?: string[] // media queries
   cssFragmentWithSelector?: string // css prop

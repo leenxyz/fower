@@ -1,4 +1,3 @@
-import { IColors } from '../constants/colors'
 import { Sheet } from '../Sheet'
 import { ModifierType } from './Modifiers'
 export * from './Modifiers'
@@ -21,8 +20,8 @@ export interface PaddingMaps {
 }
 
 export interface Prop {
-  propKey: string
-  propValue: any
+  key: string
+  value: any
 }
 
 export interface PluginReturn {

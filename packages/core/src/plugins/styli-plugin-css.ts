@@ -1,12 +1,12 @@
 import hash from 'string-hash'
 import { Rule } from '../Sheet'
-import { PlainObject, Plugin } from '../types'
+import { Plugin } from '../types'
 import { kebab } from '../utils'
 
 // TODO: need refactor
 export const pluginCss = (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
+    onVisitProp({ key: propKey, value: propValue }, sheet) {
       if (!['css', 'debug'].includes(propKey)) return { sheet }
 
       const debug = propKey === 'debug'
@@ -39,7 +39,7 @@ export const pluginCss = (): Plugin => {
 // pseudo-class pseudo-element should connect selector string directly
 const getPrefix = (v: string) => (/^::?.*/.test(v) ? '' : ' ')
 
-function getPlainObjectPaths(object: PlainObject): any {
+function getPlainObjectPaths(object: any): any {
   return (
     object &&
     typeof object === 'object' &&
@@ -51,7 +51,7 @@ function getPlainObjectPaths(object: PlainObject): any {
   )
 }
 
-function parseCssProp(className: string, value: PlainObject) {
+function parseCssProp(className: string, value: any) {
   return getPlainObjectPaths(value).reduce((result: any, path: string[]) => {
     const attrValue = path.reduce((obj: any, c: string) => obj[c], value)
     const attr = kebab('' + path.pop())

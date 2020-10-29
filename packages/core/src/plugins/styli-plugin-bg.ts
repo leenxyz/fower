@@ -1,16 +1,15 @@
-import { IColors } from '../constants/colors'
 import { Rule } from '../Sheet'
-import { Styli } from '../styli'
+import { styli } from '../styli'
 import { Plugin } from '../types'
 import { downFirst, isValidPropValue, kebab } from '../utils'
 import { isBgColorKey } from '../utils/propKey'
 
-export const pluginBg = (): Plugin => {
+export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
+    onVisitProp({ key: propKey, value: propValue }, sheet) {
       if (!isBgColorKey(propKey)) return { sheet }
 
-      const Colors = Styli.getConfig<IColors>('colors')
+      const Colors = styli.getColors()
 
       const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
       const styleKey = 'backgroundColor'

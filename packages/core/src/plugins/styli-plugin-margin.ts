@@ -4,9 +4,9 @@ import { ModifierType, Plugin } from '../types'
 import { getValue, isValidPropValue, kebab } from '../utils'
 import { isMarginKey } from '../utils/propKey'
 
-export const pluginMargin = (): Plugin => {
+export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
+    onVisitProp({ key: propKey, value: propValue }, sheet) {
       if (!isMarginKey(propKey)) return { sheet }
 
       const [key, value] = propKey.split('-')

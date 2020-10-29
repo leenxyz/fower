@@ -4,9 +4,9 @@ import { ModifierType, Plugin } from '../types'
 import { getValue, isValidPropValue, kebab } from '../utils'
 import { isSizeKey } from '../utils/propKey'
 
-export const pluginSize = (): Plugin => {
+export default (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
+    onVisitProp({ key: propKey, value: propValue }, sheet) {
       if (!isSizeKey(propKey)) return { sheet }
 
       const [key, value] = propKey.split('-')
