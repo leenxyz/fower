@@ -1,16 +1,30 @@
 import { Plugin } from '../types'
+import { isValidPropValue } from '../utils'
 import { isFlexItemKey } from '../utils/propKey'
-import { flexItemPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginFlexItem = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isFlexItemKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isFlexItemKey(propKey)) return
 
-      const style = flexItemPropToStyle(prop.key, prop.value)
+      const key = 'flex'
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      if (Array.isArray(propValue)) {
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          rule.cssFragmentList![idx] = `${cssFragment}${key}:${value};`
+        })
+      } else {
+        if (isValidPropValue(propValue)) {
+          rule.style![key] = propValue
+        } else {
+          const [, value] = propKey.split('-')
+          const flexValue = value || (propValue === true ? 1 : propValue)
+          rule.style![key] = flexValue
+        }
+      }
+
+      return rule
     },
   }
 }

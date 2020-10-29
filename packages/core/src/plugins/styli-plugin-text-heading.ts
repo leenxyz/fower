@@ -1,16 +1,22 @@
+import { headings } from '../constants/typo'
 import { Plugin } from '../types'
 import { isTextHeadingKey } from '../utils/propKey'
-import { textHeadingPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginTextHeading = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isTextHeadingKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isTextHeadingKey(propKey)) return
 
-      const style = textHeadingPropToStyle(prop.key)
+      const style: any = {
+        display: 'block',
+        fontWeight: 'bold',
+        fontSize: headings[propValue] + 'em',
+      }
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${c}:${style[c]};`, '')
+      rule.style = style
+
+      return rule
     },
   }
 }

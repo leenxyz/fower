@@ -1,16 +1,32 @@
-import { Plugin } from '../types'
+import { positionMaps } from '../constants'
+import { ModifierType, Plugin } from '../types'
+import { getValue, isValidPropValue } from '../utils'
 import { isPositionKey } from '../utils/propKey'
-import { positionPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginPosition = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isPositionKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isPositionKey(propKey)) return
 
-      const style = positionPropToStyle(prop.key, prop.value)
+      const [key = '', value = ''] = propKey.split('-')
+      const lowerKey = key.toLocaleLowerCase()
+      const _key = positionMaps[lowerKey]
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      if (Array.isArray(propValue)) {
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          const attrValue = getValue(value, ModifierType.position)
+          rule.cssFragmentList![idx] = `${cssFragment}${_key}:${attrValue};`
+        })
+      } else {
+        if (isValidPropValue(propValue) && positionMaps.includes(propKey)) {
+          rule.style = { [key]: propValue }
+        } else {
+          rule.style = { [key]: getValue(value, ModifierType.position) }
+        }
+      }
+
+      return rule
     },
   }
 }

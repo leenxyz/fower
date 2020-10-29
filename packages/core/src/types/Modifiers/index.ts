@@ -37,6 +37,7 @@ export enum ModifierType {
   shadow = 'shadow',
   flex = 'flex',
   flexItem = 'flexItem',
+  lineHeight = 'lineHeight',
 }
 
 interface Directive {

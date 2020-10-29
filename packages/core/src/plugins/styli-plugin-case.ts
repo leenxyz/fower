@@ -1,21 +1,21 @@
 import { Plugin } from '../types'
+import { kebab } from '../utils'
 
-export default (): Plugin => {
+export const pluginCase = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
+    onVisitProp({ propKey }, rule) {
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
-      const isCaseKey = caseKeys.includes(prop.key)
+      const isCaseKey = caseKeys.includes(propKey)
 
-      if (!isCaseKey) return { sheet }
+      if (!isCaseKey) return
 
-      const value: any = prop.key === 'normalcase' ? 'none' : prop.key
+      const value: any = propKey === 'normalcase' ? 'none' : propKey
 
-      sheet.addRule({
-        name: prop.key,
-        style: { textTransform: value },
-      })
+      const key = 'textTransform'
+      rule.style = { [key]: value }
+      rule.cssFragment = `${kebab(key)}:${value}`
 
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

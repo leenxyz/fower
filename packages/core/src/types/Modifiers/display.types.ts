@@ -1,6 +1,6 @@
 // https://developer.mozilla.org/zh-CN/docs/Web/CSS/display
 export interface Displays {
-  display?: string
+  display?: string | string[]
   dBlock?: boolean
   dInline?: boolean
   dNone?: boolean

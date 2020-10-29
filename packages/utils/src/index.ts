@@ -56,3 +56,7 @@ export function hexToRgba(sColor: string, opacity?: string) {
 
   return sColor
 }
+
+export function isPercentNumber(s: string | number) {
+  return /^-?\d+p$/.test('' + s)
+}

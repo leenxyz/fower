@@ -25,5 +25,5 @@ export interface ZIndex {
    * <View zIndex={10}></View>
    * ```
    */
-  zIndex?: boolean | number
+  zIndex?: boolean | number | number[] | string | string[]
 }

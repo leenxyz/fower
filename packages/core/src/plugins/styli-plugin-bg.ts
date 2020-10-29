@@ -11,12 +11,10 @@ export default (): Plugin => {
 
       const Colors = styli.getColors()
 
-      const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
       const styleKey = 'backgroundColor'
       const cssAttrKey = kebab(styleKey)
 
       if (Array.isArray(propValue)) {
-        const cssAttrKey = kebab(styleKey)
         propValue.forEach((value, idx) => {
           const cssFragment = rule.cssFragmentList![idx] || ''
           rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${value};`
@@ -28,9 +26,7 @@ export default (): Plugin => {
         rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${Colors[value] || value};`
       }
 
-      sheet.addRule(rule)
-
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

@@ -17,8 +17,6 @@ export const pluginCss = (): Plugin => {
 
       const className = propKey === 'debug' ? 'debug' : `css-${hash(JSON.stringify(value))}`
 
-      const rule: Rule = { name: propKey, className, cssFragmentWithSelector: '' }
-
       const list = parseCssProp(className, value)
 
       rule.cssFragmentWithSelector = list.reduce((result: string, { key, value }: any) => {
@@ -29,9 +27,7 @@ export const pluginCss = (): Plugin => {
         return result + `${key}{${str}}`
       }, '')
 
-      sheet.addRule(rule)
-
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

@@ -29,7 +29,7 @@ export function isAlignmentKey(key: string) {
 }
 
 export function isZIndexKey(key: string) {
-  return /^zIndex(-\d+)?$/.test(key)
+  return /^zIndex(--?\d+)?$/.test(key)
 }
 
 // TODO: need refactor
@@ -70,7 +70,7 @@ export function isTextAlign(key: string) {
 }
 
 export function isTextHeadingKey(key: string) {
-  return headingTypes.includes(key)
+  return headingTypes.includes(key) || /^heading$/.test(key)
 }
 
 export function isColorKey(key: string) {
@@ -89,7 +89,7 @@ export function isTextWeightKey(key: string) {
 }
 
 export function isTextLineHeightKey(key: string) {
-  return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/.test(key)
+  return /^lh(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/.test(key)
 }
 
 export function isShadowKey(key: string) {

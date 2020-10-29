@@ -1,16 +1,13 @@
 import { Plugin } from '../types'
 
-export default (): Plugin => {
+export const pluginHidden = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (prop.key !== 'hide') return { sheet }
+    onVisitProp({ propKey }, rule) {
+      if (propKey !== 'hide') return
 
-      sheet.addRule({
-        name: prop.key,
-        style: { display: 'none' },
-      })
+      rule.style = { display: 'none' }
 
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

@@ -1,16 +1,38 @@
+import { flexMaps, G } from '../constants'
 import { Plugin } from '../types'
+import { kebab } from '../utils'
 import { isFlexBoxKey } from '../utils/propKey'
-import { flexPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginFlexBox = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isFlexBoxKey(prop.key)) return { sheet }
+    onVisitProp({ propKey }, rule) {
+      if (!isFlexBoxKey(propKey)) return
 
-      const style = flexPropToStyle(prop.key)
+      const style: any = {}
+      const wraps = [G.nowrap, G.wrap]
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      if (propKey === G.row) style.flexDirection = G.row
+      if (propKey === G.column) style.flexDirection = G.column
+
+      // display: flex
+      if (propKey === G.row || propKey === G.column) style.display = G.flex
+
+      // set flex-wrap
+      if (wraps.includes(propKey)) style.flexWrap = propKey as any
+
+      // justify-content
+      if (propKey.startsWith('justify')) {
+        style.justifyContent = flexMaps[propKey.replace('justify', '').toLocaleLowerCase()]
+      }
+
+      if (propKey.startsWith('align')) {
+        style.alignItems = flexMaps[propKey.replace('align', '').toLocaleLowerCase()]
+      }
+
+      rule.style = style
+      rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${kebab(c)}:${style[c]};`, '')
+
+      return rule
     },
   }
 }

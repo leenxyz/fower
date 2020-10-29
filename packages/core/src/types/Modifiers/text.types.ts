@@ -1,6 +1,7 @@
 import { Property } from 'csstype'
 
 export interface Texts {
+  textAlign?: string | string[]
   textLeft?: boolean
   textCenter?: boolean
   textRight?: boolean
@@ -22,6 +23,7 @@ export interface Texts {
    * <View h1></View>
    * ```
    */
+  heading?: string | string[]
   h1?: boolean
   h2?: boolean
   h3?: boolean
@@ -57,14 +59,14 @@ export interface Texts {
   fontBold?: boolean
   fontExtrabold?: boolean
 
-  leading?: boolean | number | string | number[] | string[]
+  lh?: boolean | number | string | number[] | string[]
 
-  leadingNone?: boolean
-  leadingTight?: boolean
-  leadingSnug?: boolean
-  leadingNormal?: boolean
-  leadingRelaxed?: boolean
-  leadingLoose?: boolean
+  lhNone?: boolean
+  lhTight?: boolean
+  lhSnug?: boolean
+  lhNormal?: boolean
+  lhRelaxed?: boolean
+  lhLoose?: boolean
 
   color?: Property.Color | Property.Color[]
 
