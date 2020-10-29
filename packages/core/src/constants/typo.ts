@@ -11,17 +11,6 @@ export const fontSizes: any = {
   '6xl': 28,
 }
 
-export const weights: any = {
-  hairline: 100,
-  thin: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 'bold',
-  extrabold: 800,
-  black: 900,
-}
 
 export const leadings: any = {
   none: 1,

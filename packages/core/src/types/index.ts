@@ -21,24 +21,8 @@ export interface PaddingMaps {
 }
 
 export interface Prop {
-  key: string
-  value: any
-}
-
-export interface Rule {
-  name: 'css' | ({} & string)
-  style?: CSSProperties
-  cssFragment?: string
-  cssFragmentList?: string[] // media queries
-  cssFragmentWithSelector?: string // css prop
-  pseudo?: 'link' | 'visited' | 'hover' | 'active'
-  type?: 'style' | 'font' | 'keyframe'
-  className?: string
-}
-
-export interface Plugin {
-  onVisitProp?(prop: Prop, initRule: Rule, sheet: Sheet): Rule | void
-  onStylesCreated?(): void
+  propKey: string
+  propValue: any
 }
 
 interface Theme {
@@ -54,10 +38,14 @@ export interface Config {
 
 export type Preset = Partial<Config>
 
+export interface Plugin {
+  onVisitProp?(prop: Prop, rule: Rule, sheet: Sheet): Rule | undefined | null
+  onStylesCreated?(): void
+}
+
 export interface Rule {
   name: 'css' | ({} & string)
-  // style?: CSSProperties
-  style?: any
+  style?: CSSProperties
   cssFragment?: string
   cssFragmentList?: string[] // media queries
   cssFragmentWithSelector?: string // css prop

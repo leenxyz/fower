@@ -1,4 +1,3 @@
-import { IColors } from '../constants/colors'
 import { Sheet } from '../Sheet'
 import { ModifierType } from './Modifiers'
 export * from './Modifiers'
@@ -38,6 +37,7 @@ export interface Config {
   plugins?: Plugin[]
   unit?: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
   theme?: Theme
-  colors: Partial<IColors>
+  // TODO:
+  colors: any
   transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }

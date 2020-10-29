@@ -1,4 +1,4 @@
-import { Plugin, ModifierType, Rule, getValue } from '@styli/core'
+import { Plugin, ModifierType, getValue } from '@styli/core'
 import { isValidPropValue, kebab } from '@styli/utils'
 
 export const sizeMaps: any = {
@@ -18,34 +18,27 @@ export function isSizeKey(key: string) {
 
 export default (): Plugin => {
   return {
-    onVisitProp({ key: propKey, value: propValue }, sheet) {
-      if (!isSizeKey(propKey)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isSizeKey(propKey)) return
 
       const [key, value] = propKey.split('-')
-      const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
 
-      sizeMaps[key].forEach((k) => {
+      sizeMaps[key].forEach((k: any) => {
         if (Array.isArray(propValue)) {
           propValue.forEach((v: any, idx: number) => {
             const cssFragment = rule.cssFragmentList![idx] || ''
-            rule.cssFragmentList![idx] = `${cssFragment}${kebab(k)}:${getValue(
-              v,
-              ModifierType.size,
-            )};`
+            const attrValue = getValue(v, ModifierType.size)
+            rule.cssFragmentList![idx] = `${cssFragment}${kebab(k)}:${attrValue};`
           })
         } else {
-          const attrValue = isValidPropValue(propValue) ? propValue : value
-          rule.style = { ...rule.style, [k]: getValue(attrValue, ModifierType.size) }
-          rule.cssFragment = `${rule.cssFragment}${kebab(k)}:${getValue(
-            attrValue,
-            ModifierType.size,
-          )};`
+          const sValue = isValidPropValue(propValue) ? propValue : value
+          const attrValue = getValue(sValue, ModifierType.size)
+          rule.style = { ...rule.style, [k]: attrValue }
+          rule.cssFragment = `${rule.cssFragment}${kebab(k)}:${attrValue};`
         }
       })
 
-      sheet.addRule(rule)
-
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

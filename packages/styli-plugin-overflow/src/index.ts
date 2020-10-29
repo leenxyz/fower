@@ -1,0 +1,49 @@
+import { Plugin } from '@styli/core'
+import { downFirst, isValidPropValue, kebab } from '@styli/utils'
+
+export const overFlowTypes = ['visible', 'hidden', 'scroll', 'auto', 'inherit', 'initial', 'unset']
+
+export function isOverFlowKey(key: string) {
+  if (/^overflow[XY]?$/.test(key)) return true
+  const [, value] = key.match(/^o[xy]?([A-Z]\w+)$/) || []
+  return overFlowTypes.includes(downFirst(value))
+}
+
+export default (): Plugin => {
+  return {
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isOverFlowKey(propKey)) return
+
+      if (Array.isArray(propValue)) {
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          rule.cssFragmentList![idx] = `${cssFragment}${propKey}:${value};`
+        })
+      } else {
+        if (isValidPropValue(propValue)) {
+          rule.style = { ...rule.style, [propKey]: propValue }
+          rule.cssFragment = `${rule.cssFragment}${propKey}:${propValue};`
+        } else {
+          const [, key, value] = propKey.match(/^(o[xy]?)([A-Z]\w+)$/) || []
+          const val: any = downFirst(value)
+          let _key = 'overflow'
+          switch (key) {
+            case 'ox':
+              _key = 'overflowX'
+              break
+            case 'oy':
+              _key = 'overflowY'
+              break
+            default:
+              _key = 'overflow'
+          }
+
+          rule.style = { ...rule.style, [_key]: val }
+          rule.cssFragment = `${rule.cssFragment}${kebab(_key)}:${val};`
+        }
+      }
+
+      return rule
+    },
+  }
+}

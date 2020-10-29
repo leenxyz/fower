@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react'
-import { StyliUnit } from '../types'
 import { parseModifiers } from './parseModifiers'
 
 export function createStyle(...args: (string | CSSProperties)[]): CSSProperties {

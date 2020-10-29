@@ -1,7 +1,7 @@
+import { isEmptyObj, isFalsyProp } from '@styli/utils'
 import { Sheet } from '../Sheet'
 import { styli } from '../styli'
-import { Plugin, Props } from '../types'
-import { isEmptyObj, isFalsyProp } from '@styli/utils'
+import { Plugin, Props, Rule } from '../types'
 
 export function parseModifiers(props: Props = {}): Sheet {
   let sheet = new Sheet(props)
@@ -16,12 +16,17 @@ export function parseModifiers(props: Props = {}): Sheet {
     /** register plugin */
     for (const plugin of plugins) {
       if (plugin.onVisitProp) {
-        const { matched, sheet: newSheet } = plugin.onVisitProp(
-          { key: propKey, value: propValue },
-          sheet,
-        )
-        if (matched) {
-          sheet = newSheet
+        const initialRule: Rule = {
+          name: propKey,
+          style: {},
+          cssFragment: '',
+          cssFragmentList: [],
+        }
+
+        const newRule = plugin.onVisitProp({ propKey, propValue }, initialRule, sheet)
+
+        if (newRule) {
+          sheet.addRule(newRule)
           break
         }
       }

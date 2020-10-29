@@ -110,7 +110,7 @@ export class Sheet {
    */
   toCss(): string {
     // TODO: 循环可能太多
-    const css = this.rules.reduce((result, rule) => {
+    const css = this.rules.reduce((result, rule: any) => {
       // handle css prop
       if (rule.name === 'css') return result + parseCSSProp(rule.style, rule.className)
 

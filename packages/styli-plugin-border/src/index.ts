@@ -1,4 +1,4 @@
-import { Plugin, styli, getValue } from '@styli/core'
+import { ModifierType, Plugin, styli, getValue } from '@styli/core'
 import { kebab, isNumber, upFirst } from '@styli/utils'
 
 export const G = {
@@ -22,40 +22,36 @@ export function isBorderKey(key: string) {
   return key.startsWith('border')
 }
 
-export function borderPropToStyle(prop: string) {
-  let style: any = {}
-
-  let [, second, third] = kebab(prop).split('-')
-  const Colors = styli.getColors()
-  const isBorderColor = (val: string) => !!Colors[val as any]
-  const isBorderStyle = (val: string) => borderStyles.includes(val)
-  const isBorderPosition = (val: string) => !!positionMaps[val]
-  const isBorderWidth = (val: string) => isNumber(val)
-
-  if (isBorderWidth(second) || isBorderWidth(third)) {
-    const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
-    style[`border${position}Width`] = getValue(third || second, 'border')
-    style[`border${position}Style`] = 'solid'
-  }
-  if (isBorderColor(second)) {
-    style.borderColor = Colors[second as any]
-  }
-  if (isBorderStyle(second)) {
-    style.borderStyle = second
-  }
-
-  return style
-}
-
 export default (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isBorderKey(prop.key)) return { sheet }
+    onVisitProp({ propKey }, rule) {
+      if (!isBorderKey(propKey)) return
 
-      const style = borderPropToStyle(prop.key)
+      let style: any = {}
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      let [, second, third] = kebab(propKey).split('-')
+      const Colors = styli.getColors()
+      const isBorderColor = (val: string) => !!Colors[val as any]
+      const isBorderStyle = (val: string) => borderStyles.includes(val)
+      const isBorderPosition = (val: string) => !!positionMaps[val]
+      const isBorderWidth = (val: string) => isNumber(val)
+
+      if (isBorderWidth(second) || isBorderWidth(third)) {
+        const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
+        style[`border${position}Width`] = getValue(third || second, ModifierType.border)
+        style[`border${position}Style`] = 'solid'
+      }
+      if (isBorderColor(second)) {
+        style.borderColor = Colors[second as any]
+      }
+      if (isBorderStyle(second)) {
+        style.borderStyle = second
+      }
+
+      rule.style = style
+      rule.cssFragment = Object.keys(style).reduce((t, c) => `${t}${kebab(c)}:${style[c]};`, '')
+
+      return rule
     },
   }
 }
