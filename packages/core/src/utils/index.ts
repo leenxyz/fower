@@ -3,7 +3,7 @@ import { Styli } from '../styli'
 import { PlainObject } from '../types'
 import { ModifierType } from '../types/Modifiers'
 
-export const canUseDom = !!window?.document?.createElement
+export const canUseDom: boolean = !!window && !!window?.document?.createElement
 
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
@@ -27,6 +27,10 @@ export function isPercentNumber(s: string | number) {
 
 export function isValidPropValue(v: any) {
   return typeof v !== 'boolean'
+}
+
+export function isFalsyProp(propValue: any) {
+  return typeof propValue == 'boolean' && !propValue
 }
 
 export function getValue(value: string | number, modifierType?: ModifierType) {
@@ -66,6 +70,8 @@ export function mergeWithDefaultOptions(options: PlainObject, defaultOptions: Pl
         optionsKeyIsUndefined ? {} : options[key],
         defaultOptions[key],
       )
+    } else if (defaultOptionsKeyTypeStr === 'array') {
+      targetOptions[key] = defaultOptions[key].concat(options[key] || [])
     } else {
       targetOptions[key] = optionsKeyIsUndefined ? defaultOptions[key] : options[key]
     }

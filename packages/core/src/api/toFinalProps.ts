@@ -1,34 +1,29 @@
-import { Styli } from '../styli'
-import { PlainObject, Plugin, PluginWrapper, StyliUnit } from '../types'
+import { toCss } from '../utils/toCss'
+import { toStyle } from '../utils/toStyle'
+import { Props } from '../types'
 import { isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
+import { Styli } from '../styli'
 
+/**
+ * Go get finanl props with style
+ * @param props component props
+ */
 export function toFinalProps(props: any) {
   if (isEmptyObj(props)) return {}
 
-  const { styliKeys = [], styliUnits = [] } = parseModifiers(props)
+  const sheet = parseModifiers(props)
 
-  const finalProps = Object.keys(props).reduce((result, key) => {
-    if (styliKeys.includes(key)) return result
-    return { ...result, [key]: props[key] }
-  }, {} as any)
+  const keys = sheet.rules.map((i) => i.name)
 
-  const plugins = Styli.getConfig<Plugin[]>('plugins')
-  return traversingPlugins(plugins.slice(), finalProps, styliUnits, props)
-}
+  const finalProps: Props = {}
+  for (let i in props) {
+    if (!keys.includes(i)) {
+      finalProps[i] = props[i]
+    }
+  }
 
-function traversingPlugins(
-  plugins: Plugin[],
-  finalProps: PlainObject,
-  styliUnits: StyliUnit[],
-  props: PlainObject,
-): PlainObject {
-  if (!plugins.length) return finalProps
+  const canUseDom = Styli.getConfig<boolean>('canUseDom')
 
-  const plugin = plugins.shift()
-
-  const [fn, config] = Array.isArray(plugin) ? plugin : [plugin as PluginWrapper]
-  finalProps = fn(config)(finalProps, styliUnits, props)
-
-  return traversingPlugins(plugins, finalProps, styliUnits, props)
+  return canUseDom ? toCss(finalProps, sheet) : toStyle(finalProps, sheet)
 }

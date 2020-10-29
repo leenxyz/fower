@@ -1,47 +1,37 @@
+import { Sheet } from '../Sheet'
 import { Styli } from '../styli'
-import { PlainObject, StyliUnit } from '../types'
-import { isEmptyObj } from '../utils'
-import { convertConfigs, ConvertConfig } from '../utils/convertConfigs'
+import { PlainObject, Plugin, Rule } from '../types'
+import { isEmptyObj, isFalsyProp } from '../utils'
 
-interface ParsedModifiers {
-  styliKeys: string[]
-  styliUnits: StyliUnit[]
-}
+export function parseModifiers(props: PlainObject = {}): Sheet {
+  let sheet = new Sheet(props)
 
-function getConvertConfigs() {
-  const customConvertConfig = Styli.getConfig<ConvertConfig[]>('convertConfig')
-  return convertConfigs.concat(customConvertConfig)
-}
+  if (isEmptyObj(props)) return sheet
 
-function isFalsyProp(propValue: any) {
-  return typeof propValue == 'boolean' && !propValue
-}
+  const plugins = Styli.getConfig<Plugin[]>('plugins')
 
-export function parseModifiers(props: PlainObject): ParsedModifiers {
-  let styliUnits: StyliUnit[] = []
-  const styliKeys: string[] = []
-
-  if (isEmptyObj(props)) {
-    return { styliKeys, styliUnits }
-  }
-
-  const convertMap = getConvertConfigs()
-
-  for (const [prop, propValue] of Object.entries(props)) {
-    // ignore false value
+  for (const [propKey, propValue] of Object.entries(props)) {
     if (isFalsyProp(propValue)) continue
 
-    for (const item of convertMap) {
-      const { isMatch, toStyle } = item
-      if (isMatch(prop, propValue, props)) {
-        styliKeys.push(prop)
-        styliUnits = styliUnits.concat(
-          toStyle(prop, propValue, props).map((o) => ({ ...o, prop, propValue })),
-        )
-        break
+    /** register plugin */
+    for (const plugin of plugins) {
+      if (plugin.onVisitProp) {
+        const initRule: Rule = {
+          name: propKey,
+          style: {},
+          cssFragment: '',
+          cssFragmentList: [],
+        }
+
+        const rule = plugin.onVisitProp({ propKey, propValue }, initRule, sheet)
+
+        if (rule) {
+          sheet.addRule(rule)
+          break
+        }
       }
     }
   }
 
-  return { styliKeys, styliUnits }
+  return sheet
 }

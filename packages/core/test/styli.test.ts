@@ -9,21 +9,6 @@ describe('styli', () => {
       colors: {
         themeColor: '#FCD423',
       },
-      convertConfig: [
-        {
-          isMatch: (prop) => /^theme-\w+$/.test(prop),
-          toStyle: (prop) => {
-            const [, value] = prop.match(/^theme-(\w+)$/) || []
-            switch (value) {
-              case 'dark':
-                return { color: '#000' }
-              case 'light':
-                return { color: '#FFF' }
-            }
-            return {}
-          },
-        },
-      ],
       transformUnit(value) {
         if (isNumber(value)) {
           return Number(value) * 2 + Styli.getConfig<string>('unit')

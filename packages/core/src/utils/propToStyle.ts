@@ -17,7 +17,7 @@ import {
   borderStyles,
 } from '../constants'
 import { Styli } from '../styli'
-import { StyliUnit } from '../types'
+import { CSSProperties } from 'react'
 
 const getMediaList = () => Styli.getConfig<number[]>('breakpoints')
 
@@ -292,14 +292,8 @@ export function alignmentPropToStyle(props: any) {
   return units
 }
 
-export function positionPropToStyle(prop: string, propValue: any) {
-  const units: StyliUnit[] = []
-
-  if (positionKeys.includes(prop)) {
-    units.push({ attr: 'position', value: prop })
-    return units
-  }
-
+export function positionPropToStyle(prop: string, propValue: any): any {
+  if (positionKeys.includes(prop)) return { position: prop }
   const [key = '', value = ''] = prop.split('-')
   const lowerKey = key.toLocaleLowerCase()
 
@@ -372,32 +366,8 @@ export function textAlignPropToStyle(prop: string, propValue: any) {
   return units
 }
 
-export function textHeadingPropToStyle(prop: string, propValue: any) {
-  const units: StyliUnit[] = []
-  units.push(
-    ...[
-      { attr: 'display', value: 'block' },
-      { attr: 'fontWeight', value: 'bold' },
-    ],
-  )
-  if (Array.isArray(propValue)) {
-    propValue.forEach((value, idx) => {
-      units.push({
-        attr: 'fontSize',
-        value: headings[value] + 'em',
-        media: '' + getMediaList()[idx],
-      })
-    })
-  } else {
-    const attrValue = isValidPropValue(propValue)
-      ? propValue
-      : (prop.replace('text', '').toLowerCase() as any)
-    units.push({
-      attr: 'fontSize',
-      value: headings[attrValue] + 'em',
-    })
-  }
-  return units
+export function textHeadingPropToStyle(prop: string): any {
+  return { display: 'block', fontWeight: 'bold', fontSize: headings[prop] + 'em' }
 }
 
 export function colorPropToStyle(prop: string, propValue: any) {
@@ -475,30 +445,12 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   return units
 }
 
-export function textLineHeightPropToStyle(prop: string, propValue: any) {
-  const units: StyliUnit[] = []
-  const attr = 'lineHeight'
-  if (Array.isArray(propValue)) {
-    propValue.forEach((value, idx) => {
-      units.push({
-        attr,
-        value,
-        media: '' + getMediaList()[idx],
-      })
-    })
-  } else {
-    if (isValidPropValue(propValue)) {
-      units.push({
-        attr,
-        value: getValue(propValue, ModifierType.lineHeight),
-      })
-    } else {
-      const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
-      !!leadings[downFirst(value)]
-      units.push({
-        attr,
-        value: !!leadings[downFirst(value)] ? `${leadings[downFirst(value)]}em` : getValue(value),
-      })
+export function textLineHeightPropToStyle(prop: string, propValue: any): any {
+  if (isValidPropValue(propValue)) {
+    return {
+      lineHeight: Array.isArray(propValue)
+        ? propValue.map((v) => getValue(v))
+        : getValue(propValue),
     }
   }
   return units
@@ -575,22 +527,13 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   return units
 }
 
-export function opacityPropToStyle(prop: string, propValue: any) {
-  const units: StyliUnit[] = []
-  if (Array.isArray(propValue)) {
-    propValue.forEach((value, idx) => {
-      units.push({
-        attr: 'opacity',
-        value: Number(value) / 100,
-        media: '' + getMediaList()[idx],
-      })
-    })
-  } else {
-    const [, value = 50] = prop.split('-')
-    units.push({
-      attr: 'opacity',
-      value: Number(isValidPropValue(propValue) ? propValue : value) / 100,
-    })
+export function opacityPropToStyle(prop: string, propValue: any): any {
+  if (isValidPropValue(propValue)) {
+    return {
+      opacity: Array.isArray(propValue)
+        ? propValue.map((v) => Number(v) / 100)
+        : Number(propValue) / 100,
+    }
   }
   return units
 }
@@ -615,33 +558,18 @@ export function displayPropToStyle(prop: string, propValue: any) {
   return units
 }
 
-export function overFlowPropToStyle(prop: string, propValue: any) {
-  const units: StyliUnit[] = []
-  if (Array.isArray(propValue)) {
-    propValue.forEach((value, idx) => {
-      units.push({
-        attr: 'overflow',
-        value,
-        media: '' + getMediaList()[idx],
-      })
-    })
-  } else {
-    const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
-    if (isValidPropValue(propValue)) {
-      units.push({ attr: prop, value: propValue })
-    } else {
-      const val = downFirst(value)
-      switch (key) {
-        case 'ox':
-          units.push({ attr: 'overflowX', value: val })
-          break
-        case 'oy':
-          units.push({ attr: 'overflowY', value: val })
-          break
-        default:
-          units.push({ attr: 'overflow', value: val })
-      }
-    }
+export function overFlowPropToStyle(prop: string, propValue: any): CSSProperties {
+  const [, key, value] = prop.match(/^(o[xy]?)([A-Z]\w+)$/) || []
+  if (isValidPropValue(propValue)) return { [prop]: propValue }
+
+  const val: any = downFirst(value)
+  switch (key) {
+    case 'ox':
+      return { overflowX: val }
+    case 'oy':
+      return { overflowY: val }
+    default:
+      return { overflow: val }
   }
 
   return units
