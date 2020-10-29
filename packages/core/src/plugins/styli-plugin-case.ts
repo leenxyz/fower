@@ -6,7 +6,7 @@ export default (): Plugin => {
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
       const isCaseKey = caseKeys.includes(prop.key)
 
-      if (!isCaseKey) return sheet
+      if (!isCaseKey) return { sheet }
 
       const value: any = prop.key === 'normalcase' ? 'none' : prop.key
 
@@ -15,7 +15,7 @@ export default (): Plugin => {
         style: { textTransform: value },
       })
 
-      return sheet
+      return { sheet, matched: true }
     },
   }
 }

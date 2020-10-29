@@ -5,12 +5,12 @@ import { displayPropToStyle } from '../utils/propToStyle'
 export default (): Plugin => {
   return {
     onVisitProp(prop, sheet) {
-      if (!isDisplayKey(prop.key)) return sheet
+      if (!isDisplayKey(prop.key)) return { sheet }
 
       const style = displayPropToStyle(prop.key, prop.value)
 
       sheet.addRule({ name: prop.key, style })
-      return sheet
+      return { sheet, matched: true }
     },
   }
 }

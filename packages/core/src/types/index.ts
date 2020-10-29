@@ -26,7 +26,12 @@ export interface Prop {
   value: any
 }
 
+export interface PluginReturn {
+  sheet: Sheet
+  matched?: boolean
+}
+
 export interface Plugin {
-  onVisitProp?(prop: Prop, sheet: Sheet): Sheet
+  onVisitProp?(prop: Prop, sheet: Sheet): PluginReturn
   onStylesCreated?(): void
 }
