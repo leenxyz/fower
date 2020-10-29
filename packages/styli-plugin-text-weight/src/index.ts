@@ -19,7 +19,7 @@ export function isTextWeightKey(key: string) {
   )
 }
 
-export const pluginTextWeight = (): Plugin => {
+export default (): Plugin => {
   return {
     onVisitProp({ propKey, propValue }, rule) {
       if (!isTextWeightKey(propKey)) return

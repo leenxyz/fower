@@ -37,7 +37,7 @@ export default (): Plugin => {
 
       const [key, value] = propKey.split('-')
 
-      paddingMaps[key].forEach((k) => {
+      paddingMaps[key].forEach((k: any) => {
         const cssAttrKey = kebab(k)
         if (Array.isArray(propValue)) {
           propValue.forEach((v: any, idx: number) => {
