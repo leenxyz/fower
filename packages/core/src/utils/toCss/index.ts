@@ -1,3 +1,4 @@
+import isBrowser from 'is-in-browser'
 import { PlainObject } from '../../types'
 import {
   getStyleElement,

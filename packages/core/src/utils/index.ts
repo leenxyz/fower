@@ -3,8 +3,6 @@ import { Styli } from '../styli'
 import { PlainObject } from '../types'
 import { ModifierType } from '../types/Modifiers'
 
-export const canUseDom: boolean = !!window && !!window?.document?.createElement
-
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }

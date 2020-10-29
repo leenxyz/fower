@@ -1,3 +1,4 @@
+import isBrowser from 'is-in-browser'
 import { toCss } from '../utils/toCss'
 import { toStyle } from '../utils/toStyle'
 import { Props } from '../types'
