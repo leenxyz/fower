@@ -22,8 +22,8 @@ export interface PlainObject {
 }
 
 export interface Prop {
-  key: string
-  value: any
+  propKey: string
+  propValue: any
 }
 
 export interface PluginReturn {

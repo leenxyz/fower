@@ -42,6 +42,7 @@ export enum ModifierType {
 
 interface Directive {
   css?: PlainObject
+  debug?: boolean
 }
 
 export interface Modifiers

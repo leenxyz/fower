@@ -16,26 +16,26 @@ export function generateStyleElement(name: string) {
 
 export const getStyleElement = memorize(generateStyleElement)
 
-export const getStylieElementContent = (tag: any) => tag.innerHTML
+export const getStyliElementContent = (tag: any) => tag.innerHTML
 
-export const setStyliTagContent = memorize((tag: any, content: string) => {
+export const setStyliElementContent = memorize((tag: any, content: string) => {
   tag.innerHTML = content
   return true
 })
 
-export const getMediaStyliTag = memorize((value: number) => {
+export const getMediaStyliElement = memorize((value: number) => {
   const tag = generateStyleElement(`media-styli-${value}`)
   tag.innerHTML = `@media (min-width: ${value}px}) {}`
   return tag
 })
 
-export function getMediaTagContent(tag: any) {
+export function getMediaElementContent(tag: any) {
   const content = tag.innerHTML
   const [, match = ''] = content.match(/{(.*)}/) || []
   return match
 }
 
-export const setMediaTagContent = memorize((tag: any, breakpoint: number, content: string) => {
+export const setMediaElementContent = memorize((tag: any, breakpoint: number, content: string) => {
   tag.innerHTML = `@media (min-width: ${breakpoint}px) {${content}}`
   return true
 })

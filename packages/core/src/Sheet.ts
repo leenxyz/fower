@@ -1,18 +1,16 @@
 import hash from 'string-hash'
 import { CSSProperties } from 'react'
-import { kebab } from './utils'
 import { Props } from './types'
 
 export interface Rule {
   name: 'css' | ({} & string)
-  style: CSSProperties
-  media?: string
+  style?: CSSProperties
+  cssFragment?: string
+  cssFragmentList?: string[] // media queries
+  cssFragmentWithSelector?: string // css prop
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
   type?: 'style' | 'font' | 'keyframe'
   className?: string
-  cssPropFragmentList?: string[]
-  cssMediaFragmentList?: string[]
-  cssFragment?: string
 }
 
 /**
@@ -44,33 +42,43 @@ export class Sheet {
    * @param rule
    */
   addRule(rule: Rule) {
-    const { name } = rule
+    const { name, className = '' } = rule
     const value = this.props[name]
-    if (rule.name === 'css') {
-      rule.className = `css-${hash(JSON.stringify(value))}`
-    } else if (typeof value === 'boolean') {
-      rule.className = name
-    } else {
-      rule.className = `${name}-${hash(JSON.stringify(value))}`
+    if (!className) {
+      if (typeof value === 'boolean') {
+        rule.className = name
+      } else if (Array.isArray(value)) {
+        rule.className = `${name}-${value.join('-')}`
+      } else {
+        rule.className = `${name}-${hash(JSON.stringify(value))}`
+      }
     }
 
     this.rules.push(rule)
   }
 
-  // TODO:
   getRule(name: string) {
-    console.log('name', name)
+    return this.rules.find((rule) => rule.name === name)
   }
 
-  // TODO:
-  removeRule() {}
+  removeRule(name: string) {
+    const idx = this.rules.findIndex((rule) => rule.name === name)
+    if (idx !== -1) {
+      this.rules.splice(idx, 1)
+    }
+  }
 
-  // TODO:
-  updateRule() {}
+  updateRule(name: string, rule: Rule) {
+    const idx = this.rules.findIndex((rule) => rule.name === name)
+    if (idx !== -1) {
+      this.rules[idx] = rule
+    } else {
+      this.rules.push(rule)
+    }
+  }
 
-  // TODO:
-  indexOf(): number {
-    return 0
+  indexOf(name: string): number {
+    return this.rules.findIndex((rule) => rule.name === name)
   }
 
   /**
@@ -83,97 +91,37 @@ export class Sheet {
   /**
    * get style object
    */
-  toStyles() {
+  getRulesStyles() {
     return this.rules.reduce((result, cur) => {
-      if (cur.name !== 'css') {
-        return {
-          ...result,
-          ...cur.style,
-        }
-      }
-
-      // TODO:
-      return result
+      return { ...result, ...cur.style }
     }, {} as CSSProperties)
   }
 
   /**
-   * get css rule string
+   * get class string
    */
-  toCss(): string {
-    // TODO: 循环可能太多
-    return this.rules
-      .map((i) => {
-        // handle css prop
-        if (i.name === 'css') {
-          return parseCSSProp(i.style, i.className)
-        }
-
-        /** to css rule string */
-        const cssRuleStr = Object.keys(i.style)
-          .map((s) => {
-            const cssKeyName = kebab(s)
-            return `${cssKeyName}: ${(i as any).style[s]}`
-          })
-          .join(';')
-
-        // wrap with css className
-        return `.${i.className} { ${cssRuleStr} }`
-      })
-      .join('')
+  getRulesCss(): string {
+    return this.rules.reduce((result, cur) => {
+      const { className, cssFragment, cssFragmentWithSelector } = cur
+      if (cssFragmentWithSelector) return `${result}${cssFragmentWithSelector}`
+      if (!className || !cssFragment) return result
+      return `${result}.${className}{${cssFragment}} `
+    }, '')
   }
-}
 
-function getPaths(object: any): any {
-  return (
-    object &&
-    typeof object === 'object' &&
-    Object.keys(object).reduce(
-      (p, k) => (getPaths(object[k]) || [[]]).reduce((r: any, a: any) => [...r, [k, ...a]], p),
-      [],
-    )
-  )
-}
-
-/**
- * parse css props
- * // TODO: 太乱，需要重构
- * @param cssObj
- * @param className
- */
-function parseCSSProp(cssObj: any, className = '') {
-  const getPrefix = (v: string) => (/^::?.*/.test(v) ? '' : ' ')
-
-  const cssPropFragmentList: string[] = getPaths(cssObj)
-    .reduce((result: any, path: string[]) => {
-      const attrValue = path.reduce((obj: any, c: string) => obj[c], cssObj)
-      const attr = kebab('' + path.pop())
-      // pseudo-class pseudo-element connect selector string directly
-
-      const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')
-
-      const obj = {
-        key: `.${className}${getPrefix(str)}${str}`,
-        value: { [attr]: attrValue },
-      }
-
-      // merge same class
-      const idx = result.findIndex((a: any) => a.key === obj.key)
-      if (idx === -1) {
-        result = result.concat(obj)
-      } else {
-        const { key, value } = result[idx]
-        result[idx] = { key, value: { ...obj.value, ...value } }
-      }
-      return result
-    }, [])
-    .map(({ key, value }: any) => {
-      let str = ''
-      for (let i in value) {
-        str = `${str}${[i]}: ${value[i]};`
-      }
-      return `${key}{${str}}`
+  /**
+   * get media class string list
+   */
+  getRulesMediaCss(): string[] {
+    const mediaCssFragmentList: string[] = []
+    this.rules.forEach((rule) => {
+      const { className, cssFragmentList = [] } = rule
+      cssFragmentList.forEach((cssFragment, idx) => {
+        mediaCssFragmentList[idx] = `${
+          mediaCssFragmentList[idx] || ''
+        } .${className}{${cssFragment}}`
+      })
     })
-
-  return cssPropFragmentList.join('')
+    return mediaCssFragmentList
+  }
 }

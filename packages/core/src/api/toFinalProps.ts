@@ -1,8 +1,9 @@
 import { toCss } from '../utils/toCss'
 import { toStyle } from '../utils/toStyle'
 import { Props } from '../types'
-import { canUseDom, isEmptyObj } from '../utils'
+import { isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
+import { Styli } from '../styli'
 
 /**
  * Go get finanl props with style
@@ -15,15 +16,14 @@ export function toFinalProps(props: any) {
 
   const keys = sheet.rules.map((i) => i.name)
 
-  const finalProps = Object.keys(props).reduce((result, key) => {
-    if (keys.includes(key)) return result
-    return { ...result, [key]: props[key] }
-  }, {} as Props)
-
-  let style = sheet.toStyles()
-
-  if (canUseDom) {
-    return toCss()(finalProps, style, sheet)
+  const finalProps: Props = {}
+  for (let i in props) {
+    if (!keys.includes(i)) {
+      finalProps[i] = props[i]
+    }
   }
-  return toStyle()(finalProps, style)
+
+  const canUseDom = Styli.getConfig<boolean>('canUseDom')
+
+  return canUseDom ? toCss(finalProps, sheet) : toStyle(finalProps, sheet)
 }

@@ -1,15 +1,39 @@
-import { Plugin } from '../types'
+import { marginMaps } from '../constants'
+import { Rule } from '../Sheet'
+import { ModifierType, Plugin } from '../types'
+import { getValue, isValidPropValue, kebab } from '../utils'
 import { isMarginKey } from '../utils/propKey'
-import { marginPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginMargin = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isMarginKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, sheet) {
+      if (!isMarginKey(propKey)) return { sheet }
 
-      const style = marginPropToStyle(prop.key, prop.value)
+      const [key, value] = propKey.split('-')
+      const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
 
-      sheet.addRule({ name: prop.key, style })
+      marginMaps[key].forEach((k) => {
+        const cssAttrKey = kebab(k)
+        if (Array.isArray(propValue)) {
+          propValue.forEach((v: any, idx: number) => {
+            const cssFragment = rule.cssFragmentList![idx] || ''
+            rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${getValue(
+              v,
+              ModifierType.margin,
+            )};`
+          })
+        } else {
+          const attrValue = isValidPropValue(propValue) ? propValue : value
+          rule.style = { ...rule.style, [k]: getValue(attrValue, ModifierType.size) }
+          rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${getValue(
+            attrValue,
+            ModifierType.size,
+          )};`
+        }
+      })
+
+      sheet.addRule(rule)
+
       return { sheet, matched: true }
     },
   }

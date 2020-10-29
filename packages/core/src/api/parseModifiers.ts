@@ -16,10 +16,7 @@ export function parseModifiers(props: PlainObject = {}): Sheet {
     /** register plugin */
     for (const plugin of plugins) {
       if (plugin.onVisitProp) {
-        const { matched, sheet: newSheet } = plugin.onVisitProp(
-          { key: propKey, value: propValue },
-          sheet,
-        )
+        const { matched, sheet: newSheet } = plugin.onVisitProp({ propKey, propValue }, sheet)
         if (matched) {
           sheet = newSheet
           break

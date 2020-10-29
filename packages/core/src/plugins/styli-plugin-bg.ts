@@ -1,15 +1,36 @@
+import { IColors } from '../constants/colors'
+import { Rule } from '../Sheet'
+import { Styli } from '../styli'
 import { Plugin } from '../types'
+import { downFirst, isValidPropValue, kebab } from '../utils'
 import { isBgColorKey } from '../utils/propKey'
-import { bgPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginBg = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isBgColorKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, sheet) {
+      if (!isBgColorKey(propKey)) return { sheet }
 
-      const style = bgPropToStyle(prop.key, prop.value)
+      const Colors = Styli.getConfig<IColors>('colors')
 
-      sheet.addRule({ name: prop.key, style })
+      const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
+      const styleKey = 'backgroundColor'
+      const cssAttrKey = kebab(styleKey)
+
+      if (Array.isArray(propValue)) {
+        const cssAttrKey = kebab(styleKey)
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${value};`
+        })
+      } else {
+        const [, color = ''] = propKey.match(/^bg(\w+)$/) || []
+        const value = isValidPropValue(propValue) ? propValue : downFirst(color)
+        rule.style = { ...rule.style, [styleKey]: Colors[value] || value }
+        rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${Colors[value] || value};`
+      }
+
+      sheet.addRule(rule)
+
       return { sheet, matched: true }
     },
   }

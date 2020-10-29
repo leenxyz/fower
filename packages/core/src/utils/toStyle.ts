@@ -1,12 +1,12 @@
+import { Sheet } from '../Sheet'
 import { PlainObject } from '../types'
 
-export function toStyle() {
-  return function (finalProps: PlainObject, styliStyle: any): PlainObject {
-    if (Array.isArray(finalProps.style)) {
-      finalProps.style = [styliStyle, ...finalProps.style]
-    } else {
-      finalProps.style = { ...styliStyle, ...finalProps.style }
-    }
-    return finalProps
+export function toStyle(finalProps: PlainObject, sheet: Sheet) {
+  const style = sheet.getRulesStyles()
+  if (Array.isArray(finalProps.style)) {
+    finalProps.style = [style, ...finalProps.style]
+  } else {
+    finalProps.style = { ...style, ...finalProps.style }
   }
+  return finalProps
 }
