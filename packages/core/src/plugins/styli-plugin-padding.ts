@@ -1,40 +1,32 @@
 import { paddingMaps } from '../constants'
-import { Rule } from '../Sheet'
 import { ModifierType, Plugin } from '../types'
 import { getValue, isValidPropValue, kebab } from '../utils'
 import { isPaddingKey } from '../utils/propKey'
 
 export const pluginPadding = (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
-      if (!isPaddingKey(propKey)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isPaddingKey(propKey)) return
 
       const [key, value] = propKey.split('-')
-      const rule: Rule = { name: propKey, cssFragmentList: [], cssFragment: '', style: {} }
 
       paddingMaps[key].forEach((k) => {
         const cssAttrKey = kebab(k)
         if (Array.isArray(propValue)) {
           propValue.forEach((v: any, idx: number) => {
             const cssFragment = rule.cssFragmentList![idx] || ''
-            rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${getValue(
-              v,
-              ModifierType.margin,
-            )};`
+            const attrValue = getValue(v, ModifierType.padding)
+            rule.cssFragmentList![idx] = `${cssFragment}${cssAttrKey}:${attrValue};`
           })
         } else {
-          const attrValue = isValidPropValue(propValue) ? propValue : value
-          rule.style = { ...rule.style, [k]: getValue(attrValue, ModifierType.size) }
-          rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${getValue(
-            attrValue,
-            ModifierType.size,
-          )};`
+          const pValue = isValidPropValue(propValue) ? propValue : value
+          const attrValue = getValue(pValue, ModifierType.padding)
+          rule.style = { ...rule.style, [k]: attrValue }
+          rule.cssFragment = `${rule.cssFragment}${cssAttrKey}:${attrValue};`
         }
       })
 
-      sheet.addRule(rule)
-
-      return { sheet, matched: true }
+      return rule
     },
   }
 }

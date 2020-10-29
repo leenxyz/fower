@@ -1,6 +1,6 @@
 import { Sheet } from '../Sheet'
 import { Styli } from '../styli'
-import { PlainObject, Plugin } from '../types'
+import { PlainObject, Plugin, Rule } from '../types'
 import { isEmptyObj, isFalsyProp } from '../utils'
 
 export function parseModifiers(props: PlainObject = {}): Sheet {
@@ -16,9 +16,17 @@ export function parseModifiers(props: PlainObject = {}): Sheet {
     /** register plugin */
     for (const plugin of plugins) {
       if (plugin.onVisitProp) {
-        const { matched, sheet: newSheet } = plugin.onVisitProp({ propKey, propValue }, sheet)
-        if (matched) {
-          sheet = newSheet
+        const initRule: Rule = {
+          name: propKey,
+          style: {},
+          cssFragment: '',
+          cssFragmentList: [],
+        }
+
+        const rule = plugin.onVisitProp({ propKey, propValue }, initRule, sheet)
+
+        if (rule) {
+          sheet.addRule(rule)
           break
         }
       }

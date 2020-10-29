@@ -1,16 +1,28 @@
 import { Plugin } from '../types'
+import { isValidPropValue } from '../utils'
 import { isOpacityKey } from '../utils/propKey'
-import { opacityPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginOpacity = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isOpacityKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isOpacityKey(propKey)) return
 
-      const style = opacityPropToStyle(prop.key, prop.value)
+      const key = 'opacity'
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      if (Array.isArray(propValue)) {
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          rule.cssFragmentList![idx] = `${cssFragment}${key}:${value};`
+        })
+      } else {
+        const [, value = 50] = propKey.split('-')
+        const attrValue = isValidPropValue(propValue) ? propValue : value
+
+        rule.style = { ...rule.style, [key]: attrValue }
+        rule.cssFragment = `${rule.cssFragment}${key}:${attrValue};`
+      }
+
+      return rule
     },
   }
 }

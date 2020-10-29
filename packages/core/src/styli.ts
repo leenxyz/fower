@@ -2,7 +2,30 @@ import { presetColors, IColors } from './constants/colors'
 import { ModifierType } from './types/Modifiers'
 import { mergeWithDefaultOptions } from './utils'
 import { Plugin } from './types'
-import { pluginSize, pluginMargin, pluginPadding, pluginBg, pluginCss } from './plugins'
+import {
+  pluginSize,
+  pluginMargin,
+  pluginPadding,
+  pluginBg,
+  pluginCss,
+  pluginColor,
+  pluginFlexItem,
+  pluginBorder,
+  pluginDisplay,
+  pluginAlignment,
+  pluginBoxShadow,
+  pluginFlexBox,
+  pluginLineHeight,
+  pluginOpacity,
+  pluginOverFlow,
+  pluginPosition,
+  pluginRound,
+  pluginTextAlign,
+  pluginTextHeading,
+  pluginTextSize,
+  pluginTextWeight,
+  pluginZIndex,
+} from './plugins'
 
 interface Configs {
   unit: string
@@ -18,7 +41,30 @@ export class StyliFactory {
     unit: 'px',
     colors: presetColors,
     canUseDom: !!window && !!window?.document?.createElement,
-    plugins: [pluginSize(), pluginMargin(), pluginPadding(), pluginBg(), pluginCss()],
+    plugins: [
+      pluginCss(),
+      pluginSize(),
+      pluginMargin(),
+      pluginPadding(),
+      pluginBg(),
+      pluginColor(),
+      pluginFlexItem(),
+      pluginBorder(),
+      pluginDisplay(),
+      pluginAlignment(),
+      pluginBoxShadow(),
+      pluginFlexBox(),
+      pluginLineHeight(),
+      pluginOpacity(),
+      pluginOverFlow(),
+      pluginPosition(),
+      pluginRound(),
+      pluginTextAlign(),
+      pluginTextHeading(),
+      pluginTextSize(),
+      pluginTextWeight(),
+      pluginZIndex(),
+    ],
     breakpoints: [0, 640, 768, 1024, 1280],
     transformUnit: (value) => value + (this.getConfig('unit') as string),
   }

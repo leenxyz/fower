@@ -2,14 +2,14 @@ import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { styled, Styli } from '../../core/src'
-import hidePlugin from '../src/plugins/styli-plugin-hide'
-import casePlugin from '../src/plugins/styli-plugin-case'
+import { pluginHidden } from '../src/plugins/styli-plugin-hide'
+import { pluginCase } from '../src/plugins/styli-plugin-case'
 import jss from 'jss'
 
 const s = jss.createStyleSheet({})
 
 Styli.config({
-  plugins: [hidePlugin(), casePlugin()],
+  plugins: [pluginHidden(), pluginCase()],
 })
 
 export const View = styled('div')

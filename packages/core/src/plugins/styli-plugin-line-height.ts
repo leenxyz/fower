@@ -1,16 +1,32 @@
-import { Plugin } from '../types'
+import { leadings } from '../constants/typo'
+import { ModifierType, Plugin } from '../types'
+import { downFirst, getValue, isValidPropValue, kebab } from '../utils'
 import { isTextLineHeightKey } from '../utils/propKey'
-import { textLineHeightPropToStyle } from '../utils/propToStyle'
 
-export default (): Plugin => {
+export const pluginLineHeight = (): Plugin => {
   return {
-    onVisitProp(prop, sheet) {
-      if (!isTextLineHeightKey(prop.key)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!isTextLineHeightKey(propKey)) return
 
-      const style = textLineHeightPropToStyle(prop.key, prop.value)
+      const key = 'lineHeight'
 
-      sheet.addRule({ name: prop.key, style })
-      return { sheet, matched: true }
+      if (Array.isArray(propValue)) {
+        propValue.forEach((value, idx) => {
+          const cssFragment = rule.cssFragmentList![idx] || ''
+          rule.cssFragmentList![idx] = `${cssFragment}${kebab(key)}:${value};`
+        })
+      } else {
+        if (isValidPropValue(propValue)) {
+          rule.style = { [key]: getValue(propValue, ModifierType.lineHeight) }
+        } else {
+          const [, value = ''] = propKey.match(/lh-?(\w+)?/) || []
+          const preset = leadings[downFirst(value)]
+
+          rule.style = { [key]: preset ? `${preset}em` : getValue(value) }
+          rule.cssFragment = `${kebab(key)}:${preset ? `${preset}em` : getValue(value)}`
+        }
+      }
+      return rule
     },
   }
 }

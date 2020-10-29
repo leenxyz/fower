@@ -1,13 +1,12 @@
 import hash from 'string-hash'
-import { Rule } from '../Sheet'
 import { PlainObject, Plugin } from '../types'
 import { kebab } from '../utils'
 
 // TODO: need refactor
 export const pluginCss = (): Plugin => {
   return {
-    onVisitProp({ propKey, propValue }, sheet) {
-      if (!['css', 'debug'].includes(propKey)) return { sheet }
+    onVisitProp({ propKey, propValue }, rule) {
+      if (!['css', 'debug'].includes(propKey)) return
 
       const debug = propKey === 'debug'
       const value = {
@@ -16,8 +15,6 @@ export const pluginCss = (): Plugin => {
       }
 
       const className = propKey === 'debug' ? 'debug' : `css-${hash(JSON.stringify(value))}`
-
-      const rule: Rule = { name: propKey, className, cssFragmentWithSelector: '' }
 
       const list = parseCssProp(className, value)
 
@@ -29,9 +26,7 @@ export const pluginCss = (): Plugin => {
         return result + `${key}{${str}}`
       }, '')
 
-      sheet.addRule(rule)
-
-      return { sheet, matched: true }
+      return rule
     },
   }
 }
