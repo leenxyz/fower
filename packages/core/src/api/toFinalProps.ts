@@ -1,10 +1,8 @@
 import isBrowser from 'is-in-browser'
-import { toCss } from '../utils/toCss'
-import { toStyle } from '../utils/toStyle'
 import { Props } from '../types'
 import { isEmptyObj } from '../utils'
 import { parseModifiers } from './parseModifiers'
-import { Styli } from '../styli'
+import { styleManager } from '../styleManager'
 
 /**
  * Go get finanl props with style
@@ -24,7 +22,17 @@ export function toFinalProps(props: any) {
     }
   }
 
-  const canUseDom = Styli.getConfig<boolean>('canUseDom')
+  /** inline css */
+  if (!isBrowser) return sheet.toStyles()
 
-  return canUseDom ? toCss(finalProps, sheet) : toStyle(finalProps, sheet)
+  /**
+   * insert css to <style></style>
+   */
+  let className = sheet.getClassNames()
+  let propClassName = finalProps.className
+
+  styleManager.insertStyles(sheet.toCss())
+  finalProps.className = propClassName ? `${propClassName} ${className}` : className
+
+  return finalProps
 }

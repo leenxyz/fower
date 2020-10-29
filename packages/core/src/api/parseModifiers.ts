@@ -1,9 +1,9 @@
 import { Sheet } from '../Sheet'
 import { Styli } from '../styli'
-import { PlainObject, Plugin } from '../types'
+import { Plugin, Props } from '../types'
 import { isEmptyObj, isFalsyProp } from '../utils'
 
-export function parseModifiers(props: PlainObject = {}): Sheet {
+export function parseModifiers(props: Props = {}): Sheet {
   let sheet = new Sheet(props)
 
   if (isEmptyObj(props)) return sheet

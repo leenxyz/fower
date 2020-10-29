@@ -6,7 +6,6 @@ import {
   kebab,
   isValidPropValue,
   getValue,
-  memorize,
   elementType,
   mergeWithDefaultOptions,
 } from '../src/utils'
@@ -43,11 +42,6 @@ describe('utils', () => {
     })
     expect(getValue('1px')).toEqual('1px')
     expect(getValue('2')).toEqual('4')
-  })
-  it('memorize', () => {
-    const fn = memorize((state: any) => state)
-    fn('key', { state: 1 })
-    expect(fn.cache).toMatchObject({ key: { state: 1 } })
   })
   it('elementType', () => {
     expect(elementType(1)).toEqual('number')

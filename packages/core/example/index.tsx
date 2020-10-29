@@ -18,18 +18,7 @@ export const Text = styled('span')
 const App = () => {
   return (
     <div className="box">
-      <View
-        uppercase
-        row
-        flex-1
-        center
-        bgGray300
-        p-100
-        color="#00ff00.47"
-        css={{
-          fontSize: '20px',
-        }}
-      >
+      <View uppercase row flex-1 center bgGray300 p-100 color="#00ff00.47">
         Hello world
       </View>
       <View

@@ -1,6 +1,5 @@
 import { noCase } from 'no-case'
 import { Styli } from '../styli'
-import { PlainObject } from '../types'
 import { ModifierType } from '../types/Modifiers'
 
 export function upFirst(s: string = '') {
@@ -33,16 +32,6 @@ export function getValue(value: string | number, modifierType?: ModifierType) {
     return transformUnit(Number(value), modifierType)
   }
   return value
-}
-
-export function memorize(fn: Function) {
-  const cache: any = {}
-  const s = (key: string, ...args: any) => {
-    cache[key] = cache[key] || fn.apply(fn, args.length ? args : [key])
-    return cache[key]
-  }
-  s.cache = cache
-  return s
 }
 
 export function elementType(ele: any) {

@@ -2,7 +2,8 @@ import { Sheet } from '../Sheet'
 export * from './Modifiers'
 
 export interface Props {
-  [key: string]: string
+  style?: any
+  [key: string]: any
 }
 
 export interface MarginMaps {
