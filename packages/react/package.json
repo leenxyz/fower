@@ -1,6 +1,6 @@
 {
   "name": "@styli/react",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -23,7 +23,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/core": "^0.6.0",
+    "@styli/core": "^0.6.1",
     "hoist-non-react-statics": "^3.3.2"
   },
   "devDependencies": {
