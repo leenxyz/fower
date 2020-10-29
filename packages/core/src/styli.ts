@@ -24,9 +24,7 @@ export class StyliFactory {
   }
 
   config(config: Partial<Configs>) {
-    this.configs = {
-      ...mergeWithDefaultOptions(config, this.configs),
-    }
+    this.configs = mergeWithDefaultOptions(config, this.configs)
   }
 
   getConfigs(): Configs {
