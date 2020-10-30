@@ -2,7 +2,7 @@ import _Vue, { PluginFunction } from 'vue'
 
 // Import vue components
 import * as components from '@/components/index'
-import vStyli from '@/v-styli'
+import vStyli from '@/v-css'
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

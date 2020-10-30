@@ -24,36 +24,36 @@ Vue.use(styli)
 
 然后怎么使用呢? Styli 在 Vue 有两种使用方式：
 
-- 使用 `v-styli` 指令
+- 使用 `v-css` 指令
 - 使用自定义组件
 
-### 使用 `v-styli` 指令
+### 使用 `v-css` 指令
 
-使用指令的方式，你可以给 `v-styli` 传递你想要的 modifiers：
+使用指令的方式，你可以给 `v-css` 传递你想要的 modifiers：
 
 ```jsx
 <template>
-  <div v-styli="'centerY p-10 w-260 bgWhite rounded-10 shadow'">
-    <img v-styli="'c-48'" src="/img/jobs.jpg" />
-    <div v-styli="'ml-10'">
-      <div v-styli="'f-20 fontBold'">Steve Jobs</div>
-      <span v-styli="'gray800'">Co-founder of Apple Inc.</span>
+  <div v-css="'centerY p-10 w-260 bgWhite rounded-10 shadow'">
+    <img v-css="'c-48'" src="/img/jobs.jpg" />
+    <div v-css="'ml-10'">
+      <div v-css="'f-20 fontBold'">Steve Jobs</div>
+      <span v-css="'gray800'">Co-founder of Apple Inc.</span>
     </div>
   </div>
 </template>
 ```
 
-你也可以不给 `v-styli` 传值，通过给 html 元素添加属性实现样式:
+你也可以不给 `v-css` 传值，通过给 html 元素添加属性实现样式:
 
 ```jsx
 <template>
-  <div v-styli centerY p-10 w-260 bgWhite rounded-10 shadow>
-    <img v-styli c-48 src="/img/jobs.jpg" />
-    <div v-styli ml-10>
-      <div v-styli f-20 fontBold>
+  <div v-css centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <img v-css c-48 src="/img/jobs.jpg" />
+    <div v-css ml-10>
+      <div v-css f-20 fontBold>
         Steve Jobs
       </div>
-      <span v-styli gray800>
+      <span v-css gray800>
         Co-founder of Apple Inc.
       </span>
     </div>

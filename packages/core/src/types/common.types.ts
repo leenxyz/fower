@@ -1,7 +1,8 @@
 import CSS from 'csstype'
 import { Sheet } from '../Sheet'
 
-type CSSProperties = CSS.Properties
+type CSSProperties = CSS.Properties<number | string>
+// type CSSProperties = CSS.PropertiesFallback<number | string>
 
 export type PropValue = boolean | number | string | (boolean | number | string)[]
 

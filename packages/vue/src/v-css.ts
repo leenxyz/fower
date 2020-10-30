@@ -1,7 +1,7 @@
 import { createStyle } from '@styli/core'
 
 export default {
-  name: 'styli',
+  name: 'css',
   bind: function (el: HTMLElement, bind: any) {
     const props: any = {}
 
