@@ -27,6 +27,9 @@ interface Theme {
 export interface Config {
   plugins: Plugin[]
   unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
+
+  /** use inline style or not */
+  inline: boolean
   theme: Theme
   transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }

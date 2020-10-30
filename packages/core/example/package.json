@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "@styli/react": "^0.4.0",
+    "@styli/preset-default": "^0.6.1",
+    "@styli/react": "^0.6.1",
     "@types/styletron-react": "^5.0.2",
     "jss": "^10.4.0",
     "jss-preset-default": "^10.4.0",

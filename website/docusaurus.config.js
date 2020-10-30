@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Styli',
-  tagline: 'A style library for rapid UI development',
-  url: 'https://styli.vercel.app',
+  tagline: 'A Atomic CSS-in-JS library for rapid UI development',
+  url: 'https://styli.js.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',

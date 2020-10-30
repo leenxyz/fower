@@ -3,14 +3,13 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { styled } from '../../core/src/api/styled'
 import { styli } from '../../core/src/styli'
-import presetDefault from './src'
-// import presetDefault from '../../preset-default/src'
+// import { styli, styled } from '@styli/core'
+// import presetDefault from './src'
+import presetDefault from '@styli/preset-default'
 
 // styli.setup({
 //   plugins: [hidePlugin(), casePlugin()],
 // })
-
-console.log('presetDefault:', presetDefault)
 
 styli.setup(presetDefault)
 

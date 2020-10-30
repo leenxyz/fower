@@ -1,6 +1,6 @@
 # Styli
 
-A style library for rapid UI development.
+A Atomic CSS-in-JS library for rapid UI development.
 
 [![npm](https://img.shields.io/npm/v/@styli/core.svg)](https://www.npmjs.com/package/@styli/core)
 [![Build Status](https://travis-ci.org/forsigner/styli.svg?branch=master)](https://travis-ci.org/forsigner/styli)
@@ -15,9 +15,9 @@ Documentation website: [styli.js.org](https://styli.js.org/).
 
 Frequently viewed docs:
 
-- [Installation](/docs/)
+- [Installation](/docs/installation)
 - [Getting started](/docs/getting-started)
-- [API Reference]()
+- [API Reference](/docs/styled)
 - [Configuration](/docs/configuration)
 
 ## Installation
@@ -32,11 +32,7 @@ Install one of framework binding package:
 
 ```bash
 $ npm install @styli/react
-
-# or
 $ npm install @styli/vue
-
-# or
 $ npm install @styli/react-native
 ```
 

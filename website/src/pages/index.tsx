@@ -5,7 +5,11 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
+import preset from '@styli/preset-default'
+import { styli } from '@styli/core'
 import { View } from '@styli/react'
+
+styli.setup(preset)
 
 const features = [
   {
