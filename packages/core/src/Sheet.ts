@@ -32,12 +32,25 @@ export class Sheet {
   }
 
   /**
+   *  @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
+   * @param value
+   * @param isArray
+   */
+  private getClassPostfix(value: any) {
+    const valueStr = Array.isArray(value) ? value.join('-') : String(value)
+    const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+    const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
+    return isValidClassName ? str : hash(str)
+  }
+
+  /**
    * add atom to sheet
    * @param atom
    */
   addAtom(atom: Atom) {
     const { propKey = '' } = atom
     const value = this.props[propKey]
+
     if (atom.propKey === 'css') {
       atom.className = `css-${hash(JSON.stringify(value))}`
 
@@ -46,7 +59,8 @@ export class Sheet {
     } else if (typeof value === 'boolean') {
       atom.className = propKey
     } else {
-      atom.className = `${propKey}-${hash(JSON.stringify(value))}`
+      const postfix = this.getClassPostfix(value)
+      atom.className = `${propKey}-${postfix}`
     }
 
     this.atoms.push(atom)
