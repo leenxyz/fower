@@ -1,4 +1,4 @@
-export interface Flexs {
+export interface Flex {
   /**
    * Set flex-direction: row;
    *

@@ -50,7 +50,7 @@ export interface Config {
 export type Preset = Partial<Config>
 
 export interface Plugin {
-  onVisitProp?(atom: Atom, sheet: Sheet): Atom | undefined | null
+  onVisitProp?(atom: Atom, sheet: Sheet): Atom | undefined | null | void
   onStylesCreated?(): void
 }
 

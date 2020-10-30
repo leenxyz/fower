@@ -31,8 +31,8 @@ class Styli {
     return this.config[type] as any
   }
 
-  use(...plugins: Plugin[]) {
-    return plugins
+  use = (...plugins: Plugin[]) => {
+    this.config.plugins.push(...plugins)
   }
 }
 

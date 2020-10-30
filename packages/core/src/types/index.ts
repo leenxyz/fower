@@ -1,6 +1,6 @@
 import { Backgrounds } from './background.types'
 import { Borders } from './border.types'
-import { Flexs } from './flex.types'
+import { Flex } from './flex.types'
 import { Margins } from './margin.types'
 import { Paddings } from './padding.types'
 import { Sizes } from './size.types'
@@ -19,7 +19,7 @@ export interface Modifiers
   extends Sizes,
     Paddings,
     Margins,
-    Flexs,
+    Flex,
     Borders,
     Positions,
     Colors,
