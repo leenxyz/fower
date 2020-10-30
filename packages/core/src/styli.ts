@@ -22,8 +22,8 @@ class Styli {
     return this.config.theme[themeKey]
   }
 
-  getColors() {
-    return styli.config.theme.colors || {}
+  getColors = () => {
+    return this.config.theme.colors || {}
   }
 
   getConfig<T = any>(type?: keyof Config): T {

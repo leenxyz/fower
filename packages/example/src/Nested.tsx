@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
-import { styled } from '../src'
+import { styled } from '@styli/core'
 
 export const View = styled('div')
 export const Text = styled('span')

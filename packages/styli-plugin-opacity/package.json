@@ -17,8 +17,7 @@
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
     "test:cov": "tsdx test --coverage",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build"
+    "lint": "tsdx lint"
   },
   "author": "forsigner",
   "module": "dist/styli-plugin-opacity.esm.js",

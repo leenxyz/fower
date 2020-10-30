@@ -14,8 +14,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "prepare": "tsdx build"
+    "test": "tsdx test --passWithNoTests"
   },
   "author": "forsigner",
   "module": "dist/react.esm.js",
