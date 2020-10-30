@@ -39,12 +39,11 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   component: C,
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
-  const StyledComponent = forwardRef((props, ref) => {
+  const StyledComponent = forwardRef((props: any, ref) => {
     const propsParser = new PropsParser(props)
-    const parsedStyle = propsParser.getParsedStyle()
+    propsParser.getParsedStyle()
     const parsedProps = propsParser.getParsedProps()
-
-    parsedProps.style = { ...createStyle(...args), ...parsedStyle }
+    parsedProps.style = { ...createStyle(...args), ...props.style }
 
     return createElement(component, { ref, ...parsedProps })
   })

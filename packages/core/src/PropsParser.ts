@@ -63,10 +63,16 @@ export class PropsParser {
     for (const [propKey, propValue] of Object.entries(props)) {
       if (isFalsyProp(propValue)) continue
 
+      /** handle css props */
+      if (propKey === 'css') {
+        this.sheet.addAtom({ propKey, propValue, style: propValue })
+        continue
+      }
+
       /** register plugin */
       for (const plugin of plugins) {
         if (plugin.onVisitProp) {
-          const initialAtom: Atom = { propKey, propValue, style: {} }
+          const initialAtom = { propKey, propValue, style: {} } as Atom
 
           const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
 

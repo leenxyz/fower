@@ -2,6 +2,8 @@ import hash from 'string-hash'
 import { CSSProperties } from 'react'
 import { Props, Atom } from './types'
 import { kebab } from '@styli/utils'
+import { styli } from './styli'
+import { getValue } from './utils'
 
 /**
  * Sheet, one Props map to one Sheet
@@ -23,7 +25,9 @@ export class Sheet {
   private storeMedieStyles(atom: Atom, cssKey: string, value: any[]) {
     value.forEach((_, i) => {
       // store responsive styles
-      this.mediaStyles[i] += `.${atom.className} { ${cssKey}: ${value[i + 1]}; }`
+      if (value[i + 1]) {
+        this.mediaStyles[i] += `.${atom.className} { ${cssKey}: ${value[i + 1]}; }`
+      }
     })
   }
 
@@ -41,8 +45,6 @@ export class Sheet {
       this.cssPropClassName = atom.className
     } else if (typeof value === 'boolean') {
       atom.className = propKey
-    } else if (Array.isArray(value)) {
-      atom.className = `${propKey}-${value.join('-')}`
     } else {
       atom.className = `${propKey}-${hash(JSON.stringify(value))}`
     }
@@ -100,8 +102,18 @@ export class Sheet {
   toCss(): string {
     // TODO: 循环可能太多
     const css = this.atoms.reduce((result, atom) => {
-      // handle css prop
-      if (atom.propKey === 'css') return result + parseCSSProp(atom.style, atom.className)
+      const { className = '' } = atom
+
+      // has cache，dont't repeat generate css
+      if (styli.cache[className]) return result
+
+      /** handle css prop */
+      if (atom.propKey === 'css') {
+        if (!parseCSSProp(atom.style, className)) return result
+
+        styli.cache[className] = true
+        return result + parseCSSProp(atom.style, className)
+      }
 
       /** to css atom string */
       const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
@@ -116,8 +128,12 @@ export class Sheet {
         return r + `${cssKey}: ${value[0]};`
       }, '')
 
+      if (!cssAtomStr) return result
+
+      // styli.cache[className] = true
+
       // wrap with css className
-      return result + `.${atom.className} { ${cssAtomStr} }`
+      return result + `.${className} { ${cssAtomStr} }`
     }, '')
 
     const responsiveCss = this.breakpoints.reduce((result, b, i) => {
@@ -147,19 +163,21 @@ function getPaths(object: any): any {
  */
 function parseCSSProp(cssObj: any, className = '') {
   const getPrefix = (v: string) => (/^::?.*/.test(v) ? '' : ' ')
+
   const paths = getPaths(cssObj)
 
   const cssPropFragmentList: string[] = paths
     .reduce((result: any, path: string[]) => {
       const attrValue = path.reduce((obj: any, c: string) => obj[c], cssObj)
-      const attr = kebab('' + path.pop())
-      // pseudo-class pseudo-element connect selector string directly
 
+      const attr = kebab('' + path.pop())
+
+      // pseudo-class pseudo-element connect selector string directly
       const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')
 
       const obj = {
         key: `.${className}${getPrefix(str)}${str}`,
-        value: { [attr]: attrValue },
+        value: { [attr]: getValue(attrValue) },
       }
 
       // merge same class

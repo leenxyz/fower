@@ -1,4 +1,4 @@
-import { Plugin, Config, Preset } from './types'
+import { Plugin, Config, Preset, Cache } from './types'
 
 class Styli {
   config: Config = {
@@ -9,6 +9,8 @@ class Styli {
     },
     transformUnit: (value: any) => value + (this.getConfig('unit') as string),
   }
+
+  cache: Cache = {}
 
   setup(preset: Preset) {
     this.config = {

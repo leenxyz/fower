@@ -23,6 +23,7 @@ export enum ModifierType {
 export interface Props {
   style?: any
   className?: string
+  css?: any
   [key: string]: any
 }
 
@@ -62,4 +63,8 @@ export interface Atom {
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
   type?: 'style' | 'font' | 'keyframe'
   className?: string
+}
+
+export interface Cache {
+  [className: string]: any
 }
