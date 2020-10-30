@@ -22,6 +22,7 @@ export enum ModifierType {
 
 export interface Props {
   style?: any
+  className?: string
   [key: string]: any
 }
 
@@ -42,7 +43,7 @@ export interface Config {
   unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
 
   /** use inline style or not */
-  inline: boolean
+  inline?: boolean
   theme: Theme
   transformUnit: (value: number | string, modifierType?: ModifierType) => string
 }

@@ -3,7 +3,6 @@ import { Plugin, Config, Preset } from './types'
 class Styli {
   config: Config = {
     unit: 'px',
-    inline: false,
     plugins: [],
     theme: {
       colors: {},

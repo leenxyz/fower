@@ -11,11 +11,6 @@ export class Sheet {
 
   private mediaStyles: string[] = ['', '', '', '', '', '']
 
-  /**
-   * component Props
-   */
-  props = {} as Props
-
   cssPropClassName: string = ''
 
   /**
@@ -23,9 +18,7 @@ export class Sheet {
    */
   atoms: Atom[] = []
 
-  constructor(props: Props) {
-    this.props = props
-  }
+  constructor(private props: Props) {}
 
   private storeMedieStyles(atom: Atom, cssKey: string, value: any[]) {
     value.forEach((_, i) => {

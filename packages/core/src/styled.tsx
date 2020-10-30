@@ -7,9 +7,9 @@ import {
   CSSProperties,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { Modifiers } from '../types'
-import { toFinalProps } from './toFinalProps'
+import { Modifiers } from './types'
 import { createStyle } from './createStyle'
+import { PropsParser } from './PropsParser'
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
@@ -40,10 +40,13 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props, ref) => {
-    const finalProps = toFinalProps(props)
-    finalProps.style = { ...createStyle(...args), ...finalProps.style }
+    const propsParser = new PropsParser(props)
+    const parsedStyle = propsParser.getParsedStyle()
+    const parsedProps = propsParser.getParsedProps()
 
-    return createElement(component, { ref, ...finalProps })
+    parsedProps.style = { ...createStyle(...args), ...parsedStyle }
+
+    return createElement(component, { ref, ...parsedProps })
   })
 
   hoistNonReactStatics(StyledComponent, component as any)
