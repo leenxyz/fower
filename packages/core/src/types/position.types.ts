@@ -1,3 +1,4 @@
+import { PropValue } from './common.types'
 export interface Positions {
   static?: boolean
 
@@ -25,5 +26,5 @@ export interface ZIndex {
    * <View zIndex={10}></View>
    * ```
    */
-  zIndex?: boolean | number | number[] | string | string[]
+  zIndex?: PropValue
 }

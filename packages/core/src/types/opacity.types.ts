@@ -1,3 +1,4 @@
+import { PropValue } from './common.types'
 export interface Opacity {
   /**
    * Set opacity
@@ -11,5 +12,5 @@ export interface Opacity {
    * ```
    */
 
-  opacity?: boolean | string | number | number[] | string[]
+  opacity?: PropValue
 }

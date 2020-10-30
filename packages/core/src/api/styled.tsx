@@ -7,7 +7,7 @@ import {
   CSSProperties,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { Modifiers } from '../types/Modifiers'
+import { Modifiers } from '../types'
 import { toFinalProps } from './toFinalProps'
 import { createStyle } from './createStyle'
 

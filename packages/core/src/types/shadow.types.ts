@@ -1,3 +1,4 @@
+import { PropValue } from './common.types'
 export interface Shadows {
   /**
    * Set shadow
@@ -9,7 +10,7 @@ export interface Shadows {
    * ```
    */
 
-  shadow?: boolean | string | string[]
+  shadow?: PropValue
 
   /**
    * Set shadow
@@ -19,7 +20,7 @@ export interface Shadows {
    * <View shadowXXS></View>
    * ```
    */
-  shadowXXS?: boolean | string
+  shadowXXS?: PropValue
 
   /**
    * Set shadow
@@ -29,7 +30,7 @@ export interface Shadows {
    * <View shadowXS></View>
    * ```
    */
-  shadowXS?: boolean | string
+  shadowXS?: PropValue
 
   /**
    * Set shadow
@@ -39,7 +40,7 @@ export interface Shadows {
    * <View shadowS></View>
    * ```
    */
-  shadowS?: boolean | string
+  shadowS?: PropValue
 
   /**
    * Set shadow
@@ -49,7 +50,7 @@ export interface Shadows {
    * <View shadowM></View>
    * ```
    */
-  shadowM?: boolean | string
+  shadowM?: PropValue
 
   /**
    * Set shadow
@@ -59,7 +60,7 @@ export interface Shadows {
    * <View shadowL></View>
    * ```
    */
-  shadowL?: boolean | string
+  shadowL?: PropValue
 
   /**
    * Set shadow
@@ -69,7 +70,7 @@ export interface Shadows {
    * <View shadowXL></View>
    * ```
    */
-  shadowXL?: boolean | string
+  shadowXL?: PropValue
 
   /**
    * Set shadow
@@ -79,7 +80,7 @@ export interface Shadows {
    * <View shadowXXL></View>
    * ```
    */
-  shadowXXL?: boolean | string
+  shadowXXL?: PropValue
 
   /**
    * Set shadow
@@ -89,7 +90,7 @@ export interface Shadows {
    * <View shadowInner></View>
    * ```
    */
-  shadowInner?: boolean | string
+  shadowInner?: PropValue
 
   /**
    * Set shadow
@@ -99,7 +100,7 @@ export interface Shadows {
    * <View shadowOutline></View>
    * ```
    */
-  shadowOutline?: boolean | string
+  shadowOutline?: PropValue
 
   /**
    * Set shadow
@@ -109,5 +110,5 @@ export interface Shadows {
    * <View shadowNone></View>
    * ```
    */
-  shadowshadowNone?: boolean | string
+  shadowshadowNone?: PropValue
 }

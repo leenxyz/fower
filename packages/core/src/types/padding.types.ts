@@ -1,3 +1,4 @@
+import { PropValue } from './common.types'
 export interface Paddings {
   /**
    * Set padding, p is padding
@@ -12,7 +13,7 @@ export interface Paddings {
    * <View p={a + b}></View>
    * ```
    */
-  p?: boolean | number | string | number[] | string[]
+  p?: PropValue
 
   /**
    * Set padding horizontal
@@ -34,7 +35,7 @@ export interface Paddings {
    * <View px={a + b}></View>
    * ```
    */
-  px?: boolean | number | string | number[] | string[]
+  px?: PropValue
 
   /**
    * Set padding vertical
@@ -56,7 +57,7 @@ export interface Paddings {
    * <View py={a + b}></View>
    * ```
    */
-  py?: boolean | number | string | number[] | string[]
+  py?: PropValue
 
   /**
    * Set padding top, pt is padding-top
@@ -71,7 +72,7 @@ export interface Paddings {
    * <View pt={a + b}></View>
    * ```
    */
-  pt?: boolean | number | string | number[] | string[]
+  pt?: PropValue
 
   /**
    * Set padding bottom, pb is padding-bottom
@@ -86,7 +87,7 @@ export interface Paddings {
    * <View pb={a + b}></View>
    * ```
    */
-  pb?: boolean | number | string | number[] | string[]
+  pb?: PropValue
 
   /**
    * Set padding right, pr is padding-right
@@ -101,7 +102,7 @@ export interface Paddings {
    * <View pr={a + b}></View>
    * ```
    */
-  pr?: boolean | number | string | number[] | string[]
+  pr?: PropValue
 
   /**
    * Set padding left, pl is padding-left
@@ -116,5 +117,5 @@ export interface Paddings {
    * <View pl={a + b}></View>
    * ```
    */
-  pl?: boolean | number | string | number[] | string[]
+  pl?: PropValue
 }

@@ -1,3 +1,4 @@
+import { PropValue } from './common.types'
 export interface Margins {
   /**
    * Set margin, m is margin
@@ -12,7 +13,7 @@ export interface Margins {
    * <View m={a + b}></View>
    * ```
    */
-  m?: boolean | number | string | number[] | string[]
+  m?: PropValue
 
   /**
    * Set margin horizontal
@@ -32,7 +33,7 @@ export interface Margins {
    * <View mx={a + b}></View>
    * ```
    */
-  mx?: boolean | number | string | number[] | string[]
+  mx?: PropValue
 
   /**
    * Set margin vertical
@@ -52,7 +53,7 @@ export interface Margins {
    * <View my={a + b}></View>
    * ```
    */
-  my?: boolean | number | string | number[] | string[]
+  my?: PropValue
 
   /**
    * Set margin top, mt is margin-top
@@ -67,7 +68,7 @@ export interface Margins {
    * <View mt={a + b}></View>
    * ```
    */
-  mt?: boolean | number | string | number[] | string[]
+  mt?: PropValue
 
   /**
    * Set margin bottom, mb is margin-bottom
@@ -82,7 +83,7 @@ export interface Margins {
    * <View mb={a + b}></View>
    * ```
    */
-  mb?: boolean | number | string | number[] | string[]
+  mb?: PropValue
 
   /**
    * Set margin right, mr is margin-right
@@ -97,7 +98,7 @@ export interface Margins {
    * <View mr={a + b}></View>
    * ```
    */
-  mr?: boolean | number | string | number[] | string[]
+  mr?: PropValue
 
   /**
    * Set margin left, ml is margin-left
@@ -112,5 +113,5 @@ export interface Margins {
    * <View ml={a + b}></View>
    * ```
    */
-  ml?: boolean | number | string | number[] | string[]
+  ml?: PropValue
 }

@@ -1,4 +1,5 @@
 import { Property } from 'csstype'
+import { PropValue } from './common.types'
 
 export interface Texts {
   textAlign?: string | string[]
@@ -23,7 +24,7 @@ export interface Texts {
    * <View h1></View>
    * ```
    */
-  heading?: string | string[]
+  heading?: PropValue
   h1?: boolean
   h2?: boolean
   h3?: boolean
@@ -47,9 +48,9 @@ export interface Texts {
    * <View f-xs></View>
    * ```
    */
-  f?: boolean | number | string | number[] | string[]
+  f?: PropValue
 
-  fontWeight?: string | number | number[] | string[]
+  fontWeight?: PropValue
   fontHairline?: boolean
   fontThin?: boolean
   fontLight?: boolean
@@ -59,7 +60,7 @@ export interface Texts {
   fontBold?: boolean
   fontExtrabold?: boolean
 
-  lh?: boolean | number | string | number[] | string[]
+  lh?: PropValue
 
   lhNone?: boolean
   lhTight?: boolean
@@ -68,48 +69,43 @@ export interface Texts {
   lhRelaxed?: boolean
   lhLoose?: boolean
 
+  normalcase?: boolean
+  uppercase?: boolean
+  lowercase?: boolean
+  capitalize?: boolean
+
   color?: Property.Color | Property.Color[]
 
-  // TODO: 改掉: 用 color 开头
-  primaryColor?: boolean // '#2364AA'
-  secondaryColor?: boolean // '#81C3D7'
-  errorColor?: boolean // '#E63B2E'
-  successColor?: boolean // '#ADC76F'
-  dangerColor?: boolean // '#E63B2E'
-  warningColor?: boolean // '#FF963C'
-
-  // 上面的替换成下面
-
   // Organization or company brand color.
-  colorbrand?: boolean
+  colorBrand?: boolean
 
   // Primary color. Typically buttons, links, bars, active states, etc.
-  colorprimary?: boolean
+  colorPrimary?: boolean
 
   // Accent color. Provides emphasis and contrast to the primary color.
-  colorsecondary?: boolean
+  colorSecondary?: boolean
 
   // Additional complementary color for more variation.
-  colortertiary?: boolean
+  colorTertiary?: boolean
 
   // Whites, grays, blacks, etc that make up background, border, shadow, and other layout related pieces.
-  colorneutral?: boolean
+  colorNeutral?: boolean
 
   // Disabled and empty like states.
-  colormuted?: boolean
+  colorMuted?: boolean
 
   // State that denotes something as informational.
-  colorinfo?: boolean
+  colorInfo?: boolean
 
   // State that warns the user of something minor.
-  colorwarning?: boolean
+  colorWarning?: boolean
 
   // State that indicates a destructive, atomic, or irreversible action.
-  colordanger?: boolean
+  colorDanger?: boolean
 
   // State when something errors or fails.
-  colorfailure?: boolean
+  colorFailure?: boolean
 
   // State when something succeeds or passes
-  colorsuccess?: boolean
+  colorSuccess?: boolean
 }

@@ -1,51 +1,35 @@
-import { CSSProperties } from 'react'
-import { Sheet } from '../Sheet'
-import { ModifierType } from './Modifiers'
-export * from './Modifiers'
+import { Backgrounds } from './background.types'
+import { Borders } from './border.types'
+import { Flexs } from './flex.types'
+import { Margins } from './margin.types'
+import { Paddings } from './padding.types'
+import { Sizes } from './size.types'
+import { Texts } from './text.types'
+import { Positions, ZIndex } from './position.types'
+import { Shadows } from './shadow.types'
+import { Opacity } from './opacity.types'
+import { Colors } from './color.types'
+import { Displays } from './display.types'
+import { OverFlows } from './overflow.types'
+import { CssObject } from './common.types'
 
-export interface Props {
-  style?: any
-  [key: string]: any
-}
+export * from './common.types'
 
-export interface MarginMaps {
-  [key: string]: string[]
-}
-
-export interface SizeMaps {
-  [key: string]: string[]
-}
-
-export interface PaddingMaps {
-  [key: string]: string[]
-}
-
-interface Theme {
-  [key: string]: any
-}
-
-export interface Config {
-  plugins: Plugin[]
-  unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
-
-  /** use inline style or not */
-  inline: boolean
-  theme: Theme
-  transformUnit: (value: number | string, modifierType?: ModifierType) => string
-}
-
-export type Preset = Partial<Config>
-
-export interface Plugin {
-  onVisitProp?(atom: Atom, sheet: Sheet): Atom | undefined | null
-  onStylesCreated?(): void
-}
-
-export interface Atom {
-  propKey: 'css' | ({} & string)
-  propValue: string
-  style: CSSProperties
-  pseudo?: 'link' | 'visited' | 'hover' | 'active'
-  type?: 'style' | 'font' | 'keyframe'
-  className?: string
+export interface Modifiers
+  extends Sizes,
+    Paddings,
+    Margins,
+    Flexs,
+    Borders,
+    Positions,
+    Colors,
+    Backgrounds,
+    Texts,
+    ZIndex,
+    Shadows,
+    Displays,
+    OverFlows,
+    Opacity {
+  css?: CssObject
+  debug?: boolean
 }
