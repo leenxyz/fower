@@ -61,8 +61,8 @@ function Home() {
   const { siteConfig = {}, tagline } = context
   return (
     <Layout title={tagline} description={tagline}>
-      <View w-800 center column textCenter mx-auto mb-40 py-60>
-        <View py-50 f-80 fontBold leadingNone black>
+      <View w={['auto', 900, 900]} center column textCenter mx-auto mb-40 py-60>
+        <View py={[10, 20, 50]} f={[20, 40, 68, 68]} fontBold black>
           {siteConfig.tagline}
         </View>
         <p>CSS is painful，let's use JS.</p>

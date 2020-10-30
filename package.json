@@ -4,7 +4,7 @@
   "description": "A style library for rapid UI development.",
   "scripts": {
     "dev": "lerna run --parallel --stream dev",
-    "build": "lerna run --parallel --stream build",
+    "build": "bash build.sh",
     "test": "lerna run --parallel --stream test",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "publish": "lerna publish --force-publish=*",
