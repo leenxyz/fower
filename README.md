@@ -1,6 +1,6 @@
 # Styli
 
-A Atomic CSS-in-JS library for rapid UI development.
+A Atomic CSS in JS library for rapid UI development.
 
 [![npm](https://img.shields.io/npm/v/@styli/core.svg)](https://www.npmjs.com/package/@styli/core)
 [![Build Status](https://travis-ci.org/forsigner/styli.svg?branch=master)](https://travis-ci.org/forsigner/styli)
