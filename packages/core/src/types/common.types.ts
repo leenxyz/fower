@@ -46,7 +46,7 @@ export interface Config {
   /** use inline style or not */
   inline?: boolean
   theme: Theme
-  transformUnit: (value: number | string, modifierType?: ModifierType) => string
+  transformUnit?: (value: number | string, modifierType?: ModifierType) => string
 }
 
 export type Preset = Partial<Config>

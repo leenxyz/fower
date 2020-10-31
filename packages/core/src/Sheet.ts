@@ -20,7 +20,7 @@ export class Sheet {
    */
   atoms: Atom[] = []
 
-  constructor(private props: Props) {}
+  constructor(public props: Props) {}
 
   private storeMedieStyles(atom: Atom, cssKey: string, value: any[]) {
     value.forEach((_, i) => {

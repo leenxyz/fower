@@ -20,10 +20,12 @@ import textSize from 'styli-plugin-text-size'
 import textTransform from 'styli-plugin-text-transform'
 import textWeight from 'styli-plugin-text-weight'
 import zIndex from 'styli-plugin-z-index'
+import { Config } from '@styli/core'
 
 import { colors } from './colors'
 
-export const presetDefault: any = {
+
+export const presetDefault: Config = {
   plugins: [
     background(),
     border(),

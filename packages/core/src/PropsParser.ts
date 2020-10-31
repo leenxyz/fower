@@ -42,7 +42,7 @@ export class PropsParser {
     return parsedProps
   }
 
-  private isInlne(): boolean {
+  private isInline(): boolean {
     let inline: boolean
 
     if (typeof styli.config.inline === 'boolean') {
@@ -90,7 +90,7 @@ export class PropsParser {
   getParsedProps(): Props {
     const { props } = this
     if (isEmptyObj(props)) return {}
-    const inline: boolean = this.isInlne()
+    const inline: boolean = this.isInline()
     return this.getPropsByInline(inline)
   }
 }
