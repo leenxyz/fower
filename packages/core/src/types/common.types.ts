@@ -41,12 +41,12 @@ export type CssObject<T = any> =
     }
 
 export interface Config {
-  plugins: Plugin[]
   unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
-
+  prefix?: string
   /** use inline style or not */
   inline?: boolean
   theme: Theme
+  plugins: Plugin[]
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
 }
 

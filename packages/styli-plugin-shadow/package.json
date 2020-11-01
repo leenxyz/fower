@@ -1,5 +1,5 @@
 {
-  "name": "styli-plugin-shodow",
+  "name": "styli-plugin-shadow",
   "version": "0.6.1",
   "license": "MIT",
   "main": "dist/index.js",

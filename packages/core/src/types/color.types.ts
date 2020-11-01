@@ -13,6 +13,8 @@ export interface Colors {
    * ```
    */
 
+  transparent?: 'transparent'
+
   black?: boolean
 
   white?: boolean
