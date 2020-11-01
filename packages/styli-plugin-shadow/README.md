@@ -1,1 +1,1 @@
-# styli-plugin-shodow
+# styli-plugin-shadow
