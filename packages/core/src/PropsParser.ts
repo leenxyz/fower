@@ -7,7 +7,8 @@ import { Plugin, Props, Atom } from './types'
 import { CSSProperties } from 'react'
 
 export class PropsParser {
-  private sheet: Sheet
+  // TODO: 太耦合了
+  sheet: Sheet
   constructor(private readonly props: Props) {
     this.sheet = new Sheet(props)
   }

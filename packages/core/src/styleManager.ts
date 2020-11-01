@@ -15,12 +15,12 @@ export class StyleManager {
     this.$style = $style
   }
 
-  insertStyles(rule: string) {
+  insertStyles(cssStr: string) {
     if (!isBrowser) return
     if (!this.$style) this.createStyleElement()
 
     // TODO: 多个还是单个好?
-    this.$style.innerHTML = this.$style.innerHTML + rule
+    this.$style.innerHTML = this.$style.innerHTML + cssStr
   }
 }
 

@@ -114,7 +114,8 @@ export class Sheet {
    * get class string
    */
   toCss(): string {
-    // TODO: 循环可能太多
+    console.log('this.atoms:', this.atoms)
+
     const css = this.atoms.reduce((result, atom) => {
       const { className = '' } = atom
 

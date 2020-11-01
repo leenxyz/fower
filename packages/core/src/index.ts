@@ -5,5 +5,6 @@ export * from './PropsParser'
 export * from './styleManager'
 export * from './styled'
 export * from './createStyle'
+export * from './css'
 
 export { getValue } from './utils'

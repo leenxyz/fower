@@ -1,8 +1,15 @@
 import * as React from 'react'
-import { styli, styled } from '@styli/core'
+import { styli, styled, css } from '@styli/core'
 import presetDefault from '@styli/preset-default'
 
 styli.setup(presetDefault)
+
+const myClassName = css('p-20 mx-10 borderGray-1 f-40', {
+  display: 'block',
+})
+
+const app = document.getElementById('root')
+app?.className = myClassName
 
 export const View = styled('div')
 export const Text = styled('span')
