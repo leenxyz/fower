@@ -45,6 +45,7 @@ export interface Config {
   prefix?: string
   /** use inline style or not */
   inline?: boolean
+  important?: boolean
   theme: Theme
   plugins: Plugin[]
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string

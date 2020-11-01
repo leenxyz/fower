@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { toFinalProps } from '@styli/core'
+import { PropsParser } from '@styli/core'
 
 /**
  * JSX Pragma
@@ -14,6 +14,6 @@ export function jsx(element: string, props: any, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const newProps = toFinalProps(props)
+  const newProps: any = new PropsParser(props).getParsedProps()
   return createElement.apply(null, [element, newProps, ...children])
 }

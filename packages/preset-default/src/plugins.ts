@@ -12,7 +12,7 @@ import overflow from 'styli-plugin-overflow'
 import padding from 'styli-plugin-padding'
 import position from 'styli-plugin-position'
 import rounded from 'styli-plugin-rounded'
-import shodow from '../../styli-plugin-shadow/dist'
+import shadow from 'styli-plugin-shadow'
 import size from 'styli-plugin-size'
 import textAlign from 'styli-plugin-text-align'
 import textHeading from 'styli-plugin-text-heading'
@@ -36,7 +36,7 @@ export const plugins = [
   padding(),
   position(),
   rounded(),
-  shodow(),
+  shadow(),
   size(),
   textAlign(),
   textHeading(),
