@@ -5,11 +5,8 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
-import preset from '@styli/preset-default'
-import { styli } from '@styli/core'
 import { View } from '@styli/react'
 
-styli.setup(preset)
 
 const features = [
   {
@@ -62,10 +59,10 @@ function Home() {
   return (
     <Layout title={tagline} description={tagline}>
       <View w={['auto', 900, 900]} center column textCenter mx-auto mb-40 py-60>
-        <View py={[10, 20, 50]} f={[20, 40, 68, 68]} fontBold black lhTight>
-          A <span red400>Atomic CSS</span> in JS library for rapid UI development
+        <View py={[10, 20, 50]} f={[20, 40, 68, 68]} fontBold black lhTight textCenter>
+          A <Text red40>Atomic CSS</Text> in JS library for rapid UI development
         </View>
-        <p>CSS is painful，let's use JS.</p>
+        <View textCenter>CSS is painful，let's use JS.</View>
         <View center mt-20>
           <Link
             className={clsx('button button--primary button--lg', styles.getStarted)}
