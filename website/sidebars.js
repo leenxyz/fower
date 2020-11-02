@@ -8,6 +8,8 @@ module.exports = {
       'use-with-vue',
       'use-with-react-native',
       'use-with-taro',
+      'use-with-taro',
+      'use-with-vanilla',
     ],
     Guides: ['guide', 'programmable', 'responsive', 'theme', 'plugin', 'typescript'],
     Props: [
