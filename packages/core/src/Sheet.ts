@@ -9,8 +9,6 @@ import { getValue } from './utils'
  * Sheet, one Props map to one Sheet
  */
 export class Sheet {
-  private breakpoints = [640, 768, 1024, 1280]
-
   private mediaStyles: string[] = ['', '', '', '', '', '']
 
   cssPropClassName: string = ''
@@ -151,8 +149,8 @@ export class Sheet {
       return result + `.${className} { ${cssAtomStr} }`
     }, '')
 
-    const responsiveCss = this.breakpoints.reduce((result, b, i) => {
-      return result + `@media (min-width: ${b}px) { ${this.mediaStyles[i]} }`
+    const responsiveCss = styli.getTheme('breakpoints').reduce((result: string, b: string, i: number) => {
+      return result + `@media (min-width: ${b}) { ${this.mediaStyles[i]} }`
     }, '')
 
     return css + responsiveCss

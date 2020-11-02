@@ -19,8 +19,9 @@ class Styli {
     }
   }
 
-  getTheme<T = any>(themeKey: string): T {
-    return this.config.theme[themeKey]
+  getTheme<T = any>(themeKey?: string): T {
+    if (!themeKey) return this.config.theme as any
+    return this.config.theme[themeKey] || {}
   }
 
   getColors = () => {
