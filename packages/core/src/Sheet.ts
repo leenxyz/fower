@@ -128,7 +128,8 @@ export class Sheet {
         return result + parseCSSProp(atom.style, className)
       }
 
-      if (atom.pseudo === 'hover') {
+      // TODO: 不严谨
+      if (atom.pseudo) {
         return result + parseCSSProp(atom.style, className)
       }
 

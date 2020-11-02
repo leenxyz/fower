@@ -1,5 +1,15 @@
 import { noCase } from 'no-case'
 
+const regPseudo = /(_a|_c|_d|_e|_f|_h|_l|_v)$/
+
+export function trimPseudo(str: string) {
+  return str.replace(regPseudo, '')
+}
+
+export function isPseudoKey(str: string) {
+  return regPseudo.test(str)
+}
+
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
@@ -33,10 +43,6 @@ export function elementType(ele: any) {
 
 export function isEmptyObj(props: any) {
   return !props || !Object.keys(props).length
-}
-
-export function trimPseudo(str: string) {
-  return str.replace(/(_h|_l|_a|_c|_f)$/, '')
 }
 
 // https://www.zhangxinxu.com/wordpress/2010/03/javascript-hex-rgb-hsl-color-convert/

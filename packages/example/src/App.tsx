@@ -26,6 +26,9 @@ export const App = () => {
         m-10
         f-30
         f-50_h
+        m-20_a
+        red20
+        green20_h
         bg="#f0f0f0"
         p-140_h
         w={[100, 200, 400, 800]}

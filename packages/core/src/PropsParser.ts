@@ -1,10 +1,21 @@
 import isBrowser from 'is-in-browser'
-import { isEmptyObj, isFalsyProp } from '@styli/utils'
+import { isEmptyObj, isFalsyProp, trimPseudo, isPseudoKey } from '@styli/utils'
 import { styleManager } from './styleManager'
 import { Sheet } from './Sheet'
 import { styli } from './styli'
 import { Plugin, Props, Atom } from './types'
 import { CSSProperties } from 'react'
+
+const pseudoMap: any = {
+  a: 'active',
+  c: 'checked',
+  d: 'disabled',
+  e: 'empty',
+  f: 'focus',
+  h: 'hover',
+  l: 'link',
+  v: 'visited',
+}
 
 export class PropsParser {
   // TODO: 太耦合了
@@ -41,17 +52,21 @@ export class PropsParser {
           const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
 
           if (newAtom) {
-            if (newAtom.propKey.endsWith('_h')) {
-              newAtom.pseudo = 'hover'
+            if (isPseudoKey(newAtom.propKey)) {
+              // TODO: 不严谨
+              const [, pseudoPrefix] = newAtom.propKey.split('_')
+
+              newAtom.pseudo = pseudoMap[pseudoPrefix]
+
               const atom = plugin.onVisitProp(
                 {
                   ...initialAtom,
-                  propKey: initialAtom.propKey.replace(/_h$/, ''),
+                  propKey: trimPseudo(initialAtom.propKey),
                 },
                 this.sheet,
               )
 
-              newAtom.style = atom ? { ':hover': atom.style } : {}
+              newAtom.style = atom ? { [`:${newAtom.pseudo}`]: atom.style } : {}
             }
             this.sheet.addAtom(newAtom)
             break
@@ -69,11 +84,11 @@ export class PropsParser {
 
   private getPropsByInline(inline: boolean) {
     const { props, sheet } = this
-    const keys = this.sheet.atoms.map((i) => i.propKey)
+    const keys = this.sheet.atoms.map((i) => trimPseudo(i.propKey))
     const parsedProps: Props = {}
 
     for (let i in props) {
-      if (keys.includes(i)) continue
+      if (keys.includes(trimPseudo(i))) continue
       parsedProps[i] = props[i]
     }
 
