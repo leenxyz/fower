@@ -39,8 +39,23 @@ export class PropsParser {
         if (plugin.onVisitProp) {
           const initialAtom = { propKey, propValue, style: {} } as Atom
           const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
-          this.sheet.addAtom(newAtom)
-          break
+
+          if (newAtom) {
+            if (newAtom.propKey.endsWith('_h')) {
+              newAtom.pseudo = 'hover'
+              const atom = plugin.onVisitProp(
+                {
+                  ...initialAtom,
+                  propKey: initialAtom.propKey.replace(/_h$/, ''),
+                },
+                this.sheet,
+              )
+
+              newAtom.style = atom ? { ':hover': atom.style } : {}
+            }
+            this.sheet.addAtom(newAtom)
+            break
+          }
         }
       }
     }

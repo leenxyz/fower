@@ -128,6 +128,10 @@ export class Sheet {
         return result + parseCSSProp(atom.style, className)
       }
 
+      if (atom.pseudo === 'hover') {
+        return result + parseCSSProp(atom.style, className)
+      }
+
       /** to css atom string */
       const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
         const value: any = (atom as any).style[k]

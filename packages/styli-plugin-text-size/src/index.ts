@@ -1,5 +1,5 @@
 import { Plugin, getValue, ModifierType } from '@styli/core'
-import { isValidPropValue } from '@styli/utils'
+import { isValidPropValue, trimPseudo } from '@styli/utils'
 
 export const fontSizes: any = {
   xs: 10,
@@ -27,7 +27,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
     }
   }
   const [, value] = prop.split('-')
-  return { fontSize: fontSizes[value] || getValue(value, ModifierType.text) }
+  return { fontSize: fontSizes[value] || getValue(trimPseudo(value), ModifierType.text) }
 }
 
 export default (): Plugin => {

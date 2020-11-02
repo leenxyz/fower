@@ -22,14 +22,16 @@ export const App = () => {
         row
         flex-1
         center
-        bgYellow300
         p-100
         m-10
-        bg="#00ff00"
+        f-30
+        f-50_h
+        bg="#f0f0f0"
+        p-140_h
         w={[100, 200, 400, 800]}
-        css={{
-          fontSize: 30,
-        }}
+        // css={{
+        //   fontSize: 30,
+        // }}
       >
         Hello world
       </View>

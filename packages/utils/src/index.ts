@@ -35,6 +35,10 @@ export function isEmptyObj(props: any) {
   return !props || !Object.keys(props).length
 }
 
+export function trimPseudo(str: string) {
+  return str.replace(/(_h|_l|_a|_c|_f)$/, '')
+}
+
 // https://www.zhangxinxu.com/wordpress/2010/03/javascript-hex-rgb-hsl-color-convert/
 export function hexToRgba(sColor: string, opacity?: string) {
   const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/
