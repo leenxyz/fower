@@ -24,7 +24,7 @@ class Styli {
   }
 
   getColors = () => {
-    return this.config.theme.colors || {}
+    return this.getTheme('typography').colors || {}
   }
 
   getConfig<T = any>(type?: keyof Config): T {
@@ -33,7 +33,14 @@ class Styli {
   }
 
   use = (...plugins: Plugin[]) => {
-    this.config.plugins.push(...plugins)
+    plugins.forEach((plugin) => {
+      const idx = this.config.plugins.findIndex((configPlugin) => configPlugin.name === plugin.name)
+      if (idx === -1) {
+        this.config.plugins.push(plugin)
+      } else {
+        this.config.plugins[idx] = plugin
+      }
+    })
   }
 }
 

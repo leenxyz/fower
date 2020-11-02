@@ -54,7 +54,9 @@ export interface Config {
 export type Preset = Partial<Config>
 
 export interface Plugin {
-  onVisitProp?(atom: Atom, sheet: Sheet): Atom | undefined | null | void
+  name: string
+  isMatch(key: string): boolean
+  onVisitProp?(atom: Atom, sheet: Sheet): Atom
   onStylesCreated?(): void
 }
 

@@ -15,8 +15,9 @@ export function flexItemPropToStyle(prop: any, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-flex-item',
+    isMatch: isFlexItemKey,
     onVisitProp(atom) {
-      if (!isFlexItemKey(atom.propKey)) return
       atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

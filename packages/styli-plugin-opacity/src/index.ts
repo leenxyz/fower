@@ -19,8 +19,9 @@ export function opacityPropToStyle(prop: string, propValue: any): any {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-opacity',
+    isMatch: isOpacityKey,
     onVisitProp(atom) {
-      if (!isOpacityKey(atom.propKey)) return
       atom.style = opacityPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

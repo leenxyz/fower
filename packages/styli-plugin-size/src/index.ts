@@ -33,8 +33,9 @@ export function sizePropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-size',
+    isMatch: isSizeKey,
     onVisitProp(atom) {
-      if (!isSizeKey(atom.propKey)) return
       atom.style = sizePropToStyle(atom.propKey, atom.propValue)
       return atom
     },

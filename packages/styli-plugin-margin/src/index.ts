@@ -66,8 +66,9 @@ export function marginPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-margin',
+    isMatch: isMarginKey,
     onVisitProp(atom) {
-      if (!isMarginKey(atom.propKey)) return
       atom.style = marginPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

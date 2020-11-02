@@ -50,8 +50,9 @@ export function roundedPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-rounded',
+    isMatch: isRoundedKey,
     onVisitProp(atom) {
-      if (!isRoundedKey(atom.propKey)) return
       atom.style = roundedPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

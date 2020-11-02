@@ -34,15 +34,13 @@ export class PropsParser {
 
       /** register plugin */
       for (const plugin of plugins) {
+        if (!plugin.isMatch(propKey)) continue
+
         if (plugin.onVisitProp) {
           const initialAtom = { propKey, propValue, style: {} } as Atom
-
           const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
-
-          if (newAtom) {
-            this.sheet.addAtom(newAtom)
-            break
-          }
+          this.sheet.addAtom(newAtom)
+          break
         }
       }
     }

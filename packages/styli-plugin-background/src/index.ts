@@ -14,9 +14,9 @@ export function bgPropToStyle(propKey: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-background',
+    isMatch: isBgColorKey,
     onVisitProp(atom) {
-      if (!isBgColorKey(atom.propKey)) return
-
       atom.style = bgPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

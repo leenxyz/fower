@@ -21,9 +21,9 @@ export function textHeadingPropToStyle(prop: string): any {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-text-heading',
+    isMatch: isTextHeadingKey,
     onVisitProp(atom) {
-      if (!isTextHeadingKey(atom.propKey)) return
-
       atom.style = textHeadingPropToStyle(atom.propKey)
       return atom
     },

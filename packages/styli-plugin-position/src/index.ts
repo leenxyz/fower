@@ -52,8 +52,9 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-position',
+    isMatch: isPositionKey,
     onVisitProp(atom) {
-      if (!isPositionKey(atom.propKey)) return
       atom.style = positionPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

@@ -32,8 +32,9 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-text-heading',
+    isMatch: isTextSizeKey,
     onVisitProp(atom) {
-      if (!isTextSizeKey(atom.propKey)) return
       atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
       return atom
     },

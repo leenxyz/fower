@@ -49,8 +49,9 @@ export function borderPropToStyle(prop: string) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-border',
+    isMatch: isBorderKey,
     onVisitProp(atom) {
-      if (!isBorderKey(atom.propKey)) return
       atom.style = borderPropToStyle(atom.propKey)
       return atom
     },

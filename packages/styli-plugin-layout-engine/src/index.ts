@@ -104,11 +104,10 @@ export function alignmentPropToStyle(props: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-layout-engine',
+    isMatch: isAlignmentKey,
     onVisitProp(atom, sheet) {
-      if (!isAlignmentKey(atom.propKey)) return
-
       atom.style = alignmentPropToStyle(sheet.props)
-
       return atom
     },
   }

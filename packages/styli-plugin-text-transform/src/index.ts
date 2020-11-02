@@ -2,13 +2,13 @@ import { Plugin } from '@styli/core'
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-text-heading',
+    isMatch(key) {
+      const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
+      return caseKeys.includes(key)
+    },
     onVisitProp(atom) {
       const { propKey } = atom
-      const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
-
-      const isCaseKey = caseKeys.includes(propKey)
-
-      if (!isCaseKey) return
 
       const value: any = propKey === 'normalcase' ? 'none' : propKey
 

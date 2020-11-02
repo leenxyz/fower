@@ -28,8 +28,9 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-text-heading',
+    isMatch: isTextWeightKey,
     onVisitProp(atom) {
-      if (!isTextWeightKey(atom.propKey)) return
       atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

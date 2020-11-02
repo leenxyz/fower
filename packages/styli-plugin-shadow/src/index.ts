@@ -57,8 +57,9 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-shadow',
+    isMatch: isShadowKey,
     onVisitProp(atom) {
-      if (!isShadowKey(atom.propKey)) return
       atom.style = shadowPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

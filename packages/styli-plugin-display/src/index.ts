@@ -43,9 +43,9 @@ export function displayPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-display',
+    isMatch: isDisplayKey,
     onVisitProp(atom) {
-      if (!isDisplayKey(atom.propKey)) return
-
       atom.style = displayPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

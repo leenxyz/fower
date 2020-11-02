@@ -67,8 +67,9 @@ export function flexPropToStyle(prop: string) {
 
 export default (): Plugin => {
   return {
+    name: 'styli-plugin-flex-box',
+    isMatch: isFlexBoxKey,
     onVisitProp(atom) {
-      if (!isFlexBoxKey(atom.propKey)) return
       atom.style = flexPropToStyle(atom.propKey)
       return atom
     },
