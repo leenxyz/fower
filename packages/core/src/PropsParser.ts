@@ -11,6 +11,41 @@ export class PropsParser {
   sheet: Sheet
   constructor(private readonly props: Props) {
     this.sheet = new Sheet(props)
+    this.traverseProps()
+  }
+
+  /**
+   * traverse Props to init atoms
+   */
+  private traverseProps(): void {
+    const { props } = this
+    if (isEmptyObj(props)) return
+
+    const plugins = styli.getConfig<Plugin[]>('plugins')
+
+    for (const [propKey, propValue] of Object.entries(props)) {
+      if (isFalsyProp(propValue)) continue
+
+      /** handle css props */
+      if (propKey === 'css') {
+        this.sheet.addAtom({ propKey, propValue, style: propValue })
+        continue
+      }
+
+      /** register plugin */
+      for (const plugin of plugins) {
+        if (plugin.onVisitProp) {
+          const initialAtom = { propKey, propValue, style: {} } as Atom
+
+          const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
+
+          if (newAtom) {
+            this.sheet.addAtom(newAtom)
+            break
+          }
+        }
+      }
+    }
   }
 
   private getClassName() {
@@ -55,36 +90,6 @@ export class PropsParser {
   }
 
   getParsedStyle(): CSSProperties {
-    const { props } = this
-
-    if (isEmptyObj(props)) return {}
-
-    const plugins = styli.getConfig<Plugin[]>('plugins')
-
-    for (const [propKey, propValue] of Object.entries(props)) {
-      if (isFalsyProp(propValue)) continue
-
-      /** handle css props */
-      if (propKey === 'css') {
-        this.sheet.addAtom({ propKey, propValue, style: propValue })
-        continue
-      }
-
-      /** register plugin */
-      for (const plugin of plugins) {
-        if (plugin.onVisitProp) {
-          const initialAtom = { propKey, propValue, style: {} } as Atom
-
-          const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
-
-          if (newAtom) {
-            this.sheet.addAtom(newAtom)
-            break
-          }
-        }
-      }
-    }
-
     return this.sheet.toStyles()
   }
 

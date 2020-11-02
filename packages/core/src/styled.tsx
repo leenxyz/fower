@@ -41,7 +41,6 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props: any, ref) => {
     const propsParser = new PropsParser(props)
-    propsParser.getParsedStyle()
     const parsedProps = propsParser.getParsedProps()
     parsedProps.style = { ...createStyle(...args), ...props.style }
 

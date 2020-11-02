@@ -6,7 +6,8 @@ export function createStyle(...args: (string | CSSProperties)[]): CSSProperties 
   return args.reduce((result, cur) => {
     if (typeof cur === 'string') {
       const props = modifierToProps(cur)
-      const style = new PropsParser(props).getParsedStyle()
+      const parser = new PropsParser(props)
+      const style = parser.getParsedStyle()
       return { ...result, ...style }
     }
     return { ...result, ...cur }

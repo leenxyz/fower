@@ -14,10 +14,6 @@ export function css(...args: (string | CssObject)[]) {
 
   const parser = new PropsParser(props)
   const sheet = parser.sheet
-
-  // TODO: 太耦合
-  parser.getParsedStyle()
-
   styleManager.insertStyles(sheet.toCss())
 
   return sheet.getClassNames()
