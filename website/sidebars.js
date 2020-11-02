@@ -10,6 +10,12 @@ module.exports = {
       'use-with-taro',
       'use-with-vanilla',
     ],
+    'Design System': [
+      'design-system',
+      'design-system-color',
+      'design-system-typography',
+      'design-system-spacing',
+    ],
     Guides: ['guide', 'programmable', 'responsive', 'theme', 'plugin', 'typescript'],
     Props: [
       'padding',
