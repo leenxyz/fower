@@ -76,36 +76,17 @@ export interface Texts {
 
   color?: Property.Color | Property.Color[]
 
-  // Organization or company brand color.
   colorBrand?: boolean
 
-  // Primary color. Typically buttons, links, bars, active states, etc.
   colorPrimary?: boolean
 
-  // Accent color. Provides emphasis and contrast to the primary color.
   colorSecondary?: boolean
 
-  // Additional complementary color for more variation.
-  colorTertiary?: boolean
-
-  // Whites, grays, blacks, etc that make up background, border, shadow, and other layout related pieces.
-  colorNeutral?: boolean
-
-  // Disabled and empty like states.
-  colorMuted?: boolean
-
-  // State that denotes something as informational.
   colorInfo?: boolean
 
-  // State that warns the user of something minor.
   colorWarning?: boolean
 
-  // State that indicates a destructive, atomic, or irreversible action.
-  colorDanger?: boolean
+  colorError?: boolean
 
-  // State when something errors or fails.
-  colorFailure?: boolean
-
-  // State when something succeeds or passes
   colorSuccess?: boolean
 }

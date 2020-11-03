@@ -1,4 +1,41 @@
 ---
 id: design-system-color
-title: design-system-color
+sidebar_label: Color
+title: 设计系统之颜色
 ---
+
+import { Colors } from '../src/components/Colors'
+
+使用 Styli，你可以系统地管理颜色，
+
+## 使用颜色
+
+直接使用颜色属性设置字体颜色：
+
+```jsx live
+<Text f-24 green500 fontBold>
+  Hello
+</Text>
+```
+
+使用 `primary`、`info`、`success`、`warn`等颜色:
+
+```jsx live
+<Text f-24 primaryColor fontBold>
+  Hello
+</Text>
+```
+
+背景颜色的使用：
+
+```jsx live
+<View bgOrange300 orange700 center s-100 f-20>
+  Hello
+</View>
+```
+
+## Color palette
+
+> Styli preset-color，borrow from tailwindcss color。
+
+<Colors />

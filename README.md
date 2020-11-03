@@ -18,7 +18,6 @@ Frequently viewed docs:
 - [Installation](/docs/installation)
 - [Getting started](/docs/getting-started)
 - [API Reference](/docs/styled)
-- [Configuration](/docs/configuration)
 
 ## Installation
 

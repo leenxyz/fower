@@ -19,7 +19,6 @@ export interface Colors {
 
   white?: boolean
 
-  gray?: boolean
   gray10?: boolean // #f7fafc
   gray20?: boolean // #edf2f7
   gray30?: boolean // #e2e8f0
@@ -30,7 +29,6 @@ export interface Colors {
   gray80?: boolean // #2d3748
   gray90?: boolean // #1a202c
 
-  red?: boolean
   red10?: boolean // #fff5f5
   red20?: boolean // #fed7d7
   red30?: boolean // #feb2b2
@@ -41,7 +39,6 @@ export interface Colors {
   red80?: boolean // #9b2c2c
   red90?: boolean // #742a2a
 
-  orange?: boolean
   orange10?: boolean // #fffaf0
   orange20?: boolean // #feebc8
   orange30?: boolean // #fbd38d
@@ -52,7 +49,6 @@ export interface Colors {
   orange80?: boolean // #9c4221
   orange90?: boolean // #7b341e
 
-  yellow?: boolean
   yellow10?: boolean // #fffff0
   yellow20?: boolean // #fefcbf
   yellow30?: boolean // #faf089
@@ -63,7 +59,6 @@ export interface Colors {
   yellow80?: boolean // #975a16
   yellow90?: boolean // #744210
 
-  green?: boolean
   green10?: boolean // #f0fff4
   green20?: boolean // #c6f6d5
   green30?: boolean // #9ae6b4
@@ -74,7 +69,6 @@ export interface Colors {
   green80?: boolean // #276749
   green90?: boolean // #22543d
 
-  teal?: boolean
   teal10?: boolean // #e6fffa
   teal20?: boolean // #b2f5ea
   teal30?: boolean // #81e6d9
@@ -85,7 +79,6 @@ export interface Colors {
   teal80?: boolean // #285e61
   teal90?: boolean // #234e52
 
-  blue?: boolean
   blue10?: boolean // #ebf8ff
   blue20?: boolean // #bee3f8
   blue30?: boolean // #90cdf4
@@ -96,7 +89,6 @@ export interface Colors {
   blue80?: boolean // #2c5282
   blue90?: boolean // #2a4365
 
-  indigo?: boolean
   indigo10?: boolean // #ebf4ff
   indigo20?: boolean // #c3dafe
   indigo30?: boolean // #a3bffa
@@ -107,7 +99,6 @@ export interface Colors {
   indigo80?: boolean // #434190
   indigo90?: boolean // #3c366b
 
-  purple?: boolean
   purple10?: boolean // #faf5ff
   purple20?: boolean // #e9d8fd
   purple30?: boolean // #d6bcfa
@@ -118,7 +109,6 @@ export interface Colors {
   purple80?: boolean // #553c9a
   purple90?: boolean // #44337a
 
-  pink?: boolean
   pink10?: boolean // #fff5f7
   pink20?: boolean // #fed7e2
   pink30?: boolean // #fbb6ce

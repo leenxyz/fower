@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Styli: ['introduction', 'design-principles', 'comparison', 'configuration'],
+    Styli: ['introduction', 'design-principles', 'comparison'],
     'Getting Started': [
       'installation',
       'getting-started',
@@ -33,7 +33,6 @@ module.exports = {
       'background-color',
       'shadow',
       'opacity',
-      'preset-color',
       'css',
     ],
     Api: ['styled', 'createStyle'],
