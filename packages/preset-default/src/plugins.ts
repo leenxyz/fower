@@ -20,8 +20,14 @@ import textSize from 'styli-plugin-text-size'
 import textTransform from 'styli-plugin-text-transform'
 import textWeight from 'styli-plugin-text-weight'
 import zIndex from 'styli-plugin-z-index'
+import debug from 'styli-plugin-debug'
+import css from 'styli-plugin-css'
+import reset from 'styli-plugin-reset'
 
 export const plugins = [
+  debug(),
+  css(),
+  reset(),
   background(),
   border(),
   color(),

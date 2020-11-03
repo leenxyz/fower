@@ -2,7 +2,6 @@ import CSS from 'csstype'
 import { Sheet } from '../Sheet'
 
 type CSSProperties = CSS.Properties<number | string>
-// type CSSProperties = CSS.PropertiesFallback<number | string>
 
 export type PropValue = boolean | number | string | (boolean | number | string)[]
 
@@ -61,11 +60,11 @@ export interface Plugin {
 }
 
 export interface Atom {
-  propKey: 'css' | ({} & string)
-  propValue: string
+  propKey: 'css' | 'debug' | 'reset' | ({} & string)
+  propValue: string | number | boolean | CssObject
   style: CssObject
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
-  type?: 'style' | 'font' | 'keyframe'
+  type?: 'style' | 'prefix' | 'no-prefix'
   className?: string
 }
 

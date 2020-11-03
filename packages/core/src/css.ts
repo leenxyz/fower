@@ -4,7 +4,7 @@ import { CssObject, Props } from './types'
 import { modifierToProps } from './utils'
 
 export function css(...args: (string | CssObject)[]) {
-  const props = args.reduce((result, cur) => {
+  const props = args.reduce((result: Props, cur: any) => {
     if (typeof cur === 'string') {
       return { ...result, ...modifierToProps(cur) }
     } else {

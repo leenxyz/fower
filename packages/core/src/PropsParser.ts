@@ -1,5 +1,5 @@
 import isBrowser from 'is-in-browser'
-import { isEmptyObj, isFalsyProp, trimPseudo, isPseudoKey } from '@styli/utils'
+import { isEmptyObj, isFalsyProp, isPseudoKey } from '@styli/utils'
 import { styleManager } from './styleManager'
 import { Sheet } from './Sheet'
 import { styli } from './styli'
@@ -37,40 +37,26 @@ export class PropsParser {
     for (const [propKey, propValue] of Object.entries(props)) {
       if (isFalsyProp(propValue)) continue
 
-      /** handle css props */
-      if (propKey === 'css') {
-        this.sheet.addAtom({ propKey, propValue, style: propValue })
-        continue
-      }
+      const propIsPseudo = isPseudoKey(propKey)
+      const [key, pseType] = propIsPseudo ? propKey.split('_') : [propKey]
 
-      /** register plugin */
       for (const plugin of plugins) {
-        if (!plugin.isMatch(propKey)) continue
+        if (!plugin.isMatch(key)) continue
 
         if (plugin.onVisitProp) {
-          const initialAtom = { propKey, propValue, style: {} } as Atom
+          const initialAtom = { propKey: key, propValue, style: {}, type: 'style' } as Atom
           const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
 
-          if (newAtom) {
-            if (isPseudoKey(newAtom.propKey)) {
-              // TODO: 不严谨
-              const [, pseudoPrefix] = newAtom.propKey.split('_')
-
-              newAtom.pseudo = pseudoMap[pseudoPrefix]
-
-              const atom = plugin.onVisitProp(
-                {
-                  ...initialAtom,
-                  propKey: trimPseudo(initialAtom.propKey),
-                },
-                this.sheet,
-              )
-
-              newAtom.style = atom ? { [`:${newAtom.pseudo}`]: atom.style } : {}
+          if (propIsPseudo) {
+            newAtom.propKey = propKey
+            newAtom.type = 'prefix'
+            newAtom.style = {
+              [':' + pseudoMap[pseType]]: newAtom.style,
             }
-            this.sheet.addAtom(newAtom)
-            break
           }
+
+          this.sheet.addAtom(newAtom)
+          break
         }
       }
     }
@@ -84,16 +70,14 @@ export class PropsParser {
 
   private getPropsByInline(inline: boolean) {
     const { props, sheet } = this
-    const keys = this.sheet.atoms.map((i) => trimPseudo(i.propKey))
-    const parsedProps: Props = {}
-
-    for (let i in props) {
-      if (keys.includes(trimPseudo(i))) continue
-      parsedProps[i] = props[i]
-    }
+    const parsedProps: Props = Object.keys(props).reduce((result: Props, cur: any) => {
+      const prop = sheet.atoms.find(({ propKey }) => propKey === cur)
+      return prop ? result : { ...result, [cur]: props[cur] }
+    }, {} as Props)
 
     if (inline) {
-      return { ...props, style: sheet.toStyles() }
+      parsedProps.style = sheet.toStyles()
+      return parsedProps
     }
 
     /**
@@ -114,6 +98,7 @@ export class PropsParser {
     } else {
       inline = isBrowser ? false : true
     }
+
     return inline
   }
 

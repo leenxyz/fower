@@ -42,8 +42,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   const StyledComponent = forwardRef((props: any, ref) => {
     const propsParser = new PropsParser(props)
     const parsedProps = propsParser.getParsedProps()
-    parsedProps.style = { ...createStyle(...args), ...props.style }
-
+    parsedProps.style = { ...parsedProps.style, ...createStyle(...args), ...props.style }
     return createElement(component, { ref, ...parsedProps })
   })
 

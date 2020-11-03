@@ -49,12 +49,7 @@ export class Sheet {
     const { propKey = '' } = atom
     const value = this.props[propKey]
 
-    if (atom.propKey === 'css') {
-      atom.className = `css-${hash(JSON.stringify(value))}`
-
-      // store className from css Props
-      this.cssPropClassName = atom.className
-    } else if (typeof value === 'boolean') {
+    if (typeof value === 'boolean') {
       atom.className = propKey
     } else {
       const postfix = this.getClassPostfix(value)
@@ -96,8 +91,8 @@ export class Sheet {
    */
   toStyles() {
     const styliStyles = this.atoms.reduce((result, cur) => {
-      if (cur.propKey !== 'css') return { ...result, ...cur.style }
-      return result
+      if (cur.type !== 'style') return result
+      return { ...result, ...cur.style }
     }, {} as CSSProperties)
 
     /** array style for RN */
@@ -112,25 +107,17 @@ export class Sheet {
    * get class string
    */
   toCss(): string {
-    console.log('this.atoms:', this.atoms)
-
     const css = this.atoms.reduce((result, atom) => {
       const { className = '' } = atom
 
       // has cache，dont't repeat generate css
       if (styli.cache[className]) return result
 
-      /** handle css prop */
-      if (atom.propKey === 'css') {
-        if (!parseCSSProp(atom.style, className)) return result
-
-        styli.cache[className] = true
-        return result + parseCSSProp(atom.style, className)
-      }
-
-      // TODO: 不严谨
-      if (atom.pseudo) {
-        return result + parseCSSProp(atom.style, className)
+      switch (atom.type) {
+        case 'prefix':
+          return result + parseCSSProp(atom.style, className).join(' ')
+        case 'no-prefix':
+          return result + parseCSSProp(atom.style).join(' ')
       }
 
       /** to css atom string */
@@ -148,15 +135,15 @@ export class Sheet {
 
       if (!cssAtomStr) return result
 
-      // styli.cache[className] = true
-
       // wrap with css className
       return result + `.${className} { ${cssAtomStr} }`
     }, '')
 
-    const responsiveCss = styli.getTheme('breakpoints').reduce((result: string, b: string, i: number) => {
-      return result + `@media (min-width: ${b}) { ${this.mediaStyles[i]} }`
-    }, '')
+    const responsiveCss = styli
+      .getTheme('breakpoints')
+      .reduce((result: string, b: string, i: number) => {
+        return result + `@media (min-width: ${b}) { ${this.mediaStyles[i]} }`
+      }, '')
 
     return css + responsiveCss
   }
@@ -194,7 +181,7 @@ function parseCSSProp(cssObj: any, className = '') {
       const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')
 
       const obj = {
-        key: `.${className}${getPrefix(str)}${str}`,
+        key: `${className ? '.' + className : ''}${getPrefix(str)}${str}`,
         value: { [attr]: getValue(attrValue) },
       }
 

@@ -31,5 +31,6 @@ export interface Modifiers
     OverFlows,
     Opacity {
   css?: CssObject
-  debug?: boolean
+  debug?: boolean | CssObject
+  reset?: boolean | CssObject
 }
