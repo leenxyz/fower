@@ -11,6 +11,7 @@ class Styli {
   }
 
   cache: Cache = {}
+  componentKey = 0  // use generate component unite className
 
   setup(preset: Preset) {
     this.config = {

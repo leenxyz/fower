@@ -5,6 +5,7 @@ import { Sheet } from './Sheet'
 import { styli } from './styli'
 import { Plugin, Props, Atom } from './types'
 import { CSSProperties } from 'react'
+import hash from 'string-hash'
 
 const pseudoMap: any = {
   a: 'active',
@@ -20,8 +21,12 @@ const pseudoMap: any = {
 export class PropsParser {
   // TODO: 太耦合了
   sheet: Sheet
+  className: string
   constructor(private readonly props: Props) {
-    this.sheet = new Sheet(props)
+    const classNamePrefix = (styli.config.prefix || 'css') + '-'
+    const className = classNamePrefix + hash('' + styli.componentKey++)
+    this.className = className
+    this.sheet = new Sheet(props, className)
     this.traverseProps()
   }
 
@@ -63,7 +68,8 @@ export class PropsParser {
   }
 
   private getClassName() {
-    const className = this.sheet.getClassNames()
+    const unitClassName = this.sheet.getClassNames()
+    const className = `${this.className} ${unitClassName}`
     if (!this.props.className) return className
     return `${this.props.className} ${className}`
   }

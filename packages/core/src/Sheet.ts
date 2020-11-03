@@ -1,7 +1,7 @@
 import hash from 'string-hash'
 import { CSSProperties } from 'react'
 import { Props, Atom } from './types'
-import { kebab } from '@styli/utils'
+import { isEmptyObj, kebab } from '@styli/utils'
 import { styli } from './styli'
 import { getValue } from './utils'
 
@@ -9,25 +9,12 @@ import { getValue } from './utils'
  * Sheet, one Props map to one Sheet
  */
 export class Sheet {
-  private mediaStyles: string[] = ['', '', '', '', '', '']
-
-  cssPropClassName: string = ''
-
   /**
    * atom parsed from props
    */
   atoms: Atom[] = []
 
-  constructor(public props: Props) {}
-
-  private storeMedieStyles(atom: Atom, cssKey: string, value: any[]) {
-    value.forEach((_, i) => {
-      // store responsive styles
-      if (value[i + 1]) {
-        this.mediaStyles[i] += `.${atom.className} { ${cssKey}: ${value[i + 1]}; }`
-      }
-    })
-  }
+  constructor(readonly props: Props, readonly className: string) {}
 
   /**
    *  @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
@@ -46,13 +33,12 @@ export class Sheet {
    * @param atom
    */
   addAtom(atom: Atom) {
-    const { propKey = '' } = atom
-    const value = this.props[propKey]
+    const { propKey = '', propValue } = atom
 
-    if (typeof value === 'boolean') {
+    if (typeof propValue === 'boolean') {
       atom.className = propKey
     } else {
-      const postfix = this.getClassPostfix(value)
+      const postfix = this.getClassPostfix(propValue)
       atom.className = `${propKey}-${postfix}`
     }
 
@@ -107,11 +93,11 @@ export class Sheet {
    * get class string
    */
   toCss(): string {
+    let mediaCss: any = []
     const css = this.atoms.reduce((result, atom) => {
       const { className = '' } = atom
 
-      // has cache，dont't repeat generate css
-      if (styli.cache[className]) return result
+      if (styli.cache[className] || isEmptyObj(atom.style)) return result
 
       switch (atom.type) {
         case 'prefix':
@@ -127,25 +113,27 @@ export class Sheet {
 
         if (!Array.isArray(value)) return r + `${cssKey}: ${value};`
 
-        //responsive style, TODO: 这里有不纯
-        this.storeMedieStyles(atom, cssKey, value)
+        value.forEach((v, idx) => {
+          mediaCss[idx] = (mediaCss[idx] || []) + `${cssKey}: ${v};`
+        })
 
         return r + `${cssKey}: ${value[0]};`
       }, '')
-
-      if (!cssAtomStr) return result
 
       // wrap with css className
       return result + `.${className} { ${cssAtomStr} }`
     }, '')
 
-    const responsiveCss = styli
-      .getTheme('breakpoints')
-      .reduce((result: string, b: string, i: number) => {
-        return result + `@media (min-width: ${b}) { ${this.mediaStyles[i]} }`
-      }, '')
+    if (mediaCss.length) {
+      const responsiveCss = styli
+        .getTheme('breakpoints')
+        .reduce((result: string, b: string, i: number) => {
+          return result + `@media (min-width: ${b}) { .${this.className}{${mediaCss[i]}} }`
+        }, '')
+      return css + responsiveCss
+    }
 
-    return css + responsiveCss
+    return css
   }
 }
 
