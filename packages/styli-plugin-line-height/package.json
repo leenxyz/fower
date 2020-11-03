@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-line-height",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -27,7 +27,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "@styli/core": "^0.6.1",
-    "@styli/utils": "^0.6.1"
+    "@styli/core": "^0.7.0",
+    "@styli/utils": "^0.7.0"
   }
 }
