@@ -3,50 +3,50 @@ import { View } from '@styli/react'
 
 export const LineHeight = () => {
   return (
-    <View f-16 borderGray200-1 p-20>
-      <View leadingNone mb-20>
-        <View gray600 f-14 mb-4>
-          leadingNone
+    <View f-16 borderGray20-1 p-20>
+      <View lhNone mb-20>
+        <View gray60 f-14 mb-4>
+          lhNone
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
         voluptatum quae eum fugit earum.
       </View>
-      <View leadingTight mb-20>
-        <View gray600 f-14 mb-4>
-          leadingTight
+      <View lhTight mb-20>
+        <View gray60 f-14 mb-4>
+          lhTight
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
         voluptatum quae eum fugit earum.
       </View>
-      <View leadingSnug mb-20>
-        <View gray600 f-14 mb-4>
-          leadingSnug
+      <View lhSnug mb-20>
+        <View gray60 f-14 mb-4>
+          lhSnug
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
         voluptatum quae eum fugit earum.
       </View>
-      <View leadingNormal mb-20>
-        <View gray600 f-14 mb-4>
-          leadingNormal
+      <View lhNormal mb-20>
+        <View gray60 f-14 mb-4>
+          lhNormal
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
         voluptatum quae eum fugit earum.
       </View>
-      <View leadingRelaxed mb-20>
-        <View gray600 f-14 mb-4>
-          leadingRelaxed
+      <View lhRelaxed mb-20>
+        <View gray60 f-14 mb-4>
+          lhRelaxed
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
         voluptatum quae eum fugit earum.
       </View>
-      <View leadingLoose>
-        <View gray600 f-14 mb-4>
-          leadingLoose
+      <View lhLoose>
+        <View gray60 f-14 mb-4>
+          lhLoose
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
         a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed

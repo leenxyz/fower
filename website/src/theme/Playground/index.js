@@ -26,7 +26,7 @@ function Playground({ children, theme, transformCode, ...props }) {
       </div>
       <View relative>
         <LiveEditor className={styles.playgroundEditor} />
-        <Text f-14 fontBold green400 absolute T-2 R-10>
+        <Text f-14 fontBold green40 absolute T-2 R-10>
           LIVE DEMO
         </Text>
       </View>

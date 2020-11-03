@@ -1,0 +1,39 @@
+---
+id: use-with-thirdparty
+title: use-with-thirdparty
+---
+
+### Styled Component
+
+`styled` 可以让第三方组件使用原子属性样式。
+
+```jsx
+import { styled } from '@styli/core'
+import { Button } from 'antd'
+
+const StyledButton = styled(Button)
+
+function Demo() {
+  return (
+    <div>
+      <StyledButton p-10>click me</StyledButton>
+    </div>
+  )
+}
+```
+
+**_ 注意: _** styled 包裹的组件需支持传入 style, className
+
+### createStyle
+
+```jsx live
+function Demo() {
+  const cardStyle = createStyle('p-20 bgOrange200')
+  const textStyle = createStyle('p-10 pink500')
+  return (
+    <div style={cardStyle}>
+      <span style={textStyle}>Style from createStyle</span>
+    </div>
+  )
+}
+```

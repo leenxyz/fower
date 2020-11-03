@@ -3,30 +3,22 @@ id: background-color
 title: Background Color
 ---
 
-import BgColor from '../src/components/BgColor'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
+## 使用设计系统的颜色
 
-<BgColor />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View row between>
-  <View s-100 bg="#ed8936">
-    #ed8936
-  </View>
-  <View s-100 bgBlue300>
-    blue300
-  </View>
+```jsx live
+<View row center>
+  <View s-100 bgGreen30></View>
+  <View s-100 bgBlue30></View>
+  <View s-100 bgPurple30></View>
 </View>
-`}
-        />
-      ),
-    },
-  ]}
-/>
+```
+
+## 自定义颜色
+
+```jsx live
+<View row center>
+  <View s-100 bg="#ed8936"></View>
+  <View s-100 bg="rgba(44,200, 400)"></View>
+  <View s-100 bg="indigo"></View>
+</View>
+```

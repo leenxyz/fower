@@ -64,22 +64,22 @@ export const FlexLayout = () => {
 
   const propsString = `${direction} ${alignment.join(' ')}`
 
-  const exampleCode = `<View bgGray300 h-300 ${propsString}>
-  <View s-50 bgBlue300>A</View>
-  <View s-120 bgGreen300>B</View>
-  <View s-80 bgOrange300>C</View>
+  const exampleCode = `<View bgGray30 h-300 ${propsString}>
+  <View s-50 bgBlue30>A</View>
+  <View s-120 bgGreen30>B</View>
+  <View s-80 bgOrange30>C</View>
 </View>`
 
   return (
     <View>
       <View bgGray300 h-300 {...containerProps}>
-        <View s-50 bgBlue300 center>
+        <View s-50 bgBlue30 center>
           A
         </View>
-        <View s-120 bgGreen300 center>
+        <View s-120 bgGreen30 center>
           B
         </View>
-        <View s-80 bgOrange300 center>
+        <View s-80 bgOrange30 center>
           C
         </View>
       </View>

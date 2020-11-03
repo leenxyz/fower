@@ -13,16 +13,6 @@ npm i @styli/core @styli/taro
 
 注意，除了需要 `@styli/core`，你还需安装和 Taro 对应的组件包 `@styli/taro`。
 
-## 配置
-
-Taro 框架中模拟了相关 DOM API，但支持并不完全，不支持将 css 插入到 DOM，因而需要您手动配置插件
-
-```jsx
-Styli.config({
-  plugins: [toStyle],
-})
-```
-
 ## 使用
 
 下面我们使用 `View`、`Image`、`Text` 三个组件，实现一个用户信息卡片界面。
@@ -34,7 +24,7 @@ Styli.config({
     <View f-20 fontBold>
       Steve Jobs
     </View>
-    <Text gray800>Co-founder of Apple Inc.</Text>
+    <Text gray80>Co-founder of Apple Inc.</Text>
   </View>
 </View>
 ```

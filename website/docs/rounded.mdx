@@ -3,26 +3,11 @@ id: rounded
 title: Rounded
 ---
 
-import Round from '../src/components/Round'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
-
-<Round />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View s-100 rounded-50></View>
-<View s-100 rounded-50px></View>
-<View s-100 rounded={50}></View>
-<View s-100 rounded="50px"></View>
-`}
-        />
-      ),
-    },
-  ]}
-/>
+```jsx live
+<View row center>
+  <View s-100 bgYellow30 rounded-6></View>
+  <View s-100 bgRed30 rounded-10px></View>
+  <View s-100 bgGreen30 rounded={20}></View>
+  <View s-100 bgBlue30 rounded="50px"></View>
+</View>
+```

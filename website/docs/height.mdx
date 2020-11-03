@@ -3,10 +3,6 @@ id: height
 title: Height
 ---
 
-import Height from '../src/components/Height'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
-
 使用原子 Props 控制元素的高度。
 
 高度是高频率使用的属性，所以我们使用缩写。
@@ -15,15 +11,27 @@ import { TabType } from '../src/components/TabType'
 
 使用 h-{size} 格式的 Props 可以控制元素的高度。
 
-```jsx
-<View h-50>Hello</View>
-<View h-50rem>Hello</View>
-<View h={50}>Hello</View>
-<View h="50px">Hello</View>
-<View h="100%">Hello</View>
+```jsx live
+<View left>
+  <View h-50 bgRed20>
+    Hello
+  </View>
+  <View h-5rem bgYellow20>
+    Hello
+  </View>
+  <View h={50} bgGreen20>
+    Hello
+  </View>
+  <View h="100px" bgBlue20>
+    Hello
+  </View>
+  <View h="20%" bgPurple20>
+    Hello
+  </View>
+</View>
 ```
 
-### 最小宽度
+### 最小高度
 
 使用 minH-{size} 格式的 Props 可以控制元素的最小高度。
 
@@ -35,7 +43,7 @@ import { TabType } from '../src/components/TabType'
 <View minH="100%">Hello</View>
 ```
 
-### 最大宽度
+### 最大高度
 
 使用 maxH-{size} 格式的 Props 可以控制元素的最大高度。
 
@@ -46,33 +54,3 @@ import { TabType } from '../src/components/TabType'
 <View maxH="50px">Hello</View>
 <View maxH="100%">Hello</View>
 ```
-
-### Demo
-
-<Height />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View w-100 h-10></View>
-<View w-100 h-10rem></View>
-<View w-100 h={10}></View>
-<View w-100 h="10px"></View>
-<View w-100 minH-10></View>
-<View w-100 minH-10rem></View>
-<View w-100 minH={10}></View>
-<View w-100 minH="10px"></View>
-<View w-100 maxH-10></View>
-<View w-100 maxH-10rem></View>
-<View w-100 maxH={10}></View>
-<View w-100 maxH="10px"></View>
-`}
-        />
-      ),
-    },
-  ]}
-/>

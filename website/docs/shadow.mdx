@@ -3,25 +3,32 @@ id: shadow
 title: Shadow
 ---
 
-import Shadow from '../src/components/Shadow'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
+Styli 内置了阴影管理。
 
-<Shadow />
+### 用法
 
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View s-100 shadow></View>
-<View s-100 shadow-base></View>
-<View s-100 shadow="0 0 1px 2px"></View>
-`}
-        />
-      ),
-    },
-  ]}
-/>
+```jsx live
+<View bgGray10 p-20 centerX between>
+  <View center c-50 bgWhite shadowXXS>
+    XXS
+  </View>
+  <View center c-60 bgWhite shadowXS>
+    XS
+  </View>
+  <View center c-70 bgWhite bgWhite shadowS>
+    S
+  </View>
+  <View center c-80 bgWhite shadowM>
+    M
+  </View>
+  <View center c-90 bgWhite shadowL>
+    L
+  </View>
+  <View center c-100 bgWhite shadowXL>
+    XL
+  </View>
+  <View center c-110 bgWhite shadowXXL>
+    XXL
+  </View>
+</View>
+```

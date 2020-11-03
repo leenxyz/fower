@@ -7,7 +7,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 import { View, Text } from '@styli/react'
 
-
 const features = [
   {
     title: 'Atomic Props',

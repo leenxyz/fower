@@ -42,8 +42,8 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/use-with-react-native',
-          activeBasePath: 'docs/use-with-react-native',
+          to: 'docs/use-with-rn',
+          activeBasePath: 'docs/use-with-rn',
           label: 'React native',
           position: 'left',
         },

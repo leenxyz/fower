@@ -3,10 +3,6 @@ id: padding
 title: Padding
 ---
 
-import Padding from '../src/components/Padding'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
-
 使用 `p{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 padding。
 
 ### Padding Props
@@ -25,55 +21,49 @@ padding 是高频率使用的属性，所以我们使用缩写。
 
 使用 `p-{size}` 格式的 Props 可以控制元素四周的 padding。
 
-```jsx
-<View p-10>Hello</View>
+```jsx live
+<Text p-10 bgRed30>
+  Hello
+</Text>
 ```
 
 ### 设置一边的 padding
 
 使用 `p{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 padding。
 
-```jsx
-<View pt-10>Hello</View>
-<View pr-10>Hello</View>
-<View pb-10>Hello</View>
-<View pl-10>Hello</View>
+```jsx live
+<View centerX>
+  <View debug pt-10>
+    Hello
+  </View>
+  <View debug pr-10>
+    Hello
+  </View>
+  <View debug pb-10>
+    Hello
+  </View>
+  <View debug pl-10>
+    Hello
+  </View>
+</View>
 ```
 
 ### 设置水平方向的 padding
 
 使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 padding。
 
-```jsx
-<View px-10>Hello</View>
+```jsx live
+<Text px-10 bgRed30>
+  Hello
+</Text>
 ```
 
 ### 设置垂直方向的 padding
 
 使用 `py-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
 
-```jsx
-<View py-10>Hello</View>
+```jsx live
+<Text py-10 bgRed30>
+  Hello
+</Text>
 ```
-
-### Demo
-
-<Padding />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View s-100 p-10></View>
-<View s-100 p-10rem></View>
-<View s-100 p={10}></View>
-<View s-100 p="10px 20px"></View>
-`}
-        />
-      ),
-    },
-  ]}
-/>

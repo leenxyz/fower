@@ -3,10 +3,6 @@ id: width
 title: Width
 ---
 
-import Width from '../src/components/Width'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
-
 使用原子 Props 控制元素的宽度。
 
 宽度是高频率使用的属性，所以我们使用缩写。
@@ -15,66 +11,42 @@ import { TabType } from '../src/components/TabType'
 
 使用 w-{size} 格式的 Props 可以控制元素的宽度。
 
-```jsx
-<View w-50>Hello</View>
-<View w-50rem>Hello</View>
-<View w={50}>Hello</View>
-<View w="50px">Hello</View>
-<View w="100%">Hello</View>
+```jsx live
+<View left>
+  <View w-50 bgRed20>
+    Hello
+  </View>
+  <View w-5rem bgYellow20>
+    Hello
+  </View>
+  <View w={50} bgGreen20>
+    Hello
+  </View>
+  <View w="100px" bgBlue20>
+    Hello
+  </View>
+  <View w="20%" bgPurple20>
+    Hello
+  </View>
+</View>
 ```
 
 ### 最小宽度
 
 使用 minW-{size} 格式的 Props 可以控制元素的最小宽度。
 
-```jsx
-<View minW-50>Hello</View>
-<View minW-50rem>Hello</View>
-<View minW={50}>Hello</View>
-<View minW="50px">Hello</View>
-<View minW="100%">Hello</View>
+```jsx live
+<View minW-100 bgRed20 dInlineBlock>
+  Hello
+</View>
 ```
 
 ### 最大宽度
 
 使用 maxW-{size} 格式的 Props 可以控制元素的最大宽度。
 
-```jsx
-<View maxW-50>Hello</View>
-<View maxW-50rem>Hello</View>
-<View maxW={50}>Hello</View>
-<View maxW="50px">Hello</View>
-<View maxW="100%">Hello</View>
+```jsx live
+<View maxW-100 bgRed20>
+  Hello
+</View>
 ```
-
-### Demo
-
-<Width />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View row between>
-  <View h-100 w-10></View>
-  <View h-100 w-10rem></View>
-  <View h-100 w={10}></View>
-  <View h-100 w="10px"></View>
-  <View h-100 minW-10></View>
-  <View h-100 minW-10rem></View>
-  <View h-100 minW={10}></View>
-  <View h-100 minW="10px"></View>
-  <View h-100 maxW-10></View>
-  <View h-100 maxW-10rem></View>
-  <View h-100 maxW={10}></View>
-  <View h-100 maxW="10px"></View>
-</View>        
-`}
-        />
-      ),
-    },
-  ]}
-/>

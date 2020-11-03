@@ -3,39 +3,23 @@ id: square
 title: Square
 ---
 
-import Square from '../src/components/Square'
-import { JSXHighLight } from '../src/components/HighLight'
-import { TabType } from '../src/components/TabType'
-
 使用 `s-{size}` 格式的 Props 快速把元素变为正方形。
 
 ### 用法
 
-```jsx
-<View s-50>Hello</View>
-<View s-50rem>Hello</View>
-<View s={50}>Hello</View>
-<View s="50px">Hello</View>
+```jsx live
+<View left>
+  <View s-50 bgYellow20>
+    Hello
+  </View>
+  <View s-5rem bgGreen20>
+    Hello
+  </View>
+  <View s={100} bgBlue20>
+    Hello
+  </View>
+  <View s="150px" bgPurple20>
+    Hello
+  </View>
+</View>
 ```
-
-### Demo
-
-<Square />
-
-<TabType
-  items={[
-    {
-      type: 'react',
-      value: (
-        <JSXHighLight
-          code={`
-<View s-100></View>
-<View s-10rem></View>
-<View s="10px"></View>
-<View s={10}></View>
-`}
-        />
-      ),
-    },
-  ]}
-/>

@@ -1,10 +1,6 @@
 import React, { forwardRef } from 'react'
-import { createStyle, toFinalProps, styled } from '@styli/core'
+import { createStyle, styled } from '@styli/core'
 import { Text, View, Image, Anchor } from '@styli/react'
-
-export const Button = forwardRef((props, ref) => {
-  return <button {...toFinalProps(props)} ref={ref} />
-})
 
 const Heading = styled('h2', { lineHeight: '1em' })
 
@@ -34,7 +30,6 @@ const ReactLiveScope = {
   Image,
   Heading,
   Anchor,
-  Button,
 }
 
 export default ReactLiveScope
