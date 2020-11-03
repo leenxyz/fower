@@ -18,7 +18,7 @@ export const Text = styled('span')
 export const App = () => {
   return (
     <div className="box">
-      <View f-50 onClick={() => {}}>
+      <View f-50 f-80_h onClick={() => {}}>
         <View s-100>gogog</View>
       </View>
     </div>
