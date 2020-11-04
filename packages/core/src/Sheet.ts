@@ -73,6 +73,47 @@ export class Sheet {
     return isValidClassName ? str : hash(str)
   }
 
+  private getClassName() {
+    const unitClassName = this.getClassNames()
+    const className = `${this.className} ${unitClassName}`
+    if (!this.props.className) return className
+    return `${this.props.className} ${className}`
+  }
+
+  private getPropsByInline(inline: boolean) {
+    const { props, atoms } = this
+    const parsedProps: Props = Object.keys(props).reduce((result: Props, cur: any) => {
+      const prop = atoms.find(({ propKey }) => propKey === cur)
+      return prop ? result : { ...result, [cur]: props[cur] }
+    }, {} as Props)
+
+    if (inline) {
+      parsedProps.style = this.toStyles()
+      return parsedProps
+    }
+
+    /**
+     * insert css to <style></style>
+     */
+    styleManager.insertStyles(this.toCss())
+
+    parsedProps.className = this.getClassName()
+
+    return parsedProps
+  }
+
+  private isInline(): boolean {
+    let inline: boolean
+
+    if (typeof styli.config.inline === 'boolean') {
+      inline = !!styli.config.inline
+    } else {
+      inline = isBrowser ? false : true
+    }
+
+    return inline
+  }
+
   /**
    * add atom to sheet
    * @param atom
@@ -88,26 +129,6 @@ export class Sheet {
     }
 
     this.atoms.push(atom)
-  }
-
-  getAtom(propKey: string) {
-    return this.atoms.find((i) => i.propKey === propKey)
-  }
-
-  removeAtom(propKey: string) {
-    const idx = this.atoms.findIndex((i) => i.propKey === propKey)
-    if (idx !== -1) {
-      this.atoms.splice(idx, 1)
-    }
-  }
-
-  updateAtom(propKey: string, atom: Atom) {
-    const idx = this.atoms.findIndex((i) => i.propKey === propKey)
-    if (idx !== -1) {
-      this.atoms[idx] = atom
-    } else {
-      this.atoms.push(atom)
-    }
   }
 
   /**
@@ -179,47 +200,6 @@ export class Sheet {
     }
 
     return css
-  }
-
-  private getClassName() {
-    const unitClassName = this.getClassNames()
-    const className = `${this.className} ${unitClassName}`
-    if (!this.props.className) return className
-    return `${this.props.className} ${className}`
-  }
-
-  private getPropsByInline(inline: boolean) {
-    const { props, atoms } = this
-    const parsedProps: Props = Object.keys(props).reduce((result: Props, cur: any) => {
-      const prop = atoms.find(({ propKey }) => propKey === cur)
-      return prop ? result : { ...result, [cur]: props[cur] }
-    }, {} as Props)
-
-    if (inline) {
-      parsedProps.style = this.toStyles()
-      return parsedProps
-    }
-
-    /**
-     * insert css to <style></style>
-     */
-    styleManager.insertStyles(this.toCss())
-
-    parsedProps.className = this.getClassName()
-
-    return parsedProps
-  }
-
-  private isInline(): boolean {
-    let inline: boolean
-
-    if (typeof styli.config.inline === 'boolean') {
-      inline = !!styli.config.inline
-    } else {
-      inline = isBrowser ? false : true
-    }
-
-    return inline
   }
 
   getParsedProps(): Props {
