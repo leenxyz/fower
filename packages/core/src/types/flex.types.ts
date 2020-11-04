@@ -1,3 +1,5 @@
+import { PropValue } from './common.types'
+
 export interface Flex {
   /**
    * Set flex-direction: row;

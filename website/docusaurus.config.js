@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Styli',
-  tagline: 'A Atomic CSS in JS library for rapid UI development',
+  tagline: 'An Atomic CSS in JS library for rapid UI development',
   url: 'https://styli.js.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',

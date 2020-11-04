@@ -59,7 +59,7 @@ function Home() {
     <Layout title={tagline} description={tagline}>
       <View w={['auto', 900, 900]} center column textCenter mx-auto mb-40 py-60>
         <View py={[10, 20, 50]} f={[20, 40, 68, 68]} fontBold black lhTight textCenter>
-          A <Text red40>Atomic CSS</Text> in JS library for rapid UI development
+          An <Text red40>Atomic CSS</Text> in JS library for rapid UI development
         </View>
         <View textCenter>CSS is painful，let's use JS.</View>
         <View center mt-20>
