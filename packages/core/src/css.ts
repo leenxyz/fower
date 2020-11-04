@@ -1,4 +1,4 @@
-import { PropsParser } from './PropsParser'
+import { Sheet } from './Sheet'
 import { styleManager } from './styleManager'
 import { CssObject, Props } from './types'
 import { modifierToProps } from './utils'
@@ -12,8 +12,7 @@ export function css(...args: (string | CssObject)[]) {
     }
   }, {} as Props)
 
-  const parser = new PropsParser(props)
-  const sheet = parser.sheet
+  const sheet = new Sheet(props)
   styleManager.insertStyles(sheet.toCss())
 
   return sheet.getClassNames()

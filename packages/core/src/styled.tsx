@@ -9,7 +9,7 @@ import {
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { Modifiers } from './types'
 import { createStyle } from './createStyle'
-import { PropsParser } from './PropsParser'
+import { Sheet } from './Sheet'
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
@@ -40,8 +40,8 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props: any, ref) => {
-    const propsParser = new PropsParser(props)
-    const parsedProps = propsParser.getParsedProps()
+    const sheet = new Sheet(props)
+    const parsedProps = sheet.getParsedProps()
     parsedProps.style = { ...parsedProps.style, ...createStyle(...args), ...props.style }
     return createElement(component, { ref, ...parsedProps })
   })

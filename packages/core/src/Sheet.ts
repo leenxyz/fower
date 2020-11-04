@@ -1,9 +1,15 @@
 import hash from 'string-hash'
+import isBrowser from 'is-in-browser'
 import { CSSProperties } from 'react'
-import { Props, Atom } from './types'
-import { isEmptyObj, kebab } from '@styli/utils'
+import { Props, Atom, Middleware, Plugin } from './types'
+import { styleManager } from './styleManager'
+import { isEmptyObj, isFalsyProp, kebab } from '@styli/utils'
+import { coreMiddleware } from './middleware'
 import { styli } from './styli'
 import { getValue } from './utils'
+
+// TODO: @qj 源码快有 2000 行，equal 代价太够，需移除
+import isEqual from 'lodash.isequal'
 
 /**
  * Sheet, one Props map to one Sheet
@@ -14,7 +20,46 @@ export class Sheet {
    */
   atoms: Atom[] = []
 
-  constructor(readonly props: Props, readonly className: string) {}
+  className: string
+
+  constructor(readonly props: Props) {
+    const classNamePrefix = (styli.config.prefix || 'css') + '-'
+    const className = classNamePrefix + hash('' + styli.componentKey++)
+    this.className = className
+    this.traverseProps()
+  }
+
+  /**
+   * traverse Props to init atoms
+   */
+  private traverseProps(): void {
+    const { props } = this
+    if (isEmptyObj(props)) return
+
+    const plugins = styli.getConfig<Plugin[]>('plugins')
+    const middleware = styli.getConfig<Middleware[]>('middleware')
+    const middlewareList = [coreMiddleware, ...middleware]
+
+    for (const [propKey, propValue] of Object.entries(props)) {
+      if (isFalsyProp(propValue)) continue
+
+      for (const plugin of plugins) {
+        const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
+
+        const newAtom = middlewareList.reduce(
+          (finalAtom, middleware) => {
+            return middleware(plugin, finalAtom, this)
+          },
+          { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
+        )
+
+        if (!isEqual(newAtom, initialAtom)) {
+          this.addAtom(newAtom)
+          break
+        }
+      }
+    }
+  }
 
   /**
    *  @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
@@ -134,6 +179,54 @@ export class Sheet {
     }
 
     return css
+  }
+
+  private getClassName() {
+    const unitClassName = this.getClassNames()
+    const className = `${this.className} ${unitClassName}`
+    if (!this.props.className) return className
+    return `${this.props.className} ${className}`
+  }
+
+  private getPropsByInline(inline: boolean) {
+    const { props, atoms } = this
+    const parsedProps: Props = Object.keys(props).reduce((result: Props, cur: any) => {
+      const prop = atoms.find(({ propKey }) => propKey === cur)
+      return prop ? result : { ...result, [cur]: props[cur] }
+    }, {} as Props)
+
+    if (inline) {
+      parsedProps.style = this.toStyles()
+      return parsedProps
+    }
+
+    /**
+     * insert css to <style></style>
+     */
+    styleManager.insertStyles(this.toCss())
+
+    parsedProps.className = this.getClassName()
+
+    return parsedProps
+  }
+
+  private isInline(): boolean {
+    let inline: boolean
+
+    if (typeof styli.config.inline === 'boolean') {
+      inline = !!styli.config.inline
+    } else {
+      inline = isBrowser ? false : true
+    }
+
+    return inline
+  }
+
+  getParsedProps(): Props {
+    const { props } = this
+    if (isEmptyObj(props)) return {}
+    const inline: boolean = this.isInline()
+    return this.getPropsByInline(inline)
   }
 }
 
