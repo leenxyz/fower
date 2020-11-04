@@ -1,5 +1,5 @@
 {
-  "name": "styli-middleware-design-system",
+  "name": "styli-plugin-pseudo",
   "version": "0.7.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/styli-middleware-design-system.esm.js",
+  "module": "dist/styli-plugin-pseudo.esm.js",
   "devDependencies": {
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",

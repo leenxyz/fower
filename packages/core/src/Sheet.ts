@@ -1,6 +1,6 @@
 import hash from 'string-hash'
 import { CSSProperties } from 'react'
-import { Props, Atom, Middleware, Plugin } from './types'
+import { Props, Atom } from './types'
 import { styleManager } from './styleManager'
 import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
@@ -33,19 +33,16 @@ export class Sheet {
     const { props } = this
     if (isEmptyObj(props)) return
 
-    const plugins = styli.getConfig<Plugin[]>('plugins')
-    const middleware = styli.getConfig<Middleware[]>('middleware')
+    const [middleware, plugins] = styli.getPlugins()
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (const [propKey, propValue] of Object.entries(props)) {
-      if (!propValue) continue
-
       for (const plugin of plugins) {
         const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
 
         const newAtom = middlewareList.reduce(
           (finalAtom, middleware) => {
-            return middleware(plugin, finalAtom, this)
+            return middleware.middleware!(plugin, finalAtom, this)
           },
           { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
         )

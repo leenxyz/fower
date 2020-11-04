@@ -1,7 +1,10 @@
-import { Middleware } from './types'
+import { Plugin } from './types'
 
-export const coreMiddleware: Middleware = (plugin, atom, sheet) => {
-  const { propKey } = atom
-  if (!plugin.isMatch(propKey)) return atom
-  return plugin.onVisitProp(atom, sheet)
+export const coreMiddleware: Plugin = {
+  name: 'styli-plugin-core',
+  middleware(plugin, atom, sheet) {
+    const { propKey } = atom
+    if (!plugin.isMatch!(propKey)) return atom
+    return plugin.onVisitProp!(atom, sheet)
+  },
 }

@@ -1,10 +1,9 @@
-import { Plugin, Config, Preset, Cache, Middleware } from './types'
+import { Plugin, Config, Preset, Cache } from './types'
 
 class Styli {
   config: Config = {
     unit: 'px',
     plugins: [],
-    middleware: [],
     theme: {
       spacing: [],
     },
@@ -35,6 +34,17 @@ class Styli {
     return this.config[type] as any
   }
 
+  getPlugins(): Plugin[][] {
+    const pluginList = this.getConfig<Plugin[]>('plugins')
+    return pluginList.reduce(
+      (result, cur) => {
+        result[cur.middleware ? 0 : 1].push(cur)
+        return result
+      },
+      [[], []] as Plugin[][],
+    )
+  }
+
   use(...plugins: Plugin[]) {
     plugins.forEach((plugin) => {
       const idx = this.config.plugins.findIndex((configPlugin) => configPlugin.name === plugin.name)
@@ -44,10 +54,6 @@ class Styli {
         this.config.plugins[idx] = plugin
       }
     })
-  }
-
-  middleware(...middleware: Middleware[]) {
-    this.config.middleware = this.config.middleware.concat(middleware)
   }
 }
 

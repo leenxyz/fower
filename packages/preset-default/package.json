@@ -54,7 +54,7 @@
     "styli-plugin-text-weight": "^0.7.0",
     "styli-plugin-z-index": "^0.7.0",
     "styli-plugin-ellipsis": "^0.7.0",
-    "styli-middleware-pseudo": "^0.7.0",
-    "styli-middleware-design-system": "^0.7.0"
+    "styli-plugin-pseudo": "^0.7.0",
+    "styli-plugin-design-system": "^0.7.0"
   }
 }
