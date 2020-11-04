@@ -6,7 +6,7 @@ class Styli {
     plugins: [],
     middleware: [],
     theme: {
-      colors: {},
+      spacing: [],
     },
     transformUnit: (value: any) => value + (this.getConfig('unit') as string),
   }
