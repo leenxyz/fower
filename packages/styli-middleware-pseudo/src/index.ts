@@ -15,19 +15,19 @@ const pseudoMap: any = {
 export default (): Middleware => {
   return (plugin, atom, sheet) => {
     const { propKey } = atom
-    const propIsPseudo = isPseudoKey(propKey)
-    const [key, pseType] = propIsPseudo ? propKey.split('_') : [propKey]
+
+    if (!isPseudoKey(propKey)) return atom
+
+    const [key, pseType] = propKey.split('_')
 
     if (!plugin.isMatch(key)) return atom
 
     let newAtom = plugin.onVisitProp({ ...atom, propKey: key }, sheet)
 
-    if (propIsPseudo) {
-      newAtom.propKey = propKey
-      newAtom.type = 'prefix'
-      newAtom.style = {
-        [':' + pseudoMap[pseType]]: newAtom.style,
-      }
+    newAtom.propKey = propKey
+    newAtom.type = 'prefix'
+    newAtom.style = {
+      [':' + pseudoMap[pseType]]: newAtom.style,
     }
 
     return newAtom

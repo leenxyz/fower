@@ -5,6 +5,7 @@ import { Sheet } from './Sheet'
 import { styli } from './styli'
 import { Plugin, Props, Atom, Middleware } from './types'
 import { CSSProperties } from 'react'
+import { coreMiddleware } from './middleware'
 import hash from 'string-hash'
 import isEqual from 'lodash.isequal'
 
@@ -28,7 +29,8 @@ export class PropsParser {
     if (isEmptyObj(props)) return
 
     const plugins = styli.getConfig<Plugin[]>('plugins')
-    const middlewareList = styli.getConfig<Middleware[]>('middleware')
+    const middleware = styli.getConfig<Middleware[]>('middleware')
+    const middlewareList = [coreMiddleware, ...middleware]
 
     for (const [propKey, propValue] of Object.entries(props)) {
       if (isFalsyProp(propValue)) continue
