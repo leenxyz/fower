@@ -14,6 +14,16 @@ export interface Margins {
    * ```
    */
   m?: PropValue
+  m0?: boolean
+  m1?: boolean
+  m2?: boolean
+  m3?: boolean
+  m4?: boolean
+  m5?: boolean
+  m6?: boolean
+  m7?: boolean
+  m8?: boolean
+  m9?: boolean
 
   /**
    * Set margin horizontal
@@ -34,6 +44,16 @@ export interface Margins {
    * ```
    */
   mx?: PropValue
+  mx0?: boolean
+  mx1?: boolean
+  mx2?: boolean
+  mx3?: boolean
+  mx4?: boolean
+  mx5?: boolean
+  mx6?: boolean
+  mx7?: boolean
+  mx8?: boolean
+  mx9?: boolean
 
   /**
    * Set margin vertical
@@ -54,6 +74,16 @@ export interface Margins {
    * ```
    */
   my?: PropValue
+  my0?: boolean
+  my1?: boolean
+  my2?: boolean
+  my3?: boolean
+  my4?: boolean
+  my5?: boolean
+  my6?: boolean
+  my7?: boolean
+  my8?: boolean
+  my9?: boolean
 
   /**
    * Set margin top, mt is margin-top
@@ -69,6 +99,16 @@ export interface Margins {
    * ```
    */
   mt?: PropValue
+  mt0?: boolean
+  mt1?: boolean
+  mt2?: boolean
+  mt3?: boolean
+  mt4?: boolean
+  mt5?: boolean
+  mt6?: boolean
+  mt7?: boolean
+  mt8?: boolean
+  mt9?: boolean
 
   /**
    * Set margin bottom, mb is margin-bottom
@@ -84,6 +124,16 @@ export interface Margins {
    * ```
    */
   mb?: PropValue
+  mb0?: boolean
+  mb1?: boolean
+  mb2?: boolean
+  mb3?: boolean
+  mb4?: boolean
+  mb5?: boolean
+  mb6?: boolean
+  mb7?: boolean
+  mb8?: boolean
+  mb9?: boolean
 
   /**
    * Set margin right, mr is margin-right
@@ -99,6 +149,16 @@ export interface Margins {
    * ```
    */
   mr?: PropValue
+  mr0?: boolean
+  mr1?: boolean
+  mr2?: boolean
+  mr3?: boolean
+  mr4?: boolean
+  mr5?: boolean
+  mr6?: boolean
+  mr7?: boolean
+  mr8?: boolean
+  mr9?: boolean
 
   /**
    * Set margin left, ml is margin-left
@@ -114,4 +174,14 @@ export interface Margins {
    * ```
    */
   ml?: PropValue
+  ml0?: boolean
+  ml1?: boolean
+  ml2?: boolean
+  ml3?: boolean
+  ml4?: boolean
+  ml5?: boolean
+  ml6?: boolean
+  ml7?: boolean
+  ml8?: boolean
+  ml9?: boolean
 }

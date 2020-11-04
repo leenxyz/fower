@@ -39,7 +39,7 @@ export const theme = {
       full: '9999px',
     },
   },
-  spacing: [0, '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
+  spacing: ['0', '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
   shadow: {
     xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

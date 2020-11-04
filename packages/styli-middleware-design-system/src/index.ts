@@ -2,6 +2,7 @@ import { Middleware, styli } from '@styli/core'
 
 const designKeyList = [
   's',
+  'c',
   'w',
   'h',
   'maxH',
@@ -11,9 +12,17 @@ const designKeyList = [
   'm',
   'mx',
   'my',
+  'mt',
+  'mr',
+  'mb',
+  'ml',
   'p',
   'px',
   'py',
+  'pt',
+  'pr',
+  'pb',
+  'pl',
 ]
 
 export default (): Middleware => {
@@ -27,7 +36,7 @@ export default (): Middleware => {
     const spacing = styli.getTheme<string[]>('spacing')
 
     if (!spacing.length) {
-      console.warn('theme spacing is not provide')
+      console.error('theme spacing is not provide')
     }
 
     const newAtom = plugin.onVisitProp(

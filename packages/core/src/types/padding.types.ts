@@ -14,6 +14,16 @@ export interface Paddings {
    * ```
    */
   p?: PropValue
+  p0?: boolean
+  p1?: boolean
+  p2?: boolean
+  p3?: boolean
+  p4?: boolean
+  p5?: boolean
+  p6?: boolean
+  p7?: boolean
+  p8?: boolean
+  p9?: boolean
 
   /**
    * Set padding horizontal
@@ -36,6 +46,16 @@ export interface Paddings {
    * ```
    */
   px?: PropValue
+  px0?: boolean
+  px1?: boolean
+  px2?: boolean
+  px3?: boolean
+  px4?: boolean
+  px5?: boolean
+  px6?: boolean
+  px7?: boolean
+  px8?: boolean
+  px9?: boolean
 
   /**
    * Set padding vertical
@@ -58,6 +78,16 @@ export interface Paddings {
    * ```
    */
   py?: PropValue
+  py0?: boolean
+  py1?: boolean
+  py2?: boolean
+  py3?: boolean
+  py4?: boolean
+  py5?: boolean
+  py6?: boolean
+  py7?: boolean
+  py8?: boolean
+  py9?: boolean
 
   /**
    * Set padding top, pt is padding-top
@@ -73,6 +103,16 @@ export interface Paddings {
    * ```
    */
   pt?: PropValue
+  pt0?: boolean
+  pt1?: boolean
+  pt2?: boolean
+  pt3?: boolean
+  pt4?: boolean
+  pt5?: boolean
+  pt6?: boolean
+  pt7?: boolean
+  pt8?: boolean
+  pt9?: boolean
 
   /**
    * Set padding bottom, pb is padding-bottom
@@ -88,6 +128,16 @@ export interface Paddings {
    * ```
    */
   pb?: PropValue
+  pb0?: boolean
+  pb1?: boolean
+  pb2?: boolean
+  pb3?: boolean
+  pb4?: boolean
+  pb5?: boolean
+  pb6?: boolean
+  pb7?: boolean
+  pb8?: boolean
+  pb9?: boolean
 
   /**
    * Set padding right, pr is padding-right
@@ -103,6 +153,16 @@ export interface Paddings {
    * ```
    */
   pr?: PropValue
+  pr0?: boolean
+  pr1?: boolean
+  pr2?: boolean
+  pr3?: boolean
+  pr4?: boolean
+  pr5?: boolean
+  pr6?: boolean
+  pr7?: boolean
+  pr8?: boolean
+  pr9?: boolean
 
   /**
    * Set padding left, pl is padding-left
@@ -118,4 +178,14 @@ export interface Paddings {
    * ```
    */
   pl?: PropValue
+  pl0?: boolean
+  pl1?: boolean
+  pl2?: boolean
+  pl3?: boolean
+  pl4?: boolean
+  pl5?: boolean
+  pl6?: boolean
+  pl7?: boolean
+  pl8?: boolean
+  pl9?: boolean
 }

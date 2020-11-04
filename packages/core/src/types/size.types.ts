@@ -14,6 +14,16 @@ export interface Sizes {
    * ```
    */
   w?: PropValue
+  w0?: boolean
+  w1?: boolean
+  w2?: boolean
+  w3?: boolean
+  w4?: boolean
+  w5?: boolean
+  w6?: boolean
+  w7?: boolean
+  w8?: boolean
+  w9?: boolean
 
   /**
    * Set height, h is height
@@ -29,6 +39,16 @@ export interface Sizes {
    * ```
    */
   h?: PropValue
+  h0?: boolean
+  h1?: boolean
+  h2?: boolean
+  h3?: boolean
+  h4?: boolean
+  h5?: boolean
+  h6?: boolean
+  h7?: boolean
+  h8?: boolean
+  h9?: boolean
 
   /**
    * Set square size
@@ -51,6 +71,16 @@ export interface Sizes {
    * ```
    */
   s?: PropValue
+  s0?: boolean
+  s1?: boolean
+  s2?: boolean
+  s3?: boolean
+  s4?: boolean
+  s5?: boolean
+  s6?: boolean
+  s7?: boolean
+  s8?: boolean
+  s9?: boolean
 
   /**
    * Set circle size
@@ -74,6 +104,16 @@ export interface Sizes {
    * ```
    */
   c?: PropValue
+  c0?: boolean
+  c1?: boolean
+  c2?: boolean
+  c3?: boolean
+  c4?: boolean
+  c5?: boolean
+  c6?: boolean
+  c7?: boolean
+  c8?: boolean
+  c9?: boolean
 
   /**
    * Set min-width
@@ -89,6 +129,16 @@ export interface Sizes {
    * ```
    */
   minW?: PropValue
+  minW0?: boolean
+  minW1?: boolean
+  minW2?: boolean
+  minW3?: boolean
+  minW4?: boolean
+  minW5?: boolean
+  minW6?: boolean
+  minW7?: boolean
+  minW8?: boolean
+  minW9?: boolean
 
   /**
    * Set max-height
@@ -104,6 +154,16 @@ export interface Sizes {
    * ```
    */
   maxW?: PropValue
+  maxW0?: boolean
+  maxW1?: boolean
+  maxW2?: boolean
+  maxW3?: boolean
+  maxW4?: boolean
+  maxW5?: boolean
+  maxW6?: boolean
+  maxW7?: boolean
+  maxW8?: boolean
+  maxW9?: boolean
 
   /**
    * Set min-height
@@ -119,6 +179,16 @@ export interface Sizes {
    * ```
    */
   minH?: PropValue
+  minH0?: boolean
+  minH1?: boolean
+  minH2?: boolean
+  minH3?: boolean
+  minH4?: boolean
+  minH5?: boolean
+  minH6?: boolean
+  minH7?: boolean
+  minH8?: boolean
+  minH9?: boolean
 
   /**
    * Set max-height
@@ -134,4 +204,14 @@ export interface Sizes {
    * ```
    */
   maxH?: PropValue
+  maxH0?: boolean
+  maxH1?: boolean
+  maxH2?: boolean
+  maxH3?: boolean
+  maxH4?: boolean
+  maxH5?: boolean
+  maxH6?: boolean
+  maxH7?: boolean
+  maxH8?: boolean
+  maxH9?: boolean
 }
