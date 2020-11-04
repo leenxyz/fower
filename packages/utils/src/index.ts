@@ -29,7 +29,7 @@ export function isNumber(s: string | number) {
 }
 
 export function isValidPropValue(value: any) {
-  return value && typeof value !== 'boolean'
+  return !!value && typeof value !== 'boolean'
 }
 
 export function elementType(ele: any) {
