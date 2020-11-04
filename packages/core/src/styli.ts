@@ -1,9 +1,17 @@
-import { Plugin, Config, Preset, Cache } from './types'
+import { Plugin, Config, Preset, Cache, Middleware } from './types'
 
 class Styli {
   config: Config = {
     unit: 'px',
     plugins: [],
+    middleware: [
+      (plugin, atom, sheet) => {
+        const { propKey } = atom
+        if (!plugin.isMatch(propKey)) return atom
+        const ccc = plugin.onVisitProp(atom, sheet)
+        return ccc
+      },
+    ],
     theme: {
       colors: {},
     },
@@ -11,7 +19,7 @@ class Styli {
   }
 
   cache: Cache = {}
-  componentKey = 0  // use generate component unite className
+  componentKey = 0 // use generate component unite className
 
   setup(preset: Preset) {
     this.config = {
@@ -25,7 +33,7 @@ class Styli {
     return this.config.theme[themeKey] || {}
   }
 
-  getColors = () => {
+  getColors() {
     return this.getTheme('typography').colors || {}
   }
 
@@ -34,7 +42,7 @@ class Styli {
     return this.config[type] as any
   }
 
-  use = (...plugins: Plugin[]) => {
+  use(...plugins: Plugin[]) {
     plugins.forEach((plugin) => {
       const idx = this.config.plugins.findIndex((configPlugin) => configPlugin.name === plugin.name)
       if (idx === -1) {
@@ -43,6 +51,10 @@ class Styli {
         this.config.plugins[idx] = plugin
       }
     })
+  }
+
+  middleware(...middleware: Middleware[]) {
+    this.config.middleware = this.config.middleware.concat(middleware)
   }
 }
 

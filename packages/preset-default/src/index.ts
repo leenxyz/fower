@@ -1,5 +1,6 @@
 import { Preset } from '@styli/core'
 import { plugins } from './plugins'
+import { middleware } from './middleware'
 import { theme } from './theme'
 
 export const presetDefault: Preset = {
@@ -7,6 +8,7 @@ export const presetDefault: Preset = {
   important: false,
   unit: 'px',
   plugins,
+  middleware,
   theme,
 }
 

@@ -1,22 +1,12 @@
 import isBrowser from 'is-in-browser'
-import { isEmptyObj, isFalsyProp, isPseudoKey } from '@styli/utils'
+import { isEmptyObj, isFalsyProp } from '@styli/utils'
 import { styleManager } from './styleManager'
 import { Sheet } from './Sheet'
 import { styli } from './styli'
-import { Plugin, Props, Atom } from './types'
+import { Plugin, Props, Atom, Middleware } from './types'
 import { CSSProperties } from 'react'
 import hash from 'string-hash'
-
-const pseudoMap: any = {
-  a: 'active',
-  c: 'checked',
-  d: 'disabled',
-  e: 'empty',
-  f: 'focus',
-  h: 'hover',
-  l: 'link',
-  v: 'visited',
-}
+import isEqual from 'lodash.isequal'
 
 export class PropsParser {
   // TODO: 太耦合了
@@ -38,28 +28,22 @@ export class PropsParser {
     if (isEmptyObj(props)) return
 
     const plugins = styli.getConfig<Plugin[]>('plugins')
+    const middlewareList = styli.getConfig<Middleware[]>('middleware')
 
     for (const [propKey, propValue] of Object.entries(props)) {
       if (isFalsyProp(propValue)) continue
 
-      const propIsPseudo = isPseudoKey(propKey)
-      const [key, pseType] = propIsPseudo ? propKey.split('_') : [propKey]
-
       for (const plugin of plugins) {
-        if (!plugin.isMatch(key)) continue
+        const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
 
-        if (plugin.onVisitProp) {
-          const initialAtom = { propKey: key, propValue, style: {}, type: 'style' } as Atom
-          const newAtom = plugin.onVisitProp(initialAtom, this.sheet)
+        const newAtom = middlewareList.reduce(
+          (finalAtom, middleware) => {
+            return middleware(plugin, finalAtom, this.sheet)
+          },
+          { ...initialAtom },
+        )
 
-          if (propIsPseudo) {
-            newAtom.propKey = propKey
-            newAtom.type = 'prefix'
-            newAtom.style = {
-              [':' + pseudoMap[pseType]]: newAtom.style,
-            }
-          }
-
+        if (!isEqual(newAtom, initialAtom)) {
           this.sheet.addAtom(newAtom)
           break
         }

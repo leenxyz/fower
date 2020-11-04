@@ -39,6 +39,8 @@ export type CssObject<T = any> =
       [K in keyof T]?: T[K] extends object ? CssObject<T[K]> : CSSProperties
     }
 
+export type Middleware = (plugin: Plugin, atom: Atom, sheet: Sheet) => Atom
+
 export interface Config {
   unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
   prefix?: string
@@ -47,6 +49,7 @@ export interface Config {
   important?: boolean
   theme: Theme
   plugins: Plugin[]
+  middleware: Middleware[]
   transformUnit?: (value: number | string, modifierType?: ModifierType) => string
 }
 
@@ -55,7 +58,7 @@ export type Preset = Partial<Config>
 export interface Plugin {
   name: string
   isMatch(key: string): boolean
-  onVisitProp?(atom: Atom, sheet: Sheet): Atom
+  onVisitProp(atom: Atom, sheet: Sheet): Atom
   onStylesCreated?(): void
 }
 

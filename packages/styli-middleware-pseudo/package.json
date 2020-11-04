@@ -1,5 +1,5 @@
 {
-  "name": "@styli/core",
+  "name": "styli-middleware-pseudo",
   "version": "0.7.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,24 +20,14 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/styli-middleware-pseudo.esm.js",
   "devDependencies": {
-    "@types/lodash.memoize": "^4.1.6",
-    "@types/string-hash": "^1.1.1",
-    "@types/lodash.isequal": "^4.5.5",
-    "react": "^16.13.1",
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "@styli/utils": "^0.7.0",
-    "@types/hoist-non-react-statics": "^3.3.1",
-    "@types/react": "^16.9.55",
-    "hoist-non-react-statics": "^3.3.2",
-    "is-in-browser": "^1.1.3",
-    "lodash.memoize": "^4.1.2",
-    "lodash.isequal": "^4.5.0",
-    "string-hash": "^1.1.3"
+    "@styli/core": "^0.7.0",
+    "@styli/utils": "^0.7.0"
   }
 }
