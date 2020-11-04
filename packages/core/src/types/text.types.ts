@@ -89,4 +89,11 @@ export interface Texts {
   colorError?: boolean
 
   colorSuccess?: boolean
+
+  ellipsis?: PropValue
+  ellipsis1?: PropValue
+  ellipsis2?: PropValue
+  ellipsis3?: PropValue
+  ellipsis4?: PropValue
+  ellipsis5?: PropValue
 }

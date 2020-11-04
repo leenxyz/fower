@@ -2,7 +2,7 @@ import hash from 'string-hash'
 import { CSSProperties } from 'react'
 import { Props, Atom, Middleware, Plugin } from './types'
 import { styleManager } from './styleManager'
-import { isBrowser, isEmptyObj, isValidPropValue, kebab } from '@styli/utils'
+import { isBrowser, isEmptyObj, isValidPropValue, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
 import { getValue } from './utils'
@@ -174,7 +174,7 @@ export class Sheet {
       /** to css atom string */
       const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
         const value: any = (atom as any).style[k]
-        const cssKey = kebab(k)
+        const cssKey = cssKeyToStyleKey(k)
 
         if (!Array.isArray(value)) return r + `${cssKey}: ${value};`
 
@@ -235,7 +235,7 @@ function parseCSSProp(cssObj: any, className = '') {
     .reduce((result: any, path: string[]) => {
       const attrValue = path.reduce((obj: any, c: string) => obj[c], cssObj)
 
-      const attr = kebab('' + path.pop())
+      const attr = cssKeyToStyleKey('' + path.pop())
 
       // pseudo-class pseudo-element connect selector string directly
       const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')

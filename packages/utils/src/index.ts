@@ -59,7 +59,7 @@ export function hexToRgba(sColor: string, opacity?: string) {
     for (let i = 1; i < 7; i += 2) {
       sColorChange.push(parseInt('0x' + sColor.slice(i, i + 2)))
     }
-    return `rgba(${sColorChange.join(',')},${opacity ? `.${opacity}` : '1'})`
+    return `rgba(${sColorChange.join(',')},${opacity ? '.' + opacity : '1'})`
   }
 
   return sColor
@@ -67,4 +67,8 @@ export function hexToRgba(sColor: string, opacity?: string) {
 
 export function isPercentNumber(s: string | number) {
   return /^-?\d+p$/.test('' + s)
+}
+
+export function cssKeyToStyleKey(key: string) {
+  return /^Webkit.+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }
