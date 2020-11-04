@@ -40,7 +40,7 @@ export class PropsParser {
           (finalAtom, middleware) => {
             return middleware(plugin, finalAtom, this.sheet)
           },
-          { ...initialAtom },
+          { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
         )
 
         if (!isEqual(newAtom, initialAtom)) {
