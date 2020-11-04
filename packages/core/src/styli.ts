@@ -8,8 +8,7 @@ class Styli {
       (plugin, atom, sheet) => {
         const { propKey } = atom
         if (!plugin.isMatch(propKey)) return atom
-        const ccc = plugin.onVisitProp(atom, sheet)
-        return ccc
+        return plugin.onVisitProp(atom, sheet)
       },
     ],
     theme: {
