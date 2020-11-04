@@ -1,9 +1,8 @@
 import hash from 'string-hash'
-import isBrowser from 'is-in-browser'
 import { CSSProperties } from 'react'
 import { Props, Atom, Middleware, Plugin } from './types'
 import { styleManager } from './styleManager'
-import { isEmptyObj, isFalsyProp, kebab } from '@styli/utils'
+import { isBrowser, isEmptyObj, isValidPropValue, kebab } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
 import { getValue } from './utils'
@@ -41,7 +40,7 @@ export class Sheet {
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (const [propKey, propValue] of Object.entries(props)) {
-      if (isFalsyProp(propValue)) continue
+      if (isValidPropValue(propValue)) continue
 
       for (const plugin of plugins) {
         const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom

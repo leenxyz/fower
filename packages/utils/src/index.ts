@@ -1,7 +1,9 @@
 import { noCase } from 'no-case'
+import isBrowser from 'is-in-browser'
 
 const regPseudo = /(_a|_c|_d|_e|_f|_h|_l|_v)$/
 
+export { isBrowser }
 export function trimPseudo(str: string) {
   return str.replace(regPseudo, '')
 }
@@ -26,12 +28,8 @@ export function isNumber(s: string | number) {
   return /^-?\d+$/.test('' + s)
 }
 
-export function isValidPropValue(v: any) {
-  return typeof v !== 'boolean'
-}
-
-export function isFalsyProp(propValue: any) {
-  return typeof propValue == 'boolean' && !propValue
+export function isValidPropValue(value: any) {
+  return value && typeof value !== 'boolean'
 }
 
 export function elementType(ele: any) {

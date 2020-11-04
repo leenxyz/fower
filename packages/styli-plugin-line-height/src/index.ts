@@ -1,5 +1,5 @@
 import { Plugin, getValue } from '@styli/core'
-import { downFirst, isValidPropValue } from '@styli/utils'
+import { isBrowser, downFirst, isValidPropValue } from '@styli/utils'
 
 export const leadings: any = {
   none: 1,
@@ -22,12 +22,20 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
         : getValue(propValue),
     }
   }
-  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
-  // TODO: calc 是否支持 RN
+
+  const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
+
+  if (leadings[downFirst(value)]) {
+    if (isBrowser) {
+      return { lineHeight: leadings[downFirst(value)] }
+    }
+
+    // TODO: for rn
+    return { lineHeight: 20 }
+  }
+
   return {
-    lineHeight: !!leadings[downFirst(value)]
-      ? `calc(${leadings[downFirst(value)]} * 1em)`
-      : getValue(value),
+    lineHeight: getValue(value),
   }
 }
 

@@ -1,4 +1,4 @@
-import isBrowser from 'is-in-browser'
+import { isBrowser } from '@styli/utils'
 
 /**
  * Manage <style></style>

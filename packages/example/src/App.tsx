@@ -18,10 +18,17 @@ export const Text = styled('span')
 export const App = () => {
   return (
     <div className="box">
-      <View f-50 f-80_h bgRed20>
-        <View s-100>Styli</View>
+      <View lhLoose f-20 bgRed20>
+        <View s-400>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+          sanctus est Lorem ipsum dolor sit amet.
+        </View>
       </View>
-      <View f-50>Core</View>
+      <View f-50 f-80_h>
+        Core
+      </View>
     </div>
   )
 }
