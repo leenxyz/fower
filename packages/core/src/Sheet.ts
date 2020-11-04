@@ -6,9 +6,7 @@ import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
 import { getValue } from './utils'
-
-// TODO: @qj 源码快有 2000 行，equal 代价太够，需移除
-import isEqual from 'lodash.isequal'
+import isEqual from 'fast-deep-equal'
 
 /**
  * Sheet, one Props map to one Sheet

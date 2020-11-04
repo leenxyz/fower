@@ -24,7 +24,6 @@
   "devDependencies": {
     "@types/lodash.memoize": "^4.1.6",
     "@types/string-hash": "^1.1.1",
-    "@types/lodash.isequal": "^4.5.5",
     "react": "^16.13.1",
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",
@@ -34,9 +33,9 @@
     "@styli/utils": "^0.7.0",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react": "^16.9.55",
+    "fast-deep-equal": "^3.1.3",
     "hoist-non-react-statics": "^3.3.2",
     "lodash.memoize": "^4.1.2",
-    "lodash.isequal": "^4.5.0",
     "string-hash": "^1.1.3"
   }
 }
