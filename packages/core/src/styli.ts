@@ -4,13 +4,7 @@ class Styli {
   config: Config = {
     unit: 'px',
     plugins: [],
-    middleware: [
-      (plugin, atom, sheet) => {
-        const { propKey } = atom
-        if (!plugin.isMatch(propKey)) return atom
-        return plugin.onVisitProp(atom, sheet)
-      },
-    ],
+    middleware: [],
     theme: {
       colors: {},
     },
