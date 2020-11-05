@@ -157,7 +157,7 @@ export function mergeCssObjectPaths(paths: any) {
  * ]
  *
  * To
- * 
+ *
  * .css-123 {border: 1px solid;color:red};.css-123.button{font-size:12px;display:block};
  * ```
  */
@@ -165,11 +165,13 @@ export function parseCSSProp(cssObj: any, className = ''): string {
   const originPaths = getCssObjectPaths(cssObj)
   const paths = mergeCssObjectPaths(originPaths)
 
-  return paths.map(({ key, value }: any) => {
-    let str = ''
-    for (let i in value) {
-      str = `${str}${[i]}: ${value[i]};`
-    }
-    return `${className ? '.' + className : ''}${key}{${str}}`
-  }).join(' ')
+  return paths
+    .map(({ key, value }: any) => {
+      let str = ''
+      for (let i in value) {
+        str = `${str}${[i]}: ${value[i]};`
+      }
+      return `${className ? '.' + className : ''}${key}{${str}}`
+    })
+    .join(' ')
 }

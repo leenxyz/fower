@@ -1,12 +1,10 @@
-import { Plugin, Config, Preset, Cache } from './types'
+import { Plugin, Config, Preset, Cache, Theme } from './types'
 
 class Styli {
   config: Config = {
     unit: 'px',
     plugins: [],
-    theme: {
-      spacing: [],
-    },
+    theme: {} as Theme,
     transformUnit: (value: any) => value + (this.getConfig('unit') as string),
   }
 

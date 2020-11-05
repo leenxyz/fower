@@ -1,6 +1,6 @@
 import { Sheet } from './Sheet'
 import { styleManager } from './styleManager'
-import { CssObject, Props } from './types'
+import { CssObject, Props, Theme } from './types'
 import { modifierToProps } from './utils'
 
 export function css(...args: (string | CssObject)[]) {
@@ -13,7 +13,7 @@ export function css(...args: (string | CssObject)[]) {
   }, {} as Props)
 
   // TODO: handle theme
-  const sheet = new Sheet(props, {})
+  const sheet = new Sheet(props, {} as Theme)
   styleManager.insertStyles(sheet.toCss())
 
   return sheet.getClassNames()
