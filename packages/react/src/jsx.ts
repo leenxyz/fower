@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { Sheet } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 
 /**
  * JSX Pragma
@@ -14,6 +14,6 @@ export function jsx(element: string, props: any, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const newProps: any = new Sheet(props).getParsedProps()
+  const newProps: any = new Sheet(props, styli.config.theme).getParsedProps()
   return createElement.apply(null, [element, newProps, ...children])
 }
