@@ -37,25 +37,38 @@ export class Sheet {
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (let [propKey, propValue] of Object.entries(props)) {
-      // handle theme
-      if (typeof propValue === 'function') {
-        propValue = propValue(this.theme)
-      }
+      
+      /**
+       * can't serialize propValue so use propKey as cache key
+       */
+      const pluginCacheKey = propKey
 
-      for (const plugin of plugins) {
-        const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
+      const pluginCacheValue = styli.cache[pluginCacheKey]
 
-        const newAtom = middlewareList.reduce(
-          (finalAtom, middleware) => {
-            return middleware.middleware!(plugin, finalAtom, this)
-          },
-          { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
-        )
-
-        if (!isEqual(newAtom, initialAtom)) {
-          this.addAtom(newAtom)
-          break
+      if (!pluginCacheValue || propValue !== true ) {
+        // handle theme
+        if (typeof propValue === 'function') {
+          propValue = propValue(this.theme)
         }
+
+        for (const plugin of plugins) {
+          const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
+
+          const newAtom = middlewareList.reduce(
+            (finalAtom, middleware) => {
+              return middleware.middleware!(plugin, finalAtom, this)
+            },
+            { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
+          )
+
+          if (!isEqual(newAtom, initialAtom)) {
+            this.addAtom(newAtom)
+            styli.cache[pluginCacheKey] = newAtom
+            break
+          }
+        }
+      } else {
+        this.addAtom(pluginCacheValue)
       }
     }
   }
