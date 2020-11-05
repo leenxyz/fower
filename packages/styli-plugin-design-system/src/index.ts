@@ -49,6 +49,7 @@ export default (): Plugin => {
         )
 
         newAtom.propKey = propKey
+        newAtom.propValue = true
         return newAtom
       }
 
@@ -66,6 +67,7 @@ export default (): Plugin => {
         )
 
         newAtom.propKey = propKey
+        newAtom.propValue = true
         return newAtom
       }
 
