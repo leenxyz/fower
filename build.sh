@@ -2,14 +2,11 @@
 
 cd packages/utils && npm run build
 
-PACKAGES=("
+Sequential=("
   core
-  theming 
-  styled 
-  react
-  react-native
-  vue
-  taro
+")
+
+Parallel=("
   styli-plugin-background
   styli-plugin-border
   styli-plugin-color
@@ -39,17 +36,37 @@ PACKAGES=("
   styli-plugin-design-system
   styli-plugin-ellipsis
   babel-preset-styli
-  preset-default"
-)
+")
 
-build_one(){
+Others=("
+  theming 
+  styled
+  react
+  react-native
+  vue
+  taro
+  preset-default
+")
+
+build_package(){
   cd "../"$1
   npm run build
 }
 
-
-for p in ${PACKAGES[@]}
+for p in ${Sequential[@]}
 do
-   build_one $p
+   build_package $p
+done
+
+for p in ${Parallel[@]}
+do
+   build_package $p &
+done
+
+wait
+
+for p in ${Others[@]}
+do
+   build_package $p
 done
 
