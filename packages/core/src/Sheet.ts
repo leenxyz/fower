@@ -163,33 +163,39 @@ export class Sheet {
   toCss(): string {
     let mediaCss: any = []
     const css = this.atoms.reduce((result, atom) => {
-      const { className = '' } = atom
+      const { className = '', type, style } = atom
 
-      if (styli.cache[className] || isEmptyObj(atom.style)) return result
+      if (styli.cache[className] || isEmptyObj(style)) return result
 
-      switch (atom.type) {
-        case 'prefix':
-          return result + parseCSSProp(atom.style, className)
-        case 'no-prefix':
-          return result + parseCSSProp(atom.style)
+      if (className) styli.cache[className] = true
+
+      if (type === 'prefix') {
+        return result + parseCSSProp(atom.style, className)
       }
 
-      /** to css atom string */
-      const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
-        const value: any = (atom as any).style[k]
-        const cssKey = cssKeyToStyleKey(k)
+      if (type === 'no-prefix') {
+        return result + parseCSSProp(atom.style)
+      }
 
-        if (!Array.isArray(value)) return r + `${cssKey}: ${value};`
+      if (type === 'style') {
+        /** to css atom string */
+        const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
+          const value: any = (atom as any).style[k]
+          const cssKey = cssKeyToStyleKey(k)
 
-        value.forEach((v, idx) => {
-          mediaCss[idx] = (mediaCss[idx] || []) + `${cssKey}: ${v};`
-        })
+          if (!Array.isArray(value)) return r + `${cssKey}: ${value};`
 
-        return r + `${cssKey}: ${value[0]};`
-      }, '')
+          value.forEach((v, idx) => {
+            mediaCss[idx] = (mediaCss[idx] || []) + `${cssKey}: ${v};`
+          })
 
-      // wrap with css className
-      return result + `.${className} { ${cssAtomStr} }`
+          return r + `${cssKey}: ${value[0]};`
+        }, '')
+        // wrap with css className
+        return result + `.${className} { ${cssAtomStr} }`
+      }
+
+      return result
     }, '')
 
     if (mediaCss.length) {
