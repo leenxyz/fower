@@ -37,15 +37,13 @@ export class Sheet {
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (let [propKey, propValue] of Object.entries(props)) {
-      
       /**
        * can't serialize propValue so use propKey as cache key
        */
-      const pluginCacheKey = propKey
-
+      const pluginCacheKey = 'plugin-' + propKey
       const pluginCacheValue = styli.cache[pluginCacheKey]
 
-      if (!pluginCacheValue || propValue !== true ) {
+      if (!pluginCacheValue || propValue !== true) {
         // handle theme
         if (typeof propValue === 'function') {
           propValue = propValue(this.theme)
