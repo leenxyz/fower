@@ -192,7 +192,7 @@ export class Sheet {
     if (mediaCss.length) {
       const responsiveCss = styli
         .getTheme('breakpoints')
-        .reduce((result: string, b: string, i: number) => {
+        ?.reduce((result: string, b: string, i: number) => {
           return result + `@media (min-width: ${b}) { .${this.className}{${mediaCss[i]}} }`
         }, '')
       return css + responsiveCss

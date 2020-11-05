@@ -20,11 +20,11 @@ class Styli {
 
   getTheme<T = any>(themeKey?: string): T {
     if (!themeKey) return this.config.theme as any
-    return this.config.theme[themeKey] || {}
+    return this.config.theme[themeKey]
   }
 
   getColors() {
-    return this.getTheme('colors').colors || {}
+    return this.getTheme('colors')?.colors || {}
   }
 
   getConfig<T = any>(type?: keyof Config): T {

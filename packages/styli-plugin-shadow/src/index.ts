@@ -9,7 +9,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { boxShadow: propValue }
   const value = prop.replace('shadow', '')
   const shadowSize = value.toLowerCase()
-  const shadows = styli.getTheme('shadow')
+  const shadows = styli.getTheme('shadow') || {}
 
   const shadowValue = shadows[shadowSize]
   if (!shadowValue) {
