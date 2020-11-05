@@ -32,7 +32,7 @@ export default (): Plugin => {
       const { propKey } = atom
 
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-      
+
       if (!key || !value || !designKeyList.includes(key) || !plugin.isMatch!(key)) return atom
 
       const spacing = styli.getTheme<string[]>('spacing') || []
@@ -42,7 +42,7 @@ export default (): Plugin => {
       }
 
       const newAtom = plugin.onVisitProp!(
-        { ...atom, propKey: key, propValue: spacing[Number(value)] },
+        { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey },
         sheet,
       )
 

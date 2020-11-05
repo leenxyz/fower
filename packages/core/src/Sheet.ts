@@ -69,6 +69,7 @@ export class Sheet {
     const valueStr = Array.isArray(value) ? value.join('-') : String(value)
     const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
+
     return isValidClassName ? str : hash(str)
   }
 
@@ -118,13 +119,15 @@ export class Sheet {
    * @param atom
    */
   addAtom(atom: Atom) {
-    const { propKey = '', propValue } = atom
+    const { propKey = '', propValue, className } = atom
 
-    if (typeof propValue === 'boolean') {
-      atom.className = propKey
-    } else {
-      const postfix = this.getClassPostfix(propValue)
-      atom.className = `${propKey}-${postfix}`
+    if (!className) {
+      if (typeof propValue === 'boolean') {
+        atom.className = propKey
+      } else {
+        const postfix = this.getClassPostfix(propValue)
+        atom.className = `${propKey}-${postfix}`
+      }
     }
 
     this.atoms.push(atom)
