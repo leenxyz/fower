@@ -49,6 +49,14 @@ export interface Texts {
    * ```
    */
   f?: PropValue
+  f1?: boolean
+  f2?: boolean
+  f3?: boolean
+  f4?: boolean
+  f5?: boolean
+  f6?: boolean
+  f7?: boolean
+  f8?: boolean
 
   fontWeight?: PropValue
   fontHairline?: boolean

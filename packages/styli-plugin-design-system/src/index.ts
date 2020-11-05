@@ -1,6 +1,6 @@
 import { Plugin, styli } from '@styli/core'
 
-const designKeyList = [
+const spacingKeyList = [
   's',
   'c',
   'w',
@@ -33,22 +33,43 @@ export default (): Plugin => {
 
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
 
-      if (!key || !value || !designKeyList.includes(key) || !plugin.isMatch!(key)) return atom
+      if (!key || !value || !plugin.isMatch!(key)) return atom
 
-      const spacing = styli.getTheme<string[]>('spacing') || []
+      // space
+      if (spacingKeyList.includes(key)) {
+        const spacing = styli.getTheme<string[]>('spacing') || []
 
-      if (!spacing.length) {
-        console.error('theme spacing is not provide')
+        if (!spacing.length) {
+          console.error('theme spacing is not provide')
+        }
+
+        const newAtom = plugin.onVisitProp!(
+          { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey },
+          sheet,
+        )
+
+        newAtom.propKey = propKey
+        return newAtom
       }
 
-      const newAtom = plugin.onVisitProp!(
-        { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey },
-        sheet,
-      )
+      // fontSize
+      if (key === 'f') {
+        const fontSizes = styli.getTheme('fontSizes') || []
 
-      newAtom.propKey = propKey
+        if (!fontSizes.length) {
+          console.error('theme fontSize is not provide')
+        }
 
-      return newAtom
+        const newAtom = plugin.onVisitProp!(
+          { ...atom, propKey: key, propValue: fontSizes[Number(value)], className: propKey },
+          sheet,
+        )
+
+        newAtom.propKey = propKey
+        return newAtom
+      }
+
+      return atom
     },
   }
 }

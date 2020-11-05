@@ -4,3 +4,4 @@ dist
 .cache
 *.html
 build
+*.json
