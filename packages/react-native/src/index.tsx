@@ -1,4 +1,4 @@
-import { styled } from '@styli/core'
+import { styled } from '@styli/styled'
 import RN from 'react-native'
 
 export const ActivityIndicator = styled(RN.ActivityIndicator)

@@ -1,4 +1,4 @@
-import { styled } from '@styli/core'
+import { styled } from '@styli/styled'
 import Taro from '@tarojs/components'
 
 export const View = styled(Taro.View)

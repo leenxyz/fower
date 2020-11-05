@@ -4,6 +4,8 @@ cd packages/utils && npm run build
 
 PACKAGES=("
   core
+  theming 
+  styled 
   react
   react-native
   vue

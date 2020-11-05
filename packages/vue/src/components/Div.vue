@@ -1,6 +1,6 @@
 <script lang="ts">
 import Vue from 'vue'
-import { toFinalProps } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 
 export default Vue.extend({
   name: 'Div',
@@ -8,7 +8,8 @@ export default Vue.extend({
     styli() {
       const keys = Object.keys(this.$attrs)
       const props = keys.reduce((r, c) => ({ ...r, [c]: true }), {})
-      return toFinalProps(props).style
+      const sheet = new Sheet(props, styli.config.theme)
+      return sheet.toStyles()
     },
   },
   methods: {

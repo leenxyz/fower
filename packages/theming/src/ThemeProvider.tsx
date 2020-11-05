@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
+import { Theme } from '@styli/core'
 import { themeContext } from './themeContext'
-import { Theme } from './types'
 
 const { Provider } = themeContext
 

@@ -1,11 +1,12 @@
+import { Theme } from '@styli/core'
 import { colors } from './colors'
 
-export const theme = {
+export const theme: Theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
   colors,
   spacing: ['0', '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
   fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '48px', '64px'],
-  headings: ['48px', '32px', '24px', , '20px', '16px', '14px'],
+  headings: ['48px', '32px', '24px', , '20px', '16px', '14px'] as string[] | number[],
   iconSizes: ['16px', '24px', '32px'],
   lineHeight: {
     none: 1,
@@ -15,7 +16,8 @@ export const theme = {
     relaxed: 1.625,
     loose: 2,
   },
-  borderColor: '#dddddd',
+  borderColors: ['#dddddd', '#f0f0f0'],
+  borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: '0',
     sm: '2px',

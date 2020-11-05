@@ -22,7 +22,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/core": "^0.8.0"
+    "@styli/styled": "^0.8.0"
   },
   "devDependencies": {
     "@tarojs/components": "^3.0.11",

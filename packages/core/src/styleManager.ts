@@ -6,13 +6,14 @@ import { isBrowser } from '@styli/utils'
 export class StyleManager {
   private $style!: HTMLStyleElement
 
-  private createStyleElement() {
+  private createStyleElement(): HTMLStyleElement {
     const $style = document.createElement('style')
     const $head = document.querySelector('head')
 
     $style.dataset.styli = 'styli'
     $head?.append($style)
     this.$style = $style
+    return $style
   }
 
   insertStyles(cssStr: string) {

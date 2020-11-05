@@ -7,10 +7,8 @@ import React, {
   CSSProperties,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { Modifiers } from './types'
-import { createStyle } from './createStyle'
-import { Sheet } from './Sheet'
-import { themeContext } from './themeContext'
+import { Modifiers, createStyle, Sheet } from '@styli/core'
+import { themeContext } from '@styli/theming'
 
 const { Consumer } = themeContext
 

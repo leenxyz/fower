@@ -1,9 +1,16 @@
 {
-  "name": "@styli/core",
+  "name": "@styli/theming",
   "version": "0.8.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -12,26 +19,16 @@
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/theming.esm.js",
   "devDependencies": {
     "@types/react": "^16.9.55",
-    "@types/string-hash": "^1.1.1",
     "react": "^17.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
   },
   "dependencies": {
-    "@styli/utils": "^0.8.0",
-    "fast-deep-equal": "^3.1.3",
-    "string-hash": "^1.1.3"
+    "@styli/core": "^0.8.0"
   }
 }

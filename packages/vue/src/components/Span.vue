@@ -1,6 +1,6 @@
 <script lang="ts">
 import Vue from 'vue'
-import { toFinalProps } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 
 export default Vue.extend({
   name: 'Span',
@@ -10,7 +10,8 @@ export default Vue.extend({
       const props = keys.reduce((r, c) => {
         return { ...r, [c]: true }
       }, {})
-      return toFinalProps(props).style
+      const sheet = new Sheet(props, styli.config.theme)
+      return sheet.toStyles()
     },
   },
   methods: {
