@@ -5,7 +5,7 @@ import { styleManager } from './styleManager'
 import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
-import { getCssObjectPaths, mergeCssObjectPaths } from './utils'
+import { parseCSSProp } from './utils'
 import isEqual from 'fast-deep-equal'
 
 /**
@@ -166,9 +166,9 @@ export class Sheet {
 
       switch (atom.type) {
         case 'prefix':
-          return result + parseCSSProp(atom.style, className).join(' ')
+          return result + parseCSSProp(atom.style, className)
         case 'no-prefix':
-          return result + parseCSSProp(atom.style).join(' ')
+          return result + parseCSSProp(atom.style)
       }
 
       /** to css atom string */
@@ -207,17 +207,4 @@ export class Sheet {
     const inline: boolean = this.isInline()
     return this.getPropsByInline(inline)
   }
-}
-
-function parseCSSProp(cssObj: any, className = '') {
-  const originPaths = getCssObjectPaths(cssObj)
-  const paths = mergeCssObjectPaths(originPaths)
-
-  return paths.map(({ key, value }: any) => {
-    let str = ''
-    for (let i in value) {
-      str = `${str}${[i]}: ${value[i]};`
-    }
-    return `${className ? '.' + className : ''}${key}{${str}}`
-  })
 }
