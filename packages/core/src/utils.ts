@@ -7,7 +7,7 @@ export function getValue(value: string | number, modifierType?: ModifierType | (
     const numValue = Number(value)
 
     if (numValue < 1) {
-      return (numValue * 100).toFixed(2) + '%'
+      return (numValue * 100).toFixed(6) + '%'
     }
 
     const { transformUnit } = styli.getConfig()
