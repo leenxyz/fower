@@ -1,6 +1,9 @@
 import { Plugin } from '@styli/core'
 
-const regStr = '(--active|--checked|--disabled|--empty|--focus|--hover|--link|--visited)$'
+const regStr =
+  '(--active|--checked|--disabled|--enabled|--default|--empty|--focus|--hover|--link|--visited|--first-child|--last-child|--after|--before|--placeholder|--selection)$'
+
+const specials = ['after', 'before', 'placeholder', 'selection']
 
 function isPseudoKey(str: string) {
   return new RegExp(regStr).test(str)
@@ -15,7 +18,8 @@ export default (): Plugin => {
       if (!isPseudoKey(propKey)) return atom
 
       const result: any = propKey.match(new RegExp(`(.*)${regStr}`))
-      const pseudo = result[2].replace('--', ':')
+      let pseudo = result[2].replace('--', '')
+      pseudo = specials.includes(pseudo) ? pseudo + '::' : pseudo + ':'
       const key = result[1]
 
       if (!plugin.isMatch!(key)) return atom
