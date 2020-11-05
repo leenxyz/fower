@@ -12,7 +12,8 @@ export function css(...args: (string | CssObject)[]) {
     }
   }, {} as Props)
 
-  const sheet = new Sheet(props)
+  // TODO: handle theme
+  const sheet = new Sheet(props, {})
   styleManager.insertStyles(sheet.toCss())
 
   return sheet.getClassNames()

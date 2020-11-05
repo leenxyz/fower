@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { styli, styled, css } from '@styli/core'
+import { styli, styled, ThemeProvider } from '@styli/core'
 import presetDefault from '@styli/preset-default'
+import { ThemeDemo } from './ThemeDemo'
 
 styli.setup({
   ...presetDefault,
@@ -18,6 +19,16 @@ export const Text = styled('span')
 export const App = () => {
   return (
     <div className="box">
+      <ThemeProvider
+        theme={{
+          colors: {
+            red: 'red',
+            black: '#999',
+          },
+        }}
+      >
+        <ThemeDemo></ThemeDemo>
+      </ThemeProvider>
       {/* <View lhLoose f-20 bgRed20 display="block">
         <View s-400>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -29,7 +40,6 @@ export const App = () => {
       {/* <View f-50 f-80_h inlineBlock border>
         Core
       </View> */}
-
       <View border>Core</View>
     </div>
   )

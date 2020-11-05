@@ -1,5 +1,6 @@
 import { Property } from 'csstype'
 import { PropValue } from './common.types'
+import { Theme } from './theme.types'
 
 export interface Texts {
   textAlign?: string | string[]
@@ -74,7 +75,7 @@ export interface Texts {
   lowercase?: boolean
   capitalize?: boolean
 
-  color?: Property.Color | Property.Color[]
+  color?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[])
 
   colorBrand?: boolean
 

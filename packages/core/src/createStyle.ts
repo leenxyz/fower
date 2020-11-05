@@ -6,7 +6,8 @@ export function createStyle(...args: (string | CSSProperties)[]): CSSProperties 
   return args.reduce((result, cur) => {
     if (typeof cur === 'string') {
       const props = modifierToProps(cur)
-      const sheet = new Sheet(props)
+      // TODO: theme
+      const sheet = new Sheet(props, {})
       const style = sheet.toStyles()
       return { ...result, ...style }
     }

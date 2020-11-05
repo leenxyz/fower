@@ -1,6 +1,6 @@
 import hash from 'string-hash'
 import { CSSProperties } from 'react'
-import { Props, Atom } from './types'
+import { Props, Atom, Theme } from './types'
 import { styleManager } from './styleManager'
 import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
@@ -19,7 +19,7 @@ export class Sheet {
 
   className: string
 
-  constructor(readonly props: Props) {
+  constructor(readonly props: Props, private theme: Theme) {
     const classNamePrefix = (styli.config.prefix || 'css') + '-'
     const className = classNamePrefix + hash('' + styli.componentKey++)
     this.className = className
@@ -36,7 +36,12 @@ export class Sheet {
     const [middleware, plugins] = styli.getPlugins()
     const middlewareList = [coreMiddleware, ...middleware]
 
-    for (const [propKey, propValue] of Object.entries(props)) {
+    for (let [propKey, propValue] of Object.entries(props)) {
+      // handle theme
+      if (typeof propValue === 'function') {
+        propValue = propValue(this.theme)
+      }
+
       for (const plugin of plugins) {
         const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
 

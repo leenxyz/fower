@@ -1,9 +1,11 @@
 import CSS from 'csstype'
 import { Sheet } from '../Sheet'
+import { Theme } from './theme.types'
 
 type CSSProperties = CSS.Properties<number | string>
 
-export type PropValue = boolean | number | string | (boolean | number | string)[]
+type FnValue = (theme: Theme) => boolean | number | string | (boolean | number | string)[]
+export type PropValue = FnValue | boolean | number | string | (boolean | number | string)[]
 
 export enum ModifierType {
   margin = 'margin',
@@ -24,10 +26,6 @@ export interface Props {
   style?: any
   className?: string
   css?: any
-  [key: string]: any
-}
-
-interface Theme {
   [key: string]: any
 }
 

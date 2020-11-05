@@ -1,4 +1,4 @@
-import {
+import React, {
   createElement,
   ReactElement,
   ElementType,
@@ -10,6 +10,9 @@ import hoistNonReactStatics from 'hoist-non-react-statics'
 import { Modifiers } from './types'
 import { createStyle } from './createStyle'
 import { Sheet } from './Sheet'
+import { themeContext } from './themeContext'
+
+const { Consumer } = themeContext
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
@@ -40,10 +43,16 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: (string | CSSProperties)[]
 ): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
   const StyledComponent = forwardRef((props: any, ref) => {
-    const sheet = new Sheet(props)
-    const parsedProps = sheet.getParsedProps()
-    parsedProps.style = { ...parsedProps.style, ...createStyle(...args), ...props.style }
-    return createElement(component, { ref, ...parsedProps })
+    return (
+      <Consumer>
+        {(value) => {
+          const sheet = new Sheet(props, value)
+          const parsedProps = sheet.getParsedProps()
+          parsedProps.style = { ...parsedProps.style, ...createStyle(...args), ...props.style }
+          return createElement(component, { ref, ...parsedProps })
+        }}
+      </Consumer>
+    )
   })
 
   hoistNonReactStatics(StyledComponent, component as any)
