@@ -25,7 +25,7 @@ export function kebab(s: string) {
 }
 
 export function isNumber(s: string | number) {
-  return /^-?\d+$/.test('' + s)
+  return /^(\d+)?(.\d+)?$/.test('' + s)
 }
 
 export function isValidPropValue(value: any) {

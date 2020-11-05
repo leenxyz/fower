@@ -4,8 +4,14 @@ import { ModifierType, Props } from './types'
 
 export function getValue(value: string | number, modifierType?: ModifierType | ({} & string)) {
   if (isNumber(value)) {
+    const numValue = Number(value)
+
+    if (numValue < 1) {
+      return (numValue * 100).toFixed(2) + '%'
+    }
+
     const { transformUnit } = styli.getConfig()
-    return transformUnit(Number(value), modifierType)
+    return transformUnit(numValue, modifierType)
   }
   return isPercentNumber(value) ? ('' + value).replace('p', '%') : value
 }
