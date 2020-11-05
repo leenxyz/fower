@@ -30,7 +30,8 @@ export const theme = {
     },
   },
   border: {
-    borderRadius: {
+    color: '#dddddd',
+    radius: {
       none: '0',
       sm: '2px',
       default: '4px',

@@ -9,7 +9,7 @@ import { getValue } from './utils'
 import isEqual from 'fast-deep-equal'
 
 /**
- * Sheet, one Props map to one Sheet
+ * Sheet, One Component map to one Sheet
  */
 export class Sheet {
   /**

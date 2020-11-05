@@ -22,8 +22,10 @@ export function isBorderKey(key: string) {
   return key.startsWith('border')
 }
 
-export function borderPropToStyle(prop: string) {
-  let style: any = {}
+export function borderPropToStyle(prop: string, propValue: any) {
+  const { color = 'gray' } = styli.getTheme('border') || {}
+  // let style: any = { borderColor: color }
+  let style: any = { borderColor: color }
 
   let [, second, third] = kebab(prop).split('-')
   const Colors = styli.getColors()
@@ -31,6 +33,16 @@ export function borderPropToStyle(prop: string) {
   const isBorderStyle = (val: string) => borderStyles.includes(val)
   const isBorderPosition = (val: string) => !!positionMaps[val]
   const isBorderWidth = (val: string) => isNumber(val)
+
+  /**  default border, eg: <View border></View> */
+  if (prop === 'border') {
+    if (typeof propValue === 'boolean') {
+      style.borderWidth = getValue(1)
+      style.borderColor = color
+    } else {
+      style.border = propValue
+    }
+  }
 
   if (isBorderWidth(second) || isBorderWidth(third)) {
     const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
@@ -40,8 +52,13 @@ export function borderPropToStyle(prop: string) {
   if (isBorderColor(second)) {
     style.borderColor = Colors[second as any]
   }
+
+  // borderSolid,borderDashed -> borderStyle
   if (isBorderStyle(second)) {
-    style.borderStyle = second
+    style.borderStyle = `${second} !important`
+  } else {
+    // set default borderStyle
+    if (Object.keys(style).length) style.borderStyle = 'solid'
   }
 
   return style
@@ -52,7 +69,7 @@ export default (): Plugin => {
     name: 'styli-plugin-border',
     isMatch: isBorderKey,
     onVisitProp(atom) {
-      atom.style = borderPropToStyle(atom.propKey)
+      atom.style = borderPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
   }

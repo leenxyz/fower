@@ -1,3 +1,4 @@
+import CSS from 'csstype'
 import { PropValue } from './common.types'
 export interface Borders {
   rounded?: PropValue
@@ -12,7 +13,8 @@ export interface Borders {
   roundedBL?: PropValue
   roundedBR?: PropValue
 
-  border?: boolean | number | string
+  border?: CSS.Property.Border
+
   borderT?: boolean | number | string
   borderR?: boolean | number | string
   borderB?: boolean | number | string

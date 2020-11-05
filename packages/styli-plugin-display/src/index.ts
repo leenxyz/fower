@@ -7,15 +7,14 @@ export function isDisplayKey(key: string) {
   return /^(hide|inline|inlineBlock|block|grid|table)$|^display(-.+)?/.test(key)
 }
 
-export function displayPropToStyle(prop: string, propValue: any) {
-  // return { display: kebab(value) }
-
+export function displayPropToStyle(prop: string, propValue: any): any {
   /** hide */
   if (prop == 'hide') return { display: 'none' }
 
   /** display */
   if (/^display(-.+)?/.test(prop)) {
-    if (typeof propValue === 'string') return { display: propValue }
+    if (typeof propValue === 'string' || Array.isArray(propValue)) return { display: propValue }
+
     return { display: kebab(prop.replace(/^display-/, '')) }
   }
 
