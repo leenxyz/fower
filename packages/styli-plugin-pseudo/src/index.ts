@@ -19,7 +19,7 @@ export default (): Plugin => {
 
       const result: any = propKey.match(new RegExp(`(.*)${regStr}`))
       let pseudo = result[2].replace('--', '')
-      pseudo = specials.includes(pseudo) ? pseudo + '::' : pseudo + ':'
+      pseudo = specials.includes(pseudo) ? '::' + pseudo : ':' + pseudo
       const key = result[1]
 
       if (!plugin.isMatch!(key)) return atom
