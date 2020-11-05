@@ -84,6 +84,12 @@ export interface Texts {
 
   color?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[])
 
+  // for theme
+  fontColor?:
+    | Property.Color
+    | Property.Color[]
+    | ((theme: Theme) => Property.Color | Property.Color[])
+
   colorBrand?: boolean
 
   colorPrimary?: boolean
