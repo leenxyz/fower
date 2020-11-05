@@ -1,7 +1,10 @@
-import CSS from 'csstype'
+import { Property } from 'csstype'
+import { Theme } from './theme.types'
+
+type DisplayFn = (theme: Theme) => Property.Display | Property.Display[]
 
 export interface Displays {
-  display?: CSS.Property.Display | CSS.Property.Display[]
+  display?: Property.Display | Property.Display[] | DisplayFn
 
   inline?: boolean
   InlineBlock?: boolean

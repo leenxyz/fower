@@ -1,5 +1,6 @@
 import CSS from 'csstype'
 import { PropValue } from './common.types'
+
 export interface Borders {
   rounded?: PropValue
 
