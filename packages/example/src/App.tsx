@@ -37,10 +37,10 @@ export const App = () => {
           sanctus est Lorem ipsum dolor sit amet.
         </View>
       </View> */}
-      {/* <View f-50 f-80_h inlineBlock border>
+      {/* <View f-50 f-80--hover inlineBlock border>
         Core
       </View> */}
-      <View border h1 w4 heading1>
+      <View border p-20 p-40--hover>
         Core
       </View>
     </div>

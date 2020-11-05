@@ -1,16 +1,7 @@
 import { noCase } from 'no-case'
 import isBrowser from 'is-in-browser'
 
-const regPseudo = /(_a|_c|_d|_e|_f|_h|_l|_v)$/
-
 export { isBrowser }
-export function trimPseudo(str: string) {
-  return str.replace(regPseudo, '')
-}
-
-export function isPseudoKey(str: string) {
-  return regPseudo.test(str)
-}
 
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)

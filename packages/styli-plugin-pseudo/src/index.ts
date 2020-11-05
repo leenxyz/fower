@@ -1,15 +1,9 @@
 import { Plugin } from '@styli/core'
-import { isPseudoKey } from '@styli/utils'
 
-const pseudoMap: any = {
-  a: 'active',
-  c: 'checked',
-  d: 'disabled',
-  e: 'empty',
-  f: 'focus',
-  h: 'hover',
-  l: 'link',
-  v: 'visited',
+const regStr = '(--active|--checked|--disabled|--empty|--focus|--hover|--link|--visited)$'
+
+function isPseudoKey(str: string) {
+  return new RegExp(regStr).test(str)
 }
 
 export default (): Plugin => {
@@ -20,7 +14,9 @@ export default (): Plugin => {
 
       if (!isPseudoKey(propKey)) return atom
 
-      const [key, pseType] = propKey.split('_')
+      const result: any = propKey.match(new RegExp(`(.*)${regStr}`))
+      const pseudo = result[2].replace('--', ':')
+      const key = result[1]
 
       if (!plugin.isMatch!(key)) return atom
 
@@ -28,9 +24,7 @@ export default (): Plugin => {
 
       newAtom.propKey = propKey
       newAtom.type = 'prefix'
-      newAtom.style = {
-        [':' + pseudoMap[pseType]]: newAtom.style,
-      }
+      newAtom.style = { [pseudo]: newAtom.style }
 
       return newAtom
     },
