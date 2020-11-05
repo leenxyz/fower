@@ -55,5 +55,5 @@ export const plugins = [
   zIndex(),
   ellipsis(),
   designSystem(),
-  pseudo()
+  pseudo(),
 ]
