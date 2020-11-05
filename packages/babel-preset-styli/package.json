@@ -1,6 +1,6 @@
 {
   "name": "@styli/babel-preset-styli",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.1",
-    "@styli/core": "^0.7.0",
+    "@styli/core": "^0.8.0",
     "@types/react": "^16.9.53",
     "babel-plugin-jsx-pragmatic": "^1.0.2"
   }
