@@ -9,18 +9,7 @@ export interface Shadows {
    * <View shadow="0 0 0 1px rgba(0, 0, 0, 0.05)"></View>
    * ```
    */
-
   shadow?: PropValue
-
-  /**
-   * Set shadow
-   *
-   * 用 View 作为示例:
-   * ```tsx
-   * <View shadowXXS></View>
-   * ```
-   */
-  shadowXXS?: PropValue
 
   /**
    * Set shadow
@@ -37,30 +26,40 @@ export interface Shadows {
    *
    * 用 View 作为示例:
    * ```tsx
-   * <View shadowS></View>
+   * <View shadowSM></View>
    * ```
    */
-  shadowS?: PropValue
+  shadowSM?: PropValue
 
   /**
    * Set shadow
    *
    * 用 View 作为示例:
    * ```tsx
-   * <View shadowM></View>
+   * <View shadowBase></View>
    * ```
    */
-  shadowM?: PropValue
+  shadowBase?: PropValue
 
   /**
    * Set shadow
    *
    * 用 View 作为示例:
    * ```tsx
-   * <View shadowL></View>
+   * <View shadowMD></View>
    * ```
    */
-  shadowL?: PropValue
+  shadowMD?: PropValue
+
+  /**
+   * Set shadow
+   *
+   * 用 View 作为示例:
+   * ```tsx
+   * <View shadowLG></View>
+   * ```
+   */
+  shadowLG?: PropValue
 
   /**
    * Set shadow
@@ -110,5 +109,5 @@ export interface Shadows {
    * <View shadowNone></View>
    * ```
    */
-  shadowshadowNone?: PropValue
+  shadowNone?: PropValue
 }
