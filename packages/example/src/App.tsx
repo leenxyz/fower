@@ -40,7 +40,9 @@ export const App = () => {
       {/* <View f-50 f-80_h inlineBlock border>
         Core
       </View> */}
-      <View border>Core</View>
+      <View border h1 w4 heading1>
+        Core
+      </View>
     </div>
   )
 }

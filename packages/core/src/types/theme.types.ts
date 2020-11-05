@@ -2,6 +2,7 @@ export interface Theme {
   breakpoints: string[] | number[]
   spacing: string[] | number[]
   fontSizes: string[] | number[]
+  headings: string[] | number[]
   iconSizes: string[] | number[]
   lineHeight: {
     none: number | string

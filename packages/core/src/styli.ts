@@ -24,7 +24,7 @@ class Styli {
   }
 
   getColors() {
-    return this.getTheme('typography').colors || {}
+    return this.getTheme('colors').colors || {}
   }
 
   getConfig<T = any>(type?: keyof Config): T {

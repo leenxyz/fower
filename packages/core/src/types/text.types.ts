@@ -22,16 +22,15 @@ export interface Texts {
    *
    * 用 View 作为示例:
    * ```tsx
-   * <View h1></View>
+   * <View heading1></View>
    * ```
    */
-  heading?: PropValue
-  h1?: boolean
-  h2?: boolean
-  h3?: boolean
-  h4?: boolean
-  h5?: boolean
-  h6?: boolean
+  heading1?: boolean
+  heading2?: boolean
+  heading3?: boolean
+  heading4?: boolean
+  heading5?: boolean
+  heading6?: boolean
 
   /**
    * Set fontSize

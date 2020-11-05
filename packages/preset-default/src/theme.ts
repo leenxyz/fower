@@ -5,6 +5,7 @@ export const theme = {
   colors,
   spacing: ['0', '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
   fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '48px', '64px'],
+  headings: ['48px', '32px', '24px', , '20px', '16px', '14px'],
   iconSizes: ['16px', '24px', '32px'],
   lineHeight: {
     none: 1,
