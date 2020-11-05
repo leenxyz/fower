@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
-import { styled } from '@styli/core'
+import { styled } from '@styli/styled'
 
 export const View = styled('div')
 export const Text = styled('span')
@@ -8,7 +8,6 @@ export const Text = styled('span')
 export const Nested = () => {
   return (
     <View
-      red
       s="100"
       center
       mt-100

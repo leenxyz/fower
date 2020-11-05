@@ -1,7 +1,9 @@
 import * as React from 'react'
-import { styli, styled, ThemeProvider } from '@styli/core'
+import { styli } from '@styli/core'
 import presetDefault from '@styli/preset-default'
 import { ThemeDemo } from './ThemeDemo'
+import { styled } from '@styli/styled'
+import { ThemeProvider } from '@styli/theming'
 
 styli.setup({
   ...presetDefault,
@@ -20,12 +22,14 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider
-        theme={{
-          colors: {
-            red: 'red',
-            black: '#999',
-          },
-        }}
+        theme={
+          {
+            colors: {
+              red: 'red',
+              black: '#999',
+            } as any,
+          } as any
+        }
       >
         <ThemeDemo></ThemeDemo>
       </ThemeProvider>
@@ -37,7 +41,7 @@ export const App = () => {
           sanctus est Lorem ipsum dolor sit amet.
         </View>
       </View> */}
-      <View p-20 f-50 f-80--hover inlineBlock border p-30--after>
+      <View p-20 f-50 f-80--hover border p-30--after>
         <View>1</View>
         <View>2</View>
       </View>
