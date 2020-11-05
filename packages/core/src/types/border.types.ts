@@ -14,7 +14,7 @@ export interface Borders {
   roundedBL?: PropValue
   roundedBR?: PropValue
 
-  border?: CSS.Property.Border
+  border?: CSS.Property.Border | boolean
 
   borderT?: boolean | number | string
   borderR?: boolean | number | string
