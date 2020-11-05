@@ -1,6 +1,6 @@
 {
   "name": "@styli/styled",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -30,8 +30,8 @@
     "typescript": "^4.0.5"
   },
   "dependencies": {
-    "@styli/core": "^0.8.0",
-    "@styli/theming": "^0.8.0",
+    "@styli/core": "^0.9.0",
+    "@styli/theming": "^0.9.0",
     "@types/hoist-non-react-statics": "^3.3.1"
   }
 }

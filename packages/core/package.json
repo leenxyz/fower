@@ -1,6 +1,6 @@
 {
   "name": "@styli/core",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -30,7 +30,8 @@
     "typescript": "^4.0.5"
   },
   "dependencies": {
-    "@styli/utils": "^0.8.0",
+    "@styli/theming": "^0.9.0",
+    "@styli/utils": "^0.9.0",
     "fast-deep-equal": "^3.1.3",
     "string-hash": "^1.1.3"
   }

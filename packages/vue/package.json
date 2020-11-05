@@ -1,6 +1,6 @@
 {
   "name": "@styli/vue",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "",
   "main": "dist/styli.ssr.js",
   "browser": "dist/styli.esm.js",
@@ -20,7 +20,7 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@styli/core": "^0.8.0"
+    "@styli/core": "^0.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
