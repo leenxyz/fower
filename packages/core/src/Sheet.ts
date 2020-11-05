@@ -1,12 +1,10 @@
-import hash from 'string-hash'
 import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from './types'
 import { styleManager } from './styleManager'
-import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
+import { isBrowser, isEmptyObj, cssKeyToStyleKey, isPlainType, isEqual, hash } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
 import { parseCSSProp } from './utils'
-import isEqual from 'fast-deep-equal'
 
 /**
  * Sheet, One Component map to one Sheet
@@ -23,27 +21,26 @@ export class Sheet {
     const classNamePrefix = (styli.config.prefix || 'css') + '-'
     const className = classNamePrefix + hash('' + styli.componentKey++)
     this.className = className
-    this.traverseProps()
+    this.traverseProps(props)
   }
 
   /**
    * traverse Props to init atoms
    */
-  private traverseProps(): void {
-    const { props } = this
+  private traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
     const [middleware, plugins] = styli.getPlugins()
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (let [propKey, propValue] of Object.entries(props)) {
-      /**
-       * can't serialize propValue so use propKey as cache key
-       */
-      const pluginCacheKey = 'plugin-' + propKey
+
+      const propValueIsPlainType = isPlainType(propValue)
+      const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
       const pluginCacheValue = styli.cache[pluginCacheKey]
 
-      if (!pluginCacheValue || propValue !== true) {
+
+      if (!pluginCacheValue || !propValueIsPlainType) {
         // handle theme
         if (typeof propValue === 'function') {
           propValue = propValue(this.theme)

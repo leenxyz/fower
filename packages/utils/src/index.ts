@@ -1,7 +1,9 @@
 import { noCase } from 'no-case'
 import isBrowser from 'is-in-browser'
+import isEqual from 'fast-deep-equal'
+import hash from 'string-hash'
 
-export { isBrowser }
+export { isBrowser, hash, isEqual }
 
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
@@ -62,4 +64,9 @@ export function isPercentNumber(s: string | number) {
 
 export function cssKeyToStyleKey(key: string) {
   return /^Webkit.+$/.test(key) ? '-' + kebab(key) : kebab(key)
+}
+
+export function isPlainType(value: any) {
+  const plainTypes = ['number', 'string', 'boolean']
+  return plainTypes.includes(typeof value)
 }
