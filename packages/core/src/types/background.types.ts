@@ -6,6 +6,12 @@ type BgFn = (theme: Theme) => Property.Color | Property.Color[]
 export interface Backgrounds {
   bg?: Property.Color | Property.Color[] | BgFn
 
+  bgImg?: string
+
+  bgPos?: string
+
+  bgSize?: string
+
   bgBlack?: boolean
 
   bgWhite?: boolean

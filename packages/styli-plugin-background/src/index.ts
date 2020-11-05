@@ -5,7 +5,23 @@ export function isBgColorKey(key: string) {
   return /^bg(.+)?$/.test(key)
 }
 
+export function isBgImgKey(key: string) {
+  return /^bgImg$/.test(key)
+}
+
+export function isBgSizeKey(key: string) {
+  return /^bgSize$/.test(key)
+}
+
+export function isBgPosKey(key: string) {
+  return /^bgPos$/.test(key)
+}
+
 export function bgPropToStyle(propKey: string, propValue: any) {
+  if (isBgImgKey(propKey)) return { backgroundImage: `url("${propValue}")` }
+  if (isBgPosKey(propKey)) return { backgroundPosition: propValue }
+  if (isBgSizeKey(propKey)) return { backgroundSize: propValue }
+
   const Colors = styli.getColors()
   if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
   const [, color = ''] = propKey.match(/^bg(\w+)/) || []
@@ -15,7 +31,9 @@ export function bgPropToStyle(propKey: string, propValue: any) {
 export default (): Plugin => {
   return {
     name: 'styli-plugin-background',
-    isMatch: isBgColorKey,
+    isMatch(key) {
+      return isBgColorKey(key) || isBgImgKey(key) || isBgPosKey(key) || isBgSizeKey(key)
+    },
     onVisitProp(atom) {
       atom.style = bgPropToStyle(atom.propKey, atom.propValue)
       return atom
