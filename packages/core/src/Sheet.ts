@@ -5,7 +5,7 @@ import { styleManager } from './styleManager'
 import { isBrowser, isEmptyObj, cssKeyToStyleKey } from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
-import { getValue } from './utils'
+import { getCssObjectPaths, mergeCssObjectPaths } from './utils'
 import isEqual from 'fast-deep-equal'
 
 /**
@@ -209,58 +209,15 @@ export class Sheet {
   }
 }
 
-function getPaths(object: any): any {
-  return (
-    object &&
-    typeof object === 'object' &&
-    Object.keys(object).reduce(
-      (p, k) => (getPaths(object[k]) || [[]]).reduce((r: any, a: any) => [...r, [k, ...a]], p),
-      [],
-    )
-  )
-}
-
-/**
- * parse css props
- * // TODO: 太乱，需要重构
- * @param cssObj
- * @param className
- */
 function parseCSSProp(cssObj: any, className = '') {
-  const getPrefix = (v: string) => (/^::?.*/.test(v) ? '' : ' ')
+  const originPaths = getCssObjectPaths(cssObj)
+  const paths = mergeCssObjectPaths(originPaths)
 
-  const paths = getPaths(cssObj)
-
-  const cssPropFragmentList: string[] = paths
-    .reduce((result: any, path: string[]) => {
-      const attrValue = path.reduce((obj: any, c: string) => obj[c], cssObj)
-
-      const attr = cssKeyToStyleKey('' + path.pop())
-
-      // pseudo-class pseudo-element connect selector string directly
-      const str = path.reduce((result, value) => `${result}${getPrefix(value)}${value}`, '')
-
-      const obj = {
-        key: `${className ? '.' + className : ''}${getPrefix(str)}${str}`,
-        value: { [attr]: getValue(attrValue) },
-      }
-
-      // merge same class
-      const idx = result.findIndex((a: any) => a.key === obj.key)
-      if (idx === -1) {
-        result = result.concat(obj)
-      } else {
-        const { key, value } = result[idx]
-        result[idx] = { key, value: { ...obj.value, ...value } }
-      }
-      return result
-    }, [])
-    .map(({ key, value }: any) => {
-      let str = ''
-      for (let i in value) {
-        str = `${str}${[i]}: ${value[i]};`
-      }
-      return `${key}{${str}}`
-    })
-  return cssPropFragmentList
+  return paths.map(({ key, value }: any) => {
+    let str = ''
+    for (let i in value) {
+      str = `${str}${[i]}: ${value[i]};`
+    }
+    return `${className ? '.' + className : ''}${key}{${str}}`
+  })
 }
