@@ -54,12 +54,12 @@ export interface Plugin {
   name: string
   isMatch?(key: string): boolean
   onVisitProp?(atom: Atom, sheet: Sheet): Atom
-  middleware?(plugin: Plugin, atom: Atom, sheet: Sheet): Atom
+  middleware?(plugin: Plugin, atom: Atom, sheet: Sheet, theme: Theme): Atom
 }
 
 export interface Atom {
   propKey: 'css' | 'debug' | 'reset' | ({} & string)
-  propValue: string | number | boolean | CssObject
+  propValue: string | number | boolean | CssObject | ((theme: Theme) => any)
   style: CssObject
   pseudo?: 'link' | 'visited' | 'hover' | 'active'
   type?: 'style' | 'prefix' | 'no-prefix'

@@ -40,17 +40,12 @@ export class Sheet {
       const pluginCacheValue = styli.cache[pluginCacheKey]
 
       if (!pluginCacheValue || !propValueIsPlainType) {
-        // handle theme
-        if (typeof propValue === 'function') {
-          propValue = propValue(this.theme)
-        }
-
         for (const plugin of plugins) {
           const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
 
           const newAtom = middlewareList.reduce(
             (finalAtom, middleware) => {
-              return middleware.middleware!(plugin, finalAtom, this)
+              return middleware.middleware!(plugin, finalAtom, this, this.theme)
             },
             { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
           )
