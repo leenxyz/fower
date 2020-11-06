@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
-import { createStyle, styled } from '@styli/core'
+import { createStyle } from '@styli/core'
+import { styled } from '@styli/styled'
 import { Text, View, Image, Anchor } from '@styli/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })

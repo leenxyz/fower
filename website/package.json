@@ -1,5 +1,5 @@
 {
-  "name": "websitenew",
+  "name": "website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -23,13 +23,16 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.65",
-    "@docusaurus/preset-classic": "2.0.0-alpha.65",
-    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.65",
+    "@docusaurus/core": "2.0.0-alpha.66",
+    "@docusaurus/preset-classic": "2.0.0-alpha.66",
+    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.66",
     "@mdx-js/react": "^1.5.8",
-    "@styli/preset-default": "^0.7.0",
-    "@styli/react": "^0.7.0",
-    "antd": "^4.6.6",
+    "@styli/core": "^0.9.0",
+    "@styli/preset-default": "^0.9.0",
+    "@styli/react": "^0.9.0",
+    "@styli/styled": "^0.9.0",
+    "@styli/theming": "^0.9.0",
+    "antd": "^4.8.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",
     "clsx": "^1.1.1",
     "entity-form": "^0.1.1",
@@ -40,8 +43,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@docusaurus/module-type-aliases": "2.0.0-alpha.65",
-    "@styli/babel-preset-styli": "^0.5.0",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.66",
+    "@styli/babel-preset-styli": "^0.9.0",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.51",
     "@types/react-helmet": "^6.1.0",
