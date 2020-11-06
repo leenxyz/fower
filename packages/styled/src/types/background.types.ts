@@ -1,5 +1,5 @@
 import { Property } from 'csstype'
-import { Theme } from './theme.types'
+import { Theme } from '@styli/theming'
 
 type BgFn = (theme: Theme) => Property.Color | Property.Color[]
 

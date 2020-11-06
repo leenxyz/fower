@@ -1,5 +1,5 @@
 import CSS from 'csstype'
-import { Theme } from './theme.types'
+import { Theme } from '@styli/theming'
 
 type CSSProperties = CSS.Properties<number | string>
 

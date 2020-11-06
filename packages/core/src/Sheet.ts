@@ -35,11 +35,9 @@ export class Sheet {
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (let [propKey, propValue] of Object.entries(props)) {
-
       const propValueIsPlainType = isPlainType(propValue)
       const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
       const pluginCacheValue = styli.cache[pluginCacheKey]
-
 
       if (!pluginCacheValue || !propValueIsPlainType) {
         // handle theme
