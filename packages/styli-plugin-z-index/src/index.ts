@@ -7,8 +7,11 @@ export function isZIndexKey(key: string) {
 
 export function zIndexPropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) return { zIndex: propValue }
-  const [, value] = prop.split('-')
-  return { zIndex: value }
+  const [, symbol = '', value] = prop.split(/\b-*?/)
+  const [, minus = ''] = symbol.split('')
+  const zIndexValue = isValidPropValue(propValue) ? propValue : minus + value
+
+  return { zIndex: zIndexValue }
 }
 
 export default (): Plugin => {

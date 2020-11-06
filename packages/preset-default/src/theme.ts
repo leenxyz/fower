@@ -38,4 +38,15 @@ export const theme: Theme = {
     outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
     none: 'none',
   },
+  fontWeights: {
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 'bold',
+    extrabold: 800,
+    black: 900,
+  }
 }

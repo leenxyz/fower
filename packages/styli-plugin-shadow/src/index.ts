@@ -12,6 +12,9 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   const shadows = styli.getTheme('shadow') || {}
 
   const shadowValue = shadows[shadowSize]
+
+  console.log('show', shadowSize, shadows)
+
   if (!shadowValue) {
     console.error('can‘t find shadow size')
   }

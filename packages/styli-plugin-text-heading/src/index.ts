@@ -6,7 +6,6 @@ export function isTextHeadingKey(key: string) {
 
 export function textHeadingPropToStyle(prop: string): any {
   const index = Number(prop.replace(/^heading/, '')) - 1
-  console.log('index:', index)
   const headings = styli.getTheme<any[]>('headings')
   return {
     display: 'block',
