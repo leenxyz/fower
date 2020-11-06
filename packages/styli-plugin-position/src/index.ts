@@ -43,11 +43,14 @@ export function isPositionKey(key: string) {
 
 export function positionPropToStyle(prop: string, propValue: any): any {
   if (positionKeys.includes(prop)) return { position: prop }
-  const [key = '', value = ''] = prop.split('-')
-  const lowerKey = key.toLocaleLowerCase()
-  if (isValidPropValue(propValue))
-    return { [positionMaps[lowerKey]]: getValue(propValue, ModifierType.position) }
-  return { [positionMaps[lowerKey]]: getValue(value, ModifierType.position) }
+
+  const [key, symbol = '', value] = prop.split(/\b-*?/)
+  const [, minus = ''] = symbol.split('')
+
+  const lowerKey = key.toLowerCase()
+  const val = isValidPropValue(propValue) ? propValue : minus + value
+
+  return { [positionMaps[lowerKey]]: getValue(val, ModifierType.position) }
 }
 
 export default (): Plugin => {
