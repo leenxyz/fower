@@ -58,6 +58,7 @@ export function borderPropToStyle(prop: string, propValue: any) {
     style.borderStyle = `${second} !important`
   } else {
     // set default borderStyle
+    // TODO: bug
     if (Object.keys(style).length) style.borderStyle = 'solid'
   }
 

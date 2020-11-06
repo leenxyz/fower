@@ -10,10 +10,10 @@ export interface Displays {
   InlineBlock?: boolean
   block?: boolean
 
-  InlineFlex?: boolean
+  inlineFlex?: boolean
 
   grid?: boolean
-  InlineGrid?: boolean
+  inlineGrid?: boolean
 
   // none?: boolean
   hide?: boolean
