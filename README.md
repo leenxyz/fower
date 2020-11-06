@@ -9,7 +9,14 @@ A Atomic CSS in JS library for rapid UI development.
 [![NPM Downloads](https://img.shields.io/npm/dm/@styli/core.svg?style=flat)](https://www.npmjs.com/package/@styli/core)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-## Docs
+## Quick Start
+
+- [Use with React](/docs/use-with-react)
+- [Use with Vue](/docs/use-with-vue)
+- [Use with React Native](/docs/use-with-rn)
+- [Use with Taro](/docs/use-with-taro)
+
+## Documentation
 
 Documentation website: [styli.js.org](https://styli.js.org/).
 
@@ -18,43 +25,6 @@ Frequently viewed docs:
 - [Installation](/docs/installation)
 - [Getting started](/docs/getting-started)
 - [API Reference](/docs/styled)
-
-## Installation
-
-Install styli core package:
-
-```bash
-$ npm install @styli/core
-```
-
-Install one of framework binding package:
-
-```bash
-$ npm install @styli/react
-$ npm install @styli/vue
-$ npm install @styli/react-native
-```
-
-## Example
-
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react'
-
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image c-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
-  )
-}
-```
 
 ## License
 
