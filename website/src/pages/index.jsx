@@ -35,7 +35,7 @@ const features = [
   },
   {
     title: 'Programmable',
-    description: <>Styli 是一种 CSS in JS 解决方，你可以完整利用 JS 的语言特性。</>,
+    description: <>Styli 是一种 CSS in JS 解决方，你可以完整地使用 JS 的语言特性。</>,
   },
 ]
 

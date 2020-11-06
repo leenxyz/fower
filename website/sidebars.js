@@ -49,6 +49,6 @@ module.exports = {
     Api: ['styled', 'css', 'createStyle'],
     Components: ['view', 'text', 'image', 'anchor'],
     Examples: ['example-avatar', 'example-media-object'],
-    FAQS: ['faq-1', 'faq-2', 'faq-3', 'faq-4', 'faq-5', 'faq-6', 'faq-7'],
+    FAQS: ['faq-1', 'faq-2', 'faq-3'],
   },
 }
