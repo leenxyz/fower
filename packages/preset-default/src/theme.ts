@@ -1,4 +1,4 @@
-import { Theme } from '@styli/core'
+import { Theme } from '@styli/theming'
 import { colors } from './colors'
 
 export const theme: Theme = {

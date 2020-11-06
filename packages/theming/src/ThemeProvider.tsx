@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
-import { Theme } from '@styli/core'
+import { Theme } from './types'
 import { themeContext } from './themeContext'
 
 const { Provider } = themeContext
 
-interface Props {
+interface ThemeProviderProps {
   theme: Theme
 }
 
-export const ThemeProvider: FC<Props> = ({ children, theme }) => {
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children, theme }) => {
   return <Provider value={theme}>{children}</Provider>
 }

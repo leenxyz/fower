@@ -7,8 +7,11 @@ import React, {
   CSSProperties,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { Modifiers, createStyle, Sheet } from '@styli/core'
+import { createStyle, Sheet } from '@styli/core'
+import { AtomicProps } from './types'
 import { themeContext } from '@styli/theming'
+
+export { AtomicProps } from './types'
 
 const { Consumer } = themeContext
 
@@ -39,7 +42,9 @@ export interface InjectedProps {
 export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   component: C,
   ...args: (string | CSSProperties)[]
-): StyledComponent<JSX.LibraryManagedAttributes<C, ComponentProps<C>> & Modifiers & InjectedProps> {
+): StyledComponent<
+  JSX.LibraryManagedAttributes<C, ComponentProps<C>> & AtomicProps & InjectedProps
+> {
   const StyledComponent = forwardRef((props: any, ref) => {
     return (
       <Consumer>

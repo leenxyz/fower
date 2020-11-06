@@ -12,11 +12,7 @@ import { Colors } from './color.types'
 import { Displays } from './display.types'
 import { OverFlows } from './overflow.types'
 import { CssObject } from './common.types'
-
-export * from './common.types'
-export * from './theme.types'
-
-export interface Modifiers
+export interface AtomicProps
   extends Sizes,
     Paddings,
     Margins,

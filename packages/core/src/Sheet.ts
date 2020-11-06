@@ -1,5 +1,6 @@
 import { CSSProperties } from 'react'
-import { Props, Atom, Theme } from './types'
+import { Theme } from '@styli/theming'
+import { Props, Atom } from './types'
 import { styleManager } from './styleManager'
 import { isBrowser, isEmptyObj, cssKeyToStyleKey, isPlainType, isEqual, hash } from '@styli/utils'
 import { coreMiddleware } from './middleware'

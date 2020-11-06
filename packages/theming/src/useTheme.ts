@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Theme } from '@styli/core'
+import { Theme } from './types'
 import { themeContext } from './themeContext'
 
 export function useTheme(): Theme {

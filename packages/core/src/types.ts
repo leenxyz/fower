@@ -1,10 +1,12 @@
 import CSS from 'csstype'
-import { Sheet } from '../Sheet'
-import { Theme } from './theme.types'
+import { Theme } from '@styli/theming'
+import { Sheet } from './Sheet'
 
 type CSSProperties = CSS.Properties<number | string>
+type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
 
 type FnValue = (theme: Theme) => boolean | number | string | (boolean | number | string)[]
+
 export type PropValue = FnValue | boolean | number | string | (boolean | number | string)[]
 
 export enum ModifierType {
@@ -28,8 +30,6 @@ export interface Props {
   css?: any
   [key: string]: any
 }
-
-export type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
 
 export type CssObject<T = any> =
   | (CSSProperties & PseudosObject)

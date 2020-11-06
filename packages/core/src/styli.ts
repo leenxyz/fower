@@ -1,4 +1,5 @@
-import { Plugin, Config, Preset, Cache, Theme } from './types'
+import { Theme } from '@styli/theming'
+import { Plugin, Config, Preset, Cache } from './types'
 
 class Styli {
   config: Config = {
