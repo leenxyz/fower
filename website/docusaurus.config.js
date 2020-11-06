@@ -54,6 +54,11 @@ module.exports = {
           position: 'left',
         },
         {
+          to: 'playground',
+          label: 'Playground',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/forsigner/styli',
           label: 'GitHub',
           position: 'right',
