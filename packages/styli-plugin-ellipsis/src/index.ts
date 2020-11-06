@@ -16,7 +16,7 @@ export default (config?: EllipsisPlugin): Plugin => {
     onVisitProp(atom) {
       const [, line, width] = atom.propKey.match(/^ellipsis(\d+)?-?(.+)?$/) || []
 
-      const lineNum = line || defaultLineNum
+      const lineNum = Number(line || defaultLineNum)
       const maxWidth = isValidPropValue(atom.propValue) ? atom.propValue : width || defaultMaxWidth
 
       if (lineNum === 1) {
