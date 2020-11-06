@@ -2,14 +2,13 @@ import { Sheet, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-color', () => {
-
   styli.setup({
     theme: {
       colors: {
         red: 'blue',
         colorRed: 'yellow',
-      }
-    } as any
+      },
+    } as any,
   })
 
   const { isMatch, onVisitProp } = plugin()

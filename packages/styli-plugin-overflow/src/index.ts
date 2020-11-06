@@ -1,7 +1,7 @@
 import { Plugin } from '@styli/core'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
-export const overFlowTypes = ['visible', 'hidden', 'scroll', 'auto', 'inherit', 'initial', 'unset']
+export const overFlowTypes = ['visible', 'hidden', 'scroll']
 
 export function isOverFlowKey(key: string) {
   if (/^overflow[XY]?$/.test(key)) return true

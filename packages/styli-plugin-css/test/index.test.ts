@@ -18,7 +18,7 @@ describe('styli-plugin-css', () => {
         border: '1px solid red',
         ':hover': {
           color: 'yellow',
-        }
+        },
       },
       style: {},
     } as Atom
@@ -29,15 +29,15 @@ describe('styli-plugin-css', () => {
         border: '1px solid red',
         ':hover': {
           color: 'yellow',
-        }
+        },
       },
       style: {
         border: '1px solid red',
         ':hover': {
           color: 'yellow',
-        }
+        },
       },
-      type: 'prefix'
+      type: 'prefix',
     }
 
     expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)

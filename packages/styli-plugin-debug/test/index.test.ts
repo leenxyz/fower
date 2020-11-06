@@ -23,7 +23,7 @@ describe('styli-plugin-debug', () => {
           border: '1px solid gray',
         },
       },
-      type: 'prefix'
+      type: 'prefix',
     }
 
     expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)

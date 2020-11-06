@@ -3,11 +3,10 @@ import { isValidPropValue } from '@styli/utils'
 import plugin from '../src'
 
 describe('styli-plugin-design-system', () => {
-
   styli.setup({
     theme: {
-      fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '48px', '64px']
-    } as any
+      fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '48px', '64px'],
+    } as any,
   })
 
   const { middleware } = plugin()
@@ -18,7 +17,7 @@ describe('styli-plugin-design-system', () => {
     expect(middleware!(textPlugin(), atom1, sheet)).toMatchObject({
       ...atom1,
       style: {
-        fontSize: '12px'
+        fontSize: '12px',
       },
     })
 
@@ -26,17 +25,18 @@ describe('styli-plugin-design-system', () => {
     expect(middleware!(textPlugin(), atom2, sheet)).toMatchObject({
       ...atom2,
       style: {
-        fontSize: '20px'
+        fontSize: '20px',
       },
     })
   })
 })
 
-
 const textPlugin = (): Plugin => {
   return {
     name: 'styli-plugin-text-heading',
-    isMatch(key) { return /^f(-.+)?$/.test(key) },
+    isMatch(key) {
+      return /^f(-.+)?$/.test(key)
+    },
     onVisitProp(atom) {
       const { propKey, propValue } = atom
       if (isValidPropValue(propValue)) {
