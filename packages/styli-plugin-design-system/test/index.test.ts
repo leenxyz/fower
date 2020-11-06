@@ -14,7 +14,7 @@ describe('styli-plugin-design-system', () => {
 
   it('middleware', () => {
     const atom1 = { propKey: 'f0', propValue: true } as Atom
-    expect(middleware!(textPlugin(), atom1, sheet)).toMatchObject({
+    expect(middleware!(textPlugin(), atom1, sheet, {} as any)).toMatchObject({
       ...atom1,
       style: {
         fontSize: '12px',
@@ -22,7 +22,7 @@ describe('styli-plugin-design-system', () => {
     })
 
     const atom2 = { propKey: 'f3', propValue: true } as Atom
-    expect(middleware!(textPlugin(), atom2, sheet)).toMatchObject({
+    expect(middleware!(textPlugin(), atom2, sheet, {} as any)).toMatchObject({
       ...atom2,
       style: {
         fontSize: '20px',

@@ -10,7 +10,7 @@ describe('styli-plugin-pseudo', () => {
 
   it('middleware', () => {
     const atom1 = { propKey: 'f-10--hover', propValue: true } as Atom
-    expect(middleware!(textPlugin(), atom1, sheet)).toMatchObject({
+    expect(middleware!(textPlugin(), atom1, sheet, {} as any)).toMatchObject({
       ...atom1,
       style: {
         ':hover': {
