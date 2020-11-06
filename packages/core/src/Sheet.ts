@@ -2,10 +2,17 @@ import { CSSProperties } from 'react'
 import { Theme } from '@styli/theming'
 import { Props, Atom } from './types'
 import { styleManager } from './styleManager'
-import { isBrowser, isEmptyObj, cssKeyToStyleKey, isPlainType, isEqual, hash } from '@styli/utils'
+import {
+  isBrowser,
+  isEmptyObj,
+  cssKeyToStyleKey,
+  isPlainType,
+  isEqual,
+  hash,
+  parseCSSProp,
+} from '@styli/utils'
 import { coreMiddleware } from './middleware'
 import { styli } from './styli'
-import { parseCSSProp } from './utils'
 
 /**
  * Sheet, One Component map to one Sheet

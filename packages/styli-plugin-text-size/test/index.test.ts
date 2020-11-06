@@ -12,7 +12,7 @@ describe('styli-plugin-text-size', () => {
     expect(isMatch!('f-10')).toEqual(true)
     expect(isMatch!('f-10rem')).toEqual(true)
   })
- 
+
   it('onVisitProp', () => {
     const atom1 = { propKey: 'f', propValue: 10 } as Atom
     const newAtom1 = { propKey: 'f', propValue: 10, style: { fontSize: '10px' } }

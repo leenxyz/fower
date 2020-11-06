@@ -5,9 +5,9 @@ describe('styli-plugin-text-weight', () => {
   styli.setup({
     theme: {
       fontWeight: {
-        medium: "500"
-      }
-    } as any
+        medium: '500',
+      },
+    } as any,
   })
 
   const { isMatch, onVisitProp } = plugin()
@@ -19,11 +19,11 @@ describe('styli-plugin-text-weight', () => {
 
   it('onVisitProp', () => {
     const atom1 = { propKey: 'fontWeight', propValue: '600' } as Atom
-    const newAtom1 = { propKey: 'fontWeight', propValue: '600', style: { fontWeight: "600" } }
+    const newAtom1 = { propKey: 'fontWeight', propValue: '600', style: { fontWeight: '600' } }
     expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'fontMedium', propValue: true } as Atom
-    const newAtom2 = { propKey: 'fontMedium', propValue: true, style: { fontWeight: "500" } }
+    const newAtom2 = { propKey: 'fontMedium', propValue: true, style: { fontWeight: '500' } }
     expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })

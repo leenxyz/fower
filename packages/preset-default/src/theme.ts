@@ -48,5 +48,5 @@ export const theme: Theme = {
     bold: 'bold',
     extrabold: 800,
     black: 900,
-  }
+  },
 }

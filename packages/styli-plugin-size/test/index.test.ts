@@ -13,7 +13,7 @@ describe('styli-plugin-position', () => {
     expect(isMatch!('c-10rem')).toEqual(true)
     expect(isMatch!('maxH-10')).toEqual(true)
   })
- 
+
   it('onVisitProp', () => {
     const atom1 = { propKey: 'w', propValue: 10 } as Atom
     const newAtom1 = { propKey: 'w', propValue: 10, style: { width: '10px' } }

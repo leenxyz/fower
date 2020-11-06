@@ -17,7 +17,11 @@ describe('styli-plugin-text-transform', () => {
     expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'lowercase', propValue: true } as Atom
-    const newAtom2 = { propKey: 'lowercase', propValue: true, style: { textTransform: 'lowercase' } }
+    const newAtom2 = {
+      propKey: 'lowercase',
+      propValue: true,
+      style: { textTransform: 'lowercase' },
+    }
     expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })

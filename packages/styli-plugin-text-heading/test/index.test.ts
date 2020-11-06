@@ -6,7 +6,7 @@ describe('styli-plugin-text-heading', () => {
     unit: 'px',
     theme: {
       headings: ['48px', '32px', '24px', '20px', '16px', '14px'] as string[] | number[],
-    } as any
+    } as any,
   })
 
   const { isMatch, onVisitProp } = plugin()
@@ -17,11 +17,15 @@ describe('styli-plugin-text-heading', () => {
 
   it('onVisitProp', () => {
     const atom1 = { propKey: 'heading3', propValue: true } as Atom
-    const newAtom1 = { propKey: 'heading3', propValue: true, style: {
-      display: 'block',
-      fontWeight: 'bold',
-      fontSize: '24px',
-    } }
+    const newAtom1 = {
+      propKey: 'heading3',
+      propValue: true,
+      style: {
+        display: 'block',
+        fontWeight: 'bold',
+        fontSize: '24px',
+      },
+    }
     expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
   })
 })
