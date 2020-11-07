@@ -1,9 +1,11 @@
 import React from 'react'
 import { styli } from '@styli/core'
 import presetDefault from '@styli/preset-default'
-import { ThemeDemo } from './ThemeDemo'
+import { ThemeDemo } from './components/ThemeDemo'
 import { styled } from '@styli/styled'
 import { ThemeProvider } from '@styli/theming'
+import { Color } from './components/Color'
+import { Padding } from './components/Padding'
 
 styli.setup({
   ...presetDefault,
@@ -21,6 +23,8 @@ export const Text = styled('span')
 export const App = () => {
   return (
     <div className="box">
+      <Color></Color>
+      <Padding></Padding>
       <ThemeProvider
         theme={
           {
@@ -33,14 +37,6 @@ export const App = () => {
       >
         <ThemeDemo></ThemeDemo>
       </ThemeProvider>
-      {/* <View lhLoose f-20 bgRed20 display="block">
-        <View s-400>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet.
-        </View>
-      </View> */}
       <View p-20 f-50 f-80--hover border p-30--after>
         <View>1</View>
         <View>2</View>

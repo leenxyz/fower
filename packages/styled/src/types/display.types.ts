@@ -7,7 +7,7 @@ export interface Displays {
   display?: Property.Display | Property.Display[] | DisplayFn
 
   inline?: boolean
-  InlineBlock?: boolean
+  inlineBlock?: boolean
   block?: boolean
 
   inlineFlex?: boolean

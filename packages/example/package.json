@@ -5,18 +5,15 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "tsc"
+    "build": "npm -v"
   },
   "dependencies": {
     "@styli/core": "^0.9.0",
     "@styli/preset-default": "^0.9.0",
+    "@styli/react": "^0.9.0",
     "@styli/utils": "^0.9.0",
     "@styli/styled": "^0.9.0",
     "@styli/theming": "^0.9.0",
-    "react": "^16.14.0",
-    "react-app-polyfill": "^1.0.0",
-    "react-dom": "^16.14.0",
-    "scheduler": "^0.19.1",
     "styli-plugin-background": "^0.9.0",
     "styli-plugin-border": "^0.9.0",
     "styli-plugin-color": "^0.9.0",
