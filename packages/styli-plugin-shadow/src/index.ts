@@ -11,7 +11,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   const shadowSize = value.toLowerCase()
   const shadows = styli.getTheme('shadow') || {}
 
-  const shadowValue = shadows[shadowSize]
+  const shadowValue = shadows[shadowSize || 'base']
 
   console.log('show', shadowSize, shadows)
 
