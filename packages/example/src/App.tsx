@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { styli } from '@styli/core'
 import presetDefault from '@styli/preset-default'
 import { ThemeDemo } from './ThemeDemo'

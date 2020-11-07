@@ -8,9 +8,9 @@ import React, {
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { createStyle, Sheet } from '@styli/core'
-import { AtomicProps } from './types'
 import { themeContext } from '@styli/theming'
 
+import { AtomicProps } from './types'
 export { AtomicProps } from './types'
 
 const { Consumer } = themeContext
