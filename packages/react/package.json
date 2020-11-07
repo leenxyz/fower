@@ -18,20 +18,8 @@
   },
   "author": "forsigner",
   "module": "dist/react.esm.js",
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "dependencies": {
     "@styli/core": "^0.9.0",
     "@styli/styled": "^0.9.0"
-  },
-  "devDependencies": {
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tsdx": "^0.14.0",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.3"
   }
 }

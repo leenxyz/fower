@@ -41,9 +41,6 @@
     "styli-plugin-z-index": "^0.9.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.55",
-    "@types/react-dom": "^16.9.9",
-    "parcel": "^1.12.4",
-    "typescript": "^4.0.5"
+    "parcel": "^1.12.4"
   }
 }

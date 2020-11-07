@@ -2,7 +2,8 @@
   "packages": [
     "packages/*"
   ],
-  "npmClient": "npm",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "command": {
     "publish": {
       "ignoreChanges": [
@@ -12,13 +13,6 @@
       ],
       "message": "chore(release): publish",
       "registry": "http://registry.npmjs.org"
-    },
-    "bootstrap": {
-      "npmClientArgs": [
-        "--registry",
-        "https://registry.npm.taobao.org",
-        "--no-package-lock"
-      ]
     }
   },
   "version": "0.9.0"
