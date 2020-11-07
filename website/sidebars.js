@@ -3,7 +3,6 @@ module.exports = {
     Styli: ['introduction', 'design-principles', 'benefits', 'comparison'],
     'Getting Started': [
       'installation',
-      'getting-started',
       'use-with-react',
       'use-with-vue',
       'use-with-rn',

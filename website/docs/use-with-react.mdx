@@ -13,18 +13,54 @@ npm i @styli/core @styli/react
 
 注意，除了需要 `@styli/core`，你还需安装和 React 对应的组件包 `@styli/react`。
 
-## 使用
+## 初始化 Preset
+
+在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+
+```js title="src/index.ts"
+import { styli } from '@styli/core'
+import preset from '@styli/preset-default'
+
+styli.setup(preset)
+```
+
+Styli 是插件化的，`@styli/core` 未内置任何插件，`@styli/preset-default` 预置了一些官方插件，你也可以新建自己的 Preset 来配置插件。
+
+## 在组件中使用
 
 下面我们使用 `View`、`Image`、`Text` 三个组件，实现一个用户信息卡片界面。
 
-```jsx live
-<View centerY p-10 w-260 bgWhite rounded-10 shadow>
-  <Image c-48 src="/img/jobs.jpg" />
-  <View ml-10>
-    <View f-20 fontBold>
-      Steve Jobs
+```jsx title="src/components/ProfileCard.ts"
+import React from 'react'
+import { View, Text, Image } from '@styli/react'
+
+export default () => {
+  return (
+    <View centerY p-10 w-260 bgWhite rounded-10 shadowMD>
+      <Image c-48 src="/img/jobs.jpg" />
+      <View ml-10>
+        <View f-20 fontBold>
+          Steve Jobs
+        </View>
+        <Text gray800>Co-founder of Apple Inc.</Text>
+      </View>
     </View>
-    <Text gray800>Co-founder of Apple Inc.</Text>
+  )
+}
+```
+
+上面的代码将实现下面的 UI 效果：
+
+```jsx live
+<View bgGray10 p6>
+  <View centerY p-10 w-260 bgWhite rounded-10 shadowMD>
+    <Image c-48 src="/img/jobs.jpg" />
+    <View ml-10>
+      <View f-20 fontBold>
+        Steve Jobs
+      </View>
+      <Text gray800>Co-founder of Apple Inc.</Text>
+    </View>
   </View>
 </View>
 ```
@@ -42,7 +78,7 @@ npm i @styli/core @styli/react
 `@styli/react` 的代码非常简单，里面没有任何黑魔法，只是用 `styled` 对 html 元素进行简单包裹。
 
 ```jsx title="@styli/react 源码"
-import { styled } from '@styli/core'
+import { styled } from '@styli/styled'
 
 export const View = styled('div')
 export const Text = styled('span')
@@ -51,6 +87,8 @@ export const Anchor = styled('a')
 export const Heading = styled('h2')
 ```
 
+> 注意，自定义 Styli 组件是，你需要使用 `@styli/styled` 里的 `styled` Api。
+
 你也可以直接在 Github 中查看`@styli/react`的源码：[Souce code](https://github.com/forsigner/styli/blob/master/packages/react/src/index.tsx)。
 
 我们可以看到，`@styli/react` 只提供了 `View`、`Text`、`Image`、`Anchor`、`Heading` 几个组件。在开发的过程中，我们建议根据自己的需要封装属于自己的组件。
@@ -58,7 +96,7 @@ export const Heading = styled('h2')
 例如，你可以喜欢 html 元素的风格，那可以封装一套这样的组件：
 
 ```jsx title="@styli/react 源码"
-import { styled } from '@styli/core'
+import { styled } from '@styli/styled'
 
 export const Div = styled('div')
 export const Span = styled('span')
@@ -71,3 +109,5 @@ export const H2 = styled('h2')
 
 // more....
 ```
+
+## 直接 HTML 元素中使用
