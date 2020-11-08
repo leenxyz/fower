@@ -15,7 +15,8 @@ export function colorPropToStyle(prop: string, propValue: any) {
     const [hex, opacity] = propValue.split('.')
     color = hexToRgba(hex, opacity)
   } else {
-    color = prop.replace('color', '').toLowerCase()
+    const colorType = prop.replace('color', '').toLowerCase()
+    color = Colors[colorType] || colorType
   }
 
   return { color }
