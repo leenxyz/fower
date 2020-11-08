@@ -33,7 +33,6 @@ Parallel=("
   styli-plugin-reset
   styli-plugin-z-index
   styli-plugin-pseudo
-  styli-plugin-design-system
   styli-plugin-ellipsis
   babel-preset-styli
 ")

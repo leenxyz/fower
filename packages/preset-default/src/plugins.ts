@@ -24,7 +24,6 @@ import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
 import css from 'styli-plugin-css'
 import reset from 'styli-plugin-reset'
-import designSystem from 'styli-plugin-design-system'
 import pseudo from 'styli-plugin-pseudo'
 
 export const plugins = [
@@ -54,6 +53,5 @@ export const plugins = [
   textWeight(),
   zIndex(),
   ellipsis(),
-  designSystem(),
   pseudo(),
 ]

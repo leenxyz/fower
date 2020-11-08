@@ -42,20 +42,47 @@ export class Sheet {
     const middlewareList = [coreMiddleware, ...middleware]
 
     for (let [propKey, propValue] of Object.entries(props)) {
+      const initialAtom = { propKey, propValue, type: 'style' } as Atom
+
+      /**
+       * propValue is false, just collect propKey and ignore it
+       */
+      if (propValue === false) {
+        this.addAtom(initialAtom)
+        continue
+      }
+
       const propValueIsPlainType = isPlainType(propValue)
       const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
       const pluginCacheValue = styli.cache[pluginCacheKey]
 
+      /**
+       * if propValue is object, don't use cache
+       */
       if (!pluginCacheValue || !propValueIsPlainType) {
         for (const plugin of plugins) {
-          const initialAtom = { propKey, propValue, style: {}, type: 'style' } as Atom
+          let newAtom = { ...initialAtom }
 
-          const newAtom = middlewareList.reduce(
+          // before
+          if (plugin.beforeVisitProp) {
+            newAtom = plugin.beforeVisitProp(newAtom, this)
+          }
+
+          // during
+          newAtom = middlewareList.reduce(
             (finalAtom, middleware) => {
               return middleware.middleware!(plugin, finalAtom, this, this.theme)
             },
-            { ...initialAtom }, // if use initialAtom directly, isEqual(newAtom, initialAtom) always for true.
+            /**
+             * if use newAtom directly, isEqual(newAtom, initialAtom) may always for true.
+             */
+            newAtom,
           )
+
+          // after
+          if (plugin.afterVisitProp) {
+            newAtom = plugin.afterVisitProp(initialAtom, newAtom, this)
+          }
 
           if (!isEqual(newAtom, initialAtom)) {
             this.addAtom(newAtom)
@@ -130,7 +157,7 @@ export class Sheet {
   addAtom(atom: Atom) {
     const { propKey = '', propValue, className } = atom
 
-    if (!className) {
+    if (!className && propValue) {
       if (typeof propValue === 'boolean') {
         atom.className = propKey
       } else {

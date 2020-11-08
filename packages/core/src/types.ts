@@ -53,7 +53,9 @@ export type Preset = Partial<Config>
 export interface Plugin {
   name: string
   isMatch?(key: string): boolean
+  beforeVisitProp?(atom: Atom, sheet: Sheet): Atom
   onVisitProp?(atom: Atom, sheet: Sheet): Atom
+  afterVisitProp?(initAtom: Atom, atom: Atom, sheet: Sheet): Atom
   middleware?(plugin: Plugin, atom: Atom, sheet: Sheet, theme: Theme): Atom
 }
 

@@ -1,4 +1,4 @@
-import { Plugin, ModifierType, getValue } from '@styli/core'
+import { Plugin, ModifierType, getValue, styli } from '@styli/core'
 import { isValidPropValue } from '@styli/utils'
 
 export const sizeMaps: any = {
@@ -35,9 +35,26 @@ export default (): Plugin => {
   return {
     name: 'styli-plugin-size',
     isMatch: isSizeKey,
+    beforeVisitProp(atom) {
+      const { propKey } = atom
+      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
+      if (!key || !value || !sizeMaps[key]) return atom
+
+      const spacing = styli.getTheme<string[]>('spacing') || []
+
+      if (!spacing.length) {
+        console.error('theme spacing is not provide')
+      }
+
+      return { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey }
+    },
     onVisitProp(atom) {
       atom.style = sizePropToStyle(atom.propKey, atom.propValue)
       return atom
+    },
+    afterVisitProp(initAtom, atom) {
+      const { propValue, propKey } = initAtom
+      return { ...atom, propValue, propKey }
     },
   }
 }

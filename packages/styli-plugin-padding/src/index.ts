@@ -1,4 +1,4 @@
-import { getValue, ModifierType, Plugin } from '@styli/core'
+import { getValue, ModifierType, Plugin, styli } from '@styli/core'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -49,9 +49,26 @@ export default (): Plugin => {
   return {
     name: 'styli-plugin-padding',
     isMatch: isPaddingKey,
+    beforeVisitProp(atom) {
+      const { propKey, propValue } = atom
+      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
+      if (!key || !value || !propValue || !paddingMaps[key]) return atom
+
+      const spacing = styli.getTheme<string[]>('spacing') || []
+
+      if (!spacing.length) {
+        console.error('theme spacing is not provide')
+      }
+
+      return { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey }
+    },
     onVisitProp(atom) {
       atom.style = paddingPropToStyle(atom.propKey, atom.propValue)
       return atom
+    },
+    afterVisitProp(initAtom, atom) {
+      const { propValue, propKey } = initAtom
+      return { ...atom, propValue, propKey }
     },
   }
 }
