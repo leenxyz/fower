@@ -8,9 +8,10 @@ export function isColorKey(key: string) {
 
 export function colorPropToStyle(prop: string, propValue: any) {
   let color: string
+  const colorType = prop.replace('color', '').toLowerCase()
   const Colors = styli.getColors()
-  if (Colors[prop]) {
-    color = Colors[prop]
+  if (Colors[prop] || Colors[colorType]) {
+    color = Colors[prop] || Colors[colorType]
   } else if (prop === 'color' || prop === 'fontColor') {
     const [hex, opacity] = propValue.split('.')
     color = hexToRgba(hex, opacity)
