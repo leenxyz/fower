@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-css",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-css.esm.js",
   "dependencies": {
-    "@styli/core": "^0.9.0",
-    "@styli/utils": "^0.9.0"
+    "@styli/core": "^0.10.0",
+    "@styli/utils": "^0.10.0"
   }
 }
