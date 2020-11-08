@@ -8,52 +8,52 @@ export const Padding = () => {
         Padding
       </Heading>
 
-      <View>
-        <View p4 debug inlineBlock>
+      <View debug>
+        <View p4 inlineBlock>
           p4
         </View>
-        <View pt4 debug inlineBlock>
+        <View pt4 inlineBlock>
           pt4
         </View>
-        <View pr4 debug inlineBlock>
+        <View pr4 inlineBlock>
           pr4
         </View>
-        <View pb4 debug inlineBlock>
+        <View pb4 inlineBlock>
           pb4
         </View>
-        <View pl4 debug inlineBlock>
+        <View pl4 inlineBlock>
           pl4
         </View>
-        <View px4 debug inlineBlock>
+        <View px4 inlineBlock>
           px4
         </View>
-        <View py4 debug inlineBlock>
+        <View py4 inlineBlock>
           py4
         </View>
 
-        <View p-20 debug inlineBlock>
+        <View p-20 inlineBlock>
           p-20
         </View>
-        <View pt-20 debug inlineBlock>
+        <View pt-20 inlineBlock>
           p-20
         </View>
 
-        <View pt-20 debug inlineBlock>
+        <View pt-20 inlineBlock>
           pt-20
         </View>
-        <View pr-20 debug inlineBlock>
+        <View pr-20 inlineBlock>
           pr-20
         </View>
-        <View pt-20 debug inlineBlock>
+        <View pt-20 inlineBlock>
           pt-20
         </View>
-        <View pl-20 debug inlineBlock>
+        <View pl-20 inlineBlock>
           pl-20
         </View>
-        <View px-20 debug inlineBlock>
+        <View px-20 inlineBlock>
           px-40
         </View>
-        <View py-20 debug inlineBlock>
+        <View py-20 inlineBlock>
           py-40
         </View>
       </View>

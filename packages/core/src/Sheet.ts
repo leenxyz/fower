@@ -69,12 +69,9 @@ export class Sheet {
           }
 
           // during
-          newAtom = middlewareList.reduce(
-            (finalAtom, middleware) => {
-              return middleware.middleware!(plugin, finalAtom, this, this.theme)
-            },
-            newAtom,
-          )
+          newAtom = middlewareList.reduce((finalAtom, middleware) => {
+            return middleware.middleware!(plugin, finalAtom, this, this.theme)
+          }, newAtom)
 
           // after
           if (plugin.afterVisitProp) {
