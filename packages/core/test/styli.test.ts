@@ -7,8 +7,8 @@ describe('styli-core', () => {
     theme: {
       colors: {
         red: 'blue',
-      }
-    } as any
+      },
+    } as any,
   })
 
   it('getTheme', () => {
@@ -27,8 +27,8 @@ describe('styli-core', () => {
       theme: {
         colors: {
           red: 'blue',
-        }
-      }
+        },
+      },
     })
 
     expect(styli.getConfig('unit')).toEqual('px')
@@ -37,10 +37,12 @@ describe('styli-core', () => {
   it('use', () => {
     const plugin = {
       name: 'styli-plugin-test',
-      isMatch(key: string){ return key === 'test' },
+      isMatch(key: string) {
+        return key === 'test'
+      },
       onVisitProp(atom = {} as any) {
         return atom
-      }      
+      },
     }
     styli.use(plugin)
     expect(styli.getPlugins()).toEqual([[], [plugin]])

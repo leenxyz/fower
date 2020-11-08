@@ -37,7 +37,7 @@ export const App = () => {
       >
         <ThemeDemo></ThemeDemo>
       </ThemeProvider>
-      <View p-20 f-50 f-80--hover border p-30--after>
+      <View p-20 f-50 f-80--hover={false} border p-30--after={false}>
         <View>1</View>
         <View>2</View>
       </View>
