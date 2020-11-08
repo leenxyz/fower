@@ -73,9 +73,6 @@ export class Sheet {
             (finalAtom, middleware) => {
               return middleware.middleware!(plugin, finalAtom, this, this.theme)
             },
-            /**
-             * if use newAtom directly, isEqual(newAtom, initialAtom) may always for true.
-             */
             newAtom,
           )
 
