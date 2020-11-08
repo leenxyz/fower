@@ -1,65 +1,35 @@
-import { ModifierType, Plugin, styli, getValue } from '@styli/core'
-import { kebab, isNumber, upFirst } from '@styli/utils'
+import { Plugin } from '@styli/core'
+// import { isBrowser } from '@styli/utils'
 
 export const G = {
-  top: 'top',
-  left: 'left',
-  right: 'right',
-  bottom: 'bottom',
+  top: 'Top',
+  left: 'Left',
+  right: 'Right',
+  bottom: 'Bottom',
 }
 
-export const positionMaps: any = {
-  t: G.top,
-  l: G.left,
-  r: G.right,
-  b: G.bottom,
+export const positionMaps: { [key: string]: string[] } = {
+  T: [G.top],
+  L: [G.left],
+  R: [G.right],
+  B: [G.bottom],
+  X: [G.left, G.right],
+  Y: [G.top, G.bottom],
 }
 
-export const borderStyles = ['solid', 'dashed', 'dotted', 'double', 'none']
-
-// TODO: need refactor
 export function isBorderKey(key: string) {
-  return key.startsWith('border')
+  return /^border(T|R|B|L|X|Y)?$/.test(key)
 }
 
 export function borderPropToStyle(prop: string, propValue: any) {
-  const { color = 'gray' } = styli.getTheme('border') || {}
-  // let style: any = { borderColor: color }
-  let style: any = { borderColor: color }
-
-  let [, second, third] = kebab(prop).split('-')
-  const Colors = styli.getColors()
-  const isBorderColor = (val: string) => !!Colors[val as any]
-  const isBorderStyle = (val: string) => borderStyles.includes(val)
-  const isBorderPosition = (val: string) => !!positionMaps[val]
-  const isBorderWidth = (val: string) => isNumber(val)
-
-  /**  default border, eg: <View border></View> */
-  if (prop === 'border') {
-    if (typeof propValue === 'boolean') {
-      style.borderWidth = getValue(1)
-      style.borderColor = color
-    } else {
-      style.border = propValue
-    }
-  }
-
-  if (isBorderWidth(second) || isBorderWidth(third)) {
-    const position = isBorderPosition(second) ? upFirst(positionMaps[second]) : ''
-    style[`border${position}Width`] = getValue(third || second, ModifierType.border)
-    style[`border${position}Style`] = 'solid'
-  }
-  if (isBorderColor(second)) {
-    style.borderColor = Colors[second as any]
-  }
-
-  // borderSolid,borderDashed -> borderStyle
-  if (isBorderStyle(second)) {
-    style.borderStyle = `${second} !important`
+  let style: any = {}
+  const position = prop.replace(/^border/, '')
+  if (position) {
+    positionMaps[position].map((item) => {
+      style[`border${item}`] = propValue
+    })
   } else {
-    // set default borderStyle
-    // TODO: bug
-    if (Object.keys(style).length) style.borderStyle = 'solid'
+    style.border = propValue
   }
 
   return style
