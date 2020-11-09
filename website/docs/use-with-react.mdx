@@ -149,6 +149,17 @@ export default () => {
 }
 ```
 
+注意，如果你想获得 TypeScript 类型提示，你需要扩展 HTML 的属性类型，方法是在项目根目录新建一个 `d.ts` 类型文件，名字可以为 `index.d.ts`，内容如下：
+
+```jsx title="index.d.ts"
+import { AtomicProps } from '@styli/styled';
+
+declare module 'react' {
+  interface HTMLAttributes<T> extends AtomicProps {}
+}
+
+```
+
 ### JSX Pragma
 
 如果你无法控制项目的 babel 配置，你可以通过 `JSX Pragma` 的方式：

@@ -3,9 +3,62 @@ id: border
 title: Border
 ---
 
+使用 `border{T|R|B|L|X|Y}` 格式的 Props 可以控制元素的 border。
+
+## 四周边框
+
 ```jsx live
-<View row center>
-  <View c-100 borderRed30-1></View>
-  <View s-100 borderBlue30-1></View>
+<View s-80 bgGray20 border="3px solid deeppink">
+  border
+</View>
+```
+
+## 单一方向
+
+```jsx live
+<View row evenly>
+  <View s-80 bgGray20 borderT="3px solid deeppink">
+    borderT
+  </View>
+  <View s-80 bgGray20 borderR="3px solid deeppink">
+    borderR
+  </View>
+  <View s-80 bgGray20 borderB="3px solid deeppink">
+    borderB
+  </View>
+
+  <View s-80 bgGray20 borderL="3px solid deeppink">
+    borderL
+  </View>
+</View>
+```
+
+## X、Y 方向
+
+```jsx live
+<View row evenly>
+  <View s-80 bgGray20 borderX="3px solid deeppink">
+    borderX
+  </View>
+  <View s-80 bgGray20 borderY="3px solid deeppink">
+    bordeY
+  </View>
+</View>
+```
+
+## 使用伪类
+
+你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<View evenly>
+  <View s-80 bgGray20 border="3px solid deeppink" border--hover="3px solid yellowGreen">
+    hover
+  </View>
+  <View s-80 bgGray20 border="3px solid deeppink" border--active="3px solid yellowGreen">
+    active
+  </View>
 </View>
 ```

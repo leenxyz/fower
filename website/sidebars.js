@@ -37,6 +37,7 @@ module.exports = {
       'height',
       'square',
       'circle',
+      'color',
       'background-color',
       'layout-engine',
       'flexbox',

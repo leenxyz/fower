@@ -1,7 +1,7 @@
 import { Plugin } from '@styli/core'
 
 const regStr =
-  '(--active|--checked|--disabled|--enabled|--default|--empty|--focus|--hover|--link|--visited|--first-child|--last-child|--after|--before|--placeholder|--selection)$'
+  '--(active|checked|disabled|enabled|default|empty|focus|focus-within|invalid|hover|link|visited|first-child|last-child|after|before|placeholder|selection)$'
 
 const specials = ['after', 'before', 'placeholder', 'selection']
 

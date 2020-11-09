@@ -37,10 +37,15 @@ export default () => {
 
 ### Babel Preset
 
-很多人喜欢 **Babel Preseta** 这种方式，这种方式要获得 TypeScript 类型提示，除了需配置 babel preset，你还需在项目根目录新增一个类型文件, 比如命名为 `index.d.ts`，内容如下 (只需一行代码)：
+很多人喜欢 **Babel Preset** 这种方式，这种方式要获得 TypeScript 类型提示，除了需配置 babel preset，你还需在项目根目录新增一个类型文件, 比如命名为 `index.d.ts`，内容如下：
 
 ```jsx title="index.d.ts"
-import '@styli/babel-preset-styli'
+import { AtomicProps } from '@styli/styled';
+
+declare module 'react' {
+  interface HTMLAttributes<T> extends AtomicProps {}
+}
+
 ```
 
 然后，你就可以在组件组件中获得完整的类型提示了。
