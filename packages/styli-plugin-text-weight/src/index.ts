@@ -12,13 +12,14 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   const [, second, third] = kebab(prop).split('-')
   if (second === 'weight') return { fontWeight: '' + third }
 
-  const weights = styli.getTheme('fontWeight') || {}
+  const weights = styli.getTheme('fontWeights') || {}
+
   return { fontWeight: '' + weights[downFirst(second)] || second }
 }
 
 export default (): Plugin => {
   return {
-    name: 'styli-plugin-text-heading',
+    name: 'styli-plugin-text-weight',
     isMatch: isTextWeightKey,
     onVisitProp(atom) {
       atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)

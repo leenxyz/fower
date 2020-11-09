@@ -20,7 +20,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    name: 'styli-plugin-text-heading',
+    name: 'styli-plugin-text-size',
     isMatch: isTextSizeKey,
     beforeVisitProp(atom) {
       const { propKey } = atom

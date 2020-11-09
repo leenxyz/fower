@@ -6,6 +6,8 @@ import { Color } from './components/Color'
 import { Padding } from './components/Padding'
 import { Margin } from './components/Margin'
 import { Border } from './components/Border'
+import { Size } from './components/Size'
+import { FontWeight } from './components/FontWeight'
 
 styli.setup({
   ...presetDefault,
@@ -24,6 +26,8 @@ export const App = () => {
         <Color></Color>
         <Padding></Padding>
         <Margin></Margin>
+        <Size></Size>
+        <FontWeight></FontWeight>
         <Border></Border>
       </ThemeProvider>
     </div>

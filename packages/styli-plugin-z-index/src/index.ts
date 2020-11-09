@@ -16,7 +16,7 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
 
 export default (): Plugin => {
   return {
-    name: 'styli-plugin-text-heading',
+    name: 'styli-plugin-z-index',
     isMatch: isZIndexKey,
     onVisitProp(atom) {
       atom.style = zIndexPropToStyle(atom.propKey, atom.propValue)

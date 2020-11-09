@@ -23,7 +23,7 @@ describe('styli-plugin-pseudo', () => {
 
 const textPlugin = (): Plugin => {
   return {
-    name: 'styli-plugin-text-heading',
+    name: 'styli-plugin-pseudo',
     isMatch(key) {
       return /^f(-.+)?$/.test(key)
     },

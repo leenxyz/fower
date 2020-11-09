@@ -2,7 +2,7 @@ import { Plugin } from '@styli/core'
 
 export default (): Plugin => {
   return {
-    name: 'styli-plugin-text-heading',
+    name: 'styli-plugin-text-transform',
     isMatch(key) {
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
       return caseKeys.includes(key)

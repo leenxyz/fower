@@ -57,8 +57,8 @@ function Home() {
   const { siteConfig = {}, tagline } = context
   return (
     <Layout title={tagline} description={tagline}>
-      <View w={['auto', 600, 600, 600, 600]} center column textCenter mx-auto mb-40 py-60>
-        <View py={[10, 20, 50]} f={[68, 20, 20, 68, 68]} fontBold black lhTight textCenter>
+      <View w={[600, 600, 600, 600, 600]} center column textCenter mx-auto mb-40 py-60>
+        <View py={[10, 20, 50]} f={[68, 68, 20, 68, 68]} fontBold black lhTight textCenter>
           An <Text red40>Atomic CSS</Text> in JS library for rapid UI development
         </View>
         <View f3 textCenter>
