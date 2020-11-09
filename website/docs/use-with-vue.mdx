@@ -6,10 +6,21 @@ title: 在 Vue 中使用
 ## 安装
 
 ```bash
-npm i @styli/core @styli/vue
+npm i @styli/core @styli/vue @styli/preset-default
 ```
 
 注意，除了需要 `@styli/core`，你还需安装和 Vue 对应的组件包 `@styli/vue`。
+
+## 初始化 Preset
+
+在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+
+```js title="src/index.ts"
+import { styli } from '@styli/core'
+import preset from '@styli/preset-default'
+
+styli.setup(preset)
+```
 
 ## 使用
 
@@ -17,9 +28,9 @@ npm i @styli/core @styli/vue
 
 ```jsx
 import Vue from 'vue'
-import styli from '@styli/vue'
+import styliVue from '@styli/vue'
 
-Vue.use(styli)
+Vue.use(styliVue)
 ```
 
 然后怎么使用呢? Styli 在 Vue 有两种使用方式：
@@ -80,3 +91,10 @@ Vue.use(styli)
 ```
 
 两种方式怎么选择呢？如果你想在的代码中保留传统的 html 标签，你可以使用指令的方式；如果你是 React 用户，你也许会喜欢自定义组件的方式。
+
+## 例子源码
+
+你可以查看 Vue 中使用的源码：
+
+- [examples/use-with-vue2](https://github.com/forsigner/styli/tree/master/examples/use-with-vue2)
+- [examples/use-with-vue3](https://github.com/forsigner/styli/tree/master/examples/use-with-vue3)

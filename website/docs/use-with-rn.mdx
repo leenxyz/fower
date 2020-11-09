@@ -12,10 +12,21 @@ import { GettingStarted } from '../src/components/GettingStarted'
 ## 安装
 
 ```bash
-npm i @styli/core @styli/react-native
+npm i @styli/core @styli/react-native @styli/preset-default
 ```
 
 注意，除了需要 `@styli/core`，你还需安装和 Taro 对应的组件包 `@styli/react-native`。
+
+## 初始化 Preset
+
+在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+
+```js title="src/index.ts"
+import { styli } from '@styli/core'
+import preset from '@styli/preset-default'
+
+styli.setup(preset)
+```
 
 ## 使用
 

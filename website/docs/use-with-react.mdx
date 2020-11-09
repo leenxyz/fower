@@ -8,7 +8,7 @@ Styli 非常适合在 React 中使用，接下来我们看看如何在 React 中
 ## 安装
 
 ```bash
-npm i @styli/core @styli/react
+npm i @styli/core @styli/react @styli/preset-default
 ```
 
 注意，除了需要 `@styli/core`，你还需安装和 React 对应的组件包 `@styli/react`。
@@ -111,3 +111,68 @@ export const H2 = styled('h2')
 ```
 
 ## 直接 HTML 元素中使用
+
+Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。也就是到说，你直接可以在 html 标签中添加原子属性，代码类似下面：
+
+```jsx
+<div p6 f5 bgRed20>
+  Use styli in HTML tag
+</div>
+```
+
+要在 html 标签中使用原子属性，可以有两种使用方式：
+
+- Babel Preset
+- JSX Pragma
+
+### Babel Preset
+
+第一种方式是通过配置 babel，为项目添加 babel preset: `@styli/babel-preset-styli`。
+
+```json title=".babelrc"
+{
+  "presets": ["@styli/babel-preset-styli"]
+}
+```
+
+然后，可以在组件中使用了：
+
+```jsx
+import React from 'react'
+
+export default () => {
+  return (
+    <div p6 f5 bgRed20>
+      Use styli with Babel Preset
+    </div>
+  )
+}
+```
+
+### JSX Pragma
+
+如果你无法控制项目的 babel 配置，你可以通过 `JSX Pragma` 的方式：
+
+```jsx
+/** @jsx jsx */
+import { jsx } from '@styli/react'
+
+export default () => {
+  return (
+    <div p6 f5 bgOrange20>
+      Use styli with JSX Pragma
+    </div>
+  )
+}
+```
+
+上面的组件为什么可以直接在 HTML 中使用呢？使用因为组件的开头增加下面 `JSX Pragma` 的声明。
+
+```jsx
+/** @jsx jsx */
+import { jsx } from '@styli/react'
+```
+
+## 例子源码
+
+你可以查看 React 中使用的源码：[examples/use-with-react](https://github.com/forsigner/styli/tree/master/examples/use-with-react)

@@ -6,13 +6,16 @@ title: 在原生中使用
 如果你不使用 React、Vue 等 Web 框架，你也可以安装 `@styli/core`，用最原始的 Api 使用 Styli。
 
 ```bash
-$ npm i @styli/core
+$ npm i @styli/core @styli/preset-default
 ```
 
 基本使用：
 
 ```jsx
-import { css } from '@styli/core'
+import { styli, css } from '@styli/core'
+import preset from '@styli/preset-default'
+
+styli.setup(preset)
 
 const className = css('p-20 mx-10 borderGray-1 f-40')
 

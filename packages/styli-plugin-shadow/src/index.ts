@@ -13,8 +13,6 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 
   const shadowValue = shadows[shadowSize || 'base']
 
-  console.log('show', shadowSize, shadows)
-
   if (!shadowValue) {
     console.error('can‘t find shadow size')
   }

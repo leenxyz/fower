@@ -44,6 +44,10 @@ export const Color = () => {
         colorInfo--hover
       </View>
 
+      <View f-20 red50 green50--active>
+        green50--active
+      </View>
+
       <View f-20 fontColor={['yellowgreen', 'deeppink', 'gray', 'info']}>
         color=['yellowgreen', 'deeppink', 'gray', 'red']
       </View>
