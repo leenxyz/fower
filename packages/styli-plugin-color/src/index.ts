@@ -6,17 +6,24 @@ export function isColorKey(key: string) {
   return /^color(.+)?$/.test(key) || !!Colors[key] || key === 'fontColor'
 }
 
-export function colorPropToStyle(prop: string, propValue: any) {
-  let color: string
+export function colorPropToStyle(prop: string, propValue: any): any {
+  let color: string | string[]
   const colorType = prop.replace('color', '').toLowerCase()
   const Colors = styli.getColors()
+
   if (Colors[prop] || Colors[colorType]) {
     color = Colors[prop] || Colors[colorType]
   } else if (prop === 'color' || prop === 'fontColor') {
-    const [hex, opacity] = propValue.split('.')
-    color = hexToRgba(hex, opacity)
+    if (Array.isArray(propValue)) {
+      color = propValue.map((i) => {
+        const [hex, opacity] = i.split('.')
+        return Colors[i] || hexToRgba(hex, opacity)
+      })
+    } else {
+      const [hex, opacity] = propValue.split('.')
+      color = hexToRgba(hex, opacity)
+    }
   } else {
-    const colorType = prop.replace('color', '').toLowerCase()
     color = Colors[colorType] || colorType
   }
 
