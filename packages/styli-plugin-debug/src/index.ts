@@ -8,48 +8,41 @@ export default (): Plugin => {
       return list.includes(key)
     },
     onVisitProp(atom) {
-      if (atom.propValue !== true) {
-        switch (atom.propKey) {
-          case 'debug':
-          case 'debugChildren':
-            atom.type = 'prefix'
-            break
-          case 'debugAll':
-            atom.type = 'no-prefix'
-            break
+      const propValueIsTrue = atom.propValue === true
+      switch (atom.propKey) {
+        case 'debug': {
+          atom.type = 'prefix'
+          atom.style = propValueIsTrue
+            ? {
+                border: '1px solid gray',
+              }
+            : (atom.propValue as CssObject)
+          break
         }
-        atom.style = atom.propValue as CssObject
-      } else {
-        switch (atom.propKey) {
-          case 'debug': {
-            atom.type = 'prefix'
-            atom.style = {
-              border: '1px solid gray',
-            }
-            break
-          }
-          case 'debugChildren': {
-            atom.type = 'prefix'
-            atom.style = {
-              border: '1px solid gray',
-              div: {
+        case 'debugChildren': {
+          atom.type = 'prefix'
+          atom.style = propValueIsTrue
+            ? {
                 border: '1px solid gray',
-              },
-            }
-            break
-          }
-          case 'debugAll': {
-            atom.type = 'no-prefix'
-            atom.style = {
-              '*': {
-                border: '1px solid gray',
-              },
-            }
-            break
-          }
+                div: {
+                  border: '1px solid gray',
+                },
+              }
+            : (atom.propValue as CssObject)
+          break
+        }
+        case 'debugAll': {
+          atom.type = 'no-prefix'
+          atom.style = propValueIsTrue
+            ? {
+                '*': {
+                  border: '1px solid gray',
+                },
+              }
+            : (atom.propValue as CssObject)
+          break
         }
       }
-
       return atom
     },
   }
