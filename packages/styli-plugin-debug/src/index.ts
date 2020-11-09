@@ -9,6 +9,15 @@ export default (): Plugin => {
     },
     onVisitProp(atom) {
       if (atom.propValue !== true) {
+        switch (atom.propKey) {
+          case 'debug':
+          case 'debugChildren':
+            atom.type = 'prefix'
+            break
+          case 'debugAll':
+            atom.type = 'no-prefix'
+            break
+        }
         atom.style = atom.propValue as CssObject
       } else {
         switch (atom.propKey) {
