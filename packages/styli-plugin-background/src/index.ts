@@ -1,5 +1,5 @@
 import { Plugin, styli } from '@styli/core'
-import { downFirst, isValidPropValue } from '@styli/utils'
+import { downFirst, isValidPropValue, hexToRgba } from '@styli/utils'
 
 export function isBgColorKey(key: string) {
   return /^bg(.+)?$/.test(key)
@@ -23,7 +23,13 @@ export function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgSizeKey(propKey)) return { backgroundSize: propValue }
 
   const Colors = styli.getColors()
-  if (isValidPropValue(propValue)) return { backgroundColor: Colors[propValue] || propValue }
+
+  if (isValidPropValue(propValue)) {
+    const [hex, opacity] = propValue.split('.')
+    const value = Colors[hex] || hex
+    return { backgroundColor: hexToRgba(value, opacity) }
+  }
+
   const [, color = ''] = propKey.match(/^bg(\w+)/) || []
   return { backgroundColor: Colors[downFirst(color)] }
 }

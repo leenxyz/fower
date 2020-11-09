@@ -7,6 +7,7 @@ import { Padding } from './components/Padding'
 import { Margin } from './components/Margin'
 import { Border } from './components/Border'
 import { Size } from './components/Size'
+import { BgColor } from './components/BgColor'
 import { FontWeight } from './components/FontWeight'
 
 styli.setup({
@@ -23,6 +24,7 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider theme={styli.config.theme}>
+        <BgColor></BgColor>
         <Color></Color>
         <Padding></Padding>
         <Margin></Margin>
