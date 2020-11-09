@@ -29,5 +29,7 @@ export interface AtomicProps
     Opacity {
   css?: CssObject
   debug?: boolean | CssObject
+  debugChildren?: boolean | CssObject
+  debugAll?: boolean | CssObject
   reset?: boolean | CssObject
 }
