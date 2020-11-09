@@ -23,9 +23,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
   const sizeValue = isValidPropValue(propValue) ? propValue : value
 
   sizeMaps[key].forEach((k: any) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.size))
-      : getValue(sizeValue, ModifierType.size)
+    style[k] = getValue(sizeValue, ModifierType.size)
   })
 
   return style

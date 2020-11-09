@@ -25,6 +25,7 @@ import debug from 'styli-plugin-debug'
 import css from 'styli-plugin-css'
 import reset from 'styli-plugin-reset'
 import pseudo from 'styli-plugin-pseudo'
+import mediaQueries from 'styli-plugin-media-queries'
 
 export const plugins = [
   debug(),
@@ -54,4 +55,5 @@ export const plugins = [
   zIndex(),
   ellipsis(),
   pseudo(),
+  mediaQueries(),
 ]

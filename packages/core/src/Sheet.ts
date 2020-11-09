@@ -190,7 +190,7 @@ export class Sheet {
    * get class string
    */
   toCss(): string {
-    let mediaCss: any = []
+    let mediaCss: any = {}
     const css = this.atoms.reduce((result, atom) => {
       const { className = '', type, style } = atom
 
@@ -199,24 +199,18 @@ export class Sheet {
       if (className) styli.cache[className] = true
 
       if (type === 'prefix') {
-        return result + parseCSSProp(atom.style, className)
+        return result + parseCSSProp(style, className)
       }
 
       if (type === 'no-prefix') {
-        return result + parseCSSProp(atom.style)
+        return result + parseCSSProp(style)
       }
 
       if (type === 'style') {
         /** to css atom string */
-        const cssAtomStr = Object.keys(atom.style).reduce((r, k) => {
+        const cssAtomStr = Object.keys(style).reduce((r, k) => {
           const value: any = (atom as any).style[k]
           const cssKey = cssKeyToStyleKey(k)
-
-          if (!Array.isArray(value)) return r + `${cssKey}: ${value};`
-
-          value.forEach((v, idx) => {
-            mediaCss[idx] = (mediaCss[idx] || []) + `${cssKey}: ${v};`
-          })
 
           return r + `${cssKey}: ${value[0]};`
         }, '')
@@ -224,16 +218,27 @@ export class Sheet {
         return result + `.${className} { ${cssAtomStr} }`
       }
 
+      if (type === 'media-queries') {
+        for (const breakpoint in style) {
+          const mediaStyle = (style as any)[breakpoint]
+          for (const key in mediaStyle) {
+            const cssKey = cssKeyToStyleKey(key)
+            const cssValue = (mediaStyle as any)[key]
+            mediaCss[breakpoint] = (mediaCss[breakpoint!] || '') + `${cssKey}: ${cssValue};`
+          }
+        }
+      }
+
       return result
     }, '')
 
-    if (mediaCss.length) {
-      const responsiveCss = styli
-        .getTheme('breakpoints')
-        ?.reduce((result: string, b: string, i: number) => {
-          return result + `@media (min-width: ${b}) { .${this.className}{${mediaCss[i]}} }`
-        }, '')
-      return css + responsiveCss
+    if (!isEmptyObj(mediaCss)) {
+      let cssStr = ''
+      for (const breakpoint in mediaCss) {
+        const unit = `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCss[breakpoint]}} }`
+        cssStr = cssStr + unit
+      }
+      return css + cssStr
     }
 
     return css

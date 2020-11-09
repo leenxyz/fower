@@ -14,15 +14,8 @@ export function colorPropToStyle(prop: string, propValue: any): any {
   if (Colors[prop] || Colors[colorType]) {
     color = Colors[prop] || Colors[colorType]
   } else if (prop === 'color' || prop === 'fontColor') {
-    if (Array.isArray(propValue)) {
-      color = propValue.map((i) => {
-        const [hex, opacity] = i.split('.')
-        return Colors[i] || hexToRgba(hex, opacity)
-      })
-    } else {
-      const [hex, opacity] = propValue.split('.')
-      color = hexToRgba(hex, opacity)
-    }
+    const [hex, opacity] = propValue.split('.')
+    color = hexToRgba(hex, opacity)
   } else {
     color = Colors[colorType] || colorType
   }

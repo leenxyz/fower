@@ -13,7 +13,7 @@ export function displayPropToStyle(prop: string, propValue: any): any {
 
   /** display */
   if (/^display(-.+)?/.test(prop)) {
-    if (typeof propValue === 'string' || Array.isArray(propValue)) return { display: propValue }
+    if (typeof propValue === 'string') return { display: propValue }
 
     return { display: kebab(prop.replace(/^display-/, '')) }
   }

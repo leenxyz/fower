@@ -1,0 +1,28 @@
+{
+  "name": "styli-plugin-media-queries",
+  "version": "0.10.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/styli-plugin-media-queries.esm.js",
+  "dependencies": {
+    "@styli/core": "^0.10.0",
+    "@styli/utils": "^0.10.0"
+  }
+}

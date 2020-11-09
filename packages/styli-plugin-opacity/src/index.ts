@@ -8,9 +8,7 @@ export function isOpacityKey(key: string) {
 export function opacityPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
     return {
-      opacity: Array.isArray(propValue)
-        ? propValue.map((v) => Number(v) / 100)
-        : Number(propValue) / 100,
+      opacity: Number(propValue) / 100,
     }
   }
   const [, value = 50] = prop.split('-')

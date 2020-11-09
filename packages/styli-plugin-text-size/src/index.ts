@@ -8,9 +8,7 @@ export function isTextSizeKey(key: string) {
 export function textSizePropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) {
     return {
-      fontSize: Array.isArray(propValue)
-        ? propValue.map((v) => getValue(v, ModifierType.text))
-        : getValue(propValue, ModifierType.text),
+      fontSize: getValue(propValue, ModifierType.text),
     }
   }
   const [, value] = prop.split('-')

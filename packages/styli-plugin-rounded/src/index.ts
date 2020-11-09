@@ -41,9 +41,7 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   const [key, value] = prop.split('-')
   const roundedValue = isValidPropValue(propValue) ? propValue : value
   for (const p of roundedMaps[key]) {
-    style[`border${p}Radius`] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.border))
-      : getValue(roundedValue, ModifierType.border)
+    style[`border${p}Radius`] = getValue(roundedValue, ModifierType.border)
   }
   return style
 }

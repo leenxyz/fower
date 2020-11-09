@@ -7,11 +7,7 @@ export function isTextLineHeightKey(key: string) {
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
-    return {
-      lineHeight: Array.isArray(propValue)
-        ? propValue.map((v) => getValue(v))
-        : getValue(propValue),
-    }
+    return { lineHeight: getValue(propValue) }
   }
 
   const [, value = ''] = prop.match(/lh-?(\w+)?/) || []

@@ -56,9 +56,7 @@ export function marginPropToStyle(prop: string, propValue: any) {
   const marginValue = isValidPropValue(propValue) ? propValue : minus + value
 
   marginMaps[key].forEach((k: any) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.margin))
-      : getValue(marginValue, ModifierType.margin)
+    style[k] = getValue(marginValue, ModifierType.margin)
   })
 
   return style

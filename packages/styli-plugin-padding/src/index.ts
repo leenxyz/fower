@@ -37,9 +37,7 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   const paddingValue = isValidPropValue(propValue) ? propValue : value
 
   paddingMaps[key].forEach((k: any) => {
-    style[k] = Array.isArray(propValue)
-      ? propValue.map((v) => getValue(v, ModifierType.padding))
-      : getValue(paddingValue, ModifierType.padding)
+    style[k] = getValue(paddingValue, ModifierType.padding)
   })
 
   return style
