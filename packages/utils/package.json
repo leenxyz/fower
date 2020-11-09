@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/utils.esm.js",
   "devDependencies": {
     "@types/string-hash": "^1.1.1"
   },

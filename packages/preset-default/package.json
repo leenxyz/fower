@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/preset-default.esm.js",
   "dependencies": {
     "@styli/core": "^0.10.0",
     "@styli/theming": "^0.10.0",
