@@ -211,9 +211,9 @@ export class Sheet {
         const cssAtomStr = Object.keys(style).reduce((r, k) => {
           const value: any = (atom as any).style[k]
           const cssKey = cssKeyToStyleKey(k)
-
-          return r + `${cssKey}: ${value[0]};`
+          return r + `${cssKey}: ${value};`
         }, '')
+
         // wrap with css className
         return result + `.${className} { ${cssAtomStr} }`
       }
