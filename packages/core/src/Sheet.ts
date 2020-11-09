@@ -26,9 +26,7 @@ export class Sheet {
   className: string
 
   constructor(readonly props: Props, private theme: Theme) {
-    const classNamePrefix = (styli.config.prefix || 'css') + '-'
-    const className = classNamePrefix + hash('' + styli.componentKey++)
-    this.className = className
+    this.className = 'css-' + hash('' + styli.componentKey++)
     this.traverseProps(props)
   }
 
@@ -152,11 +150,12 @@ export class Sheet {
     const { propKey = '', propValue, className } = atom
 
     if (!className && propValue) {
+      const prefix = styli.config.prefix ? styli.config.prefix + '-' : ''
       if (typeof propValue === 'boolean') {
-        atom.className = propKey
+        atom.className = `${prefix}${propKey}`
       } else {
         const postfix = this.getClassPostfix(propValue)
-        atom.className = `${propKey}-${postfix}`
+        atom.className = `${prefix}${propKey}-${postfix}`
       }
     }
 
