@@ -7,7 +7,7 @@ styli.setup(preset);
 
 export default () => {
   return (
-    <View p6 f5 bgGreen20>
+    <View p6 f={t => t.fontSizes[1]} bgGreen20>
       Use styli with custom component
     </View>
   );
