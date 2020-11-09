@@ -14,17 +14,15 @@ export default (): Plugin => {
         console.error('theme breakpoints not provide')
       }
 
-      let style = {}
-      propValue.forEach((value, idx) => {
-        const newAtom = plugin.onVisitProp!({ ...atom, propValue: value }, sheet)
-        style = {
-          ...style,
+      atom.type = 'media-queries'
+      atom.style = propValue.reduce((result, cur, idx) => {
+        const newAtom = plugin.onVisitProp!({ ...atom, propValue: cur }, sheet)
+        return {
+          ...result,
           [breakpoints[idx]]: newAtom.style,
         }
-      })
+      }, {})
 
-      atom.type = 'media-queries'
-      atom.style = style
       return atom
     },
   }

@@ -94,7 +94,7 @@ export class Sheet {
    * @param isArray
    */
   private getClassPostfix(value: any) {
-    const valueStr = Array.isArray(value) ? value.join('-') : String(value)
+    const valueStr = String(value)
     const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
 
@@ -147,9 +147,10 @@ export class Sheet {
    * @param atom
    */
   addAtom(atom: Atom) {
-    const { propKey = '', propValue, className } = atom
+    const { propKey = '', propValue, className, type } = atom
 
-    if (!className && propValue) {
+    // TODO: need optimize
+    if (!className && propValue && type !== 'media-queries') {
       const prefix = styli.config.prefix ? styli.config.prefix + '-' : ''
       if (typeof propValue === 'boolean') {
         atom.className = `${prefix}${propKey}`
