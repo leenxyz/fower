@@ -203,11 +203,13 @@ export function parseCSSProp(cssObj: any, className = ''): string {
 
   return paths
     .map(({ key, value }: any) => {
+      const isPseudo = /^::?\w+$/.test(key)
+
       let str = ''
       for (let i in value) {
         str = `${str}${[i]}: ${value[i]};`
       }
-      return `${className ? '.' + className : ''}${key}{${str}}`
+      return `${className ? '.' + className : ''}${isPseudo ? key : ' ' + key}{${str}}`
     })
     .join(' ')
 }

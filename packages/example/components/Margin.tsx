@@ -8,88 +8,88 @@ export const Margin = () => {
         Margin
       </Heading>
 
-      <View>
-        <View debug inlineBlock>
-          <View m4 debug inlineBlock>
+      <View debug>
+        <View inlineBlock>
+          <View m4 inlineBlock>
             m4
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View mt4 debug inlineBlock>
+        <View inlineBlock>
+          <View mt4 inlineBlock>
             mt4
           </View>
         </View>
-        <View debug inlineBlock>
-          <View mr4 debug inlineBlock>
+        <View inlineBlock>
+          <View mr4 inlineBlock>
             mr4
           </View>
         </View>
-        <View debug inlineBlock>
-          <View mb4 debug inlineBlock>
+        <View inlineBlock>
+          <View mb4 inlineBlock>
             mb4
           </View>
         </View>
-        <View debug inlineBlock>
-          <View ml4 debug inlineBlock>
+        <View inlineBlock>
+          <View ml4 inlineBlock>
             ml4
           </View>
         </View>
-        <View debug inlineBlock>
-          <View mx4 debug inlineBlock>
+        <View inlineBlock>
+          <View mx4 inlineBlock>
             mx4
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View my4 debug inlineBlock>
+        <View inlineBlock>
+          <View my4 inlineBlock>
             my4
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View m-20 debug inlineBlock>
+        <View inlineBlock>
+          <View m-20 inlineBlock>
             m-20
           </View>
         </View>
-        <View debug inlineBlock>
-          <View mt-20 debug inlineBlock>
+        <View inlineBlock>
+          <View mt-20 inlineBlock>
             m-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View mt-20 debug inlineBlock>
+        <View inlineBlock>
+          <View mt-20 inlineBlock>
             mt-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View mr-20 debug inlineBlock>
+        <View inlineBlock>
+          <View mr-20 inlineBlock>
             mr-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View mt-20 debug inlineBlock>
+        <View inlineBlock>
+          <View mt-20 inlineBlock>
             mt-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View ml-20 debug inlineBlock>
+        <View inlineBlock>
+          <View ml-20 inlineBlock>
             ml-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View mx-20 debug inlineBlock>
+        <View inlineBlock>
+          <View mx-20 inlineBlock>
             mx-20
           </View>
         </View>
 
-        <View debug inlineBlock>
-          <View my-20 debug inlineBlock>
+        <View inlineBlock>
+          <View my-20 inlineBlock>
             my-20
           </View>
         </View>
