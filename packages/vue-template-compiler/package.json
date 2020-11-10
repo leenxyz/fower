@@ -1,0 +1,19 @@
+{
+  "name": "@styli/vue-template-compiler",
+  "version": "0.10.0",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "forsigner",
+  "dependencies": {
+    "posthtml": "^0.13.4"
+  },
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.12"
+  }
+}
