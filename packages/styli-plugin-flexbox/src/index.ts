@@ -1,5 +1,5 @@
 import { Plugin } from '@styli/core'
-import { upFirst } from '@styli/utils'
+import { isValidPropValue, isNumber } from '@styli/utils'
 
 export const G = {
   flex: 'flex',
@@ -17,6 +17,7 @@ export const G = {
 }
 
 export const flexMaps: any = {
+  auto: 'auto',
   start: `${G.flex}-${G.start}`,
   end: `${G.flex}-${G.end}`,
   between: `${G.space}-${G.between}`,
@@ -27,20 +28,14 @@ export const flexMaps: any = {
   stretch: 'stretch',
 }
 
-export function isFlexBoxKeyWrapper() {
-  const getFlexKeys = (prefix: 'justify' | 'align') =>
-    Object.keys(flexMaps).map((flexKey) => `${prefix}${upFirst(flexKey)}`)
-  const justifyKeys = getFlexKeys('justify')
-  const alignKeys = getFlexKeys('align')
-  return (key: string) =>
+export function isFlexBoxKey(key: string) {
+  return (
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    justifyKeys.includes(key) ||
-    alignKeys.includes(key)
+    /^(justify|items|self|content).*$|^order-\d+$|^flex(-\d+)?$/.test(key)
+  )
 }
 
-export const isFlexBoxKey = isFlexBoxKeyWrapper()
-
-export function flexPropToStyle(prop: string) {
+export function flexPropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
 
@@ -50,6 +45,17 @@ export function flexPropToStyle(prop: string) {
   // 自动 display: flex
   if (prop === G.row || prop === G.column) style.display = G.flex
 
+  // flex
+  if (/^flex(-\d+)?$/.test(prop)) {
+    if (isValidPropValue(propValue)) {
+      style.flex = propValue
+    } else {
+      const [, value] = prop.split('-')
+      const flexValue = value || (propValue === true ? 1 : propValue)
+      style.flex = isNumber(flexValue) ? Number(flexValue) : flexValue
+    }
+  }
+
   // set flex-wrap
   if (wraps.includes(prop)) style.flexWrap = prop as any
 
@@ -58,8 +64,25 @@ export function flexPropToStyle(prop: string) {
     style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
   }
 
-  if (prop.startsWith('align')) {
-    style.alignItems = flexMaps[prop.replace('align', '').toLocaleLowerCase()]
+  // align-items
+  if (prop.startsWith('items')) {
+    style.alignItems = flexMaps[prop.replace('items', '').toLocaleLowerCase()]
+  }
+
+  //align-self
+  if (prop.startsWith('self')) {
+    style.alignSelf = flexMaps[prop.replace('self', '').toLocaleLowerCase()]
+  }
+
+  //align-content
+  if (prop.startsWith('content')) {
+    style.alignContent = flexMaps[prop.replace('content', '').toLocaleLowerCase()]
+  }
+
+  // order
+  if (prop.startsWith('order')) {
+    const [, order] = prop.split('-')
+    style.order = Number(order)
   }
 
   return style
@@ -67,10 +90,10 @@ export function flexPropToStyle(prop: string) {
 
 export default (): Plugin => {
   return {
-    name: 'styli-plugin-flex-box',
+    name: 'styli-plugin-flexbox',
     isMatch: isFlexBoxKey,
     onVisitProp(atom) {
-      atom.style = flexPropToStyle(atom.propKey)
+      atom.style = flexPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
   }

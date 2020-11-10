@@ -3,9 +3,9 @@ import { View, Heading } from '@styli/react'
 
 export const Border = () => {
   return (
-    <View f-12>
+    <View>
       <Heading>Border</Heading>
-      <View evenly wrap>
+      <View f-12 evenly wrap>
         <View s-100 border="1px solid gray">
           border="1px solid gray"
         </View>

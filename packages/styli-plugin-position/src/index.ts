@@ -38,7 +38,7 @@ export const positionMaps: any = {
 }
 
 export function isPositionKey(key: string) {
-  return /^[TLRB](-.+)?$/.test(key) || positionKeys.includes(key)
+  return /^[TLRBtlrb](-.+)?$/.test(key) || positionKeys.includes(key)
 }
 
 export function positionPropToStyle(prop: string, propValue: any): any {

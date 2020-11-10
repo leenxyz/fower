@@ -2,7 +2,7 @@ import { Plugin, getValue, styli } from '@styli/core'
 import { downFirst, isValidPropValue, isBrowser } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
-  return /^lh(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/.test(key)
+  return /^lh([Nn]one|[Tt]ight|[Ss]nug|[Nn]ormal|[Rr]elaxed|[Ll]oose|-.+)?$/.test(key)
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {

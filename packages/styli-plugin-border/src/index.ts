@@ -18,14 +18,14 @@ export const positionMaps: { [key: string]: string[] } = {
 }
 
 export function isBorderKey(key: string) {
-  return /^border(T|R|B|L|X|Y)?$/.test(key)
+  return /^border(T|R|B|L|X|Y|t|r|b|l|x|y)?$/.test(key)
 }
 
 export function borderPropToStyle(prop: string, propValue: any) {
   let style: any = {}
   const position = prop.replace(/^border/, '')
   if (position) {
-    positionMaps[position].map((item) => {
+    positionMaps[position.toUpperCase()].map((item) => {
       style[`border${item}`] = propValue
     })
   } else {

@@ -2,7 +2,6 @@ import background from 'styli-plugin-background'
 import border from 'styli-plugin-border'
 import color from 'styli-plugin-color'
 import display from 'styli-plugin-display'
-import flexItem from 'styli-plugin-flex-item'
 import flexbox from 'styli-plugin-flexbox'
 import layoutEngine from 'styli-plugin-layout-engine'
 import lineHeight from 'styli-plugin-line-height'
@@ -35,7 +34,6 @@ export const plugins = [
   border(),
   color(),
   display(),
-  flexItem(),
   flexbox(),
   layoutEngine(),
   lineHeight(),

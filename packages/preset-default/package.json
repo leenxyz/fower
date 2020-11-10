@@ -31,7 +31,6 @@
     "styli-plugin-debug": "^0.10.0",
     "styli-plugin-display": "^0.10.0",
     "styli-plugin-ellipsis": "^0.10.0",
-    "styli-plugin-flex-item": "^0.10.0",
     "styli-plugin-flexbox": "^0.10.0",
     "styli-plugin-layout-engine": "^0.10.0",
     "styli-plugin-line-height": "^0.10.0",

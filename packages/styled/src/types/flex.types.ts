@@ -155,10 +155,10 @@ export interface Flex {
    * ```
    * 用 View 作为示例:
    * ```tsx
-   * <View alignStart></View>
+   * <View itemsStart></View>
    * ```
    */
-  alignStart?: boolean
+  itemsStart?: boolean
 
   /**
    * Set align-items
@@ -167,10 +167,10 @@ export interface Flex {
    * ```
    * 用 View 作为示例:
    * ```tsx
-   * <View alignEnd></View>
+   * <View itemsEnd></View>
    * ```
    */
-  alignEnd?: boolean
+  itemsEnd?: boolean
 
   /**
    * Set align-items
@@ -179,10 +179,10 @@ export interface Flex {
    * ```
    * 用 View 作为示例:
    * ```tsx
-   * <View alignCenter></View>
+   * <View itemsCenter></View>
    * ```
    */
-  alignCenter?: boolean
+  itemsCenter?: boolean
 
   /**
    * Set align-items
@@ -191,10 +191,10 @@ export interface Flex {
    * ```
    * 用 View 作为示例:
    * ```tsx
-   * <View alignBaseline></View>
+   * <View itemsBaseline></View>
    * ```
    */
-  alignBaseline?: boolean
+  itemsBaseline?: boolean
 
   /**
    * Set align-items
@@ -203,10 +203,23 @@ export interface Flex {
    * ```
    * 用 View 作为示例:
    * ```tsx
-   * <View alignStretch></View>
+   * <View itemsStretch></View>
    * ```
    */
-  alignStretch?: boolean
+  itemsStretch?: boolean
+
+  selfAuto?: boolean
+  selfStart?: boolean
+  selfEnd?: boolean
+  selfCenter?: boolean
+  selfStretch?: boolean
+
+  contentStart?: boolean
+  contentEnd?: boolean
+  contentCenter?: boolean
+  contentBetween?: boolean
+  contentAround?: boolean
+  contentStretch?: boolean
 
   /**
    * Set flex item center in x y  (水平垂直对齐), 默认flex: row

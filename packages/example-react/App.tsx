@@ -9,13 +9,12 @@ import { Border } from './components/Border'
 import { Size } from './components/Size'
 import { BgColor } from './components/BgColor'
 import { FontWeight } from './components/FontWeight'
+import { FlexBox } from './components/FlexBox'
 
 styli.setup({
   ...presetDefault,
   inline: false,
 })
-
-console.log('----createStyle:', createStyle('p1 m-20'))
 
 // const myClassName = css('p-20 mx-10 borderGray-1 f-40')
 
@@ -33,6 +32,7 @@ export const App = () => {
         <Size></Size>
         <FontWeight></FontWeight>
         <Border></Border>
+        <FlexBox></FlexBox>
       </ThemeProvider>
     </div>
   )
