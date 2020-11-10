@@ -1,4 +1,4 @@
-import { createStyle } from '@styli/core'
+import { css } from '@styli/core'
 
 export default {
   name: 'css',
@@ -9,15 +9,13 @@ export default {
       props[name] = value === '' ? true : value
     }
 
-    const value: string = bind.value || ''
+    const value = bind.value || ''
 
     value.split(/\s+/).forEach((i) => {
       props[i] = true
     })
 
-    const styles: any = createStyle(Object.keys(props).join(' '))
-    for (const key in styles) {
-      el.style[key as any] = styles[key]
-    }
+    const className = css(Object.keys(props).join(' '))
+    if (className) el?.classList.add(...className.split(' '))
   },
 }

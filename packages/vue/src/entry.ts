@@ -1,7 +1,4 @@
 import _Vue, { PluginFunction } from 'vue'
-
-// Import vue components
-import * as components from '@/components/index'
 import vStyli from '@/v-css'
 
 // Define typescript interfaces for autoinstaller
@@ -16,10 +13,6 @@ const install: InstallFunction = function installStyli(Vue: typeof _Vue) {
   install.installed = true
 
   Vue.directive(vStyli.name, { bind: vStyli.bind })
-
-  Object.entries(components).forEach(([componentName, component]) => {
-    Vue.component(componentName, component)
-  })
 }
 
 // Create module definition for Vue.use()
@@ -44,7 +37,3 @@ if ('false' === process.env.ES_BUILD) {
 }
 // Default export is library as a whole, registered via Vue.use()
 export default plugin
-
-// To allow individual component use, export components
-// each can be registered via Vue.component()
-export * from '@/components/index'
