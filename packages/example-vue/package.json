@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "@styli/example-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@styli/core": "^0.10.0",
+    "@styli/preset-default": "^0.10.0",
     "@styli/vue": "^0.10.0",
     "core-js": "^3.6.5",
+    "posthtml-extend-attrs": "^1.0.0",
+    "styled-vue": "^0.3.7",
     "vue": "^2.6.11"
   },
   "devDependencies": {

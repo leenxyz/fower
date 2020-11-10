@@ -1,5 +1,5 @@
 import React from 'react'
-import { styli } from '@styli/core'
+import { styli, createStyle } from '@styli/core'
 import presetDefault from '@styli/preset-default'
 import { ThemeProvider } from '@styli/theming'
 import { Color } from './components/Color'
@@ -14,6 +14,8 @@ styli.setup({
   ...presetDefault,
   inline: false,
 })
+
+console.log('----createStyle:', createStyle('p1 m-20'))
 
 // const myClassName = css('p-20 mx-10 borderGray-1 f-40')
 
