@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1 p-20 bgRed20 font-bold>{{ msg }}</h1>
-    <p>
+    <h1 p-20 bgRed20>{{ msg }}</h1>
+    <p green60 fontBold>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
     </p>
