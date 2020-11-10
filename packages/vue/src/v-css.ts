@@ -11,7 +11,7 @@ export default {
 
     const value = bind.value || ''
 
-    value.split(/\s+/).forEach((i) => {
+    value.split(/\s+/).forEach((i: any) => {
       props[i] = true
     })
 
