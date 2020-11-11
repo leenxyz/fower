@@ -1,6 +1,6 @@
 {
   "name": "@styli/react",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   "author": "forsigner",
   "module": "dist/react.esm.js",
   "dependencies": {
-    "@styli/core": "^0.10.0",
-    "@styli/styled": "^0.10.0"
+    "@styli/core": "^0.11.0",
+    "@styli/styled": "^0.11.0"
   }
 }
