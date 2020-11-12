@@ -26,6 +26,10 @@ Frequently viewed docs:
 - [Getting started](/docs/getting-started)
 - [API Reference](/docs/styled)
 
+## Development
+
+- [Contributing Guide](/CONTRIBUTING.md)
+
 ## License
 
 [MIT License](https://github.com/forsigner/styli/blob/master/LICENSE)

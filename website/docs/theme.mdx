@@ -5,25 +5,67 @@ title: 主题
 
 ## 安装
 
-## 配置
-
-```jsx
-config({
-  theme: {
-    colors: {
-      blue: '#07c',
-      green: '#0fa',
-      primary: ['#276EF1', '#174EB6', '#9CBCF8'],
-    },
-    sizing: ['2px', '6px', '10px', '16px', '24px'],
-  },
-})
+```bash
+npm i @styli/theming
 ```
 
 ## 使用
 
-```jsx
-export default (props) => {
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+### 使用 ThemeProvider 注入主题
+
+再 React App 的最顶层，使用 ThemeProvider 注入主题对象。
+
+```jsx title="App.tsx"
+import React from 'react'
+import { ThemeProvider } from '@styli/theming'
+
+const theme = {
+  colors: {
+    primary: 'deeppink',
+  },
+}
+
+export const App = ({ children }) => {
+  return (
+    <div>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </div>
+  )
+}
+```
+
+### 在组件中使用
+
+再 ThemeProvider 注入主题后，你可以在任何原子属性使用主题(theme)。
+
+```jsx title="pages/Home.tsx"
+import React from 'react'
+import { Text } from '@styli/react'
+
+export const Home = ({ children }) => {
+  return (
+    <div>
+      <Text c={(theme) => theme.colors.primary}></Text>
+    </div>
+  )
+}
+```
+
+### 使用 useTheme
+
+你也可以使用 Styli 提供的一个 React Hooks: `useTheme`，更灵活的使用主题。
+
+```jsx title="pages/Home.tsx"
+import React from 'react'
+import { Text } from '@styli/react'
+import { useTheme } from '@styli/theming'
+
+export const Home = ({ children }) => {
+  const theme = useTheme()
+  return (
+    <div>
+      <Text c={theme.colors.primary}></Text>
+    </div>
+  )
 }
 ```

@@ -26,7 +26,7 @@ module.exports = {
       'reuse',
       'use-with-thirdparty',
       'theme',
-      'plugin',
+      // 'plugin',
       'typescript',
     ],
     'Atomic Props': [

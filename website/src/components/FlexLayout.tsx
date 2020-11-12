@@ -72,7 +72,7 @@ export const FlexLayout = () => {
 
   return (
     <View>
-      <View bgGray300 h-300 {...containerProps}>
+      <View bgGray30 h-300 {...containerProps}>
         <View s-50 bgBlue30 center>
           A
         </View>
