@@ -1,0 +1,63 @@
+---
+id: shadow
+title: Shadow
+---
+
+Styli 内置了阴影管理。
+
+使用 `shadow{SIZE}` 格式的 Props 可以控制元素的 shadow。
+
+## 用法
+
+```jsx live
+<View bgGray10 p-20 centerX between>
+  <View center c-50 bgWhite shadowXS>
+    XS
+  </View>
+  <View center c-60 bgWhite shadowSM>
+    SM
+  </View>
+  <View center c-70 bgWhite bgWhite shadowBase>
+    Base
+  </View>
+  <View center c-80 bgWhite shadowMD>
+    MD
+  </View>
+  <View center c-90 bgWhite shadowLG>
+    LG
+  </View>
+  <View center c-100 bgWhite shadowXL>
+    XL
+  </View>
+  <View center c-110 bgWhite shadowXXL>
+    XXL
+  </View>
+</View>
+```
+
+## 默认阴影
+
+```jsx live
+<View bgGray10 p-20 center>
+  <View center s-100 bgWhite shadow>
+    default
+  </View>
+</View>
+```
+
+## 使用伪类
+
+你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<View bgGray10 p-20 row>
+  <View center c-100 bgWhite shadowXS shadowXL--hover mr-20>
+    hover
+  </View>
+  <View center c-100 bgWhite shadowMD shadowXL--active>
+    active
+  </View>
+</View>
+```

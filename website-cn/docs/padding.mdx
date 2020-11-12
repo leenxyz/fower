@@ -1,0 +1,69 @@
+---
+id: padding
+title: Padding
+---
+
+使用 `p{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 padding。
+
+### Padding Props
+
+padding 是高频率使用的属性，所以我们使用缩写。
+
+- `p` padding
+- `pt` padding-top
+- `pr` padding-right
+- `pb` padding-bottom
+- `pl` padding-left
+- `px` padding-left and padding-right
+- `py` padding-top and padding-bottom
+
+### 设置四周的 padding
+
+使用 `p-{size}` 格式的 Props 可以控制元素四周的 padding。
+
+```jsx live
+<Text p-10 bgRed30>
+  Hello
+</Text>
+```
+
+### 设置一边的 padding
+
+使用 `p{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 padding。
+
+```jsx live
+<View centerX>
+  <View debug pt-10>
+    Hello
+  </View>
+  <View debug pr-10>
+    Hello
+  </View>
+  <View debug pb-10>
+    Hello
+  </View>
+  <View debug pl-10>
+    Hello
+  </View>
+</View>
+```
+
+### 设置水平方向的 padding
+
+使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 padding。
+
+```jsx live
+<Text px-10 bgRed30>
+  Hello
+</Text>
+```
+
+### 设置垂直方向的 padding
+
+使用 `py-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
+
+```jsx live
+<Text py-10 bgRed30>
+  Hello
+</Text>
+```

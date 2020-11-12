@@ -1,0 +1,52 @@
+---
+id: rounded
+title: Rounded
+---
+
+使用 `rounded{T|R|B|L|TL|TR|BL|BR}-{size}` 格式的 Props 可以控制元素的圆角大小。
+
+## 四周圆角
+
+```jsx live
+<View evenly>
+  <View s-100 bgYellow20 rounded-6></View>
+  <View s-100 bgRed20 rounded-10px></View>
+  <View s-100 bgGreen20 rounded={20}></View>
+  <View s-100 bgBlue20 rounded="50px"></View>
+</View>
+```
+
+## 某一方向
+
+```jsx live
+<View evenly>
+  <View s-100 bgYellow20 roundedT-20></View>
+  <View s-100 bgRed20 roundedR-20></View>
+  <View s-100 bgGreen20 roundedB-20></View>
+  <View s-100 bgBlue20 roundedL-20></View>
+</View>
+```
+
+## 单个圆角
+
+```jsx live
+<View evenly>
+  <View s-100 bgYellow20 roundedTL-20></View>
+  <View s-100 bgRed20 roundedTR-20></View>
+  <View s-100 bgGreen20 roundedBL-20></View>
+  <View s-100 bgBlue20 roundedBR-20></View>
+</View>
+```
+
+## 使用伪类
+
+你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<View evenly>
+  <View s-100 bgYellow20 rounded-20--hover></View>
+  <View s-100 bgGreen20 rounded-20--active></View>
+</View>
+```

@@ -1,0 +1,96 @@
+---
+id: flexbox
+title: Flexbox
+---
+
+Flexbox 是一种用于按行或按列布局元素的一维布局方法 。元素可以膨胀以填充额外的空间, 收缩以适应更小的空间。Styli 支持大部分常用的 flexbox 属性，可以满足您大部分布局场景。
+
+> 对于大部分常规的布局，推荐使用 Styli 更抽象的 [布局引擎](/docs/layout-engine)，它的使用更加简洁和容易理解。
+
+如果你不熟悉弹性盒子，建议先通过 MDN [了解 flexbox](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。
+
+## Flex Direction
+
+使用 `row` 和 `column` 控制 flex 布局的方向，为了你的 UI 结构更加简洁，当你设置了 `row` 和 `column`，你不需要再设置 `display: flex` 样式属性，Styli 会自动帮你添加该属性。
+
+```jsx live
+<View row>
+  <View s-100 bgBlue30></View>
+  <View s-100 bgGreen30></View>
+</View>
+```
+
+## Alignment
+
+使用 justify{type} 和 align{type} 格式的 Props 可以控制 flex 容器内元素的对齐方式。
+
+```jsx live
+<View row justifyEnd alignCenter>
+  <View s-100 bgBlue30></View>
+  <View s-100 bgGreen30></View>
+</View>
+```
+
+使用 justify-content 和 align-items 可以完成大部分和子元素有关对齐的布局。
+
+### 主轴 **justify-content**
+
+- `justifyStart` justify-content: flex-start
+- `justifyEnd` justify-content: flex-end
+- `justifyCenter` justify-content: center
+- `justifyBetween` justify-content: space-between
+- `justifyAround` justify-content: space-around
+- `justifyEvenly` justify-content: space-evenly
+
+### 交叉轴 **align-items**
+
+- `itemsStart` align-items: flex-start
+- `itemsEnd` align-items: flex-end
+- `itemsCenter` align-items: center
+- `itemsBaseline` align-items: baseline
+- `itemsStretch` align-items: stretch
+
+## Flex wrap
+
+使用 `wrap` 和 `noWrap` 控制 flex-wrap:
+
+```jsx live
+<View row wrap>
+  <View h-100 w-240 bgBlue30></View>
+  <View h-100 w-240 bgGreen30></View>
+  <View h-100 w-240 bgYellow30></View>
+  <View h-100 w-240 bgRed30></View>
+</View>
+```
+
+## Flex
+
+Styli 中 `flex` props 可以控制 `flex-grow`, `flex-shrink` 和 `flex-basis`。
+
+### flex-1
+
+```jsx live
+<View row wrap>
+  <View h-100 w-100 bgBlue30 center>
+    width: 100
+  </View>
+  <View h-100 w-100 bgGreen30 center>
+    width: 100
+  </View>
+  <View h-100 flex-1 bgYellow30 center>
+    flex-1
+  </View>
+</View>
+```
+
+## Live Edit Demo
+
+为了更好的体验 flexbox 相关属性，你可以改代码进行实时预览：
+
+```jsx live
+<View column justifyBetween alignCenter>
+  <View s-50 bgBlue30></View>
+  <View s-120 bgGreen30></View>
+  <View s-80 bgOrange30></View>
+</View>
+```

@@ -1,0 +1,93 @@
+---
+id: typography
+title: Typography
+---
+
+import { LineHeight } from '../src/components/LineHeight'
+
+## Font Size
+
+使用 `f-{size}` 格式的 Props 可以控制字体的大小。
+
+:::note
+`fontSize` 属性是高频使用的样式，所以简化为 `f`。
+:::
+
+```jsx live
+<View>
+  <Text f-20>王勃</Text>
+  <Text f={40}> 李白</Text>
+  <Text f-4rem> 杜甫</Text>
+</View>
+```
+
+## Font Weight
+
+有两种方式可以控制字体粗细，一种是使用预设值，另外一种是使用精确的传值。
+
+使用预设值:
+
+```jsx live
+<View f-24>
+  <View fontHairline>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontThin>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontLight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontMedium>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontSemibold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontBold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontExtrabold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+使用精确传值:
+
+```jsx live
+<View f-24>
+  <View fontWeight-100>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontWeight-400>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Line Height
+
+有两种方式可以控制文本的行高，一种是使用预设值，另外一种是使用精确的传值。
+
+使用预设值 `lhNone`、`lhTight`、`lhSnug`、`lhNormal`、`lhRelaxed`、`lhLoose`:
+
+<LineHeight />
+
+```jsx
+<View>
+  <View lhNone>Lorem ipsum dolor sit amet ...</View>
+  <View lhTight>Lorem ipsum dolor sit amet ...</View>
+  <View lhSnug>Lorem ipsum dolor sit amet ...</View>
+  <View lhNormal>Lorem ipsum dolor sit amet ...</View>
+  <View lhRelaxed>Lorem ipsum dolor sit amet ...</View>
+  <View lhLoose>Lorem ipsum dolor sit amet ...</View>
+</View>
+```
+
+使用精确传值:
+
+```jsx live
+<View f-20>
+  <View lh-20>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lh-3em>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lh="1.5em">落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Text Alignment
+
+使用 `textLeft`、`textCenter`、`textRight`、`textJustify` 控制文办的对齐方式。
+
+```jsx live
+<View f-20>
+  <View textLeft>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textCenter>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textRight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textJustify>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```

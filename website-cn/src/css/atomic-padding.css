@@ -1,0 +1,409 @@
+/* padding */
+.p-1 {
+  padding: 1px;
+}
+
+.p-2 {
+  padding: 2px;
+}
+
+.p-3 {
+  padding: 3px;
+}
+
+.p-4 {
+  padding: 4px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.p-6 {
+  padding: 6px;
+}
+
+.p-7 {
+  padding: 7px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+.p-9 {
+  padding: 9px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+/* padding-top */
+.pt-1 {
+  padding: 1px;
+}
+
+.pt-2 {
+  padding: 2px;
+}
+
+.pt-3 {
+  padding: 3px;
+}
+
+.pt-4 {
+  padding: 4px;
+}
+
+.pt-5 {
+  padding: 5px;
+}
+
+.pt-6 {
+  padding: 6px;
+}
+
+.pt-7 {
+  padding: 7px;
+}
+
+.pt-8 {
+  padding: 8px;
+}
+
+.pt-9 {
+  padding: 9px;
+}
+
+.pt-10 {
+  padding: 10px;
+}
+
+/* padding-right */
+.pr-1 {
+  padding: 1px;
+}
+
+.pr-2 {
+  padding: 2px;
+}
+
+.pr-3 {
+  padding: 3px;
+}
+
+.pr-4 {
+  padding: 4px;
+}
+
+.pr-5 {
+  padding: 5px;
+}
+
+.pr-6 {
+  padding: 6px;
+}
+
+.pr-7 {
+  padding: 7px;
+}
+
+.pr-8 {
+  padding: 8px;
+}
+
+.pr-9 {
+  padding: 9px;
+}
+
+.pr-10 {
+  padding: 10px;
+}
+
+/* padding-bottom */
+.pb-1 {
+  padding: 1px;
+}
+
+.pb-2 {
+  padding: 2px;
+}
+
+.pb-3 {
+  padding: 3px;
+}
+
+.pb-4 {
+  padding: 4px;
+}
+
+.pb-5 {
+  padding: 5px;
+}
+
+.pb-6 {
+  padding: 6px;
+}
+
+.pb-7 {
+  padding: 7px;
+}
+
+.pb-8 {
+  padding: 8px;
+}
+
+.pb-9 {
+  padding: 9px;
+}
+
+.pb-10 {
+  padding: 10px;
+}
+
+/* padding-left */
+.pl-1 {
+  padding: 1px;
+}
+
+.pl-2 {
+  padding: 2px;
+}
+
+.pl-3 {
+  padding: 3px;
+}
+
+.pl-4 {
+  padding: 4px;
+}
+
+.pl-5 {
+  padding: 5px;
+}
+
+.pl-6 {
+  padding: 6px;
+}
+
+.pl-7 {
+  padding: 7px;
+}
+
+.pl-8 {
+  padding: 8px;
+}
+
+.pl-9 {
+  padding: 9px;
+}
+
+.pl-10 {
+  padding: 10px;
+}
+
+/* padding */
+.hover\:p-1:hover {
+  padding: 1px;
+}
+
+.hover\:p-2:hover {
+  padding: 2px;
+}
+
+.hover\:p-3:hover {
+  padding: 3px;
+}
+
+.hover\:p-4:hover {
+  padding: 4px;
+}
+
+.hover\:p-5:hover {
+  padding: 5px;
+}
+
+.hover\:p-6:hover {
+  padding: 6px;
+}
+
+.hover\:p-7:hover {
+  padding: 7px;
+}
+
+.hover\:p-8:hover {
+  padding: 8px;
+}
+
+.hover\:p-9:hover {
+  padding: 9px;
+}
+
+.hover\:p-10:hover {
+  padding: 10px;
+}
+
+/* padding-top */
+.hover\:pt-1:hover {
+  padding: 1px;
+}
+
+.hover\:pt-2:hover {
+  padding: 2px;
+}
+
+.hover\:pt-3:hover {
+  padding: 3px;
+}
+
+.hover\:pt-4:hover {
+  padding: 4px;
+}
+
+.hover\:pt-5:hover {
+  padding: 5px;
+}
+
+.hover\:pt-6:hover {
+  padding: 6px;
+}
+
+.hover\:pt-7:hover {
+  padding: 7px;
+}
+
+.hover\:pt-8:hover {
+  padding: 8px;
+}
+
+.hover\:pt-9:hover {
+  padding: 9px;
+}
+
+.hover\:pt-10:hover {
+  padding: 10px;
+}
+
+/* padding-right */
+.hover\:pr-1:hover {
+  padding: 1px;
+}
+
+.hover\:pr-2:hover {
+  padding: 2px;
+}
+
+.hover\:pr-3:hover {
+  padding: 3px;
+}
+
+.hover\:pr-4:hover {
+  padding: 4px;
+}
+
+.hover\:pr-5:hover {
+  padding: 5px;
+}
+
+.hover\:pr-6:hover {
+  padding: 6px;
+}
+
+.hover\:pr-7:hover {
+  padding: 7px;
+}
+
+.hover\:pr-8:hover {
+  padding: 8px;
+}
+
+.hover\:pr-9:hover {
+  padding: 9px;
+}
+
+.hover\:pr-10:hover {
+  padding: 10px;
+}
+
+/* padding-bottom */
+.hover\:pb-1:hover {
+  padding: 1px;
+}
+
+.hover\:pb-2:hover {
+  padding: 2px;
+}
+
+.hover\:pb-3:hover {
+  padding: 3px;
+}
+
+.hover\:pb-4:hover {
+  padding: 4px;
+}
+
+.hover\:pb-5:hover {
+  padding: 5px;
+}
+
+.hover\:pb-6:hover {
+  padding: 6px;
+}
+
+.hover\:pb-7:hover {
+  padding: 7px;
+}
+
+.hover\:pb-8:hover {
+  padding: 8px;
+}
+
+.hover\:pb-9:hover {
+  padding: 9px;
+}
+
+.hover\:pb-10:hover {
+  padding: 10px;
+}
+
+/* padding-left */
+.hover\:pl-1:hover {
+  padding: 1px;
+}
+
+.hover\:pl-2:hover {
+  padding: 2px;
+}
+
+.hover\:pl-3:hover {
+  padding: 3px;
+}
+
+.hover\:pl-4:hover {
+  padding: 4px;
+}
+
+.hover\:pl-5:hover {
+  padding: 5px;
+}
+
+.hover\:pl-6:hover {
+  padding: 6px;
+}
+
+.hover\:pl-7 {
+  padding: 7px;
+}
+
+.hover\:pl-8:hover {
+  padding: 8px;
+}
+
+.hover\:pl-9:hover {
+  padding: 9px;
+}
+
+.hover\:pl-10:hover {
+  padding: 10px;
+}

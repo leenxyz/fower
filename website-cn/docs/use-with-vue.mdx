@@ -1,0 +1,95 @@
+---
+id: use-with-vue
+title: 在 Vue 中使用
+---
+
+## 安装
+
+```bash
+npm i @styli/core @styli/vue @styli/preset-default
+```
+
+注意，除了需要 `@styli/core`，你还需安装和 Vue 对应的组件包 `@styli/vue`。
+
+## 初始化 Preset
+
+在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+
+```js title="src/index.ts"
+import { styli } from '@styli/core'
+import preset from '@styli/preset-default'
+
+styli.setup(preset)
+```
+
+## 基本使用
+
+首先，你需要注册 Styli 的 Vue 插件:
+
+```jsx
+import Vue from 'vue'
+import styliVue from '@styli/vue'
+
+Vue.use(styliVue)
+```
+
+然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
+
+```jsx
+<template>
+  <div v-css centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <img v-css c-48 src="/img/jobs.jpg" />
+    <div v-css ml-10>
+      <div v-css f-20 fontBold>
+        Steve Jobs
+      </div>
+      <span v-css gray80>
+        Co-founder of Apple Inc.
+      </span>
+    </div>
+  </div>
+</template>
+```
+
+[![Edit styli-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styli-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
+
+## 进阶使用
+
+在上面的用法中，我们给 html 元素添加原子属性时，同时我们要增加一个 `v-css`指令，特别繁琐。我们能否不添加 `v-css` 指令呢？答案是可以的。
+
+怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`：
+
+```js
+module.exports = {
+  lintOnSave: false,
+  chainWebpack(config) {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .tap((options) => {
+        options.compiler = require('@styli/vue-template-compiler')
+        return options
+      })
+  },
+}
+```
+
+然后你就不需要再写 `v-css` 指令，而是直接在 html 中设置原子属性：
+
+```jsx
+<template>
+  <div centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <img c-48 src="/img/jobs.jpg" />
+    <div ml-10>
+      <div f-20 fontBold>
+        Steve Jobs
+      </div>
+      <span gray80>Co-founder of Apple Inc.</span>
+    </div>
+  </div>
+</template>
+```
+
+## 例子源码
+
+你可以查看 Vue Exmaple 的源码：[example-vue](https://github.com/forsigner/styli/tree/master/packages/example-vue)

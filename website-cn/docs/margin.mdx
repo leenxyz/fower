@@ -1,0 +1,104 @@
+---
+id: margin
+title: Margin
+---
+
+使用 `m{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 margin。
+
+## Margin Props
+
+margin 是高频率使用的属性，所以我们使用缩写。
+
+- `m` margin
+- `mt` margin-top
+- `mr` margin-right
+- `mb` margin-bottom
+- `ml` margin-left
+- `mx` margin-left and margin-right
+- `my` margin-top and margin-bottom
+
+### 设置四周的 margin
+
+使用 `m-{size}` 格式的 Props 可以控制元素四周的 margin。
+
+```jsx live
+<View bgGray10 left>
+  <View bgGreen20 s-100 m-0>
+    Hello
+  </View>
+  <View bgGreen20 s-100 m={20}>
+    Hello
+  </View>
+  <View bgGreen20 s-100 m="40px">
+    Hello
+  </View>
+  <View bgGreen20 s-100 m="10px 20px">
+    Hello
+  </View>
+</View>
+```
+
+### 设置一边的 margin
+
+使用 `m{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 margin。
+
+<View mt-10>Hello</View>
+<View mr-10>Hello</View>
+<View mb-10>Hello</View>
+<View ml-10>Hello</View>
+
+```jsx live
+<View bgGray10 left>
+  <View ml-10 bgGreen20 s-100>
+    Hello
+  </View>
+  <View mt-10 bgTeal20 s-100>
+    Hello
+  </View>
+  <View mr-10 bgRed20 s-100>
+    Hello
+  </View>
+  <View mb-10 bgYellow20 s-100>
+    Hello
+  </View>
+</View>
+```
+
+### 设置水平方向的 margin
+
+使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 margin。
+
+```jsx live
+<View bgGray10 left>
+  <View mx-10 s-100 bgRed20>
+    Hello
+  </View>
+</View>
+```
+
+### 设置垂直方向的 margin
+
+使用 `my-{size}` 格式的 Props 可以控制元素垂直方向的 margin。
+
+```jsx live
+<View bgGray10 left>
+  <View my-10 s-100 bgRed20>
+    Hello
+  </View>
+</View>
+```
+
+### 设置负 margin
+
+使用 `m{t|r|b|l|x|y}--{size}` 格式的 Props 可以设置元素的 负 margin。
+
+当然，你也可以使用 `ml={-10}` 这样的方式为元素设置负 margin。
+
+```jsx
+<View ml--10>Hello</View>
+<View mr--10px>Hello</View>
+<View mt--10rem>Hello</View>
+<View mb={-10}>Hello</View>
+<View ml="-10px">Hello</View>
+<View mr="-10rem">Hello</View>
+```

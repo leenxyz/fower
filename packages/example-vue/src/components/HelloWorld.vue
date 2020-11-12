@@ -1,6 +1,6 @@
 <template>
   <div debugChildren>
-    <h1 m-30 :color="color" textRight p-10 bgRed20 block @click="clickTitle">
+    <h1 m-20 :color="color" class="red" textRight p-10 bgRed20 block @click="clickTitle">
       {{ msg }} {{ color }}
     </h1>
     <p green60 fontBold borderT="1px solid green">
