@@ -26,7 +26,7 @@ export class Sheet {
   className: string
 
   constructor(readonly props: Props, private theme: Theme) {
-    this.className = 'css-' + hash('' + styli.componentKey++)
+    this.className = 'styli-' + hash('' + styli.componentKey++)
     this.traverseProps(props)
   }
 
@@ -94,7 +94,7 @@ export class Sheet {
    * @param isArray
    */
   private getClassPostfix(value: any) {
-    const valueStr = String(value)
+    const valueStr = JSON.stringify(value)
     const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
 
