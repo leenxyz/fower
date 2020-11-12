@@ -1,7 +1,7 @@
 import { Theme } from '@styli/theming'
 import { Plugin } from './types'
 
-const isPlainDirective = (key: string) => /^\w+(-\w+)?$/.test(key)
+const isPlainDirective = (key: string) => /^\w+(--?\w+)?$/.test(key)
 
 export const coreMiddleware: Plugin = {
   name: 'styli-plugin-core',
