@@ -94,7 +94,7 @@ export class Sheet {
    * @param isArray
    */
   private getClassPostfix(value: any) {
-    const valueStr = JSON.stringify(value)
+    const valueStr = String(value)
     const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
 

@@ -1,4 +1,5 @@
 import { CssObject, Plugin } from '@styli/core'
+import { hash } from '@styli/utils'
 
 export default (): Plugin => {
   return {
@@ -9,6 +10,7 @@ export default (): Plugin => {
     onVisitProp(atom) {
       atom.type = 'prefix'
       atom.style = atom.propValue as CssObject
+      atom.className = 'css-' + hash(JSON.stringify(atom.propValue))
       return atom
     },
   }
