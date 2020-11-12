@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { Sheet, styli } from '@styli/core'
+import { Sheet, styleManager, styli } from '@styli/core'
 
 /**
  * JSX Pragma
@@ -14,6 +14,20 @@ export function jsx(element: string, props: any, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const newProps: any = new Sheet(props, styli.config.theme).getParsedProps()
-  return createElement.apply(null, [element, newProps, ...children])
+  const sheet = new Sheet(props, styli.config.theme)
+  const parsedProps: any = sheet.getParsedProps()
+
+  if (sheet.isInline()) {
+    if (Array.isArray(props.style)) {
+      parsedProps.style = [props.style, parsedProps.toStyle()]
+    } else {
+      parsedProps.style = { ...props.style, ...parsedProps.toStyle() }
+    }
+  } else {
+    const { className } = props
+    styleManager.insertStyles(sheet.toCss())
+    parsedProps.className = `${className || ''} ${sheet.getClassNames()}`
+  }
+
+  return createElement.apply(null, [element, parsedProps, ...children])
 }

@@ -1,7 +1,6 @@
 import { CSSProperties } from 'react'
 import { Theme } from '@styli/theming'
 import { Props, Atom } from './types'
-import { styleManager } from './styleManager'
 import {
   isBrowser,
   isEmptyObj,
@@ -101,36 +100,7 @@ export class Sheet {
     return isValidClassName ? str : hash(str)
   }
 
-  private getClassName() {
-    const unitClassName = this.getClassNames()
-    const className = `${this.className} ${unitClassName}`
-    if (!this.props.className) return className
-    return `${this.props.className} ${className}`
-  }
-
-  private getPropsByInline(inline: boolean) {
-    const { props, atoms } = this
-    const parsedProps: Props = Object.keys(props).reduce((result: Props, cur: any) => {
-      const prop = atoms.find(({ propKey }) => propKey === cur)
-      return prop ? result : { ...result, [cur]: props[cur] }
-    }, {} as Props)
-
-    if (inline) {
-      parsedProps.style = this.toStyles()
-      return parsedProps
-    }
-
-    /**
-     * insert css to <style></style>
-     */
-    styleManager.insertStyles(this.toCss())
-
-    parsedProps.className = this.getClassName()
-
-    return parsedProps
-  }
-
-  private isInline(): boolean {
+  isInline(): boolean {
     let inline: boolean
 
     if (typeof styli.config.inline === 'boolean') {
@@ -167,24 +137,17 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    return this.atoms.map((i) => i.className).join(' ')
+    return `${this.className} ${this.atoms.map((i) => i.className).join(' ')}`
   }
 
   /**
    * get style object
    */
   toStyles() {
-    const styliStyles = this.atoms.reduce((result, cur) => {
+    return this.atoms.reduce((result, cur) => {
       if (cur.type !== 'style') return result
       return { ...result, ...cur.style }
     }, {} as CSSProperties)
-
-    /** array style for RN */
-    if (Array.isArray(this.props.style)) {
-      return [styliStyles, ...this.props.style]
-    }
-
-    return { ...styliStyles, ...this.props.style }
   }
 
   /**
@@ -246,9 +209,10 @@ export class Sheet {
   }
 
   getParsedProps(): Props {
-    const { props } = this
-    if (isEmptyObj(props)) return {}
-    const inline: boolean = this.isInline()
-    return this.getPropsByInline(inline)
+    const { props, atoms } = this
+    return Object.keys(props).reduce((result: Props, cur: any) => {
+      const prop = atoms.find(({ propKey }) => propKey === cur)
+      return prop ? result : { ...result, [cur]: props[cur] }
+    }, {} as Props)
   }
 }
