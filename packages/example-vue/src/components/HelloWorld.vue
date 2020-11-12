@@ -18,6 +18,7 @@
     <div w-100 maxH-50 bgYellow20>maxH-50</div>
     <div h-100 minW-50 bgYellow20>minW-50</div>
     <div w-100 minH-50 bgYellow20>minH-50</div>
+    <div w="[100,200,300,400]" bgYellow20>w="[200,400,600,800]"</div>
 
     <div h-200 f-12 debugChildren row justifyBetween itemsEnd>
       <div s-100>AAA</div>

@@ -1,5 +1,9 @@
 import { Sheet, styli, styleManager } from '@styli/core'
 
+function isArray(data: string) {
+  return /^\[(\w+,)*\w+\]$/.test(data)
+}
+
 export default {
   name: 'css',
   bind: function (el: HTMLElement, bind: any) {
@@ -8,7 +12,12 @@ export default {
     /** handle children */
     for (const { name, value } of Object.values(el.attributes)) {
       if (name) {
-        props[name] = value === '' ? true : value
+        if (isArray(value)) {
+          const [, arrayStr] = value.match(/^\[((\w+,)*\w+)\]$/) || []
+          props[name] = arrayStr.split(',')
+          continue
+        }
+        props[name] = !value ? true : value
       }
     }
 
@@ -29,6 +38,8 @@ export default {
 
     /** set className to el */
     const className = sheet.getClassNames()
-    if (className) el?.classList.add(...className.split(' '))
+    const classList = (className || '').split(' ').filter(Boolean)
+
+    el?.classList.add(...classList)
   },
 }
