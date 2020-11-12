@@ -31,6 +31,7 @@ Parallel=("
   styli-plugin-debug
   styli-plugin-reset
   styli-plugin-z-index
+  styli-plugin-outline
   styli-plugin-pseudo
   styli-plugin-media-queries
   styli-plugin-ellipsis

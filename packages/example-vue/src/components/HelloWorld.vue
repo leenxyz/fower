@@ -27,4 +27,5 @@ export default {
 h1 {
   font-style: italic;
 }
-</style>>
+</style>
+>

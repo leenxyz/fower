@@ -11,6 +11,7 @@ import { Opacity } from './opacity.types'
 import { Colors } from './color.types'
 import { Displays } from './display.types'
 import { OverFlows } from './overflow.types'
+import { OutLine } from './outline.types'
 import { CssObject } from './common.types'
 export interface AtomicProps
   extends Sizes,
@@ -26,6 +27,7 @@ export interface AtomicProps
     Shadows,
     Displays,
     OverFlows,
+    OutLine,
     Opacity {
   css?: CssObject
   debug?: boolean | CssObject
