@@ -51,6 +51,7 @@
     "styli-plugin-text-transform": "^0.11.0",
     "styli-plugin-text-weight": "^0.11.0",
     "styli-plugin-z-index": "^0.11.0",
-    "styli-plugin-outline": "^0.11.0"
+    "styli-plugin-outline": "^0.11.0",
+    "styli-plugin-cursor": "^0.11.0"
   }
 }

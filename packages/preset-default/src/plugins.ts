@@ -20,6 +20,7 @@ import textTransform from 'styli-plugin-text-transform'
 import textWeight from 'styli-plugin-text-weight'
 import zIndex from 'styli-plugin-z-index'
 import outline from 'styli-plugin-outline'
+import cursor from 'styli-plugin-cursor'
 import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
 import css from 'styli-plugin-css'
@@ -52,6 +53,7 @@ export const plugins = [
   textTransform(),
   textWeight(),
   zIndex(),
+  cursor(),
   outline(),
   ellipsis(),
   pseudo(),

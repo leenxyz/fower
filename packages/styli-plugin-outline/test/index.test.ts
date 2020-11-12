@@ -28,7 +28,11 @@ describe('styli-plugin-outline', () => {
     expect(onVisitProp!(atom3, sheet)).toMatchObject(newAtom3)
 
     const atom4 = { propKey: 'outlineOffset', propValue: '10px' } as Atom
-    const newAtom4 = { propKey: 'outlineOffset', propValue: '10px', style: { outlineOffset: '10px' } }
+    const newAtom4 = {
+      propKey: 'outlineOffset',
+      propValue: '10px',
+      style: { outlineOffset: '10px' },
+    }
     expect(onVisitProp!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })

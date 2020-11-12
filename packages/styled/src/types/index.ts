@@ -13,6 +13,7 @@ import { Displays } from './display.types'
 import { OverFlows } from './overflow.types'
 import { OutLine } from './outline.types'
 import { CssObject } from './common.types'
+import { Cursor } from './cursor.types'
 export interface AtomicProps
   extends Sizes,
     Paddings,
@@ -28,6 +29,7 @@ export interface AtomicProps
     Displays,
     OverFlows,
     OutLine,
+    Cursor,
     Opacity {
   css?: CssObject
   debug?: boolean | CssObject

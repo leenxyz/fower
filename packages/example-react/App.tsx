@@ -13,6 +13,7 @@ import { FlexBox } from './components/FlexBox'
 import { OutLine } from './components/OutLine'
 import { CSSProp } from './components/CSSProp'
 import { LayoutEngine } from './components/LayoutEngine'
+import { Cursor } from './components/Cursor'
 
 styli.setup({
   ...presetDefault,
@@ -28,6 +29,7 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider theme={styli.config.theme}>
+        <Cursor></Cursor>
         <BgColor></BgColor>
         <Color></Color>
         <Padding></Padding>
