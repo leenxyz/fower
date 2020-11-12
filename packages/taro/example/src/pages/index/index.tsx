@@ -16,7 +16,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View className="index" s-200 center column borderGray700-4>
+      <View className="index" s-200 center column>
         <Text bgBlue500 f-16>
           Hello!
         </Text>

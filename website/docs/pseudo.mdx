@@ -35,7 +35,7 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
 </View>
 ```
 
-## Foucus
+## Focus
 
 ```jsx live
 <Input
@@ -43,7 +43,7 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
   css={{ outline: 'none' }}
   bgWhite--focus
   p2
-  border="none"
+  border="1px solid #aaa"
   border--focus="1px solid deeppink"
 />
 ```
@@ -83,4 +83,4 @@ Styli 支持下面所有伪类：
 
 ## 关于体积
 
-Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，并且支持了 18 常用的伪类。你可能会有疑问，这会不会导致 Styli 包的代码体积爆炸，答案是不会。传统的的 CSS 方案，如果要让每个 CSS 类支持伪类，需要大量的 CSS 代码，因为 CSS 不剧本编程性，它只能通过枚举的方式堆积代码。得益于 JS 的灵活性，Styli 只需几十行代码即可让所以原子属性支持伪类。如果你对如何实现伪类的插件有兴趣，可以看看[styli-plugin-pseudo](https://github.com/forsigner/styli/blob/master/packages/styli-plugin-pseudo/src/index.ts)。
+Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，并且支持了 18 常用的伪类。你可能会有疑问，这会不会导致 Styli 包的代码体积爆炸，答案是不会。传统的的 CSS 方案，如果要让每个 CSS 类支持伪类，需要大量的 CSS 代码，因为 CSS 不剧本编程性，它只能通过枚举的方式堆积代码。得益于 JS 的灵活性，Styli 只需几十行代码即可让所以原子属性支持伪类。如果你对如何实现伪类的插件有兴趣，可以看看[styli-plugin-pseudo](https://github.com/forsigner/styli/blob/master/packages/styli-plugin-pseudo/src/index.ts)源码。

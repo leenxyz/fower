@@ -10,7 +10,7 @@ export const UtilityFirstStyli = () => {
           <View text-22 fontBold>
             Steve Jobs
           </View>
-          <Text gray800>Co-founder of Apple Inc.</Text>
+          <Text gray80>Co-founder of Apple Inc.</Text>
         </View>
       </View>
     </View>

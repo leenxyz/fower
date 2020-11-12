@@ -8,7 +8,7 @@ export const GettingStarted = () => {
         <Image c-48 src="/img/jobs.jpg" />
         <View ml-10>
           <View f-20>Steve Jobs</View>
-          <Text gray800>Co-founder of Apple Inc.</Text>
+          <Text gray80>Co-founder of Apple Inc.</Text>
         </View>
       </View>
     </View>

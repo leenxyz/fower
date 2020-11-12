@@ -22,7 +22,7 @@ import preset from '@styli/preset-default'
 styli.setup(preset)
 ```
 
-## 使用
+## 基本使用
 
 首先，你需要注册 Styli 的 Vue 插件:
 
@@ -33,28 +33,7 @@ import styliVue from '@styli/vue'
 Vue.use(styliVue)
 ```
 
-然后怎么使用呢? Styli 在 Vue 有两种使用方式：
-
-- 使用 `v-css` 指令
-- 使用自定义组件
-
-### 使用 `v-css` 指令
-
-使用指令的方式，你可以给 `v-css` 传递你想要的 modifiers：
-
-```jsx
-<template>
-  <div v-css="'centerY p-10 w-260 bgWhite rounded-10 shadow'">
-    <img v-css="'c-48'" src="/img/jobs.jpg" />
-    <div v-css="'ml-10'">
-      <div v-css="'f-20 fontBold'">Steve Jobs</div>
-      <span v-css="'gray80'">Co-founder of Apple Inc.</span>
-    </div>
-  </div>
-</template>
-```
-
-你也可以不给 `v-css` 传值，通过给 html 元素添加属性实现样式:
+然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
 
 ```jsx
 <template>
@@ -72,29 +51,45 @@ Vue.use(styliVue)
 </template>
 ```
 
-### 使用自定义组件
+[![Edit styli-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styli-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
 
-你可以使用 `@styli/vue` 提供的自定义组件，例如 `Div`、`Image`、`Span`:
+## 进阶使用
+
+在上面的用法中，我们给 html 元素添加原子属性时，同时我们要增加一个 `v-css`指令，特别繁琐。我们能否不添加 `v-css` 指令呢？答案是可以的。
+
+怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`：
+
+```js
+module.exports = {
+  lintOnSave: false,
+  chainWebpack(config) {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .tap((options) => {
+        options.compiler = require('@styli/vue-template-compiler')
+        return options
+      })
+  },
+}
+```
+
+然后你就不需要再写 `v-css` 指令，而是直接在 html 中设置原子属性：
 
 ```jsx
 <template>
-  <Div centerY p-10 w-260 bgWhite rounded-10 shadow>
-    <Image c-48 src="/img/jobs.jpg" />
-    <Div ml-10>
-      <Div f-20 fontBold>
+  <div centerY p-10 w-260 bgWhite rounded-10 shadow>
+    <img c-48 src="/img/jobs.jpg" />
+    <div ml-10>
+      <div f-20 fontBold>
         Steve Jobs
-      </Div>
-      <Span gray80>Co-founder of Apple Inc.</Span>
-    </Div>
-  </Div>
+      </div>
+      <span gray80>Co-founder of Apple Inc.</span>
+    </div>
+  </div>
 </template>
 ```
 
-两种方式怎么选择呢？如果你想在的代码中保留传统的 html 标签，你可以使用指令的方式；如果你是 React 用户，你也许会喜欢自定义组件的方式。
-
 ## 例子源码
 
-你可以查看 Vue 中使用的源码：
-
-- [examples/use-with-vue2](https://github.com/forsigner/styli/tree/master/examples/use-with-vue2)
-- [examples/use-with-vue3](https://github.com/forsigner/styli/tree/master/examples/use-with-vue3)
+你可以查看 Vue Exmaple 的源码：[example-vue](https://github.com/forsigner/styli/tree/master/packages/example-vue)

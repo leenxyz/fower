@@ -11,6 +11,7 @@ import { BgColor } from './components/BgColor'
 import { FontWeight } from './components/FontWeight'
 import { FlexBox } from './components/FlexBox'
 import { OutLine } from './components/OutLine'
+import { CSSProp } from './components/CSSProp'
 
 styli.setup({
   ...presetDefault,
@@ -35,6 +36,7 @@ export const App = () => {
         <Border></Border>
         <FlexBox></FlexBox>
         <OutLine></OutLine>
+        <CSSProp></CSSProp>
       </ThemeProvider>
     </div>
   )

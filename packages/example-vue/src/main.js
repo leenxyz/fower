@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import styliVue from '@styli/vue'
 import App from './App.vue'
+import styliVue from '@styli/vue'
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 

@@ -11,12 +11,12 @@
     "@styli/core": "^0.11.0",
     "@styli/preset-default": "^0.11.0",
     "@styli/vue": "^0.11.0",
-    "core-js": "^3.6.5",
-    "posthtml-extend-attrs": "^1.0.0",
-    "styled-vue": "^0.3.7",
+
+    "core-js": "^3.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@styli/vue-template-compiler": "^0.11.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
