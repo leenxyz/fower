@@ -6,7 +6,7 @@ import { View, Text } from './src'
 export default function App() {
   return (
     <SafeAreaView>
-      <View bgGreen400 center column flex-1>
+      <View bgGreen40 center column flex-1>
         <View>
           <Text>Hello world</Text>
         </View>

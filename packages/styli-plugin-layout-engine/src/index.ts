@@ -29,6 +29,8 @@ const flexAlign = [
   G.center,
   centerX,
   centerY,
+  centerX.toLowerCase(),
+  centerY.toLowerCase(),
   G.left,
   G.right,
   G.top,
@@ -53,19 +55,42 @@ export function isAlignmentKey(key: string) {
   return flexAlign.includes(key)
 }
 
+function getDirection(props: any): string {
+  if (props.row) return G.row
+  if (props.column) return G.column
+  return G.row
+}
+
 export function alignmentPropToStyle(props: any) {
-  const { row, center } = props
+  const { center } = props
   const style: any = {}
   const rules: { [key: string]: string[] } = {}
 
-  if (row) {
+  if (getDirection(props) === G.row) {
     style.flexDirection = G.row
-    rules.justifyContent = [G.left, G.right, centerX, G.between, G.around, G.evenly]
+    rules.justifyContent = [
+      G.left,
+      G.right,
+      centerX,
+      centerX.toLowerCase(),
+      G.between,
+      G.around,
+      G.evenly,
+    ]
     rules.alignItems = [G.top, G.bottom, centerY]
   } else {
-    rules.justifyContent = [G.top, G.bottom, centerY, G.between, G.around, G.evenly]
+    rules.justifyContent = [
+      G.top,
+      G.bottom,
+      centerY,
+      centerY.toLowerCase(),
+      G.between,
+      G.around,
+      G.evenly,
+    ]
     rules.alignItems = [G.left, G.right, centerX]
   }
+  console.log(centerX, centerY, centerX.toLowerCase(), centerY.toLowerCase())
 
   for (const [key, positions] of Object.entries(rules)) {
     for (const p of positions) {
@@ -81,7 +106,7 @@ export function alignmentPropToStyle(props: any) {
         style[key] = flexMaps.start
       } else if ([G.bottom, G.right].includes(p)) {
         style[key] = flexMaps.end
-      } else if ([centerX, centerY].includes(p)) {
+      } else if ([centerX, centerY, centerX.toLowerCase(), centerY.toLowerCase()].includes(p)) {
         style[key] = G.center
       } else if (p === G.between) {
         style[key] = flexMaps.between

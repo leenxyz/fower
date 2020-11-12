@@ -3,7 +3,7 @@ import { hexToRgba } from '@styli/utils'
 
 export function isColorKey(key: string) {
   const Colors = styli.getColors()
-  return /^color(.+)?$/.test(key) || !!Colors[key] || key === 'fontColor'
+  return /^color(.+)?$/.test(key) || !!Colors[key] || key === 'c'
 }
 
 export function colorPropToStyle(prop: string, propValue: any): any {
@@ -13,7 +13,7 @@ export function colorPropToStyle(prop: string, propValue: any): any {
 
   if (Colors[prop] || Colors[colorType]) {
     color = Colors[prop] || Colors[colorType]
-  } else if (prop === 'color' || prop === 'fontColor') {
+  } else if (prop === 'color' || prop === 'c') {
     const [hex, opacity] = propValue.split('.')
     color = hexToRgba(hex, opacity)
   } else {

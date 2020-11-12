@@ -20,15 +20,15 @@ export const Color = () => {
         colorPrimary
       </View>
 
-      <View f-20 color="yellowgreen">
+      <View f-20 c="yellowgreen">
         yellowgreen
       </View>
 
-      <View f-20 color="#000">
+      <View f-20 c="#000">
         #000
       </View>
 
-      <View f-20 color="#000.5">
+      <View f-20 c="#000.5">
         #000.5
       </View>
 
@@ -36,7 +36,7 @@ export const Color = () => {
         green50--hover
       </View>
 
-      <View f-20 color="#000" color--hover="#000.5">
+      <View f-20 c="#000" c--hover="#000.5">
         #000--hover
       </View>
 
@@ -48,8 +48,8 @@ export const Color = () => {
         green50--active
       </View>
 
-      <View f-20 fontColor={['yellowgreen', 'deeppink', 'gray', 'info']}>
-        color=['yellowgreen', 'deeppink', 'gray', 'red']
+      <View f-20 c={['yellowgreen', 'purple', 'deeppink', 'info']}>
+        c=['yellowgreen', 'purple', 'deeppink', 'red']
       </View>
     </View>
   )

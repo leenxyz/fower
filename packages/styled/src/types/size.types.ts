@@ -97,23 +97,23 @@ export interface Sizes {
    *
    * 用 View 作为示例:
    * ```tsx
-   * <View c-10></View>
-   * <View c-1rem></View>
-   * <View c-10p></View>
-   * <View c={a + b}></View>
+   * <View circle-10></View>
+   * <View circle-1rem></View>
+   * <View circle-10p></View>
+   * <View circle={a + b}></View>
    * ```
    */
-  c?: PropValue
-  c0?: boolean
-  c1?: boolean
-  c2?: boolean
-  c3?: boolean
-  c4?: boolean
-  c5?: boolean
-  c6?: boolean
-  c7?: boolean
-  c8?: boolean
-  c9?: boolean
+  circle?: PropValue
+  circle0?: boolean
+  circle1?: boolean
+  circle2?: boolean
+  circle3?: boolean
+  circle4?: boolean
+  circle5?: boolean
+  circle6?: boolean
+  circle7?: boolean
+  circle8?: boolean
+  circle9?: boolean
 
   /**
    * Set min-width

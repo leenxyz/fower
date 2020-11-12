@@ -5,15 +5,15 @@ export const sizeMaps: any = {
   w: ['width'],
   h: ['height'],
   s: ['width', 'height'],
-  c: ['width', 'height', 'borderRadius'],
-  minW: ['minWidth'],
-  maxW: ['maxWidth'],
-  minH: ['minHeight'],
-  maxH: ['maxHeight'],
+  circle: ['width', 'height', 'borderRadius'],
+  minw: ['minWidth'],
+  maxw: ['maxWidth'],
+  minh: ['minHeight'],
+  maxh: ['maxHeight'],
 }
 
 export function isSizeKey(key: string) {
-  return /^([whsc]|min[HW]|max[HW])(-.+)?$/.test(key)
+  return /^([whs]|circle|min[HWhw]|max[HWhw])(-.+)?$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
@@ -22,7 +22,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
 
   const sizeValue = isValidPropValue(propValue) ? propValue : value
 
-  sizeMaps[key].forEach((k: any) => {
+  sizeMaps[key.toLowerCase()].forEach((k: any) => {
     style[k] = getValue(sizeValue, ModifierType.size)
   })
 
