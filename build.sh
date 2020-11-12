@@ -60,7 +60,7 @@ done
 
 for p in ${Parallel[@]}
 do
-   build_package $p &
+   build_package $p
 done
 
 wait

@@ -1,15 +1,13 @@
 import { Plugin } from '@styli/core'
 import { kebab } from '@styli/utils'
 
-export const displayTypes = ['hide', 'display', 'inline', 'inlineBlock', 'block', 'grid', 'table']
-
 export function isDisplayKey(key: string) {
   return /^(hide|inline|inline[Bb]lock|block|grid|table)$|^display(-.+)?/.test(key)
 }
 
 export function displayPropToStyle(prop: string, propValue: any): any {
   if (prop == 'hide') return { display: 'none' }
-  if (/^inline[Bb]lock$/) return { display: 'inline-block' }
+  if (/^inline[Bb]lock$/.test(prop)) return { display: 'inline-block' }
 
   /** display */
   if (/^display(-.+)?/.test(prop)) {

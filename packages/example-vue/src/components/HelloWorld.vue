@@ -1,6 +1,8 @@
 <template>
-  <div class="hello" debugChildren>
-    <h1 p-20 bgRed20 m="30" block>{{ msg }}</h1>
+  <div debugChildren>
+    <h1 m-30 :color="color" textRight p-10 bgRed20 block @click="clickTitle">
+      {{ msg }} {{ color }}
+    </h1>
     <p green60 fontBold borderT="1px solid green">
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -39,12 +41,28 @@ export default {
   props: {
     msg: String,
   },
+  mounted() {
+    console.log('......')
+  },
+  data() {
+    return {
+      color: 'red',
+    }
+  },
+  methods: {
+    clickTitle() {
+      this.color = 'green'
+    },
+  },
 }
 </script>
 
-<style scoped>
+<style>
 h1 {
   font-style: italic;
 }
+.red {
+  color: red;
+}
 </style>
->
+
