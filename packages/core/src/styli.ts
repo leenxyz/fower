@@ -8,7 +8,7 @@ class Styli {
     inline: !isBrowser,
     plugins: [],
     theme: {} as Theme,
-    transformUnit: (value: any) => value + (this.getConfig('unit') as string),
+    transformUnit: (value: any) => value + this.getConfig<string>('unit'),
   }
 
   cache: Cache = {}

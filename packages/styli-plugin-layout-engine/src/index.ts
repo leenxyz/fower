@@ -90,7 +90,6 @@ export function alignmentPropToStyle(props: any) {
     ]
     rules.alignItems = [G.left, G.right, centerX]
   }
-  console.log(centerX, centerY, centerX.toLowerCase(), centerY.toLowerCase())
 
   for (const [key, positions] of Object.entries(rules)) {
     for (const p of positions) {

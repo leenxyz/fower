@@ -54,11 +54,11 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 
           if (inline) {
             if (Array.isArray(props.style)) {
-              parsedProps.style = [props.style, parsedProps.toStyle(), createStyle(...args)]
+              parsedProps.style = [props.style, sheet.toStyles(), createStyle(...args)]
             } else {
               parsedProps.style = {
                 ...props.style,
-                ...parsedProps.toStyle(),
+                ...sheet.toStyles(),
                 ...createStyle(...args),
               }
             }
