@@ -2,7 +2,6 @@ import { CSSProperties } from 'react'
 import { Theme } from '@styli/theming'
 import { Props, Atom } from './types'
 import {
-  isBrowser,
   isEmptyObj,
   cssKeyToStyleKey,
   isPlainType,
@@ -20,28 +19,28 @@ export class Sheet {
   /**
    * atom parsed from props
    */
-  atoms: Atom[] = []
-
-  className: string
+  private atoms: Atom[]
+  private className: string
 
   constructor(readonly props: Props, private theme: Theme) {
     this.className = ''
-    this.traverseProps(props)
+    this.atoms = this.traverseProps(props)
   }
 
-  private generateUniteClassName() {
-    return 'styli-' + hash('' + styli.componentKey++)
+  private setUniteClassName() {
+    this.className = 'styli-' + hash('' + styli.componentKey++)
   }
 
   /**
    * traverse Props to init atoms
    */
-  private traverseProps(props: Props): void {
-    if (isEmptyObj(props)) return
+  private traverseProps(props: Props): Atom[] {
+    if (isEmptyObj(props)) return []
 
     const [middleware, plugins] = styli.getPlugins()
     const middlewareList = [coreMiddleware, ...middleware]
 
+    const atoms: Atom[] = []
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style' } as Atom
 
@@ -49,7 +48,7 @@ export class Sheet {
        * propValue is false, just collect propKey and ignore it
        */
       if (propValue === false) {
-        this.addAtom(initialAtom)
+        atoms.push(initialAtom)
         continue
       }
 
@@ -62,33 +61,36 @@ export class Sheet {
        */
       if (!pluginCacheValue || !propValueIsPlainType) {
         for (const plugin of plugins) {
-          let newAtom = { ...initialAtom }
+          let atom = { ...initialAtom }
 
           // before
           if (plugin.beforeVisitProp) {
-            newAtom = plugin.beforeVisitProp(newAtom, this)
+            atom = plugin.beforeVisitProp(atom, this)
           }
 
           // during
-          newAtom = middlewareList.reduce((finalAtom, middleware) => {
+          atom = middlewareList.reduce((finalAtom, middleware) => {
             return middleware.middleware!(plugin, finalAtom, this, this.theme)
-          }, newAtom)
+          }, atom)
 
           // after
           if (plugin.afterVisitProp) {
-            newAtom = plugin.afterVisitProp(initialAtom, newAtom, this)
+            atom = plugin.afterVisitProp(initialAtom, atom, this)
           }
 
-          if (!isEqual(newAtom, initialAtom)) {
-            this.addAtom(newAtom)
+          if (!isEqual(atom, initialAtom)) {
+            const newAtom = this.atomModifier(atom)
+            atoms.push(newAtom)
             styli.cache[pluginCacheKey] = newAtom
             break
           }
         }
       } else {
-        this.addAtom(pluginCacheValue)
+        atoms.push(pluginCacheValue)
       }
     }
+
+    return atoms
   }
 
   /**
@@ -104,37 +106,29 @@ export class Sheet {
     return isValidClassName ? str : hash(str)
   }
 
-  isInline(): boolean {
-    let inline: boolean
-
-    if (typeof styli.config.inline === 'boolean') {
-      inline = !!styli.config.inline
-    } else {
-      inline = isBrowser ? false : true
-    }
-
-    return inline
-  }
-
   /**
-   * add atom to sheet
+   * atom modifier
    * @param atom
    */
-  addAtom(atom: Atom) {
+  private atomModifier(atom: Atom) {
     const { propKey = '', propValue, className, type } = atom
 
-    // TODO: need optimize
-    if (!className && propValue && type !== 'media-queries') {
-      const prefix = styli.config.prefix ? styli.config.prefix + '-' : ''
-      if (typeof propValue === 'boolean') {
-        atom.className = `${prefix}${propKey}`
-      } else {
-        const postfix = this.getClassPostfix(propValue)
-        atom.className = `${prefix}${propKey}-${postfix}`
-      }
+    if (className || !propValue) return atom
+
+    if (type === 'media-queries') return atom
+
+    const configPrefix = styli.getConfig('prefix')
+    const prefix = configPrefix ? configPrefix + '-' : ''
+
+    if (typeof propValue === 'boolean') {
+      atom.className = `${prefix}${propKey}`
+      return atom
     }
 
-    this.atoms.push(atom)
+    const postfix = this.getClassPostfix(propValue)
+    atom.className = `${prefix}${propKey}-${postfix}`
+
+    return atom
   }
 
   /**
@@ -158,7 +152,7 @@ export class Sheet {
    * get class string
    */
   toCss(): string {
-    let mediaCss: any = {}
+    const mediaCss: any = {}
     const css = this.atoms.reduce((result, atom) => {
       const { className = '', type, style } = atom
 
@@ -201,7 +195,7 @@ export class Sheet {
     }, '')
 
     if (!isEmptyObj(mediaCss)) {
-      this.className = this.generateUniteClassName()
+      this.setUniteClassName()
       let cssStr = ''
       for (const breakpoint in mediaCss) {
         const unit = `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCss[breakpoint]}} }`

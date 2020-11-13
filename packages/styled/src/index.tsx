@@ -7,7 +7,7 @@ import React, {
   CSSProperties,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { createStyle, Sheet, styleManager } from '@styli/core'
+import { createStyle, Sheet, styleManager, styli } from '@styli/core'
 import { themeContext } from '@styli/theming'
 import { AtomicProps } from './types'
 import { css } from '@styli/core'
@@ -50,8 +50,9 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
         {(value: any) => {
           const sheet = new Sheet(props, value)
           const parsedProps: any = sheet.getParsedProps()
+          const inline = styli.getConfig('inline')
 
-          if (sheet.isInline()) {
+          if (inline) {
             if (Array.isArray(props.style)) {
               parsedProps.style = [props.style, parsedProps.toStyle(), createStyle(...args)]
             } else {
@@ -64,9 +65,11 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
           } else {
             const { className } = props
             styleManager.insertStyles(sheet.toCss())
-            const finalClassName = `${className || ''} ${sheet.getClassNames()} ${css(
-              ...args,
-            )}`.trim()
+            const finalClassName = `
+              ${className || ''}
+              ${sheet.getClassNames()}
+              ${css(...args)}
+            `.trim()
             if (finalClassName) parsedProps.className = finalClassName
           }
           return createElement(component, { ref, ...parsedProps })

@@ -9,7 +9,7 @@ const StyledLink = styled(Link, 'p-20 inlineBlock');
 const BasicLayout: FC = ({ children }) => {
   return (
     <div>
-      <ThemeProvider theme={styli.config.theme}>
+      <ThemeProvider theme={styli.getTheme()}>
         <div left f-16>
           <StyledLink to="/">Styli Component</StyledLink>
           <StyledLink to="/babel-preset">Babel Preset</StyledLink>

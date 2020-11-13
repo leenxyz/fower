@@ -14,7 +14,7 @@ export function css(...args: (string | CssObject)[]) {
   }, {} as Props)
 
   // TODO: handle theme
-  const sheet = new Sheet(props, styli.config.theme)
+  const sheet = new Sheet(props, styli.getTheme())
   styleManager.insertStyles(sheet.toCss())
 
   return sheet.getClassNames()

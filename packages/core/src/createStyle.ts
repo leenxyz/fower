@@ -7,7 +7,7 @@ export function createStyle(...args: (string | CSSProperties)[]): CSSProperties 
   return args.reduce((result, cur) => {
     if (typeof cur === 'string') {
       const props = modifierToProps(cur)
-      const sheet = new Sheet(props, styli.config.theme)
+      const sheet = new Sheet(props, styli.getTheme())
       const style = sheet.toStyles()
       return { ...result, ...style }
     }

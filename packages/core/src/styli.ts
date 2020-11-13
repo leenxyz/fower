@@ -1,9 +1,11 @@
 import { Theme } from '@styli/theming'
+import { isBrowser } from '@styli/utils'
 import { Plugin, Config, Preset, Cache } from './types'
 
 class Styli {
-  config: Config = {
+  private config: Config = {
     unit: 'px',
+    inline: !isBrowser,
     plugins: [],
     theme: {} as Theme,
     transformUnit: (value: any) => value + (this.getConfig('unit') as string),
@@ -34,7 +36,7 @@ class Styli {
   }
 
   getPlugins(): Plugin[][] {
-    const pluginList = this.getConfig<Plugin[]>('plugins')
+    const pluginList = this.config.plugins
     return pluginList.reduce(
       (result, cur) => {
         result[cur.middleware ? 0 : 1].push(cur)

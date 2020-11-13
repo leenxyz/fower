@@ -27,14 +27,17 @@ export default {
       if (i) props[i] = true
     })
 
-    /** insert css to style */
-    const sheet = new Sheet(props, styli.config.theme)
+    /** get sheet */
+    const sheet = new Sheet(props, styli.getTheme())
+
+    /** insert css to style element */
     styleManager.insertStyles(sheet.toCss())
 
     /** rm no use attr */
-    sheet.atoms.map((atom) => {
-      el.removeAttribute(atom.propKey)
-    })
+    const parsedProps = sheet.getParsedProps()
+    for (const key in parsedProps) {
+      el.removeAttribute(key)
+    }
 
     /** set className to el */
     const className = sheet.getClassNames()

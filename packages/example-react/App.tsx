@@ -28,7 +28,7 @@ styli.setup({
 export const App = () => {
   return (
     <div className="box">
-      <ThemeProvider theme={styli.config.theme}>
+      <ThemeProvider theme={styli.getTheme()}>
         <Cursor></Cursor>
         <BgColor></BgColor>
         <Color></Color>

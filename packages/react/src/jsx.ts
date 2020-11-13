@@ -14,10 +14,11 @@ export function jsx(element: string, props: any, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const sheet = new Sheet(props, styli.config.theme)
+  const sheet = new Sheet(props, styli.getTheme())
   const parsedProps: any = sheet.getParsedProps()
+  const inline = styli.getConfig('inline')
 
-  if (sheet.isInline()) {
+  if (inline) {
     if (Array.isArray(props.style)) {
       parsedProps.style = [props.style, parsedProps.toStyle()]
     } else {
