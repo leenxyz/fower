@@ -35,9 +35,11 @@ export default {
 
     /** rm no use attr */
     const parsedProps = sheet.getParsedProps()
-    for (const key in parsedProps) {
-      el.removeAttribute(key)
-    }
+    Object.values(el.attributes).forEach(({ name }) => {
+      if (name && !(name in parsedProps)) {
+        el.removeAttribute(name)
+      }
+    })
 
     /** set className to el */
     const className = sheet.getClassNames()
