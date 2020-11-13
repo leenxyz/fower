@@ -25,8 +25,12 @@ export class Sheet {
   className: string
 
   constructor(readonly props: Props, private theme: Theme) {
-    this.className = 'styli-' + hash('' + styli.componentKey++)
+    this.className = ''
     this.traverseProps(props)
+  }
+
+  private generateUniteClassName() {
+    return 'styli-' + hash('' + styli.componentKey++)
   }
 
   /**
@@ -137,7 +141,7 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    return `${this.className} ${this.atoms.map((i) => i.className).join(' ')}`
+    return `${this.className} ${this.atoms.map((i) => i.className).join(' ')}`.trim()
   }
 
   /**
@@ -197,6 +201,7 @@ export class Sheet {
     }, '')
 
     if (!isEmptyObj(mediaCss)) {
+      this.className = this.generateUniteClassName()
       let cssStr = ''
       for (const breakpoint in mediaCss) {
         const unit = `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCss[breakpoint]}} }`

@@ -64,7 +64,10 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
           } else {
             const { className } = props
             styleManager.insertStyles(sheet.toCss())
-            parsedProps.className = `${className || ''} ${sheet.getClassNames()} ${css(...args)}`
+            const finalClassName = `${className || ''} ${sheet.getClassNames()} ${css(
+              ...args,
+            )}`.trim()
+            if (finalClassName) parsedProps.className = finalClassName
           }
           return createElement(component, { ref, ...parsedProps })
         }}
