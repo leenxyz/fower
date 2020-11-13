@@ -1,19 +1,19 @@
 ---
 id: use-with-vue
-title: 在 Vue 中使用
+title: Use with Vue
 ---
 
-## 安装
+## Installation
 
 ```bash
 npm i @styli/core @styli/vue @styli/preset-default
 ```
 
-注意，除了需要 `@styli/core`，你还需安装和 Vue 对应的组件包 `@styli/vue`。
+Besides `@styli/core`, we also need React binding package `@styli/vue`.
 
-## 初始化 Preset
+## Init Preset
 
-在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+Before write styles with Styli, you need to initialize the plugins via `styli.setup(preset)`.
 
 ```js title="src/index.ts"
 import { styli } from '@styli/core'
@@ -22,9 +22,9 @@ import preset from '@styli/preset-default'
 styli.setup(preset)
 ```
 
-## 基本使用
+## Basic usage
 
-首先，你需要注册 Styli 的 Vue 插件:
+First, you need to register Styli's Vue plugin:
 
 ```jsx
 import Vue from 'vue'
@@ -33,7 +33,7 @@ import styliVue from '@styli/vue'
 Vue.use(styliVue)
 ```
 
-然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
+Then, add the `v-css` directive to the element, and then add Atomic Prop to create the style:
 
 ```jsx
 <template>
@@ -53,13 +53,17 @@ Vue.use(styliVue)
 
 [![Edit styli-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styli-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
 
-## 进阶使用
+## Advanced usage
 
-在上面的用法中，我们给 html 元素添加原子属性时，同时我们要增加一个 `v-css`指令，特别繁琐。我们能否不添加 `v-css` 指令呢？答案是可以的。
+In the above usage, when we add Atomic Props to HTML elements, we also need to add a `v-css` directive, which is particularly cumbersome. Can we not add the `v-css` directive? The answer is yes.
 
-怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`：
+How to use it? You can modify the vue-loader configuration in the webpack configuration to get it. For example, if you are using Vue CLI, modify `vue.config.js`.
 
-```js
+```bash
+npm i @styli/vue-template-compiler
+```
+
+```js title="vue.config.js"
 module.exports = {
   lintOnSave: false,
   chainWebpack(config) {
@@ -74,7 +78,7 @@ module.exports = {
 }
 ```
 
-然后你就不需要再写 `v-css` 指令，而是直接在 html 中设置原子属性：
+Then you don't need to write the `v-css` directive, but write Atomic Props directly in HTML:
 
 ```jsx
 <template>
@@ -90,6 +94,6 @@ module.exports = {
 </template>
 ```
 
-## 例子源码
+## Example source code
 
-你可以查看 Vue Exmaple 的源码：[example-vue](https://github.com/forsigner/styli/tree/master/packages/example-vue)
+You can view the example souce code in github: [example-vue](https://github.com/forsigner/styli/tree/master/packages/example-vue)

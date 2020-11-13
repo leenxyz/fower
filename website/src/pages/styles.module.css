@@ -37,6 +37,10 @@
   color: #fc8181;
 }
 
+.green {
+  color: var(--ifm-color-primary);
+}
+
 .side {
   font-size: 18px;
 }

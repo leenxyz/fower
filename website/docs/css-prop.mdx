@@ -3,11 +3,11 @@ id: css-prop
 title: css prop
 ---
 
-大部分情况，你用原子属性可以完成 UI 开发，但有时候 Styli 提供的原子属性并不能满足的需求。因为 Styli 的原子属性只是 CSS 的子集，我们不会把所有 CSS 功能整合到 Styli 中。Styli 有一特殊的原子属性，叫 `css` 属性，它支持所有 CSS 功能。
+In most cases, you can use Atomic Props to complete UI development, but sometimes the Atomic Props provided by Styli cannot meet your needs. Because Styli’s atomic Props are only a subset of CSS, we will not integrate all CSS features into Styli. Styli has a special Atomic Prop called `css` Prop, which supports all CSS features.
 
-## 基本用法
+## Basic usage
 
-`css` 属性可以接收一个 CSS 对象，里面你可以写任何 CSS 属性，一些 Styli 原子属性不支持的冷门样式属性，你可以写在 `css` 属性中。
+The `css` Prop can receive a CSS object, in which you can write any CSS property. Some unpopular style properties that are not supported by Styli Atomic Props can be written in the `css` Prop.
 
 ```jsx live
 <Text
@@ -23,12 +23,12 @@ title: css prop
 ```
 
 :::info
-CSS 对象只能在 React-like 框架中使用，Vue.js 中无法使用。
+CSS objects can be used in React-like frameworks only, not in Vue.js.
 :::
 
-## 嵌套选择器
+## Nested selector
 
-有时，可能要使用 CSS 嵌套选择器，Styli 支持和 Less/Sass/Stylus 等类似的嵌套语法，只不过 Styli 是更结构化更灵活的 JS 对象，而不是字符串。
+Sometimes, you may want to use CSS nested selectors. Styli supports nested syntax similar to Less/Sass/Stylus, but Styli is using JS object which is more structured and flexible, not a string.
 
 ```jsx live
 <View

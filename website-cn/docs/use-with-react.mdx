@@ -87,7 +87,7 @@ export const Anchor = styled('a')
 export const Heading = styled('h2')
 ```
 
-> 注意，自定义 Styli 组件是，你需要使用 `@styli/styled` 里的 `styled` Api。
+> 注意，自定义 Styli 组件时，你需要使用 `@styli/styled` 里的 `styled` Api。
 
 你也可以直接在 Github 中查看`@styli/react`的源码：[Souce code](https://github.com/forsigner/styli/blob/master/packages/react/src/index.tsx)。
 
@@ -135,7 +135,7 @@ Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。�
 }
 ```
 
-然后，可以在组件中使用了：
+然后，你就可以在 HTML 元素中使用原子属性了：
 
 ```jsx
 import React from 'react'
@@ -177,7 +177,7 @@ export default () => {
 }
 ```
 
-上面的组件为什么可以直接在 HTML 中使用呢？使用因为组件的开头增加下面 `JSX Pragma` 的声明。
+为什么上面的组件可以在 HTML 中直接使用原子属性呢？是因为组件的开头增加下面 `JSX Pragma` 的声明。
 
 ```jsx
 /** @jsx jsx */

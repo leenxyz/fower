@@ -11,30 +11,38 @@ const features = [
     title: 'Atomic Props',
     description: (
       <>
-        Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式在Styli，通过 Atomic Props
-        的组合可以实现各种复杂的UI，不需写原生的CSS。
+        Write styles with Atomic Props, rapid to develop complicated UI by composing Atomic Props.
       </>
     ),
   },
   {
-    title: 'Framework-agnostic',
-    description: <>可以任何主流框架中使用，如 React、Vue、Angular、React native、Taro。</>,
+    title: 'Scoped style',
+
+    description: (
+      <>Borned with scoped styles, So don't worry any conflicts due to the globalnamespace.</>
+    ),
   },
   {
     title: 'Type Safe',
-    description: <>完美支持TypeScript，完整的类型定义，精确的智能提示，友好的文档辅助。</>,
+    description: (
+      <>
+        Perfect support for TypeScript, which bring Type definition,IntelliSense,Self documentation.
+      </>
+    ),
   },
   {
     title: 'Less Code, Write faster',
-    description: <>Styli的原子Prop 和 "key as value"模式，让你用更少的代码实现复杂样式。</>,
+    description: (
+      <>With Atomic Props and "Key as Value" pattern, You can develop UI with less code.</>
+    ),
   },
   {
     title: 'Less CSS, More JS',
-    description: <>使用 Styli，你大部分是在写JS，请逐渐忘记复杂的 CSS。</>,
+    description: <>Styli is a CSS-in-JS solution, Most of the time you are writing JavaScript。</>,
   },
   {
-    title: 'Programmable',
-    description: <>Styli 是一种 CSS in JS 解决方，你可以完整地使用 JS 的语言特性。</>,
+    title: 'Framework-agnostic',
+    description: <>Not tied to any framework, Can use with React,Vue,React native etc.</>,
   },
 ]
 
@@ -60,7 +68,8 @@ function Home() {
     <Layout title={tagline} description={tagline}>
       <div className={styles.container}>
         <div className={styles.slogan}>
-          An <span className={styles.red}>Atomic CSS</span> in JS library for rapid UI development
+          An <span className={styles.red}>Atomic CSS</span>{' '}
+          <span className={styles.green}>in JS</span> library for rapid UI development
         </div>
         <div className={styles.side}>CSS is painful，let's use JS.</div>
         <div className={styles.wrapLink}>

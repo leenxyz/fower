@@ -1,24 +1,33 @@
 ---
 id: reuse
-title: reuse
+title: Reuse
 ---
 
-## 样式组件复用
+When a component uses a lot of Atomic Props, and this style will be used by multiple components, it is recommended to create a custom component.
 
-当一个组件用到特别多的原子属性，并且这个样式会多个组件用到，这时建议创建一个自定义组件。
+## Wrap Styli Component
 
 ```jsx
 import React from 'react'
 import { Button } from '@styli/react'
 
-export default (props) => {
-  return <button {...props} p-10 f-18 bgYello400 white rounded-8 />
+export const MyButton = (props) => {
+  return <Button {...props} p-10 f-18 bgYello400 white rounded-8 />
 }
 ```
 
-## Styled Component
+## Styled HTML element
 
-`styled` 可以让第三方组件使用原子属性样式。
+```jsx
+import React from 'react'
+import { Button } from '@styli/react'
+
+export const MyButton = styled('button', 'p-10 f-18 bgYello400 rounded-8', {
+  textShadow: '1px 0 5px #FC0',
+})
+```
+
+## Styled thirdparty Component
 
 ```jsx
 import { styled } from '@styli/styled'
@@ -35,4 +44,4 @@ function Demo() {
 }
 ```
 
-**注意:** styled 包裹的组件需支持传入 style, className
+**Note:** The component wrapped by `styled` must have the className Props.

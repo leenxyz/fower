@@ -57,9 +57,13 @@ Vue.use(styliVue)
 
 在上面的用法中，我们给 html 元素添加原子属性时，同时我们要增加一个 `v-css`指令，特别繁琐。我们能否不添加 `v-css` 指令呢？答案是可以的。
 
-怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`：
+怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`。
 
-```js
+```bash
+npm i @styli/vue-template-compiler
+```
+
+```js title="vue.config.js"
 module.exports = {
   lintOnSave: false,
   chainWebpack(config) {
@@ -74,7 +78,7 @@ module.exports = {
 }
 ```
 
-然后你就不需要再写 `v-css` 指令，而是直接在 html 中设置原子属性：
+然后你就不需要再写 `v-css` 指令，而是直接在 html 中写原子属性：
 
 ```jsx
 <template>

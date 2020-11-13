@@ -3,21 +3,21 @@ id: responsive
 title: Responsive
 ---
 
-## 关于响应式
+## About Responsive
 
-很多 CSS 框架，都会声称自己是 Mobile-first，是响应式的。比如两个非常知名的 CSS 框架，Bootstrap、Bulma，是这样描述自己的:
+Many CSS frameworks will claim to be Mobile-first and responsive. For example, two very famous CSS frameworks, Bootstrap and Bulma, describe themselves like this:
 
-> Quickly design and customize responsive mobile-first sites with Bootstrap.
+**Bootstrap**: Quickly design and customize responsive mobile-first sites with Bootstrap.
 
-> Bulma is a mobile-first framework.
+**Bulma**: Bulma is a mobile-first framework.
 
-这是传统 CSS 框架的响应式，大部分都是只 Grid System 的响应式，我觉得这是狭义的响应式。真正的响应式应该每个样式都能响应式的的，而不是只是支持 Grid System 响应式。
+This is the responsive style of traditional CSS frameworks, most of which are only Grid System responsive styles. I think this is narrowly responsive. The truly responsive style should be responsive in every style, not just supporting Grid System responsiveness.
 
-Styli 每个原子属性都支持响应式，也就是说每个原子属性可以在不懂断点精细的控制，不会是仅仅控制某个容器，这可以让你更轻松的实现复杂的响应式界面。
+Each Atomic Props of Styli supports responsiveness, not just a container that supports responsiveness, which allows you to implement complex responsive interfaces more easily.
 
-## 响应式用法
+## Usage
 
-Styli 提供一种非常快捷方面的写法编写响应式样式，这种写法叫做数组属性 (Array Props)，这样写法咋看貌似很奇怪，实际上它非常简洁高效:
+Styli provides a very quick way of writing responsive styles. This way of writing is called Array Props. This way of writing may seem strange at first, but in fact it is very concise and efficient:
 
 ```jsx
 <View>
@@ -41,13 +41,13 @@ Styli 提供一种非常快捷方面的写法编写响应式样式，这种写�
 </View>
 ```
 
-上面的字体大小，边距，填充和宽度都是响应式，实际上，任何原子属性都可以用这种写法实现响应式。
+The `fontSize`, `margin`, `padding` and `width` above are all responsive. In fact, any Atomic Props can be written in this way to achieve responsiveness.
 
-数组写法借鉴于 [styled-system](https://styled-system.com/)，感谢 styled-system 发明如此优雅的 Api。
+The Array Props is borrowed from [styled-system](https://styled-system.com/), thanks to styled-system for inventing such an elegant API.
 
-## 响应式断点
+## Endpoints
 
-默认情况下，响应式有四个断点：
+By default, responsive has four breakpoints:
 
 ```css
 /* Small (sm) */

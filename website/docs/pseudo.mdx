@@ -1,10 +1,10 @@
 ---
 id: pseudo
-sidebar_label: pseudo
-title: 伪类
+sidebar_label: Pseudo-classes
+title: Pseudo-classes
 ---
 
-Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式的原子属性格式为：{prop}--{pseudo}，例如：bgRed40--hover、bgYellow50--active、opacity-70--disabled、w-20--visited 等。
+Each Atomic Props of Styli supports CSS pseudo-classes. The format of the Atomic Props that enable Pseudo-classes style is: {prop}--{pseudo}, for example: bgRed40--hover, bgYellow50--active, opacity-70--disabled, w-20--visited, etc.
 
 ## Hover
 
@@ -81,6 +81,10 @@ Styli 支持下面所有伪类：
 - placeholder
 - selection
 
-## 关于体积
+## About file size
 
-Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，并且支持了 18 常用的伪类。你可能会有疑问，这会不会导致 Styli 包的代码体积爆炸，答案是不会。传统的的 CSS 方案，如果要让每个 CSS 类支持伪类，需要大量的 CSS 代码，因为 CSS 不剧本编程性，它只能通过枚举的方式堆积代码。得益于 JS 的灵活性，Styli 只需几十行代码即可让所以原子属性支持伪类。如果你对如何实现伪类的插件有兴趣，可以看看[styli-plugin-pseudo](https://github.com/forsigner/styli/blob/master/packages/styli-plugin-pseudo/src/index.ts)源码。
+Each Atomic Props in Styli supports CSS pseudo-classes and 18 commonly used pseudo-classes. You may have questions about whether this will cause the code size of the Styli package to explode. The answer is no.
+
+In traditional CSS, if each CSS class supports Pseudo-classes, a large amount of CSS code is required, because CSS is not programmable, and it can only accumulate code through enumeration.
+
+Thanks to the flexibility of JS, Styli only needs dozens of lines of code to make all Atomic Props support Pseudo-classes. If you are interested in how to Styli Pseudo plugin, you can take a look at [styli-plugin-pseudo](https://github.com/forsigner/styli/blob/master/packages/styli-plugin-pseudo/src/index.ts).

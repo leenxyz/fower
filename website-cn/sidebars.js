@@ -24,7 +24,6 @@ module.exports = {
       'programmable',
       'unit',
       'reuse',
-      'use-with-thirdparty',
       'theme',
       // 'plugin',
       'typescript',

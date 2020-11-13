@@ -11,8 +11,8 @@ title: reuse
 import React from 'react'
 import { Button } from '@styli/react'
 
-export default (props) => {
-  return <button {...props} p-10 f-18 bgYello400 white rounded-8 />
+export const MyButton = (props) => {
+  return <Button {...props} p-10 f-18 bgYello400 white rounded-8 />
 }
 ```
 
@@ -35,4 +35,4 @@ function Demo() {
 }
 ```
 
-**注意:** styled 包裹的组件需支持传入 style, className
+**注意:** 被 `styled` 包裹的组件必须拥有 className 属性。

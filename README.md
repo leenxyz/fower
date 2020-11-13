@@ -14,7 +14,6 @@ A Atomic CSS in JS library for rapid UI development.
 - [Use with React](/docs/use-with-react)
 - [Use with Vue](/docs/use-with-vue)
 - [Use with React Native](/docs/use-with-rn)
-- [Use with Taro](/docs/use-with-taro)
 
 ## Documentation
 

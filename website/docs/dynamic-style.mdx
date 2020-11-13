@@ -1,11 +1,11 @@
 ---
 id: dynamic-style
-title: dynamic-style
+title: Dynamic style
 ---
 
-根据应用的状态控制组件的样式，我们称之为动态样式，典型的场景就是按钮的激活状态。因为 JS 变量无法传递到 CSS，传统的方式，我们会通过控制 CSS 类实现动态样式。
+Control component's style according to the application state, we call it dynamic style. The typical scenario is the activation state of the button. Because JS variables can't be passed to CSS, in the traditional way, we will achieve dynamic styles by controlling CSS classes.
 
-你应该见过类似下面的代码：
+You should have seen code similar to the following:
 
 ```jsx live
 function App() {
@@ -23,11 +23,11 @@ function App() {
 }
 ```
 
-我们通过 `.btn` 和 `.btn-active` 两个 CSS 类控制动态样式，这有什么问题呢？这是让我们封装的组件严重依赖外部的样式代码，失去独立性，不够内聚。如果存在更多的样式状态，代码的可读性会越来越低。另外，这种方式可移植性也很差。
+We control the dynamic style through the two CSS classes `.btn` and `.btn-active`. What's the problem? This is to make our components rely heavily on external style codes, lose their independence and cohesion. If there are more style states, the readability of the code will decrease. In addition, the portability of this method is also very poor.
 
-CSS 类这种动态样式的处理方式，和 React 的理念 `UI=f(State)` 也是相违背的，因为外部 CSS 的变更，会导致 `UI=f(State)` 中的 UI 发生变化。
+The dynamic style handling by CSS classes is also contrary to React's concept of `UI=f(State)`, because the change of external CSS will cause the UI in `UI=f(State)` to change.
 
-那我们是不会基于内联样式处理动态样式呢？确实可以。代码如下：
+Can we handle dynamic styles based on inline styles? It does. Code show as below:
 
 ```jsx live
 function App() {
@@ -51,9 +51,15 @@ function App() {
 }
 ```
 
-这种方式有一些优点：1.很轻易把 JS 状态变量传递给 CSS; 2. 和 `UI=f(State)` 的理念相符合；3. 可移植性强。但是内联样式也有一些非常严重的局限性：例如，您不能使用伪选择器之类的:hover 或媒体查询。另外，内联样式很容易让组件的结构变得混乱，视觉上干扰代码阅读。
+This way has some advantages:
 
-那使用 Styli 如何处理动态样式呢？Styli 使用**属性值**的模式，让动态样式处理符合 `UI=f(State)` 理念，并且代码比内联样式更加简洁。
+1. Easy to pass JS state variables to CSS
+2. Consistent with the React concept of UI=f(State)
+3. Highly portable
+
+But inline styles also have some very serious limitations. You can't use pseudo-selectors like hover or media queries.In addition, inline styles can easily mess up the structure of components and make the code difficult to read.
+
+How to deal with dynamic styles using Styli? Styli makes dynamic style processing easier by assigning values to Atomic Props, and the code is more concise than inline styles.
 
 ```jsx live
 function App() {

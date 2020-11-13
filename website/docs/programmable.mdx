@@ -1,20 +1,20 @@
 ---
 id: programmable
-title: 可编程性
-sidebar_label: programmable
+title: Programmable
+sidebar_label: Programmable
 ---
 
-Styli 是一个 CSS-in-JS library，当你在用 Styli 编写样式时，你是在 JS，而不是在写 CSS。
+Styli is a CSS-in-JS library. When you are writing styles with Styli, you are writing JS, not CSS.
 
-相比 CSS，JS 更加灵活，图灵完备，能使用变量、条件、函数、作用域等一切编程语言所拥有的东西。
+Compared with CSS, JS is more flexible. JS is Turing complete and can use variables, conditions, functions, scopes and other things that programming languages have.
 
-## Styli 和 JSX
+## Styli and JSX
 
-我觉得 JSX 是一个有非常优秀的技术，它可以代替 HTML，让你声明式地描述 UI 结构，并且非常直观优雅。Styli 深度依赖了 JSX，它们结合一起后，可以代替原生的 CSS，你可以声明式地描述 UI 样式，并且也非常直观优雅。也就是使用 Styli 和 JSX，你可以在一个地方声明式地描述 UI 结构和样式，你只需要写 JS 代码，如果你是 JS 老鸟，我相信你会喜欢这种方式。
+I think JSX is a very good technology, most of the time it can replace HTML, it allows you to declaratively describe the UI structure, and is very intuitive and elegant. Styli relies heavily on JSX, and when combined, they can replace native CSS. With Styli and JSX, you can write UI structure and styles declaratively in one place. During the development process, you only need to write JS code. If you are a JS veteran, I believe you will like this development mode.
 
-我相信用内聚的方式管理 UI 的结构和样式，会逐渐成为一种潮流。CSS in JS 在蓬勃发展，也侧面说明有相当多的人希望能用 JS 来编写样式。
+I believe that managing the structure and style of UI in a cohesive way will gradually become a trend. The booming development of CSS in JS also shows that quite a few people hope to use JS to write styles.
 
-## 变量
+## Variable
 
 ```jsx
 const textColor = '#000'
@@ -22,20 +22,20 @@ const textColor = '#000'
 <Text color={textColor}>Hello word!</Text>
 ```
 
-## 条件
+## Condition
 
 ```jsx
 <Text color={isTrue ? 'red' : 'green'}>Hello word!</Text>
 ```
 
-## 函数
+## Function
 
 ```jsx
 function getColor() {
   return '#000'
 }
 
-;<Text color={getColor()}>Hello word!</Text>
+export default () => {
+  return <Text color={getColor()}>Hello word!</Text>
+}
 ```
-
-Styli 是一种 CSS in JS 解决方，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。

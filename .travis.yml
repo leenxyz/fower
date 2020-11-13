@@ -11,5 +11,4 @@ cache:
   directories:
     - 'node_modules'
 # script: yarn coveralls
-# TODO:
-script: npm -v
+script: yarn install

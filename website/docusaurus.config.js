@@ -47,12 +47,6 @@ module.exports = {
           label: 'React native',
           position: 'left',
         },
-        {
-          to: 'docs/use-with-taro',
-          activeBasePath: 'docs/use-with-taro',
-          label: 'Taro',
-          position: 'left',
-        },
         // {
         //   to: 'playground',
         //   label: 'Playground',
