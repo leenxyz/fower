@@ -1,6 +1,6 @@
 <template>
   <div debugChildren>
-    <h1 m-20 :color="color" class="red" textRight p-10 bgRed20 block @click="clickTitle">
+    <h1 m-20 :c="color" class="red" textRight p-10 bgRed20 block @click="clickTitle">
       {{ msg }} {{ color }}
     </h1>
     <p green60 fontBold borderT="1px solid green">
@@ -16,11 +16,13 @@
 
     <div circle-100></div>
 
-    <div h-100 maxW-50 bgYellow20>maxW-50</div>
-    <div w-100 maxH-50 bgYellow20>maxH-50</div>
-    <div h-100 minW-50 bgYellow20>minW-50</div>
-    <div w-100 minH-50 bgYellow20>minH-50</div>
-    <div w="[100,200,300,400]" bgYellow20>w="[200,400,600,800]"</div>
+    <div left debugChildren>
+      <div h-100 maxW-50 bgYellow20>maxW-50</div>
+      <div w-100 maxH-50 bgYellow20>maxH-50</div>
+      <div h-100 minW-50 bgYellow20>minW-50</div>
+      <div w-100 minH-50 bgYellow20>minH-50</div>
+      <div w="[100,200,300,400]" bgYellow20>w="[200,400,600,800]"</div>
+    </div>
 
     <div h-200 f-12 debugChildren row justifyBetween itemsEnd>
       <div s-100>AAA</div>

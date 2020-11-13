@@ -35,6 +35,7 @@ Parallel=("
   styli-plugin-pseudo
   styli-plugin-media-queries
   styli-plugin-ellipsis
+  styli-plugin-cursor
   babel-preset-styli
 ")
 

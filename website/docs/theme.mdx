@@ -1,19 +1,19 @@
 ---
 id: theme
-title: 主题
+title: Theme
 ---
 
-## 安装
+## Installation
 
 ```bash
 npm i @styli/theming
 ```
 
-## 使用
+## Usage
 
-### 使用 ThemeProvider 注入主题
+### Use ThemeProvider
 
-再 React App 的最顶层，使用 ThemeProvider 注入主题对象。
+At the top level of React App, use ThemeProvider to inject the theme object.
 
 ```jsx title="App.tsx"
 import React from 'react'
@@ -34,9 +34,9 @@ export const App = ({ children }) => {
 }
 ```
 
-### 在组件中使用
+### Use in Component
 
-再 ThemeProvider 注入主题后，你可以在任何原子属性使用主题(theme)。
+After injecting the theme to the ThemeProvider, you can use the theme in any Atomic Props.
 
 ```jsx title="pages/Home.tsx"
 import React from 'react'
@@ -51,7 +51,7 @@ export const Home = ({ children }) => {
 }
 ```
 
-### 使用 useTheme
+### useTheme
 
 你也可以使用 Styli 提供的一个 React Hooks: `useTheme`，更灵活的使用主题。
 

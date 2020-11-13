@@ -19,13 +19,13 @@ Styli 是一个 CSS-in-JS library，当你在用 Styli 编写样式时，你是�
 ```jsx
 const textColor = '#000'
 
-<Text color={textColor}>Hello word!</Text>
+<Text c={textColor}>Hello word!</Text>
 ```
 
 ## 条件
 
 ```jsx
-<Text color={isTrue ? 'red' : 'green'}>Hello word!</Text>
+<Text c={isTrue ? 'red' : 'green'}>Hello word!</Text>
 ```
 
 ## 函数
@@ -35,7 +35,7 @@ function getColor() {
   return '#000'
 }
 
-;<Text color={getColor()}>Hello word!</Text>
+;<Text c={getColor()}>Hello word!</Text>
 ```
 
 Styli 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。

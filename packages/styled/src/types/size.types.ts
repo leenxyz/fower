@@ -85,7 +85,7 @@ export interface Sizes {
   /**
    * Set circle size
    *
-   * c-10 相当于下面：
+   * circle-10 相当于下面：
    *
    * ```css
    * {
