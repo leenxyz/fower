@@ -1,6 +1,6 @@
 {
   "name": "@styli/core",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
-    "@styli/theming": "^0.11.0",
-    "@styli/utils": "^0.11.0"
+    "@styli/theming": "^0.12.0",
+    "@styli/utils": "^0.12.0"
   }
 }
