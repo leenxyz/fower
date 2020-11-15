@@ -20,14 +20,14 @@ export function jsx(element: string, props: any, ...children: any[]) {
 
   if (inline) {
     if (Array.isArray(props.style)) {
-      parsedProps.style = [props.style, sheet.toStyles()]
+      parsedProps.style = [sheet.toStyles(), props.style]
     } else {
-      parsedProps.style = { ...props.style, ...sheet.toStyles() }
+      parsedProps.style = { ...sheet.toStyles(), ...props.style }
     }
   } else {
     const { className } = props
     styleManager.insertStyles(sheet.toCss())
-    const finalClassName = `${className || ''} ${sheet.getClassNames()}`.trim()
+    const finalClassName = `${sheet.getClassNames()} ${className || ''}`.trim()
     if (finalClassName) parsedProps.className = finalClassName
   }
 

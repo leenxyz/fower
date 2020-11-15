@@ -54,21 +54,21 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 
           if (inline) {
             if (Array.isArray(props.style)) {
-              parsedProps.style = [props.style, sheet.toStyles(), createStyle(...args)]
+              parsedProps.style = [createStyle(...args), sheet.toStyles(), props.style]
             } else {
               parsedProps.style = {
-                ...props.style,
-                ...sheet.toStyles(),
                 ...createStyle(...args),
+                ...sheet.toStyles(),
+                ...props.style,
               }
             }
           } else {
             const { className } = props
             styleManager.insertStyles(sheet.toCss())
             const finalClassName = `
-              ${className || ''}
-              ${sheet.getClassNames()}
               ${css(...args)}
+              ${sheet.getClassNames()}
+              ${className || ''}
             `.trim()
             if (finalClassName) parsedProps.className = finalClassName
           }
