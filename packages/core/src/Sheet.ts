@@ -113,9 +113,7 @@ export class Sheet {
   private atomModifier(atom: Atom) {
     const { propKey = '', propValue, className, type } = atom
 
-    if (className || !propValue) return atom
-
-    if (type === 'media-queries') return atom
+    if (className || type === 'media-queries') return atom
 
     const configPrefix = styli.getConfig('prefix')
     const prefix = configPrefix ? configPrefix + '-' : ''
