@@ -36,7 +36,7 @@ connection.onCompletion((_textDocumentPosition: TextDocumentPositionParams): Com
 
 connection.onCompletionResolve(
   (item: CompletionItem): CompletionItem => {
-    return completionItems.find((_item) => _item.label === item.label) as any
+    return completionItems.find((_item) => _item.label === item.label) || item
   },
 )
 
