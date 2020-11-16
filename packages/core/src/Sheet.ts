@@ -44,14 +44,6 @@ export class Sheet {
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style' } as Atom
 
-      /**
-       * propValue is false, just collect propKey and ignore it
-       */
-      if (propValue === false) {
-        atoms.push(initialAtom)
-        continue
-      }
-
       const propValueIsPlainType = isPlainType(propValue)
       const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
       const pluginCacheValue = styli.cache[pluginCacheKey]

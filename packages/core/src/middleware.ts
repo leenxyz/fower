@@ -8,8 +8,16 @@ export const coreMiddleware: Plugin = {
   middleware(plugin, atom, sheet, theme: Theme) {
     const { propKey, propValue } = atom
 
-    if (!plugin.isMatch!(propKey) || Array.isArray(propValue) || !isPlainDirective(propKey))
-      return atom
+    if (!plugin.isMatch!(propKey)) return atom
+
+    // propValue is false, just collect propKey and ignore it
+    if (propValue === false) return atom
+
+    // ignore media queries
+    if (Array.isArray(propValue)) return atom
+
+    // ignore not plain directive
+    if (!isPlainDirective(propKey)) return atom
 
     // handle theme
     if (typeof atom.propValue === 'function') {
