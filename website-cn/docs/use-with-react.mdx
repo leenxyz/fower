@@ -8,23 +8,10 @@ Styli 非常适合在 React 中使用，接下来我们看看如何在 React 中
 ## 安装
 
 ```bash
-npm i @styli/core @styli/react @styli/preset-default
+npm i @styli/core @styli/react
 ```
 
 注意，除了需要 `@styli/core`，你还需安装和 React 对应的组件包 `@styli/react`。
-
-## 初始化 Preset
-
-在使用 Styli 编写样式之前，你需要通过 `styli.configure(preset)` 初始化插件。
-
-```js title="src/index.ts"
-import { styli } from '@styli/core'
-import preset from '@styli/preset-default'
-
-styli.configure(preset)
-```
-
-Styli 是插件化的，`@styli/core` 未内置任何插件，`@styli/preset-default` 预置了一些官方插件，你也可以新建自己的 Preset 来配置插件。
 
 ## 在组件中使用
 

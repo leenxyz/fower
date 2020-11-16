@@ -14,12 +14,8 @@ import LayoutProviders from '@theme/LayoutProviders'
 import LayoutHead from '@theme/LayoutHead'
 import type { Props } from '@theme/Layout'
 
-import preset from '@styli/preset-default'
-import { styli } from '@styli/core'
-import { styled } from '@styli/styled'
 // import { ThemeProvider, useTheme } from '@styli/theming';
 
-styli.configure({ ...preset, inline: false })
 import './styles.css'
 
 function Layout(props: Props): JSX.Element {
