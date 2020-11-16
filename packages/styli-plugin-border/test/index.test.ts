@@ -2,7 +2,7 @@ import { Sheet, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-border', () => {
-  styli.setup({
+  styli.configure({
     theme: {
       colors: {
         red: 'blue',

@@ -2,7 +2,7 @@ import { Atom, Sheet, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-ellipsis', () => {
-  styli.setup({ unit: 'px' })
+  styli.configure({ unit: 'px' })
 
   const { isMatch, onVisitProp } = plugin()
   const sheet = {} as Sheet

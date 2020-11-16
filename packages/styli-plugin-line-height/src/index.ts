@@ -1,4 +1,5 @@
-import { Plugin, getValue, styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue, isBrowser } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
@@ -29,7 +30,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-line-height',
     isMatch: isTextLineHeightKey,

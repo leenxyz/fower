@@ -1,4 +1,5 @@
-import { Plugin, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
 export function isTextWeightKey(key: string) {
@@ -16,7 +17,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
   return { fontWeight: weights[downFirst(value)] || value }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-weight',
     isMatch: isTextWeightKey,

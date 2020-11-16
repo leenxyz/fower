@@ -1,4 +1,5 @@
-import { getValue, Plugin, styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 
 export function isTextHeadingKey(key: string) {
   return /^heading[1-6]$/.test(key)
@@ -14,7 +15,7 @@ export function textHeadingPropToStyle(prop: string): any {
   }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-heading',
     isMatch: isTextHeadingKey,

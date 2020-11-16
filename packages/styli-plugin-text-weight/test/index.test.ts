@@ -2,7 +2,7 @@ import { Atom, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-text-weight', () => {
-  styli.setup({
+  styli.configure({
     theme: {
       fontWeight: {
         medium: '500',

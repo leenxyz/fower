@@ -2,7 +2,7 @@ import { Atom, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-position', () => {
-  styli.setup({ unit: 'px' })
+  styli.configure({ unit: 'px' })
 
   const { isMatch, onVisitProp } = plugin()
 

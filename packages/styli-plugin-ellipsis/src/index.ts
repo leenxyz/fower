@@ -1,4 +1,5 @@
-import { getValue, Plugin } from '@styli/core'
+import { getValue } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 interface EllipsisPlugin {
@@ -6,7 +7,7 @@ interface EllipsisPlugin {
   defaultMaxWidth?: number
 }
 
-export default (config?: EllipsisPlugin): Plugin => {
+export default (config?: EllipsisPlugin): StyliPlugin => {
   const { defaultLineNum = 1, defaultMaxWidth = 100 } = config || {}
   return {
     name: 'styli-plugin-ellipsis',

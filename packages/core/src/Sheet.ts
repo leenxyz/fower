@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react'
-import { Theme } from '@styli/theming'
-import { Props, Atom } from './types'
+import { Theme } from '@styli/types'
+import { Props, Atom } from '@styli/types'
 import {
   isEmptyObj,
   cssKeyToStyleKey,
@@ -57,17 +57,17 @@ export class Sheet {
 
           // before
           if (plugin.beforeVisitProp) {
-            atom = plugin.beforeVisitProp(atom, this)
+            atom = plugin.beforeVisitProp(atom, this as any)
           }
 
           // during
           atom = middlewareList.reduce((finalAtom, middleware) => {
-            return middleware.middleware!(plugin, finalAtom, this, this.theme)
+            return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
           }, atom)
 
           // after
           if (plugin.afterVisitProp) {
-            atom = plugin.afterVisitProp(initialAtom, atom, this)
+            atom = plugin.afterVisitProp(initialAtom, atom, this as any)
           }
 
           if (!isEqual(atom, initialAtom)) {

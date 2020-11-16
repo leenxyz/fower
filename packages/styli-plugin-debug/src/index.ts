@@ -1,6 +1,6 @@
-import { CssObject, Plugin } from '@styli/core'
+import { CSSObject, StyliPlugin } from '@styli/types'
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-debug',
     isMatch(key) {
@@ -26,7 +26,7 @@ export default (): Plugin => {
       const key = atom.propKey.toLowerCase()
 
       atom.type = typesMap[key]
-      atom.style = propValueIsTrue ? stylesMap[key] : (atom.propValue as CssObject)
+      atom.style = propValueIsTrue ? stylesMap[key] : (atom.propValue as CSSObject)
 
       return atom
     },

@@ -1,4 +1,5 @@
-import { Plugin, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue, hexToRgba } from '@styli/utils'
 
 export function isBgColorKey(key: string) {
@@ -34,7 +35,7 @@ export function bgPropToStyle(propKey: string, propValue: any) {
   return { backgroundColor: Colors[downFirst(color)] }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-background',
     isMatch(key) {

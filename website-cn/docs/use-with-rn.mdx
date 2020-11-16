@@ -19,13 +19,13 @@ npm i @styli/core @styli/react-native @styli/preset-default
 
 ## 初始化 Preset
 
-在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+在使用 Styli 编写样式之前，你需要通过 `styli.configure(preset)` 初始化插件。
 
 ```js title="src/index.ts"
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 
-styli.setup(preset)
+styli.configure(preset)
 ```
 
 ## 使用

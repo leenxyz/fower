@@ -1,6 +1,6 @@
 import { Property } from 'csstype'
 import { PropValue } from './common.types'
-import { Theme } from '@styli/theming'
+import { Theme } from '../Theme'
 
 export interface Texts {
   textAlign?: string | string[]

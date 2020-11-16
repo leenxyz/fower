@@ -1,4 +1,5 @@
-import { Plugin, ModifierType, getValue, styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
+import { StyliPlugin, ModifierType } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export const sizeMaps: any = {
@@ -29,7 +30,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-size',
     isMatch: isSizeKey,

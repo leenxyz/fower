@@ -1,7 +1,7 @@
-import { CssObject, Plugin } from '@styli/core'
+import { CSSObject, StyliPlugin } from '@styli/types'
 import { hash } from '@styli/utils'
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-css',
     isMatch(key) {
@@ -9,7 +9,7 @@ export default (): Plugin => {
     },
     onVisitProp(atom) {
       atom.type = 'prefix'
-      atom.style = atom.propValue as CssObject
+      atom.style = atom.propValue as CSSObject
       atom.className = 'css-' + hash(JSON.stringify(atom.propValue))
       return atom
     },

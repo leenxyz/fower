@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Theme } from './types'
+import { Theme } from '@styli/types'
 import { themeContext } from './themeContext'
 
 const { Provider } = themeContext

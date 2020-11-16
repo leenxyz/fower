@@ -3,7 +3,7 @@ import preset from '@styli/preset-default';
 import { styli } from '@styli/core';
 import { View } from '@styli/react';
 
-styli.setup(preset);
+styli.configure(preset);
 
 export default () => {
   return (

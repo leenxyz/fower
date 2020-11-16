@@ -1,12 +1,11 @@
-import { Theme } from '@styli/theming'
 import { isBrowser } from '@styli/utils'
-import { Plugin, Config, Preset, Cache } from './types'
+import { StyliPlugin, Configuration, Preset, Cache, Theme } from '@styli/types'
 
 class Styli {
-  private config: Config = {
+  private config: Configuration = {
     unit: 'px',
     inline: !isBrowser,
-    plugins: [],
+    plugins: [] as StyliPlugin[],
     theme: {} as Theme,
     transformUnit: (value: any) => value + this.getConfig<string>('unit'),
   }
@@ -14,39 +13,39 @@ class Styli {
   cache: Cache = {}
   componentKey = 0 // use generate component unite className
 
-  setup(preset: Preset) {
+  configure = (config: Preset) => {
     this.config = {
       ...this.config,
-      ...preset,
+      ...config,
     }
   }
 
-  getTheme<T = any>(themeKey?: string): T {
+  getTheme = <T = any>(themeKey?: string): T => {
     if (!themeKey) return this.config.theme as any
     return this.config.theme[themeKey]
   }
 
-  getColors() {
+  getColors = () => {
     return this.getTheme('colors') || {}
   }
 
-  getConfig<T = any>(type?: keyof Config): T {
+  getConfig = <T = any>(type?: keyof Configuration): T => {
     if (!type) return this.config as any
     return this.config[type] as any
   }
 
-  getPlugins(): Plugin[][] {
+  getPlugins = (): StyliPlugin[][] => {
     const pluginList = this.config.plugins
     return pluginList.reduce(
       (result, cur) => {
         result[cur.middleware ? 0 : 1].push(cur)
         return result
       },
-      [[], []] as Plugin[][],
+      [[], []] as StyliPlugin[][],
     )
   }
 
-  use(...plugins: Plugin[]) {
+  use = (...plugins: StyliPlugin[]) => {
     plugins.forEach((plugin) => {
       const idx = this.config.plugins.findIndex((configPlugin) => configPlugin.name === plugin.name)
       if (idx === -1) {

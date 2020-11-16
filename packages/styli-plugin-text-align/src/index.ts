@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isTextAlign(key: string) {
@@ -10,7 +10,7 @@ export function textAlignPropToStyle(prop: string, propValue: any) {
   return { textAlign: prop.replace('text', '').toLowerCase() }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-align',
     isMatch: isTextAlign,

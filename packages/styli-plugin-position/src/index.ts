@@ -1,4 +1,5 @@
-import { getValue, ModifierType, Plugin } from '@styli/core'
+import { getValue } from '@styli/core'
+import { ModifierType, StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export const G = {
@@ -53,7 +54,7 @@ export function positionPropToStyle(prop: string, propValue: any): any {
   return { [positionMaps[lowerKey]]: getValue(val, ModifierType.position) }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-position',
     isMatch: isPositionKey,

@@ -1,7 +1,7 @@
 import { styli } from '../src'
 
 describe('styli-core', () => {
-  styli.setup({
+  styli.configure({
     unit: 'px',
     plugins: [],
     theme: {

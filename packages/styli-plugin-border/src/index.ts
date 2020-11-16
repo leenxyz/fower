@@ -1,5 +1,4 @@
-import { Plugin } from '@styli/core'
-// import { isBrowser } from '@styli/utils'
+import { StyliPlugin } from '@styli/types'
 
 export const G = {
   top: 'Top',
@@ -35,7 +34,7 @@ export function borderPropToStyle(prop: string, propValue: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-border',
     isMatch: isBorderKey,

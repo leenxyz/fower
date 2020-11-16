@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
 export const overFlowTypes = ['visible', 'hidden', 'scroll']
@@ -24,7 +24,7 @@ export function overFlowPropToStyle(prop: string, propValue: any): any {
   }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-overflow',
     isMatch: isOverFlowKey,

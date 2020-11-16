@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isOpacityKey(key: string) {
@@ -15,7 +15,7 @@ export function opacityPropToStyle(prop: string, propValue: any): any {
   return { opacity: Number(value) / 100 }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-opacity',
     isMatch: isOpacityKey,

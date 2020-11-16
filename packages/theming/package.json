@@ -20,5 +20,8 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/theming.esm.js"
+  "module": "dist/theming.esm.js",
+  "dependencies": {
+    "@styli/types": "^0.12.0"
+  }
 }

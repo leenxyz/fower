@@ -9,9 +9,8 @@ import React, {
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { createStyle, Sheet, styleManager, styli } from '@styli/core'
 import { themeContext } from '@styli/theming'
-import { AtomicProps } from './types'
+import { AtomicProps } from '@styli/types'
 import { css } from '@styli/core'
-export { AtomicProps } from './types'
 const { Consumer } = themeContext
 
 type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null

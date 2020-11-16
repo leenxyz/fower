@@ -2,7 +2,7 @@ import { Atom, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-text-heading', () => {
-  styli.setup({
+  styli.configure({
     unit: 'px',
     theme: {
       headings: ['48px', '32px', '24px', '20px', '16px', '14px'] as string[] | number[],

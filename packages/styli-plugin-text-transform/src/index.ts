@@ -1,6 +1,6 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-transform',
     isMatch(key) {

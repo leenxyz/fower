@@ -1,10 +1,14 @@
 import { Sheet } from './Sheet'
 import { styleManager } from './styleManager'
 import { styli } from './styli'
-import { CssObject, Props } from './types'
+import { CSSObject } from '@styli/types'
 import { modifierToProps } from './utils'
 
-export function css(...args: (string | CssObject)[]) {
+interface Props {
+  [key: string]: any
+}
+
+export function css(...args: (string | CSSObject)[]) {
   const props = args.reduce((result: Props, cur: any) => {
     if (typeof cur === 'string') {
       return { ...result, ...modifierToProps(cur) }

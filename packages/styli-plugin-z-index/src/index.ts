@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isZIndexKey(key: string) {
@@ -14,7 +14,7 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
   return { zIndex: zIndexValue }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-z-index',
     isMatch: isZIndexKey,

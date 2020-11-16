@@ -23,6 +23,7 @@
   "module": "dist/styli-plugin-ellipsis.esm.js",
   "dependencies": {
     "@styli/core": "^0.12.0",
+    "@styli/types": "^0.12.0",
     "@styli/utils": "^0.12.0"
   }
 }

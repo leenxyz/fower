@@ -1,4 +1,4 @@
-import { Preset } from '@styli/core'
+import { Preset } from '@styli/types'
 import { plugins } from './plugins'
 import { theme } from './theme'
 

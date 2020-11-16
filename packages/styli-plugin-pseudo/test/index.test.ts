@@ -3,7 +3,7 @@ import { isValidPropValue } from '@styli/utils'
 import plugin from '../src'
 
 describe('styli-plugin-pseudo', () => {
-  styli.setup({ unit: 'px' })
+  styli.configure({ unit: 'px' })
 
   const { middleware } = plugin()
   const sheet = {} as Sheet

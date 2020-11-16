@@ -2,7 +2,7 @@ import { Atom, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-shadow', () => {
-  styli.setup({
+  styli.configure({
     theme: {
       shadow: {
         xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',

@@ -2,7 +2,7 @@ import { Atom, styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-line-height', () => {
-  styli.setup({
+  styli.configure({
     unit: 'px',
     inline: true,
     theme: {

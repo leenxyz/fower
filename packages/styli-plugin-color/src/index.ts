@@ -1,4 +1,5 @@
-import { Plugin, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { hexToRgba } from '@styli/utils'
 
 export function isColorKey(key: string) {
@@ -23,7 +24,7 @@ export function colorPropToStyle(prop: string, propValue: any): any {
   return { color }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-color',
     isMatch: isColorKey,

@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 
 const regStr =
   '--(active|checked|disabled|enabled|default|empty|focus|focus-within|invalid|hover|link|visited|first-child|last-child|after|before|placeholder|selection)$'
@@ -9,7 +9,7 @@ function isPseudoKey(str: string) {
   return new RegExp(regStr).test(str)
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-pseudo',
     middleware(plugin, atom, sheet) {

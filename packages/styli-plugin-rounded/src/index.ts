@@ -1,4 +1,5 @@
-import { Plugin, getValue, ModifierType } from '@styli/core'
+import { getValue } from '@styli/core'
+import { StyliPlugin, ModifierType } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -46,7 +47,7 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-rounded',
     isMatch: isRoundedKey,

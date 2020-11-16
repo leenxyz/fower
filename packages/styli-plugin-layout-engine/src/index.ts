@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 
 export const G = {
   padding: 'padding',
@@ -126,7 +126,7 @@ export function alignmentPropToStyle(props: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-layout-engine',
     isMatch: isAlignmentKey,

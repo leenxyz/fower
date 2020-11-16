@@ -1,6 +1,6 @@
-import { CssObject, Plugin } from '@styli/core'
+import { CSSObject, StyliPlugin } from '@styli/types'
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-reset',
     isMatch(key) {
@@ -17,7 +17,7 @@ export default (): Plugin => {
           },
         }
       } else {
-        atom.style = atom.propValue as CssObject
+        atom.style = atom.propValue as CSSObject
       }
 
       return atom

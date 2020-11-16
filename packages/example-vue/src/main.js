@@ -4,7 +4,7 @@ import styliVue from '@styli/vue'
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 
-styli.setup(preset)
+styli.configure(preset)
 
 Vue.config.productionTip = false
 

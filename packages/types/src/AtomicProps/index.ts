@@ -12,7 +12,7 @@ import { Colors } from './color.types'
 import { Displays } from './display.types'
 import { OverFlows } from './overflow.types'
 import { OutLine } from './outline.types'
-import { CssObject } from './common.types'
+import { CSSObject } from '../CSSObject'
 import { Cursor } from './cursor.types'
 export interface AtomicProps
   extends Sizes,
@@ -31,9 +31,9 @@ export interface AtomicProps
     OutLine,
     Cursor,
     Opacity {
-  css?: CssObject
-  debug?: boolean | CssObject
-  debugChildren?: boolean | CssObject
-  debugAll?: boolean | CssObject
-  reset?: boolean | CssObject
+  css?: CSSObject
+  debug?: boolean | CSSObject
+  debugChildren?: boolean | CSSObject
+  debugAll?: boolean | CSSObject
+  reset?: boolean | CSSObject
 }

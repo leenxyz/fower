@@ -1,9 +1,9 @@
-import { Theme } from '@styli/theming'
-import { Plugin } from './types'
+import { Theme } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
 
 const isPlainDirective = (key: string) => /^\w+(--?\w+)?$/.test(key)
 
-export const coreMiddleware: Plugin = {
+export const coreMiddleware: StyliPlugin = {
   name: 'styli-plugin-core',
   middleware(plugin, atom, sheet, theme: Theme) {
     const { propKey, propValue } = atom

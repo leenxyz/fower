@@ -1,4 +1,3 @@
-export * from './types'
 export { styli } from './styli'
 export { Sheet } from './Sheet'
 export { styleManager } from './styleManager'

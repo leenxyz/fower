@@ -15,13 +15,13 @@ npm i @styli/core @styli/react @styli/preset-default
 
 ## 初始化 Preset
 
-在使用 Styli 编写样式之前，你需要通过 `styli.setup(preset)` 初始化插件。
+在使用 Styli 编写样式之前，你需要通过 `styli.configure(preset)` 初始化插件。
 
 ```js title="src/index.ts"
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 
-styli.setup(preset)
+styli.configure(preset)
 ```
 
 Styli 是插件化的，`@styli/core` 未内置任何插件，`@styli/preset-default` 预置了一些官方插件，你也可以新建自己的 Preset 来配置插件。
@@ -152,7 +152,7 @@ export default () => {
 注意，如果你想获得 TypeScript 类型提示，你需要扩展 HTML 的属性类型，方法是在项目根目录新建一个 `d.ts` 类型文件，名字可以为 `index.d.ts`，内容如下：
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@styli/styled';
+import { AtomicProps } from '@styli/types';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}

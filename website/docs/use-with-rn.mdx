@@ -19,13 +19,13 @@ Besides `@styli/core`, we also need React Native binding package `@styli/react-n
 
 ## Init Preset
 
-Before write styles with Styli, you need to initialize the plugins via `styli.setup(preset)`.
+Before write styles with Styli, you need to initialize the plugins via `styli.configure(preset)`.
 
 ```js title="src/index.ts"
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 
-styli.setup(preset)
+styli.configure(preset)
 ```
 
 ## Usage

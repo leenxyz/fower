@@ -19,7 +19,7 @@ import { styli } from '@styli/core'
 import { styled } from '@styli/styled'
 // import { ThemeProvider, useTheme } from '@styli/theming';
 
-styli.setup({ ...preset, inline: false })
+styli.configure({ ...preset, inline: false })
 import './styles.css'
 
 function Layout(props: Props): JSX.Element {

@@ -1,4 +1,5 @@
-import { Plugin, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isShadowKey(key: string) {
@@ -19,7 +20,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   return { boxShadow: shadowValue }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-shadow',
     isMatch: isShadowKey,

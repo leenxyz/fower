@@ -1,4 +1,5 @@
-import { getValue, Plugin } from '@styli/core'
+import { getValue } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isOutLineKey(key: string) {
@@ -20,7 +21,7 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
   return { outline: isValidPropValue(propValue) ? propValue : 'none' }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-outline',
     isMatch: isOutLineKey,

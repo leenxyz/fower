@@ -1,6 +1,6 @@
 import { isNumber, isPercentNumber } from '@styli/utils'
+import { ModifierType, Props } from '@styli/types'
 import { styli } from './styli'
-import { ModifierType, Props } from './types'
 
 export function getValue(value: string | number, modifierType?: ModifierType | ({} & string)) {
   if (isNumber(value)) {

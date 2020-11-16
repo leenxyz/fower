@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, isNumber } from '@styli/utils'
 
 export const G = {
@@ -88,7 +88,7 @@ export function flexPropToStyle(prop: string, propValue: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-flexbox',
     isMatch: isFlexBoxKey,

@@ -1,4 +1,5 @@
-import { getValue, ModifierType, Plugin, styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
+import { ModifierType, StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -62,7 +63,7 @@ export function marginPropToStyle(prop: string, propValue: any) {
   return style
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-margin',
     isMatch: isMarginKey,

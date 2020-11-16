@@ -15,7 +15,7 @@ import { CSSProp } from './components/CSSProp'
 import { LayoutEngine } from './components/LayoutEngine'
 import { Cursor } from './components/Cursor'
 
-styli.setup({
+styli.configure({
   ...presetDefault,
   inline: false,
 })

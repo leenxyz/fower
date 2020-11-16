@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { kebab } from '@styli/utils'
 
 export function isDisplayKey(key: string) {
@@ -19,7 +19,7 @@ export function displayPropToStyle(prop: string, propValue: any): any {
   return { display: prop }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-display',
     isMatch: isDisplayKey,

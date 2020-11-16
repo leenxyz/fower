@@ -1,4 +1,4 @@
-import { Plugin } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isCursorKey(key: string) {
@@ -13,7 +13,7 @@ export function cursorPropToStyle(prop: string, propValue: any): any {
   return { cursor: isValidPropValue(propValue) ? propValue : value?.toLowerCase() || 'pointer' }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-cursor',
     isMatch: isCursorKey,

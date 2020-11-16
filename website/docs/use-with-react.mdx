@@ -15,13 +15,13 @@ Besides `@styli/core`, we also need React binding package `@styli/react`.
 
 ## Init Preset
 
-Before write styles with Styli, you need to initialize the plugins via `styli.setup(preset)`.
+Before write styles with Styli, you need to initialize the plugins via `styli.configure(preset)`.
 
 ```js title="src/index.ts"
 import { styli } from '@styli/core'
 import preset from '@styli/preset-default'
 
-styli.setup(preset)
+styli.configure(preset)
 ```
 
 `@styli/core` does not have any built-in plugins. There is some official plugins in `@styli/preset-default`. You can also create your own Preset to configure the plugins for Styli.
@@ -153,7 +153,7 @@ export default () => {
 Note that if you want to get TypeScript type hints, you need to extend the attribute types of HTML by creating a new `d.ts` file in the project root directory, you can name it `index.d.ts`, the code is as follows:
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@styli/styled';
+import { AtomicProps } from '@styli/types';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}

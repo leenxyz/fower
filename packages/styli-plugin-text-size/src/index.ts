@@ -1,4 +1,5 @@
-import { Plugin, getValue, ModifierType, styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
+import { StyliPlugin, ModifierType } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isTextSizeKey(key: string) {
@@ -16,7 +17,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
   return { fontSize: getValue(value, ModifierType.text) }
 }
 
-export default (): Plugin => {
+export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-size',
     isMatch: isTextSizeKey,
