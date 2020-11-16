@@ -10,11 +10,15 @@ Styli 本身就是使用 TypeScript 编写，可以说 Styli 完美支持 TypeSc
 
 ## React
 
-在 React 中，Styli 有三种使用方式: **@styli/react 组件库**、**Babel Preset**、**JSX Pragma**。
+在 React 中，Styli 有三种使用方式:
+
+- **@styli/react 组件库**
+- **Babel Preset**
+- **JSX Pragma**
 
 ### @styli/react 组件库
 
-使用 `@styli/react-native` 组件库，因为它所包含的组件提供完整的类型定义，所以你直接可以在编辑器中获得类型提示，不需任何额外配置。
+使用 `@styli/react` 组件库时，因为它所包含的组件提供完整的类型定义，所以你直接可以在编辑器中获得类型提示，不需任何额外配置。
 
 ```jsx
 import React from 'react'
@@ -70,7 +74,7 @@ export default () => {
 
 ### JSX Pragma
 
-如果你使用 JSX Pragma 这种方式，您需要在每个组件的文件的顶部添加 `/** @jsx jsx */` 标识，这样就可以获得 TypeScript 类型提示了。
+如果你使用 JSX Pragma 这种方式，您需要在每个组件文件的顶部添加 `/** @jsx jsx */` 标识，这样就可以获得 TypeScript 类型提示了。
 
 ```jsx title="/src/components/Profile.tsx"
 /** @jsx jsx */

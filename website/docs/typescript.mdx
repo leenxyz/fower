@@ -6,15 +6,19 @@ title: Typescript
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-Styli 本身就是使用 TypeScript 编写，可以说 Styli 完美支持 TypeScript。
+Styli itself is written in TypeScript, and Styli supports TypeScript perfectly.
 
 ## React
 
-在 React 中，Styli 有三种使用方式: **@styli/react 组件库**、**Babel Preset**、**JSX Pragma**。
+When use with React, Styli can be used in three ways:
 
-### @styli/react 组件库
+- **@styli/react component library**
+- **Babel Preset**
+- **JSX Pragma**
 
-使用 `@styli/react-native` 组件库，因为它所包含的组件提供完整的类型定义，所以你直接可以在编辑器中获得类型提示，不需任何额外配置。
+### @styli/react component library
+
+When using the `@styli/react` component library, because the components it contains provide complete type definitions, you can directly get IntelliSense in the editor without any additional configuration.
 
 ```jsx
 import React from 'react'
@@ -37,7 +41,7 @@ export default () => {
 
 ### Babel Preset
 
-很多人喜欢 **Babel Preset** 这种方式，这种方式要获得 TypeScript 类型提示，除了需配置 babel preset，你还需在项目根目录新增一个类型文件, 比如命名为 `index.d.ts`，内容如下：
+Many people like the way **Babel Preset**. In order to get TypeScript IntelliSense, in addition to configuring the babel preset, you also need to add a type file in the project root directory, for example, we named it `index.d.ts `, the content is as follows:
 
 ```jsx title="index.d.ts"
 import { AtomicProps } from '@styli/styled';
@@ -48,7 +52,7 @@ declare module 'react' {
 
 ```
 
-然后，你就可以在组件组件中获得完整的类型提示了。
+Then, you can get the complete IntelliSense in the component.
 
 ```jsx title="/src/components/Profile.tsx"
 import React from 'react'
@@ -70,7 +74,7 @@ export default () => {
 
 ### JSX Pragma
 
-如果你使用 JSX Pragma 这种方式，您需要在每个组件的文件的顶部添加 `/** @jsx jsx */` 标识，这样就可以获得 TypeScript 类型提示了。
+If you use the way of JSX Pragma, you need to add the `/** @jsx jsx */` pragma at the top of each component file, so that you can get TypeScript IntelliSense.
 
 ```jsx title="/src/components/Profile.tsx"
 /** @jsx jsx */
@@ -93,34 +97,11 @@ export default () => {
 
 ## React-Native
 
-在 React native 中使用 Styli，你只需安装 `@styli/react-native` 组件库， `@styli/react-native` 是使用 TypeScript 编写的，它所包含的组件提供完整的类型定义。
+To use Styli in React native, you only need to install the `@styli/react-native` component library. `@styli/react-native` is written in TypeScript, and the components it contains provide complete IntelliSense.
 
 ```jsx title="/src/components/Profile.tsx"
 import React from 'react'
 import { View, Text, Image } from '@styli/react-native'
-
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10>
-      <Image circle-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray80>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
-  )
-}
-```
-
-## Taro
-
-在 Taro 中使用 Styli，你只需安装 `@styli/taro` 组件库，`@styli/react-native` 是使用 TypeScript 编写的，它所包含的组件提供完整的类型定义。
-
-```jsx title="/src/components/Profile.tsx"
-import React from 'react'
-import { View, Text, Image } from '@styli/taro'
 
 export default () => {
   return (
