@@ -13,11 +13,16 @@ class Styli {
   cache: Cache = {}
   componentKey = 0 // use generate component unite className
 
+  inited = false
+
   configure = (config: Preset) => {
+    if (this.inited) return
+
     this.config = {
       ...this.config,
       ...config,
     }
+    this.inited = true
   }
 
   getTheme = <T = any>(themeKey?: string): T => {

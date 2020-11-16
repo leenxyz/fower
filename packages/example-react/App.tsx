@@ -15,11 +15,6 @@ import { CSSProp } from './components/CSSProp'
 import { LayoutEngine } from './components/LayoutEngine'
 import { Cursor } from './components/Cursor'
 
-styli.configure({
-  ...presetDefault,
-  inline: false,
-})
-
 // const myClassName = css('p-20 mx-10 borderGray-1 f-40')
 
 // const app = document.getElementById('root')

@@ -1,5 +1,9 @@
+import { styli } from '@styli/core'
+import presetDefault from '@styli/preset-default'
 import _Vue, { PluginFunction } from 'vue'
 import vStyli from '@/v-css'
+
+styli.configure(presetDefault)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -20,7 +20,8 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@styli/core": "^0.12.0"
+    "@styli/core": "^0.12.0",
+    "@styli/preset-default": "^0.12.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",
