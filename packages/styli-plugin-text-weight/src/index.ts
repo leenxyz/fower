@@ -1,17 +1,20 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { downFirst, isValidPropValue } from '@styli/utils'
+import { downFirst } from '@styli/utils'
 
 export function isTextWeightKey(key: string) {
-  return /^font([Hh]airline|[Tt]hin|[Ll]ight|[Nn]ormal|[Mm]edium|[Ss]emibold|[Bb]old|[Ee]xtrabold|[Bb]lack)?$|^font[Ww]eight?$/.test(
+  return /^font([Hh]airline|[Tt]hin|[Ll]ight|[Nn]ormal|[Mm]edium|[Ss]emibold|[Bb]old|[Ee]xtrabold|[Bb]lack)?$|^font[Ww]eight(-.+)?$/.test(
     key,
   )
 }
 
 export function textWeightPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { fontWeight: propValue }
-  const value = prop.replace(/^font/, '')
-  if (value === 'weight') return { fontWeight: propValue }
+  const value = prop.replace(/^font|-.+$/g, '')
+
+  if (value.toLowerCase() === 'weight') {
+    const [, weightValue] = prop.split('-')
+    return { fontWeight: weightValue || propValue }
+  }
 
   const weights = styli.getTheme('fontWeights') || {}
   return { fontWeight: weights[downFirst(value)] || value }
