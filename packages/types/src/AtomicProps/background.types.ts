@@ -4,7 +4,9 @@ import { Theme } from '../Theme'
 type BgFn = (theme: Theme) => Property.Color | Property.Color[]
 
 export interface Backgrounds {
-  bg?: Property.Color | Property.Color[] | BgFn
+  bg?: string
+
+  bgColor?: Property.Color | Property.Color[] | BgFn
 
   bgImg?: string
 
