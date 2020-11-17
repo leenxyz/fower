@@ -26,8 +26,8 @@ export function bgPropToStyle(propKey: string, propValue: any) {
   const Colors = styli.getColors()
 
   if (isValidPropValue(propValue)) {
-    const [hex, opacity] = propValue.split('.')
-    const value = Colors[hex] || hex
+    const [, hex, , opacity] = propValue.match(/^(#\w+)(.(\d+))?/) || []
+    const value = Colors[hex] || hex || propValue
     return { backgroundColor: hexToRgba(value, opacity) }
   }
 
