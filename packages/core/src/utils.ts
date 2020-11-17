@@ -6,7 +6,6 @@ export function getValue(value: string | number, modifierType?: ModifierType | (
   if (isNumber(value)) {
     const numValue = Number(value)
 
-    // TODO: convert when need it
     if (numValue < 1 && numValue > 0) {
       return (numValue * 100).toFixed(6) + '%'
     }

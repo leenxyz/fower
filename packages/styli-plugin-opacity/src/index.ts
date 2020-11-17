@@ -6,13 +6,9 @@ export function isOpacityKey(key: string) {
 }
 
 export function opacityPropToStyle(prop: string, propValue: any): any {
-  if (isValidPropValue(propValue)) {
-    return {
-      opacity: Number(propValue) / 100,
-    }
-  }
   const [, value = 50] = prop.split('-')
-  return { opacity: Number(value) / 100 }
+  const val = isValidPropValue(propValue) ? propValue : value
+  return { opacity: Number(val) / 100 }
 }
 
 export default (): StyliPlugin => {
