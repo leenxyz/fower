@@ -1,5 +1,4 @@
-import { Theme } from '@styli/types'
-import { StyliPlugin } from '@styli/types'
+import { Theme, StyliPlugin } from '@styli/types'
 
 const isPlainDirective = (key: string) => /^\w+(--?\w+)?$/.test(key)
 
@@ -10,14 +9,19 @@ export const coreMiddleware: StyliPlugin = {
 
     if (!plugin.isMatch!(propKey)) return atom
 
-    // propValue is false, just collect propKey and ignore it
-    if (propValue === false) return atom
-
     // ignore media queries
     if (Array.isArray(propValue)) return atom
 
     // ignore not plain directive
     if (!isPlainDirective(propKey)) return atom
+
+    /**
+     * propValue is false, collect propKey and ignore it
+     */
+    if (propValue === false) {
+      atom.type = 'invalid'
+      return atom
+    }
 
     // handle theme
     if (typeof atom.propValue === 'function') {

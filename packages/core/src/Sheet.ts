@@ -1,6 +1,5 @@
 import { CSSProperties } from 'react'
-import { Theme } from '@styli/types'
-import { Props, Atom } from '@styli/types'
+import { Props, Atom, Theme } from '@styli/types'
 import {
   isEmptyObj,
   cssKeyToStyleKey,
