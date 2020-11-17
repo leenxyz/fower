@@ -3,8 +3,8 @@
 cd packages/utils && npm run build
 
 Sequential=("
-  core
   types
+  core
 ")
 
 Parallel=("
@@ -41,13 +41,13 @@ Parallel=("
 ")
 
 Others=("
-  theming 
+  preset-default
+  theming
   styled
   react
   react-native
   vue
   taro
-  preset-default
 ")
 
 build_package(){
