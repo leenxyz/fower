@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View } from '@styli/react'
 
 export const FontWeight = () => {
   return (

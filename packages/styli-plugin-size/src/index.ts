@@ -45,15 +45,17 @@ export default (): StyliPlugin => {
         console.error('theme spacing is not provide')
       }
 
-      return { ...atom, propKey: key, propValue: spacing[Number(value)], className: propKey }
+      return {
+        ...atom,
+        propKey: key,
+        propValue: spacing[Number(value)],
+        designSystemKey: propKey,
+        className: propKey,
+      }
     },
     onVisitProp(atom) {
       atom.style = sizePropToStyle(atom.propKey, atom.propValue)
       return atom
-    },
-    afterVisitProp(initAtom, atom) {
-      const { propValue, propKey } = initAtom
-      return { ...atom, propValue, propKey }
     },
   }
 }

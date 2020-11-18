@@ -5,12 +5,14 @@ export const LayoutEngine = () => {
   return (
     <View>
       <Heading>LayoutEngine</Heading>
-      <View h-200 f-12 debugChildren column right>
+      <View h-240 f-12 debugChildren column right>
         <View s-100>AAA</View>
-        {/* <View selfStretch>BBB</View> */}
-        <View s-100 center>
-          CCC
-        </View>
+        <View s-100>BBB</View>
+      </View>
+
+      <View direction="row" right h-240 f-12 debugChildren>
+        <View s-100>AA</View>
+        <View s-100>BB</View>
       </View>
     </View>
   )

@@ -10,7 +10,8 @@ class Styli {
     transformUnit: (value: any) => value + this.getConfig<string>('unit'),
   }
 
-  cache: Cache = {}
+  classNameCache: Cache = {}
+  atomCache: Cache = {}
   componentKey = 0 // use generate component unite className
 
   inited = false

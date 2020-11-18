@@ -1,20 +1,21 @@
 import { StyliPlugin } from '@styli/types'
 
 export const G = {
-  padding: 'padding',
-  margin: 'margin',
   flex: 'flex',
+
   top: 'top',
   left: 'left',
   right: 'right',
+  bottom: 'bottom',
+
   start: 'start',
   end: 'end',
-  bottom: 'bottom',
   between: 'between',
   around: 'around',
   evenly: 'evenly',
   center: 'center',
   space: 'space',
+
   row: 'row',
   column: 'column',
 }
@@ -52,22 +53,24 @@ export const flexMaps: any = {
 }
 
 export function isAlignmentKey(key: string) {
-  return flexAlign.includes(key)
+  return flexAlign.includes(key) || key === 'direction'
 }
 
 function getDirection(props: any): string {
   if (props.row) return G.row
   if (props.column) return G.column
+  if (props.direction) return props.direction
   return G.row
 }
 
-export function alignmentPropToStyle(props: any) {
+export function alignmentPropToStyle(propKey: string, props: any) {
+  if (propKey === 'direction') return
   const { center } = props
+  const direction = getDirection(props)
   const style: any = {}
   const rules: { [key: string]: string[] } = {}
 
-  if (getDirection(props) === G.row) {
-    style.flexDirection = G.row
+  if (direction.startsWith('row')) {
     rules.justifyContent = [
       G.left,
       G.right,
@@ -94,13 +97,6 @@ export function alignmentPropToStyle(props: any) {
   for (const [key, positions] of Object.entries(rules)) {
     for (const p of positions) {
       if (!props[p]) continue // need match props key
-
-      // 统一默认值为 row
-      if (style.flexDirection) style.flexDirection = G.row
-
-      // 触发 flex
-      style.display = G.flex
-
       if ([G.top, G.left].includes(p)) {
         style[key] = flexMaps.start
       } else if ([G.bottom, G.right].includes(p)) {
@@ -118,7 +114,6 @@ export function alignmentPropToStyle(props: any) {
   }
 
   if (center) {
-    style.display = G.flex
     style.justifyContent = G.center
     style.alignItems = G.center
   }
@@ -131,8 +126,41 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-layout-engine',
     isMatch: isAlignmentKey,
     onVisitProp(atom, sheet) {
-      atom.style = alignmentPropToStyle(sheet.props)
+      atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
+
+      if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
+        const direction = getDirection(sheet.props)
+        atom.className = direction + '-' + atom.propKey
+      }
       return atom
+    },
+    afterVisitProp(sheet) {
+      if (!sheet.atoms || !sheet.atoms.length) return
+
+      const direction = getDirection(sheet.props)
+      const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)
+
+      if (!directionAtom) {
+        sheet.atoms.push({
+          propKey: 'direction-' + direction,
+          propValue: '',
+          className: 'direction-' + direction,
+          type: 'style',
+          style: { flexDirection: direction as any },
+        })
+      }
+
+      const flexAtom = sheet.atoms.find((i) => i.propKey === 'display-flex')
+
+      if (!flexAtom) {
+        sheet.atoms.push({
+          propKey: 'display-flex',
+          propValue: '',
+          className: 'display-flex',
+          type: 'style',
+          style: { display: 'flex' as any },
+        })
+      }
     },
   }
 }

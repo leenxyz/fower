@@ -8,7 +8,7 @@ import {
   hash,
   parseCSSProp,
 } from '@styli/utils'
-import { coreMiddleware } from './middleware'
+import { corePlugin } from './middleware'
 import { styli } from './styli'
 
 /**
@@ -18,12 +18,12 @@ export class Sheet {
   /**
    * atom parsed from props
    */
-  private atoms: Atom[]
-  private className: string
+  atoms: Atom[] = []
+  className: string
 
-  constructor(readonly props: Props, private theme: Theme) {
+  constructor(readonly props: Props = {}, private theme: Theme) {
     this.className = ''
-    this.atoms = this.traverseProps(props)
+    this.traverseProps(props)
   }
 
   private setUniteClassName() {
@@ -33,24 +33,30 @@ export class Sheet {
   /**
    * traverse Props to init atoms
    */
-  private traverseProps(props: Props): Atom[] {
-    if (isEmptyObj(props)) return []
+
+  private traverseProps(props: Props): void {
+    if (isEmptyObj(props)) return
 
     const [middleware, plugins] = styli.getPlugins()
-    const middlewareList = [coreMiddleware, ...middleware]
+    const middlewareList = [corePlugin, ...middleware]
 
     const atoms: Atom[] = []
+
+    // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style' } as Atom
 
       const propValueIsPlainType = isPlainType(propValue)
       const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
-      const pluginCacheValue = styli.cache[pluginCacheKey]
+
+      const pluginCacheValue = styli.atomCache[pluginCacheKey]
 
       /**
        * if propValue is object, don't use cache
        */
-      if (!pluginCacheValue || !propValueIsPlainType) {
+      if (pluginCacheValue && propValueIsPlainType) {
+        atoms.push(pluginCacheValue)
+      } else {
         for (const plugin of plugins) {
           let atom = { ...initialAtom }
 
@@ -64,24 +70,31 @@ export class Sheet {
             return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
           }, atom)
 
-          // after
-          if (plugin.afterVisitProp) {
-            atom = plugin.afterVisitProp(initialAtom, atom, this as any)
-          }
-
           if (!isEqual(atom, initialAtom)) {
-            const newAtom = this.atomModifier(atom)
+            const newAtom = this.createAtomClassName(atom)
             atoms.push(newAtom)
-            styli.cache[pluginCacheKey] = newAtom
+
+            // hack for layout engine
+            if (!['top', 'right', 'bottom', 'left'].includes(atom.propKey)) {
+              styli.atomCache[pluginCacheKey] = newAtom
+            }
             break
           }
         }
-      } else {
-        atoms.push(pluginCacheValue)
       }
     }
 
-    return atoms
+    this.atoms = atoms
+
+    /** run afterVisitProp */
+    Object.keys(props).forEach((propKey) => {
+      for (const plugin of plugins) {
+        if (plugin.isMatch!(propKey) && plugin.afterVisitProp) {
+          plugin.afterVisitProp!(this as any)
+          // break
+        }
+      }
+    })
   }
 
   /**
@@ -98,10 +111,10 @@ export class Sheet {
   }
 
   /**
-   * atom modifier
+   * create ClassName for Atom
    * @param atom
    */
-  private atomModifier(atom: Atom) {
+  private createAtomClassName(atom: Atom) {
     const { propKey = '', propValue, className, type } = atom
 
     if (className || type === 'media-queries') return atom
@@ -142,12 +155,13 @@ export class Sheet {
    */
   toCss(): string {
     const mediaCss: any = {}
+
     const css = this.atoms.reduce((result, atom) => {
-      const { className = '', type, style } = atom
+      const { className = '', type, style = {} } = atom
 
-      if (styli.cache[className] || isEmptyObj(style)) return result
+      if (styli.classNameCache[className] || isEmptyObj(style)) return result
 
-      if (className) styli.cache[className] = true
+      if (className) styli.classNameCache[className] = true
 
       if (type === 'prefix') {
         return result + parseCSSProp(style, className)
@@ -198,9 +212,10 @@ export class Sheet {
 
   getParsedProps(): Props {
     const { props, atoms } = this
+    if (!props) return {}
     return Object.keys(props).reduce((result: Props, cur: any) => {
-      const prop = atoms.find(({ propKey }) => propKey === cur)
-      return prop ? result : { ...result, [cur]: props[cur] }
+      const find = atoms.find((atom) => atom.propKey === cur || atom.designSystemKey === cur)
+      return find ? result : { ...result, [cur]: props[cur] }
     }, {} as Props)
   }
 }

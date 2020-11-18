@@ -35,15 +35,16 @@ export function isFlexBoxKey(key: string) {
   )
 }
 
+function getDirection(props: any): string {
+  if (props.row) return G.row
+  if (props.column) return G.column
+  if (props.direction) return props.direction
+  return G.row
+}
+
 export function flexPropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
-
-  if (prop === G.row) style.flexDirection = G.row
-  if (prop === G.column) style.flexDirection = G.column
-
-  // 自动 display: flex
-  if (prop === G.row || prop === G.column) style.display = G.flex
 
   // flex
   if (/^flex(-\d+)?$/.test(prop)) {
@@ -95,6 +96,35 @@ export default (): StyliPlugin => {
     onVisitProp(atom) {
       atom.style = flexPropToStyle(atom.propKey, atom.propValue)
       return atom
+    },
+
+    afterVisitProp(sheet) {
+      if (!sheet.atoms || !sheet.atoms.length) return
+
+      const direction = getDirection(sheet.props)
+      const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)
+
+      if (!directionAtom) {
+        sheet.atoms.push({
+          propKey: 'direction-' + direction,
+          propValue: '',
+          className: 'direction-' + direction,
+          type: 'style',
+          style: { flexDirection: direction as any },
+        })
+      }
+
+      const flexAtom = sheet.atoms.find((i) => i.propKey === 'display-flex')
+
+      if (!flexAtom) {
+        sheet.atoms.push({
+          propKey: 'display-flex',
+          propValue: '',
+          className: 'display-flex',
+          type: 'style',
+          style: { display: 'flex' as any },
+        })
+      }
     },
   }
 }

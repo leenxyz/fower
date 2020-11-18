@@ -7,6 +7,6 @@ export interface StyliPlugin {
   isMatch?(key: string): boolean
   beforeVisitProp?(atom: Atom, sheet: SheetType): Atom
   onVisitProp?(atom: Atom, sheet: SheetType): Atom
-  afterVisitProp?(initAtom: Atom, atom: Atom, sheet: SheetType): Atom
+  afterVisitProp?(sheet: SheetType): void
   middleware?(plugin: StyliPlugin, atom: Atom, sheet: SheetType, theme: Theme): Atom
 }

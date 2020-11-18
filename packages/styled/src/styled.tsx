@@ -43,7 +43,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 ): StyledComponent<
   JSX.LibraryManagedAttributes<C, ComponentProps<C>> & AtomicProps & InjectedProps
 > {
-  const StyledComponent = forwardRef((props: any, ref) => {
+  const StyledComponent = forwardRef((props: any = {}, ref) => {
     return (
       <Consumer>
         {(value: any) => {
@@ -62,7 +62,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
               }
             }
           } else {
-            const { className } = props
+            const { className = '' } = props || {}
             styleManager.insertStyles(sheet.toCss())
             const finalClassName = `
               ${css(...args)}

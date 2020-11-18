@@ -1,3 +1,4 @@
+import { Property } from 'csstype'
 import { PropValue } from './common.types'
 
 export interface Flex {
@@ -51,6 +52,19 @@ export interface Flex {
    * ```
    */
   flex?: PropValue
+
+  /**
+   * set flex-direction
+   *
+   * @example
+   * ```tsx
+   * <View direction="row"></View>
+   * <View direction="row-reverse"></View>
+   * <View direction="column"></View>
+   * <View direction="column-reverse"></View>
+   * ```
+   */
+  direction?: Property.FlexDirection | Property.FlexDirection[]
 
   /**
    * Flex items nowrap

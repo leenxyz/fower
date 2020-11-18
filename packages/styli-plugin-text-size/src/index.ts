@@ -31,15 +31,17 @@ export default (): StyliPlugin => {
       if (!fontSizes.length) {
         console.error('theme fontSize is not provide')
       }
-      return { ...atom, propKey: key, propValue: fontSizes[Number(value)], className: propKey }
+      return {
+        ...atom,
+        propKey: key,
+        propValue: fontSizes[Number(value)],
+        designSystemKey: propKey,
+        className: propKey,
+      }
     },
     onVisitProp(atom) {
       atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
       return atom
-    },
-    afterVisitProp(initAtom, atom) {
-      const { propValue, propKey } = initAtom
-      return { ...atom, propValue, propKey }
     },
   }
 }
