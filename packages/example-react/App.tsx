@@ -25,7 +25,7 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider theme={styli.getTheme()}>
-        {/* <Cursor></Cursor>
+        <Cursor></Cursor>
         <Background></Background>
         <Color></Color>
         <Padding></Padding>
@@ -34,8 +34,8 @@ export const App = () => {
         <FontWeight></FontWeight>
         <Border></Border>
         <FlexBox></FlexBox>
-        <OutLine></OutLine> */}
-        {/* <CSSProp></CSSProp> */}
+        <OutLine></OutLine>
+        <CSSProp></CSSProp>
         <LayoutEngine></LayoutEngine>
       </ThemeProvider>
     </div>
