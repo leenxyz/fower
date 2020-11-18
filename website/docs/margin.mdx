@@ -3,11 +3,11 @@ id: margin
 title: Margin
 ---
 
-使用 `m{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 margin。
+Control the margin of an element using the `m{t|r|b|l|x|y}-{size}` Atomic Props.
 
 ## Margin Props
 
-margin 是高频率使用的属性，所以我们使用缩写。
+`margin` is a style attribute used frequently, so we use abbreviations.
 
 - `m` margin
 - `mt` margin-top
@@ -17,9 +17,9 @@ margin 是高频率使用的属性，所以我们使用缩写。
 - `mx` margin-left and margin-right
 - `my` margin-top and margin-bottom
 
-### 设置四周的 margin
+### Margin of all sides
 
-使用 `m-{size}` 格式的 Props 可以控制元素四周的 margin。
+Control the margin on all sides of an element using the `m-{size}` Atomic Props.
 
 ```jsx live
 <View bgGray10 left>
@@ -38,14 +38,9 @@ margin 是高频率使用的属性，所以我们使用缩写。
 </View>
 ```
 
-### 设置一边的 margin
+### Margin of one side
 
-使用 `m{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 margin。
-
-<View mt-10>Hello</View>
-<View mr-10>Hello</View>
-<View mb-10>Hello</View>
-<View ml-10>Hello</View>
+Control the margin on one side of an element using the `m{t|r|b|l}-{size}` Atomic Props.
 
 ```jsx live
 <View bgGray10 left>
@@ -64,9 +59,9 @@ margin 是高频率使用的属性，所以我们使用缩写。
 </View>
 ```
 
-### 设置水平方向的 margin
+### Horizontal margin
 
-使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 margin。
+Control the horizontal margin of an element using the `mx-{size}` Atomic Props.
 
 ```jsx live
 <View bgGray10 left>
@@ -76,9 +71,9 @@ margin 是高频率使用的属性，所以我们使用缩写。
 </View>
 ```
 
-### 设置垂直方向的 margin
+### Vertical marign
 
-使用 `my-{size}` 格式的 Props 可以控制元素垂直方向的 margin。
+Control the vertical margin of an element using the `my-{size}` Atomic Props.
 
 ```jsx live
 <View bgGray10 left>
@@ -90,15 +85,17 @@ margin 是高频率使用的属性，所以我们使用缩写。
 
 ### 设置负 margin
 
-使用 `m{t|r|b|l|x|y}--{size}` 格式的 Props 可以设置元素的 负 margin。
+Control the negative margin of an element using the `m{t|r|b|l|x|y}--{size}` Atomic Props.
 
-当然，你也可以使用 `ml={-10}` 这样的方式为元素设置负 margin。
+Of course, you can also use `ml={-10}` to set negative margin of an element.
 
-```jsx
-<View ml--10>Hello</View>
-<View mr--10px>Hello</View>
-<View mt--10rem>Hello</View>
-<View mb={-10}>Hello</View>
-<View ml="-10px">Hello</View>
-<View mr="-10rem">Hello</View>
+```jsx live
+<View p-50 debugChildren>
+  <View ml--10>Hello</View>
+  <View mr--10px>Hello</View>
+  <View mt--1rem>Hello</View>
+  <View mb={-10}>Hello</View>
+  <View ml="-10px">Hello</View>
+  <View mr="-1rem">Hello</View>
+</View>
 ```

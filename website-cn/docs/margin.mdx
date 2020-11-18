@@ -42,11 +42,6 @@ margin 是高频率使用的属性，所以我们使用缩写。
 
 使用 `m{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 margin。
 
-<View mt-10>Hello</View>
-<View mr-10>Hello</View>
-<View mb-10>Hello</View>
-<View ml-10>Hello</View>
-
 ```jsx live
 <View bgGray10 left>
   <View ml-10 bgGreen20 s-100>
@@ -94,11 +89,13 @@ margin 是高频率使用的属性，所以我们使用缩写。
 
 当然，你也可以使用 `ml={-10}` 这样的方式为元素设置负 margin。
 
-```jsx
-<View ml--10>Hello</View>
-<View mr--10px>Hello</View>
-<View mt--10rem>Hello</View>
-<View mb={-10}>Hello</View>
-<View ml="-10px">Hello</View>
-<View mr="-10rem">Hello</View>
+```jsx live
+<View p-50 debugChildren>
+  <View ml--10>Hello</View>
+  <View mr--10px>Hello</View>
+  <View mt--1rem>Hello</View>
+  <View mb={-10}>Hello</View>
+  <View ml="-10px">Hello</View>
+  <View mr="-1rem">Hello</View>
+</View>
 ```

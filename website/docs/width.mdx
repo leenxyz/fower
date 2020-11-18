@@ -1,49 +1,50 @@
 ---
 id: width
-title: Width
+title: width
 ---
 
-使用原子 Props 控制元素的宽度。
+Use atomic props to control the width of an element. width is a property used frequently, so we use abbreviations.
 
-宽度是高频率使用的属性，所以我们使用缩写。
+## Fixed width
 
-### 固定宽度
-
-使用 w-{size} 格式的 Props 可以控制元素的宽度。
+Use `w-{size}` Atomic Props to control the width of an element.
 
 ```jsx live
-<View left>
-  <View w-50 bgRed20>
+<View>
+  <View w-100 bgRed20>
     Hello
   </View>
-  <View w-5rem bgYellow20>
+  <View w-10rem bgYellow20>
     Hello
   </View>
   <View w={50} bgGreen20>
     Hello
   </View>
-  <View w="100px" bgBlue20>
+  <View w="200px" bgBlue20>
     Hello
   </View>
-  <View w="20%" bgPurple20>
+  <View w="80%" bgPurple20>
+    Hello
+  </View>
+  <View w={1 / 3} bgTeal20>
     Hello
   </View>
 </View>
 ```
 
-### 最小宽度
+## Min-width
 
-使用 minW-{size} 格式的 Props 可以控制元素的最小宽度。
+Use `minW-{size}` Atomic Props to control the min width of an element.
 
 ```jsx live
-<View minW-100 bgRed20 dInlineBlock>
+<View minW-100 bgRed20 inlineBlock>
   Hello
 </View>
 ```
 
-### 最大宽度
+## Max-width
 
-使用 maxW-{size} 格式的 Props 可以控制元素的最大宽度。
+Use `maxW-{size}` Atomic Props to control the max width of an element.
 
 ```jsx live
 <View maxW-100 bgRed20>
