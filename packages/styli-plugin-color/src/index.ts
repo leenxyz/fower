@@ -23,7 +23,6 @@ export function colorPropToStyle(prop: string, propValue: any): any {
   if (prop === 'color' || prop === 'c') {
     const [prefix, postfix] = propValue.split('-')
     const color = Colors[prefix] || prefix
-    console.log('propValue:', propValue, 'prefix:', prefix, 'color:', color)
     return { color: postfix ? formatColor(`${color}-${postfix}`) : color }
   }
 

@@ -10,8 +10,12 @@ export const Border = () => {
           border="1px solid gray"
         </View>
 
-        <View s-100 borderT="1px solid gray">
-          borderT="1px solid gray"
+        <View s-100 border="4px solid green30-O50">
+          border="4px solid green30-D20"
+        </View>
+
+        <View s-100 borderT="4px solid  green40">
+          borderT="1px solid green40"
         </View>
 
         <View s-100 borderR="1px solid gray">
@@ -32,6 +36,10 @@ export const Border = () => {
 
         <View s-100 borderY="1px solid gray">
           borderY="1px solid gray"
+        </View>
+
+        <View s-100 border="4px solid gray" border--hover="4px solid red30-D5">
+          border--hover="1px solid red30"
         </View>
       </View>
     </View>
