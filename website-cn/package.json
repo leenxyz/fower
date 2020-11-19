@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.68",
+    "@docusaurus/plugin-google-gtag": "2.0.0-alpha.68",
     "@docusaurus/plugin-sitemap": "2.0.0-alpha.68",
     "@docusaurus/preset-classic": "2.0.0-alpha.68",
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.68",

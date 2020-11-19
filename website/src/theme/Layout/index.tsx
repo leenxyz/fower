@@ -12,6 +12,8 @@ import Navbar from '@theme/Navbar'
 import Footer from '@theme/Footer'
 import LayoutProviders from '@theme/LayoutProviders'
 import LayoutHead from '@theme/LayoutHead'
+import { Helmet } from 'react-helmet'
+
 import type { Props } from '@theme/Layout'
 
 // import { ThemeProvider, useTheme } from '@styli/theming';
@@ -23,6 +25,20 @@ function Layout(props: Props): JSX.Element {
   return (
     <LayoutProviders>
       <LayoutHead {...props} />
+
+      <Helmet>
+        <script>
+          {`
+        var _hmt = _hmt || []
+        ;(function () {
+          var hm = document.createElement('script')
+          hm.src = 'https://hm.baidu.com/hm.js?bc7597713547ac9d7bf332e56bb854df'
+          var s = document.getElementsByTagName('script')[0]
+          s.parentNode.insertBefore(hm, s)
+        })()
+      `}
+        </script>
+      </Helmet>
 
       <AnnouncementBar />
       <Navbar />

@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Styli',
   tagline: 'An Atomic CSS in JS library for rapid UI development',
-  url: 'https://styli.js.org',
+  url: 'https://styli-cn.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -15,6 +15,11 @@ module.exports = {
     },
     // sidebarCollapsible: false,
     disableSwitch: true,
+    gtag: {
+      trackingID: 'G-6QF7E6TRBC',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
     navbar: {
       title: 'Styli',
       logo: {
@@ -111,17 +116,6 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Styli`,
     },
   },
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        cacheTime: 600 * 1000, // 600 sec - cache purge period
-        changefreq: 'weekly',
-        priority: 0.5,
-        trailingSlash: false,
-      },
-    ],
-  ],
   presets: [
     [
       '@docusaurus/preset-classic',
