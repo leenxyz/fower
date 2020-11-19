@@ -23,9 +23,10 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.66",
-    "@docusaurus/preset-classic": "2.0.0-alpha.66",
-    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.66",
+    "@docusaurus/core": "2.0.0-alpha.68",
+    "@docusaurus/plugin-sitemap": "2.0.0-alpha.68",
+    "@docusaurus/preset-classic": "2.0.0-alpha.68",
+    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.68",
     "@mdx-js/react": "^1.5.8",
     "@styli/core": "^0.11.0",
     "@styli/preset-default": "^0.11.0",
@@ -43,7 +44,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@docusaurus/module-type-aliases": "2.0.0-alpha.66",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.68",
     "@styli/babel-preset-styli": "^0.11.0",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.51",
