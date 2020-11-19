@@ -27,7 +27,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
   } else {
     const { className = '' } = props || {}
     styleManager.insertStyles(sheet.toCss())
-    const finalClassName = `${sheet.getClassNames()} ${className || ''}`.trim()
+    const finalClassName = `${sheet.getClassNames()} ${className}`.trim()
     if (finalClassName) parsedProps.className = finalClassName
   }
 

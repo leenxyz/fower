@@ -1,7 +1,6 @@
 {
   "name": "@styli/example-vue",
   "version": "0.15.1",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

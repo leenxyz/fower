@@ -211,7 +211,6 @@ export function opacify(color: string, amount: number = 0) {
 }
 
 export function transparentize(color: string, amount: number = 0) {
-  console.log('-amount:', -amount)
   return opacityFn(color, -amount)
 }
 
@@ -223,7 +222,6 @@ export function formatColor(value: string): string {
   const amount = Number(amountStr)
 
   if (!type) return type
-  console.log('type:', type)
   if (/^t$/i.test(type)) return transparentize(color, amount)
   if (/^o$/i.test(type)) return opacify(color, amount)
   if (/^d$/i.test(type)) return toHex(darken(color, amount))
