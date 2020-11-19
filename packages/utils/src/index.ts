@@ -194,9 +194,9 @@ export function parseCSSProp(cssObj: any, className = ''): string {
     .join(' ')
 }
 
-export function opacify(color: string, ammount: number = 0) {
+export function opacityFn(color: string, amount: number = 0) {
   const [r, g, b, oldOpacity = 0] = getRgbaValue(color)
-  const opacity = oldOpacity + ammount / 100
+  const opacity = oldOpacity + amount / 100
   const rgbValue = [r, g, b]
 
   if (opacity === 1) return toHex(`rgb(${rgbValue.join(',')})`)
@@ -204,6 +204,14 @@ export function opacify(color: string, ammount: number = 0) {
   return typeof opacity === 'number'
     ? `rgba(${rgbValue.join(',')},${opacity})`
     : `rgb(${rgbValue.join(',')})`
+}
+
+export function opacify(color: string, amount: number = 0) {
+  return opacityFn(color, amount)
+}
+
+export function transparentize(color: string, amount: number = 0) {
+  return opacityFn(color, -amount)
 }
 
 export function formatColor(value: string): string {
@@ -214,6 +222,7 @@ export function formatColor(value: string): string {
   const amount = Number(amountStr)
 
   if (!type) return type
+  if (/^t$/i.test(type)) return transparentize(color, amount)
   if (/^o$/i.test(type)) return opacify(color, amount)
   if (/^d$/i.test(type)) return toHex(darken(color, amount))
   if (/^l$/i.test(type)) return toHex(lighten(color, amount))
