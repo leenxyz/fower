@@ -16,16 +16,20 @@ export const Background = () => {
         BgRed50
       </View>
 
-      <View f-20 bgRed50-O20>
-        BgRed50-O20
+      <View f-20 bgRed50-T20>
+        BgRed50-T20
       </View>
 
-      <View f-20 bgRed50-O20 bgRed50-D20--hover>
+      <View f-20 bgRed50-T20 bgRed50-D20--hover>
         BgRed50-D20--hover
       </View>
 
-      <View f-20 bgColor="#000-O40">
-        bg #000-O40
+      <View f-20 bgColor="#000-T40">
+        bg #000-T40
+      </View>
+
+      <View f-20 bgColor="rgba(1,1,1,0.1)-O40">
+        bgColor rgba(1,1,1,0.1)-O40
       </View>
 
       <View f-20 bgRed50 bgGreen50--hover>

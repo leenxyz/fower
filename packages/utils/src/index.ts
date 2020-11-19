@@ -199,7 +199,7 @@ export function opacityFn(color: string, amount: number = 0) {
   const opacity = oldOpacity + amount / 100
   const rgbValue = [r, g, b]
 
-  if (opacity === 1) return toHex(`rgb(${rgbValue.join(',')})`)
+  if (opacity >= 1) return toHex(`rgb(${rgbValue.join(',')})`)
 
   return typeof opacity === 'number'
     ? `rgba(${rgbValue.join(',')},${opacity})`
@@ -211,17 +211,19 @@ export function opacify(color: string, amount: number = 0) {
 }
 
 export function transparentize(color: string, amount: number = 0) {
+  console.log('-amount:', -amount)
   return opacityFn(color, -amount)
 }
 
 export function formatColor(value: string): string {
   if (!value.includes('-')) return value
-  const result = value.match(/^(.+)-([OLDold])?(\d{0,3})?$/)
+  const result = value.match(/^(.+)-([TOLDtold])?(\d{0,3})?$/)
   if (!result) return value
   const [, color, type, amountStr] = result
   const amount = Number(amountStr)
 
   if (!type) return type
+  console.log('type:', type)
   if (/^t$/i.test(type)) return transparentize(color, amount)
   if (/^o$/i.test(type)) return opacify(color, amount)
   if (/^d$/i.test(type)) return toHex(darken(color, amount))

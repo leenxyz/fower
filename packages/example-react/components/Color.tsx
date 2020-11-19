@@ -44,8 +44,8 @@ export const Color = () => {
         #000
       </View>
 
-      <View f-20 c="#000-O50">
-        #000-O50
+      <View f-20 c="#000-T50">
+        #000-T50
       </View>
 
       <View f-20 c="#666-D20">
@@ -64,6 +64,10 @@ export const Color = () => {
         c="green40-O20"
       </View>
 
+      <View f-20 c="green40-T20">
+        c="green40-T20"
+      </View>
+
       {/* <View f-20 c="primary">
         c="primary"
       </View>
@@ -76,15 +80,15 @@ export const Color = () => {
         green50--hover
       </View>
 
-      <View f-20 red50 green50-O20--hover>
-        green50-O20--hover
+      <View f-20 red50 green50-T20--hover>
+        green50-T20--hover
       </View>
 
       <View f-20 red50 green50-D20--hover>
-        green50-O20--hover
+        green50-D20--hover
       </View>
 
-      <View f-20 c="#000" c--hover="#000-O50">
+      <View f-20 c="#000" c--hover="#000-T50">
         #000--hover
       </View>
 
