@@ -1,6 +1,6 @@
 import { getValue, styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { downFirst, isValidPropValue, hexToRgba } from '@styli/utils'
+import { formatColor } from '@styli/utils'
 
 export function isBgKey(key: string) {
   return /^bg(.+)?$/.test(key)
@@ -29,17 +29,18 @@ export function bgPropToStyle(propKey: string, propValue: any) {
 
   const Colors = styli.getColors()
 
-  if (isValidPropValue(propValue)) {
-    const [, hex, , opacity] = propValue.match(/^(#\w+)(.(\d+))?/) || []
-    const value = Colors[hex] || hex || propValue
-    if (isBgColorKey(propKey)) {
-      return { backgroundColor: hexToRgba(value, opacity) }
-    }
-    return { background: hexToRgba(value, opacity) }
+  /** bg or bgColor */
+  if (/^bg(color)?$/i.test(propKey)) {
+    const [prefix, postfix] = propValue.split('-')
+    const color = Colors[prefix] || prefix
+    const bgKey = propKey === 'bg' ? 'background' : 'backgroundColor'
+    return { [bgKey]: postfix ? formatColor(`${color}-${postfix}`) : color }
   }
 
-  const [, color = ''] = propKey.match(/^bg(\w+)/) || []
-  return { background: Colors[downFirst(color)] }
+  const [colorType, postfix] = propKey.split('-')
+  const colorName = colorType.replace(/^bg/i, '').toLowerCase()
+  const color = Colors[colorName] || colorName
+  return { background: postfix ? formatColor(`${color}-${postfix}`) : color }
 }
 
 export default (): StyliPlugin => {

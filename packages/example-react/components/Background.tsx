@@ -16,20 +16,44 @@ export const Background = () => {
         BgRed50
       </View>
 
-      <View f-20 bgColor="#000.5">
-        bg #000.5
+      <View f-20 bgRed50-O20>
+        BgRed50-O20
+      </View>
+
+      <View f-20 bgRed50-O20 bgRed50-D20--hover>
+        BgRed50-D20--hover
+      </View>
+
+      <View f-20 bgColor="#000-O40">
+        bg #000-O40
       </View>
 
       <View f-20 bgRed50 bgGreen50--hover>
         bgGreen50--hover
       </View>
 
-      <View f-20 bg="#000" bg--hover="#000.5">
+      <View f-20 bg="green30">
+        bg="green30"
+      </View>
+
+      <View f-20 bg="green30-D20">
+        bg="green30-D20"
+      </View>
+
+      <View f-20 white bg="#000" bg--hover="#000.5">
         bg--hover="#000.5"
       </View>
 
+      <View f-20 white bg="#000-L20" bg--hover="#000">
+        bg--hover="#000"
+      </View>
+
       <View f-20 bgColor={['yellowgreen', 'deeppink', 'gray', 'info']}>
-        backgroundColor=['yellowgreen', 'deeppink', 'gray', 'info']
+        bgColor=['yellowgreen', 'deeppink', 'gray', 'info']
+      </View>
+
+      <View f-20 bg={['yellowgreen', 'deeppink', 'gray', 'info']}>
+        bg=['yellowgreen', 'deeppink', 'gray', 'info']
       </View>
 
       <View f-10 bg={`url(${IMAGEs.DEFAULT_AVATAR}) center 100%`} circle-200 center>
