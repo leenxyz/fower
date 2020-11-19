@@ -47,18 +47,35 @@ export const marginMaps: any = {
 }
 
 export function isMarginKey(key: string) {
-  return /^m[ltrbxy]?(-.+)?$/.test(key)
+  return /^m[ltrbxy]?(--?[\dA-Za-z]+){0,2}$/.test(key)
 }
 
 export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, symbol = '', value] = prop.split(/\b-*?/)
-  const [, minus = ''] = symbol.split('')
-  const marginValue = isValidPropValue(propValue) ? propValue : minus + value
+  const [key, ...values] = prop.split(/\b/)
 
-  marginMaps[key].forEach((k: any) => {
-    style[k] = getValue(marginValue, ModifierType.margin)
-  })
+  // ['--','10px', '-', '10px] => ['-10px', '10px]
+  const marginValues = values.reduce((result, cur, idx) => {
+    if (idx % 2) return result
+    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
+  }, [] as any)
+
+  // m-10px--5px
+  if (marginValues.length === 2) {
+    const [x, y] = marginValues
+    marginMaps['mx'].forEach((k: any) => {
+      style[k] = getValue(x, ModifierType.margin)
+    })
+
+    marginMaps['my'].forEach((k: any) => {
+      style[k] = getValue(y, ModifierType.margin)
+    })
+  } else {
+    const marginValue = isValidPropValue(propValue) ? propValue : marginValues[0]
+    marginMaps[key].forEach((k: any) => {
+      style[k] = getValue(marginValue, ModifierType.margin)
+    })
+  }
 
   return style
 }

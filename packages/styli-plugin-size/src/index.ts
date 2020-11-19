@@ -14,18 +14,41 @@ export const sizeMaps: any = {
 }
 
 export function isSizeKey(key: string) {
-  return /^([whs]|circle|min[HWhw]|max[HWhw])(-.+)?$/.test(key)
+  return /^([wh]|circle|min[HWhw]|max[HWhw])(-.+)?$/.test(key)
+}
+
+export function isSquareKey(key: string) {
+  return /^s(-?[\dA-Za-z]+){0,2}$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, value] = prop.split('-')
 
-  const sizeValue = isValidPropValue(propValue) ? propValue : value
+  const [key, ...values] = prop.split(/\b/)
+  const lowerKey = key.toLowerCase()
 
-  sizeMaps[key.toLowerCase()].forEach((k: any) => {
-    style[k] = getValue(sizeValue, ModifierType.size)
-  })
+  // ['-','10px', '-', '10px] => ['10px', '10px]
+  const sizeValues = values.reduce((result, cur, idx) => {
+    if (idx % 2) return result
+    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
+  }, [] as any)
+
+  // s-10px-5px
+  if (sizeValues.length === 2) {
+    const [width, height] = sizeValues
+    sizeMaps['w'].forEach((k: any) => {
+      style[k] = getValue(width, ModifierType.size)
+    })
+
+    sizeMaps['h'].forEach((k: any) => {
+      style[k] = getValue(height, ModifierType.size)
+    })
+  } else {
+    const sizeValue = isValidPropValue(propValue) ? propValue : sizeValues[0]
+    sizeMaps[lowerKey].forEach((k: any) => {
+      style[k] = getValue(sizeValue, ModifierType.margin)
+    })
+  }
 
   return style
 }
@@ -33,7 +56,9 @@ export function sizePropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-size',
-    isMatch: isSizeKey,
+    isMatch: (propKey) => {
+      return isSizeKey(propKey) || isSquareKey(propKey)
+    },
     beforeVisitProp(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []

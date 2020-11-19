@@ -16,6 +16,12 @@ export const Margin = () => {
         </View>
 
         <View inlineBlock>
+          <View m-20px-10px inlineBlock>
+            m-20px-10px
+          </View>
+        </View>
+
+        <View inlineBlock>
           <View mt4 inlineBlock>
             mt4
           </View>

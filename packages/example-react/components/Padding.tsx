@@ -34,8 +34,9 @@ export const Padding = () => {
         <View p-20 inlineBlock>
           p-20
         </View>
-        <View pt-20 inlineBlock>
-          p-20
+
+        <View p-20px-10px inlineBlock>
+          p-20px-10px
         </View>
 
         <View pt-20 inlineBlock>

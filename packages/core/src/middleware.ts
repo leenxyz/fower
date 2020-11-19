@@ -1,6 +1,6 @@
 import { Theme, StyliPlugin } from '@styli/types'
 
-const isPlainDirective = (key: string) => /^[A-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
+const isPlainDirective = (key: string) => /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
 
 export const corePlugin: StyliPlugin = {
   name: 'styli-plugin-core',

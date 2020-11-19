@@ -20,6 +20,10 @@ export const Size = () => {
           s-50
         </View>
 
+        <View s-50-100 bgBlue20>
+          s-50-100
+        </View>
+
         <View s9 bgBlue20>
           s9
         </View>

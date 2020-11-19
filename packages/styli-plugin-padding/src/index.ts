@@ -28,19 +28,35 @@ export const paddingMaps: any = {
 }
 
 export function isPaddingKey(key: string) {
-  return /^p[ltrbxy]?(-.+)?$/.test(key)
+  return /^p[ltrbxy]?(--?[\dA-Za-z]+){0,2}$/.test(key)
 }
 
 export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, value] = prop.split('-')
+  const [key, ...values] = prop.split(/\b/)
 
-  const paddingValue = isValidPropValue(propValue) ? propValue : value
+  // ['--','10px', '-', '10px] => ['-10px', '10px]
+  const paddingValues = values.reduce((result, cur, idx) => {
+    if (idx % 2) return result
+    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
+  }, [] as any)
 
-  paddingMaps[key].forEach((k: any) => {
-    style[k] = getValue(paddingValue, ModifierType.padding)
-  })
+  // p-10px--5px
+  if (paddingValues.length === 2) {
+    const [x, y] = paddingValues
+    paddingMaps['px'].forEach((k: any) => {
+      style[k] = getValue(x, ModifierType.padding)
+    })
 
+    paddingMaps['py'].forEach((k: any) => {
+      style[k] = getValue(y, ModifierType.padding)
+    })
+  } else {
+    const paddingValue = isValidPropValue(propValue) ? propValue : paddingValues[0]
+    paddingMaps[key].forEach((k: any) => {
+      style[k] = getValue(paddingValue, ModifierType.margin)
+    })
+  }
   return style
 }
 
