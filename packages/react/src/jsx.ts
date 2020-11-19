@@ -8,7 +8,7 @@ import { Sheet, styleManager, styli } from '@styli/core'
  * @param props element props
  * @param children  element children
  */
-export function jsx(element: string, props: any, ...children: any[]) {
+export function jsx(element: string, props: any = {}, ...children: any[]) {
   // Do'not handle third-party Component
   if (typeof element !== 'string') {
     return createElement.apply(null, arguments as any)
@@ -25,7 +25,7 @@ export function jsx(element: string, props: any, ...children: any[]) {
       parsedProps.style = { ...sheet.toStyles(), ...props.style }
     }
   } else {
-    const { className } = props
+    const { className = '' } = props || {}
     styleManager.insertStyles(sheet.toCss())
     const finalClassName = `${sheet.getClassNames()} ${className || ''}`.trim()
     if (finalClassName) parsedProps.className = finalClassName
