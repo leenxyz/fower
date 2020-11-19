@@ -2,9 +2,10 @@ import { noCase } from 'no-case'
 import isBrowser from 'is-in-browser'
 import isEqual from 'fast-deep-equal'
 import hash from 'string-hash'
+import { darken, lighten, toHex, getRgbaValue } from './color'
 
 export { isBrowser, hash, isEqual }
-import { darken, lighten, toHex } from './color'
+export * from './color'
 
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
@@ -193,36 +194,28 @@ export function parseCSSProp(cssObj: any, className = ''): string {
     .join(' ')
 }
 
-// https://www.zhangxinxu.com/wordpress/2010/03/javascript-hex-rgb-hsl-color-convert/
-export function hexToRgba(sColor: string, opacity?: string) {
-  const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/
+export function opacify(color: string, ammount: number = 0) {
+  const [r, g, b, oldOpacity = 0] = getRgbaValue(color)
+  const opacity = oldOpacity + ammount / 100
+  const rgbValue = [r, g, b]
 
-  if (reg.test(sColor)) {
-    if (sColor.length === 4) {
-      let sColorNew = '#'
-      for (let i = 1; i < 4; i += 1) {
-        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1))
-      }
-      sColor = sColorNew
-    }
-    let sColorChange = []
-    for (let i = 1; i < 7; i += 2) {
-      sColorChange.push(parseInt('0x' + sColor.slice(i, i + 2)))
-    }
-    return `rgba(${sColorChange.join(',')},${opacity ? '.' + opacity : '1'})`
-  }
+  if (opacity === 1) return toHex(`rgb(${rgbValue.join(',')})`)
 
-  return sColor
+  return typeof opacity === 'number'
+    ? `rgba(${rgbValue.join(',')},${opacity})`
+    : `rgb(${rgbValue.join(',')})`
 }
 
 export function formatColor(value: string): string {
   if (!value.includes('-')) return value
   const result = value.match(/^(.+)-([OLDold])?(\d{0,3})?$/)
   if (!result) return value
-  const [, color, type, amount] = result
+  const [, color, type, amountStr] = result
+  const amount = Number(amountStr)
+
   if (!type) return type
-  if (/^o$/i.test(type)) return hexToRgba(color, amount)
-  if (/^d$/i.test(type)) return toHex(darken(color, Number(amount)))
-  if (/^l$/i.test(type)) return toHex(lighten(color, Number(amount)))
+  if (/^o$/i.test(type)) return opacify(color, amount)
+  if (/^d$/i.test(type)) return toHex(darken(color, amount))
+  if (/^l$/i.test(type)) return toHex(lighten(color, amount))
   return color
 }
