@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-position",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-position.esm.js",
   "dependencies": {
-    "@styli/core": "^0.14.0",
-    "@styli/types": "^0.14.0",
-    "@styli/utils": "^0.14.0"
+    "@styli/core": "^0.15.0",
+    "@styli/types": "^0.15.0",
+    "@styli/utils": "^0.15.0"
   }
 }

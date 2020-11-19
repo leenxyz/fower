@@ -1,6 +1,6 @@
 {
   "name": "@styli/utils",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
