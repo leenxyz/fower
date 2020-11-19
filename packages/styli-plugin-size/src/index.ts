@@ -18,7 +18,7 @@ export function isSizeKey(key: string) {
 }
 
 export function isSquareKey(key: string) {
-  return /^s(-?[\dA-Za-z]+){0,2}$/.test(key)
+  return /^s(-[\dA-Za-z]+){0,2}$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
