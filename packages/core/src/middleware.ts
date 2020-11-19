@@ -1,6 +1,6 @@
 import { Theme, StyliPlugin } from '@styli/types'
 
-const isPlainDirective = (key: string) => /^\w+(--?\w+)?$/.test(key)
+const isPlainDirective = (key: string) => /^[A-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
 
 export const corePlugin: StyliPlugin = {
   name: 'styli-plugin-core',
@@ -17,7 +17,7 @@ export const corePlugin: StyliPlugin = {
 
     /**
      * ignore not plain directive
-     * TODO: 注释
+     * example: <View p1></View>
      */
     if (!isPlainDirective(propKey)) return atom
 
