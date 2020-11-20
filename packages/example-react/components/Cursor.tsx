@@ -40,6 +40,18 @@ export const Cursor = () => {
         <View s-100 center bgBlue30 cursor="alias">
           cursor=alias
         </View>
+
+        <View s-100 center bgBlue30 cursor="not-allowed">
+          cursor="not-allowed"
+        </View>
+
+        <View s-100 center bgBlue30 cursorNotAllowed>
+          cursorNotAllowed
+        </View>
+
+        <View s-100 center bgBlue30 cursorSResize>
+          cursorSResize
+        </View>
       </View>
     </View>
   )

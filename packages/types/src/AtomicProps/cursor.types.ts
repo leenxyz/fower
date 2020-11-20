@@ -1,26 +1,42 @@
-import { PropValue } from './common.types'
+import { Property } from 'csstype'
 
 export interface Cursor {
-  cursor?: PropValue
+  cursor?: Property.Cursor | Property.Cursor[] | boolean
 
-  cursorNone?: boolean
-  cursornone?: boolean
-
-  cursorHelp?: boolean
-  cursorhelp?: boolean
-
-  cursorPointer?: boolean
-  cursorpointer?: boolean
-
-  cursorProgress?: boolean
-  cursorprogress?: boolean
-
+  cursorAlias?: boolean
+  cursorAllScroll?: boolean
+  cursorAuto?: boolean
   cursorCell?: boolean
-  cursorcell?: boolean
-
+  cursorColResize?: boolean
+  cursorContextMenu?: boolean
   cursorCopy?: boolean
-  cursorcopy?: boolean
-
+  cursorCrosshair?: boolean
+  cursorDefault?: boolean
+  cursorEResize?: boolean
+  cursorEwResize?: boolean
   cursorGrab?: boolean
-  cursorgrab?: boolean
+  cursorGrabbing?: boolean
+  cursorHelp?: boolean
+  cursorMove?: boolean
+  cursorNResize?: boolean
+  cursorCursorneResize?: boolean
+  cursorNeswResize?: boolean
+  cursorNoDrop?: boolean
+  cursorNone?: boolean
+  cursorNotAllowed?: boolean
+  cursorNsResize?: boolean
+  cursorNwResize?: boolean
+  cursorNwseResize?: boolean
+  cursorPointer?: boolean
+  cursorProgress?: boolean
+  cursorRowResize?: boolean
+  cursorSResize?: boolean
+  cursorSeResize?: boolean
+  cursorSwResize?: boolean
+  cursorText?: boolean
+  cursorVerticalText?: boolean
+  cursorWResize?: boolean
+  cursorWait?: boolean
+  cursorZoomIn?: boolean
+  cursorZoomOut?: boolean
 }

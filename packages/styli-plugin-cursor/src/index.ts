@@ -1,16 +1,14 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { kebab } from '@styli/utils'
 
 export function isCursorKey(key: string) {
-  return /^cursor([Nn]one|[Hh]elp|[Pp]ointer|[Pp]rogress|[Cc]ell|[Cc]opy|[Gg]rab)$|^cursor$/.test(
-    key,
-  )
+  return /^cursor[a-z]*?$/i.test(key)
 }
 
 export function cursorPropToStyle(prop: string, propValue: any): any {
-  const [, value] =
-    prop.match(/^cursor([Nn]one|[Hh]elp|[Pp]ointer|[Pp]rogress|[Cc]ell|[Cc]opy|[Gg]rab)$/) || []
-  return { cursor: isValidPropValue(propValue) ? propValue : value?.toLowerCase() || 'pointer' }
+  if (prop === 'cursor') return { cursor: propValue }
+  const value = prop.replace('cursor', '')
+  return { cursor: kebab(value) }
 }
 
 export default (): StyliPlugin => {
