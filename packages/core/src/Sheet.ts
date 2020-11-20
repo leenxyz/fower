@@ -57,18 +57,21 @@ export class Sheet {
         continue
       }
 
-      /** falsy props */
-      if (
-        (typeof propValue === 'boolean' && propValue === false) ||
-        typeof propValue === 'undefined' ||
-        propKey === null
-      ) {
-        this.atoms.push({ ...initialAtom, falsy: true })
-        continue
-      }
-
       for (const plugin of plugins) {
         let atom = { ...initialAtom }
+
+        if (plugin.isMatch!(atom.propKey)) {
+          /** falsy props */
+          if (
+            (typeof propValue === 'boolean' && propValue === false) ||
+            (typeof propValue === 'function' && propValue(this.theme, props) === false) ||
+            typeof propValue === 'undefined' ||
+            propKey === null
+          ) {
+            this.atoms.push({ ...initialAtom, falsy: true })
+            break
+          }
+        }
 
         // before
         if (plugin.beforeVisitProp) {
@@ -151,10 +154,10 @@ export class Sheet {
    * get style object
    */
   toStyles() {
-    return this.atoms.reduce((result, cur) => {
-      if (cur.type !== 'style') return result // not style type
-      if (cur.falsy) return result // no style in falsy prop
-      return { ...result, ...cur.style }
+    return this.atoms.reduce((result, atom) => {
+      if (atom.type !== 'style') return result // not style type
+      if (atom.falsy) return result // no style in falsy prop
+      return { ...result, ...atom.style }
     }, {} as CSSProperties)
   }
 
