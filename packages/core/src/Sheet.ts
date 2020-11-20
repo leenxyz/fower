@@ -40,8 +40,6 @@ export class Sheet {
     const [middleware, plugins] = styli.getPlugins()
     const middlewareList = [corePlugin, ...middleware]
 
-    const atoms: Atom[] = []
-
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style' } as Atom
@@ -55,36 +53,41 @@ export class Sheet {
        * if propValue is object, don't use cache
        */
       if (pluginCacheValue && propValueIsPlainType) {
-        atoms.push(pluginCacheValue)
-      } else {
-        for (const plugin of plugins) {
-          let atom = { ...initialAtom }
+        this.atoms.push(pluginCacheValue)
+        continue
+      }
 
-          // before
-          if (plugin.beforeVisitProp) {
-            atom = plugin.beforeVisitProp(atom, this as any)
+      /** falsy props */
+      if (typeof propValue === 'boolean' && propValue === false) {
+        this.atoms.push({ ...initialAtom, falsy: true })
+        continue
+      }
+
+      for (const plugin of plugins) {
+        let atom = { ...initialAtom }
+
+        // before
+        if (plugin.beforeVisitProp) {
+          atom = plugin.beforeVisitProp(atom, this as any)
+        }
+
+        // during
+        atom = middlewareList.reduce((finalAtom, middleware) => {
+          return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
+        }, atom)
+
+        if (!isEqual(atom, initialAtom)) {
+          const newAtom = this.createAtomClassName(atom)
+          this.atoms.push(newAtom)
+
+          // hack for layout engine
+          if (!['top', 'right', 'bottom', 'left'].includes(atom.propKey)) {
+            styli.atomCache[pluginCacheKey] = newAtom
           }
-
-          // during
-          atom = middlewareList.reduce((finalAtom, middleware) => {
-            return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
-          }, atom)
-
-          if (!isEqual(atom, initialAtom)) {
-            const newAtom = this.createAtomClassName(atom)
-            atoms.push(newAtom)
-
-            // hack for layout engine
-            if (!['top', 'right', 'bottom', 'left'].includes(atom.propKey)) {
-              styli.atomCache[pluginCacheKey] = newAtom
-            }
-            break
-          }
+          break
         }
       }
     }
-
-    this.atoms = atoms
 
     /** run afterVisitProp */
     Object.keys(props).forEach((propKey) => {
@@ -145,7 +148,8 @@ export class Sheet {
    */
   toStyles() {
     return this.atoms.reduce((result, cur) => {
-      if (cur.type !== 'style') return result
+      if (cur.type !== 'style') return result // not style type
+      if (cur.falsy) return result // no style in falsy prop
       return { ...result, ...cur.style }
     }, {} as CSSProperties)
   }
@@ -160,6 +164,9 @@ export class Sheet {
       const { className = '', type, style = {} } = atom
 
       if (styli.classNameCache[className] || isEmptyObj(style)) return result
+
+      // no style in falsy prop
+      if (atom.falsy) return result
 
       if (className) styli.classNameCache[className] = true
 
