@@ -35,6 +35,7 @@ export const corePlugin: StyliPlugin = {
      * example <View c={theme => theme.colors.green20}></View>
      */
     if (typeof atom.propValue === 'function') {
+      console.log('atom:', atom)
       atom.propValue = atom.propValue(theme, sheet.props)
     }
 
