@@ -35,7 +35,7 @@ export const corePlugin: StyliPlugin = {
      * example <View c={theme => theme.colors.green20}></View>
      */
     if (typeof atom.propValue === 'function') {
-      atom.propValue = atom.propValue(theme)
+      atom.propValue = atom.propValue(theme, sheet.props)
     }
 
     return plugin.onVisitProp!(atom, sheet)

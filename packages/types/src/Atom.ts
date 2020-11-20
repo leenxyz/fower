@@ -3,7 +3,7 @@ import { Theme } from './Theme'
 export interface Atom {
   propKey: 'css' | 'debug' | 'reset' | ({} & string)
 
-  propValue: string | number | boolean | CSSObject | ((theme: Theme) => any)
+  propValue: string | number | boolean | CSSObject | ((theme: Theme, props: any) => any)
 
   /**
    * if propKey is designSystem key like

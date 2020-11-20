@@ -58,7 +58,11 @@ export class Sheet {
       }
 
       /** falsy props */
-      if (typeof propValue === 'boolean' && propValue === false) {
+      if (
+        (typeof propValue === 'boolean' && propValue === false) ||
+        typeof propValue === 'undefined' ||
+        propKey === null
+      ) {
         this.atoms.push({ ...initialAtom, falsy: true })
         continue
       }
