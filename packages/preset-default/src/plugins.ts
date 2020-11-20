@@ -27,6 +27,7 @@ import css from 'styli-plugin-css'
 import reset from 'styli-plugin-reset'
 import pseudo from 'styli-plugin-pseudo'
 import mediaQueries from 'styli-plugin-media-queries'
+import space from 'styli-plugin-space'
 
 export const plugins = [
   debug(),
@@ -58,4 +59,5 @@ export const plugins = [
   ellipsis(),
   pseudo(),
   mediaQueries(),
+  space(),
 ]

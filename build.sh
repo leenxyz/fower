@@ -9,6 +9,7 @@ Sequential=("
 
 Parallel=("
   styli-plugin-background
+  styli-plugin-space
   styli-plugin-border
   styli-plugin-color
   styli-plugin-display

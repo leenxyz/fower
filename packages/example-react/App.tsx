@@ -1,6 +1,5 @@
 import React from 'react'
-import { styli, createStyle } from '@styli/core'
-import presetDefault from '@styli/preset-default'
+import { styli } from '@styli/core'
 import { ThemeProvider } from '@styli/theming'
 import { Color } from './components/Color'
 import { Padding } from './components/Padding'
@@ -14,7 +13,7 @@ import { OutLine } from './components/OutLine'
 import { CSSProp } from './components/CSSProp'
 import { LayoutEngine } from './components/LayoutEngine'
 import { Cursor } from './components/Cursor'
-import { View } from '@styli/react'
+import { Space } from './components/Space'
 
 // const myClassName = css('p-20 mx-10 borderGray-1 f-40')
 
@@ -25,6 +24,7 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider theme={styli.getTheme()}>
+        <Space></Space>
         <Cursor></Cursor>
         <Background></Background>
         <Color></Color>
