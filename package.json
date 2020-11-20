@@ -5,7 +5,11 @@
   "description": "A style library for rapid UI development.",
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "examples/*",
+      "bone-ui/*",
+      "website",
+      "website-cn"
     ]
   },
   "scripts": {
