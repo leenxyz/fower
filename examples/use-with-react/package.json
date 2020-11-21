@@ -1,4 +1,5 @@
 {
+  "name": "use-with-react",
   "private": true,
   "scripts": {
     "start": "umi dev",

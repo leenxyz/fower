@@ -7,13 +7,13 @@ export function isSpaceKey(key: string) {
 }
 
 const spaceMap: any = {
-  all: ['margin-left', 'margin-right', 'margin-top', 'margin-bottom'],
-  x: ['margin-left', 'margin-right'],
-  y: ['margin-top', 'margin-bottom'],
+  all: ['margin-right', 'margin-bottom'],
+  x: ['margin-right'],
+  y: ['margin-bottom'],
 }
 
 export function spacePropToStyle(propKey: string, propValue: any) {
-  const [, pos = 'all', , val] = propKey.match(/^space([XY])?(-([\dA-Za-z]+))?$/) || []
+  const [, pos = 'all', , val] = propKey.match(/^space([XY])?(-([\dA-Za-z]+))?$/i) || []
   const position = pos.toLowerCase() as any
 
   const value = isValidPropValue(propValue) ? propValue : val
@@ -24,7 +24,7 @@ export function spacePropToStyle(propKey: string, propValue: any) {
   })
 
   return {
-    '>div': {
+    '>*:not(:last-child)': {
       ...style,
     },
   }
