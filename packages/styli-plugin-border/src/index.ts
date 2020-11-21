@@ -1,6 +1,6 @@
-import { styli } from '@styli/core'
+import { getValue, styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { formatColor } from '@styli/utils'
+import { formatColor, isNumber } from '@styli/utils'
 
 export const G = {
   top: 'Top',
@@ -19,7 +19,7 @@ export const positionMaps: { [key: string]: string[] } = {
 }
 
 export function isBorderKey(key: string) {
-  return /^border(T|R|B|L|X|Y|t|r|b|l|x|y)?$/.test(key)
+  return key.startsWith('border')
 }
 
 // TODO: 这里强制了颜色写在最后
@@ -37,16 +37,24 @@ function formatBorderValue(value: string) {
 }
 
 export function borderPropToStyle(prop: string, propValue: any) {
-  let style: any = {}
+  if (prop === 'border') {
+    return { border: formatBorderValue(propValue) }
+  }
+
   const position = prop.replace(/^border/, '')
-  if (position) {
+  if (positionMaps[position.toUpperCase()]) {
+    let style: any = {}
     positionMaps[position.toUpperCase()].map((item) => {
       style[`border${item}`] = formatBorderValue(propValue)
     })
-  } else {
-    style.border = formatBorderValue(propValue)
+
+    return style
   }
 
+  const Colors = styli.getColors()
+  const style = {
+    [prop]: Colors[propValue] || isNumber(propValue) ? getValue(propValue) : propValue,
+  }
   return style
 }
 

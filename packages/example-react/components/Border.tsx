@@ -41,6 +41,10 @@ export const Border = () => {
         <View s-100 border="4px solid gray" border--hover="4px solid red30-D5">
           border--hover="1px solid red30"
         </View>
+
+        <View s-100 borderTopWidth={1} borderTopStyle="solid" borderTopColor="brown">
+          borderTopWidth="1px" BorderTopStyle="solid" borderTopColor="brown"
+        </View>
       </View>
     </View>
   )
