@@ -14,6 +14,7 @@ import { OverFlows } from './overflow.types'
 import { OutLine } from './outline.types'
 import { CSSObject } from '../CSSObject'
 import { Cursor } from './cursor.types'
+import { Spaces } from './space.types'
 export interface AtomicProps
   extends Sizes,
     Paddings,
@@ -30,7 +31,8 @@ export interface AtomicProps
     OverFlows,
     OutLine,
     Cursor,
-    Opacity {
+    Opacity,
+    Spaces {
   css?: CSSObject
   debug?: boolean | CSSObject
   debugChildren?: boolean | CSSObject
