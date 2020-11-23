@@ -1,0 +1,18 @@
+{
+  "name": "@styli/example-babel",
+  "version": "0.15.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "npm -v"
+  },
+  "dependencies": {
+    "@styli/react": "^0.15.1"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "@babel/core": "^7.12.7",
+    "@styli/babel-preset-styli": "^0.15.1"
+  }
+}
