@@ -25,7 +25,12 @@ export const corePlugin: StyliPlugin = {
      * propValue is false, collect propKey and ignore it
      * example <View w={false}></View>
      */
-    if (propValue === false) {
+    if (
+        propValue === false ||
+        propKey === null ||
+        typeof propValue === 'undefined' ||
+        typeof propValue === 'function' && propValue(theme, sheet.props) === false
+    ) {
       atom.type = 'invalid'
       return atom
     }

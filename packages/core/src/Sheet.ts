@@ -60,19 +60,6 @@ export class Sheet {
       for (const plugin of plugins) {
         let atom = { ...initialAtom }
 
-        if (plugin.isMatch!(atom.propKey)) {
-          /** falsy props */
-          if (
-            (typeof propValue === 'boolean' && propValue === false) ||
-            (typeof propValue === 'function' && propValue(this.theme, props) === false) ||
-            typeof propValue === 'undefined' ||
-            propKey === null
-          ) {
-            this.atoms.push({ ...initialAtom, falsy: true })
-            break
-          }
-        }
-
         // before
         if (plugin.beforeVisitProp) {
           atom = plugin.beforeVisitProp(atom, this as any)
@@ -156,7 +143,6 @@ export class Sheet {
   toStyles() {
     return this.atoms.reduce((result, atom) => {
       if (atom.type !== 'style') return result // not style type
-      if (atom.falsy) return result // no style in falsy prop
       return { ...result, ...atom.style }
     }, {} as CSSProperties)
   }
@@ -170,10 +156,10 @@ export class Sheet {
     const css = this.atoms.reduce((result, atom) => {
       const { className = '', type, style = {} } = atom
 
-      if (styli.classNameCache[className] || isEmptyObj(style)) return result
-
       // no style in falsy prop
-      if (atom.falsy) return result
+      if (type === 'invalid')  return result      
+
+      if (styli.classNameCache[className] || isEmptyObj(style)) return result
 
       if (className) styli.classNameCache[className] = true
 
