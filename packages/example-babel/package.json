@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "npm -v"
+    "start": "parcel index.html --no-cache",
+    "build": "npm -v",
+    "compile": "tsc babelPlugin/*.ts --outDir babelPlugin/dist"
   },
   "dependencies": {
     "@styli/react": "^0.15.1"
