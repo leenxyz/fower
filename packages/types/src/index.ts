@@ -6,3 +6,5 @@ export { StyliPlugin } from './StyliPlugin'
 export { SheetType } from './SheetType'
 export { Props } from './Props'
 export { Preset, Configuration, ModifierType, Cache } from './Configuration'
+
+export * from './StyliHTMLProps'
