@@ -85,29 +85,5 @@ export default (): StyliPlugin => {
       atom.style = borderPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
-
-    // TODO: 不够优雅
-    afterVisitProp(sheet) {
-      const borderAtom = sheet.atoms.find(({ propKey }) => propKey === 'border-style-solid')
-
-      /** set global border style */
-      if (!borderAtom) {
-        sheet.atoms.push({
-          key: 'styli-border-reset',
-          propKey: 'styli-border-reset',
-          className: 'styli-border-reset',
-          propValue: '',
-          type: 'global',
-          style: {
-            '*': {
-              // border: '0 solid #ccc',
-              borderWidth: 0,
-              borderStyle: 'solid',
-              borderColor: '#ccc',
-            },
-          },
-        })
-      }
-    },
   }
 }
