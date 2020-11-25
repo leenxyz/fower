@@ -8,4 +8,5 @@ export const Heading = styled('h2')
 export const Input = styled('input')
 export const Svg = styled('svg')
 
+export { Box } from './Box'
 export { jsx } from './jsx'
