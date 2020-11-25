@@ -14,8 +14,8 @@ import { CSSProp } from './components/CSSProp'
 import { LayoutEngine } from './components/LayoutEngine'
 import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
-import { View } from '@styli/react'
 import { Shadow } from './components/Shadow'
+import { BoxDemo } from './components/Box'
 
 // const myClassName = css('p-20 mx-10 borderGray-1 f-40')
 
@@ -26,6 +26,7 @@ export const App = () => {
   return (
     <div className="box">
       <ThemeProvider theme={styli.getTheme()}>
+        <BoxDemo></BoxDemo>
         <Space></Space>
         <Shadow></Shadow>
         <Cursor></Cursor>

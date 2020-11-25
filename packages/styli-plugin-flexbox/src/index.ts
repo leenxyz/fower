@@ -115,7 +115,8 @@ export default (): StyliPlugin => {
         })
       }
 
-      const flexAtom = sheet.atoms.find((i) => i.propKey === 'display-flex')
+      // TODO: 不严谨
+      const flexAtom = sheet.atoms.find((i) => i.propKey.startsWith('display'))
 
       if (!flexAtom) {
         sheet.atoms.push({
