@@ -5,7 +5,23 @@ export const Border = () => {
   return (
     <View>
       <Heading>Border</Heading>
-      <View f-12 evenly wrap>
+      <View f-12 wrap space-10>
+        <View s-100 border>
+          border
+        </View>
+
+        <View s-100 border-2>
+          border-2
+        </View>
+
+        <View s-100 border borderRed50>
+          borderRed50
+        </View>
+
+        <View s-100 border-2 borderRed50 borderDashed>
+          borderDashed
+        </View>
+
         <View s-100 border="1px solid gray">
           border="1px solid gray"
         </View>

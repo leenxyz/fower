@@ -24,13 +24,13 @@ export function isBorderKey(key: string) {
 
 // TODO: 这里强制了颜色写在最后
 function formatBorderValue(value: string) {
-  const Colors = styli.getColors()
+  const colors = styli.getColors()
   const result = value.split(/\s+/)
 
   // if not like: 1px solid #555
   if (result.length !== 3) return value
   const [prefix, postfix] = result[2].split('-')
-  const color = Colors[prefix] || prefix
+  const color = colors[prefix] || prefix
 
   result[2] = postfix ? formatColor(`${color}-${postfix}`) : color
   return result.join(' ')
@@ -44,21 +44,37 @@ export function borderPropToStyle(prop: string, propValue: any) {
     return { border: formatBorderValue(propValue) }
   }
 
-  const position = prop.replace(/^border/, '')
-  if (positionMaps[position.toUpperCase()]) {
+  const colors = styli.getColors()
+  const postfix = prop.replace(/^border/, '')
+
+  /** @example borderSolid,borderDashed-2 */
+  if (/^(Solid|Dashed|Dotted|Double|None)$/i.test(postfix)) {
+    return { borderStyle: postfix.toLowerCase() }
+  }
+
+  /** @example border-0,border-1,border-2 */
+  if (/^-\d+$/.test(postfix)) {
+    return { borderWidth: getValue(postfix.replace(/^-/, '')) }
+  }
+
+  /** @example borderT, borderR */
+  if (positionMaps[postfix.toUpperCase()]) {
     let style: any = {}
-    positionMaps[position.toUpperCase()].map((item) => {
+    positionMaps[postfix.toUpperCase()].map((item) => {
       style[`border${item}`] = formatBorderValue(propValue)
     })
-
     return style
   }
 
-  const Colors = styli.getColors()
-  const style = {
-    [prop]: Colors[propValue] || isNumber(propValue) ? getValue(propValue) : propValue,
+  /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
+  if (styli.isStyliColor(postfix)) {
+    console.log('postfix:', postfix)
+    return { borderColor: styli.getColorValue(postfix) }
   }
-  return style
+
+  return {
+    [prop]: colors[propValue] || isNumber(propValue) ? getValue(propValue) : propValue,
+  }
 }
 
 export default (): StyliPlugin => {
