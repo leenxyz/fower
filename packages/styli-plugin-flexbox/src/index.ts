@@ -106,6 +106,7 @@ export default (): StyliPlugin => {
 
       if (!directionAtom) {
         sheet.atoms.push({
+          key: 'direction-' + direction,
           propKey: 'direction-' + direction,
           propValue: '',
           className: 'direction-' + direction,
@@ -118,6 +119,7 @@ export default (): StyliPlugin => {
 
       if (!flexAtom) {
         sheet.atoms.push({
+          key: 'display-flex',
           propKey: 'display-flex',
           propValue: '',
           className: 'display-flex',
