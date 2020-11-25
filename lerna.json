@@ -1,10 +1,6 @@
 {
   "packages": [
-    "packages/*",
-    "examples/*",
-    "bone-ui/*",
-    "website",
-    "website-cn"
+    "packages/*"
   ],
   "npmClient": "yarn",
   "useWorkspaces": true,
