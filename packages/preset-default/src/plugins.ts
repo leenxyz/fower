@@ -28,6 +28,7 @@ import reset from 'styli-plugin-reset'
 import pseudo from 'styli-plugin-pseudo'
 import mediaQueries from 'styli-plugin-media-queries'
 import space from 'styli-plugin-space'
+import niche from 'styli-plugin-niche'
 
 export const plugins = [
   debug(),
@@ -60,4 +61,5 @@ export const plugins = [
   pseudo(),
   mediaQueries(),
   space(),
+  niche()
 ]
