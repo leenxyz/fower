@@ -98,7 +98,6 @@ export default (): StyliPlugin => {
       return {
         ...atom,
         propKey: key,
-        designSystemKey: propKey,
         propValue: spacing[Number(value)],
         className: propKey,
       }

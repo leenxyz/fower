@@ -19,10 +19,9 @@ export class Sheet {
    * atom parsed from props
    */
   atoms: Atom[] = []
-  className: string
+  className: string = ''
 
   constructor(readonly props: Props = {}, private theme: Theme) {
-    this.className = ''
     this.traverseProps(props)
   }
 
@@ -42,11 +41,10 @@ export class Sheet {
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
-      const initialAtom = { propKey, propValue, type: 'style' } as Atom
+      const initialAtom = { propKey, propValue, type: 'style', key: propKey, cache: true } as Atom
 
       const propValueIsPlainType = isPlainType(propValue)
       const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
-
       const pluginCacheValue = styli.atomCache[pluginCacheKey]
 
       /**
@@ -74,8 +72,7 @@ export class Sheet {
           const newAtom = this.createAtomClassName(atom)
           this.atoms.push(newAtom)
 
-          // hack for layout engine
-          if (!['top', 'right', 'bottom', 'left'].includes(atom.propKey)) {
+          if (newAtom.cache) {
             styli.atomCache[pluginCacheKey] = newAtom
           }
           break
@@ -157,7 +154,7 @@ export class Sheet {
       const { className = '', type, style = {} } = atom
 
       // no style in falsy prop
-      if (type === 'invalid')  return result      
+      if (type === 'invalid') return result
 
       if (styli.classNameCache[className] || isEmptyObj(style)) return result
 
@@ -214,7 +211,7 @@ export class Sheet {
     const { props, atoms } = this
     if (!props) return {}
     return Object.keys(props).reduce((result: Props, cur: any) => {
-      const find = atoms.find((atom) => atom.propKey === cur || atom.designSystemKey === cur)
+      const find = atoms.find((atom) => atom.key === cur)
       return find ? result : { ...result, [cur]: props[cur] }
     }, {} as Props)
   }

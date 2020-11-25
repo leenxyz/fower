@@ -131,6 +131,7 @@ export default (): StyliPlugin => {
       if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
         const direction = getDirection(sheet.props)
         atom.className = direction + '-' + atom.propKey
+        atom.cache = false
       }
       return atom
     },
@@ -142,6 +143,7 @@ export default (): StyliPlugin => {
 
       if (!directionAtom) {
         sheet.atoms.push({
+          key: 'direction-' + direction,
           propKey: 'direction-' + direction,
           propValue: '',
           className: 'direction-' + direction,
@@ -154,6 +156,7 @@ export default (): StyliPlugin => {
 
       if (!flexAtom) {
         sheet.atoms.push({
+          key: 'display-flex',
           propKey: 'display-flex',
           propValue: '',
           className: 'display-flex',

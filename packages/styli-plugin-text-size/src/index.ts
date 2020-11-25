@@ -35,7 +35,6 @@ export default (): StyliPlugin => {
         ...atom,
         propKey: key,
         propValue: fontSizes[Number(value)],
-        designSystemKey: propKey,
         className: propKey,
       }
     },

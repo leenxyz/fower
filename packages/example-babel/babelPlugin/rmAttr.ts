@@ -7,14 +7,8 @@ export function rmAttr(path: any, sheet, props) {
       const atomLength = sheet.atoms.length
       for (let i = 0; i < atomLength; i++) {
         const atom = sheet.atoms[i]
-        if (atom.propKey in props) {
-          if (nodeName === atom.propKey) {
-            path.remove()
-            continue
-          }
-        }
-        if (atom.designSystemKey in props) {
-          if (nodeName === atom.designSystemKey) {
+        if (atom.key in props) {
+          if (nodeName === atom.key) {
             path.remove()
             continue
           }
