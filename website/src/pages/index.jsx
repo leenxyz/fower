@@ -17,7 +17,6 @@ const features = [
   },
   {
     title: 'Scoped style',
-
     description: (
       <>Borned with scoped styles, So don't worry any conflicts due to the globalnamespace.</>
     ),

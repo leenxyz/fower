@@ -1,6 +1,8 @@
 import { CSSObject } from './CSSObject'
 import { Theme } from './Theme'
 
+type AtomType = 'style' | 'prefix' | 'no-prefix' | 'media-queries' | 'invalid' | 'global'
+
 export interface Atom {
   /**
    * propKey may changed by plugin, so use key record origin propKey
@@ -64,4 +66,3 @@ export interface Atom {
  * <View p={false} w={() => false}></View>
  * ```
  */
-type AtomType = 'style' | 'prefix' | 'no-prefix' | 'media-queries' | 'invalid'

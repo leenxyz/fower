@@ -164,6 +164,11 @@ export class Sheet {
         return result + parseCSSProp(style, className)
       }
 
+      /** global style */
+      if (type === 'global') {
+        return result + parseCSSProp(style)
+      }
+
       if (type === 'no-prefix') {
         return result + parseCSSProp(style)
       }

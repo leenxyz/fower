@@ -8,7 +8,7 @@ export const BoxDemo = () => {
       <Box as="span" p2 orange40>
         Span1
       </Box>
-      <Box as="span" green40>
+      <Box as="span" green40 border>
         Span2
       </Box>
       <Box as="input" outlineNone border p2 block></Box>
