@@ -7,7 +7,7 @@ export default (): StyliPlugin => {
       return key === 'reset'
     },
     onVisitProp(atom) {
-      atom.type = 'no-prefix'
+      atom.type = 'global'
 
       if (atom.propValue === true) {
         atom.style = {

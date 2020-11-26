@@ -1,13 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 
-const keys = [
-  'transform',
-  'transition',
-  'whiteSpace',
-  'verticalAlign',
-  'appearance',
-  'userSelect',
-]
+const keys = ['transform', 'transition', 'whiteSpace', 'verticalAlign', 'appearance', 'userSelect']
 
 export default (): StyliPlugin => {
   return {
@@ -16,7 +9,7 @@ export default (): StyliPlugin => {
     onVisitProp(atom) {
       const { propKey, propValue } = atom
       atom.style = {
-        [propKey]: propValue
+        [propKey]: propValue,
       }
       return atom
     },

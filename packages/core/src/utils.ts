@@ -1,4 +1,4 @@
-import { isNumber, isPercentNumber } from '@styli/utils'
+import { downFirst, formatColor, isNumber, isPercentNumber } from '@styli/utils'
 import { ModifierType, Props } from '@styli/types'
 import { styli } from './styli'
 
@@ -14,6 +14,14 @@ export function getValue(value: string | number, modifierType?: ModifierType | (
     return transformUnit(numValue, modifierType)
   }
   return isPercentNumber(value) ? ('' + value).replace('p', '%') : value
+}
+
+export function getColorValue(value: string = '') {
+  const colors = styli.getColors()
+  if (!value.includes('-')) return colors[downFirst(value)]
+  const [prefix, postfix] = value.split('-')
+  let color = colors[prefix] ? colors[prefix] : prefix
+  return formatColor(`${color}-${postfix}`)
 }
 
 /**

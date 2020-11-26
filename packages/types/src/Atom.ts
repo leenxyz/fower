@@ -1,7 +1,7 @@
 import { CSSObject } from './CSSObject'
 import { Theme } from './Theme'
 
-type AtomType = 'style' | 'prefix' | 'no-prefix' | 'media-queries' | 'invalid' | 'global'
+type AtomType = 'style' | 'prefix' | 'global' | 'media-queries' | 'invalid'
 
 export interface Atom {
   /**
@@ -49,7 +49,7 @@ export interface Atom {
  * the className will auto add by styli core
  * ```
  *
- * type no-prefix. convert result should not add a className and it can not be used in inline style
+ * type global. convert result should not add a className and it can not be used in inline style
  * @example
  * ```
  * <View clear></View>

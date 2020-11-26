@@ -23,7 +23,7 @@ describe('styli-plugin-reset', () => {
           padding: 0,
         },
       },
-      type: 'no-prefix',
+      type: 'global',
     }
 
     expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)

@@ -21,7 +21,7 @@ export default (): StyliPlugin => {
       const typesMap: any = {
         debug: 'prefix',
         debugchildren: 'prefix',
-        debugall: 'no-prefix',
+        debugall: 'global',
       }
       const key = atom.propKey.toLowerCase()
 

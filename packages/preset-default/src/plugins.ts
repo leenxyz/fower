@@ -61,5 +61,5 @@ export const plugins = [
   pseudo(),
   mediaQueries(),
   space(),
-  niche()
+  niche(),
 ]
