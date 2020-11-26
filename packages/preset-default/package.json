@@ -53,7 +53,6 @@
     "styli-plugin-text-transform": "^0.15.1",
     "styli-plugin-text-weight": "^0.15.1",
     "styli-plugin-z-index": "^0.15.1",
-    "styli-plugin-space": "^0.15.1",
-    "styli-plugin-niche": "^0.15.1"
+    "styli-plugin-space": "^0.15.1"
   }
 }

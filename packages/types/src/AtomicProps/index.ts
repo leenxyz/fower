@@ -15,7 +15,6 @@ import { OutLine } from './outline.types'
 import { CSSObject } from '../CSSObject'
 import { Cursor } from './cursor.types'
 import { Spaces } from './space.types'
-import { Niches } from './niche.types'
 export interface AtomicProps
   extends Sizes,
     Paddings,
@@ -33,8 +32,8 @@ export interface AtomicProps
     OutLine,
     Cursor,
     Opacity,
-    Spaces,
-    Niches {
+    Spaces
+    {
   css?: CSSObject
   debug?: boolean | CSSObject
   debugChildren?: boolean | CSSObject
