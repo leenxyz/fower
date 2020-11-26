@@ -1,12 +1,12 @@
-import { Property } from 'csstype'
+import { StyliColor } from '@styli/types'
 import { Theme } from '../Theme'
 
-type BgFn = (theme: Theme) => Property.Color | Property.Color[]
+type BgFn = (theme: Theme) => StyliColor | StyliColor[]
 
 export interface Backgrounds {
-  bg?: Property.Color | Property.Color[] | BgFn
+  bg?: StyliColor | StyliColor[] | BgFn
 
-  bgColor?: Property.Color | Property.Color[] | BgFn
+  bgColor?: StyliColor | StyliColor[] | BgFn
 
   bgImg?: string
 

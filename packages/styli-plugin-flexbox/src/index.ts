@@ -115,17 +115,18 @@ export default (): StyliPlugin => {
         })
       }
 
-      // TODO: 不严谨
-      const flexAtom = sheet.atoms.find((i) => i.propKey.startsWith('display'))
+      const displayAtom = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
 
-      if (!flexAtom) {
+      if (!displayAtom) {
         sheet.atoms.push({
           key: 'display-flex',
           propKey: 'display-flex',
           propValue: '',
           className: 'display-flex',
           type: 'style',
-          style: { display: 'flex' as any },
+          cache: true,
+          matchedPlugin: 'styli-plugin-display',
+          style: { display: 'flex' },
         })
       }
     },

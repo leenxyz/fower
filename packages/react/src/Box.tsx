@@ -21,3 +21,4 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const Comp = styled(as)
   return React.createElement(Comp, { ref, ...props })
 }) as any
+

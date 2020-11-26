@@ -69,7 +69,11 @@ export class Sheet {
         }, atom)
 
         if (!isEqual(atom, initialAtom)) {
-          const newAtom = this.createAtomClassName(atom)
+          const newAtom = {
+            ...this.createAtomClassName(atom),
+            matchedPlugin: plugin.name,
+          }
+
           this.atoms.push(newAtom)
 
           if (newAtom.cache) {

@@ -20,7 +20,13 @@ export interface Atom {
   className?: string
 
   /**
+   * plugin name matched for this atom
+   */
+  matchedPlugin?: string
+
+  /**
    * atom can be cached
+   * TODO: 命名有歧义，需解释什么时候可以被 cached
    */
   cache?: boolean
 }
