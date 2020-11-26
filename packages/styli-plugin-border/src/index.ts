@@ -68,7 +68,6 @@ export function borderPropToStyle(prop: string, propValue: any) {
 
   /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
   if (styli.isStyliColor(postfix)) {
-    console.log('postfix:', postfix)
     return { borderColor: styli.getColorValue(postfix) }
   }
 

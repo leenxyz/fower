@@ -39,15 +39,20 @@ export const positionMaps: any = {
 }
 
 export function isPositionKey(key: string) {
-  return /^[TLRBtlrb](-.+)?$/.test(key) || positionKeys.includes(key)
+  return /^[trbl](-.+)?$/gi.test(key) || positionKeys.includes(key)
 }
 
 export function positionPropToStyle(prop: string, propValue: any): any {
+  /** @example absolute, relative  */
   if (positionKeys.includes(prop)) return { position: prop }
+
+  /** @example T={0}, R={10}.. */
+  if (/^[trbl]$/i.test(prop)) {
+    return { [positionMaps[prop.toLowerCase()]]: getValue(propValue, ModifierType.position) }
+  }
 
   const [key, symbol = '', value] = prop.split(/\b-*?/)
   const [, minus = ''] = symbol.split('')
-
   const lowerKey = key.toLowerCase()
   const val = isValidPropValue(propValue) ? propValue : minus + value
 

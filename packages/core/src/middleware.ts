@@ -29,6 +29,7 @@ export const corePlugin: StyliPlugin = {
     if (typeof propValue === 'function') {
       value = propValue(theme, sheet.props)
     }
+
     if (!value && value !== 0) {
       atom.type = 'invalid'
       return atom

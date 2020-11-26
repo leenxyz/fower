@@ -135,7 +135,11 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    return `${this.className} ${this.atoms.map((i) => i.className).join(' ')}`.trim()
+    const atomClassNames = this.atoms
+      .filter((i) => i.type !== 'invalid')
+      .map((i) => i.className)
+      .join(' ')
+    return `${this.className} ${atomClassNames}`.trim()
   }
 
   /**
