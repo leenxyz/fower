@@ -17,12 +17,6 @@ export const P = {
 }
 
 export const roundedMaps: any = {
-  rounded: [
-    `${P.top}${P.left}`,
-    `${P.top}${P.right}`,
-    `${P.bottom}${P.left}`,
-    `${P.bottom}${P.right}`,
-  ],
   roundedT: [`${P.top}${P.left}`, `${P.top}${P.right}`],
   roundedR: [`${P.top}${P.right}`, `${P.bottom}${P.right}`],
   roundedB: [`${P.bottom}${P.left}`, `${P.bottom}${P.right}`],
@@ -41,6 +35,16 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   let style: any = {}
   const [key, value] = prop.split('-')
   const roundedValue = isValidPropValue(propValue) ? propValue : value
+
+  /** @example rounded-4, rounded-8 */
+  if (key === 'rounded') return { borderRadius: getValue(roundedValue, ModifierType.border) }
+
+  /** @example roundedFull */
+  if (/^roundedFull$/i.test(key)) return { borderRadius: '9999px' }
+
+  /** @example roundedNone */
+  if (/^roundedNone$/i.test(key)) return { borderRadius: 0 }
+
   for (const p of roundedMaps[key]) {
     style[`border${p}Radius`] = getValue(roundedValue, ModifierType.border)
   }

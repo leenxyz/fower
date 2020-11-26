@@ -3,6 +3,8 @@ import { PropValue } from './common.types'
 
 export interface Borders {
   rounded?: PropValue
+  roundedNone?: PropValue
+  roundedFull?: PropValue
 
   roundedT?: PropValue
   roundedR?: PropValue
