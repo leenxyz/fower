@@ -3,8 +3,8 @@ export const colors = {
   white: '#ffffff',
   black: '#000',
 
-  brand: '#f56565',
-  primary: '#f56565',
+  brand: '#4fd1c5',
+  primary: '#4fd1c5',
   secondary: '#f687b3',
   info: '#63b3ed',
   warning: '#f6ad55',

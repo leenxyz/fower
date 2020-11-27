@@ -1,10 +1,10 @@
-import { isBrowser, formatColor, downFirst } from '@styli/utils'
+import { formatColor, downFirst } from '@styli/utils'
 import { StyliPlugin, Configuration, Preset, Cache, Theme } from '@styli/types'
 
 class Styli {
   private config: Configuration = {
     unit: 'px',
-    inline: !isBrowser,
+    inline: false,
     plugins: [] as StyliPlugin[],
     theme: {} as Theme,
     transformUnit: (value: any) => value + this.getConfig<string>('unit'),
