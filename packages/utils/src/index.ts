@@ -19,8 +19,8 @@ export function kebab(s: string) {
   return noCase(s).replace(/\s/g, '-')
 }
 
-export function isNumber(s: string | number) {
-  return /^(\d+)?(.\d+)?$/.test('' + s)
+export function isNumber(str: any) {
+  return /^-?[0-9.]+$/.test(str)
 }
 
 export function isValidPropValue(value: any) {

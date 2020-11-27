@@ -32,7 +32,7 @@ export interface Borders {
 
   borderWidth?: Property.BorderWidth
   borderColor?: Property.BorderColor
-  BorderStyle?: Property.BorderStyle
+  borderStyle?: Property.BorderStyle
 
   borderTopWidth?: Property.BorderTopWidth | number | boolean
   borderTopColor?: Property.BorderTopColor | boolean
@@ -40,7 +40,7 @@ export interface Borders {
 
   borderLeftWidth?: Property.BorderLeftWidth | number | boolean
   borderLeftColor?: Property.BorderLeftColor | boolean
-  BorderLeftStyle?: Property.BorderLeftStyle | boolean
+  borderLeftStyle?: Property.BorderLeftStyle | boolean
 
   borderBottomWidth?: Property.BorderBottomWidth | number | boolean
   borderBottomColor?: Property.BorderBottomColor | boolean

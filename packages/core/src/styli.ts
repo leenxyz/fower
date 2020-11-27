@@ -43,10 +43,11 @@ class Styli {
 
   getColorValue = (value: string = ''): string => {
     const colors = this.getColors()
+
     if (!value.includes('-')) return colors[downFirst(value)]
     const [prefix, postfix] = value.split('-')
     let color = colors[prefix] ? colors[prefix] : prefix
-    return formatColor(`${color}-${postfix}`)
+    return formatColor(postfix ? `${color}-${postfix}` : color)
   }
 
   getConfig = <T = any>(type?: keyof Configuration): T => {
