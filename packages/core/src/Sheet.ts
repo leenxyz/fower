@@ -115,7 +115,7 @@ export class Sheet {
   private createAtomClassName(atom: Atom) {
     const { propKey = '', propValue, className, type } = atom
 
-    const ignoreType = ['media-queries', 'invalid']
+    const ignoreType = ['media-queries', 'invalid', 'global']
     if (className || ignoreType.includes(type)) return atom
 
     const configPrefix = styli.getConfig('prefix')

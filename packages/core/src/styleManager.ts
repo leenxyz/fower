@@ -11,9 +11,6 @@ export class StyleManager {
     const $head = document.querySelector('head')
 
     $style.dataset.styli = 'styli'
-
-    // TODO: reset style 应该放哪？
-    $style.innerHTML = '* {border: 0 solid #ccc; box-sizing: border-box;}'
     $head?.append($style)
     this.$style = $style
     return $style
