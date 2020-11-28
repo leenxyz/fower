@@ -17,8 +17,8 @@ export interface BoxComponent<T extends As, P = any> {
 }
 
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
-  const { as = 'div' } = props as any
+  const { as = 'div', ...rest } = props as any
   const Comp = styled(as)
-  return React.createElement(Comp, { ref, ...props })
+  return React.createElement(Comp, { ref, ...rest })
 }) as any
 
