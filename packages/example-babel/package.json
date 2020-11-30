@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-babel",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,11 +9,11 @@
     "compile": "tsc babelPlugin/*.ts --outDir babelPlugin/dist"
   },
   "dependencies": {
-    "@styli/react": "^0.16.0"
+    "@styli/react": "^0.16.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.7",
-    "@styli/babel-preset-styli": "^0.16.0",
+    "@styli/babel-preset-styli": "^0.16.1",
     "parcel": "^1.12.4"
   }
 }
