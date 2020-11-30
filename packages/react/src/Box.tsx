@@ -1,6 +1,8 @@
-import React, { forwardRef, PropsWithChildren, ComponentProps } from 'react'
-import { styled } from '@styli/styled'
+import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
+import { Sheet, styleManager, styli } from '@styli/core'
 import { AtomicProps, As } from '@styli/types'
+import { themeContext } from '@styli/theming'
+const { Consumer } = themeContext
 
 export interface BoxComponent<T extends As, P = any> {
   <AsType extends As>(
@@ -18,7 +20,31 @@ export interface BoxComponent<T extends As, P = any> {
 
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const { as = 'div', ...rest } = props as any
-  const Comp = styled(as)
-  return React.createElement(Comp, { ref, ...rest })
-}) as any
+  return (
+    <Consumer>
+      {(value: any) => {
+        const sheet = new Sheet(rest, value)
+        const parsedProps: any = sheet.getParsedProps()
+        const inline = styli.getConfig('inline')
 
+        if (inline) {
+          if (Array.isArray(rest.style)) {
+            parsedProps.style = [sheet.toStyles(), rest.style]
+          } else {
+            parsedProps.style = {
+              ...sheet.toStyles(),
+              ...rest.style,
+            }
+          }
+        } else {
+          const { className = '' } = rest || {}
+          styleManager.insertStyles(sheet.toCss())
+          const finalClassName = `${sheet.getClassNames()} ${className}`.trim()
+
+          if (finalClassName) parsedProps.className = finalClassName
+        }
+        return createElement(as, { ref, ...parsedProps })
+      }}
+    </Consumer>
+  )
+}) as any
