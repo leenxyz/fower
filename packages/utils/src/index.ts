@@ -36,7 +36,7 @@ export function isPercentNumber(s: string | number) {
 }
 
 export function cssKeyToStyleKey(key: string) {
-  return /^Webkit.+$/.test(key) ? '-' + kebab(key) : kebab(key)
+  return /^[A-Z].+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }
 
 export function isPlainType(value: any) {
