@@ -10,7 +10,7 @@ describe('styli-plugin-background', () => {
     } as any,
   })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as Sheet
 
   it('isMatch', () => {
@@ -20,14 +20,14 @@ describe('styli-plugin-background', () => {
     expect(isMatch!('bg')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'bg', propValue: 'red', style: {} }
     const newAtom1 = { propKey: 'bg', propValue: 'red', style: { backgroundColor: 'blue' } }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'bgRed', propValue: true, style: {} }
     const newAtom2 = { propKey: 'bgRed', propValue: true, style: { backgroundColor: 'blue' } }
-    expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'bgImg', propValue: 'imgSrc', style: {} }
     const newAtom3 = {
@@ -35,7 +35,7 @@ describe('styli-plugin-background', () => {
       propValue: 'imgSrc',
       style: { backgroundImage: 'url("imgSrc")' },
     }
-    expect(onVisitProp!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
 
     const atom4 = { propKey: 'bgSize', propValue: '100% 100%', style: {} }
     const newAtom4 = {
@@ -43,6 +43,6 @@ describe('styli-plugin-background', () => {
       propValue: '100% 100%',
       style: { backgroundSize: '100% 100%' },
     }
-    expect(onVisitProp!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })

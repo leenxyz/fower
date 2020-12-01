@@ -63,7 +63,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-position',
     isMatch: isPositionKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = positionPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

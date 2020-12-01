@@ -80,7 +80,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-border',
     isMatch: isBorderKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = borderPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

@@ -5,8 +5,8 @@ import { SheetType } from './SheetType'
 export interface StyliPlugin {
   name: string
   isMatch?(key: string): boolean
-  beforeVisitProp?(atom: Atom, sheet: SheetType): Atom
-  onVisitProp?(atom: Atom, sheet: SheetType): Atom
-  afterVisitProp?(sheet: SheetType): void
+  beforeAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
+  onAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
+  onStyleCreate?(sheet: SheetType): void
   middleware?(plugin: StyliPlugin, atom: Atom, sheet: SheetType, theme: Theme): Atom
 }

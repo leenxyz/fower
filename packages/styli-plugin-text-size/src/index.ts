@@ -21,7 +21,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-size',
     isMatch: isTextSizeKey,
-    beforeVisitProp(atom) {
+    beforeAtomStyleCreate(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || key !== 'f') return atom
@@ -38,7 +38,7 @@ export default (): StyliPlugin => {
         className: propKey,
       }
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
       return atom
     },

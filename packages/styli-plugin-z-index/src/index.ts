@@ -18,7 +18,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-z-index',
     isMatch: isZIndexKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = zIndexPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

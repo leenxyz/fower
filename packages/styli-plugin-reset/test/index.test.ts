@@ -2,7 +2,7 @@ import { Atom, Sheet } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-reset', () => {
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as Sheet
 
   it('isMatch', () => {
@@ -11,7 +11,7 @@ describe('styli-plugin-reset', () => {
     expect(isMatch!('resdet')).toEqual(false)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom = { propKey: 'reset', propValue: true } as Atom
 
     const newAtom = {
@@ -26,6 +26,6 @@ describe('styli-plugin-reset', () => {
       type: 'global',
     }
 
-    expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)
+    expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
   })
 })

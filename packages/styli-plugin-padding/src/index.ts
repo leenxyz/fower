@@ -64,7 +64,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-padding',
     isMatch: isPaddingKey,
-    beforeVisitProp(atom) {
+    beforeAtomStyleCreate(atom) {
       const { propKey, propValue } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !propValue || !paddingMaps[key]) return atom
@@ -82,7 +82,7 @@ export default (): StyliPlugin => {
         className: propKey,
       }
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = paddingPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

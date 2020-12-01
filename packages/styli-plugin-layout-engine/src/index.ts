@@ -125,7 +125,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-layout-engine',
     isMatch: isAlignmentKey,
-    onVisitProp(atom, sheet) {
+    onAtomStyleCreate(atom, sheet) {
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
       if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
@@ -135,8 +135,11 @@ export default (): StyliPlugin => {
       }
       return atom
     },
-    afterVisitProp(sheet) {
+    onStyleCreate(sheet) {
       if (!sheet.atoms || !sheet.atoms.length) return
+
+      const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-layout-engine')
+      if (!matched) return
 
       const direction = getDirection(sheet.props)
       const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)

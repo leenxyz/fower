@@ -14,7 +14,7 @@ export default (config?: EllipsisPlugin): StyliPlugin => {
     isMatch(key) {
       return /^ellipsis(\d+)?-?(.+)?$/.test(key)
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       const [, line, width] = atom.propKey.match(/^ellipsis(\d+)?-?(.+)?$/) || []
 
       const lineNum = Number(line || defaultLineNum)

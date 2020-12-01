@@ -40,7 +40,7 @@ describe('styli-core', () => {
       isMatch(key: string) {
         return key === 'test'
       },
-      onVisitProp(atom = {} as any) {
+      onAtomStyleCreate(atom = {} as any) {
         return atom
       },
     }

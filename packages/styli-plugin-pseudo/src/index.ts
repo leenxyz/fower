@@ -24,7 +24,7 @@ export default (): StyliPlugin => {
 
       if (!plugin.isMatch!(key)) return atom
 
-      let newAtom = plugin.onVisitProp!({ ...atom, propKey: key }, sheet)
+      let newAtom = plugin.onAtomStyleCreate!({ ...atom, propKey: key }, sheet)
 
       newAtom.propKey = propKey
       newAtom.type = 'prefix'

@@ -24,7 +24,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-weight',
     isMatch: isTextWeightKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

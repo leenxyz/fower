@@ -14,7 +14,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-align',
     isMatch: isTextAlign,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = textAlignPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

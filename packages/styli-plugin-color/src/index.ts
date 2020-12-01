@@ -37,7 +37,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-color',
     isMatch: isColorKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = colorPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

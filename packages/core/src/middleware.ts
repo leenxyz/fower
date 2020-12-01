@@ -43,6 +43,6 @@ export const corePlugin: StyliPlugin = {
       atom.propValue = atom.propValue(theme, sheet.props)
     }
 
-    return plugin.onVisitProp!(atom, sheet)
+    return plugin.onAtomStyleCreate!(atom, sheet)
   },
 }

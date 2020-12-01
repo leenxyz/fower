@@ -19,7 +19,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-heading',
     isMatch: isTextHeadingKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = textHeadingPropToStyle(atom.propKey)
       return atom
     },

@@ -55,7 +55,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-rounded',
     isMatch: isRoundedKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = roundedPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

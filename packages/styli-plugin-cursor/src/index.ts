@@ -15,7 +15,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-cursor',
     isMatch: isCursorKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = cursorPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

@@ -6,7 +6,7 @@ export default (): StyliPlugin => {
     isMatch(key) {
       return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       const propValueIsTrue = atom.propValue === true
 
       const stylesMap: any = {

@@ -24,7 +24,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-shadow',
     isMatch: isShadowKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = shadowPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

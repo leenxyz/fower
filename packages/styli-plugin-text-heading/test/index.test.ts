@@ -9,13 +9,13 @@ describe('styli-plugin-text-heading', () => {
     } as any,
   })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as any
   it('isMatch', () => {
     expect(isMatch!('heading3')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'heading3', propValue: true } as Atom
     const newAtom1 = {
       propKey: 'heading3',
@@ -26,6 +26,6 @@ describe('styli-plugin-text-heading', () => {
         fontSize: '24px',
       },
     }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
   })
 })

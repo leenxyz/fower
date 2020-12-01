@@ -11,7 +11,7 @@ describe('styli-plugin-space', () => {
     } as any,
   })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as SheetType
 
   it('isMatch', () => {
@@ -21,7 +21,7 @@ describe('styli-plugin-space', () => {
     expect(isMatch!('spaceY-20')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'space', propValue: 10, style: {} }
     const newAtom1 = {
       propKey: 'space',
@@ -35,6 +35,6 @@ describe('styli-plugin-space', () => {
         },
       },
     }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
   })
 })

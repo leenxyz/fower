@@ -2,7 +2,7 @@ import { Atom, Sheet } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-css', () => {
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as Sheet
 
   it('isMatch', () => {
@@ -11,7 +11,7 @@ describe('styli-plugin-css', () => {
     expect(isMatch!('cssb')).toEqual(false)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom = {
       propKey: 'css',
       propValue: {
@@ -40,6 +40,6 @@ describe('styli-plugin-css', () => {
       type: 'prefix',
     }
 
-    expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)
+    expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
   })
 })

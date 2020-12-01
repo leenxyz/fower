@@ -17,7 +17,7 @@ export default (): StyliPlugin => {
 
       atom.type = 'media-queries'
       atom.style = propValue.reduce((result, cur, idx) => {
-        const newAtom = plugin.onVisitProp!({ ...atom, propValue: cur }, sheet)
+        const newAtom = plugin.onAtomStyleCreate!({ ...atom, propValue: cur }, sheet)
         return {
           ...result,
           [breakpoints[idx]]: newAtom.style,

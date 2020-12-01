@@ -25,7 +25,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-outline',
     isMatch: isOutLineKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = outLinePropToStyle(atom.propKey, atom.propValue)
       return atom
     },

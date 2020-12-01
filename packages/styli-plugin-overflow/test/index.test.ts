@@ -2,7 +2,7 @@ import { Atom } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-overflow', () => {
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as any
 
   it('isMatch', () => {
@@ -13,13 +13,13 @@ describe('styli-plugin-overflow', () => {
     expect(isMatch!('oyScroll')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'overflow', propValue: 'scroll' } as Atom
     const newAtom1 = { propKey: 'overflow', propValue: 'scroll', style: { overflow: 'scroll' } }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'oxVisible', propValue: true } as Atom
     const newAtom2 = { propKey: 'oxVisible', propValue: true, style: { overflowX: 'visible' } }
-    expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })

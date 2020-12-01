@@ -22,7 +22,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-display',
     isMatch: isDisplayKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = displayPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

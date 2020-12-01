@@ -7,7 +7,7 @@ export default (): StyliPlugin => {
     isMatch(key) {
       return key === 'css'
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.type = 'prefix'
       atom.style = atom.propValue as CSSObject
       atom.className = 'css-' + hash(JSON.stringify(atom.propValue))

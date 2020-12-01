@@ -84,7 +84,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-margin',
     isMatch: isMarginKey,
-    beforeVisitProp(atom) {
+    beforeAtomStyleCreate(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !marginMaps[key]) return atom
@@ -102,7 +102,7 @@ export default (): StyliPlugin => {
         className: propKey,
       }
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = marginPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

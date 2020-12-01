@@ -34,7 +34,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-space',
     isMatch: isSpaceKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.type = 'prefix'
       atom.style = spacePropToStyle(atom.propKey, atom.propValue)
       return atom

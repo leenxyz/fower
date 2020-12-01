@@ -93,13 +93,16 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-flexbox',
     isMatch: isFlexBoxKey,
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = flexPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
 
-    afterVisitProp(sheet) {
+    onStyleCreate(sheet) {
       if (!sheet.atoms || !sheet.atoms.length) return
+
+      const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-flexbox')
+      if(!matched) return
 
       const direction = getDirection(sheet.props)
       const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)

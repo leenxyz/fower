@@ -4,7 +4,7 @@ import plugin from '../src'
 describe('styli-plugin-position', () => {
   styli.configure({ unit: 'px' })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
 
   const sheet = {} as any
 
@@ -14,7 +14,7 @@ describe('styli-plugin-position', () => {
     expect(isMatch!('roundedBL-10rem')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'rounded', propValue: 10 } as Atom
     const newAtom1 = {
       propKey: 'rounded',
@@ -26,7 +26,7 @@ describe('styli-plugin-position', () => {
         borderTopRightRadius: '10px',
       },
     }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'roundedT-10', propValue: true } as Atom
     const newAtom2 = {
@@ -34,7 +34,7 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { borderTopLeftRadius: '10px', borderTopRightRadius: '10px' },
     }
-    expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'roundedBR-10rem', propValue: true } as Atom
     const newAtom3 = {
@@ -42,6 +42,6 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { borderBottomRightRadius: '10rem' },
     }
-    expect(onVisitProp!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
   })
 })

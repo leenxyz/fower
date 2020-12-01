@@ -27,7 +27,7 @@ const textPlugin = (): Plugin => {
     isMatch(key) {
       return /^f(-.+)?$/.test(key)
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       const { propKey, propValue } = atom
       if (isValidPropValue(propValue)) {
         atom.style = {

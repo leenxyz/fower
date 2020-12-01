@@ -2,7 +2,7 @@ import { Atom, Sheet } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-debug', () => {
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as Sheet
 
   it('isMatch', () => {
@@ -11,7 +11,7 @@ describe('styli-plugin-debug', () => {
     expect(isMatch!('deghb')).toEqual(false)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom = { propKey: 'debug', propValue: true } as Atom
 
     const newAtom = {
@@ -26,6 +26,6 @@ describe('styli-plugin-debug', () => {
       type: 'prefix',
     }
 
-    expect(onVisitProp!(atom, sheet)).toMatchObject(newAtom)
+    expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
   })
 })

@@ -11,7 +11,7 @@ describe('styli-plugin-color', () => {
     } as any,
   })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as Sheet
 
   it('isMatch', () => {
@@ -22,21 +22,21 @@ describe('styli-plugin-color', () => {
     expect(isMatch!('fontColor')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'red', propValue: true, style: {} }
     const newAtom1 = { propKey: 'red', propValue: true, style: { color: 'blue' } }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'color', propValue: 'red', style: {} }
     const newAtom2 = { propKey: 'color', propValue: 'red', style: { color: 'red' } }
-    expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'colorRed', propValue: true, style: {} }
     const newAtom3 = { propKey: 'colorRed', propValue: true, style: { color: 'yellow' } }
-    expect(onVisitProp!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
 
     const atom4 = { propKey: 'fontColor', propValue: 'red', style: {} }
     const newAtom4 = { propKey: 'fontColor', propValue: 'red', style: { color: 'red' } }
-    expect(onVisitProp!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })

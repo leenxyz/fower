@@ -51,7 +51,7 @@ export default (): StyliPlugin => {
         isBgKey(key) || isBgColorKey(key) || isBgImgKey(key) || isBgPosKey(key) || isBgSizeKey(key)
       )
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = bgPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

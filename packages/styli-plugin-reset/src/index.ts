@@ -7,7 +7,7 @@ export default (): StyliPlugin => {
     isMatch(key) {
       return key === 'reset'
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.type = 'global'
 
       if (atom.propValue === true) {

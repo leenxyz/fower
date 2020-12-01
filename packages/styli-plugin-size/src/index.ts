@@ -59,7 +59,7 @@ export default (): StyliPlugin => {
     isMatch: (propKey) => {
       return isSizeKey(propKey) || isSquareKey(propKey)
     },
-    beforeVisitProp(atom) {
+    beforeAtomStyleCreate(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !sizeMaps[key]) return atom
@@ -77,7 +77,7 @@ export default (): StyliPlugin => {
         className: propKey,
       }
     },
-    onVisitProp(atom) {
+    onAtomStyleCreate(atom) {
       atom.style = sizePropToStyle(atom.propKey, atom.propValue)
       return atom
     },

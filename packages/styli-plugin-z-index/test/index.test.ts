@@ -4,7 +4,7 @@ import plugin from '../src'
 describe('styli-plugin-z-index', () => {
   styli.configure({ unit: 'px' })
 
-  const { isMatch, onVisitProp } = plugin()
+  const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as any
   it('isMatch', () => {
     expect(isMatch!('zIndex')).toEqual(true)
@@ -12,14 +12,14 @@ describe('styli-plugin-z-index', () => {
     expect(isMatch!('zIndex--1')).toEqual(true)
   })
 
-  it('onVisitProp', () => {
+  it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'zIndex', propValue: '10' } as Atom
     const newAtom1 = { propKey: 'zIndex', propValue: '10', style: { zIndex: '10' } }
-    expect(onVisitProp!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'zIndex-10', propValue: true } as Atom
     const newAtom2 = { propKey: 'zIndex-10', propValue: true, style: { zIndex: '10' } }
-    expect(onVisitProp!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'zIndex--1', propValue: true } as Atom
     const newAtom3 = {
@@ -27,6 +27,6 @@ describe('styli-plugin-z-index', () => {
       propValue: true,
       style: { zIndex: '-1' },
     }
-    expect(onVisitProp!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
   })
 })
