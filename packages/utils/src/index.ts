@@ -44,6 +44,12 @@ export function isPlainType(value: any) {
   return plainTypes.includes(typeof value)
 }
 
+export function cssObjToStr(style: any, initStr = '') {
+  return  Object.entries(style).reduce((r, [key, value]) => {
+    return r + `${cssKeyToStyleKey(key)}: ${value};`
+  }, initStr)
+}
+
 /**
  * @example
  * ```

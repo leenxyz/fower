@@ -2,11 +2,11 @@ import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from '@styli/types'
 import {
   isEmptyObj,
-  cssKeyToStyleKey,
   isPlainType,
   isEqual,
   hash,
   parseCSSProp,
+  cssObjToStr,
 } from '@styli/utils'
 import { corePlugin } from './middleware'
 import { styli } from './styli'
@@ -25,32 +25,25 @@ export class Sheet {
     this.traverseProps(props)
   }
 
-  private setUniteClassName() {
-    this.className = 'styli-' + hash('' + styli.componentKey++)
-  }
-
   /**
    * traverse Props to init atoms
    */
-
   private traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
-    const [middleware, plugins] = styli.getPlugins()
-    const middlewareList = [corePlugin, ...middleware]
+    const [middlewares, plugins, onStyleCreates] = styli.getPlugins()
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style', key: propKey, cache: true } as Atom
 
-      const propValueIsPlainType = isPlainType(propValue)
-      const pluginCacheKey = `plugin-${propKey}-${propValueIsPlainType ? propValue : ''}`
+      const pluginCacheKey = this.getAtomCacheKey(propKey, propValue)
       const pluginCacheValue = styli.atomCache[pluginCacheKey]
 
       /**
        * if propValue is object, don't use cache
        */
-      if (pluginCacheValue && propValueIsPlainType) {
+      if (pluginCacheValue && pluginCacheKey) {
         this.atoms.push(pluginCacheValue)
         continue
       }
@@ -59,12 +52,12 @@ export class Sheet {
         let atom = { ...initialAtom }
 
         // before
-        if (plugin.beforeVisitProp) {
-          atom = plugin.beforeVisitProp(atom, this as any)
+        if (plugin.beforeAtomStyleCreate) {
+          atom = plugin.beforeAtomStyleCreate(atom, this as any)
         }
 
         // during
-        atom = middlewareList.reduce((finalAtom, middleware) => {
+        atom = [corePlugin, ...middlewares].reduce((finalAtom, middleware) => {
           return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
         }, atom)
 
@@ -84,15 +77,7 @@ export class Sheet {
       }
     }
 
-    /** run afterVisitProp */
-    Object.keys(props).forEach((propKey) => {
-      for (const plugin of plugins) {
-        if (plugin.isMatch!(propKey) && plugin.afterVisitProp) {
-          plugin.afterVisitProp!(this as any)
-          // break
-        }
-      }
-    })
+    onStyleCreates.forEach(plugin => plugin.onStyleCreate!(this as any))
   }
 
   /**
@@ -130,6 +115,16 @@ export class Sheet {
     atom.className = `${prefix}${propKey}-${postfix}`
 
     return atom
+  }
+
+  private getAtomCacheKey(propKey: string, propValue: any) {
+    const propValueIsPlainType = isPlainType(propValue)
+    if (!propValueIsPlainType) return ''
+    return `plugin-${propKey}-${propValue}`
+  }
+
+  private setUniteClassName() {
+    this.className = 'styli-' + hash('' + styli.componentKey++)
   }
 
   /**
@@ -176,25 +171,12 @@ export class Sheet {
       }
 
       if (type === 'style') {
-        /** to css atom string */
-        const cssAtomStr = Object.keys(style).reduce((r, k) => {
-          const value: any = (atom as any).style[k]
-          const cssKey = cssKeyToStyleKey(k)
-          return r + `${cssKey}: ${value};`
-        }, '')
-
-        // wrap with css className
-        return result + `.${className} { ${cssAtomStr} }`
+        return result + `.${className} { ${cssObjToStr(style)} }`
       }
 
       if (type === 'media-queries') {
-        for (const breakpoint in style) {
-          const mediaStyle = (style as any)[breakpoint]
-          for (const key in mediaStyle) {
-            const cssKey = cssKeyToStyleKey(key)
-            const cssValue = (mediaStyle as any)[key]
-            mediaCss[breakpoint] = (mediaCss[breakpoint!] || '') + `${cssKey}: ${cssValue};`
-          }
+        for (const [breakpoint, mediaStyle] of Object.entries(style)) {
+          mediaCss[breakpoint] = cssObjToStr(mediaStyle, mediaCss[breakpoint])
         }
       }
 
@@ -203,12 +185,9 @@ export class Sheet {
 
     if (!isEmptyObj(mediaCss)) {
       this.setUniteClassName()
-      let cssStr = ''
-      for (const breakpoint in mediaCss) {
-        const unit = `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCss[breakpoint]}} }`
-        cssStr = cssStr + unit
-      }
-      return css + cssStr
+      return Object.entries(mediaCss).reduce((str, [breakpoint, mediaCssStr]) => 
+        str + `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`
+        , css)
     }
 
     return css
@@ -216,7 +195,7 @@ export class Sheet {
 
   getParsedProps(): Props {
     const { props, atoms } = this
-    if (!props) return {}
+    if (isEmptyObj(props)) return {}
     return Object.keys(props).reduce((result: Props, cur: any) => {
       const find = atoms.find((atom) => atom.key === cur)
       return find ? result : { ...result, [cur]: props[cur] }

@@ -52,7 +52,7 @@ export const Background = () => {
         bg--hover="#000"
       </View>
 
-      <View f-20 bgColor={['yellowgreen', 'deeppink', 'gray', 'info']}>
+      <View f-20 bgColor={['yellowgreen', 'deeppink', 'gray', 'info']} f={[10, 20, 30, 40]}>
         bgColor=['yellowgreen', 'deeppink', 'gray', 'info']
       </View>
 

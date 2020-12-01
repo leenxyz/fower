@@ -59,10 +59,18 @@ class Styli {
     const pluginList = this.config.plugins
     return pluginList.reduce(
       (result, cur) => {
-        result[cur.middleware ? 0 : 1].push(cur)
+        if (cur.middleware) {
+          result[0].push(cur)
+        }
+        if (cur.onStyleCreate) {
+          result[2].push(cur)
+        }
+        if (cur.onAtomStyleCreate) {
+          result[1].push(cur)
+        }
         return result
       },
-      [[], []] as StyliPlugin[][],
+      [[], [], []] as StyliPlugin[][],
     )
   }
 
