@@ -1,4 +1,5 @@
 import { Property } from 'csstype'
+import { StyliColor } from '../StyliColor'
 import { PropValue } from './common.types'
 
 export interface Borders {
@@ -31,28 +32,42 @@ export interface Borders {
   borderNone?: boolean
 
   borderWidth?: Property.BorderWidth
-  borderColor?: Property.BorderColor
+  borderColor?: StyliColor
   borderStyle?: Property.BorderStyle
 
   borderTopWidth?: Property.BorderTopWidth | number | boolean
-  borderTopColor?: Property.BorderTopColor | boolean
+  borderTopColor?: StyliColor | boolean
   borderTopStyle?: Property.BorderTopStyle | boolean
 
   borderLeftWidth?: Property.BorderLeftWidth | number | boolean
-  borderLeftColor?: Property.BorderLeftColor | boolean
+  borderLeftColor?: StyliColor | boolean
   borderLeftStyle?: Property.BorderLeftStyle | boolean
 
   borderBottomWidth?: Property.BorderBottomWidth | number | boolean
-  borderBottomColor?: Property.BorderBottomColor | boolean
+  borderBottomColor?: StyliColor | boolean
   borderBottomStyle?: Property.BorderBottomStyle | boolean
 
   borderRightWidth?: Property.BorderRightWidth | number | boolean
-  borderRightColor?: Property.BorderRightColor | boolean
+  borderRightColor?: StyliColor | boolean
   borderRightStyle?: Property.BorderRightStyle | boolean
 
   borderBlack?: boolean
 
   borderWhite?: boolean
+
+  borderBrand?: boolean
+
+  borderPrimary?: boolean
+
+  borderSecondary?: boolean
+
+  borderInfo?: boolean
+
+  borderWarning?: boolean
+
+  borderError?: boolean
+
+  borderSuccess?: boolean
 
   borderGray?: boolean
   borderGray10?: boolean // #f7fafc

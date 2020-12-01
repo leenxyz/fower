@@ -2,7 +2,7 @@ import { StyliPlugin } from '@styli/types'
 import { kebab } from '@styli/utils'
 
 export function isDisplayKey(key: string) {
-  return /^(hide|inline|inline[Bb]lock|block|flex|grid|table).*$|^display(-.+)?/.test(key)
+  return /^(hide|inline|inline[Bb]lock|block|grid|table).*$|^display(-.+)?/.test(key)
 }
 
 export function displayPropToStyle(prop: string, propValue: any): any {

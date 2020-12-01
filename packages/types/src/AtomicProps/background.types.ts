@@ -18,6 +18,20 @@ export interface Backgrounds {
 
   bgWhite?: boolean
 
+  bgBrand?: boolean
+
+  bgPrimary?: boolean
+
+  bgSecondary?: boolean
+
+  bgInfo?: boolean
+
+  bgWarning?: boolean
+
+  bgError?: boolean
+
+  bgSuccess?: boolean
+
   bgGray?: boolean
   bgGray10?: boolean // #f7fafc
   bgGray20?: boolean // #edf2f7

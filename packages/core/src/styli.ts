@@ -44,7 +44,9 @@ class Styli {
   getColorValue = (value: string = ''): string => {
     const colors = this.getColors()
 
+    if (!styli.isStyliColor(value)) return value
     if (!value.includes('-')) return colors[downFirst(value)]
+
     const [prefix, postfix] = value.split('-')
     let color = colors[prefix] ? colors[prefix] : prefix
     return formatColor(postfix ? `${color}-${postfix}` : color)

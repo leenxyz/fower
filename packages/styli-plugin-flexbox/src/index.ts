@@ -46,7 +46,7 @@ export function flexPropToStyle(prop: string, propValue: any) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
 
-  // flex
+  /** @example flex-1, flex-2 */
   if (/^flex(-\d+)?$/.test(prop)) {
     if (isValidPropValue(propValue)) {
       style.flex = propValue

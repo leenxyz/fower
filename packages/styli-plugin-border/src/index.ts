@@ -1,6 +1,6 @@
 import { getValue, styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { formatColor, isNumber } from '@styli/utils'
+import { isNumber } from '@styli/utils'
 
 export const G = {
   top: 'Top',
@@ -24,15 +24,10 @@ export function isBorderKey(key: string) {
 
 // TODO: 这里强制了颜色写在最后
 function formatBorderValue(value: string) {
-  const colors = styli.getColors()
   const result = value.split(/\s+/)
-
   // if not like: 1px solid #555
   if (result.length !== 3) return value
-  const [prefix, postfix] = result[2].split('-')
-  const color = colors[prefix] || prefix
-
-  result[2] = postfix ? formatColor(`${color}-${postfix}`) : color
+  result[2] = styli.getColorValue(result[2])
   return result.join(' ')
 }
 
@@ -69,6 +64,10 @@ export function borderPropToStyle(prop: string, propValue: any) {
   /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
   if (styli.isStyliColor(postfix)) {
     return { borderColor: styli.getColorValue(postfix) }
+  }
+
+  if (/^color/i.test(postfix)) {
+    return { [prop]: styli.getColorValue(propValue) }
   }
 
   return {

@@ -18,17 +18,17 @@ export default (): StyliPlugin => {
           },
           html: {
             lineHeight: 1.15,
-            WebkitTextSizeAdjust: '100%'
+            WebkitTextSizeAdjust: '100%',
           },
           body: {
             margin: 0,
           },
           main: {
-            display: 'block'
+            display: 'block',
           },
           h1: {
             fontSize: '2em',
-            margin: '0.67em 0'
+            margin: '0.67em 0',
           },
           hr: {
             boxSizing: 'content-box',
@@ -37,10 +37,10 @@ export default (): StyliPlugin => {
           },
           pre: {
             fontFamily: 'monospace, monospace',
-            fontSize: '1em'
+            fontSize: '1em',
           },
           a: {
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
           },
 
           'abbr[title]': {
@@ -49,26 +49,25 @@ export default (): StyliPlugin => {
           },
 
           b: {
-            fontWeight: 'bolder'
+            fontWeight: 'bolder',
           },
           strong: {
-            fontWeight: 'bolder'
+            fontWeight: 'bolder',
           },
           code: {
             fontFamily: 'monospace, monospace',
-            fontSize: '1em'
+            fontSize: '1em',
           },
 
           kbd: {
             fontFamily: 'monospace, monospace',
-            fontSize: '1em'
+            fontSize: '1em',
           },
 
           samp: {
             fontFamily: 'monospace, monospace',
-            fontSize: '1em'
+            fontSize: '1em',
           },
-
 
           small: {
             fontSize: '80%',
@@ -183,12 +182,12 @@ export default (): StyliPlugin => {
 
           '[type="checkbox"]': {
             boxSizing: 'border-box',
-            padding: 0
+            padding: 0,
           },
 
           '[type="radio"]': {
             boxSizing: 'border-box',
-            padding: 0
+            padding: 0,
           },
 
           '[type="number"]::-webkit-inner-spin-button': {
@@ -219,7 +218,7 @@ export default (): StyliPlugin => {
 
           legend: {
             boxSizing: 'border-box',
-            color: "inherit",
+            color: 'inherit',
             display: 'table',
             maxWidth: '100%',
             padding: 0,
@@ -244,7 +243,7 @@ export default (): StyliPlugin => {
 
           '[hidden]': {
             display: 'none',
-          }
+          },
         }
       } else {
         atom.style = atom.propValue as CSSObject
