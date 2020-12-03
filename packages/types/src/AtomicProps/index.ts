@@ -32,8 +32,7 @@ export interface AtomicProps
     OutLine,
     Cursor,
     Opacity,
-    Spaces
-    {
+    Spaces {
   css?: CSSObject
   debug?: boolean | CSSObject
   debugChildren?: boolean | CSSObject

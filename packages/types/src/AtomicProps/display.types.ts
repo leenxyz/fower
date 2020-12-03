@@ -11,7 +11,8 @@ export interface Displays {
   inlineBlock?: boolean
   block?: boolean
 
-  flex?: boolean
+  // conflict with flex-1
+  // flex?: boolean
   inlineFlex?: boolean
 
   grid?: boolean

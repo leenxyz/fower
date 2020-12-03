@@ -102,7 +102,7 @@ export default (): StyliPlugin => {
       if (!sheet.atoms || !sheet.atoms.length) return
 
       const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-flexbox')
-      if(!matched) return
+      if (!matched) return
 
       const direction = getDirection(sheet.props)
       const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)

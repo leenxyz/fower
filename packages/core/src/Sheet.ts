@@ -1,13 +1,6 @@
 import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from '@styli/types'
-import {
-  isEmptyObj,
-  isPlainType,
-  isEqual,
-  hash,
-  parseCSSProp,
-  cssObjToStr,
-} from '@styli/utils'
+import { isEmptyObj, isPlainType, isEqual, hash, parseCSSProp, cssObjToStr } from '@styli/utils'
 import { corePlugin } from './middleware'
 import { styli } from './styli'
 
@@ -77,7 +70,7 @@ export class Sheet {
       }
     }
 
-    onStyleCreates.forEach(plugin => plugin.onStyleCreate!(this as any))
+    onStyleCreates.forEach((plugin) => plugin.onStyleCreate!(this as any))
   }
 
   /**
@@ -118,8 +111,7 @@ export class Sheet {
   }
 
   private getAtomCacheKey(propKey: string, propValue: any) {
-    const propValueIsPlainType = isPlainType(propValue)
-    if (!propValueIsPlainType) return ''
+    if (!isPlainType(propValue)) return ''
     return `plugin-${propKey}-${propValue}`
   }
 
@@ -131,7 +123,10 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    const atomClassNames = this.atoms.map((i) => i.className).join(' ').trim()
+    const atomClassNames = this.atoms
+      .map((i) => i.className)
+      .join(' ')
+      .trim()
     return `${this.className} ${atomClassNames}`
   }
 
@@ -185,9 +180,11 @@ export class Sheet {
 
     if (!isEmptyObj(mediaCss)) {
       this.setUniteClassName()
-      return Object.entries(mediaCss).reduce((str, [breakpoint, mediaCssStr]) => 
-        str + `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`
-        , css)
+      return Object.entries(mediaCss).reduce(
+        (str, [breakpoint, mediaCssStr]) =>
+          str + `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`,
+        css,
+      )
     }
 
     return css
