@@ -22,8 +22,6 @@ export interface Borders {
   borderR?: boolean | number | string
   borderB?: boolean | number | string
   borderL?: boolean | number | string
-  borderX?: boolean | number | string
-  borderY?: boolean | number | string
 
   borderSolid?: boolean
   borderDashed?: boolean
@@ -31,9 +29,9 @@ export interface Borders {
   borderDouble?: boolean
   borderNone?: boolean
 
-  borderWidth?: Property.BorderWidth
-  borderColor?: StyliColor
-  borderStyle?: Property.BorderStyle
+  borderWidth?: Property.BorderWidth | number | boolean
+  borderColor?: StyliColor | boolean
+  borderStyle?: Property.BorderStyle | boolean
 
   borderTopWidth?: Property.BorderTopWidth | number | boolean
   borderTopColor?: StyliColor | boolean

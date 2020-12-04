@@ -11,6 +11,7 @@ export class StyleManager {
     const $head = document.querySelector('head')
 
     $style.dataset.styli = 'styli'
+    $style.innerHTML = '*{border: 0 solid #ccc;box-sizing: border-box}' // TODO: global style
     $head?.append($style)
     this.$style = $style
     return $style

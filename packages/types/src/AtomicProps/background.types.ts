@@ -1,18 +1,20 @@
 import { StyliColor } from '@styli/types'
 import { Theme } from '../Theme'
 
-type BgFn = (theme: Theme) => StyliColor | StyliColor[]
+type BgColor = StyliColor | StyliColor[] | boolean
+
+type BgColorFn = (theme: Theme) => BgColor
 
 export interface Backgrounds {
-  bg?: StyliColor | StyliColor[] | BgFn
+  bg?: BgColor | BgColorFn
 
-  bgColor?: StyliColor | StyliColor[] | BgFn
+  bgColor?: BgColor | BgColorFn
 
-  bgImg?: string
+  bgImg?: string | boolean
 
-  bgPos?: string
+  bgPos?: string | boolean
 
-  bgSize?: string
+  bgSize?: string | boolean
 
   bgBlack?: boolean
 

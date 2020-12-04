@@ -9,13 +9,11 @@ export const G = {
   bottom: 'Bottom',
 }
 
-export const positionMaps: { [key: string]: string[] } = {
-  T: [G.top],
-  L: [G.left],
-  R: [G.right],
-  B: [G.bottom],
-  X: [G.left, G.right],
-  Y: [G.top, G.bottom],
+export const positionMaps: { [key: string]: string } = {
+  T: G.top,
+  L: G.left,
+  R: G.right,
+  B: G.bottom,
 }
 
 export function isBorderKey(key: string) {
@@ -47,17 +45,19 @@ export function borderPropToStyle(prop: string, propValue: any) {
     return { borderStyle: postfix.toLowerCase() }
   }
 
-  /** @example border-0,border-1,border-2 */
-  if (/^-\d+$/.test(postfix)) {
-    return { borderWidth: getValue(postfix.replace(/^-/, '')) }
+  /** @example border-0,border-1,border-2,borderT-2,borderB-2 */
+  if (/^[trbl]?-\d+$/i.test(postfix)) {
+    const position = postfix.replace(/-\d+$/, '')
+    const borderPosition = positionMaps[position.toUpperCase()] ?? ''
+    const key = `border${borderPosition}Width`
+    return { [key]: getValue(postfix.replace(/^-/i, '')) }
   }
 
   /** @example borderT, borderR */
   if (positionMaps[postfix.toUpperCase()]) {
     let style: any = {}
-    positionMaps[postfix.toUpperCase()].map((item) => {
-      style[`border${item}`] = formatBorderValue(propValue)
-    })
+
+    style[`border${positionMaps[postfix.toUpperCase()]}`] = formatBorderValue(propValue)
     return style
   }
 
