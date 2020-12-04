@@ -50,7 +50,6 @@
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.51",
     "@types/react-helmet": "^6.1.0",
-    "@types/react-router-dom": "^5.1.6",
-    "typescript": "^4.0.3"
+    "@types/react-router-dom": "^5.1.6"
   }
 }
