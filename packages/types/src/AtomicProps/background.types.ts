@@ -6,14 +6,54 @@ type BgColor = StyliColor | StyliColor[] | boolean
 type BgColorFn = (theme: Theme) => BgColor
 
 export interface Backgrounds {
+  /**
+   * Set background
+   *
+   * @example
+   * ```tsx
+   * <View bg="url(https://styli.js.org/img/logo.png) center no-repeat"></View>
+   * ```
+   */
   bg?: BgColor | BgColorFn
 
+  /**
+   * Set backgroundColor
+   *
+   * @example
+   * ```tsx
+   * <View bgColor="red"></View>
+   * ```
+   */
   bgColor?: BgColor | BgColorFn
 
+  /**
+   * Set backgroundImage
+   *
+   * @example
+   * ```tsx
+   * <View bgImg="https://styli.js.org/img/logo.png"></View>
+   * ```
+   */
   bgImg?: string | boolean
 
+  /**
+   * Set backgroundPosition
+   *
+   * @example
+   * ```tsx
+   * <View bgPos="https://styli.js.org/img/logo.png"></View>
+   * ```
+   */
   bgPos?: string | boolean
 
+  /**
+   * Set backgroundSize
+   *
+   * @example
+   * ```tsx
+   * <View bgSize="100% 100%"></View>
+   * ```
+   */
   bgSize?: string | boolean
 
   bgBlack?: boolean

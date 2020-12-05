@@ -3,7 +3,9 @@ export interface Opacity {
   /**
    * Set opacity
    *
-   * 用 View 作为示例:
+   * opacity-20 is `opacity: 0.2`
+   *
+   * @example
    * ```tsx
    * <View opacity></View>
    * <View opacity-20></View>
@@ -11,6 +13,5 @@ export interface Opacity {
    * <View opacity={20}></View>
    * ```
    */
-
   opacity?: PropValue
 }

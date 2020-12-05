@@ -1,6 +1,6 @@
 import { getValue, styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { downFirst, isValidPropValue, isBrowser } from '@styli/utils'
+import { downFirst, isValidPropValue } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
   return /^lh([Nn]one|[Tt]ight|[Ss]nug|[Nn]ormal|[Rr]elaxed|[Ll]oose|-.+)?$/.test(key)
@@ -14,7 +14,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
 
   const leadings = styli.getTheme('lineHeight') || {}
-  const inline = styli.getConfig('inline') || isBrowser
+  const inline = styli.getConfig('inline')
 
   if (leadings[downFirst(value)]) {
     if (inline) {

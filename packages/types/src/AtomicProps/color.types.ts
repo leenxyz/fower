@@ -6,8 +6,7 @@ export interface Colors {
    * { color: #dfa }
    * ```
    *
-   * 用法：
-   *
+   * @example
    * ```tsx
    * <Text black>Hello world</Text>
    * ```

@@ -3,50 +3,434 @@ import { StyliColor } from '../StyliColor'
 import { PropValue } from './common.types'
 
 export interface Borders {
+  /**
+   * Set borderRadius
+   *
+   * @example
+   * ```tsx
+   * <View rounded-10></View>
+   * <View rounded-10rem></View>
+   * <View rounded-100p></View>
+   * <View rounded="10"></View>
+   * ```
+   */
   rounded?: PropValue
+
+  /**
+   * Set borderRadius to 0
+   *
+   * roundedNone is `border-radius: 0;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedNone></View>
+   * ```
+   */
   roundedNone?: PropValue
+
+  /**
+   * Set borderRadius to 9999px
+   *
+   * roundedFull is `border-radius: 9999px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedFull></View>
+   * ```
+   */
   roundedFull?: PropValue
 
+  /**
+   * Set borderTopLeftRadius and borderTopRightRadius
+   *
+   * roundedT-10 is `border-top-left-radius: 10px; border-top-right-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedT-10></View>
+   * <View roundedT-10rem></View>
+   * <View roundedT="10"></View>
+   * ```
+   */
   roundedT?: PropValue
+
+  /**
+   * Set borderTopRightRadius and borderBottomRightRadius
+   *
+   * roundedR-10 is `border-top-right-radius: 10px; border-bottom-right-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedR-10></View>
+   * <View roundedR-10p></View>
+   * <View roundedR="10"></View>
+   * ```
+   */
   roundedR?: PropValue
+
+  /**
+   * Set borderBottomLeftRadius and borderBottomRightRadius
+   *
+   * roundedB-10 is `border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedB-10></View>
+   * <View roundedB-10p></View>
+   * <View roundedB="10"></View>
+   * ```
+   */
   roundedB?: PropValue
+
+  /**
+   * Set borderTopLeftRadius and borderBottomLeftRadius
+   *
+   * roundedB-10 is `border-top-left-radius: 10px; border-bottom-left-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedL-10></View>
+   * <View roundedL-10p></View>
+   * <View roundedL="10"></View>
+   * ```
+   */
   roundedL?: PropValue
 
+  /**
+   * Set borderTopLeftRadius
+   *
+   * roundedTL-10 is `border-top-left-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedTL-10></View>
+   * <View roundedTL-10p></View>
+   * <View roundedTL="10"></View>
+   * ```
+   */
   roundedTL?: PropValue
+
+  /**
+   * Set borderTopRightRadius
+   *
+   * roundedTR-10 is `border-top-right-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedTR-10></View>
+   * <View roundedTR-10p></View>
+   * <View roundedTR="10"></View>
+   * ```
+   */
   roundedTR?: PropValue
+
+  /**
+   * Set borderBottomLeftRadius
+   *
+   * roundedBL-10 is `border-bottom-left-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedBL-10></View>
+   * <View roundedBL-10p></View>
+   * <View roundedBL="10"></View>
+   * ```
+   */
   roundedBL?: PropValue
+
+  /**
+   * Set borderBottomRightRadius
+   *
+   * roundedBR-10 is `border-bottom-right-radius: 10px;`
+   *
+   * @example
+   * ```tsx
+   * <View roundedBR-10></View>
+   * <View roundedBR-10p></View>
+   * <View roundedBR="10"></View>
+   * ```
+   */
   roundedBR?: PropValue
 
+  /**
+   * Set border
+   *
+   * @example
+   * ```tsx
+   * <View border-10></View>
+   * <View border={10}></View>
+   * <View border="10"></View>
+   * ```
+   */
   border?: Property.Border | boolean
+
+  /**
+   * Set borderTop
+   *
+   * @example
+   * ```tsx
+   * <View borderT-10></View>
+   * <View borderT={10}></View>
+   * <View borderT="1px solid red"></View>
+   * ```
+   */
   borderT?: boolean | number | string
+
+  /**
+   * Set borderRight
+   *
+   * @example
+   * ```tsx
+   * <View borderR-10></View>
+   * <View borderR={10}></View>
+   * <View borderR="1px solid red"></View>
+   * ```
+   */
   borderR?: boolean | number | string
+
+  /**
+   * Set borderBottom
+   *
+   * @example
+   * ```tsx
+   * <View borderB-10></View>
+   * <View borderB={10}></View>
+   * <View borderB="1px solid red"></View>
+   * ```
+   */
   borderB?: boolean | number | string
+
+  /**
+   * Set borderLeft
+   *
+   * @example
+   * ```tsx
+   * <View borderL-10></View>
+   * <View borderL={10}></View>
+   * <View borderL="1px solid red"></View>
+   * ```
+   */
   borderL?: boolean | number | string
 
-  borderSolid?: boolean
-  borderDashed?: boolean
-  borderDotted?: boolean
-  borderDouble?: boolean
-  borderNone?: boolean
-
-  borderWidth?: Property.BorderWidth | number | boolean
-  borderColor?: StyliColor | boolean
+  /**
+   * Set borderStyle
+   *
+   * @example
+   * ```tsx
+   * <View borderStyle="none"></View>
+   * ```
+   */
   borderStyle?: Property.BorderStyle | boolean
 
+  /**
+   * Set borderStyle to solid
+   *
+   * borderSolid is `border-style: solid;`
+   *
+   * @example
+   * ```tsx
+   * <View borderSolid></View>
+   * ```
+   */
+  borderSolid?: boolean
+
+  /**
+   * Set borderStyle to dashed
+   *
+   * borderDashed is `border-style: dashed;`
+   *
+   * @example
+   * ```tsx
+   * <View borderDashed></View>
+   * ```
+   */
+  borderDashed?: boolean
+
+  /**
+   * Set borderStyle to dotted
+   *
+   * borderDotted is `border-style: dotted;`
+   *
+   * @example
+   * ```tsx
+   * <View borderDotted></View>
+   * ```
+   */
+  borderDotted?: boolean
+
+  /**
+   * Set borderStyle to double
+   *
+   * borderDouble is `border-style: double;`
+   *
+   * @example
+   * ```tsx
+   * <View borderDouble></View>
+   * ```
+   */
+  borderDouble?: boolean
+
+  /**
+   * Set borderStyle to none
+   *
+   * borderNone is `border-style: none;`
+   *
+   * @example
+   * ```tsx
+   * <View borderNone></View>
+   * ```
+   */
+  borderNone?: boolean
+
+  /**
+   * Set borderWidth
+   *
+   * @example
+   * ```tsx
+   * <View borderWidth-10></View>
+   * <View borderWidth-10px></View>
+   * <View borderWidth="10px"></View>
+   * <View borderWidth={10}></View>
+   * ```
+   */
+  borderWidth?: Property.BorderWidth | number | boolean
+
+  /**
+   * Set borderColor
+   *
+   * @example
+   * ```tsx
+   * <View borderColor="gray20"></View>
+   * ```
+   */
+  borderColor?: StyliColor | boolean
+
+  /**
+   * Set borderTopWidth
+   *
+   * @example
+   * ```tsx
+   * <View borderTopWidth-1></View>
+   * <View borderTopWidth="1"></View>
+   * <View borderTopWidth="1px"></View>
+   * ```
+   */
   borderTopWidth?: Property.BorderTopWidth | number | boolean
+
+  /**
+   * Set borderTopColor
+   *
+   * @example
+   * ```tsx
+   * <View borderTopColor="gray20"></View>
+   * ```
+   */
   borderTopColor?: StyliColor | boolean
+
+  /**
+   * Set borderTopStyle
+   *
+   * @example
+   * ```tsx
+   * <View borderTopStyle="solid"></View>
+   * ```
+   */
   borderTopStyle?: Property.BorderTopStyle | boolean
 
+  /**
+   * Set borderLeftWidth
+   *
+   * @example
+   * ```tsx
+   * <View borderLeftWidth-1></View>
+   * <View borderLeftWidth="1"></View>
+   * <View borderLeftWidth="1px"></View>
+   * ```
+   */
   borderLeftWidth?: Property.BorderLeftWidth | number | boolean
+
+  /**
+   * Set borderLeftColor
+   *
+   * @example
+   * ```tsx
+   * <View borderLeftColor="gray20"></View>
+   * ```
+   */
   borderLeftColor?: StyliColor | boolean
+
+  /**
+   * Set borderLeftStyle
+   *
+   * @example
+   * ```tsx
+   * <View borderLeftStyle="solid"></View>
+   * ```
+   */
   borderLeftStyle?: Property.BorderLeftStyle | boolean
 
+  /**
+   * Set borderBottomWidth
+   *
+   * @example
+   * ```tsx
+   * <View borderBottomWidth-1></View>
+   * <View borderBottomWidth="1"></View>
+   * <View borderBottomWidth="1px"></View>
+   * ```
+   */
   borderBottomWidth?: Property.BorderBottomWidth | number | boolean
+
+  /**
+   * Set borderBottomColor
+   *
+   * @example
+   * ```tsx
+   * <View borderBottomColor="gray20"></View>
+   * ```
+   */
   borderBottomColor?: StyliColor | boolean
+
+  /**
+   * Set borderBottomStyle
+   *
+   * @example
+   * ```tsx
+   * <View borderBottomStyle="solid"></View>
+   * ```
+   */
   borderBottomStyle?: Property.BorderBottomStyle | boolean
 
+  /**
+   * Set borderRightWidth
+   *
+   * @example
+   * ```tsx
+   * <View borderRightWidth-1></View>
+   * <View borderRightWidth="1"></View>
+   * <View borderRightWidth="1px"></View>
+   * ```
+   */
   borderRightWidth?: Property.BorderRightWidth | number | boolean
+
+  /**
+   * Set borderRightColor
+   *
+   * @example
+   * ```tsx
+   * <View borderRightColor="gray20"></View>
+   * ```
+   */
   borderRightColor?: StyliColor | boolean
+
+  /**
+   * Set borderRightStyle
+   *
+   * @example
+   * ```tsx
+   * <View borderRightStyle="solid"></View>
+   * ```
+   */
   borderRightStyle?: Property.BorderRightStyle | boolean
 
   borderBlack?: boolean

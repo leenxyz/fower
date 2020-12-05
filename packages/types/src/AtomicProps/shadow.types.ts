@@ -3,7 +3,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: If you are not provide shadow theme. You must set shadow value.
+   *
+   * @example
    * ```tsx
    * <View shadow></View>
    * <View shadow="0 0 0 1px rgba(0, 0, 0, 0.05)"></View>
@@ -14,7 +16,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowXS></View>
    * ```
@@ -24,7 +28,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowSM></View>
    * ```
@@ -34,7 +40,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowBase></View>
    * ```
@@ -44,7 +52,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowMD></View>
    * ```
@@ -54,7 +64,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowLG></View>
    * ```
@@ -64,7 +76,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowXL></View>
    * ```
@@ -74,7 +88,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowXXL></View>
    * ```
@@ -84,7 +100,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowInner></View>
    * ```
@@ -94,7 +112,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowOutline></View>
    * ```
@@ -104,7 +124,9 @@ export interface Shadows {
   /**
    * Set shadow
    *
-   * 用 View 作为示例:
+   * NOTE: Theme restrict. You must config shadow
+   *
+   * @example
    * ```tsx
    * <View shadowNone></View>
    * ```

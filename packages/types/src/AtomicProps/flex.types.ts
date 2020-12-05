@@ -14,7 +14,7 @@ export interface Flex {
    * }
    * ```
    *
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View row></View>
    * ```
@@ -33,7 +33,7 @@ export interface Flex {
    * }
    * ```
    *
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View column></View>
    * ```
@@ -43,7 +43,7 @@ export interface Flex {
   /**
    * set flex-flow、flex-shrink、flex-basic
    *
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View flex-1></View> // flex: 1 1 0%;
    * <View flex-auto></View> // flex: 1 1 auto;
@@ -71,7 +71,7 @@ export interface Flex {
    * ```css
    * { flex-wrap: nowrap }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View nowrap></View>
    * ```
@@ -83,7 +83,7 @@ export interface Flex {
    * ```css
    * { flex-wrap: wrap }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View wrap></View>
    * ```
@@ -95,7 +95,7 @@ export interface Flex {
    * ```css
    * { justify-content: flex-start }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyStart></View>
    * ```
@@ -107,7 +107,7 @@ export interface Flex {
    * ```css
    * { justify-content: flex-end }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyEnd></View>
    * ```
@@ -119,7 +119,7 @@ export interface Flex {
    * ```css
    * { justify-content: center }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyCenter></View>
    * ```
@@ -131,7 +131,7 @@ export interface Flex {
    * ```css
    * { justify-content: space-between }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyBetween></View>
    * ```
@@ -143,7 +143,7 @@ export interface Flex {
    * ```css
    * { justify-content: space-around }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyAround></View>
    * ```
@@ -155,7 +155,7 @@ export interface Flex {
    * ```css
    * { justify-content: space-around }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View justifyAround></View>
    * ```
@@ -167,7 +167,7 @@ export interface Flex {
    * ```css
    * { align-items: flex-start }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View itemsStart></View>
    * ```
@@ -179,7 +179,7 @@ export interface Flex {
    * ```css
    * { align-items: flex-end }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View itemsEnd></View>
    * ```
@@ -191,7 +191,7 @@ export interface Flex {
    * ```css
    * { align-items: center }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View itemsCenter></View>
    * ```
@@ -203,7 +203,7 @@ export interface Flex {
    * ```css
    * { align-items: baseline }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View itemsBaseline></View>
    * ```
@@ -215,7 +215,7 @@ export interface Flex {
    * ```css
    * { align-items: stretch }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View itemsStretch></View>
    * ```
@@ -244,7 +244,7 @@ export interface Flex {
    *   justify-items: center;
    * }
    * ```
-   * 用 View 作为示例:
+   * @example
    * ```tsx
    * <View center></View>
    * ```
@@ -254,7 +254,7 @@ export interface Flex {
   /**
    * Set center in x axis，不管改容器是 row 还是 column, 只会在 x 轴生效
    *
-   * 用 View 作为示例:
+   * @example
    *
    * ```tsx
    * <View centerX></View>
@@ -265,7 +265,7 @@ export interface Flex {
   /**
    * Set center in y axis，不管改容器是 row 还是 column, 只会在 y 轴生效
    *
-   * 用 View 作为示例:
+   * @example
    *
    * ```tsx
    * <View centerY></View>
