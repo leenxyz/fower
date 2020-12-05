@@ -34,7 +34,7 @@ module.exports = {
       'margin',
       'width',
       'height',
-      'square',
+      'size',
       'circle',
       'color',
       'background-color',
