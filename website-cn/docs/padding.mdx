@@ -1,9 +1,9 @@
 ---
 id: padding
-title: Padding
+title: 内边距
 ---
 
-使用 `p{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 padding。
+使用 `p{t|r|b|l|x|y}-{size}(-{size})` 格式的 Props 可以控制元素的 padding。
 
 ### Padding Props
 
@@ -64,6 +64,16 @@ padding 是高频率使用的属性，所以我们使用缩写。
 
 ```jsx live
 <Text py-10 bgRed30>
+  Hello
+</Text>
+```
+
+### 分别设置水平和垂直方向的 padding
+
+使用 `p-{size}-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
+
+```jsx live
+<Text p-20-5 bgRed30>
   Hello
 </Text>
 ```

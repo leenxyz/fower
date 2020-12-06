@@ -1,6 +1,6 @@
 ---
 id: margin
-title: Margin
+title: 外边距
 ---
 
 使用 `m{t|r|b|l|x|y}-{size}` 格式的 Props 可以控制元素的 margin。
@@ -97,5 +97,24 @@ margin 是高频率使用的属性，所以我们使用缩写。
   <View mb={-10}>Hello</View>
   <View ml="-10px">Hello</View>
   <View mr="-1rem">Hello</View>
+</View>
+```
+
+### 分别设置水平和垂直方向的 margin
+
+使用 `m-{size}-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
+
+```jsx live
+<View row justifyCenter spaceX-30>
+  <View s-100 debugChildren>
+    <View m-20-5 bgRed30>
+      Hello
+    </View>
+  </View>
+  <View s-100 debugChildren>
+    <View m--20--5 bgRed30>
+      Hello
+    </View>
+  </View>
 </View>
 ```

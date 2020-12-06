@@ -1,0 +1,79 @@
+---
+id: background
+title: 背景
+---
+
+使用 `bg` 指令快速设置背景
+
+```jsx live
+<View row center>
+  <View s-100 bg="url('https://avatars2.githubusercontent.com/u/2668081') center"></View>
+  <View s-100 bg="green30"></View>
+</View>
+```
+
+## 颜色
+
+使用 `bg(Color)` 指令快速设置背景颜色
+
+### 使用设计系统的颜色
+
+```jsx live
+<View row center>
+  <View s-100 bgGreen30></View>
+  <View s-100 bgBlue30></View>
+  <View s-100 bgPurple30></View>
+</View>
+```
+
+### 自定义颜色
+
+```jsx live
+<View row center>
+  <View s-100 bg="#ed8936"></View>
+  <View s-100 bg="rgba(44,200, 400)"></View>
+  <View s-100 bg="indigo"></View>
+</View>
+```
+
+### 快速改变颜色透明度
+
+```jsx live
+<View row center>
+  <View s-100 bg="#ed8936"></View>
+  <View s-100 bg="#ed8936-T40"></View>
+  <View s-100 bg="#ed8936-O40"></View>
+  <View s-100 bgColor="#ed8936-D40"></View>
+  <View s-100 bgColor="#ed8936-L40"></View>
+</View>
+```
+
+## 图片
+
+使用 `bgImg` 指令快速设置背景图片
+
+```jsx live
+<View row center>
+  <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081"></View>
+</View>
+```
+
+## 位置
+
+使用 `bgPos` 指令快速设置背景图片位置
+
+```jsx live
+<View row center>
+  <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081" bgPos="bottom right"></View>
+</View>
+```
+
+## 大小
+
+使用 `bgSize` 指令快速设置背景图片位置
+
+```jsx live
+<View row center>
+  <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081" bgSize="100% 50%"></View>
+</View>
+```

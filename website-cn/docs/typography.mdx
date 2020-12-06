@@ -1,6 +1,6 @@
 ---
 id: typography
-title: Typography
+title: 文字
 ---
 
 import { LineHeight } from '../src/components/LineHeight'
@@ -56,16 +56,14 @@ import { LineHeight } from '../src/components/LineHeight'
 
 使用预设值 `lhNone`、`lhTight`、`lhSnug`、`lhNormal`、`lhRelaxed`、`lhLoose`:
 
-<LineHeight />
-
-```jsx
+```jsx live
 <View>
-  <View lhNone>Lorem ipsum dolor sit amet ...</View>
-  <View lhTight>Lorem ipsum dolor sit amet ...</View>
-  <View lhSnug>Lorem ipsum dolor sit amet ...</View>
-  <View lhNormal>Lorem ipsum dolor sit amet ...</View>
-  <View lhRelaxed>Lorem ipsum dolor sit amet ...</View>
-  <View lhLoose>Lorem ipsum dolor sit amet ...</View>
+  <View lhNone>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhTight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhSnug>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhRelaxed>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhLoose>落霞与孤鹜齐飞，秋水共长天一色。</View>
 </View>
 ```
 
@@ -89,5 +87,41 @@ import { LineHeight } from '../src/components/LineHeight'
   <View textCenter>落霞与孤鹜齐飞，秋水共长天一色。</View>
   <View textRight>落霞与孤鹜齐飞，秋水共长天一色。</View>
   <View textJustify>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</View>
+```
+
+## Text Color
+
+### 使用设计系统的颜色
+
+```jsx live
+<View f-20>
+  <Text gray60>王勃</Text>
+  <Text colorPrimary> 李白</Text>
+  <Text green40> 杜甫</Text>
+</View>
+```
+
+所有的预设颜色：[Color palette](/docs/design-system-color)
+
+### 使用 `color` props
+
+```jsx live
+<View f-20>
+  <Text c="#999">王勃</Text>
+  <Text c="deeppink"> 李白</Text>
+  <Text c="#20B2AA"> 杜甫</Text>
+</View>
+```
+
+### 速改变颜色透明度
+
+```jsx live
+<View row evenly>
+  <View c="#ed8936">#ed8936</View>
+  <View c="#ed8936.8">#ed8936.8</View>
+  <View c="#ed8936.6">#ed8936.6</View>
+  <View c="#ed8936.4">#ed8936.4</View>
+  <View c="#ed8936.2">#ed8936.4</View>
 </View>
 ```

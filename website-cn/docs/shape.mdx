@@ -1,0 +1,67 @@
+---
+id: shape
+title: 形状
+---
+
+### 正方形
+
+使用 `s-{size}` 格式的 Props 快速设置元素为正方形。
+
+```jsx live
+<View left>
+  <View s-50 bgYellow20>
+    Hello
+  </View>
+  <View s-5rem bgGreen20>
+    Hello
+  </View>
+  <View s={100} bgBlue20>
+    Hello
+  </View>
+  <View s="150px" bgPurple20>
+    Hello
+  </View>
+</View>
+```
+
+### 长方形
+
+使用 `s-{width}-{height}` 格式的 Props 快速设置元素为长方形。
+
+```jsx live
+<View left>
+  <View s-50-50 bgYellow20>
+    Hello
+  </View>
+  <View s-50-5rem bgGreen20>
+    Hello
+  </View>
+  <View s-5rem-5rem bgBlue20>
+    Hello
+  </View>
+  <View s-50-150 bgPurple20>
+    Hello
+  </View>
+</View>
+```
+
+### 圆
+
+使用 `circle-{size}` 格式的 Props 快速设置元素为圆。
+
+```jsx live
+<View left>
+  <View circle-50 bgYellow20 center>
+    Hello
+  </View>
+  <View circle-5rem bgGreen20 center>
+    Hello
+  </View>
+  <View circle={100} bgBlue20 center>
+    Hello
+  </View>
+  <View circle="150px" bgPurple20 center>
+    Hello
+  </View>
+</View>
+```

@@ -1,6 +1,6 @@
 ---
 id: height
-title: Height
+title: 高
 ---
 
 使用原子 Props 控制元素的高度。高度是高频率使用的属性，所以我们使用缩写。
@@ -33,22 +33,22 @@ title: Height
 
 使用 `minH-{size}` 格式的 Props 可以控制元素的最小高度。
 
-```jsx
-<View minH-50>Hello</View>
-<View minH-50rem>Hello</View>
-<View minH={50}>Hello</View>
-<View minH="50px">Hello</View>
-<View minH="100%">Hello</View>
+```jsx live
+<View left>
+  <View w-50 minH-50 bgRed20>
+    Hello
+  </View>
+</View>
 ```
 
 ## 最大高度
 
 使用 `maxH-{size}` 格式的 Props 可以控制元素的最大高度。
 
-```jsx
-<View maxH-50>Hello</View>
-<View maxH-50rem>Hello</View>
-<View maxH={50}>Hello</View>
-<View maxH="50px">Hello</View>
-<View maxH="100%">Hello</View>
+```jsx live
+<View left>
+  <View w-50 maxH-50 bgRed20>
+    Hello
+  </View>
+</View>
 ```

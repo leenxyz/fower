@@ -1,40 +1,107 @@
 ---
 id: design-system-color
-sidebar_label: Color
+# sidebar_label: Color
 title: 颜色
 ---
 
 import { Colors } from '../src/components/Colors'
 
-使用 Styli，你可以系统地管理颜色，
+使用 Styli，你可以系统地管理文字颜色和背景颜色
 
-## 使用颜色
-
-直接使用颜色属性设置字体颜色：
+### 使用设计系统的颜色
 
 ```jsx live
-<Text f-24 green50 fontBold>
-  Hello
-</Text>
-```
-
-使用 `primary`、`info`、`success`、`warn`等颜色:
-
-```jsx live
-<Text f-24 primaryColor fontBold>
-  Hello
-</Text>
-```
-
-背景颜色的使用：
-
-```jsx live
-<View bgOrange30 orange70 center s-100 f-20>
-  Hello
+<View row evenly>
+  <Text gray60>王勃</Text>
+  <Text colorPrimary> 李白</Text>
+  <Text green40> 杜甫</Text>
+  <Text bgGray60>王勃</Text>
+  <Text bgPrimary> 李白</Text>
+  <Text bgGreen40> 杜甫</Text>
 </View>
 ```
 
-## Color palette
+### 快速改变颜色透明度
+
+增加透明度
+
+```jsx live
+<View row evenly>
+  <Text gray60-O20 bgGray60-O80>
+    王勃
+  </Text>
+  <Text c="gray60-O40" bg="gray60-O60">
+    李白
+  </Text>
+  <Text color="gray60-O60" bg="gray60-O40">
+    杜甫
+  </Text>
+  <Text color="#718096-O80" bg="#718096-O20">
+    杜甫
+  </Text>
+</View>
+```
+
+减少透明度
+
+```jsx live
+<View row evenly>
+  <Text gray60-T20 bgGray60-T80>
+    王勃
+  </Text>
+  <Text c="gray60-T40" bg="gray60-T60">
+    李白
+  </Text>
+  <Text color="gray60-T60" bg="gray60-T40">
+    杜甫
+  </Text>
+  <Text color="#718096-T80" bg="#718096-T20">
+    杜甫
+  </Text>
+</View>
+```
+
+### 快速改变颜色深度
+
+颜色加深
+
+```jsx live
+<View row evenly>
+  <Text gray60-D20 bgGray60-D80>
+    王勃
+  </Text>
+  <Text c="gray60-D40" bg="gray60-D60">
+    李白
+  </Text>
+  <Text color="gray60-D60" bg="gray60-D40">
+    杜甫
+  </Text>
+  <Text color="#718096-D80" bg="#718096-D20">
+    杜甫
+  </Text>
+</View>
+```
+
+颜色减轻
+
+```jsx live
+<View row evenly>
+  <Text gray60-L20 bgGray60-L80>
+    王勃
+  </Text>
+  <Text c="gray60-L40" bg="gray60-L60">
+    李白
+  </Text>
+  <Text color="gray60-L60" bg="gray60-L40">
+    杜甫
+  </Text>
+  <Text color="#718096-L80" bg="#718096-L20">
+    杜甫
+  </Text>
+</View>
+```
+
+## 调色板
 
 > Styli preset-color，borrow from tailwindcss color。
 
