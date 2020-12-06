@@ -9,7 +9,14 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
 ## Hover
 
 ```jsx live
-<Button bgRed30 bgRed40--hover red80 p4 rounded-10 border="none">
+<Button
+  p4
+  red80
+  bgRed30
+  rounded-10
+  outlineNone
+  bgRed40--hover
+  c--hover="yellow">
   Hover me
 </Button>
 ```
@@ -17,7 +24,7 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
 ## Active
 
 ```jsx live
-<Button bgYellow30 bgYellow50--active yellow80 p4 rounded-10 border="none">
+<Button bgYellow30 bgYellow50--active yellow80 p4 rounded-10 outlineNone>
   Click Me
 </Button>
 ```
@@ -25,8 +32,8 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
 ## Disabled
 
 ```jsx live
-<View center>
-  <Button bgRed30 red80 p4 rounded-10 border="none" mr-20>
+<View center spaceX-10>
+  <Button bgRed30 red80 p4 rounded-10 outlineNone>
     Normal
   </Button>
   <Button disabled bgRed30 opacity-70--disabled red80 p4 rounded-10 border="none">
@@ -40,9 +47,9 @@ Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式
 ```jsx live
 <Input
   bgGray20
-  css={{ outline: 'none' }}
   bgWhite--focus
   p2
+  outlineNone
   border="1px solid #aaa"
   border--focus="1px solid deeppink"
 />
