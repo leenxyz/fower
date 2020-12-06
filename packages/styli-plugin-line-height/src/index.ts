@@ -17,7 +17,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   const inline = styli.getConfig('inline')
 
   if (leadings[downFirst(value)]) {
-    if (inline) {
+    if (!inline) {
       return { lineHeight: leadings[downFirst(value)] }
     }
 
