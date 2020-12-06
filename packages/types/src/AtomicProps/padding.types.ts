@@ -1,5 +1,5 @@
 import { PropValue } from './common.types'
-export interface Padding {
+export interface Paddings {
   /**
    * Set padding
    *
