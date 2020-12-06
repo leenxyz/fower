@@ -5,6 +5,7 @@ export const theme: Theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
   colors,
   spacing: ['0', '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
+  sizes: ['0', '4px', '8px', '12px', '16px', '20px', '24px', '28px', '32px', '36px'],
   fontSizes: ['12px', '14px', '16px', '20px', '24px', '32px', '48px', '64px'],
   headings: ['48px', '32px', '24px', , '20px', '16px', '14px'] as string[] | number[],
   iconSizes: ['16px', '24px', '32px'],
