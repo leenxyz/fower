@@ -64,16 +64,16 @@ export default (): StyliPlugin => {
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !sizeMaps[key]) return atom
 
-      const spacing = styli.getTheme<string[]>('sizes') || []
+      const sizes = styli.getTheme<string[]>('sizes') || []
 
-      if (!spacing.length) {
-        console.error('theme spacing is not provide')
+      if (!sizes.length) {
+        console.error('theme sizes is not provide')
       }
 
       return {
         ...atom,
         propKey: key,
-        propValue: spacing[Number(value)],
+        propValue: sizes[Number(value)],
         className: propKey,
       }
     },
