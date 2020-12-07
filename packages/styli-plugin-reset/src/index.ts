@@ -12,10 +12,6 @@ export default (): StyliPlugin => {
 
       if (atom.propValue === true) {
         atom.style = {
-          '*': {
-            border: '0 solid #ccc',
-            boxSizing: 'border-box',
-          },
           html: {
             lineHeight: 1.15,
             WebkitTextSizeAdjust: '100%',

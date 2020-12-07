@@ -483,9 +483,24 @@ export interface Texts {
    */
   capitalize?: boolean
 
-  // for theme
+  /**
+   * Set color
+   *
+   * @example
+   * ```tsx
+   * <View c="#FFF"></View>
+   * ```
+   */
   c?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[])
 
+  /**
+   * Set color
+   *
+   * @example
+   * ```tsx
+   * <View c="#FFF"></View>
+   * ```
+   */
   color?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[])
 
   colorBrand?: boolean
@@ -512,7 +527,7 @@ export interface Texts {
    * <View ellipsis></View>
    * <View ellipsis-200></View>
    * <View ellipsis-200px></View>
-   * <View ellipsis-200rem></View>
+   * <View ellipsis="200rem></View>
    * ```
    */
   ellipsis?: PropValue
@@ -527,7 +542,7 @@ export interface Texts {
    * <View ellipsis1></View>
    * <View ellipsis1-200></View>
    * <View ellipsis1-200px></View>
-   * <View ellipsis1-200rem></View>
+   * <View ellipsis1="200rem"></View>
    * ```
    */
   ellipsis1?: PropValue
@@ -543,7 +558,7 @@ export interface Texts {
    * <View ellipsis2></View>
    * <View ellipsis2-200></View>
    * <View ellipsis2-200px></View>
-   * <View ellipsis2-200rem></View>
+   * <View ellipsis2="200rem"></View>
    * ```
    */
   ellipsis2?: PropValue
@@ -559,7 +574,7 @@ export interface Texts {
    * <View ellipsis3></View>
    * <View ellipsis3-200></View>
    * <View ellipsis3-200px></View>
-   * <View ellipsis3-200rem></View>
+   * <View ellipsis3="200rem"></View>
    * ```
    */
   ellipsis3?: PropValue
@@ -575,7 +590,7 @@ export interface Texts {
    * <View ellipsis4></View>
    * <View ellipsis4-200></View>
    * <View ellipsis4-200px></View>
-   * <View ellipsis4-200rem></View>
+   * <View ellipsis4="200rem"></View>
    * ```
    */
   ellipsis4?: PropValue
@@ -591,7 +606,7 @@ export interface Texts {
    * <View ellipsis5></View>
    * <View ellipsis5-200></View>
    * <View ellipsis5-200px></View>
-   * <View ellipsis5-200rem></View>
+   * <View ellipsis5="200rem"></View>
    * ```
    */
   ellipsis5?: PropValue

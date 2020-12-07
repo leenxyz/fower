@@ -33,9 +33,90 @@ export interface AtomicProps
     Cursor,
     Opacity,
     Spaces {
+  /**
+   * CSS
+   *
+   * Like style prop, but you can do more.
+   *
+   * Styli will auto add a className to element and parse css prop`s value to a css string, then add it to style element.
+   *
+   * @example
+   * ```tsx
+   * <View css={
+   *  {
+   *     transition: 'all 0.3s',
+   *     '::after': {
+   *        content: '""',
+   *        display: 'block',
+   *      },
+   *     '>span': {
+   *        color: 'red',
+   *     },
+   *     '.dot': {
+   *        '.text': {
+   *           color: 'yellow',
+   *           fontSize: '12px',
+   *        },
+   *     }
+   *  }
+   * }></View>
+   * ```
+   */
   css?: CSSObject
+
+  /**
+   * debug
+   *
+   * Styli will auto add border to self element.
+   *
+   * debug is `.autoClassName{ border: 1px solid gold }`
+   *
+   * @example
+   * ```tsx
+   * <View debug></View>
+   * ```
+   */
   debug?: boolean | CSSObject
+
+  /**
+   * debugChildren
+   *
+   * Styli will auto add border to self and children element
+   *
+   * debugChildren is `.autoClassName{ border: 1px solid gold, '> *': { border: 1px solid gold } }`
+   *
+   * @example
+   * ```tsx
+   * <View debugChildren></View>
+   * ```
+   */
   debugChildren?: boolean | CSSObject
+
+  /**
+   * debugAll
+   *
+   * Styli will auto add border to all element.
+   *
+   * debugAll is `*{ border: 1px solid gold }`
+   *
+   * @example
+   * ```tsx
+   * <View debugAll></View>
+   * ```
+   */
   debugAll?: boolean | CSSObject
+
+  /**
+   * Reset
+   *
+   * this prop can block browser default style differences. And it integrate with [normalize.css](https://github.com/necolas/normalize.css)
+   *
+   * [NOTE] It is better to use this in root element.
+   *
+   * @example
+   * ```tsx
+   * <View reset></View>
+   * ```
+   */
   reset?: boolean | CSSObject
 }

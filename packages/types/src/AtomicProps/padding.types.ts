@@ -13,7 +13,7 @@ export interface Paddings {
    * <View p={a + b}></View>
    * ```
    */
-  m?: PropValue
+  p?: PropValue
 
   /**
    * Set padding
