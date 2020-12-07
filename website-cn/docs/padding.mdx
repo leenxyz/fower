@@ -1,13 +1,15 @@
 ---
 id: padding
-title: 内边距
+title: padding 内边距
 ---
 
 使用 `p{t|r|b|l|x|y}-{size}(-{size})` 格式的 Props 可以控制元素的 padding。
 
-### Padding Props
+## Padding Props
 
-padding 是高频率使用的属性，所以我们使用缩写。
+:::info
+`padding` 属性是高频使用的样式，所以简化为 `p`。
+:::
 
 - `p` padding
 - `pt` padding-top
@@ -17,22 +19,24 @@ padding 是高频率使用的属性，所以我们使用缩写。
 - `px` padding-left and padding-right
 - `py` padding-top and padding-bottom
 
-### 设置四周的 padding
+## 设置四周的 padding
 
 使用 `p-{size}` 格式的 Props 可以控制元素四周的 padding。
 
 ```jsx live
-<Text p-10 bgRed30>
-  Hello
-</Text>
+<Wrapper>
+  <Text p-10 bgBlue30>
+    Hello
+  </Text>
+</Wrapper>
 ```
 
-### 设置一边的 padding
+## 设置一边的 padding
 
 使用 `p{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 padding。
 
 ```jsx live
-<View centerX>
+<Wrapper>
   <View debug pt-10>
     Hello
   </View>
@@ -45,35 +49,110 @@ padding 是高频率使用的属性，所以我们使用缩写。
   <View debug pl-10>
     Hello
   </View>
-</View>
+</Wrapper>
 ```
 
-### 设置水平方向的 padding
+## 设置水平方向的 padding
 
 使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 padding。
 
 ```jsx live
-<Text px-10 bgRed30>
-  Hello
-</Text>
+<Wrapper>
+  <Text px-10 bgBlue30>
+    Hello
+  </Text>
+</Wrapper>
 ```
 
-### 设置垂直方向的 padding
+## 设置垂直方向的 padding
 
 使用 `py-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
 
 ```jsx live
-<Text py-10 bgRed30>
-  Hello
-</Text>
+<Wrapper>
+  <Text py-10 bgBlue30>
+    Hello
+  </Text>
+</Wrapper>
 ```
 
-### 分别设置水平和垂直方向的 padding
+## 设置水平和垂直方向的 padding
 
 使用 `p-{size}-{size}` 格式的 Props 可以控制元素垂直方向的 padding。
 
 ```jsx live
-<Text p-20-5 bgRed30>
-  Hello
-</Text>
+<Wrapper>
+  <Text p-20-5 bgBlue30>
+    Hello
+  </Text>
+</Wrapper>
+```
+
+## 伪类
+
+styli 基本支持了所有的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 p-20 p--hover={10}>
+    <View center bgBlue40 s-100p>
+      hover
+    </View>
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center h-100 p={[5, 10, 15, 20]} bgBlue30>
+    <View center bgBlue40 s-100p>
+      media query
+    </View>
+  </View>
+</Wrapper>
+```
+
+## 设计系统
+
+使用设计系统指令，让您的应用更有规范
+
+```jsx live
+<Wrapper>
+  <View center s-100 p1 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p1
+    </View>
+  </View>
+  <View center s-100 p2 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p2
+    </View>
+  </View>
+  <View center s-100 p3 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p3
+    </View>
+  </View>
+  <View center s-100 p4 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p4
+    </View>
+  </View>
+  <View center s-100 p5 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p5
+    </View>
+  </View>
+  <View center s-100 p6 bgBlue30>
+    <View center bgBlue40 s-100p>
+      p6
+    </View>
+  </View>
+</Wrapper>
 ```

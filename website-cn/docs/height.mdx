@@ -1,16 +1,18 @@
 ---
 id: height
-title: 高
+title: height 高
 ---
-
-使用原子 Props 控制元素的高度。高度是高频率使用的属性，所以我们使用缩写。
 
 ## 固定高度
 
 使用 `h-{size}` 格式的 Props 可以控制元素的高度。
 
+:::info
+`height` 属性是高频使用的样式，所以简化为 `h`。
+:::
+
 ```jsx live
-<View left>
+<Wrapper>
   <View h-50 bgRed20>
     Hello
   </View>
@@ -26,7 +28,7 @@ title: 高
   <View h="20%" bgPurple20>
     Hello
   </View>
-</View>
+</Wrapper>
 ```
 
 ## 最小高度
@@ -34,11 +36,11 @@ title: 高
 使用 `minH-{size}` 格式的 Props 可以控制元素的最小高度。
 
 ```jsx live
-<View left>
+<Wrapper>
   <View w-50 minH-50 bgRed20>
     Hello
   </View>
-</View>
+</Wrapper>
 ```
 
 ## 最大高度
@@ -46,9 +48,71 @@ title: 高
 使用 `maxH-{size}` 格式的 Props 可以控制元素的最大高度。
 
 ```jsx live
-<View left>
+<Wrapper>
   <View w-50 maxH-50 bgRed20>
     Hello
   </View>
-</View>
+</Wrapper>
+```
+
+## 伪类
+
+styli 基本支持了所有的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 h--hover={120}>
+    hover
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center w-200 h={[30, 50, 70, 90]} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```
+
+## 设计系统
+
+使用设计系统指令，让您的应用更有规范
+
+```jsx live
+<Wrapper>
+  <View center w-50 h1 bgBlue30>
+    h1
+  </View>
+  <View center w-50 h2 bgBlue30>
+    h2
+  </View>
+  <View center w-50 h3 bgBlue30>
+    h3
+  </View>
+  <View center w-50 h4 bgBlue30>
+    h4
+  </View>
+  <View center w-50 h5 bgBlue30>
+    h5
+  </View>
+  <View center w-50 h6 bgBlue30>
+    h6
+  </View>
+  <View center w-50 h7 bgBlue30>
+    h7
+  </View>
+  <View center w-50 h8 bgBlue30>
+    h8
+  </View>
+  <View center w-50 h9 bgBlue30>
+    h9
+  </View>
+</Wrapper>
 ```

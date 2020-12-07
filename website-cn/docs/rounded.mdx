@@ -1,6 +1,6 @@
 ---
 id: rounded
-title: 圆角
+title: rounded 圆角
 ---
 
 使用 `rounded{T|R|B|L|TL|TR|BL|BR}-{size}` 格式的 Props 可以控制元素的圆角大小。
@@ -8,45 +8,69 @@ title: 圆角
 ## 四周圆角
 
 ```jsx live
-<View evenly>
+<Wrapper>
   <View s-100 bgYellow20 rounded-6></View>
   <View s-100 bgRed20 rounded-10px></View>
   <View s-100 bgGreen20 rounded={20}></View>
   <View s-100 bgBlue20 rounded="50px"></View>
-</View>
+</Wrapper>
 ```
 
 ## 某一方向
 
 ```jsx live
-<View evenly>
+<Wrapper>
   <View s-100 bgYellow20 roundedT-20></View>
   <View s-100 bgRed20 roundedR-20></View>
   <View s-100 bgGreen20 roundedB-20></View>
   <View s-100 bgBlue20 roundedL-20></View>
-</View>
+</Wrapper>
 ```
 
 ## 单个圆角
 
 ```jsx live
-<View evenly>
+<Wrapper>
   <View s-100 bgYellow20 roundedTL-20></View>
   <View s-100 bgRed20 roundedTR-20></View>
   <View s-100 bgGreen20 roundedBL-20></View>
   <View s-100 bgBlue20 roundedBR-20></View>
-</View>
+</Wrapper>
 ```
 
-## 使用伪类
+## 伪类
 
-你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+styli 基本支持了所有的伪类。
 
 > Styli 支持的伪类：[查看](/docs/pseudo)
 
 ```jsx live
-<View evenly>
+<Wrapper>
   <View s-100 bgYellow20 rounded-20--hover></View>
   <View s-100 bgGreen20 rounded-20--active></View>
-</View>
+</Wrapper>
 ```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-200 rounded={[30, 50, 70, 90]} bgBlue30>
+    rounded = [30, 50, 70, 90]
+  </View>
+</Wrapper>
+```
+
+<!-- ## 设计系统
+
+使用设计系统指令，让您的应用更有规范
+
+```jsx live
+<View bgGray10 p-20 row>
+  <View center w-50 h9 bgBlue30>
+    h9
+  </View>
+</View>
+``` -->

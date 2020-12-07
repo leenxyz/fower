@@ -4,58 +4,79 @@ sidebar_label: 伪类
 title: 伪类
 ---
 
-Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，开启伪类样式的原子属性格式为：{prop}--{pseudo}，例如：bgRed40--hover、bgYellow50--active、opacity-70--disabled、w-20--visited 等。
+Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
+
+## 用法
+
+您可以直接使用 `{prop}--{pseudo}` 形式的原子属性开启伪类。
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 red40 red60--hover>
+    1
+  </View>
+  <View center s-100 bgBlue30 c="red40" c--hover="red60">
+    2
+  </View>
+</Wrapper>
+```
 
 ## Hover
 
 ```jsx live
-<Button p4 red80 bgRed30 rounded-10 outlineNone bgRed40--hover c--hover="yellow">
-  Hover me
-</Button>
+<Wrapper>
+  <Button p4 red80 bgRed30 rounded-10 outlineNone bgRed40--hover c--hover="yellow">
+    Hover me
+  </Button>
+</Wrapper>
 ```
 
 ## Active
 
 ```jsx live
-<Button bgYellow30 bgYellow50--active yellow80 p4 rounded-10 outlineNone>
-  Click Me
-</Button>
+<Wrapper>
+  <Button bgYellow30 bgYellow50--active yellow80 p4 rounded-10 outlineNone>
+    Click Me
+  </Button>
+</Wrapper>
 ```
 
 ## Disabled
 
 ```jsx live
-<View center spaceX-10>
+<Wrapper>
   <Button bgRed30 red80 p4 rounded-10 outlineNone>
     Normal
   </Button>
   <Button disabled bgRed30 opacity-70--disabled red80 p4 rounded-10 border="none">
     Disabled
   </Button>
-</View>
+</Wrapper>
 ```
 
 ## Focus
 
 ```jsx live
-<Input
-  bgGray20
-  bgWhite--focus
-  p2
-  outlineNone
-  border="1px solid #aaa"
-  border--focus="1px solid deeppink"
-/>
+<Wrapper>
+  <Input
+    p2
+    bgGray20
+    outlineNone
+    bgWhite--focus
+    border="1px solid #aaa"
+    border--focus="1px solid deeppink"
+  />
+</Wrapper>
 ```
 
 ## Child
 
 ```jsx live
-<View>
+<Wrapper>
   <View red40--first-child>One</View>
   <View>Two</View>
   <View green40--last-child>Three</View>
-</View>
+</Wrapper>
 ```
 
 ## 支持的伪类

@@ -1,6 +1,6 @@
 ---
 id: border
-title: 边框
+title: border 边框
 ---
 
 使用 `border{T|R|B|L|X|Y}` 格式的 Props 可以控制元素的 border。
@@ -8,15 +8,17 @@ title: 边框
 ## 四周边框
 
 ```jsx live
-<View s-80 bgGray20 border="3px solid deeppink">
-  border
-</View>
+<Wrapper>
+  <View s-80 bgGray20 border="3px solid deeppink">
+    border
+  </View>
+</Wrapper>
 ```
 
 ## 单一方向
 
 ```jsx live
-<View row evenly>
+<Wrapper>
   <View s-80 bgGray20 borderT="3px solid deeppink">
     borderT
   </View>
@@ -30,22 +32,39 @@ title: 边框
   <View s-80 bgGray20 borderL="3px solid deeppink">
     borderL
   </View>
-</View>
+</Wrapper>
 ```
 
-## 使用伪类
+## 伪类
 
-你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+styli 基本支持了所有的伪类。
 
 > Styli 支持的伪类：[查看](/docs/pseudo)
 
 ```jsx live
-<View evenly>
+<Wrapper>
   <View s-80 bgGray20 border="3px solid deeppink" border--hover="3px solid yellowGreen">
     hover
   </View>
   <View s-80 bgGray20 border="3px solid deeppink" border--active="3px solid yellowGreen">
     active
   </View>
-</View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View
+    center
+    h-100
+    w-200
+    border={['3px solid blue10', '3px solid red30', '3px solid yellow50', '3px solid green70']}
+  >
+    media query
+  </View>
+</Wrapper>
 ```

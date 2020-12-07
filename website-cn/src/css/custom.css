@@ -45,7 +45,8 @@ body {
 
 .btn-active {
   color: #fff;
-  background: #276ef1;
+  background: #90cdf4;
+  outline: none;
 }
 
 code {

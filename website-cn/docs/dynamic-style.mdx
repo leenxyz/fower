@@ -37,7 +37,7 @@ function App() {
       style={{
         padding: '15px',
         color: isActive ? '#fff' : '#000',
-        background: isActive ? '#276ef1' : 'none',
+        background: isActive ? '#90cdf4' : 'none',
         borderRadius: '4px',
         border: '1px solid #aaa',
       }}
@@ -62,9 +62,10 @@ function App() {
     <Button
       p-15
       rounded-4
-      border="1px solid #ccc"
-      c={isActive ? '#fff' : '#000'}
-      bg={isActive ? '#276ef1' : false}
+      outlineNone
+      white={isActive}
+      black={!isActive}
+      bgBlue30={isActive}
       onClick={() => setIsActive(!isActive)}
     >
       It is {isActive ? 'on' : 'off'}!

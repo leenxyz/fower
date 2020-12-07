@@ -1,14 +1,44 @@
 ---
 id: opacity
-title: 透明度
+title: opacity 透明度
 ---
+
+使用 `opacity` 指令可快速设置阴影
+
+## 用法
 
 ```jsx live
 <View row center>
-  <View s-100 bgBlack opacity-20></View>
-  <View s-100 bgBlack opacity-40></View>
-  <View s-100 bgBlack opacity-60></View>
-  <View s-100 bgBlack opacity={80}></View>
-  <View s-100 bgBlack opacity-100></View>
+  <View s-100 bgBlue30 opacity-20></View>
+  <View s-100 bgBlue30 opacity-40></View>
+  <View s-100 bgBlue30 opacity-60></View>
+  <View s-100 bgBlue30 opacity={80}></View>
+  <View s-100 bgBlue30 opacity-100></View>
 </View>
+```
+
+## 伪类
+
+styli 基本支持了所有的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 opacity-100 opacity--hover={50}>
+    hover
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-100 opacity={[10, 30, 50, 70]} bgBlue30>
+    media query
+  </View>
+</Wrapper>
 ```

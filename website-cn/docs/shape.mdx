@@ -1,14 +1,14 @@
 ---
 id: shape
-title: 形状
+title: shape 形状
 ---
 
-### 正方形
+## 正方形
 
 使用 `s-{size}` 格式的 Props 快速设置元素为正方形。
 
 ```jsx live
-<View left>
+<Wrapper>
   <View s-50 bgYellow20>
     Hello
   </View>
@@ -21,15 +21,15 @@ title: 形状
   <View s="150px" bgPurple20>
     Hello
   </View>
-</View>
+</Wrapper>
 ```
 
-### 长方形
+## 长方形
 
 使用 `s-{width}-{height}` 格式的 Props 快速设置元素为长方形。
 
 ```jsx live
-<View left>
+<Wrapper>
   <View s-50-50 bgYellow20>
     Hello
   </View>
@@ -42,15 +42,15 @@ title: 形状
   <View s-50-150 bgPurple20>
     Hello
   </View>
-</View>
+</Wrapper>
 ```
 
-### 圆
+## 圆
 
 使用 `circle-{size}` 格式的 Props 快速设置元素为圆。
 
 ```jsx live
-<View left>
+<Wrapper>
   <View circle-50 bgYellow20 center>
     Hello
   </View>
@@ -63,5 +63,67 @@ title: 形状
   <View circle="150px" bgPurple20 center>
     Hello
   </View>
-</View>
+</Wrapper>
+```
+
+## 伪类
+
+styli 基本支持了所有的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 s--hover={120}>
+    hover
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center circle={[30, 50, 70, 90]} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```
+
+## 设计系统
+
+使用设计系统指令，让您的应用更有规范
+
+```jsx live
+<Wrapper>
+  <View center s1 bgBlue30>
+    s1
+  </View>
+  <View center s2 bgBlue30>
+    s2
+  </View>
+  <View center s3 bgBlue30>
+    s3
+  </View>
+  <View center s4 bgBlue30>
+    s4
+  </View>
+  <View center s5 bgBlue30>
+    s5
+  </View>
+  <View center s6 bgBlue30>
+    s6
+  </View>
+  <View center s7 bgBlue30>
+    s7
+  </View>
+  <View center s8 bgBlue30>
+    s8
+  </View>
+  <View center s9 bgBlue30>
+    s9
+  </View>
+</Wrapper>
 ```

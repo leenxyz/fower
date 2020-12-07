@@ -1,15 +1,15 @@
 ---
 id: background
-title: 背景
+title: background 背景
 ---
 
 使用 `bg` 指令快速设置背景
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bg="url('https://avatars2.githubusercontent.com/u/2668081') center"></View>
   <View s-100 bg="green30"></View>
-</View>
+</Wrapper>
 ```
 
 ## 颜色
@@ -19,33 +19,33 @@ title: 背景
 ### 使用设计系统的颜色
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bgGreen30></View>
   <View s-100 bgBlue30></View>
   <View s-100 bgPurple30></View>
-</View>
+</Wrapper>
 ```
 
 ### 自定义颜色
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bg="#ed8936"></View>
   <View s-100 bg="rgba(44,200, 400)"></View>
   <View s-100 bg="indigo"></View>
-</View>
+</Wrapper>
 ```
 
-### 快速改变颜色透明度
+### 快速改变颜色
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bg="#ed8936"></View>
   <View s-100 bg="#ed8936-T40"></View>
   <View s-100 bg="#ed8936-O40"></View>
   <View s-100 bgColor="#ed8936-D40"></View>
   <View s-100 bgColor="#ed8936-L40"></View>
-</View>
+</Wrapper>
 ```
 
 ## 图片
@@ -53,9 +53,9 @@ title: 背景
 使用 `bgImg` 指令快速设置背景图片
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081"></View>
-</View>
+</Wrapper>
 ```
 
 ## 位置
@@ -63,9 +63,9 @@ title: 背景
 使用 `bgPos` 指令快速设置背景图片位置
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081" bgPos="bottom right"></View>
-</View>
+</Wrapper>
 ```
 
 ## 大小
@@ -73,7 +73,54 @@ title: 背景
 使用 `bgSize` 指令快速设置背景图片位置
 
 ```jsx live
-<View row center>
+<Wrapper>
   <View s-100 bgImg="https://avatars2.githubusercontent.com/u/2668081" bgSize="100% 50%"></View>
-</View>
+</Wrapper>
 ```
+
+## 伪类
+
+styli 基本支持了所有的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 bgBlue50--hover>
+    hover
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center h-100 w-200 bgColor={['blue10', 'red30', 'yellow50', 'green70']}>
+    media query
+  </View>
+  <View
+    center
+    h-100
+    w-200
+    bgImg="https://avatars2.githubusercontent.com/u/2668081"
+    bgSize={[40, 30, 20, 10]}
+  >
+    media query
+  </View>
+</Wrapper>
+```
+
+<!-- ## 设计系统
+
+使用设计系统指令，让您的应用更有规范
+
+```jsx live
+<View bgGray10 p-20 row>
+  <View center h-20 w9 bgBlue30>
+    w9
+  </View>
+</View>
+``` -->

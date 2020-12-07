@@ -21,10 +21,20 @@ const ButtonExample = (props) => (
   />
 )
 
+const Wrapper = (props) => {
+  const { children, ...rest } = props
+  return (
+    <View p-20 bgGray10 evenly f-20 centerY {...rest}>
+      {children}
+    </View>
+  )
+}
+
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
   ...React,
+  Wrapper,
   ButtonExample,
   Button,
   Input,
