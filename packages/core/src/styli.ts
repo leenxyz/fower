@@ -33,6 +33,7 @@ class Styli {
   }
 
   isStyliColor = (value: string = '') => {
+    if (!value) return false
     const colors = this.getColors()
     const [prefix] = value.split('-')
     return !!colors[downFirst(prefix)]
