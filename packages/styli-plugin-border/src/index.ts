@@ -50,7 +50,7 @@ export function borderPropToStyle(prop: string, propValue: any) {
     const position = postfix.replace(/-\d+$/, '')
     const borderPosition = positionMaps[position.toUpperCase()] ?? ''
     const key = `border${borderPosition}Width`
-    return { [key]: getValue(postfix.replace(/^-/i, '')) }
+    return { [key]: getValue(postfix.replace(/^[trbl]?-/i, '')) }
   }
 
   /** @example borderT, borderR */
