@@ -29,7 +29,7 @@ module.exports = {
       'design-system-typography',
       'design-system-spacing',
     ],
-    原子属性: [
+    属性: [
       'width',
       'height',
       'shape',
@@ -37,7 +37,12 @@ module.exports = {
       'typography',
       'background',
       'border',
+      'zIndex',
+      'space',
+      'debug',
+      'reset',
       'shadow',
+      'outline',
       'padding',
       'margin',
       // 'color',
