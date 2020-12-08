@@ -189,7 +189,7 @@ export function parseCSSProp(cssObj: any, className = ''): string {
 
   return paths
     .map(({ key, value }: any) => {
-      const isPseudo = /^::?\w+$/.test(key)
+      const isPseudo = /^::?.+/.test(key)
 
       let str = ''
       for (let i in value) {
