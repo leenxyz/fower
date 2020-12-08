@@ -18,6 +18,7 @@ export enum ModifierType {
 
 export interface Configuration {
   unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
+  dev?: boolean
   prefix?: string
   /** use inline style or not */
   inline?: boolean
