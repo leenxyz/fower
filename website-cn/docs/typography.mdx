@@ -23,25 +23,6 @@ import { LineHeight } from '../src/components/LineHeight'
 
 ## 字体粗细
 
-有两种方式可以控制字体粗细，一种是使用预设值，另外一种是使用精确的传值。
-
-使用预设值:
-
-```jsx live
-<Wrapper column>
-  <View fontHairline>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontThin>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontLight>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontMedium>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontSemibold>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontBold>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View fontExtrabold>落霞与孤鹜齐飞，秋水共长天一色。</View>
-</Wrapper>
-```
-
-使用精确传值:
-
 ```jsx live
 <Wrapper column>
   <View fontWeight-100>落霞与孤鹜齐飞，秋水共长天一色。</View>
@@ -51,23 +32,6 @@ import { LineHeight } from '../src/components/LineHeight'
 ```
 
 ## 行高
-
-有两种方式可以控制文本的行高，一种是使用预设值，另外一种是使用精确的传值。
-
-使用预设值 `lhNone`、`lhTight`、`lhSnug`、`lhNormal`、`lhRelaxed`、`lhLoose`:
-
-```jsx live
-<Wrapper column>
-  <View lhNone>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View lhTight>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View lhSnug>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View lhNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View lhRelaxed>落霞与孤鹜齐飞，秋水共长天一色。</View>
-  <View lhLoose>落霞与孤鹜齐飞，秋水共长天一色。</View>
-</Wrapper>
-```
-
-使用精确传值:
 
 ```jsx live
 <Wrapper column>
@@ -128,7 +92,7 @@ import { LineHeight } from '../src/components/LineHeight'
 
 ## 伪类
 
-styli 基本支持了所有的伪类。
+styli 支持了大量常用的伪类。
 
 > Styli 支持的伪类：[查看](/docs/pseudo)
 
@@ -154,7 +118,9 @@ styli 基本支持了所有的伪类。
 
 ## 设计系统
 
-使用设计系统指令，让您的应用更有规范
+使用设计系统属性，让您的应用更有规范
+
+### 字体大小
 
 ```jsx live
 <Wrapper>
@@ -176,5 +142,33 @@ styli 基本支持了所有的伪类。
   <View center w-50 f6 bgBlue30>
     f6
   </View>
+</Wrapper>
+```
+
+### 字体粗细
+
+```jsx live
+<Wrapper column>
+  <View fontHairline>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontThin>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontLight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontMedium>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontSemibold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontBold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontExtrabold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```
+
+### 行高
+
+```jsx live
+<Wrapper column>
+  <View lhNone>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhTight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhSnug>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhRelaxed>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhLoose>落霞与孤鹜齐飞，秋水共长天一色。</View>
 </Wrapper>
 ```

@@ -2,3 +2,33 @@
 id: outline
 title: outline 轮廓
 ---
+
+`outline{None|Offset}` 系列属性可以快速设置元素轮廓
+
+```jsx live
+<Wrapper>
+  <Input p2 outline="1px dotted red" bgGray20 bgWhite--focus />
+</Wrapper>
+```
+
+注意: outline 属性没有设置属性值时，默认为 none
+
+## 消除轮廓
+
+outlineNone 属性可以快速消除轮廓
+
+```jsx live
+<Wrapper>
+  <Input p2 outlineNone bgGray20 bgWhite--focus />
+</Wrapper>
+```
+
+## 轮廓偏移量
+
+outlineOffset 属性快速设置轮廓偏移量
+
+```jsx live
+<Wrapper>
+  <Input p2 bgGray20 outlineOffset-10 outline="2px dotted red" />
+</Wrapper>
+```

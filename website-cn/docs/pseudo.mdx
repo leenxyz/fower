@@ -12,10 +12,10 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgBlue30 red40 red60--hover>
+  <View center s-100 bgBlue30 bgBlue50--hover>
     1
   </View>
-  <View center s-100 bgBlue30 c="red40" c--hover="red60">
+  <View center s-100 bg="blue30" bg--hover="blue50">
     2
   </View>
 </Wrapper>
@@ -25,7 +25,7 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ```jsx live
 <Wrapper>
-  <Button p4 red80 bgRed30 rounded-10 outlineNone bgRed40--hover c--hover="yellow">
+  <Button p4 red80 bgBlue30 rounded-10 outlineNone bgBlue50--hover c--hover="yellow">
     Hover me
   </Button>
 </Wrapper>
@@ -35,7 +35,7 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ```jsx live
 <Wrapper>
-  <Button bgYellow30 bgYellow50--active yellow80 p4 rounded-10 outlineNone>
+  <Button bgBlue30 bgBlue50--active yellow80 p4 rounded-10 outlineNone>
     Click Me
   </Button>
 </Wrapper>
@@ -45,10 +45,10 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ```jsx live
 <Wrapper>
-  <Button bgRed30 red80 p4 rounded-10 outlineNone>
+  <Button bgBlue30 red80 p4 rounded-10 outlineNone>
     Normal
   </Button>
-  <Button disabled bgRed30 opacity-70--disabled red80 p4 rounded-10 border="none">
+  <Button disabled bgBlue30 opacity-70--disabled red80 p4 rounded-10 border="none">
     Disabled
   </Button>
 </Wrapper>

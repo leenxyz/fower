@@ -2,3 +2,38 @@
 id: display
 title: display 显示
 ---
+
+使用 `display` 可快速设置元素表现方式
+
+## 用法
+
+```tsx live
+<Wrapper>
+  <View display="block" s-100 bgBlue30>
+    <View display="inline" s-50 bgBlue50></View>
+  </View>
+</Wrapper>
+```
+
+## 快捷属性
+
+Styli 提供了大量快捷属性方便开发者
+
+```tsx live
+<Wrapper>
+  <View block s-100 bgBlue30>
+    <View inline bgBlue50>
+      哈哈哈
+    </View>
+  </View>
+</Wrapper>
+```
+
+> - block 为 `display: block`
+> - inline 为 `display: inline`
+> - inlineBlock 为 `display: inlineBlock`
+> - hide 为 `display: none`
+> - grid 为 `display: grid`
+> - table 为 `display: table`
+
+**注意: 对于 flex 布局，Styli 提供更为便捷的[布局引擎](layout-engine)，不必显示设置 display: flex.**

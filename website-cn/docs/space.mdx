@@ -2,3 +2,48 @@
 id: space
 title: space 空间
 ---
+
+`space{X|Y}-${size}` 系列属性能够快速为子元素分配间距
+
+## space
+
+space 属性为除了最后一个子元素的元素自动添加 `margin-right` 和 `margin-bottom` 属性
+
+```tsx live
+<Wrapper>
+  <View s-100 bgBlue30 space-10 row>
+    <View s-30 bgBlue50></View>
+    <View s-30 bgBlue50></View>
+  </View>
+  <View s-100 bgBlue30 space-10>
+    <View s-30 bgBlue50></View>
+    <View s-30 bgBlue50></View>
+  </View>
+</Wrapper>
+```
+
+## spaceX
+
+spaceX 属性为除了最后一个子元素的元素自动添加 `margin-right` 属性
+
+```tsx live
+<Wrapper>
+  <View s-100 bgBlue30 spaceX-10 row>
+    <View s-30 bgBlue50></View>
+    <View s-30 bgBlue50></View>
+  </View>
+</Wrapper>
+```
+
+## spaceY
+
+spaceY 属性为除了最后一个子元素的元素自动添加 `margin-bottom` 属性
+
+```tsx live
+<Wrapper>
+  <View s-100 bgBlue30 spaceY-10>
+    <View s-30 bgBlue50></View>
+    <View s-30 bgBlue50></View>
+  </View>
+</Wrapper>
+```

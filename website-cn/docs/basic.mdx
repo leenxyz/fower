@@ -49,6 +49,21 @@ function Demo() {
 
 ## CSS Prop
 
-大部分情况，你用原子属性可以完成 UI 开发，但有时候 Styli 提供的原子属性并不能满足的需求。因而我们提供了 `css` 属性来实现更多样的功能。
+大部分情况，你用原子属性可以完成 UI 开发，但有时候 Styli 提供的原子属性并不能满足的需求。对于 Styli 没有覆盖到的样式，我们提供了类似 `style` 属性，但功能更为强劲的 `css` 属性来实现更多样的功能。`css` 不仅支持 `style` 支持的所有样式，还支持所有伪类、n 层级的选择器等等。
 
-详情查询：[css prop](css-prop)
+```jsx live
+<Text
+  f-40
+  red50
+  css={{
+    textShadow: '1px 0 5px #FC0',
+    ':hover': {
+      textDecoration: 'underline',
+    },
+  }}
+>
+  Hi, Styli!
+</Text>
+```
+
+[更多请查阅](css-prop)

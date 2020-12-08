@@ -2,3 +2,34 @@
 id: position
 title: position 位置
 ---
+
+## 位置形式
+
+我们提供了几个常用的快捷属性
+
+> - static 是 `position: static`
+> - fixed 是 `position: fixed`
+> - relative 是 `position: relative`
+> - absolute 是 `position: absolute`
+> - sticky 是 `position: sticky`
+
+```tsx live
+<Wrapper>
+  <View relative s-100 bgBlue30>
+    <View absolute s-50 bgBlue50 R-0></View>
+    <View absolute s-50 bgBlue50 L-0 B-0></View>
+  </View>
+</Wrapper>
+```
+
+## 定位
+
+使用 `{TRBL}-{size}` 系列属性可以快速定位元素位置。TRBL 分别是 `top` `right` `bottom` 和 `left` 的简写
+
+```tsx live
+<Wrapper>
+  <View relative s-100 bgBlue30>
+    <View absolute s-50 bgBlue50 R-0 B="0"></View>
+  </View>
+</Wrapper>
+```

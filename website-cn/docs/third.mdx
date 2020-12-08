@@ -1,0 +1,31 @@
+---
+id: third
+title: 同其他UI库使用
+---
+
+[Styli 原理](principle)是遍历每一个组件的 props，生成内联或者外部样式，最终为组件注入 `style` 或者 `className` 属性。
+
+幸运的是，大多组件库设计时为每个组件提供了 style 和 className 属性。因而您可以享受 Styli 便捷开发的同时，自由的使用各种 UI 库。
+
+## Styled Component
+
+我们提供了 `styled` 方法来让第三方组件拥有 Styli 能力。
+
+```jsx
+import { styled } from '@styli/styled'
+import { Button } from 'antd'
+
+const StyledButton = styled(Button)
+
+function Demo() {
+  return (
+    <div>
+      <StyledButton p-10>click me</StyledButton>
+    </div>
+  )
+}
+```
+
+**注意:** 被 `styled` 包裹的组件必须拥有 className 属性。
+
+关于 **styled** 的更多内容，请查阅 [styled api](styled)

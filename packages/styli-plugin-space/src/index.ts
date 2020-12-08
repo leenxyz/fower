@@ -24,9 +24,7 @@ export function spacePropToStyle(propKey: string, propValue: any) {
   })
 
   return {
-    '>*:not(:last-child)': {
-      ...style,
-    },
+    '>*:not(:last-child)': style,
   }
 }
 

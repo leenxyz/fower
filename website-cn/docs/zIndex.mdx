@@ -2,3 +2,20 @@
 id: zIndex
 title: zIndex 层级
 ---
+
+使用 `zIndex-{number}` 让您更加便捷的设置元素层级
+
+## 用法
+
+```tsx live
+<Wrapper>
+  <View s-100 bgBlue30 relative>
+    <View s-50 center bgBlue50 absolute zIndex-1>
+      big
+    </View>
+    <View s-30 center bgBlue70 absolute zIndex-2>
+      small
+    </View>
+  </View>
+</Wrapper>
+```
