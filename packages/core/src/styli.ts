@@ -3,6 +3,7 @@ import { StyliPlugin, Configuration, Preset, Cache, Theme } from '@styli/types'
 
 class Styli {
   private config: Configuration = {
+    dev: false,
     unit: 'px',
     inline: false,
     plugins: [] as StyliPlugin[],

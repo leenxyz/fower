@@ -1,3 +1,4 @@
+import { styli } from '@styli/core'
 import { CSSObject, StyliPlugin } from '@styli/types'
 
 export default (): StyliPlugin => {
@@ -7,6 +8,9 @@ export default (): StyliPlugin => {
       return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
     },
     onAtomStyleCreate(atom) {
+      const isDev = styli.getConfig('dev')
+      if (!isDev) return atom
+
       const propValueIsTrue = atom.propValue === true
 
       const stylesMap: any = {

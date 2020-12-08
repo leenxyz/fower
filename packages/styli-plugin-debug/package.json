@@ -23,6 +23,7 @@
   "module": "dist/styli-plugin-debug.esm.js",
   "dependencies": {
     "@styli/types": "^0.16.2",
-    "@styli/utils": "^0.16.2"
+    "@styli/utils": "^0.16.2",
+    "@styli/core": "^0.16.2"
   }
 }
