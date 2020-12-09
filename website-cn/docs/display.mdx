@@ -37,3 +37,31 @@ Styli 提供了大量快捷属性方便开发者
 > - table 为 `display: table`
 
 **注意: 对于 flex 布局，Styli 提供更为便捷的[布局引擎](layout-engine)，不必显示设置 display: flex.**
+
+## 伪类
+
+styli 支持了大量常用的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 relative>
+    <View relative absolute--hover L-10 T-10 bgBlue50>
+      hover
+    </View>
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-100 display={['fixed', 'absolute', 'relative', 'static']} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```

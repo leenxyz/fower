@@ -19,3 +19,34 @@ title: zIndex 层级
   </View>
 </Wrapper>
 ```
+
+## 伪类
+
+styli 支持了大量常用的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View s-100 bgBlue30 relative>
+    <View s-50 center bgBlue50 absolute zIndex-1>
+      big
+    </View>
+    <View s-30 center bgBlue70 absolute zIndex--hover={2}>
+      small
+    </View>
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-100 zIndex={[1, 2, 3, 4]} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```

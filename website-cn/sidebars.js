@@ -54,6 +54,7 @@ module.exports = {
       'debug',
       'reset',
       'css-prop',
+      'attr-table',
     ],
     Api: ['styled', 'createStyle'],
     组件: ['view', 'text', 'image', 'anchor'],

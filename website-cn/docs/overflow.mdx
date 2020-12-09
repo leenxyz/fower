@@ -59,3 +59,29 @@ title: overflow 溢出
 > - oAuto 是 `overflow: auto`
 > - oxAuto 是 `overflowX: auto`
 > - oyAuto 是 `overflowY: auto`
+
+## 伪类
+
+styli 支持了大量常用的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View s-100 oyHidden--hover oxScroll bgBlue30 p-10>
+    <View s-120 bgRed30></View>
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-100 overflow={['hidden', 'scroll', 'auto', 'visible']} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```

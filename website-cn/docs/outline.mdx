@@ -23,12 +23,43 @@ outlineNone 属性可以快速消除轮廓
 </Wrapper>
 ```
 
-## 轮廓偏移量
+## 偏移量
 
 outlineOffset 属性快速设置轮廓偏移量
 
 ```jsx live
 <Wrapper>
   <Input p2 bgGray20 outlineOffset-10 outline="2px dotted red" />
+</Wrapper>
+```
+
+## 伪类
+
+styli 支持了大量常用的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 bgBlue30 outline="1px dotted red" outlineNone--hover>
+    hover
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View
+    center
+    s-100
+    outline={['1px dotted red', '2px dotted blue', '3px dotted yellow', '4px dotted green']}
+    bgBlue30
+  >
+    media query
+  </View>
 </Wrapper>
 ```

@@ -1,0 +1,216 @@
+---
+id: attr-table
+title: 属性速查表
+---
+
+## 常规
+
+### Size
+
+| 属性                    | 用法               | 表示     |
+| ----------------------- | ------------------ | -------- |
+| [w](width)              | `<View w-10 />`    | 宽度     |
+| [h](height)             | `<View h-10 />`    | 高度     |
+| [maxW](width#最大宽度)  | `<View maxW-10 />` | 最大宽度 |
+| [minW](width#最小宽度)  | `<View minW-10 />` | 最小宽度 |
+| [maxH](height#最大高度) | `<View maxH-10 />` | 最大高度 |
+| [minH](height#最小高度) | `<View minH-10 />` | 最小高度 |
+
+### Shape
+
+| 属性               | 用法                 | 表示   |
+| ------------------ | -------------------- | ------ |
+| [s](shape#正方形)  | `<View s-10 />`      | 正方形 |
+| [s](shape#长方形)  | `<View s-10-20 />`   | 长方形 |
+| [circle](shape#圆) | `<View circle-10 />` | 圆     |
+
+### Font
+
+| 属性                                                      | 用法                      | 表示         |
+| --------------------------------------------------------- | ------------------------- | ------------ |
+| [f](typography#字体大小)                                  | `<View f-10 />`           | 字体大小     |
+| [c](typography#文字颜色)                                  | `<View c="red20" />`      | 字体颜色     |
+| [lh](typography#行高)                                     | `<View lh-10 />`          | 行高         |
+| [fontWeight](typography#字体粗细)                         | `<View fontWeight-100 />` | 字体粗细     |
+| [text{Center\|Left\|Right\|Justify}](typography#文本对齐) | `<View textCenter />`     | 文本对齐方式 |
+
+### Background
+
+| 属性                       | 用法                            | 表示         |
+| -------------------------- | ------------------------------- | ------------ |
+| [bg](background)           | `<View bg="red20" />`           | 背景         |
+| [bgColor](background#颜色) | `<View bgColor="red20" />`      | 背景颜色     |
+| [bgImg](background#图片)   | `<View bgImg="https://..." />`  | 背景图片     |
+| [bgPos](background#位置)   | `<View bgPos="right bottom" />` | 背景图片位置 |
+| [bgSize](background#大小)  | `<View bgSize="100% 100%" />`   | 背景图片大小 |
+
+### Padding
+
+| 属性                          | 用法                   | 表示                   |
+| ----------------------------- | ---------------------- | ---------------------- |
+| [p](padding)                  | `<View p-10 />`        | 四周内边距             |
+| [p{t\|r\|b\|l}](padding#一边) | `<View pt-10 pr-10 />` | 一边的内边距           |
+| [p{x\|y}](padding#水平)       | `<View px-10 py-10 />` | 水平或垂直方向的内边距 |
+| [p](padding#水平和垂直)       | `<View p-10-20 />`     | 水平和垂直方向的内边距 |
+
+### Margin
+
+| 属性                         | 用法                   | 表示                   |
+| ---------------------------- | ---------------------- | ---------------------- |
+| [m](margin)                  | `<View m-10 />`        | 四周外边距             |
+| [m{t\|r\|b\|l}](margin#一边) | `<View mt-10 mr-10 />` | 一边的外边距           |
+| [m{x\|y}](margin#水平)       | `<View mx-10 my-10 />` | 水平或垂直方向的外边距 |
+| [m](margin#水平和垂直)       | `<View m-10-20 />`     | 水平和垂直方向的外边距 |
+| [m](margin#负-margin)        | `<View m--10 />`       | 负值 margin            |
+
+### Position
+
+| 属性                                      | 用法                  | 表示                     |
+| ----------------------------------------- | --------------------- | ------------------------ |
+| [{T\|R\|B\|L}](position#定位)             | `<View T-10 B--10 />` | top、right、bottom、left |
+| [{static\|fixed\|...}](position#位置形式) | `<View fixed />`      | 位置                     |
+| [zIndex](zIndex)                          | `<View zIndex-1 />`   | 层级                     |
+
+### Display
+
+| 属性               | 用法                       | 表示     |
+| ------------------ | -------------------------- | -------- |
+| [display](display) | `<View display="block" />` | 显示形式 |
+
+### Border
+
+| 属性                                  | 用法                                    | 表示       |
+| ------------------------------------- | --------------------------------------- | ---------- |
+| [border](border)                      | `<View border="3px solid deeppink" />`  | 边框       |
+| [border{T\|R\|B\|L}](border#单一方向) | `<View borderT="3px solid deeppink" />` | 一边的边框 |
+
+### Outline
+
+| 属性                                | 用法                           | 表示       |
+| ----------------------------------- | ------------------------------ | ---------- |
+| [outline](outline)                  | `<View outline="1px" />`       | 轮廓       |
+| [outlineNone](outline#消除轮廓)     | `<View outlineNone />`         | 消除轮廓   |
+| [outlineOffset](outline#轮廓偏移量) | `<View outlineOffset="1px" />` | 轮廓偏移量 |
+
+### Opacity
+
+| 属性               | 用法                  | 表示   |
+| ------------------ | --------------------- | ------ |
+| [opacity](opacity) | `<View opacity-70 />` | 透明度 |
+
+### Overflow
+
+| 属性                                | 用法                                             | 表示           |
+| ----------------------------------- | ------------------------------------------------ | -------------- |
+| [overflow](overflow)                | `<View overflow="scroll" />`                     | 溢出           |
+| [overflow{X\|Y}](overflow#横轴溢出) | `<View overflowY="hidden" overflowX="scroll" />` | 水平、垂直溢出 |
+
+### Shadow
+
+| 属性             | 用法                            | 表示 |
+| ---------------- | ------------------------------- | ---- |
+| [shadow](shadow) | `<View shadow="1px 1px red" />` | 阴影 |
+
+### Layout
+
+| 属性                                        | 用法                       | 表示                             |
+| ------------------------------------------- | -------------------------- | -------------------------------- |
+| [{row\|column}](layout-engine)              | `<View row />`             | flex 方向                        |
+| [center](layout-engine)                     | `<View center />`          | 子元素在父元素内垂直水平居中     |
+| [center{X\|Y}](layout-engine)               | `<View centerX centerY />` | 子元素在父元素内垂直 或 水平居中 |
+| [{top\|right\|bottom\|left}](layout-engine) | `<View top />`             | 子元素在父元素中的排列方向       |
+
+### Flex
+
+| 属性                                                     | 用法                    | 表示                                 |
+| -------------------------------------------------------- | ----------------------- | ------------------------------------ |
+| [{row\|column}](flexbox#flex-direction)                  | `<View row />`          | flex 方向                            |
+| [justify{Start\|End\|...}](flexbox#主轴-justify-content) | `<View justifyStart />` | 主轴对齐                             |
+| [align{Start\|End\|...}](flexbox#交叉轴-align-items)     | `<View alignEnd />`     | 交叉轴对齐                           |
+| [{wrap\|noWrap}](flexbox#flex-wrap)                      | `<View wrap />`         | flex wrap                            |
+| [flex](flexbox#flex)                                     | `<View flex-1 />`       | flex-grow, flex-shrink 和 flex-basis |
+
+### Cursor
+
+| 属性                                 | 用法                     | 表示     |
+| ------------------------------------ | ------------------------ | -------- |
+| [cursor{Pointer\|Cell\|...}](cursor) | `<View cursorPointer />` | 光标显示 |
+
+### Ellipsis
+
+| 属性                 | 用法                | 表示     |
+| -------------------- | ------------------- | -------- |
+| [ellipsis](ellipsis) | `<View ellipsis />` | 文本溢出 |
+
+### Space
+
+| 属性                  | 用法                           | 表示             |
+| --------------------- | ------------------------------ | ---------------- |
+| [space](space)        | `<View space-10 />`            | 为子元素添加间距 |
+| [space{X\|Y}](space#) | `<View spaceX-10 spaceY-10 />` | 为子元素添加间距 |
+
+### Debug
+
+| 属性                                 | 用法                     | 表示                       |
+| ------------------------------------ | ------------------------ | -------------------------- |
+| [debug](debug)                       | `<View debug />`         | 为自己添加调试边框         |
+| [debugChildren](debug#debugChildren) | `<View debugChildren />` | 为自己和子元素添加调试边框 |
+| [debugAll](debug#debugAll)           | `<View debugAll />`      | 文档添加边框               |
+
+### Reset
+
+| 属性           | 用法             | 表示               |
+| -------------- | ---------------- | ------------------ |
+| [reset](reset) | `<View reset />` | 消除浏览器默认样式 |
+
+### Css
+
+| 属性            | 用法                                            | 表示             |
+| --------------- | ----------------------------------------------- | ---------------- |
+| [css](css-prop) | `<View css={{ ':hover': { fontSize: 10 } }} />` | style 属性增强版 |
+
+## 设计系统
+
+### Size
+
+| 属性           | 用法          | 表示 |
+| -------------- | ------------- | ---- |
+| [w{1-6}](size) | `<View w1 />` | 宽度 |
+| [h{1-6}](size) | `<View h1 />` | 高度 |
+
+### Shape
+
+| 属性                 | 用法               | 表示   |
+| -------------------- | ------------------ | ------ |
+| [s{1-6}](shape)      | `<View s1 />`      | 正方形 |
+| [circle{1-6}](shape) | `<View circle1 />` | 圆     |
+
+### font
+
+| 属性                                 | 用法                | 表示     |
+| ------------------------------------ | ------------------- | -------- |
+| [f{1-6}](typography)                 | `<View f1 />`       | 文字大小 |
+| [font{Thin\|Light\|...}](typography) | `<View fontThin />` | 文字粗细 |
+| [lh{None\|Tight\|...}](typography)   | `<View lhNone />`   | 行高     |
+
+### Padding
+
+| 属性                          | 用法           | 表示            |
+| ----------------------------- | -------------- | --------------- |
+| [p{1-6}](padding)             | `<View p1 />`  | 内边距          |
+| [p{t\|r\|b\|l}{1-6}](padding) | `<View pl1 />` | 一边的内边距    |
+| [p{x\|y}{1-6}](padding)       | `<View px1 />` | 水平/垂直内边距 |
+
+### Margin
+
+| 属性                         | 用法           | 表示            |
+| ---------------------------- | -------------- | --------------- |
+| [m{1-6}](margin)             | `<View m1 />`  | 外边距          |
+| [m{t\|r\|b\|l}{1-6}](margin) | `<View ml1 />` | 一边的外边距    |
+| [m{x\|y}{1-6}](margin)       | `<View mx1 />` | 水平/垂直外边距 |
+
+### Shadow
+
+| 属性                          | 用法                | 表示 |
+| ----------------------------- | ------------------- | ---- |
+| [shadow{XS\|SM\|...}](shadow) | `<View shadowXS />` | 阴影 |
