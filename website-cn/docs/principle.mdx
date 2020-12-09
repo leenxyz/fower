@@ -97,7 +97,8 @@ Object.assign(finalProps['style'], style, props.style)
 
 ```ts
 // 生成当前组件 className
-const className = generateClassName(propKey, propValue)
+const componentId = generateComponentId(props)
+const className = generateClassName(componentId)
 
 // 将样式编码成字符串
 const cssStr = parseStyleToStr(style, className)
