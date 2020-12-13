@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Heading } from '@styli/react'
 
 enum IMAGEs {
-  DEFAULT_AVATAR = 'https://swspcdn.xishanju.com/matter/59d98ff1cb756253c8957fd9871afd9fe9bb38a3.png',
+  DEFAULT_AVATAR = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg',
 }
 
 export const Background = () => {

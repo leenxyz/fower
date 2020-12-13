@@ -18,11 +18,13 @@ export class StyleManager {
   }
 
   insertStyles(cssStr: string) {
-    if (!isBrowser) return
+    if (!isBrowser || !cssStr) return
     if (!this.$style) this.createStyleElement()
 
-    // TODO: 多个还是单个好?
-    this.$style.innerHTML = this.$style.innerHTML + cssStr
+    // TODO: insert cssStr once
+    setTimeout(() => {
+      this.$style.innerHTML = this.$style.innerHTML + cssStr
+    }, 0)
   }
 }
 

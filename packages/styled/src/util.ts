@@ -25,10 +25,13 @@ export function getCssParsedProps(props: any, value: any, args: Args) {
   const parsedProps: any = sheet.getParsedProps()
 
   const { className = '' } = props || {}
-  styleManager.insertStyles(sheet.toCss())
+
   const finalClassName = `${css(...args)} ${sheet.getClassNames()} ${className}`.trim()
 
-  if (finalClassName) parsedProps.className = finalClassName
+  if (finalClassName) {
+    parsedProps.className = finalClassName
+    styleManager.insertStyles(sheet.toCss())
+  }
 
   return parsedProps
 }
