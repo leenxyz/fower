@@ -1,5 +1,5 @@
-import { getValue, styli } from '@styli/core'
-import { ModifierType, StyliPlugin } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -45,16 +45,16 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   if (paddingValues.length === 2) {
     const [x, y] = paddingValues
     paddingMaps['px'].forEach((k: any) => {
-      style[k] = getValue(x, ModifierType.padding)
+      style[k] = styli.getValue(x)
     })
 
     paddingMaps['py'].forEach((k: any) => {
-      style[k] = getValue(y, ModifierType.padding)
+      style[k] = styli.getValue(y)
     })
   } else {
     const paddingValue = isValidPropValue(propValue) ? propValue : paddingValues[0]
     paddingMaps[key].forEach((k: any) => {
-      style[k] = getValue(paddingValue, ModifierType.margin)
+      style[k] = styli.getValue(paddingValue)
     })
   }
   return style

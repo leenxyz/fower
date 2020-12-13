@@ -1,5 +1,5 @@
-import { getValue } from '@styli/core'
-import { ModifierType, StyliPlugin } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export const G = {
@@ -48,7 +48,7 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 
   /** @example T={0}, R={10}.. */
   if (/^[trbl]$/i.test(prop)) {
-    return { [positionMaps[prop.toLowerCase()]]: getValue(propValue, ModifierType.position) }
+    return { [positionMaps[prop.toLowerCase()]]: styli.getValue(propValue) }
   }
 
   const [key, symbol = '', value] = prop.split(/\b-*?/)
@@ -56,7 +56,7 @@ export function positionPropToStyle(prop: string, propValue: any): any {
   const lowerKey = key.toLowerCase()
   const val = isValidPropValue(propValue) ? propValue : minus + value
 
-  return { [positionMaps[lowerKey]]: getValue(val, ModifierType.position) }
+  return { [positionMaps[lowerKey]]: styli.getValue(val) }
 }
 
 export default (): StyliPlugin => {

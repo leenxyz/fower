@@ -1,4 +1,4 @@
-import { getValue } from '@styli/core'
+import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
@@ -20,7 +20,7 @@ export function spacePropToStyle(propKey: string, propValue: any) {
 
   let style: any = {}
   spaceMap[position].forEach((key: string) => {
-    style[key] = getValue(value)
+    style[key] = styli.getValue(value)
   })
 
   return {

@@ -1,12 +1,8 @@
+import { CSSObject, Props } from '@styli/types'
+import { modifierToProps } from '@styli/utils'
 import { Sheet } from './Sheet'
 import { styleManager } from './styleManager'
 import { styli } from './styli'
-import { CSSObject } from '@styli/types'
-import { modifierToProps } from './utils'
-
-interface Props {
-  [key: string]: any
-}
 
 export function css(...args: (string | CSSObject)[]) {
   const props = args.reduce((result: Props, cur: any) => {

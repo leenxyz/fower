@@ -1,4 +1,4 @@
-import { getValue, styli } from '@styli/core'
+import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 
 export function isTextHeadingKey(key: string) {
@@ -11,7 +11,7 @@ export function textHeadingPropToStyle(prop: string): any {
   return {
     display: 'block',
     fontWeight: 'bold',
-    fontSize: getValue(headings[index]) || getValue(14),
+    fontSize: styli.getValue(headings[index]) || styli.getValue(14),
   }
 }
 

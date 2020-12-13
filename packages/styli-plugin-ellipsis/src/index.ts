@@ -1,4 +1,4 @@
-import { getValue } from '@styli/core'
+import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
@@ -22,14 +22,14 @@ export default (config?: EllipsisPlugin): StyliPlugin => {
 
       if (lineNum === 1) {
         atom.style = {
-          maxWidth: getValue('' + maxWidth),
+          maxWidth: styli.getValue('' + maxWidth),
           textOverflow: 'ellipsis',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
         }
       } else {
         atom.style = {
-          maxWidth: getValue('' + maxWidth),
+          maxWidth: styli.getValue('' + maxWidth),
           display: '-webkit-box',
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',

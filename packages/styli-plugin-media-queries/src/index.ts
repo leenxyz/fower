@@ -4,7 +4,7 @@ import { StyliPlugin } from '@styli/types'
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-media-queries',
-    middleware(plugin, atom, sheet) {
+    onAtomModify(plugin, atom, sheet) {
       const { propKey, propValue } = atom
 
       if (!Array.isArray(propValue) || !plugin.isMatch!(propKey)) return atom

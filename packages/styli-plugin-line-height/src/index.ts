@@ -1,4 +1,4 @@
-import { getValue, styli } from '@styli/core'
+import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
@@ -8,7 +8,7 @@ export function isTextLineHeightKey(key: string) {
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
-    return { lineHeight: getValue(propValue) }
+    return { lineHeight: styli.getValue(propValue) }
   }
 
   const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
@@ -26,7 +26,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   }
 
   return {
-    lineHeight: getValue(value),
+    lineHeight: styli.getValue(value),
   }
 }
 

@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react'
+import { modifierToProps } from '@styli/utils'
 import { Sheet } from './Sheet'
 import { styli } from './styli'
-import { modifierToProps } from './utils'
 
 export function createStyle(...args: (string | CSSProperties)[]): CSSProperties {
   return args.reduce((result, cur) => {

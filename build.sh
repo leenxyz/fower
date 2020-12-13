@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cd packages/utils && npm run build
+cd packages/types && npm run build
 
 Sequential=("
-  types
+  utils
   core
 ")
 

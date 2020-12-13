@@ -1,5 +1,5 @@
-import { getValue, styli } from '@styli/core'
-import { ModifierType, StyliPlugin } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -64,16 +64,16 @@ export function marginPropToStyle(prop: string, propValue: any) {
   if (marginValues.length === 2) {
     const [x, y] = marginValues
     marginMaps['mx'].forEach((k: any) => {
-      style[k] = getValue(x, ModifierType.margin)
+      style[k] = styli.getValue(x)
     })
 
     marginMaps['my'].forEach((k: any) => {
-      style[k] = getValue(y, ModifierType.margin)
+      style[k] = styli.getValue(y)
     })
   } else {
     const marginValue = isValidPropValue(propValue) ? propValue : marginValues[0]
     marginMaps[key].forEach((k: any) => {
-      style[k] = getValue(marginValue, ModifierType.margin)
+      style[k] = styli.getValue(marginValue)
     })
   }
 

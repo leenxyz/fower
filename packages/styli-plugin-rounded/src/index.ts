@@ -1,5 +1,5 @@
-import { getValue } from '@styli/core'
-import { StyliPlugin, ModifierType } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
@@ -37,7 +37,7 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   const roundedValue = isValidPropValue(propValue) ? propValue : value
 
   /** @example rounded-4, rounded-8 */
-  if (key === 'rounded') return { borderRadius: getValue(roundedValue, ModifierType.border) }
+  if (key === 'rounded') return { borderRadius: styli.getValue(roundedValue) }
 
   /** @example roundedFull */
   if (/^roundedFull$/i.test(key)) return { borderRadius: '9999px' }
@@ -46,7 +46,7 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   if (/^roundedNone$/i.test(key)) return { borderRadius: 0 }
 
   for (const p of roundedMaps[key]) {
-    style[`border${p}Radius`] = getValue(roundedValue, ModifierType.border)
+    style[`border${p}Radius`] = styli.getValue(roundedValue)
   }
   return style
 }

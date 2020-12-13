@@ -1,36 +1,6 @@
 import { CSSObject } from './CSSObject'
 import { Theme } from './Theme'
 
-type AtomType = 'style' | 'prefix' | 'global' | 'media-queries' | 'invalid'
-
-export interface Atom {
-  /**
-   * propKey may changed by plugin, so use key record origin propKey
-   */
-  key: 'css' | 'debug' | 'reset' | ({} & string)
-
-  propKey: 'css' | 'debug' | 'reset' | ({} & string)
-
-  propValue: string | number | boolean | CSSObject | ((theme: Theme, props: any) => any)
-
-  style: CSSObject
-
-  type: AtomType
-
-  className?: string
-
-  /**
-   * plugin name matched for this atom
-   */
-  matchedPlugin?: string
-
-  /**
-   * atom can be cached
-   * TODO: 命名有歧义，需解释什么时候可以被 cached
-   */
-  cache?: boolean
-}
-
 /**
  * type style. convert result can be used in inline style directly
  * @example
@@ -72,3 +42,32 @@ export interface Atom {
  * <View p={false} w={() => false}></View>
  * ```
  */
+type AtomType = 'style' | 'prefix' | 'global' | 'media-queries' | 'invalid'
+
+export interface Atom {
+  /**
+   * propKey may changed by plugin, so use key record origin propKey
+   */
+  key: 'css' | 'debug' | 'reset' | ({} & string)
+
+  propKey: 'css' | 'debug' | 'reset' | ({} & string)
+
+  propValue: string | number | boolean | CSSObject | ((theme: Theme, props: any) => any)
+
+  style: CSSObject
+
+  type: AtomType
+
+  className?: string
+
+  /**
+   * plugin name matched for this atom
+   */
+  matchedPlugin?: string
+
+  /**
+   * atom can be cached
+   * TODO: 命名有歧义，需解释什么时候可以被 cached
+   */
+  cache?: boolean
+}

@@ -1,10 +1,9 @@
 import { Theme, StyliPlugin } from '@styli/types'
-
-const isPlainDirective = (key: string) => /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
+import { isPlainDirective } from '@styli/utils'
 
 export const corePlugin: StyliPlugin = {
   name: 'styli-plugin-core',
-  middleware(plugin, atom, sheet, theme: Theme) {
+  onAtomModify(plugin, atom, sheet, theme: Theme) {
     const { propKey, propValue } = atom
 
     if (!plugin.isMatch!(propKey)) return atom
@@ -23,13 +22,9 @@ export const corePlugin: StyliPlugin = {
 
     /**
      * propValue is false, collect propKey and ignore it
-     * example <View w={false}></View>
+     * example <View w={false} p={() => false}></View>
      */
-    let value = propValue
-    if (typeof propValue === 'function') {
-      value = propValue(theme, sheet.props)
-    }
-
+    const value = typeof propValue === 'function' ? propValue(theme, sheet.props) : propValue
     if (!value && value !== 0) {
       atom.type = 'invalid'
       return atom
@@ -39,8 +34,8 @@ export const corePlugin: StyliPlugin = {
      * handle theme
      * example <View c={theme => theme.colors.green20}></View>
      */
-    if (typeof atom.propValue === 'function') {
-      atom.propValue = atom.propValue(theme, sheet.props)
+    if (typeof propValue === 'function') {
+      atom.propValue = propValue(theme, sheet.props)
     }
 
     return plugin.onAtomStyleCreate!(atom, sheet)

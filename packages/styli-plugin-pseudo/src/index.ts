@@ -12,7 +12,7 @@ function isPseudoKey(str: string) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-pseudo',
-    middleware(plugin, atom, sheet) {
+    onAtomModify(plugin, atom, sheet) {
       const { propKey } = atom
 
       if (!isPseudoKey(propKey)) return atom

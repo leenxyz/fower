@@ -25,11 +25,6 @@ export interface Configuration {
   important?: boolean
   theme: Theme
   plugins: StyliPlugin[]
-  transformUnit?: (value: number | string, modifierType?: ModifierType) => string
 }
 
 export type Preset = Partial<Configuration>
-
-export interface Cache {
-  [className: string]: any
-}

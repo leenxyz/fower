@@ -22,7 +22,8 @@
   "author": "forsigner",
   "module": "dist/utils.esm.js",
   "devDependencies": {
-    "@types/string-hash": "^1.1.1"
+    "@types/string-hash": "^1.1.1",
+    "@styli/types": "^0.16.2"
   },
   "dependencies": {
     "fast-deep-equal": "^3.1.3",

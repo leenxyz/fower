@@ -1,5 +1,5 @@
-import { getValue, styli } from '@styli/core'
-import { StyliPlugin, ModifierType } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isTextSizeKey(key: string) {
@@ -9,12 +9,12 @@ export function isTextSizeKey(key: string) {
 export function textSizePropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) {
     return {
-      fontSize: getValue(propValue, ModifierType.text),
+      fontSize: styli.getValue(propValue),
     }
   }
   const [, value] = prop.split('-')
 
-  return { fontSize: getValue(value, ModifierType.text) }
+  return { fontSize: styli.getValue(value) }
 }
 
 export default (): StyliPlugin => {

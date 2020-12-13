@@ -1,4 +1,4 @@
-import { getValue, styli } from '@styli/core'
+import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { formatColor } from '@styli/utils'
 
@@ -24,8 +24,8 @@ function isBgPosKey(key: string) {
 
 export function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgImgKey(propKey)) return { backgroundImage: `url("${propValue}")` }
-  if (isBgPosKey(propKey)) return { backgroundPosition: getValue(propValue) }
-  if (isBgSizeKey(propKey)) return { backgroundSize: getValue(propValue) }
+  if (isBgPosKey(propKey)) return { backgroundPosition: styli.getValue(propValue) }
+  if (isBgSizeKey(propKey)) return { backgroundSize: styli.getValue(propValue) }
 
   const Colors = styli.getColors()
 

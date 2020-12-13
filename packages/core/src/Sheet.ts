@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from '@styli/types'
 import { isEmptyObj, isPlainType, isEqual, hash, parseCSSProp, cssObjToStr } from '@styli/utils'
-import { corePlugin } from './middleware'
+import { corePlugin } from './corePlugin'
 import { styli } from './styli'
 
 /**
@@ -24,14 +24,14 @@ export class Sheet {
   private traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
-    const [middlewares, plugins, onStyleCreates] = styli.getPlugins()
+    const { atomModifiers, atomStyleCreations, styleCreations } = styli.plugins
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
       const initialAtom = { propKey, propValue, type: 'style', key: propKey, cache: true } as Atom
 
       const pluginCacheKey = this.getAtomCacheKey(propKey, propValue)
-      const pluginCacheValue = styli.atomCache[pluginCacheKey]
+      const pluginCacheValue = styli.atomCache.get(pluginCacheKey)
 
       /**
        * if propValue is object, don't use cache
@@ -41,17 +41,15 @@ export class Sheet {
         continue
       }
 
-      for (const plugin of plugins) {
+      for (const plugin of atomStyleCreations) {
         let atom = { ...initialAtom }
 
-        // before
         if (plugin.beforeAtomStyleCreate) {
           atom = plugin.beforeAtomStyleCreate(atom, this as any)
         }
 
-        // during
-        atom = [corePlugin, ...middlewares].reduce((finalAtom, middleware) => {
-          return middleware.middleware!(plugin, finalAtom, this as any, this.theme)
+        atom = [corePlugin, ...atomModifiers].reduce((finalAtom, plugin) => {
+          return plugin.onAtomModify!(plugin, finalAtom, this as any, this.theme)
         }, atom)
 
         if (!isEqual(atom, initialAtom)) {
@@ -63,20 +61,19 @@ export class Sheet {
           this.atoms.push(newAtom)
 
           if (newAtom.cache) {
-            styli.atomCache[pluginCacheKey] = newAtom
+            styli.atomCache.set(pluginCacheKey, newAtom)
           }
           break
         }
       }
     }
 
-    onStyleCreates.forEach((plugin) => plugin.onStyleCreate!(this as any))
+    styleCreations.forEach((plugin) => plugin.onStyleCreate!(this as any))
   }
 
   /**
-   *  @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
-   * @param value
-   * @param isArray
+   * generate className postfix
+   * @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
    */
   private getClassPostfix(value: any) {
     const valueStr = String(value)
@@ -152,9 +149,9 @@ export class Sheet {
       // no style in falsy prop
       if (type === 'invalid') return result
 
-      if (styli.classNameCache[className] || isEmptyObj(style)) return result
+      if (styli.classNameCache.get(className) || isEmptyObj(style)) return result
 
-      if (className) styli.classNameCache[className] = true
+      if (className) styli.classNameCache.set(className, true)
 
       if (type === 'prefix') {
         return result + parseCSSProp(style, className)
@@ -193,9 +190,10 @@ export class Sheet {
   getParsedProps(): Props {
     const { props, atoms } = this
     if (isEmptyObj(props)) return {}
-    return Object.keys(props).reduce((result: Props, cur: any) => {
-      const find = atoms.find((atom) => atom.key === cur)
-      return find ? result : { ...result, [cur]: props[cur] }
+    
+    return Object.entries(props).reduce((result: Props, [propKey, propValue]) => {
+      const styliProp = atoms.find((atom) => atom.key === propKey)
+      return styliProp ? result : { ...result, [propKey]: propValue }
     }, {} as Props)
   }
 }

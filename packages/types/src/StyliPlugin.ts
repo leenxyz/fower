@@ -8,5 +8,11 @@ export interface StyliPlugin {
   beforeAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
   onAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
   onStyleCreate?(sheet: SheetType): void
-  middleware?(plugin: StyliPlugin, atom: Atom, sheet: SheetType, theme: Theme): Atom
+  onAtomModify?(plugin: StyliPlugin, atoms: Atom, sheet: SheetType, theme: Theme): Atom
+}
+
+export interface PluginCategory {
+  atomModifiers: StyliPlugin[]
+  atomStyleCreations: StyliPlugin[]
+  styleCreations: StyliPlugin[]
 }

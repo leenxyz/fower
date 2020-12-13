@@ -1,5 +1,5 @@
-import { getValue, styli } from '@styli/core'
-import { StyliPlugin, ModifierType } from '@styli/types'
+import { styli } from '@styli/core'
+import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export const sizeMaps: any = {
@@ -37,16 +37,16 @@ export function sizePropToStyle(prop: string, propValue: any) {
   if (sizeValues.length === 2) {
     const [width, height] = sizeValues
     sizeMaps['w'].forEach((k: any) => {
-      style[k] = getValue(width, ModifierType.size)
+      style[k] = styli.getValue(width)
     })
 
     sizeMaps['h'].forEach((k: any) => {
-      style[k] = getValue(height, ModifierType.size)
+      style[k] = styli.getValue(height)
     })
   } else {
     const sizeValue = isValidPropValue(propValue) ? propValue : sizeValues[0]
     sizeMaps[lowerKey].forEach((k: any) => {
-      style[k] = getValue(sizeValue, ModifierType.margin)
+      style[k] = styli.getValue(sizeValue)
     })
   }
 
