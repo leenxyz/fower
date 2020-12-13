@@ -48,8 +48,8 @@ export class Sheet {
           atom = plugin.beforeAtomStyleCreate(atom, this as any)
         }
 
-        atom = [corePlugin, ...atomModifiers].reduce((finalAtom, plugin) => {
-          return plugin.onAtomModify!(plugin, finalAtom, this as any, this.theme)
+        atom = [corePlugin, ...atomModifiers].reduce((finalAtom, atomModifier) => {
+          return atomModifier.onAtomModify!(plugin, finalAtom, this as any, this.theme)
         }, atom)
 
         if (!isEqual(atom, initialAtom)) {
