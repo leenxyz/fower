@@ -8,8 +8,11 @@ export default (): StyliPlugin => {
       return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
     },
     onAtomStyleCreate(atom) {
-      const isDev = styli.getConfig('dev')
-      if (!isDev) return atom
+
+      if (!styli.getConfig('dev')) {
+        atom.type = 'invalid'
+        return atom
+      }
 
       const propValueIsTrue = atom.propValue === true
 
