@@ -1,9 +1,10 @@
-import { isBrowser } from '@styli/utils'
+import { isBrowser, throttle } from '@styli/utils'
 
 /**
  * Manage <style></style>
  */
 export class StyleManager {
+  private tempStr: string = ''
   private $style!: HTMLStyleElement
 
   private createStyleElement(): HTMLStyleElement {
@@ -17,14 +18,17 @@ export class StyleManager {
     return $style
   }
 
+  // TODO: insert cssStr once
+  _insertStyles = throttle((cssStr: string) => {
+    this.$style.innerHTML = this.$style.innerHTML + cssStr
+    this.tempStr = ''
+  }, 30)
+
   insertStyles(cssStr: string) {
     if (!isBrowser || !cssStr) return
     if (!this.$style) this.createStyleElement()
-
-    // TODO: insert cssStr once
-    setTimeout(() => {
-      this.$style.innerHTML = this.$style.innerHTML + cssStr
-    }, 0)
+    this.tempStr = this.tempStr + cssStr
+    this._insertStyles(this.tempStr)
   }
 }
 
