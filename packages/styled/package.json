@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "@styli/core": "^0.16.2",
-    "@styli/preset-default": "^0.16.2",
     "@styli/theming": "^0.16.2",
     "@styli/types": "^0.16.2",
     "hoist-non-react-statics": "^3.3.2"

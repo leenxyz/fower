@@ -16,11 +16,14 @@ import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
+import presetDefault from '@styli/preset-default'
 
-// const myClassName = css('p-20 mx-10 borderGray-1 f-40')
+console.log('查看值', process.env.NODE_ENV)
 
-// const app = document.getElementById('root')
-// app?.className = myClassName
+styli.configure({
+  ...presetDefault,
+  dev: process.env.NODE_ENV === 'development'
+})
 
 export const App = () => {
   return (
