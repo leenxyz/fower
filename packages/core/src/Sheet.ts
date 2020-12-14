@@ -189,7 +189,7 @@ export class Sheet {
   getParsedProps(): Props {
     const { props, atoms } = this
     if (isEmptyObj(props)) return {}
-    
+
     return Object.entries(props).reduce((result: Props, [propKey, propValue]) => {
       const styliProp = atoms.find((atom) => atom.key === propKey)
       return styliProp ? result : { ...result, [propKey]: propValue }

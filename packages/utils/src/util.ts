@@ -35,7 +35,7 @@ export function isPlainType(value: any) {
 }
 
 export function isPlainDirective(key: string) {
-  return  /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
+  return /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
 }
 
 export function cssKeyToStyleKey(key: string) {
@@ -49,9 +49,7 @@ export function cssObjToStr(style: any, initStr = '') {
 }
 
 export function modifierToProps(modifier: string) {
-  return modifier
-    .split(/[\s\t\n]+/)
-    .reduce((result, cur) => ({ ...result, [cur]: true }), {})
+  return modifier.split(/[\s\t\n]+/).reduce((result, cur) => ({ ...result, [cur]: true }), {})
 }
 
 export function classifyPlugins(plugins: StyliPlugin[]): PluginCategory {
@@ -71,7 +69,7 @@ export function classifyPlugins(plugins: StyliPlugin[]): PluginCategory {
     {
       atomModifiers: [],
       atomStyleCreations: [],
-      styleCreations: []
+      styleCreations: [],
     } as PluginCategory,
   )
 }

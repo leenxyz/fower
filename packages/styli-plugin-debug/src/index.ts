@@ -8,7 +8,6 @@ export default (): StyliPlugin => {
       return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
     },
     onAtomStyleCreate(atom) {
-
       if (!styli.getConfig('dev')) {
         atom.type = 'invalid'
         return atom

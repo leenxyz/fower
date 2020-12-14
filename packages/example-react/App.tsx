@@ -22,7 +22,7 @@ console.log('查看值', process.env.NODE_ENV)
 
 styli.configure({
   ...presetDefault,
-  dev: process.env.NODE_ENV === 'development'
+  dev: process.env.NODE_ENV === 'development',
 })
 
 export const App = () => {

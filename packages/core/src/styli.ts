@@ -18,10 +18,10 @@ class Styli {
   // user config
   configure = (config: Preset) => {
     Object.assign(this.config, config)
-    
+
     // set plugins
     const { plugins = [] } = this.config
-    this.plugins = classifyPlugins(plugins)    
+    this.plugins = classifyPlugins(plugins)
   }
 
   getConfig = <T = any>(type?: keyof Configuration): T => {
@@ -79,7 +79,9 @@ class Styli {
 
   use = (...plugins: StyliPlugin[]) => {
     plugins.forEach((plugin) => {
-      const idx = this.config.plugins.findIndex((configPlugin: StyliPlugin) => configPlugin.name === plugin.name)
+      const idx = this.config.plugins.findIndex(
+        (configPlugin: StyliPlugin) => configPlugin.name === plugin.name,
+      )
       const pluginIdx = idx === -1 ? this.config.plugins.length : idx
       this.config.plugins[pluginIdx] = plugin
     })

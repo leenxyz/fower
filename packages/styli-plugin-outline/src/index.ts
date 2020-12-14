@@ -15,7 +15,9 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
 
   const [, keyIsOffset, , offsetValue] = propKey.match(/^outline([Oo]ffset)(-(.+))?$/) || []
   if (keyIsOffset) {
-    return { outlineOffset: isValidPropValue(propValue) ? propValue : styli.getValue(offsetValue || 1) }
+    return {
+      outlineOffset: isValidPropValue(propValue) ? propValue : styli.getValue(offsetValue || 1),
+    }
   }
 
   return { outline: isValidPropValue(propValue) ? propValue : 'none' }
