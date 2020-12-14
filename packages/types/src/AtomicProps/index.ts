@@ -70,9 +70,15 @@ export interface AtomicProps
    * Styli will auto add border to self element.
    *
    * debug is `.autoClassName{ border: 1px solid gold }`
-   *
+   * 
+   * [NOTE]: development mode only. auto remove in production mode
+   * 
    * @example
    * ```tsx
+   * styli.configure({
+   *   dev: process.env.NODE_ENV === 'develop'
+   * })
+   * 
    * <View debug></View>
    * ```
    */
@@ -84,9 +90,15 @@ export interface AtomicProps
    * Styli will auto add border to self and children element
    *
    * debugChildren is `.autoClassName{ border: 1px solid gold, '> *': { border: 1px solid gold } }`
+   * 
+   * [NOTE]: development mode only. auto remove in production mode
    *
    * @example
    * ```tsx
+   * styli.configure({
+   *   dev: process.env.NODE_ENV === 'develop'
+   * })
+   * 
    * <View debugChildren></View>
    * ```
    */
@@ -99,8 +111,14 @@ export interface AtomicProps
    *
    * debugAll is `*{ border: 1px solid gold }`
    *
+   * [NOTE]: development mode only. auto remove in production mode
+   * 
    * @example
    * ```tsx
+   * styli.configure({
+   *   dev: process.env.NODE_ENV === 'develop'
+   * })
+   * 
    * <View debugAll></View>
    * ```
    */
