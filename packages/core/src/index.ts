@@ -1,5 +1,4 @@
+export * from './api'
 export { styli } from './styli'
 export { Sheet } from './Sheet'
 export { styleManager } from './styleManager'
-export { createStyle } from './createStyle'
-export { css } from './css'

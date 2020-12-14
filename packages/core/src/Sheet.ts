@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from '@styli/types'
 import { isEmptyObj, isPlainType, isEqual, hash, parseCSSProp, cssObjToStr } from '@styli/utils'
-import { corePlugin } from './corePlugin'
+import { corePlugin } from './plugin'
 import { styli } from './styli'
 
 /**
@@ -157,7 +157,6 @@ export class Sheet {
         return result + parseCSSProp(style, className)
       }
 
-      /** global style */
       if (type === 'global') {
         return result + parseCSSProp(style)
       }

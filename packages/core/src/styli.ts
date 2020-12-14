@@ -1,32 +1,27 @@
 import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
 import { StyliPlugin, Configuration, Preset, Theme, PluginCategory, Atom } from '@styli/types'
+import { defaultConfig } from './config'
 
 class Styli {
-  private config: Configuration = {
-    dev: false,
-    unit: 'px',
-    inline: false,
-    plugins: [] as StyliPlugin[],
-    theme: {} as Theme,
-  }
+  private config: Configuration = defaultConfig
 
+  // cache control
   classNameCache = new Map<string, boolean>()
   atomCache = new Map<string, Atom>()
 
-  componentKey = 0 // use generate component unite className
+  // generate component unite className
+  componentKey = 0
 
-  inited = false
+  // plugin classification
+  plugins: PluginCategory = {} as PluginCategory
 
-  plugins: PluginCategory = {} as any
-
+  // user config
   configure = (config: Preset) => {
-    if (this.inited) return
-
-    const { plugins = [] } = config
-    this.plugins = classifyPlugins(plugins)
-
-    Object.assign(this.config, config)    
-    this.inited = true
+    Object.assign(this.config, config)
+    
+    // set plugins
+    const { plugins = [] } = this.config
+    this.plugins = classifyPlugins(plugins)    
   }
 
   getConfig = <T = any>(type?: keyof Configuration): T => {
@@ -84,7 +79,7 @@ class Styli {
 
   use = (...plugins: StyliPlugin[]) => {
     plugins.forEach((plugin) => {
-      const idx = this.config.plugins.findIndex((configPlugin) => configPlugin.name === plugin.name)
+      const idx = this.config.plugins.findIndex((configPlugin: StyliPlugin) => configPlugin.name === plugin.name)
       const pluginIdx = idx === -1 ? this.config.plugins.length : idx
       this.config.plugins[pluginIdx] = plugin
     })
