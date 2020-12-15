@@ -1,5 +1,19 @@
-import { styled } from '@styli/styled'
 import Taro from '@tarojs/components'
+import { styli } from '@styli/core'
+import presetDefault from '@styli/preset-default'
+import { styled } from '@styli/styled'
+import { theme } from './theme'
+
+styli.configure(() => ({
+  ...presetDefault,
+  unit: 'rpx',
+  inline: true,
+  theme
+}))
+
+export * from '@styli/theming'
+export * from '@styli/core'
+export * from '@styli/styled'
 
 export const View = styled(Taro.View)
 export const MovableView = styled(Taro.MovableView)
