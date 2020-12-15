@@ -2,6 +2,7 @@ import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } f
 import { Sheet, styleManager, styli } from '@styli/core'
 import { AtomicProps, As } from '@styli/types'
 import { themeContext } from '@styli/theming'
+import { trimStr } from '@styli/utils'
 const { Consumer } = themeContext
 
 export interface BoxComponent<T extends As, P = any> {
@@ -39,7 +40,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
         } else {
           const { className = '' } = rest || {}
           styleManager.insertStyles(sheet.toCss())
-          const finalClassName = `${sheet.getClassNames()} ${className}`.trim()
+          const finalClassName = trimStr(`${sheet.getClassNames()} ${className}`)
 
           if (finalClassName) parsedProps.className = finalClassName
         }

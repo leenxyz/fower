@@ -82,3 +82,7 @@ export function mergeConfig(target: Preset, source: Preset) {
     }
   })
 }
+
+export function trimStr(str = '') {
+  return str.replace(/\s{2,}/g, ' ').trim()
+}

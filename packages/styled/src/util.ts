@@ -1,4 +1,5 @@
 import { createStyle, css, Sheet, styleManager } from '@styli/core'
+import { trimStr } from '@styli/utils'
 import { Args } from './types'
 
 // handle inline style
@@ -26,7 +27,7 @@ export function getCssParsedProps(props: any, value: any, args: Args) {
 
   const { className = '' } = props || {}
 
-  const finalClassName = `${css(...args)} ${sheet.getClassNames()} ${className}`.trim()
+  const finalClassName = trimStr(`${css(...args)} ${sheet.getClassNames()} ${className}`)
 
   if (finalClassName) {
     parsedProps.className = finalClassName

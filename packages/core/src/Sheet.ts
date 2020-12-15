@@ -1,6 +1,14 @@
 import { CSSProperties } from 'react'
 import { Props, Atom, Theme } from '@styli/types'
-import { isEmptyObj, isPlainType, isEqual, hash, parseCSSProp, cssObjToStr } from '@styli/utils'
+import {
+  isEmptyObj,
+  isPlainType,
+  isEqual,
+  hash,
+  parseCSSProp,
+  cssObjToStr,
+  trimStr,
+} from '@styli/utils'
 import { corePlugin } from './plugin'
 import { styli } from './styli'
 
@@ -120,11 +128,8 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    const atomClassNames = this.atoms
-      .map((i) => i.className)
-      .join(' ')
-      .trim()
-    return `${this.className} ${atomClassNames}`
+    const atomClassNames = this.atoms.map((i) => i.className).join(' ')
+    return trimStr(`${this.className} ${atomClassNames}`)
   }
 
   /**

@@ -9,7 +9,7 @@ export function css(...args: (string | CSSObject)[]) {
 
   const props = args.reduce(
     (result: Props, cur: any) =>
-      Object.assign(result, typeof cur === 'string' ? { css: cur } : modifierToProps(cur)),
+      Object.assign(result, typeof cur === 'string' ? modifierToProps(cur) : { css: cur }),
     {} as Props,
   )
 
