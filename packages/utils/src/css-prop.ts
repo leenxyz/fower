@@ -91,7 +91,7 @@ export function mergeCssObjectPaths(paths: any) {
     const idx = result.findIndex(({ key }: any) => key === path)
     result[idx === -1 ? result.length : idx] = {
       key: path,
-      value: Object.assign({}, result[idx].value, value),
+      value: Object.assign({}, idx === -1 ? {} : result[idx].value, value),
     }
     return result
   }, [])
