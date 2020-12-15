@@ -8,8 +8,7 @@
     "build": "npm -v"
   },
   "dependencies": {
-    "@styli/react": "^0.16.2",
-    "@styli/preset-default": "^0.16.2"
+    "@styli/react": "^0.16.2"
   },
   "devDependencies": {
     "parcel": "^1.12.4"

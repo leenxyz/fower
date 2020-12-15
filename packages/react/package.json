@@ -20,6 +20,8 @@
   "module": "dist/react.esm.js",
   "dependencies": {
     "@styli/core": "^0.16.2",
-    "@styli/styled": "^0.16.2"
+    "@styli/styled": "^0.16.2",
+    "@styli/preset-default": "^0.16.2",
+    "@styli/theming": "^0.16.2"
   }
 }

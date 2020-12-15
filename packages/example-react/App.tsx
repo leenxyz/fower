@@ -1,6 +1,4 @@
 import React from 'react'
-import { styli } from '@styli/core'
-import { ThemeProvider } from '@styli/theming'
 import { Color } from './components/Color'
 import { Padding } from './components/Padding'
 import { Margin } from './components/Margin'
@@ -16,14 +14,11 @@ import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
-import presetDefault from '@styli/preset-default'
+import { styli, ThemeProvider } from '@styli/react'
 
-console.log('查看值', process.env.NODE_ENV)
-
-styli.configure({
-  ...presetDefault,
+styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
-})
+}))
 
 export const App = () => {
   return (
