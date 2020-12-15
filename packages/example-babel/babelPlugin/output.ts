@@ -11,6 +11,6 @@ export function output(str: string) {
       fs.writeFile(FILE_PATH + FILE_NAME, str, (err) => {})
       return
     }
-    fs.appendFile(FILE_PATH + FILE_NAME, res + str, (err) => {})
+    fs.appendFile(FILE_PATH + FILE_NAME, str, (err) => {})
   })
 }

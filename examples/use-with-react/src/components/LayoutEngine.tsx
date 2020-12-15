@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading } from '@styli/react'
+import React from 'react';
+import { View, Heading } from '@styli/react';
 
 export const LayoutEngine = () => {
   return (
@@ -15,5 +15,5 @@ export const LayoutEngine = () => {
         <View s-100>BB</View>
       </View>
     </View>
-  )
-}
+  );
+};

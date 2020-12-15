@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading } from '@styli/react'
+import React from 'react';
+import { View, Heading } from '@styli/react';
 
 export const Shadow = () => {
   return (
@@ -46,5 +46,5 @@ export const Shadow = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

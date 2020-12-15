@@ -8,8 +8,15 @@ import { toCss } from './toCss'
 import { Preset } from '@styli/types'
 import { output } from './output'
 
-export default (api: any, opt: Preset): PluginObj => {
-  styli.configure(() => opt)
+export interface Config {
+  outDir: string
+  styliPreset?: Preset
+}
+
+export const styliBabelPlugin = (__: any, opt?: Config): PluginObj => {
+  const { styliPreset = {}, outDir = './styli.css' } = opt || {}
+
+  styli.configure(() => styliPreset)
 
   const { inline = true } = styli.getConfig()
 
@@ -24,12 +31,12 @@ export default (api: any, opt: Preset): PluginObj => {
 
         const { props } = createProps(attrs)
 
-        const sheet = new Sheet(props, {} as any)
+        const sheet = new Sheet(props, styli.getTheme())
 
         if (inline) {
           toStyle(path, sheet, attrs)
         } else {
-          ;(this.cssStr as any) += sheet.toCss()
+          this.cssStr += sheet.toCss()
           toCss(path, sheet, attrs)
         }
 
@@ -37,7 +44,7 @@ export default (api: any, opt: Preset): PluginObj => {
       },
     },
     post() {
-      output(this.cssStr as any)
+      output(outDir, this.cssStr as any)
     },
   }
 }

@@ -23,11 +23,11 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^5.0.12",
-    "@styli/core": "^0.10.0",
-    "@styli/preset-default": "^0.10.0",
-    "@styli/react": "^0.10.0",
-    "@styli/styled": "^0.10.0",
-    "@styli/theming": "^0.10.0",
+    "@styli/core": "^0.16.2",
+    "@styli/preset-default": "^0.16.2",
+    "@styli/react": "^0.16.2",
+    "@styli/styled": "^0.16.2",
+    "@styli/theming": "^0.16.2",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.24",
     "lint-staged": "^10.0.7",
@@ -38,7 +38,7 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "@styli/babel-preset-styli": "^0.10.0",
+    "@styli/babel-preset-styli": "^0.16.2",
     "hoist-non-react-statics": "^3.3.2"
   }
 }

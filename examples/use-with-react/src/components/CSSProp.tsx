@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading, Text } from '@styli/react'
+import React from 'react';
+import { View, Heading, Text } from '@styli/react';
 
 export const CSSProp = () => {
   return (
@@ -36,5 +36,5 @@ export const CSSProp = () => {
         <span>Hi, Styli!</span>
       </View>
     </View>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View } from '@styli/react'
+import React from 'react';
+import { View } from '@styli/react';
 
 export const FontWeight = () => {
   return (
@@ -21,5 +21,5 @@ export const FontWeight = () => {
         <View fontWeight={600}>Lorem ipsum dolor sit amet</View>
       </View>
     </View>
-  )
-}
+  );
+};

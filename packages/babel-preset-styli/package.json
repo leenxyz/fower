@@ -21,7 +21,9 @@
   "module": "dist/babel-preset-styli.esm.js",
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.5",
-    "@styli/core": "^0.16.2",
+    "@styli/react": "^0.16.2",
+    "@styli/types": "^0.16.2",
+    "@styli/utils": "^0.16.2",
     "babel-plugin-jsx-pragmatic": "^1.0.2"
   }
 }

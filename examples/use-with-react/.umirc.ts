@@ -15,5 +15,13 @@ export default defineConfig({
       ],
     },
   ],
-  extraBabelPresets: ['@styli/babel-preset-styli'],
+  extraBabelPresets: [
+    [
+      '@styli/babel-preset-styli',
+      {
+        enhance: true,
+        outDir: './src/global.css',
+      },
+    ],
+  ],
 });

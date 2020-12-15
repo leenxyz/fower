@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Input, Heading } from '@styli/react'
+import React from 'react';
+import { View, Input, Heading } from '@styli/react';
 
 export const OutLine = () => {
   return (
@@ -25,5 +25,5 @@ export const OutLine = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

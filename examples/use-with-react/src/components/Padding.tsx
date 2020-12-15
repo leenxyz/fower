@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading } from '@styli/react'
+import React from 'react';
+import { View, Heading } from '@styli/react';
 
 export const Padding = () => {
   return (
@@ -59,5 +59,5 @@ export const Padding = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

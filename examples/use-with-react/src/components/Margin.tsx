@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading } from '@styli/react'
+import React from 'react';
+import { View, Heading } from '@styli/react';
 
 export const Margin = () => {
   return (
@@ -101,5 +101,5 @@ export const Margin = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

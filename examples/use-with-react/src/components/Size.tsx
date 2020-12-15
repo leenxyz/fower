@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading, Image } from '@styli/react'
+import React from 'react';
+import { View, Heading, Image } from '@styli/react';
 
 export const Size = () => {
   return (
@@ -15,7 +15,7 @@ export const Size = () => {
           w-100 h-50
         </View>
         <Image
-          src="https://avatars2.githubusercontent.com/u/2668081?s=460&u=6e7f6312c57a4b4f23cc4504ff3f62d4e42f9259&v=4"
+          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg"
           s-100
         ></Image>
         <View s-50 bgBlue20>
@@ -64,5 +64,5 @@ export const Size = () => {
         <View w={[1 / 3, '100%', 400]} h-100 bgYellow20></View>
       </View>
     </View>
-  )
-}
+  );
+};

@@ -1,5 +1,8 @@
-import * as React from 'react'
-import { View } from '@styli/react'
+import * as React from 'react';
+import { styled } from '@styli/react';
+
+export const View = styled('div');
+export const Text = styled('span');
 
 export const Nested = () => {
   return (
@@ -47,5 +50,5 @@ export const Nested = () => {
         </View>
       </div>
     </View>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { View, Heading } from '@styli/react'
+import React from 'react';
+import { View, Heading } from '@styli/react';
 
 export const Color = () => {
   return (
@@ -104,5 +104,5 @@ export const Color = () => {
         c=['yellowgreen', 'purple', 'deeppink', 'red']
       </View>
     </View>
-  )
-}
+  );
+};

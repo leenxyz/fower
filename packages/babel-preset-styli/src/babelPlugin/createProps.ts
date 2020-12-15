@@ -1,5 +1,4 @@
 import * as types from '@babel/types'
-import { output } from './output'
 
 export function createProps(attrs: types.JSXAttribute[]) {
   // create props
