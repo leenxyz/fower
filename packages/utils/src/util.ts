@@ -1,5 +1,6 @@
 import { noCase } from 'no-case'
-import { StyliPlugin, PluginCategory } from '@styli/types'
+import { StyliPlugin, PluginCategory, Preset } from '@styli/types'
+import mergeWith from 'lodash.mergewith'
 
 export function upFirst(s: string = '') {
   return s.charAt(0).toUpperCase() + s.slice(1)
@@ -72,4 +73,12 @@ export function classifyPlugins(plugins: StyliPlugin[]): PluginCategory {
       styleCreations: [],
     } as PluginCategory,
   )
+}
+
+export function mergeConfig(target: Preset, source: Preset) {
+  return mergeWith(target, source, (targetValue, sourceValue) => {
+    if (Array.isArray(sourceValue)) {
+      return (targetValue || []).concat(sourceValue)
+    }
+  })
 }

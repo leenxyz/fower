@@ -1,4 +1,11 @@
-import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
+import {
+  formatColor,
+  downFirst,
+  isNumber,
+  isPercentNumber,
+  classifyPlugins,
+  mergeConfig,
+} from '@styli/utils'
 import { StyliPlugin, Configuration, Preset, Theme, PluginCategory, Atom } from '@styli/types'
 import { defaultConfig } from './config'
 
@@ -20,8 +27,14 @@ class Styli {
   }
 
   // user config
-  configure = (config: Preset) => {
-    Object.assign(this.config, config)
+  configure = (config: Configuration | ((config: Configuration) => Preset)) => {
+    if (typeof config === 'function') {
+      // merge config
+      mergeConfig(this.config, config(this.config))
+    } else {
+      // replace config
+      this.config = config
+    }
 
     // set plugins
     const { plugins = [] } = this.config
