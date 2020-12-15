@@ -13,7 +13,11 @@ class Styli {
   componentKey = 0
 
   // plugin classification
-  plugins: PluginCategory = {} as PluginCategory
+  plugins: PluginCategory = {
+    atomModifiers: [],
+    atomStyleCreations: [],
+    styleCreations: [],
+  }
 
   // user config
   configure = (config: Preset) => {
