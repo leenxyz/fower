@@ -22,7 +22,6 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
-    "@styli/theming": "^0.16.2",
     "@styli/types": "^0.16.2",
     "@styli/utils": "^0.16.2"
   }

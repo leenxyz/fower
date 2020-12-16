@@ -22,7 +22,6 @@
   "author": "forsigner",
   "module": "dist/preset-default.esm.js",
   "dependencies": {
-    "@styli/theming": "^0.16.2",
     "@styli/types": "^0.16.2",
     "styli-plugin-background": "^0.16.2",
     "styli-plugin-border": "^0.16.2",
