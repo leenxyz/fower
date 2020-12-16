@@ -102,6 +102,7 @@ class Styli {
       this.config.plugins[pluginIdx] = plugin
     })
     this.plugins = classifyPlugins(this.config.plugins)
+    return this
   }
 }
 
