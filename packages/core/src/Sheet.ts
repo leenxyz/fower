@@ -36,7 +36,7 @@ export class Sheet {
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
-      const initialAtom = { propKey, propValue, type: 'style', key: propKey, cache: true } as Atom
+      const proxyAtom = this.getAtomInstance(propKey, propValue)
 
       const pluginCacheKey = this.getAtomCacheKey(propKey, propValue)
       const pluginCacheValue = styli.atomCache.get(pluginCacheKey)
@@ -50,7 +50,7 @@ export class Sheet {
       }
 
       for (const plugin of atomStyleCreations) {
-        let atom = { ...initialAtom }
+        let atom = proxyAtom.atom
 
         if (plugin.beforeAtomStyleCreate) {
           atom = plugin.beforeAtomStyleCreate(atom, this as any)
@@ -60,23 +60,49 @@ export class Sheet {
           return atomModifier.onAtomModify!(plugin, finalAtom, this as any, this.theme)
         }, atom)
 
-        if (!isEqual(atom, initialAtom)) {
-          const newAtom = {
-            ...this.createAtomClassName(atom),
+        if (proxyAtom.changed || !isEqual(atom, proxyAtom.atom)) {
+          // merge className and matched
+          const newAtom = Object.assign(this.createAtomClassName(atom), {
             matchedPlugin: plugin.name,
-          }
+          })
+
+          // set atom cache
+          newAtom.cache && styli.atomCache.set(pluginCacheKey, newAtom)
 
           this.atoms.push(newAtom)
-
-          if (newAtom.cache) {
-            styli.atomCache.set(pluginCacheKey, newAtom)
-          }
           break
         }
       }
     }
 
     styleCreations.forEach((plugin) => plugin.onStyleCreate!(this as any))
+  }
+
+  /**
+   * watch atom change
+   */
+  getAtomInstance(propKey: string, propValue: any) {
+    const instance = {
+      changed: false,
+      atom: new Proxy(
+        {
+          propKey,
+          propValue,
+          type: 'style',
+          key: propKey,
+          cache: true,
+        },
+        {
+          set(target: any, key: any, val: any) {
+            target[key] = val
+            instance.changed = true
+            return true
+          },
+        },
+      ),
+    }
+
+    return instance
   }
 
   /**
