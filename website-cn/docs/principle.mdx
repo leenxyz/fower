@@ -45,6 +45,7 @@ for (const [propKey, propValue] of Object.entries(props)) {
 
 ```ts
 const breakpoints = [10, 20, 30, 40] // 媒体查询断点
+const style = {} // style 需要自定义数据结构，以后续解析伪类、媒体查询等..
 
 for (const [propKey, propValue] of Object.entries(props)) {
   for (const rule of rules) {
@@ -67,7 +68,7 @@ for (const [propKey, propValue] of Object.entries(props)) {
       if (Array.isArray(propValue)) {
         matchKey.push(propKey)
         propValue.reduce((finalStyle, cur, idx) => {
-          return Object.assign(finalProps[breakpoints[idx]], toStyle(propKey, cur))
+          return Object.assign(finalStyle[breakpoints[idx]], toStyle(propKey, cur))
         }, style)
         break
       }

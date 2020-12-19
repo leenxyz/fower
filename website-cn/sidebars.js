@@ -2,7 +2,7 @@ module.exports = {
   someSidebar: {
     介绍: ['introduction', 'design-principles', 'benefits', 'comparison', 'principle'],
     起步: [
-      'installation',
+      // 'installation',
       'use-with-react',
       'use-with-vue',
       'use-with-rn',
@@ -16,9 +16,10 @@ module.exports = {
       'dynamic-style',
       'programmable',
       'unit',
+      'config',
       // 'reuse',
       'theme',
-      // 'plugin',
+      'plugin',
       // 'color-palette',
       'typescript',
       'attr-design-rule',

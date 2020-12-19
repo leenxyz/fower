@@ -1,10 +1,92 @@
 ---
 id: plugin
-title: plugin
+title: 插件
 ---
 
-```jsx live
-<Anchor f-24 href="https://github.com/forsigner" target="_blank">
-  Hello
-</Anchor>
+Styli 解析组件属性的能力是通过各种各样的插件来实现的。各框架包中已预置了平台可以使用的大量插件包。
+
+## 插件获取
+
+您可以在 [npmjs](https://www.npmjs.com/search?q=styli-plugin-) 通过关键词 **styli-plugin-** 搜索 Styli 插件。
+
+## 插件注册
+
+Styli 提供了 **styli.use** API 进行插件注册。
+
+```ts
+styli.use(StyliPlugin1(), StyliPlugin2(), StyliPlugin3(), StyliPlugin4())
+
+// 链式调用
+styli.use(StyliPlugin1()).use(StyliPlugin2()).use(StyliPlugin3()).use(StyliPlugin4())
 ```
+
+注意：对同名插件进行注册，后注册的将替换先注册的。
+
+## 部分插件列表
+
+各框架包内置一些插件。
+
+| 插件名                     | 框架              | 使用示例                           |
+| -------------------------- | ----------------- | ---------------------------------- |
+| styli-plugin-margin        | React/Vue/Taro/RN | `m[xytrbl]-10`                     |
+| styli-plugin-padding       | React/Vue/Taro/RN | `p[xytrbl]-10`                     |
+| styli-plugin-size          | React/Vue/Taro/RN | `w-10`                             |
+| styli-plugin-background    | React/Vue/Taro/RN | `bgRed10`                          |
+| styli-plugin-color         | React/Vue/Taro/RN | `red10`                            |
+| styli-plugin-textAlign     | React/Vue/Taro/RN | `textCenter`                       |
+| styli-plugin-textSize      | React/Vue/Taro/RN | `f-24`                             |
+| styli-plugin-display       | React/Vue/Taro/RN | `hide`                             |
+| styli-plugin-lineHeight    | React/Vue/Taro/RN | `lh-10`                            |
+| styli-plugin-opacity       | React/Vue/Taro/RN | `opacity-10`                       |
+| styli-plugin-position      | React/Vue/Taro/RN | `absolute`                         |
+| styli-plugin-rounded       | React/Vue/Taro/RN | `rounded-10`                       |
+| styli-plugin-textWeight    | React/Vue/Taro/RN | `fontBold`                         |
+| styli-plugin-textHeading   | React/Vue/Taro/RN | `heading1`                         |
+| styli-plugin-textTransform | React/Vue/Taro/RN | `center`                           |
+| styli-plugin-flexbox       | React/Vue/Taro/RN | `flex-1`                           |
+| styli-plugin-layoutEngine  | React/Vue/Taro/RN | `center`                           |
+| styli-plugin-overflow      | React/Vue/Taro    | `oyScroll`                         |
+| styli-plugin-shadow        | React/Vue/Taro    | `shadow="none"`                    |
+| styli-plugin-zIndex        | React/Vue/Taro    | `zIndex-99`                        |
+| styli-plugin-outline       | React/Vue/Taro    | `outlineNone`                      |
+| styli-plugin-cursor        | React/Vue         | `cursorNone`                       |
+| styli-plugin-ellipsis      | React/Vue         | `ellipsis`                         |
+| styli-plugin-debug         | React/Vue         | `debug`                            |
+| styli-plugin-css           | React/Vue         | `css={ '.button': { color: red }}` |
+| styli-plugin-reset         | React/Vue         | `reset`                            |
+| styli-plugin-pseudo        | React/Vue         | `w-10--hover`                      |
+| styli-plugin-mediaQueries  | React/Vue         | `w={[10, 20, 30, 40]}`             |
+| styli-plugin-space         | React/Vue         | `spaceX-10`                        |
+
+注意: 除了 React 和 Taro 框架外，其他支持度待验证。
+
+## 插件开发
+
+### 插件示例
+
+一个基础插件由插件名，匹配和转换函数 3 个部分组成。下面的示例中，我们完成了 `textRed` 属性对 `color: red` 样式转换的映射。
+
+```ts
+export default (deaultOpt) => {
+  return {
+    name: 'styli-plugin-textRed'
+    isMatch(key) {
+      return key === 'textRed'
+    },
+    onAtomStyleCreate(atom) {
+      atom.style = { color: 'red' }
+      return atom
+    },
+  }
+}
+```
+
+### 插件属性
+
+| 属性名                | 值类型 | 表示                                                                                                                                       |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| name                  | 字符串 | 插件名称                                                                                                                                   |
+| isMatch               | 函数   | 属性匹配                                                                                                                                   |
+| onAtomStyleCreate     | 函数   | 创建属性样式                                                                                                                               |
+| beforeAtomStyleCreate | 函数   | isMatch 调用前，对某种属性进行修改。如: [styli-plugin-margin](https://github.com/forsigner/styli/tree/master/packages/styli-plugin-margin) |
+| onAtomModify          | 函数   | isMatch 调用前，对所有属性进行修改。如: [styli-plugin-pseudo](https://github.com/forsigner/styli/tree/master/packages/styli-plugin-pseudo) |
