@@ -15,13 +15,14 @@ export default defineConfig({
       ],
     },
   ],
-  extraBabelPresets: [
-    [
-      '@styli/babel-preset-styli',
-      {
-        enhance: true,
-        outDir: './src/global.css',
-      },
-    ],
-  ],
+  extraBabelPresets: ['@styli/babel-preset-styli'],
+  styles: ['http://localhost:8000/styli.css'],
+  chainWebpack(memo) {
+    memo.module
+      .rule('styli-loader')
+      .test(/\.tsx$/)
+      .use('styli-loader')
+      .loader('styli-loader')
+      .options({});
+  },
 });

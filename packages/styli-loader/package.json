@@ -1,0 +1,28 @@
+{
+  "name": "styli-loader",
+  "version": "0.16.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/styli-loader.esm.js",
+  "devDependencies": {
+    "@styli/core": "^0.16.2",
+    "@styli/preset-default": "0.62.2",
+    "styli-transform": "^0.16.2",
+    "loader-utils": "^2.0.0",
+    "@types/loader-utils": "^2.0.1"
+  }
+}

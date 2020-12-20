@@ -1,11 +1,9 @@
-import { NodePath } from '@babel/core'
-import { JSXAttribute, JSXOpeningElement } from '@babel/types'
-import { Sheet } from '@styli/react'
+import { Sheet } from '@styli/core'
 import { Props } from '@styli/types'
 
-export function rmAttr(path: NodePath<JSXOpeningElement>, sheet: Sheet, props: Props) {
+export function removeParsedProp(path: any, sheet: Sheet, props: Props) {
   path.traverse({
-    JSXAttribute(path: NodePath<JSXAttribute>) {
+    JSXAttribute(path: any) {
       const nodeName = path.node?.name?.name
       if (!nodeName) return
 
