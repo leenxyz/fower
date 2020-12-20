@@ -8,7 +8,7 @@ styli.configure(() => ({
   ...presetDefault,
   unit: 'rpx',
   inline: true,
-  theme
+  theme,
 }))
 
 export * from '@styli/theming'

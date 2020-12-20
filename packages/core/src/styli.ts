@@ -1,10 +1,4 @@
-import {
-  formatColor,
-  downFirst,
-  isNumber,
-  isPercentNumber,
-  classifyPlugins,
-} from '@styli/utils'
+import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
 import { StyliPlugin, Configuration, Preset, Theme, PluginCategory, Atom } from '@styli/types'
 import { defaultConfig } from './config'
 
