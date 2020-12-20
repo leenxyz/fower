@@ -156,12 +156,14 @@ export class Sheet {
    * get component classNames
    */
   getClassNames() {
-    const atomClassNames = this.atoms.map((i) => {
-      if (i.type === 'media-queries') {
-        this.setUniteClassName()
-      }
-      return i.className
-    }).join(' ')
+    const atomClassNames = this.atoms
+      .map((i) => {
+        if (i.type === 'media-queries') {
+          this.setUniteClassName()
+        }
+        return i.className
+      })
+      .join(' ')
     return trimStr(`${this.className} ${atomClassNames}`)
   }
 
