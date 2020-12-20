@@ -147,14 +147,21 @@ export class Sheet {
   }
 
   private setUniteClassName() {
-    this.className = 'styli-' + hash('' + styli.componentKey++)
+    if (!this.className) {
+      this.className = 'styli-' + hash('' + styli.componentKey++)
+    }
   }
 
   /**
    * get component classNames
    */
   getClassNames() {
-    const atomClassNames = this.atoms.map((i) => i.className).join(' ')
+    const atomClassNames = this.atoms.map((i) => {
+      if (i.type === 'media-queries') {
+        this.setUniteClassName()
+      }
+      return i.className
+    }).join(' ')
     return trimStr(`${this.className} ${atomClassNames}`)
   }
 
