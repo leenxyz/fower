@@ -8,11 +8,15 @@ export default (): StyliPlugin => {
       return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
     },
     onAtomStyleCreate(atom) {
-      const dev = styli.getConfig('dev')
+      let dev = styli.getConfig('dev')
 
       if (dev === undefined) {
-        console.warn("styli-plugin-debug plugin need you set 'dev' config.")
-        return atom
+        const env = globalThis?.process?.env?.NODE_ENV
+        if (!env) {
+          console.warn("styli-plugin-debug plugin need you set 'dev' config.")
+          return atom
+        }
+        dev = env === 'development'
       }
       if (dev === false) {
         atom.type = 'invalid'

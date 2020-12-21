@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Link } from 'umi';
 import { styled, ThemeProvider, styli } from '@styli/react';
 
-styli.configure(() => ({
-  dev: process.env.NODE_ENV === 'development',
-}));
+// styli.configure(() => ({
+//   dev: process.env.NODE_ENV === 'development',
+// }));
 
 const StyledLink = styled(Link, 'p-20 inlineBlock');
 
