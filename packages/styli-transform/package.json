@@ -1,6 +1,6 @@
 {
   "name": "styli-transform",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -19,12 +19,12 @@
   "author": "forsigner",
   "module": "dist/styli-transform.esm.js",
   "devDependencies": {
-    "@styli/core": "^0.16.2",
-    "@styli/types": "^0.16.2",
-    "@styli/utils": "^0.16.2",
+    "@babel/core": "^7.12.10",
     "@babel/parser": "^7.12.11",
     "@babel/traverse": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/types": "^7.12.11"
+    "@babel/types": "^7.12.11",
+    "@styli/core": "^0.17.0",
+    "@styli/types": "^0.17.0",
+    "@styli/utils": "^0.17.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-react",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "npm -v"
   },
   "dependencies": {
-    "@styli/react": "^0.16.2"
+    "@styli/react": "^0.17.0"
   },
   "devDependencies": {
     "parcel": "^1.12.4"

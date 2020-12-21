@@ -1,6 +1,6 @@
 {
   "name": "@styli/react",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,11 +19,11 @@
   "author": "forsigner",
   "module": "dist/react.esm.js",
   "dependencies": {
-    "@styli/core": "^0.16.2",
-    "@styli/styled": "^0.16.2",
-    "@styli/types": "^0.16.2",
-    "@styli/preset-default": "^0.16.2",
-    "@styli/theming": "^0.16.2",
-    "@styli/utils": "^0.16.2"
+    "@styli/core": "^0.17.0",
+    "@styli/preset-default": "^0.17.0",
+    "@styli/styled": "^0.17.0",
+    "@styli/theming": "^0.17.0",
+    "@styli/types": "^0.17.0",
+    "@styli/utils": "^0.17.0"
   }
 }

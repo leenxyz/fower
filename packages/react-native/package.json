@@ -1,6 +1,6 @@
 {
   "name": "@styli/react-native",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/styled": "^0.16.2"
+    "@styli/styled": "^0.17.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.63.20",
