@@ -9,12 +9,12 @@ module.exports = {
       // 'use-with-taro',
       'use-with-vanilla',
     ],
-    // 'Design System': [
-    //   'design-system',
-    //   'design-system-color',
-    //   'design-system-typography',
-    //   'design-system-spacing',
-    // ],
+    'Design System': [
+      'design-system',
+      'design-system-color',
+      'design-system-typography',
+      'design-system-spacing',
+    ],
     Guides: [
       'basic',
       'css-prop',
