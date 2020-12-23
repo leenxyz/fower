@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^5.0.12",
-    "@styli/react": "^0.16.2",
+    "@styli/react": "^0.17.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.24",
     "lint-staged": "^10.0.7",
@@ -34,7 +34,7 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "styli-loader": "^0.16.2",
-    "@styli/babel-preset-styli": "^0.16.2"
+    "styli-loader": "^0.17.1",
+    "@styli/babel-preset-styli": "^0.17.1"
   }
 }
