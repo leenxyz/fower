@@ -36,6 +36,8 @@ export class Sheet {
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
+      if (styli.noMatchCache.get(propKey)) continue
+
       const proxyAtom = this.getAtomInstance(propKey, propValue)
 
       const pluginCacheKey = this.getAtomCacheKey(propKey, propValue)
@@ -49,6 +51,7 @@ export class Sheet {
         continue
       }
 
+      let matched = false
       for (const plugin of atomStyleCreations) {
         let atom = proxyAtom.atom
 
@@ -68,11 +71,12 @@ export class Sheet {
 
           // set atom cache
           newAtom.cache && styli.atomCache.set(pluginCacheKey, newAtom)
-
+          matched = true
           this.atoms.push(newAtom)
           break
         }
       }
+      !matched && styli.noMatchCache.set(propKey, true)
     }
 
     styleCreations.forEach((plugin) => plugin.onStyleCreate!(this as any))

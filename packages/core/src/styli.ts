@@ -8,6 +8,7 @@ class Styli {
   // cache control
   classNameCache = new Map<string, boolean>()
   atomCache = new Map<string, Atom>()
+  noMatchCache = new Map<string, boolean>()
 
   // generate component unite className
   componentKey = 0
