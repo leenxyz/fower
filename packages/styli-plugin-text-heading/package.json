@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-text-heading",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-text-heading.esm.js",
   "dependencies": {
-    "@styli/core": "^0.17.0",
-    "@styli/types": "^0.17.0",
-    "@styli/utils": "^0.17.0"
+    "@styli/core": "^0.17.1",
+    "@styli/types": "^0.17.1",
+    "@styli/utils": "^0.17.1"
   }
 }

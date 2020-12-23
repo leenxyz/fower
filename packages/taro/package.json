@@ -1,6 +1,6 @@
 {
   "name": "@styli/taro",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,11 +22,11 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/core": "^0.17.0",
-    "@styli/preset-default": "^0.17.0",
-    "@styli/styled": "^0.17.0",
-    "@styli/theming": "^0.17.0",
-    "@styli/utils": "^0.17.0"
+    "@styli/core": "^0.17.1",
+    "@styli/preset-default": "^0.17.1",
+    "@styli/styled": "^0.17.1",
+    "@styli/theming": "^0.17.1",
+    "@styli/utils": "^0.17.1"
   },
   "devDependencies": {
     "@tarojs/components": "^3.0.11"
