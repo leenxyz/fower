@@ -5,4 +5,7 @@ export const defaultConfig: Configuration = {
   inline: false,
   plugins: [] as StyliPlugin[],
   theme: {} as Theme,
+  transformUnit(value: string | number) {
+    return '' + value + this.unit
+  },
 }

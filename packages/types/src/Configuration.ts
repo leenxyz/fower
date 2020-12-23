@@ -25,6 +25,7 @@ export interface Configuration {
   important?: boolean
   theme: Theme
   plugins: StyliPlugin[]
+  transformUnit(data: string | number): string
 }
 
 export type Preset = Partial<Configuration>

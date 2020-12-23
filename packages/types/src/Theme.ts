@@ -39,7 +39,6 @@ export interface Theme {
   colors: Colors
   [key: string]: any
 }
-
 export interface Colors {
   transparent: string
   white: string

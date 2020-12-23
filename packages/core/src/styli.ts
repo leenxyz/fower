@@ -54,7 +54,7 @@ class Styli {
       }
 
       if (this.config.unit !== 'none') {
-        return numValue + this.config.unit
+        return this.config.transformUnit(numValue)
       }
     }
 

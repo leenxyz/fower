@@ -9,7 +9,7 @@ export function isColorKey(key: string) {
 
   if (!!Colors[key]) return true //  red20,blue50...
 
-  if (/^color(.+)?$/.test(key)) return true // colorPrImary | color="xxx"
+  if (/^color(.+)?$/.test(key)) return true // colorPrimary | color="xxx"
 
   /** green20-O20,green20-D20,green20-L20.... */
   const [, colorName = ''] = key.match(/^(.+)-([TOLDtold])?(\d{0,3})?$/) || []
