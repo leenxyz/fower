@@ -1,5 +1,4 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue, isNumber } from '@styli/utils'
 
 export const G = {
   flex: 'flex',
@@ -31,7 +30,7 @@ export const flexMaps: any = {
 export function isFlexBoxKey(key: string) {
   return (
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    /^(justify|items|self|content).*$|^order-\d+$|^flex(-\d+)?$/.test(key)
+    /^(justify|items|self|content).*$/.test(key)
   )
 }
 
@@ -42,20 +41,9 @@ function getDirection(props: any): string {
   return G.row
 }
 
-export function flexPropToStyle(prop: string, propValue: any) {
+export function flexPropToStyle(prop: string) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
-
-  /** @example flex-1, flex-2 */
-  if (/^flex(-\d+)?$/.test(prop)) {
-    if (isValidPropValue(propValue)) {
-      style.flex = propValue
-    } else {
-      const [, value] = prop.split('-')
-      const flexValue = value || (propValue === true ? 1 : propValue)
-      style.flex = isNumber(flexValue) ? Number(flexValue) : flexValue
-    }
-  }
 
   // set flex-wrap
   if (wraps.includes(prop)) style.flexWrap = prop as any
@@ -94,7 +82,7 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-flexbox',
     isMatch: isFlexBoxKey,
     onAtomStyleCreate(atom) {
-      atom.style = flexPropToStyle(atom.propKey, atom.propValue)
+      atom.style = flexPropToStyle(atom.propKey)
       return atom
     },
 

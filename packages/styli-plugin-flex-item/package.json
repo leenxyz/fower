@@ -1,0 +1,28 @@
+{
+  "name": "styli-plugin-flex-item",
+  "version": "0.17.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/styli-plugin-flex-item.esm.js",
+  "dependencies": {
+    "@styli/types": "^0.17.1",
+    "@styli/utils": "^0.17.1"
+  }
+}

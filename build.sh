@@ -14,6 +14,7 @@ Parallel=("
   styli-plugin-color
   styli-plugin-display
   styli-plugin-flexbox
+  styli-plugin-flex-item
   styli-plugin-layout-engine
   styli-plugin-line-height
   styli-plugin-margin

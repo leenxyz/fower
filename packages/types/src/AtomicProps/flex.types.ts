@@ -54,6 +54,17 @@ export interface Flex {
   flex?: PropValue
 
   /**
+   * set order
+   *
+   * @example
+   * ```tsx
+   * <View order-1></View> // order: 1;
+   * <View order="1"></View> // order: 1;
+   * ```
+   */
+  order?: PropValue
+
+  /**
    * set flex-direction
    *
    * @example

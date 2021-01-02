@@ -491,7 +491,11 @@ export interface Texts {
    * <View c="#FFF"></View>
    * ```
    */
-  c?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[]) | boolean
+  c?:
+    | Property.Color
+    | Property.Color[]
+    | ((theme: Theme) => Property.Color | Property.Color[])
+    | boolean
 
   /**
    * Set color
@@ -501,7 +505,11 @@ export interface Texts {
    * <View c="#FFF"></View>
    * ```
    */
-  color?: Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[]) | boolean
+  color?:
+    | Property.Color
+    | Property.Color[]
+    | ((theme: Theme) => Property.Color | Property.Color[])
+    | boolean
 
   colorBrand?: boolean
 
