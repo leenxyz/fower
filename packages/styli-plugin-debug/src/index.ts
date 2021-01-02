@@ -11,12 +11,8 @@ export default (): StyliPlugin => {
       let dev = styli.getConfig('dev')
 
       if (dev === undefined) {
-        const env = globalThis?.process?.env?.NODE_ENV
-        if (!env) {
-          console.warn("styli-plugin-debug plugin need you set 'dev' config.")
-          return atom
-        }
-        dev = env === 'development'
+        console.warn("styli-plugin-debug plugin need you set 'dev' config.")
+        return atom
       }
       if (dev === false) {
         atom.type = 'invalid'
