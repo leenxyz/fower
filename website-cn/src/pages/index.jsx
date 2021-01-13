@@ -66,7 +66,7 @@ function Home() {
         <div className={styles.wrapLink}>
           <Link
             className={clsx('button button--primary button--lg', styles.getStarted)}
-            to={useBaseUrl('docs/installation')}
+            to={useBaseUrl('docs/use-with-react')}
           >
             Get Started
           </Link>

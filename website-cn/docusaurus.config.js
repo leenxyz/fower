@@ -27,13 +27,13 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          to: 'docs/installation',
-          // activeBasePath: 'docs',
-          activeBasePath: 'docs/introduction',
-          label: 'Documentation',
-          position: 'left',
-        },
+        // {
+        //   to: 'docs/installation',
+        //   // activeBasePath: 'docs',
+        //   activeBasePath: 'docs/introduction',
+        //   label: 'Documentation',
+        //   position: 'left',
+        // },
         {
           to: 'docs/use-with-react',
           activeBasePath: 'docs/use-with-react',
