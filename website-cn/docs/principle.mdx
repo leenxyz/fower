@@ -117,4 +117,4 @@ finalProps['className'] = `${className} ${props.className || ''}`
 
 可以想象，每一个组件的每一个 prop 都需要经过 Styli 的 n 个规则匹配和转换，尤其是在 React 中，由 state 变化引起的 n 次渲染，每次渲染都会遍历 prop 与规则，这些无疑对性能消耗巨大。
 
-**我们建立了应用级的缓存，每经过 Styli 转换过的每一个 prop，Styli 都会将其缓存下来，之后无论是重新渲染，还是遍历 n 个组件之后的相同 prop, Styli 会直接从缓存中取出结果进行响应。**
+**我们建立了应用级的缓存，Styli 对遍历过的每一个 prop，都会将其进行缓存，之后无论是重新渲染，还是遍历 n 个组件之后的相同 prop, Styli 会直接从缓存中取出结果进行响应。**

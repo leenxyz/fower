@@ -4,8 +4,8 @@ module.exports = {
     起步: [
       // 'installation',
       'use-with-react',
-      'use-with-vue',
-      'use-with-rn',
+      // 'use-with-vue',
+      // 'use-with-rn',
       'use-with-taro',
       'use-with-vanilla',
     ],
