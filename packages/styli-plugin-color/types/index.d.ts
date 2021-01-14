@@ -122,7 +122,6 @@ declare module '@styli/types' {
     pink80?: boolean // #97266d
     pink90?: boolean // #702459
 
-
     /**
      * Set color
      *
@@ -132,10 +131,10 @@ declare module '@styli/types' {
      * ```
      */
     color?:
-    | Property.Color
-    | Property.Color[]
-    | ((theme: Theme) => Property.Color | Property.Color[])
-    | boolean
+      | Property.Color
+      | Property.Color[]
+      | ((theme: Theme) => Property.Color | Property.Color[])
+      | boolean
 
     colorBrand?: boolean
 
