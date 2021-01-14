@@ -27,10 +27,32 @@ const flexMaps: any = {
   stretch: 'stretch',
 }
 
+const justify = [
+  'justifyStart',
+  'justifyEnd',
+  'justifyCenter',
+  'justifyBetween',
+  'justifyAround',
+  'justifyEvenly',
+]
+const items = ['itemsStart', 'itemsEnd', 'itemsCenter', 'itemsBaseline', 'itemsStretch']
+const self = ['selfAuto', 'selfStart', 'selfEnd', 'selfCenter', 'selfStretch']
+const content = [
+  'contentStart',
+  'contentEnd',
+  'contentCenter',
+  'contentBetween',
+  'contentAround',
+  'contentStretch',
+]
+
 function isFlexBoxKey(key: string) {
   return (
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    /^(justify|items|self|content).*$/.test(key)
+    justify.includes(key) ||
+    items.includes(key) ||
+    self.includes(key) ||
+    content.includes(key)
   )
 }
 
@@ -53,11 +75,6 @@ function flexPropToStyle(prop: string) {
     style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
   }
 
-  // align-items
-  if (prop.startsWith('items')) {
-    style.alignItems = flexMaps[prop.replace('items', '').toLocaleLowerCase()]
-  }
-
   //align-self
   if (prop.startsWith('self')) {
     style.alignSelf = flexMaps[prop.replace('self', '').toLocaleLowerCase()]
@@ -66,12 +83,6 @@ function flexPropToStyle(prop: string) {
   //align-content
   if (prop.startsWith('content')) {
     style.alignContent = flexMaps[prop.replace('content', '').toLocaleLowerCase()]
-  }
-
-  // order
-  if (prop.startsWith('order')) {
-    const [, order] = prop.split('-')
-    style.order = Number(order)
   }
 
   return style
