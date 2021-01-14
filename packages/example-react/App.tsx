@@ -15,7 +15,6 @@ import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
 import { styli, ThemeProvider, View } from '@styli/react'
-// import Test from './components/Test'
 
 styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',

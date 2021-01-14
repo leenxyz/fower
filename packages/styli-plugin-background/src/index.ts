@@ -2,7 +2,7 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { formatColor } from '@styli/utils'
 
-export function isBgKey(key: string) {
+function isBgKey(key: string) {
   return /^bg(.+)?$/.test(key)
 }
 
@@ -22,7 +22,7 @@ function isBgPosKey(key: string) {
   return /^bgPos$/.test(key)
 }
 
-export function bgPropToStyle(propKey: string, propValue: any) {
+function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgImgKey(propKey)) return { backgroundImage: `url("${propValue}")` }
   if (isBgPosKey(propKey)) return { backgroundPosition: styli.getValue(propValue) }
   if (isBgSizeKey(propKey)) return { backgroundSize: styli.getValue(propValue) }

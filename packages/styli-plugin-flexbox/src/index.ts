@@ -1,6 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 
-export const G = {
+const G = {
   flex: 'flex',
   start: 'start',
   end: 'end',
@@ -15,7 +15,7 @@ export const G = {
   wrap: 'wrap',
 }
 
-export const flexMaps: any = {
+const flexMaps: any = {
   auto: 'auto',
   start: `${G.flex}-${G.start}`,
   end: `${G.flex}-${G.end}`,
@@ -27,7 +27,7 @@ export const flexMaps: any = {
   stretch: 'stretch',
 }
 
-export function isFlexBoxKey(key: string) {
+function isFlexBoxKey(key: string) {
   return (
     [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
     /^(justify|items|self|content).*$/.test(key)
@@ -41,7 +41,7 @@ function getDirection(props: any): string {
   return G.row
 }
 
-export function flexPropToStyle(prop: string) {
+function flexPropToStyle(prop: string) {
   const style: any = {}
   const wraps = [G.nowrap, G.wrap]
 

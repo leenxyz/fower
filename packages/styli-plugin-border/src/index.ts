@@ -2,21 +2,21 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isNumber } from '@styli/utils'
 
-export const G = {
+const G = {
   top: 'Top',
   left: 'Left',
   right: 'Right',
   bottom: 'Bottom',
 }
 
-export const positionMaps: { [key: string]: string } = {
+const positionMaps: { [key: string]: string } = {
   T: G.top,
   L: G.left,
   R: G.right,
   B: G.bottom,
 }
 
-export function isBorderKey(key: string) {
+function isBorderKey(key: string) {
   return key.startsWith('border')
 }
 
@@ -29,7 +29,7 @@ function formatBorderValue(value: string) {
   return result.join(' ')
 }
 
-export function borderPropToStyle(prop: string, propValue: any) {
+function borderPropToStyle(prop: string, propValue: any) {
   if (prop === 'border') {
     if (typeof propValue === 'boolean') {
       return { borderWidth: styli.getValue(1) }

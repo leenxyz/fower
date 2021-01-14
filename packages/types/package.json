@@ -5,14 +5,13 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "tsdx watch --verbose",
     "build": "tsdx build",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
@@ -20,5 +19,8 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/types.esm.js"
+  "module": "dist/types.esm.js",
+  "dependencies": {
+    "csstype": "^3.0.6"
+  }
 }

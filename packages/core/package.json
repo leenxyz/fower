@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "start": "tsdx watch",
+    "start": "tsdx watch --verbose",
     "build": "tsdx build",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",

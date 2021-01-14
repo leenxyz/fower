@@ -1,9 +1,8 @@
 import { Theme } from '@styli/types'
-import presetDefault from '@styli/preset-default'
+import { colors } from './colors'
 
-export const theme: Theme = {
-  breakpoints: ['640rpx', '768rpx', '1024rpx', '1280rpx'],
-  colors: presetDefault.theme?.colors || ({} as any),
+export const theme: Partial<Theme> = {
+  colors: colors,
   spacing: ['0', '4rpx', '8rpx', '12rpx', '16rpx', '20rpx', '24rpx', '28rpx', '32rpx', '36rpx'],
   sizes: ['0', '4rpx', '8rpx', '12rpx', '16rpx', '20rpx', '24rpx', '28rpx', '32rpx', '36rpx'],
   fontSizes: ['12rpx', '14rpx', '16rpx', '20rpx', '24rpx', '32rpx', '48rpx', '64rpx'],

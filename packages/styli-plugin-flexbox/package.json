@@ -3,16 +3,16 @@
   "version": "0.18.0",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "types/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "types"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "tsdx watch --verbose",
     "build": "tsdx build",
     "test": "tsdx test",
     "test:watch": "tsdx test --watch",
