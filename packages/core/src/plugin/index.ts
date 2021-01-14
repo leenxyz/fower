@@ -38,6 +38,11 @@ export const corePlugin: StyliPlugin = {
       atom.propValue = propValue(theme, sheet.props)
     }
 
+    if (propKey === 'styliIgnore') {
+      atom.type = 'invalid'
+      return atom
+    }
+
     return plugin.onAtomStyleCreate!(atom, sheet)
   },
 }

@@ -14,16 +14,28 @@ import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
-import { styli, ThemeProvider, View } from '@styli/react'
+import { styled, styli, ThemeProvider, View } from '@styli/react'
 
 styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
 }))
 
+const Test = (props) => {
+  const { center, style, className } = props
+  return (
+    <div style={style} className={className}>
+      {center}
+    </div>
+  )
+}
+
+const StyliTest = styled(Test)
+
 export const App = () => {
   return (
     <div className="box">
       {/* <Test /> */}
+      <StyliTest styliIgnore={['center']} center="11111" />
       <View center s-200>
         <View flex order>
           哈哈

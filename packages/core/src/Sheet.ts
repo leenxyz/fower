@@ -33,10 +33,12 @@ export class Sheet {
     if (isEmptyObj(props)) return
 
     const { atomModifiers, atomStyleCreations, styleCreations } = styli.plugins
+    const { styliIgnore = [] } = props
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
       if (styli.noMatchCache.get(propKey)) continue
+      if (styliIgnore.includes(propKey)) continue
 
       const proxyAtom = this.getAtomInstance(propKey, propValue)
 
