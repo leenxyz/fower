@@ -33,6 +33,7 @@ module.exports = {
       'design-system-spacing',
     ],
     属性: [
+      'styli-ignore',
       'width',
       'height',
       'shape',
