@@ -18,8 +18,9 @@ declare namespace NodeJS {
 /**
  * 添加额外声明, demo
  */
-import { Property } from '@styli/taro'
+
 declare module '@styli/taro' {
+  import { Property } from 'csstype'
   interface AtomicProps {
     /**
      * 添加额外声明 demo
