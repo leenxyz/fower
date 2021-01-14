@@ -44,6 +44,7 @@ Parallel=("
 
 Others=("
   preset-default
+  styli-transform
   theming
   styled
   react
