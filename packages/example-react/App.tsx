@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Color } from './components/Color'
 import { Padding } from './components/Padding'
 import { Margin } from './components/Margin'
@@ -20,7 +20,13 @@ styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
 }))
 
-const Test = (props) => {
+interface TestProps {
+  center?: string
+  className?: string
+  style?: any
+}
+
+const Test: FC<TestProps> = (props) => {
   const { center, style, className } = props
   return (
     <div style={style} className={className}>
@@ -34,8 +40,13 @@ const StyliTest = styled(Test)
 export const App = () => {
   return (
     <div className="box">
-      {/* <Test /> */}
+      {/* @ts-ignore */}
       <StyliTest styliIgnore={['center']} center="11111" />
+
+      <StyliTest styliIgnore={['center']} center="11111" />
+
+      <StyliTest center="11111" />
+
       <View center s-200>
         <View flex order teal>
           哈哈
