@@ -3,7 +3,7 @@
  */
 import { Property } from 'csstype'
 
-declare module '@styli/taro' {
+declare module '@styli/types' {
   interface AtomicProps {
     /**
      * 添加额外声明 demo
