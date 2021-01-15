@@ -37,7 +37,7 @@ export const App = () => {
       {/* <Test /> */}
       <StyliTest styliIgnore={['center']} center="11111" />
       <View center s-200>
-        <View flex order>
+        <View flex order teal>
           哈哈
         </View>
         <View space3>
