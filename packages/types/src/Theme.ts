@@ -1,7 +1,6 @@
 export interface Theme {
   breakpoints: string[] | number[]
   spacing: string[] | number[]
-  sizes: string[] | number[]
   fontSizes: string[] | number[]
   headings: string[] | number[]
   iconSizes: string[] | number[]

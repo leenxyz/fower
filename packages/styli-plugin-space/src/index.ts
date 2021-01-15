@@ -32,6 +32,24 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-space',
     isMatch: isSpaceKey,
+    beforeAtomStyleCreate(atom) {
+      const { propKey } = atom
+      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
+      if (!key || !value || !isSpaceKey(key)) return atom
+
+      const spacing = styli.getTheme<string[]>('spacing') || []
+
+      if (!spacing.length) {
+        console.error('theme spacing is not provide')
+      }
+
+      return {
+        ...atom,
+        propKey: key,
+        propValue: spacing[Number(value)],
+        className: propKey,
+      }
+    },
     onAtomStyleCreate(atom) {
       atom.type = 'prefix'
       atom.style = spacePropToStyle(atom.propKey, atom.propValue)

@@ -40,6 +40,11 @@ export const App = () => {
         <View flex order>
           哈哈
         </View>
+        <View space3>
+          <View>1</View>
+          <View>2</View>
+          <View>3</View>
+        </View>
       </View>
       <ThemeProvider theme={styli.getTheme()}>
         <BoxDemo></BoxDemo>
