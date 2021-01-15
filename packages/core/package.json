@@ -13,8 +13,7 @@
     "lint": "tsdx lint"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
