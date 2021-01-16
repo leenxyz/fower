@@ -19,7 +19,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -31,7 +31,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -43,7 +43,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -55,7 +55,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -67,7 +67,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -79,7 +79,7 @@ declare module '@styli/types' {
     /**
      * Set lineHeight
      *
-     * NOTE: Theme restrict. You must config lineHeight
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx

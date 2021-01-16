@@ -29,7 +29,7 @@
 /// <reference types="styli-plugin-pseudo" />
 /// <reference types="styli-plugin-media-queries" />
 /// <reference types="styli-plugin-space" />
-
+/// <reference types="@styli/types" />
 import { Preset, Theme } from '@styli/types'
 
 export declare const presetDefault: Preset

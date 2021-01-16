@@ -21,7 +21,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -33,7 +33,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -45,7 +45,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -57,7 +57,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -69,7 +69,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -81,7 +81,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -93,7 +93,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -105,7 +105,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -117,7 +117,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -129,7 +129,7 @@ declare module '@styli/types' {
     /**
      * Set shadow
      *
-     * NOTE: Theme restrict. You must config shadow
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx

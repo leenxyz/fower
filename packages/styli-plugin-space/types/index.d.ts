@@ -21,9 +21,7 @@ declare module '@styli/types' {
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
-     *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+     * NOTE: Theme restrict.
      *
      * space0 is `margin-right: 0px; margin-bottom: 0px`
      */
@@ -32,101 +30,104 @@ declare module '@styli/types' {
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space1 is `margin-right: 10px; margin-bottom:10px`
+     * space1 is `margin-right: 0px; margin-bottom:0px`
      */
     space1?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space2 is `margin-right: 20px; margin-bottom:20px`
+     * space2 is `margin-right: 4px; margin-bottom:4px`
      */
     space2?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space3 is `margin-right: 30px; margin-bottom:30px`
+     * space3 is `margin-right: 12px; margin-bottom:12px`
      */
     space3?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space4 is `margin-right: 40px; margin-bottom:40px`
+     * space4 is `margin-right: 16px; margin-bottom:16px`
      */
     space4?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space5 is `margin-right: 50px; margin-bottom:50px`
+     * space5 is `margin-right: 20px; margin-bottom:20px`
      */
     space5?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space6 is `margin-right: 60px; margin-bottom:60px`
+     * space6 is `margin-right: 24px; margin-bottom:24px`
      */
     space6?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space7 is `margin-right: 70px; margin-bottom:70px`
+     * space7 is `margin-right: 28px; margin-bottom:28px`
      */
     space7?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space8 is `margin-right: 80px; margin-bottom:80px`
+     * space8 is `margin-right: 32px; margin-bottom:32px`
      */
     space8?: boolean
 
     /**
      * Set children element space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * space9 is `margin-right: 90px; margin-bottom:90px`
+     * space9 is `margin-right: 36px; margin-bottom:36px`
      */
     space9?: boolean
+
+    space10?: boolean
+    space11?: boolean
+    space12?: boolean
+    space13?: boolean
+    space14?: boolean
+    space15?: boolean
+    space16?: boolean
+    space17?: boolean
+    space18?: boolean
+    space19?: boolean
+    space20?: boolean
 
     /**
      * Set children element horizontal orientation space.
@@ -144,9 +145,8 @@ declare module '@styli/types' {
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
-     *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+     * NOTE: Theme restrict.
+
      *
      * spaceX0 is `margin-right: 0px`
      */
@@ -155,101 +155,104 @@ declare module '@styli/types' {
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX1 is `margin-right: 10px`
+     * spaceX1 is `margin-right: 0px`
      */
     spaceX1?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX2 is `margin-right: 20px`
+     * spaceX2 is `margin-right: 4px`
      */
     spaceX2?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX3 is `margin-right: 30px`
+     * spaceX3 is `margin-right: 12px`
      */
     spaceX3?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX4 is `margin-right: 40px`
+     * spaceX4 is `margin-right: 16px`
      */
     spaceX4?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX5 is `margin-right: 50px`
+     * spaceX5 is `margin-right: 20px`
      */
     spaceX5?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX6 is `margin-right: 60px`
+     * spaceX6 is `margin-right: 24px`
      */
     spaceX6?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX7 is `margin-right: 70px`
+     * spaceX7 is `margin-right: 28px`
      */
     spaceX7?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX8 is `margin-right: 80px`
+     * spaceX8 is `margin-right: 32px`
      */
     spaceX8?: boolean
 
     /**
      * Set children element horizontal orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceX9 is `margin-right: 90px`
+     * spaceX9 is `margin-right: 36px`
      */
     spaceX9?: boolean
+
+    spaceX10?: boolean
+    spaceX11?: boolean
+    spaceX12?: boolean
+    spaceX13?: boolean
+    spaceX14?: boolean
+    spaceX15?: boolean
+    spaceX16?: boolean
+    spaceX17?: boolean
+    spaceX18?: boolean
+    spaceX19?: boolean
+    spaceX20?: boolean
 
     /**
      * Set children element vertical orientation space.
@@ -267,9 +270,8 @@ declare module '@styli/types' {
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
-     *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+     * NOTE: Theme restrict.
+
      *
      * spaceY0 is `margin-bottom: 0px`
      */
@@ -278,100 +280,103 @@ declare module '@styli/types' {
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY1 is `margin-bottom: 10px`
+     * spaceY1 is `margin-bottom: 0px`
      */
     spaceY1?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY2 is `margin-bottom: 20px`
+     * spaceY2 is `margin-bottom: 4px`
      */
     spaceY2?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY3 is `margin-bottom: 30px`
+     * spaceY3 is `margin-bottom: 12px`
      */
     spaceY3?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY4 is `margin-bottom: 40px`
+     * spaceY4 is `margin-bottom: 16px`
      */
     spaceY4?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY5 is `margin-bottom: 50px`
+     * spaceY5 is `margin-bottom: 20px`
      */
     spaceY5?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY6 is `margin-bottom: 60px`
+     * spaceY6 is `margin-bottom: 24px`
      */
     spaceY6?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY7 is `margin-bottom: 70px`
+     * spaceY7 is `margin-bottom: 28px`
      */
     spaceY7?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY8 is `margin-bottom: 80px`
+     * spaceY8 is `margin-bottom: 32px`
      */
     spaceY8?: boolean
 
     /**
      * Set children element vertical orientation space.
      *
-     * NOTE: Theme restrict. You must config spacing
+     * NOTE: Theme restrict.
+
      *
-     * if spacing is [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
-     *
-     * spaceY9 is `margin-bottom: 90px`
+     * spaceY9 is `margin-bottom: 36px`
      */
     spaceY9?: boolean
+
+    spaceY10?: boolean
+    spaceY11?: boolean
+    spaceY12?: boolean
+    spaceY13?: boolean
+    spaceY14?: boolean
+    spaceY15?: boolean
+    spaceY16?: boolean
+    spaceY17?: boolean
+    spaceY18?: boolean
+    spaceY19?: boolean
+    spaceY20?: boolean
   }
 }

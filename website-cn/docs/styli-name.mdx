@@ -1,0 +1,26 @@
+---
+id: styli-name
+title: styliName 名称
+---
+
+使用 Styli 可以极大的提高应用 UI 开发效率，它使得我们不用再绞尽脑汁的去想各种语义化类名。但这也带来了新的问题，代码可读性不高，往往我们修改代码时，很难快速定位到要修改的位置。
+
+**我们推崇小组件模式写法，即一个组件应只负责对应页面的一个小的 UI 模块。**这样的话，对于 UI 复用，代码可读性都有一定程度的提升。但因为开发人员水平参差不齐，写代码习惯各不相同。所以 Styli 也提供了 styliName 来承担以往 className 承载的语义化任务。
+
+示例
+
+```tsx live
+<View styliName="home-page">
+  <View styliName="module-1">module-1</View>
+  <View styliName="user-card" centerY p-20 w-300 bgWhite rounded-10>
+    <Image s-60 rounded-8 src="/img/jobs.jpg" />
+    <View ml-10>
+      <View f-22 fontBold>
+        Steve Jobs
+      </View>
+      <Text gray80>Co-founder of Apple Inc.</Text>
+    </View>
+  </View>
+  <View styliName="module-3">module-3</View>
+</View>
+```

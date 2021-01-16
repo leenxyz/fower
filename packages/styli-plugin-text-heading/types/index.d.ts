@@ -8,7 +8,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading1 is `display: block; font-weight: bold; font-size: {theme}px`
      *
@@ -22,7 +22,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading2 is `display: block; font-weight: bold; font-size: {theme}px`
      *
@@ -36,7 +36,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading3 is `display: block; font-weight: bold; font-size: {theme}px`
      *
@@ -50,7 +50,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading4 is `display: block; font-weight: bold; font-size: {theme}px`
      *
@@ -64,7 +64,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading5 is `display: block; font-weight: bold; font-size: {theme}px`
      *
@@ -78,7 +78,7 @@ declare module '@styli/types' {
     /**
      * Set heading
      *
-     * NOTE: Theme restrict. You must config heading
+     * NOTE: Theme restrict.
      *
      * heading6 is `display: block; font-weight: bold; font-size: {theme}px`
      *

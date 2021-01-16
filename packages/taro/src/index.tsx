@@ -15,7 +15,6 @@ styli.configure(() => ({
 export * from '@styli/theming'
 export * from '@styli/core'
 export * from '@styli/styled'
-export * from '@styli/types'
 
 export const View = styled(TaroComponent.View)
 export const MovableView = styled(TaroComponent.MovableView)

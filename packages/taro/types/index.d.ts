@@ -22,6 +22,7 @@
 /// <reference types="styli-plugin-z-index" />
 /// <reference types="styli-plugin-outline" />
 /// <reference types="styli-plugin-ellipsis" />
+/// <reference types="@styli/types" />
 /// <reference types="react" />
 
 import * as TaroComponent from '@tarojs/components'

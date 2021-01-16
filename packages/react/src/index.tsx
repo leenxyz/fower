@@ -14,7 +14,6 @@ export const Svg = styled('svg')
 export * from '@styli/theming'
 export * from '@styli/core'
 export * from '@styli/styled'
-export * from '@styli/types'
 export * from './Box'
 export { jsx } from './jsx'
 

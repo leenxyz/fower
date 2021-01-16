@@ -1,18 +1,32 @@
 export interface AtomicProps {
   /**
-   * if Atomic Css is conflict with others, you can use this ignore Styli Atomic Css, And it will be pass to inner component.
+   * if Atomic Prop is conflict with others, you can use this ignore Styli Atomic Prop, And it will be pass to inner component.
    *
    * ```tsx
-   * import { Button } from 'antd'
-   * import { styled} from '@styli/react'
+   * import React, { FC } from 'react'
+   * import { styled } from '@styli/react'
    *
-   * const StyledButton = styled(Button)
+   * interface TestProps {
+   *   center: string
+   * }
    *
-   * // block will be pass to antd component
-   * <StyledButton styliIgnore={['block']} block>
-   *  Confirm
-   * </StyledButton>
+   * const Test: FC<TestProp> = ({ center, className }) => {
+   *    return <View className={className}>{center}</View>
+   * }
+   *
+   * const StyledTest = styled(Test)
+   *
+   * // center prop will be handled by Styli. And convert it to className prop.
+   * <StyledTest center />
+   *
+   * // center prop will be handled by Test Component.
+   * <StyledTest center styliIgnore={['center']} />
    * ```
    */
   styliIgnore?: string[]
+
+  /**
+   * This Atomic Prop can improve code readability and semantically.
+   */
+  styliName?: string
 }

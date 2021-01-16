@@ -21,7 +21,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -32,7 +32,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -43,7 +43,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -54,7 +54,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -65,7 +65,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -76,7 +76,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -87,7 +87,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *
@@ -98,7 +98,7 @@ declare module '@styli/types' {
     /**
      * Set fontSize
      *
-     * NOTE: Theme restrict. You must config fontSizes
+     * NOTE: Theme restrict.
      *
      * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
      *

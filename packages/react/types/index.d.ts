@@ -54,7 +54,6 @@ export declare const Svg: import('@styli/styled/dist/types').StyledComponent<
 export * from '@styli/theming'
 export * from '@styli/core'
 export * from '@styli/styled'
-export * from '@styli/types'
 
 export interface BoxComponent<T extends As, P = any> {
   <AsType extends As>(

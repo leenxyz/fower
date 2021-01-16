@@ -38,7 +38,7 @@ export const corePlugin: StyliPlugin = {
       atom.propValue = propValue(theme, sheet.props)
     }
 
-    if (propKey === 'styliIgnore') {
+    if (invalidList.includes(propKey)) {
       atom.type = 'invalid'
       return atom
     }
@@ -46,3 +46,5 @@ export const corePlugin: StyliPlugin = {
     return plugin.onAtomStyleCreate!(atom, sheet)
   },
 }
+
+const invalidList = ['styliIgnore', 'styliName']

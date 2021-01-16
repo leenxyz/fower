@@ -3,7 +3,11 @@ import { StyliPlugin, Property, Theme } from '@styli/types'
 declare const _default: () => StyliPlugin
 export default _default
 
-type Color = Property.Color | Property.Color[] | ((theme: Theme) => Property.Color | Property.Color[]) | boolean
+type Color =
+  | Property.Color
+  | Property.Color[]
+  | ((theme: Theme) => Property.Color | Property.Color[])
+  | boolean
 
 declare module '@styli/types' {
   export interface AtomicProps {

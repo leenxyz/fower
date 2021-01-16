@@ -18,7 +18,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -30,7 +30,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -42,7 +42,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -54,7 +54,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -66,7 +66,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -78,7 +78,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -90,7 +90,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
@@ -102,7 +102,7 @@ declare module '@styli/types' {
     /**
      * Set fontWeight
      *
-     * NOTE: Theme restrict. You must config fontWeights
+     * NOTE: Theme restrict.
      *
      * @example
      * ```tsx
