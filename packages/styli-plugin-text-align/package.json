@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-text-align",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-text-align.esm.js",
   "dependencies": {
-    "@styli/types": "^0.18.0",
-    "@styli/utils": "^0.18.0"
+    "@styli/types": "^0.19.0",
+    "@styli/utils": "^0.19.0"
   }
 }
