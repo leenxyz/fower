@@ -2,11 +2,11 @@ import { noCase } from 'no-case'
 import { StyliPlugin, PluginCategory } from '@styli/types'
 
 export function upFirst(s: string = '') {
-  return s.charAt(0).toUpperCase() + s.slice(1)
+  return s.replace(/^[a-z]/, (g) => g.toUpperCase())
 }
 
 export function downFirst(s: string = '') {
-  return s.charAt(0).toLowerCase() + s.slice(1)
+  return s.replace(/^[A-Z]/, (g) => g.toLowerCase())
 }
 
 export function kebab(s: string) {
