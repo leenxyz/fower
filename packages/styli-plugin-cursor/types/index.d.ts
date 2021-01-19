@@ -1,4 +1,5 @@
-import { StyliPlugin, Property } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
@@ -13,7 +14,7 @@ declare module '@styli/types' {
      * <View cursor="pointer"></View>
      * ```
      */
-    cursor?: Property.Cursor | Property.Cursor[] | boolean
+    cursor?: CSS.Property.Cursor | CSS.Property.Cursor[] | boolean
 
     /**
      * Set cursor to alias

@@ -1,4 +1,5 @@
-import { StyliPlugin, Property } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
@@ -54,7 +55,7 @@ declare module '@styli/types' {
      * <View direction="column-reverse"></View>
      * ```
      */
-    direction?: Property.FlexDirection | Property.FlexDirection[]
+    direction?: CSS.Property.FlexDirection | CSS.Property.FlexDirection[]
 
     /**
      * Flex items nowrap

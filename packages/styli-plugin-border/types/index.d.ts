@@ -1,4 +1,5 @@
-import { StyliPlugin, Property, StyliColor } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
@@ -164,7 +165,7 @@ declare module '@styli/types' {
      * <View border="10"></View>
      * ```
      */
-    border?: Property.Border | boolean
+    border?: CSS.Property.Border | boolean
 
     /**
      * Set borderTop
@@ -222,7 +223,7 @@ declare module '@styli/types' {
      * <View borderStyle="none"></View>
      * ```
      */
-    borderStyle?: Property.BorderStyle | boolean
+    borderStyle?: CSS.Property.BorderStyle | boolean
 
     /**
      * Set borderStyle to solid
@@ -295,7 +296,7 @@ declare module '@styli/types' {
      * <View borderWidth={10}></View>
      * ```
      */
-    borderWidth?: Property.BorderWidth | number | boolean
+    borderWidth?: CSS.Property.BorderWidth | number | boolean
 
     /**
      * Set borderColor
@@ -317,7 +318,7 @@ declare module '@styli/types' {
      * <View borderTopWidth="1px"></View>
      * ```
      */
-    borderTopWidth?: Property.BorderTopWidth | number | boolean
+    borderTopWidth?: CSS.Property.BorderTopWidth | number | boolean
 
     /**
      * Set borderTopColor
@@ -337,7 +338,7 @@ declare module '@styli/types' {
      * <View borderTopStyle="solid"></View>
      * ```
      */
-    borderTopStyle?: Property.BorderTopStyle | boolean
+    borderTopStyle?: CSS.Property.BorderTopStyle | boolean
 
     /**
      * Set borderLeftWidth
@@ -349,7 +350,7 @@ declare module '@styli/types' {
      * <View borderLeftWidth="1px"></View>
      * ```
      */
-    borderLeftWidth?: Property.BorderLeftWidth | number | boolean
+    borderLeftWidth?: CSS.Property.BorderLeftWidth | number | boolean
 
     /**
      * Set borderLeftColor
@@ -369,7 +370,7 @@ declare module '@styli/types' {
      * <View borderLeftStyle="solid"></View>
      * ```
      */
-    borderLeftStyle?: Property.BorderLeftStyle | boolean
+    borderLeftStyle?: CSS.Property.BorderLeftStyle | boolean
 
     /**
      * Set borderBottomWidth
@@ -381,7 +382,7 @@ declare module '@styli/types' {
      * <View borderBottomWidth="1px"></View>
      * ```
      */
-    borderBottomWidth?: Property.BorderBottomWidth | number | boolean
+    borderBottomWidth?: CSS.Property.BorderBottomWidth | number | boolean
 
     /**
      * Set borderBottomColor
@@ -401,7 +402,7 @@ declare module '@styli/types' {
      * <View borderBottomStyle="solid"></View>
      * ```
      */
-    borderBottomStyle?: Property.BorderBottomStyle | boolean
+    borderBottomStyle?: CSS.Property.BorderBottomStyle | boolean
 
     /**
      * Set borderRightWidth
@@ -413,7 +414,7 @@ declare module '@styli/types' {
      * <View borderRightWidth="1px"></View>
      * ```
      */
-    borderRightWidth?: Property.BorderRightWidth | number | boolean
+    borderRightWidth?: CSS.Property.BorderRightWidth | number | boolean
 
     /**
      * Set borderRightColor
@@ -433,7 +434,7 @@ declare module '@styli/types' {
      * <View borderRightStyle="solid"></View>
      * ```
      */
-    borderRightStyle?: Property.BorderRightStyle | boolean
+    borderRightStyle?: CSS.Property.BorderRightStyle | boolean
 
     borderBlack?: boolean
 

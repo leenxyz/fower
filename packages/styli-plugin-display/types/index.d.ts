@@ -1,9 +1,10 @@
-import { StyliPlugin, Property, Theme } from '@styli/types'
+import { StyliPlugin, Theme } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
 
-type DisplayFn = (theme: Theme) => Property.Display | Property.Display[]
+type DisplayFn = (theme: Theme) => CSS.Property.Display | CSS.Property.Display[]
 
 declare module '@styli/types' {
   export interface AtomicProps {
@@ -17,7 +18,7 @@ declare module '@styli/types' {
      * <View display="inline-block"></View>
      * ```
      */
-    display?: Property.Display | Property.Display[] | DisplayFn
+    display?: CSS.Property.Display | CSS.Property.Display[] | DisplayFn
 
     /**
      * Set display to inline

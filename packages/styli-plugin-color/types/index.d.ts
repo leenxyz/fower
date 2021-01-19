@@ -1,12 +1,13 @@
-import { StyliPlugin, Property, Theme } from '@styli/types'
+import * as CSS from 'csstype'
+import { StyliPlugin, Theme } from '@styli/types'
 
 declare const _default: () => StyliPlugin
 export default _default
 
 type Color =
-  | Property.Color
-  | Property.Color[]
-  | ((theme: Theme) => Property.Color | Property.Color[])
+  | CSS.Property.Color
+  | CSS.Property.Color[]
+  | ((theme: Theme) => CSS.Property.Color | CSS.Property.Color[])
   | boolean
 
 declare module '@styli/types' {

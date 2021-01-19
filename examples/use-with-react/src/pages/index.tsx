@@ -15,6 +15,7 @@ import { Cursor } from '@/components/Cursor';
 import { Space } from '@/components/Space';
 import { Shadow } from '@/components/Shadow';
 import { BoxDemo } from '@/components/Box';
+import { AtomicProps } from '@styli/types';
 
 export default () => {
   return (
