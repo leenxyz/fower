@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-cursor",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-cursor.esm.js",
   "dependencies": {
-    "@styli/types": "^0.19.0",
-    "@styli/utils": "^0.19.0"
+    "@styli/types": "^0.20.0",
+    "@styli/utils": "^0.20.0"
   }
 }

@@ -2,7 +2,7 @@
   "name": "vscode-styli",
   "displayName": "Styli IntelliSense",
   "description": "",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "engines": {
     "vscode": "^1.51.0"
   },
