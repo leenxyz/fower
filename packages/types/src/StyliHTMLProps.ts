@@ -7,4 +7,4 @@ export type ComponentProps<T extends As> = React.ComponentProps<T> & {
   as?: As
 }
 
-export declare type StyliHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
+export type StyliHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
