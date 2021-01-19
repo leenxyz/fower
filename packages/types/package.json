@@ -1,26 +1,15 @@
 {
-  "name": "@styli/types",
-  "version": "0.19.0",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "start": "tsdx watch --verbose",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "test:watch": "tsdx test --watch",
-    "test:cov": "tsdx test --coverage",
-    "lint": "tsdx lint"
-  },
-  "author": "forsigner",
-  "module": "dist/types.esm.js",
-  "dependencies": {
-    "csstype": "^3.0.6"
-  }
+    "name": "@styli/types",
+    "version": "0.19.0",
+    "license": "MIT",
+    "main": "",
+    "types": "index.d.ts",
+    "scripts": {
+        "build": "echo 'build'",
+        "test": "echo 'build:test'",
+        "lint": "tsdx lint"
+    },
+    "dependencies": {
+        "csstype": "^3.0.6"
+    }
 }
