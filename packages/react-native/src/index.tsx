@@ -1,5 +1,16 @@
-import { styled } from '@styli/styled'
 import RN from 'react-native'
+import { styli } from '@styli/core'
+import { styled } from '@styli/styled'
+import { Theme } from '@styli/types'
+import { theme } from './theme'
+import { plugins } from './plugin'
+
+styli.configure(() => ({
+  unit: 'none',
+  inline: true,
+  theme: theme as Theme,
+  plugins,
+}))
 
 export const ActivityIndicator = styled(RN.ActivityIndicator)
 export const Button = styled(RN.Button)
@@ -9,7 +20,6 @@ export const ImageBackground = styled(RN.ImageBackground)
 export const KeyboardAvoidingView = styled(RN.KeyboardAvoidingView)
 export const Modal = styled(RN.Modal)
 export const NavigatorIOS = styled(RN.NavigatorIOS)
-export const ProgressBarAndroid = styled(RN.ProgressBarAndroid)
 export const ScrollView = styled(RN.ScrollView)
 export const SnapshotViewIOS = styled(RN.SnapshotViewIOS)
 export const Switch = styled(RN.Switch)
@@ -17,8 +27,6 @@ export const RecyclerViewBackedScrollView = styled(RN.RecyclerViewBackedScrollVi
 export const RefreshControl = styled(RN.RefreshControl)
 export const SafeAreaView = styled(RN.SafeAreaView)
 export const StatusBar = styled(RN.StatusBar)
-export const SwitchIOS = styled(RN.SwitchIOS)
-export const TabBarIOS = styled(RN.TabBarIOS)
 export const Text = styled(RN.Text)
 export const TextInput = styled(RN.TextInput)
 export const TouchableHighlight = styled(RN.TouchableHighlight)

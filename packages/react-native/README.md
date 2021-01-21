@@ -1,1 +1,1 @@
-# @styli/taro
+# @styli/react-native
