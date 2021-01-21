@@ -29,7 +29,6 @@ import * as TaroComponent from '@tarojs/components'
 export * from '@styli/theming'
 export * from '@styli/core'
 export * from '@styli/styled'
-export * from '@styli/types'
 
 export declare const View: import('@styli/styled/dist/types').StyledComponent<
   | (import('@tarojs/components/types/View').ViewProps &

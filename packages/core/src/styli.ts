@@ -3,7 +3,7 @@ import { StyliPlugin, Configuration, Preset, Theme, PluginCategory, Atom } from 
 import { defaultConfig } from './config'
 
 class Styli {
-  private config: Configuration = defaultConfig
+  private config: Preset = defaultConfig
 
   // cache control
   classNameCache = new Map<string, boolean>()
@@ -21,7 +21,7 @@ class Styli {
   }
 
   // user config
-  configure = (config: Configuration | ((config: Configuration) => Preset)) => {
+  configure = (config: Preset | ((config: Preset) => Preset)) => {
     if (typeof config === 'function') {
       // merge config
       Object.assign(this.config, config(this.config))

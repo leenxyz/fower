@@ -21,7 +21,9 @@
   },
   "dependencies": {
     "@styli/core": "^0.20.0",
-    "@styli/preset-default": "^0.20.0"
+    "@styli/preset-default": "^0.20.0",
+    "@styli/styled": "^0.20.0",
+    "@styli/types": "^0.20.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",

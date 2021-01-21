@@ -40,4 +40,7 @@ if ('false' === process.env.ES_BUILD) {
   }
 }
 // Default export is library as a whole, registered via Vue.use()
-export default plugin
+export const vStyliPlugin = plugin
+export * from '@styli/core'
+export * from '@styli/utils'
+export * from '@styli/styled'
