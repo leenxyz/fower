@@ -3,10 +3,10 @@ id: use-with-taro
 title: 在 Taro 中使用
 ---
 
-[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) 是一个 React-like 的框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
+[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) 是一个小程序框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
 
-:::info
-styli 是运行时框架，在 Taro 中只能将 Atomic Props 转换为内联 CSS
+:::note
+小程序不能动态添加 className, 因而 styli 只能将 Atomic Props 转换为内联 CSS
 :::
 
 ## 安装
@@ -37,17 +37,6 @@ import { View, Image, Text } from '@styli/taro'
 </View>
 ```
 
-## 配置
+## 实例源码
 
-您可以查看 [配置](config)，[插件](plugin)和[主题](theme) 章节进行查阅
-
-### 自定义组件
-
-**@styli/taro** 中包装的 **taro component** 可能较旧，这时，您可以使用 [styled](styled) API 对 taro component 进行封装
-
-```tsx
-import { styled } from '@styli/taro'
-import TaroComponent from 'tarojs/components'
-
-export const View = styled(TaroComponent.View)
-```
+你可以查看 Taro 中使用的源码：[examples-taro](https://github.com/forsigner/styli/tree/master/packages/example-taro)

@@ -77,12 +77,14 @@ title: 属性设计规范
 
 Styli 中集成整合了包含多个属性的复合属性。
 
-| 属性                                         | 实例                     | 表示                              |
-| -------------------------------------------- | ------------------------ | --------------------------------- |
-| [s](shape)                                   | `<View s-100 />`         | 矩形                              |
-| [center{X\|Y}](layout-engine)                | `<View center />`        | flex:子元素在父元素中垂直水平居中 |
-| [{left\|right\|bottom\|left}](layout-engine) | `<View bottom />`        | flex:子元素在父元素中位置         |
-| [space{X\|Y}](space)                         | `<View space-100 />`     | 子元素间隔                        |
-| [ellipsis](ellipsis)                         | `<View ellipsis2-100 />` | 文本溢出省略                      |
-| [debug{All\|Children}](debug)                | `<View debug />`         | 自动为元素添加边框                |
-| [reset](reset)                               | `<View reset />`         | 重置浏览器默认样式                |
+| 属性                                         | 实例                                         | 表示                              |
+| -------------------------------------------- | -------------------------------------------- | --------------------------------- |
+| [s](shape)                                   | `<View s-100 />`                             | 矩形                              |
+| [center{X\|Y}](layout-engine)                | `<View center />`                            | flex:子元素在父元素中垂直水平居中 |
+| [{left\|right\|bottom\|left}](layout-engine) | `<View bottom />`                            | flex:子元素在父元素中位置         |
+| [space{X\|Y}](space)                         | `<View space-100 />`                         | 子元素间隔                        |
+| [ellipsis](ellipsis)                         | `<View ellipsis2-100 />`                     | 文本溢出省略                      |
+| [debug{All\|Children}](debug)                | `<View debug />`                             | 自动为元素添加边框                |
+| [reset](reset)                               | `<View reset />`                             | 重置浏览器默认样式                |
+| [styliIgnore](styli-ignore)                  | `<Button styliIgnore={['center']} center />` | 让 styli 忽略对属性的处理         |
+| [styliName](styli-name)                      | `<View styliName="user-card" />`             | 组件语义化                        |

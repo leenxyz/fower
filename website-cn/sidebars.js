@@ -4,9 +4,9 @@ module.exports = {
     起步: [
       // 'installation',
       'use-with-react',
-      // 'use-with-vue',
-      // 'use-with-rn',
       'use-with-taro',
+      'use-with-rn',
+      'use-with-vue',
       'use-with-vanilla',
     ],
     指南: [
@@ -21,7 +21,7 @@ module.exports = {
       'theme',
       'plugin',
       // 'color-palette',
-      'typescript',
+      // 'typescript',
       'attr-design-rule',
       'attr-table',
       'third',

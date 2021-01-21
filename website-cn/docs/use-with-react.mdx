@@ -3,7 +3,7 @@ id: use-with-react
 title: 在 React 中使用
 ---
 
-Styli 非常适合在 React 中使用，接下来我们看看如何在 React 中优雅的使用 Styli。
+[React](https://zh-hans.reactjs.org/) 是一个用于构建用户界面的 JavaScript 库。
 
 ## 安装
 
@@ -13,66 +13,33 @@ npm i @styli/react -S
 
 ## 使用
 
-使用内置的组件库，可以真正的做到开箱即用，无需任何配置。
+我们提供了两种使用方式: 1、使用组件库组件。2、使用 HTML 标签
 
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@styli/react'
+### 使用组件库组件
 
-export default () => {
-  return (
-    <View centerY p-10 w-260 bgWhite rounded-10 shadowMD>
-      <Image circle-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
-          Steve Jobs
-        </View>
-        <Text gray80>Co-founder of Apple Inc.</Text>
-      </View>
+使用组件库组件可以做到真正的**开箱即用**，无需任何配置
+
+```tsx
+import { View, Image, Text } from '@styli/taro'
+```
+
+使用组件，实现一个用户信息卡片界面。
+
+```jsx live
+<View centerY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image circle-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View f-20 fontBold>
+      Steve Jobs
     </View>
-  )
-}
+    <Text gray80>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
 ```
 
-此外，我们还提供了[高级配置](config)，[自定义组件](styled)，[主题](theme)等能力来满足您的需求
+注意: 当组件库组件不满足您的需求时，您可以使用 [styled](styled) API 创建您的自定义可复用组件。
 
-```jsx
-import React from 'react'
-import { View, Text, styled, ThemeProvider, styli } from '@styli/react'
-
-// 高级配置
-styli.configure(() => {
-  dev: process.env.NODE_ENV === 'development'
-})
-
-// 主题
-const theme = {
-  colors: {
-    primary: 'deeppink',
-  },
-}
-
-// 自定义组件
-const Image = styled('image')
-
-export default () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <View centerY p-10 w-260 bgWhite rounded-10 shadowMD color="primary">
-        <Image circle-48 src="/img/jobs.jpg" />
-        <View ml-10>
-          <View f-20 fontBold>
-            Steve Jobs
-          </View>
-          <Text gray80>Co-founder of Apple Inc.</Text>
-        </View>
-      </View>
-    </ThemeProvider>
-  )
-}
-```
-
-## 使用 HTML 元素
+### 使用 HTML 元素
 
 Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。也就是到说，你直接可以在 html 标签中添加原子属性，代码类似下面：
 
@@ -87,7 +54,7 @@ Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。�
 - Babel Preset
 - JSX Pragma
 
-### Babel Preset
+#### Babel Preset
 
 第一种方式是通过配置 babel，为项目添加 babel preset: `@styli/babel-preset-styli`。
 
@@ -122,7 +89,7 @@ declare module 'react' {
 
 ```
 
-### JSX Pragma
+#### JSX Pragma
 
 此外，你还可以通过 `JSX Pragma` 的方式：
 
@@ -146,6 +113,6 @@ export default () => {
 import { jsx } from '@styli/react'
 ```
 
-## 例子源码
+## 实例源码
 
-你可以查看 React 中使用的源码：[examples/use-with-react](https://github.com/forsigner/styli/tree/master/examples/use-with-react)
+你可以查看 React 中使用的源码：[examples-react](https://github.com/forsigner/styli/tree/master/packages/example-react)

@@ -3,11 +3,22 @@ id: config
 title: 配置
 ---
 
-为了减少使用成本，我们在对应的框架包(如: styli/react)预先进行了配置。您可以使用下面的 API 查看和修改配置。
+为了降低使用成本，我们在对应的框架包(如: @styli/react)预先进行了配置。
+
+## 配置项
+
+| 配置项  | 类型          | 默认值 | 意义                                                        |
+| ------- | ------------- | ------ | ----------------------------------------------------------- |
+| unit    | string        | px     | 单位自动补全。如 Styli 会像 'm-10' 解析为 'margin: 10px'    |
+| inline  | boolean       | false  | 使用内联 style 还是外部 css                                 |
+| dev     | boolean       | false  | 是否处于开发模式。生产模式下，类似 **debug** 的属性将不生效 |
+| prefix  | string        | -      | 外部 css 模式下，生成的 className 前缀                      |
+| theme   | Theme         | {}     | 设计系统主题配置                                            |
+| plugins | [StyliPlugin\[\]](https://github.com/forsigner/styli/blob/master/packages/types/src/StyliPlugin.ts) | []     | [styli 插件列表](plugin)                                    |
 
 ## 查看
 
-**styli.getConfig** API 可以查看单个或所有配置项
+使用 **styli.getConfig** API 可以查看单个或所有配置项
 
 ```ts
 // 获取插件列表
@@ -55,14 +66,3 @@ styli.configure((prevConfig) => {
   }
 })
 ```
-
-## 配置表
-
-| 配置项  | 类型          | 默认值 | 意义                                                        |
-| ------- | ------------- | ------ | ----------------------------------------------------------- |
-| unit    | string        | px     | 单位自动补全。如 Styli 会像 'm-10' 解析为 'margin: 10px'    |
-| inline  | boolean       | false  | 使用内联 style 还是外部 css                                 |
-| dev     | boolean       | false  | 是否处于开发模式。生产模式下，类似 **debug** 的属性将不生效 |
-| prefix  | string        | -      | 外部 css 模式下，生成的 className 前缀                      |
-| theme   | Theme         | {}     | 设计系统主题配置                                            |
-| plugins | StyliPlugin[] | []     | [styli 插件列表](plugin)                                    |

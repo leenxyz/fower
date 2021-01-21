@@ -3,23 +3,27 @@ id: use-with-vue
 title: 在 Vue 中使用
 ---
 
+[Vue](https://cn.vuejs.org/) 是一个渐进式 JavaScript 框架。
+
+:::note
+待验证、不能用于生产环境
+:::
+
 ## 安装
 
 ```bash
-npm i @styli/core @styli/vue
+npm i @styli/vue -S
 ```
 
-注意，除了需要 `@styli/core`，你还需安装和 Vue 对应的组件包 `@styli/vue`。
-
-## 基本使用
+## 使用
 
 首先，你需要注册 Styli 的 Vue 插件:
 
 ```jsx
 import Vue from 'vue'
-import styliVue from '@styli/vue'
+import { vStyliPlugin } from '@styli/vue'
 
-Vue.use(styliVue)
+Vue.use(vStyliPlugin)
 ```
 
 然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
