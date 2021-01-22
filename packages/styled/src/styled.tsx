@@ -30,7 +30,10 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: Args
 ): StyledComponent<
   JSX.LibraryManagedAttributes<C, ComponentProps<C>> & AtomicProps & InjectedProps
-> {
+> | null {
+
+  if(!component) return null
+
   const StyledComponent = forwardRef((props: any = {}, ref) => {
     return (
       <Consumer>

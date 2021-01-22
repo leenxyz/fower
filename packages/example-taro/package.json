@@ -58,6 +58,7 @@
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^1.6.1",
     "stylelint": "9.3.0",
-    "typescript": "^3.7.0"
+    "typescript": "^3.7.0",
+    "styli-loader": "^0.20.0"
   }
 }

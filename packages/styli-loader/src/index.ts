@@ -1,15 +1,22 @@
 import { styli } from '@styli/core'
-import presetDefault from '@styli/preset-default'
 import { transform } from 'styli-transform'
 import { getOptions } from 'loader-utils'
+import { Preset } from '@styli/types'
+
+export interface LoaderOption {
+  styliConfig: Preset
+  output: string
+}
 
 let cssStr = ''
 export default function (source: string, map: any, meta: any) {
   // @ts-ignore
   const webpackEnv = this
 
-  const options = getOptions(webpackEnv)
-  styli.configure(() => Object.assign({}, presetDefault, options))
+  const options: unknown = getOptions(webpackEnv)
+  const { styliConfig = {}, output = 'styli.css' } = (options || {}) as LoaderOption
+
+  styli.configure(() => styliConfig)
 
   // 申明异步 loader
   const callback = webpackEnv.async()
@@ -21,7 +28,7 @@ export default function (source: string, map: any, meta: any) {
     cssStr += css
 
     // 生成 styli.css 加入 webpack 构建
-    webpackEnv._compilation.assets['styli.css'] = {
+    webpackEnv._compilation.assets[output] = {
       source: () => cssStr,
       size: () => cssStr.length,
     }

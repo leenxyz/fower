@@ -36,6 +36,29 @@ const config = {
         },
       },
     },
+    webpackChain(chain) {
+      chain.merge({
+        module: {
+          rule: {
+            styliLoader: {
+              test: /\.tsx$/,
+              use: [
+                {
+                  loader: 'styli-loader',
+                  options: {
+                    styliConfig: {
+                      ...require('@styli/taro').styli.getConfig(),
+                      inline: false,
+                    },
+                    output: 'styli.wxss'
+                  },
+                },
+              ],
+            },
+          },
+        },
+      })
+    },
   },
   h5: {
     publicPath: '/',

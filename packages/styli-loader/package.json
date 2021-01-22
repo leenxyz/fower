@@ -19,7 +19,6 @@
   "module": "dist/styli-loader.esm.js",
   "devDependencies": {
     "@styli/core": "^0.20.0",
-    "@styli/preset-default": "^0.20.0",
     "@types/loader-utils": "^2.0.1",
     "loader-utils": "^2.0.0",
     "styli-transform": "^0.20.0"

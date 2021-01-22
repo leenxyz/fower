@@ -5,7 +5,7 @@ import { Args } from './types'
 // handle inline style
 export function getInLineParsedProps(props: any, value: any, args: Args) {
   const sheet = new Sheet(props, value)
-  const parsedProps: any = sheet.getParsedProps()
+  const parsedProps = sheet.getParsedProps()
 
   if (Array.isArray(props.style)) {
     parsedProps.style = [createStyle(...args), sheet.toStyles(), props.style]
@@ -23,7 +23,7 @@ export function getInLineParsedProps(props: any, value: any, args: Args) {
 // handle css style
 export function getCssParsedProps(props: any, value: any, args: Args) {
   const sheet = new Sheet(props, value)
-  const parsedProps: any = sheet.getParsedProps()
+  const parsedProps = sheet.getParsedProps()
 
   const { className = '' } = props || {}
 
