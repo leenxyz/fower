@@ -55,7 +55,7 @@ class Styli {
       }
 
       if (this.config.unit !== 'none') {
-        return this.config.transformUnit(numValue)
+        return this.config?.transformUnit?.(numValue)
       }
     }
 
@@ -64,7 +64,7 @@ class Styli {
 
   getTheme = <T = any>(themeKey?: keyof Theme): T => {
     if (!themeKey) return this.config.theme as any
-    return this.config.theme[themeKey]
+    return this.config?.theme?.[themeKey]
   }
 
   isStyliColor = (value: string = '') => {
@@ -91,13 +91,16 @@ class Styli {
 
   use = (...plugins: StyliPlugin[]) => {
     plugins.forEach((plugin) => {
-      const idx = this.config.plugins.findIndex(
+      const idx = this.config?.plugins?.findIndex(
         (configPlugin: StyliPlugin) => configPlugin.name === plugin.name,
       )
-      const pluginIdx = idx === -1 ? this.config.plugins.length : idx
-      this.config.plugins[pluginIdx] = plugin
+      const pluginIdx = (idx === -1 ? this.config?.plugins?.length : idx) as number
+
+      if (this.config?.plugins) {
+        this.config.plugins[pluginIdx] = plugin
+      }
     })
-    this.plugins = classifyPlugins(this.config.plugins)
+    this.plugins = classifyPlugins(this.config?.plugins || [])
     return this
   }
 }
