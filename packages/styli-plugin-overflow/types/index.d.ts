@@ -1,7 +1,10 @@
-import { StyliPlugin } from '@styli/types'
+import { StyliPlugin, Theme } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
+
+type Overflow = CSS.Property.Overflow | CSS.Property.Overflow[] | boolean
 
 declare module '@styli/types' {
   export interface AtomicProps {
@@ -13,7 +16,7 @@ declare module '@styli/types' {
      * <View overflow="hidden"></View>
      * ```
      */
-    overflow?: PropValue
+    overflow?: Overflow
 
     /**
      * Set overflowX
@@ -23,7 +26,7 @@ declare module '@styli/types' {
      * <View overflowX="hidden"></View>
      * ```
      */
-    overflowX?: PropValue
+    overflowX?: Overflow
 
     /**
      * Set overflowY
@@ -33,7 +36,7 @@ declare module '@styli/types' {
      * <View overflowY="hidden"></View>
      * ```
      */
-    overflowY?: PropValue
+    overflowY?: Overflow
 
     /**
      * Set overflow to visible
