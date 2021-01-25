@@ -144,7 +144,11 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View color="#FFF"></View>
+     * <Box color="#FFF"></Box>
+     * <Box color="red50-T20"></Box> // transparentize color 变更透明
+     * <Box color="red50-D20"></Box> // opacify color 变不透明
+     * <Box color="red50-L20"></Box> // lighten color 变亮
+     * <Box color="red50-D20"></Box> // darken color 变暗
      * ```
      */
     color?: Color
@@ -154,7 +158,11 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View c="#FFF"></View>
+     * <Box c="#FFF"></Box>
+     * <Box c="red50-T20"></Box> // transparentize color 变更透明
+     * <Box c="red50-D20"></Box> // opacify color 变不透明
+     * <Box c="red50-L20"></Box> // lighten color 变亮
+     * <Box c="red50-D20"></Box> // darken color 变暗
      * ```
      */
     c?: Color
