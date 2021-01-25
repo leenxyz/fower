@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-background",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-background.esm.js",
   "dependencies": {
-    "@styli/core": "^0.20.0",
-    "@styli/types": "^0.20.0",
-    "@styli/utils": "^0.20.0"
+    "@styli/core": "^0.21.0",
+    "@styli/types": "^0.21.0",
+    "@styli/utils": "^0.21.0"
   }
 }

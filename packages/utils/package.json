@@ -1,6 +1,6 @@
 {
   "name": "@styli/utils",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/utils.esm.js",
   "devDependencies": {
-    "@styli/types": "^0.20.0",
+    "@styli/types": "^0.21.0",
     "@types/lodash.throttle": "^4.1.3",
     "@types/string-hash": "^1.1.1"
   },
