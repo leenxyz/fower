@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Border = () => {
   return (
     <View>
-      <Heading>Border</Heading>
+      <Box>Border</Box>
       <View f-12 wrap space-10>
         <View s-100 border>
           border

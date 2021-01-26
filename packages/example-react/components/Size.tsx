@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading, Image } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Size = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Size
-      </Heading>
+      </Box>
       <View evenly wrap f-12>
         <View w9 h5 bgBlue20>
           w9 h5
@@ -14,10 +14,11 @@ export const Size = () => {
         <View w-100 h-50 bgBlue20>
           w-100 h-50
         </View>
-        <Image
+        <Box
+          as="img"
           src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg"
           s-100
-        ></Image>
+        ></Box>
         <View s-50 bgBlue20>
           s-50
         </View>

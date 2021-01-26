@@ -15,41 +15,6 @@ export declare const Text: import('@styli/styled/dist/types').StyledComponent<
     import('@styli/types').AtomicProps &
     import('@styli/styled/dist/types').InjectedProps
 >
-export declare const Button: import('@styli/styled/dist/types').StyledComponent<
-  import('react').ClassAttributes<HTMLButtonElement> &
-    import('react').ButtonHTMLAttributes<HTMLButtonElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
-export declare const Image: import('@styli/styled/dist/types').StyledComponent<
-  import('react').ClassAttributes<HTMLImageElement> &
-    import('react').ImgHTMLAttributes<HTMLImageElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
-export declare const Anchor: import('@styli/styled/dist/types').StyledComponent<
-  import('react').ClassAttributes<HTMLAnchorElement> &
-    import('react').AnchorHTMLAttributes<HTMLAnchorElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
-export declare const Heading: import('@styli/styled/dist/types').StyledComponent<
-  import('react').ClassAttributes<HTMLHeadingElement> &
-    import('react').HTMLAttributes<HTMLHeadingElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
-export declare const Input: import('@styli/styled/dist/types').StyledComponent<
-  import('react').ClassAttributes<HTMLInputElement> &
-    import('react').InputHTMLAttributes<HTMLInputElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
-export declare const Svg: import('@styli/styled/dist/types').StyledComponent<
-  import('react').SVGProps<SVGSVGElement> &
-    import('@styli/types').AtomicProps &
-    import('@styli/styled/dist/types').InjectedProps
->
 
 export * from '@styli/theming'
 export * from '@styli/core'

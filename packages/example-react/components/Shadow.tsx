@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Shadow = () => {
   return (
     <View f-16 gray60>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Shadow
-      </Heading>
+      </Box>
 
       <View py-50 row evenly>
         <View bgWhite s-128 rounded-4 center shadowXS>

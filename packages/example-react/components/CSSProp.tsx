@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Heading, Text } from '@styli/react'
+import { View, Box, Text } from '@styli/react'
 
 export const CSSProp = () => {
   return (
     <View>
-      <Heading>CSS Prop</Heading>
+      <Box>CSS Prop</Box>
 
       <Text
         f-40

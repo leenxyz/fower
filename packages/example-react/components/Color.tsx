@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Color = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Color
-      </Heading>
+      </Box>
 
       <View f-20 red50>
         Red50

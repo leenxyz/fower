@@ -44,9 +44,9 @@ export const App = () => {
       {/* @ts-ignore */}
       <StyliTest styliIgnore={['center']} center="11111" />
 
-      <StyliTest styliIgnore={['center']} center="11111" />
+      <StyliTest styliIgnore={['center']} />
 
-      <StyliTest  />
+      <StyliTest />
 
       <View center s-200>
         <View flex order teal>

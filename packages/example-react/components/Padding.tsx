@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Padding = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Padding
-      </Heading>
+      </Box>
 
       <View debug>
         <View p4 inlineBlock>

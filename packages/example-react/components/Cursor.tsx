@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Cursor = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Cursor
-      </Heading>
+      </Box>
 
       <View row justifyBetween>
         <View s-100 center bgBlue30 cursorPointer>

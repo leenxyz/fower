@@ -1,24 +1,25 @@
 import React from 'react'
-import { View, Input, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const OutLine = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         OutLine
-      </Heading>
+      </Box>
       <View debug center>
         <View center s-200>
-          <Input defaultValue="common input" />
+          <Box as="input" defaultValue="common input" />
         </View>
         <View center s-200>
-          <Input outlineNone defaultValue="outlineNone" />
+          <Box as="input" outlineNone defaultValue="outlineNone" />
         </View>
         <View center s-200>
-          <Input outlineOffset-10 defaultValue="outlineOffset-10" />
+          <Box as="input" outlineOffset-10 defaultValue="outlineOffset-10" />
         </View>
         <View center s-200>
-          <Input
+          <Box
+            as="input"
             outline="8px ridge rgba(170, 50, 220, .6)"
             defaultValue="8px ridge rgba(170, 50, 220, .6)"
           />

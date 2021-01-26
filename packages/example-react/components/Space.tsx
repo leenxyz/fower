@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Heading } from '@styli/react'
+import { View, Box } from '@styli/react'
 
 export const Space = () => {
   return (
     <View>
-      <Heading f-30 fontBold>
+      <Box f-30 fontBold>
         Size
-      </Heading>
+      </Box>
       <View space-10 row w-350 wrap>
         <View bgBlue20 s-100>
           space-10
