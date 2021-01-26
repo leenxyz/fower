@@ -14,7 +14,8 @@ import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
-import { styled, styli, ThemeProvider, View } from '@styli/react'
+import { styli, ThemeProvider, View } from '@styli/react'
+import { styled } from '@styli/styled'
 
 styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
@@ -45,7 +46,7 @@ export const App = () => {
 
       <StyliTest styliIgnore={['center']} center="11111" />
 
-      <StyliTest center="11111" />
+      <StyliTest  />
 
       <View center s-200>
         <View flex order teal>

@@ -30,9 +30,10 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   ...args: Args
 ): StyledComponent<
   JSX.LibraryManagedAttributes<C, ComponentProps<C>> & AtomicProps & InjectedProps
-> | null {
-
-  if(!component) return null
+> {
+  if (!component) {
+    throw new Error('required component param')
+  }
 
   const StyledComponent = forwardRef((props: any = {}, ref) => {
     return (
