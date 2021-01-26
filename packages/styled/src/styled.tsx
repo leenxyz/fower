@@ -2,6 +2,7 @@ import React, { createElement, ElementType, forwardRef, ComponentProps } from 'r
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { styli } from '@styli/core'
 import { themeContext } from '@styli/theming'
+import { upFirst } from '@styli/utils'
 import { AtomicProps } from '@styli/types'
 import { getCssParsedProps, getInLineParsedProps } from './util'
 import { StyledComponent, InjectedProps, Args } from './types'
@@ -49,6 +50,9 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
       </Consumer>
     )
   })
+
+  StyledComponent.displayName =
+    typeof component === 'string' ? `Styled${upFirst(component as string)}` : 'StyledComponent'
 
   hoistNonReactStatics(StyledComponent, component as any)
   return StyledComponent
