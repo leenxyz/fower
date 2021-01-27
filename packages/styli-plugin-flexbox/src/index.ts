@@ -85,6 +85,11 @@ function flexPropToStyle(prop: string) {
     style.alignContent = flexMaps[prop.replace('content', '').toLocaleLowerCase()]
   }
 
+  // align-items
+  if (prop.startsWith('items')) {
+    style.alignItems = flexMaps[prop.replace('items', '').toLocaleLowerCase()]
+  }
+
   return style
 }
 
