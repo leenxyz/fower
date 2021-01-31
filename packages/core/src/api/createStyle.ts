@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { CSSProperties } from '@styli/types'
 import { modifierToProps } from '@styli/utils'
 import { Sheet } from '../Sheet'
 import { styli } from '../styli'
