@@ -14,6 +14,11 @@ export const LayoutEngine = () => {
         <View s-100>AA</View>
         <View s-100>BB</View>
       </View>
+
+      <View h-240 f-12 debugChildren row between stretch>
+        <View>AAA</View>
+        <View>BBB</View>
+      </View>
     </View>
   )
 }

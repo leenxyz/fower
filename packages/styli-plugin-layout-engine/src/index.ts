@@ -16,6 +16,8 @@ export const G = {
   center: 'center',
   space: 'space',
 
+  stretch: 'stretch',
+
   row: 'row',
   column: 'column',
 }
@@ -39,9 +41,11 @@ const flexAlign = [
   G.between,
   G.around,
   G.evenly,
+  G.evenly,
+  G.stretch,
 ]
 
-export const flexMaps: any = {
+export const flexMaps = {
   start: `${G.flex}-${G.start}`,
   end: `${G.flex}-${G.end}`,
   between: `${G.space}-${G.between}`,
@@ -80,7 +84,7 @@ export function alignmentPropToStyle(propKey: string, props: any) {
       G.around,
       G.evenly,
     ]
-    rules.alignItems = [G.top, G.bottom, centerY]
+    rules.alignItems = [G.top, G.bottom, centerY, G.stretch]
   } else {
     rules.justifyContent = [
       G.top,
@@ -91,7 +95,7 @@ export function alignmentPropToStyle(propKey: string, props: any) {
       G.around,
       G.evenly,
     ]
-    rules.alignItems = [G.left, G.right, centerX]
+    rules.alignItems = [G.left, G.right, centerX, G.stretch]
   }
 
   for (const [key, positions] of Object.entries(rules)) {
@@ -109,6 +113,8 @@ export function alignmentPropToStyle(propKey: string, props: any) {
         style[key] = flexMaps.around
       } else if (p === G.evenly) {
         style[key] = flexMaps.evenly
+      } else if (p === G.stretch) {
+        style[key] = flexMaps.stretch
       }
     }
   }
@@ -127,6 +133,8 @@ export default (): StyliPlugin => {
     isMatch: isAlignmentKey,
     onAtomStyleCreate(atom, sheet) {
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
+
+      console.log('atom.propKey:', atom.propKey)
 
       if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
         const direction = getDirection(sheet.props)

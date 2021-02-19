@@ -56,5 +56,7 @@ declare module '@styli/types' {
     around?: boolean
 
     evenly?: boolean
+
+    stretch?: boolean
   }
 }
