@@ -134,8 +134,6 @@ export default (): StyliPlugin => {
     onAtomStyleCreate(atom, sheet) {
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
-      console.log('atom.propKey:', atom.propKey)
-
       if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
         const direction = getDirection(sheet.props)
         atom.className = direction + '-' + atom.propKey
