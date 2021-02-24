@@ -17,6 +17,8 @@ export default (): StyliPlugin => {
 
       if (!isPseudoKey(propKey)) return atom
 
+      if (typeof atom.propValue === 'boolean' && atom.propValue === false) return atom
+
       const result: any = propKey.match(new RegExp(`(.*)${regStr}`))
       let pseudo = result[2].replace('--', '')
       pseudo = specials.includes(pseudo) ? '::' + pseudo : ':' + pseudo

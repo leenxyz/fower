@@ -24,6 +24,10 @@ export const Background = () => {
         BgRed50-D20--hover
       </View>
 
+      <View f-20 bgRed50-T30 bgRed50-D30--hover={false}>
+        BgRed50-D30--hover=false
+      </View>
+
       <View f-20 bgColor="#000-T40">
         bg #000-T40
       </View>

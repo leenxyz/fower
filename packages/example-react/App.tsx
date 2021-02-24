@@ -42,7 +42,6 @@ const StyliTest = styled(Test)
 export const App = () => {
   return (
     <div className="box">
-      {/* @ts-ignore */}
       <StyliTest styliIgnore={['center']} center="11111" />
 
       <StyliTest styliIgnore={['center']} />

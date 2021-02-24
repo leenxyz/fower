@@ -10,6 +10,10 @@ export const Overflow = () => {
       <Box debug overflow="hidden">
         overflow
       </Box>
+
+      <Box debug overflowX="visible">
+        overflow
+      </Box>
     </Box>
   )
 }
