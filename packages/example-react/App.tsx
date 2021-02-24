@@ -16,6 +16,7 @@ import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
 import { styli, ThemeProvider, Box } from '@styli/react'
 import { styled } from '@styli/styled'
+import { Overflow } from './components/overflow'
 
 styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
@@ -48,16 +49,6 @@ export const App = () => {
 
       <StyliTest />
 
-      <Box center s-200>
-        <Box flex order teal--hover={false}>
-          哈哈
-        </Box>
-        <Box space3>
-          <Box>1</Box>
-          <Box>2</Box>
-          <Box>3</Box>
-        </Box>
-      </Box>
       <ThemeProvider theme={styli.getTheme()}>
         <BoxDemo></BoxDemo>
         <Space></Space>
@@ -74,6 +65,7 @@ export const App = () => {
         <OutLine></OutLine>
         <CSSProp></CSSProp>
         <LayoutEngine></LayoutEngine>
+        <Overflow></Overflow>
       </ThemeProvider>
     </div>
   )
