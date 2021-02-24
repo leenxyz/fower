@@ -4,6 +4,7 @@ import color from 'styli-plugin-color'
 import display from 'styli-plugin-display'
 import flexBox from 'styli-plugin-flexbox'
 import flexItem from 'styli-plugin-flex-item'
+import grid from 'styli-plugin-grid'
 import layoutEngine from 'styli-plugin-layout-engine'
 import lineHeight from 'styli-plugin-line-height'
 import margin from 'styli-plugin-margin'
@@ -39,6 +40,7 @@ export const plugins = [
   color(),
   display(),
   flexBox(),
+  grid(),
   flexItem(),
   layoutEngine(),
   lineHeight(),

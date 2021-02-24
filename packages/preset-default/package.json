@@ -33,6 +33,7 @@
     "styli-plugin-ellipsis": "^0.24.0",
     "styli-plugin-flex-item": "^0.24.0",
     "styli-plugin-flexbox": "^0.24.0",
+    "styli-plugin-grid": "^0.24.0",
     "styli-plugin-layout-engine": "^0.24.0",
     "styli-plugin-line-height": "^0.24.0",
     "styli-plugin-margin": "^0.24.0",
