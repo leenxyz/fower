@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-display",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-display.esm.js",
   "dependencies": {
-    "@styli/types": "^0.23.0",
-    "@styli/utils": "^0.23.0"
+    "@styli/types": "^0.24.0",
+    "@styli/utils": "^0.24.0"
   }
 }
