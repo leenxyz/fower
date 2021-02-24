@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-text-weight",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-text-weight.esm.js",
   "dependencies": {
-    "@styli/core": "^0.24.0",
-    "@styli/types": "^0.24.0",
-    "@styli/utils": "^0.24.0"
+    "@styli/core": "^0.25.0",
+    "@styli/types": "^0.25.0",
+    "@styli/utils": "^0.25.0"
   }
 }
