@@ -1,17 +1,23 @@
 import React from 'react'
-import { View, Box } from '@styli/react'
+import { Box } from '@styli/react'
 
 export const FlexBox = () => {
+  console.log('ahah----')
   return (
-    <View>
+    <Box>
       <Box>FlexBox</Box>
-      <View h-200 f-12 debugChildren row justifyBetween itemsEnd>
-        <View s-100>AAA</View>
-        <View selfStretch>BBB</View>
-        <View s-100 center>
+      <Box h-200 f-12 debugChildren row justifyBetween itemsEnd>
+        <Box s-100>AAA</Box>
+        <Box selfStretch>BBB</Box>
+        <Box s-100 center>
           CCC
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+      <Box>Flex item</Box>
+      <Box>
+        <Box flexAuto>Auto1</Box>
+        <Box flexInitial>flexInitial</Box>
+      </Box>
+    </Box>
   )
 }

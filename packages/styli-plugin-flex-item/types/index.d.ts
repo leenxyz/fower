@@ -11,12 +11,42 @@ declare module '@styli/types' {
      * @example
      * ```tsx
      * <View flex-1></View> // flex: 1 1 0%;
-     * <View flex-auto></View> // flex: 1 1 auto;
-     * <View flex-initial></View> // flex: 0 1 auto;
-     * <View flex-none></View> // flex: none;
+     * <View flexAuto></View> // flex: 1 1 auto;
+     * <View flexInitial></View> // flex: 0 1 auto;
+     * <View flexNone></View> // flex: none;
      * ```
      */
     flex?: PropValue
+
+    /**
+     * set flex-flow、flex-shrink、flex-basic
+     *
+     * @example
+     * ```tsx
+     * <View flexAuto></View> // flex: 1 1 auto;
+     * ```
+     */
+    flexAuto: boolean
+
+    /**
+     * set flex-flow、flex-shrink、flex-basic
+     *
+     * @example
+     * ```tsx
+     * <View flexInitial></View> // flex: 0 1 auto;
+     * ```
+     */
+    flexInitial: boolean
+
+    /**
+     * set flex-flow、flex-shrink、flex-basic
+     *
+     * @example
+     * ```tsx
+     * <View flexNone></View> // flex: none;
+     * ```
+     */
+    flexNone: boolean
 
     /**
      * set order

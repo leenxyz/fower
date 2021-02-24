@@ -14,7 +14,7 @@ import { Cursor } from './components/Cursor'
 import { Space } from './components/Space'
 import { Shadow } from './components/Shadow'
 import { BoxDemo } from './components/Box'
-import { styli, ThemeProvider, View } from '@styli/react'
+import { styli, ThemeProvider, Box } from '@styli/react'
 import { styled } from '@styli/styled'
 
 styli.configure(() => ({
@@ -48,16 +48,16 @@ export const App = () => {
 
       <StyliTest />
 
-      <View center s-200>
-        <View flex order teal--hover={false}>
+      <Box center s-200>
+        <Box flex order teal--hover={false}>
           哈哈
-        </View>
-        <View space3>
-          <View>1</View>
-          <View>2</View>
-          <View>3</View>
-        </View>
-      </View>
+        </Box>
+        <Box space3>
+          <Box>1</Box>
+          <Box>2</Box>
+          <Box>3</Box>
+        </Box>
+      </Box>
       <ThemeProvider theme={styli.getTheme()}>
         <BoxDemo></BoxDemo>
         <Space></Space>
