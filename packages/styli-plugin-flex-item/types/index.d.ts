@@ -26,7 +26,7 @@ declare module '@styli/types' {
      * <View flexAuto></View> // flex: 1 1 auto;
      * ```
      */
-    flexAuto: boolean
+    flexAuto?: boolean
 
     /**
      * set flex-flow、flex-shrink、flex-basic
@@ -36,7 +36,7 @@ declare module '@styli/types' {
      * <View flexInitial></View> // flex: 0 1 auto;
      * ```
      */
-    flexInitial: boolean
+    flexInitial?: boolean
 
     /**
      * set flex-flow、flex-shrink、flex-basic
@@ -46,7 +46,7 @@ declare module '@styli/types' {
      * <View flexNone></View> // flex: none;
      * ```
      */
-    flexNone: boolean
+    flexNone?: boolean
 
     /**
      * set order
