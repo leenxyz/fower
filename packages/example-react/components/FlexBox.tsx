@@ -2,7 +2,6 @@ import React from 'react'
 import { Box } from '@styli/react'
 
 export const FlexBox = () => {
-  console.log('ahah----')
   return (
     <Box>
       <Box>FlexBox</Box>

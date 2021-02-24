@@ -17,6 +17,7 @@ import { BoxDemo } from './components/Box'
 import { styli, ThemeProvider, Box } from '@styli/react'
 import { styled } from '@styli/styled'
 import { Overflow } from './components/overflow'
+import { Grid } from './components/Grid'
 
 styli.configure(() => ({
   dev: process.env.NODE_ENV === 'development',
@@ -65,6 +66,7 @@ export const App = () => {
         <CSSProp></CSSProp>
         <LayoutEngine></LayoutEngine>
         <Overflow></Overflow>
+        <Grid></Grid>
       </ThemeProvider>
     </div>
   )
