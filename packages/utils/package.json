@@ -1,6 +1,6 @@
 {
   "name": "@styli/utils",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/utils.esm.js",
   "devDependencies": {
-    "@styli/types": "^0.25.0",
+    "@styli/types": "^0.26.0",
     "@types/string-hash": "^1.1.1"
   },
   "dependencies": {
