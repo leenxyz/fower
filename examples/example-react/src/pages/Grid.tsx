@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box } from '@styli/react'
+import React from 'react';
+import { Box } from '@styli/react';
 
-export const Grid = () => {
+export default () => {
   return (
     <Box>
       <Box f-30 fontBold as="h1">
@@ -16,5 +16,5 @@ export const Grid = () => {
         <Box>G</Box>
       </Box>
     </Box>
-  )
-}
+  );
+};

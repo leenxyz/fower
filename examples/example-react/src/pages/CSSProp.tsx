@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box, Text } from '@styli/react'
+import React from 'react';
+import { View, Box, Text } from '@styli/react';
 
-export const CSSProp = () => {
+export default () => {
   return (
     <View>
       <Box>CSS Prop</Box>
@@ -36,5 +36,5 @@ export const CSSProp = () => {
         <span>Hi, Styli!</span>
       </View>
     </View>
-  )
-}
+  );
+};

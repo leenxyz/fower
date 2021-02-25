@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Padding = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -59,5 +59,5 @@ export const Padding = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

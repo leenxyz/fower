@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box } from '@styli/react'
+import React from 'react';
+import { Box } from '@styli/react';
 
-export const FlexBox = () => {
+export default () => {
   return (
     <Box>
       <Box>FlexBox</Box>
@@ -18,5 +18,5 @@ export const FlexBox = () => {
         <Box flexInitial>flexInitial</Box>
       </Box>
     </Box>
-  )
-}
+  );
+};

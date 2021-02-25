@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Margin = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -101,5 +101,5 @@ export const Margin = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

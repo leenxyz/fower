@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Size = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -65,5 +65,5 @@ export const Size = () => {
         <View w={[1 / 3, '100%', 400]} h-100 bgYellow20></View>
       </View>
     </View>
-  )
-}
+  );
+};

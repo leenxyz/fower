@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Border = () => {
+export default () => {
   return (
     <View>
       <Box>Border</Box>
@@ -50,10 +50,15 @@ export const Border = () => {
           border--hover="1px solid red30"
         </View>
 
-        <View s-100 borderTopWidth={1} borderTopStyle="solid" borderTopColor="brown">
+        <View
+          s-100
+          borderTopWidth={1}
+          borderTopStyle="solid"
+          borderTopColor="brown"
+        >
           borderTopWidth="1px" BorderTopStyle="solid" borderTopColor="brown"
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

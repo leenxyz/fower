@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Shadow = () => {
+export default () => {
   return (
     <View f-16 gray60>
       <Box f-30 fontBold>
@@ -46,5 +46,5 @@ export const Shadow = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};

@@ -1,11 +1,11 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
 enum IMAGEs {
   DEFAULT_AVATAR = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg',
 }
 
-export const Background = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -56,7 +56,11 @@ export const Background = () => {
         bg--hover="#000"
       </View>
 
-      <View f-20 bgColor={['yellowgreen', 'deeppink', 'gray', 'info']} f={[10, 20, 30, 40]}>
+      <View
+        f-20
+        bgColor={['yellowgreen', 'deeppink', 'gray', 'info']}
+        f={[10, 20, 30, 40]}
+      >
         bgColor=['yellowgreen', 'deeppink', 'gray', 'info']
       </View>
 
@@ -64,7 +68,12 @@ export const Background = () => {
         bg=['yellowgreen', 'deeppink', 'gray', 'info']
       </View>
 
-      <View f-10 bg={`url(${IMAGEs.DEFAULT_AVATAR}) center 100%`} circle-200 center>
+      <View
+        f-10
+        bg={`url(${IMAGEs.DEFAULT_AVATAR}) center 100%`}
+        circle-200
+        center
+      >
         bg="url('https://...') center 100%"
       </View>
 
@@ -82,5 +91,5 @@ export const Background = () => {
         <View>bgPos="center"</View>
       </View>
     </View>
-  )
-}
+  );
+};

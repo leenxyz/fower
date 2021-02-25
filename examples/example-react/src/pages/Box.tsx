@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const BoxDemo = () => {
+export default () => {
   return (
     <View>
       <Box>basic box</Box>
@@ -16,5 +16,5 @@ export const BoxDemo = () => {
         Google
       </Box>
     </View>
-  )
-}
+  );
+};

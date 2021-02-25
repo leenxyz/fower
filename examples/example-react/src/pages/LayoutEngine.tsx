@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const LayoutEngine = () => {
+export default () => {
   return (
     <View>
       <Box>LayoutEngine</Box>
@@ -20,5 +20,5 @@ export const LayoutEngine = () => {
         <View>BBB</View>
       </View>
     </View>
-  )
-}
+  );
+};

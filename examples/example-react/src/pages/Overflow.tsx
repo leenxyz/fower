@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box } from '@styli/react'
+import React from 'react';
+import { Box } from '@styli/react';
 
-export const Overflow = () => {
+export default () => {
   return (
     <Box>
       <Box f-30 fontBold as="h1">
@@ -15,5 +15,5 @@ export const Overflow = () => {
         overflow
       </Box>
     </Box>
-  )
-}
+  );
+};

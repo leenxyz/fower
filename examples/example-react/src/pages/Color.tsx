@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const Color = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -104,5 +104,5 @@ export const Color = () => {
         c=['yellowgreen', 'purple', 'deeppink', 'red']
       </View>
     </View>
-  )
-}
+  );
+};

@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Box } from '@styli/react'
+import React from 'react';
+import { View, Box } from '@styli/react';
 
-export const OutLine = () => {
+export default () => {
   return (
     <View>
       <Box f-30 fontBold>
@@ -26,5 +26,5 @@ export const OutLine = () => {
         </View>
       </View>
     </View>
-  )
-}
+  );
+};
