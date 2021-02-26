@@ -148,7 +148,7 @@ export class Sheet {
 
   private getAtomCacheKey(propKey: string, propValue: any) {
     if (!isPlainType(propValue)) return ''
-    return `plugin-${propKey}-${propValue}`
+    return `${propKey}-${propValue}`
   }
 
   private setUniteClassName() {
