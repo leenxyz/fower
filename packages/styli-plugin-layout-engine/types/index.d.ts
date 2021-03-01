@@ -22,7 +22,7 @@ declare module '@styli/types' {
     center?: boolean
 
     /**
-     * Set center in x axis，不管改容器是 row 还是 column, 只会在 x 轴生效
+     * Set center in x axis，不管该容器是 row 还是 column, 只会在 x 轴生效
      *
      * @example
      *
@@ -33,7 +33,7 @@ declare module '@styli/types' {
     centerX?: boolean
 
     /**
-     * Set center in y axis，不管改容器是 row 还是 column, 只会在 y 轴生效
+     * Set center in y axis，不管该容器是 row 还是 column, 只会在 y 轴生效
      *
      * @example
      *
@@ -43,13 +43,13 @@ declare module '@styli/types' {
      */
     centerY?: boolean
 
-    left?: boolean
+    toLeft?: boolean
 
-    right?: boolean
+    toRight?: boolean
 
-    top?: boolean
+    toTop?: boolean
 
-    bottom?: boolean
+    toBottom?: boolean
 
     between?: boolean
 

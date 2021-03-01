@@ -1,4 +1,4 @@
-import { StyliPlugin } from '@styli/types'
+import { Atom, StyliPlugin } from '@styli/types'
 
 export const G = {
   flex: 'flex',
@@ -41,7 +41,6 @@ const flexAlign = [
   G.between,
   G.around,
   G.evenly,
-  G.evenly,
   G.stretch,
 ]
 
@@ -65,6 +64,14 @@ function getDirection(props: any): string {
   if (props.column) return G.column
   if (props.direction) return props.direction
   return G.row
+}
+
+function posFormat(atom: Atom) {
+  const propKey = atom.propKey
+  if (['toTop', 'toLeft', 'toBottom', 'toRight'].includes(propKey)) {
+    atom.propKey = propKey.split(/(?=[A-Z])/)[1].toLowerCase()
+  }
+  return atom
 }
 
 export function alignmentPropToStyle(propKey: string, props: any) {
@@ -132,6 +139,7 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-layout-engine',
     isMatch: isAlignmentKey,
     onAtomStyleCreate(atom, sheet) {
+      atom = posFormat(atom)
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
       if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
