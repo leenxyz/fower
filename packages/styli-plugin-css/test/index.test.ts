@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, CSSObject, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-css', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('css')).toEqual(true)
@@ -12,31 +12,26 @@ describe('styli-plugin-css', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom = {
-      propKey: 'css',
-      propValue: {
-        border: '1px solid red',
-        ':hover': {
-          color: 'yellow',
-        },
+    const value: CSSObject = {
+      border: '1px solid red',
+      ':hover': {
+        color: 'yellow',
       },
-      style: {},
-    } as Atom
+    }
 
-    const newAtom = {
+    const atom: Atom = {
+      key: 'css',
       propKey: 'css',
-      propValue: {
-        border: '1px solid red',
-        ':hover': {
-          color: 'yellow',
-        },
-      },
-      style: {
-        border: '1px solid red',
-        ':hover': {
-          color: 'yellow',
-        },
-      },
+      propValue: value,
+      style: {},
+      type: 'prefix',
+    }
+
+    const newAtom: Atom = {
+      key: 'css',
+      propKey: 'css',
+      propValue: value,
+      style: value,
       type: 'prefix',
     }
 

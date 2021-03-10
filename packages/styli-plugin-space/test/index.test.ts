@@ -1,16 +1,7 @@
-import { styli } from '@styli/core'
-import { SheetType } from '@styli/types'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-space', () => {
-  styli.configure({
-    theme: {
-      colors: {
-        red: 'blue',
-      },
-    } as any,
-  })
-
   const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as SheetType
 
@@ -22,16 +13,16 @@ describe('styli-plugin-space', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'space', propValue: 10, style: {} }
-    const newAtom1 = {
+    const atom1: Atom = { propKey: 'space', propValue: 10, style: {}, key: 'space', type: 'style' }
+    const newAtom1: Atom = {
       propKey: 'space',
       propValue: 10,
+      key: 'space',
+      type: 'prefix',
       style: {
-        '>div': {
-          'margin-top': '10px',
-          'margin-left': '10px',
-          'margin-bottom': '10px',
-          'margin-right': '10px',
+        '>*:not(:last-child)': {
+          marginRight: '10px',
+          marginBottom: '10px',
         },
       },
     }

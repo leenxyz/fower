@@ -21,7 +21,7 @@ interface TestProps {
 const Test = ({ color, className, style }) => {
   return (
     <div className={className} style={style}>
-      { color }
+      {color}
     </div>
   )
 }
@@ -37,6 +37,7 @@ const StyledTest = styled(Test)
 ```
 
 使用
+
 ```tsx
 // Styli 将对 color 属性进行拦截并处理，最终生成一个 className 或 style 注入到 Test 组件中
 <StyledTest color="red" />

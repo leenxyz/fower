@@ -1,4 +1,4 @@
-import { StyliPlugin, Theme } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
 import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin

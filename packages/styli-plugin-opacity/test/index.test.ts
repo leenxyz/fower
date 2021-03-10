@@ -1,4 +1,4 @@
-import { Atom } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-opacity', () => {
@@ -11,16 +11,52 @@ describe('styli-plugin-opacity', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'opacity', propValue: true } as Atom
-    const newAtom1 = { propKey: 'opacity', propValue: true, style: { opacity: 0.5 } }
+    const atom1: Atom = {
+      propKey: 'opacity',
+      propValue: true,
+      key: 'opacity',
+      type: 'style',
+      style: {},
+    }
+    const newAtom1: Atom = {
+      propKey: 'opacity',
+      propValue: true,
+      style: { opacity: 0.5 },
+      key: 'opacity',
+      type: 'style',
+    }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'opacity', propValue: 80 } as Atom
-    const newAtom2 = { propKey: 'opacity', propValue: 80, style: { opacity: 0.8 } }
+    const atom2: Atom = {
+      propKey: 'opacity',
+      propValue: 80,
+      key: 'opacity',
+      type: 'style',
+      style: {},
+    }
+    const newAtom2: Atom = {
+      propKey: 'opacity',
+      propValue: 80,
+      style: { opacity: 0.8 },
+      key: 'opacity',
+      type: 'style',
+    }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
-    const atom3 = { propKey: 'opacity-20', propValue: true } as Atom
-    const newAtom3 = { propKey: 'opacity-20', propValue: true, style: { opacity: 0.2 } }
+    const atom3: Atom = {
+      propKey: 'opacity-20',
+      propValue: true,
+      key: 'opacity',
+      type: 'style',
+      style: {},
+    }
+    const newAtom3: Atom = {
+      propKey: 'opacity-20',
+      propValue: true,
+      style: { opacity: 0.2 },
+      key: 'opacity',
+      type: 'style',
+    }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
   })
 })

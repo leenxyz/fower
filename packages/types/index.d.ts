@@ -153,14 +153,13 @@ declare namespace StyliTypes {
 
   interface Configuration {
     unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
-    dev?: boolean
     prefix?: string
     /** use inline style or not */
     inline?: boolean
     important?: boolean
     theme: Theme
     plugins: StyliPlugin[]
-    transformUnit(data: string | number): string
+    transformUnit(data: string | number, type?: ModifierType): string
   }
 
   interface Props {

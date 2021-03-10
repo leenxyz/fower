@@ -1,11 +1,12 @@
-import { Atom, Sheet, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-ellipsis', () => {
-  styli.configure({ unit: 'px' })
+  styli.configure(() => ({ unit: 'px' }))
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('ellipsis')).toEqual(true)

@@ -1,17 +1,24 @@
-import { Atom, Sheet, Plugin, getValue, ModifierType, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom, ModifierType, SheetType, StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 import plugin from '../src'
 
 describe('styli-plugin-pseudo', () => {
-  styli.configure({ unit: 'px' })
-
-  const { middleware } = plugin()
-  const sheet = {} as Sheet
+  const { onAtomModify } = plugin()
+  const sheet = {} as SheetType
 
   it('middleware', () => {
-    const atom1 = { propKey: 'f-10--hover', propValue: true } as Atom
-    expect(middleware!(textPlugin(), atom1, sheet, {} as any)).toMatchObject({
+    const atom1: Atom = {
+      propKey: 'f-10--hover',
+      propValue: true,
+      key: 'f-10--hover',
+      type: 'style',
+      style: {},
+    }
+
+    expect(onAtomModify!(textPlugin(), atom1, sheet, {} as any)).toMatchObject({
       ...atom1,
+      type: 'prefix',
       style: {
         ':hover': {
           fontSize: '10px',
@@ -21,7 +28,7 @@ describe('styli-plugin-pseudo', () => {
   })
 })
 
-const textPlugin = (): Plugin => {
+const textPlugin = (): StyliPlugin => {
   return {
     name: 'styli-plugin-pseudo',
     isMatch(key) {
@@ -31,13 +38,11 @@ const textPlugin = (): Plugin => {
       const { propKey, propValue } = atom
       if (isValidPropValue(propValue)) {
         atom.style = {
-          fontSize: Array.isArray(propValue)
-            ? propValue.map((v) => getValue(v, ModifierType.text))
-            : getValue('' + propValue, ModifierType.text),
+          fontSize: styli.getValue('' + propValue, ModifierType.text),
         }
       } else {
         const [, value] = propKey.split('-')
-        atom.style = { fontSize: getValue(value, ModifierType.text) }
+        atom.style = { fontSize: styli.getValue(value, ModifierType.text) }
       }
 
       return atom

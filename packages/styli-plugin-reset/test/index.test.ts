@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-reset', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('reset')).toEqual(true)
@@ -12,17 +12,26 @@ describe('styli-plugin-reset', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom = { propKey: 'reset', propValue: true } as Atom
-
-    const newAtom = {
-      propKey: 'reset',
-      propValue: true,
-      style: {
-        '*': {
-          margin: 0,
-          padding: 0,
-        },
+    const value = {
+      '*': {
+        margin: 0,
+        padding: 0,
       },
+    }
+
+    const atom: Atom = {
+      propKey: 'reset',
+      propValue: value,
+      key: 'reset',
+      type: 'style',
+      style: {},
+    }
+
+    const newAtom: Atom = {
+      key: 'reset',
+      propKey: 'reset',
+      propValue: value,
+      style: value,
       type: 'global',
     }
 

@@ -1,5 +1,13 @@
 import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
-import { StyliPlugin, Configuration, Preset, Theme, PluginCategory, Atom } from '@styli/types'
+import {
+  StyliPlugin,
+  Configuration,
+  Preset,
+  Theme,
+  PluginCategory,
+  Atom,
+  ModifierType,
+} from '@styli/types'
 import { defaultConfig } from './config'
 
 class Styli {
@@ -40,7 +48,7 @@ class Styli {
     return this.config[type] as any
   }
 
-  getValue(value: string | number) {
+  getValue(value: string | number, type?: ModifierType) {
     let numValue = value
     // w-80p => width: 80%
     if (isPercentNumber('' + value)) {
@@ -54,8 +62,8 @@ class Styli {
         return (numValue * 100).toFixed(6) + '%'
       }
 
-      if (this.config.unit !== 'none') {
-        return this.config?.transformUnit?.(numValue)
+      if (this.config.unit !== 'none' && this.config.transformUnit) {
+        return this.config.transformUnit(numValue, type)
       }
     }
 

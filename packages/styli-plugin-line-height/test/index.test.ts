@@ -1,13 +1,14 @@
-import { Atom, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-line-height', () => {
-  styli.configure({
-    unit: 'px',
-    inline: true,
-    theme: {
-      lineHeight: { none: '1' },
-    } as any,
+  styli.configure(() => {
+    return {
+      theme: {
+        lineHeight: { none: 1 },
+      } as any,
+    }
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
@@ -30,7 +31,7 @@ describe('styli-plugin-line-height', () => {
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'lhNone', propValue: true } as Atom
-    const newAtom3 = { propKey: 'lhNone', propValue: true, style: { lineHeight: '1' } }
+    const newAtom3 = { propKey: 'lhNone', propValue: true, style: { lineHeight: 1 } }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
   })
 })

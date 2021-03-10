@@ -1,13 +1,16 @@
-import { Atom, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-text-weight', () => {
-  styli.configure({
-    theme: {
-      fontWeight: {
-        medium: '500',
+  styli.configure(() => {
+    return {
+      theme: {
+        fontWeights: {
+          medium: 500,
+        },
       },
-    } as any,
+    } as any
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
@@ -23,7 +26,7 @@ describe('styli-plugin-text-weight', () => {
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'fontMedium', propValue: true } as Atom
-    const newAtom2 = { propKey: 'fontMedium', propValue: true, style: { fontWeight: '500' } }
+    const newAtom2 = { propKey: 'fontMedium', propValue: true, style: { fontWeight: 500 } }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })

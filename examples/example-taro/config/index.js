@@ -50,7 +50,7 @@ const config = {
                       ...require('@styli/taro').styli.getConfig(),
                       inline: false,
                     },
-                    output: 'styli.wxss'
+                    output: 'styli.wxss',
                   },
                 },
               ],

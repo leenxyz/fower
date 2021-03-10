@@ -6,6 +6,6 @@ export const defaultConfig: Configuration = {
   plugins: [] as StyliPlugin[],
   theme: {} as Theme,
   transformUnit(value: string | number) {
-    return '' + value + this.unit
+    return '' + value + defaultConfig.unit
   },
 }

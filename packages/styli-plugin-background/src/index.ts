@@ -10,6 +10,10 @@ function isBgColorKey(key: string) {
   return /^bgColor$/.test(key)
 }
 
+function isBgRepeatKey(key: string) {
+  return /^bgRepeat$/.test(key)
+}
+
 function isBgImgKey(key: string) {
   return /^bgImg$/.test(key)
 }
@@ -26,6 +30,7 @@ function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgImgKey(propKey)) return { backgroundImage: `url("${propValue}")` }
   if (isBgPosKey(propKey)) return { backgroundPosition: styli.getValue(propValue) }
   if (isBgSizeKey(propKey)) return { backgroundSize: styli.getValue(propValue) }
+  if (isBgRepeatKey(propKey)) return { backgroundRepeat: propValue }
 
   const Colors = styli.getColors()
 
@@ -48,7 +53,12 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-background',
     isMatch(key) {
       return (
-        isBgKey(key) || isBgColorKey(key) || isBgImgKey(key) || isBgPosKey(key) || isBgSizeKey(key)
+        isBgKey(key) ||
+        isBgColorKey(key) ||
+        isBgImgKey(key) ||
+        isBgPosKey(key) ||
+        isBgSizeKey(key) ||
+        isBgRepeatKey(key)
       )
     },
     onAtomStyleCreate(atom) {

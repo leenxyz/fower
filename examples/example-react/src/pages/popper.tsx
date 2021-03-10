@@ -18,10 +18,12 @@ export default () => {
         bgBlue20
         type="button"
         ref={setReferenceElement}
-        style={{
-          // width: 100,
-          // height: 100,
-        }}
+        style={
+          {
+            // width: 100,
+            // height: 100,
+          }
+        }
       >
         Reference element
       </Box>

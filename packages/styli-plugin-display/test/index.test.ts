@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-display', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('hide')).toEqual(true)
@@ -13,7 +13,6 @@ describe('styli-plugin-display', () => {
     expect(isMatch!('grid')).toEqual(true)
     expect(isMatch!('table')).toEqual(true)
     expect(isMatch!('display')).toEqual(true)
-    expect(isMatch!('displayBlock')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
@@ -44,9 +43,5 @@ describe('styli-plugin-display', () => {
     const atom7 = { propKey: 'display', propValue: 'block' } as Atom
     const newAtom7 = { propKey: 'display', propValue: 'block', style: { display: 'block' } }
     expect(onAtomStyleCreate!(atom7, sheet)).toMatchObject(newAtom7)
-
-    const atom8 = { propKey: 'display-table', propValue: true } as Atom
-    const newAtom8 = { propKey: 'display-table', propValue: true, style: { display: 'table' } }
-    expect(onAtomStyleCreate!(atom8, sheet)).toMatchObject(newAtom8)
   })
 })

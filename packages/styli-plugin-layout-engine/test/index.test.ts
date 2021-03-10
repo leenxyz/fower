@@ -1,4 +1,4 @@
-import { Atom } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-layout-engine', () => {
@@ -26,9 +26,6 @@ describe('styli-plugin-layout-engine', () => {
       propKey: 'center',
       propValue: true,
       style: {
-        flexDirection: 'row',
-        display: 'flex',
-        alignItems: 'center',
         justifyContent: 'center',
       },
     }

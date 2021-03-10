@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-debug', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('debug')).toEqual(true)
@@ -18,10 +18,7 @@ describe('styli-plugin-debug', () => {
       propKey: 'debug',
       propValue: true,
       style: {
-        border: '1px solid gray',
-        div: {
-          border: '1px solid gray',
-        },
+        border: '1px solid gold',
       },
       type: 'prefix',
     }

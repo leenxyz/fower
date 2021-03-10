@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-flex-box', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('row')).toEqual(true)
@@ -19,7 +19,7 @@ describe('styli-plugin-flex-box', () => {
     const newAtom1 = {
       propKey: 'column',
       propValue: true,
-      style: { display: 'flex', flexDirection: 'column' },
+      style: {},
     }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 

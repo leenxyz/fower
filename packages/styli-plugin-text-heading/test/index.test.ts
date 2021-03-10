@@ -1,4 +1,5 @@
-import { Atom, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-text-heading', () => {
@@ -16,8 +17,15 @@ describe('styli-plugin-text-heading', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'heading3', propValue: true } as Atom
-    const newAtom1 = {
+    const atom1: Atom = {
+      propKey: 'heading3',
+      propValue: true,
+      key: 'heading3',
+      type: 'style',
+      style: {},
+    }
+    const newAtom1: Atom = {
+      key: 'heading3',
       propKey: 'heading3',
       propValue: true,
       style: {
@@ -25,6 +33,7 @@ describe('styli-plugin-text-heading', () => {
         fontWeight: 'bold',
         fontSize: '24px',
       },
+      type: 'style',
     }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
   })

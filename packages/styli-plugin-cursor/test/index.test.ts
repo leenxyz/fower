@@ -1,9 +1,9 @@
-import { Atom, Sheet } from '@styli/core'
+import { Atom, SheetType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-cursor', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as Sheet
+  const sheet = {} as SheetType
 
   it('isMatch', () => {
     expect(isMatch!('cursor')).toEqual(true)
@@ -12,7 +12,7 @@ describe('styli-plugin-cursor', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'cursor', propValue: true } as Atom
+    const atom1: Atom = { propKey: 'cursor', propValue: true, key: 'cursor', type: 'style' }
     const newAtom1 = { propKey: 'cursor', propValue: true, style: { cursor: 'pointer' } }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 

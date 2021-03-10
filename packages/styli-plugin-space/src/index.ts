@@ -7,9 +7,9 @@ export function isSpaceKey(key: string) {
 }
 
 const spaceMap: any = {
-  all: ['margin-right', 'margin-bottom'],
-  x: ['margin-right'],
-  y: ['margin-bottom'],
+  all: ['marginRight', 'marginBottom'],
+  x: ['marginRight'],
+  y: ['marginBottom'],
 }
 
 export function spacePropToStyle(propKey: string, propValue: any) {

@@ -1,4 +1,5 @@
 import { StyliPlugin, Theme, StyliColor } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
@@ -58,6 +59,16 @@ declare module '@styli/types' {
      * ```
      */
     bgSize?: string | boolean
+
+    /**
+     * Set backgroundRepeat
+     *
+     * @example
+     * ```tsx
+     * <View bgRepeat="no-repeat"></View>
+     * ```
+     */
+    bgRepeat?: CSS.Property.BackgroundRepeat | CSS.Property.BackgroundRepeat[] | boolean
 
     bgBlack?: boolean
 

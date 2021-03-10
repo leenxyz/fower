@@ -1,4 +1,5 @@
-import { Atom, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-z-index', () => {

@@ -1,4 +1,4 @@
-import { Atom } from '@styli/core'
+import { Atom } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-overflow', () => {
@@ -8,18 +8,39 @@ describe('styli-plugin-overflow', () => {
   it('isMatch', () => {
     expect(isMatch!('overflow')).toEqual(true)
     expect(isMatch!('overflowX')).toEqual(true)
-    expect(isMatch!('oHidden')).toEqual(true)
-    expect(isMatch!('oxVisible')).toEqual(true)
-    expect(isMatch!('oyScroll')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'overflow', propValue: 'scroll' } as Atom
-    const newAtom1 = { propKey: 'overflow', propValue: 'scroll', style: { overflow: 'scroll' } }
+    const atom1: Atom = {
+      propKey: 'overflow',
+      propValue: 'scroll',
+      key: 'overflow',
+      type: 'style',
+      style: {},
+    }
+    const newAtom1: Atom = {
+      propKey: 'overflow',
+      propValue: 'scroll',
+      style: { overflow: 'scroll' },
+      key: 'overflow',
+      type: 'style',
+    }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'oxVisible', propValue: true } as Atom
-    const newAtom2 = { propKey: 'oxVisible', propValue: true, style: { overflowX: 'visible' } }
+    const atom2: Atom = {
+      propKey: 'overflowX',
+      propValue: 'scroll',
+      key: 'overflowX',
+      type: 'style',
+      style: {},
+    }
+    const newAtom2: Atom = {
+      propKey: 'overflowX',
+      propValue: 'scroll',
+      style: { overflowX: 'scroll' },
+      key: 'overflowX',
+      type: 'style',
+    }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })
