@@ -21,6 +21,18 @@ declare module '@styli/types' {
     bg?: BgColor | BgColorFn
 
     /**
+     * Set background
+     * 
+     * same with bg
+     *
+     * @example
+     * ```tsx
+     * <View background="url(https://styli.js.org/img/logo.png) center no-repeat"></View>
+     * ```
+     */
+    background?: BgColor | BgColorFn
+
+    /**
      * Set backgroundColor
      *
      * @example
