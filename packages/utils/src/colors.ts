@@ -20,17 +20,46 @@ export function transparentize(color: string, amount: number = 0) {
   return opacityFn(color, -amount)
 }
 
-export function formatColor(value: string): string {
-  if (!value.includes('-')) return value
-  const result = value.match(/^(.+)-([TOLDtold])?(\d{0,3})?$/)
-  if (!result) return value
-  const [, color, type, amountStr] = result
-  const amount = Number(amountStr)
+/**
+ * @example
+ * ```
+ * formatColor('#000-T10')
+ * formatColor('#000', 'T10')
+ * ```
+ */
+export function formatColor(value: string, postFix?: string): string {
 
-  if (!type) return type
+  // #000, #000-T10, #000000, #000000-T10
+  const canFormat = /^#([A-F0-9]{3}){1,2}(-[TODL]\d+)?$/i.test(value)
+
+  if (!canFormat && !postFix) return value
+
+  const { color, type, amount } = getColorParm(value, postFix)
+
   if (/^t$/i.test(type)) return transparentize(color, amount)
   if (/^o$/i.test(type)) return opacify(color, amount)
   if (/^d$/i.test(type)) return toHex(darken(color, amount))
   if (/^l$/i.test(type)) return toHex(lighten(color, amount))
   return color
+}
+
+function getColorParm(value: string, postFix?: string) {
+  let color = value
+  let type = 't'
+  let amount = ''
+
+  if (postFix) {
+    const result = postFix.match(/^([TOLD])?(\d{0,3})?$/i) || []
+    type = result[1]
+    amount = result[2]
+  }
+
+  if (value.includes('-')) {
+    const result = value.match(/^(.+)-([TOLD])?(\d{0,3})?$/i) || []
+    color = result[1]
+    type = result[2]
+    amount = result[3]
+  }
+
+  return { color, type, amount: Number(amount) }
 }

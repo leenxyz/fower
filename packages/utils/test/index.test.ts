@@ -6,12 +6,12 @@ import {
   isNumber,
   isValidPropValue,
   isEmptyObj,
-  hexToRgba,
   isPercentNumber,
   cssKeyToStyleKey,
   isPlainType,
   getCssObjectPaths,
   mergeCssObjectPaths,
+  formatColor
 } from '../src'
 
 describe('styli-utils', () => {
@@ -47,9 +47,12 @@ describe('styli-utils', () => {
     expect(isEmptyObj(null)).toEqual(true)
   })
 
-  it('hexToRgba', () => {
-    expect(hexToRgba('#FFF')).toEqual('rgba(255,255,255,1)')
-    expect(hexToRgba('#000', '78')).toEqual('rgba(0,0,0,.78)')
+  it('formatColor', () => {
+    expect(formatColor('#000-T10')).toEqual('rgba(0,0,0,0.9)')
+    expect(formatColor('#000000-T10')).toEqual('rgba(0,0,0,0.9)')
+    expect(formatColor('#000', 'T10')).toEqual('rgba(0,0,0,0.9)')
+    expect(formatColor('#000000', 'T10')).toEqual('rgba(0,0,0,0.9)')
+    expect(formatColor('url(https://www.baidu.com)')).toEqual('url(https://www.baidu.com)')
   })
 
   it('isPercentNumber', () => {
