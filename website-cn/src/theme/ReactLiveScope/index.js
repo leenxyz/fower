@@ -1,11 +1,15 @@
-import React, { forwardRef } from 'react'
-import { createStyle } from '@styli/core'
-import { styled } from '@styli/styled'
-import { Text, View, Image, Anchor } from '@styli/react'
-
-const Heading = styled('h2', { lineHeight: '1em' })
-const Button = styled('button')
-const Input = styled('input')
+import React from 'react'
+import {
+  createStyle,
+  styled,
+  Heading,
+  Button,
+  Input,
+  Text,
+  View,
+  Anchor,
+  Image,
+} from '@styli/react'
 
 const ButtonExample = (props) => (
   <button

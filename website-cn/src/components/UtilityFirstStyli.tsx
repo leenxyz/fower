@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, Text } from '@styli/react'
+import { View, Text, Image } from '@styli/react'
 
 export const UtilityFirstStyli = () => {
   return (

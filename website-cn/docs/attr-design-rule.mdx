@@ -3,7 +3,7 @@ id: attr-design-rule
 title: 属性设计规范
 ---
 
-为了减少记忆成本，Styli 支持将 style 支持的属性直接作为组件属性，同时还支持大量简写属性进行快捷开发。
+为了减少使用成本，Styli 支持大量简写属性进行快捷开发。
 
 ```tsx live
 <Wrapper>
@@ -37,18 +37,17 @@ title: 属性设计规范
 | textTransform                            | `<View uppercase />` | 文本转换  |
 | [color](typography#文字颜色)             | `<View red />`       | 文字颜色  |
 
-### 属性值添加前缀作为属性
+### 属性值添加前缀/后缀作为属性
 
-当属性值与其他属性值或 DOM 属性冲突时，则添加属性前缀
+当属性值与其他属性值或 DOM 属性冲突时，则添加属性前缀/后缀
 
-| 属性                                           | 实例                        | 表示       |
-| ---------------------------------------------- | --------------------------- | ---------- |
-| [overflow](overflow)                           | `<View oHidden oxScroll />` | 溢出       |
-| [cursor](cursor)                               | `<View cursorAuto />`       | 指针       |
-| [justifyContent](flex-box#主轴-justify-conten) | `<View justifyStart />`     | 主轴排序   |
-| [alignItems](flex-box#交叉轴-align-items)      | `<View itemsStart />`       | 交叉轴排序 |
-| [outline](outline)                             | `<View outlineNone />`      | 轮廓       |
-| [textAlign](typography#文本对齐)               | `<View textCenter />`       | 文本对齐   |
+| 属性                                           | 实例                    | 表示       |
+| ---------------------------------------------- | ----------------------- | ---------- |
+| [cursor](cursor)                               | `<View cursorAuto />`   | 指针       |
+| [justifyContent](flex-box#主轴-justify-conten) | `<View justifyStart />` | 主轴排序   |
+| [alignItems](flex-box#交叉轴-align-items)      | `<View itemsStart />`   | 交叉轴排序 |
+| [outline](outline)                             | `<View outlineNone />`  | 轮廓       |
+| [textAlign](typography#文本对齐)               | `<View textCenter />`   | 文本对齐   |
 
 ## 单字符属性
 
