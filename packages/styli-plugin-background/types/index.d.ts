@@ -43,6 +43,18 @@ declare module '@styli/types' {
     bgColor?: BgColor | BgColorFn
 
     /**
+     * Set backgroundColor
+     *
+     * same with bgColor
+     * 
+     * @example
+     * ```tsx
+     * <View backgroundColor="red"></View>
+     * ```
+     */
+    backgroundColor?: BgColor | BgColorFn
+
+    /**
      * Set backgroundImage
      *
      * @example
@@ -53,14 +65,38 @@ declare module '@styli/types' {
     bgImg?: string | boolean
 
     /**
+     * Set backgroundImage
+     * 
+     * same with bgImg
+     *
+     * @example
+     * ```tsx
+     * <View backgroundImage="https://styli.js.org/img/logo.png"></View>
+     * ```
+     */
+    backgroundImage?: string | boolean
+
+    /**
      * Set backgroundPosition
      *
      * @example
      * ```tsx
-     * <View bgPos="https://styli.js.org/img/logo.png"></View>
+     * <View bgPos="top left"></View>
      * ```
      */
     bgPos?: string | boolean
+
+    /**
+     * Set backgroundPosition
+     * 
+     * same with bgPos
+     *
+     * @example
+     * ```tsx
+     * <View backgroundPosition="top left"></View>
+     * ```
+     */
+    backgroundPosition?: string | boolean
 
     /**
      * Set backgroundSize
@@ -73,6 +109,18 @@ declare module '@styli/types' {
     bgSize?: string | boolean
 
     /**
+     * Set backgroundSize
+     * 
+     * same with bgSize
+     *
+     * @example
+     * ```tsx
+     * <View backgroundSize="100% 100%"></View>
+     * ```
+     */
+    backgroundSize?: string | boolean
+
+    /**
      * Set backgroundRepeat
      *
      * @example
@@ -81,6 +129,18 @@ declare module '@styli/types' {
      * ```
      */
     bgRepeat?: CSS.Property.BackgroundRepeat | CSS.Property.BackgroundRepeat[] | boolean
+
+    /**
+     * Set backgroundRepeat
+     * 
+     * same with bgRepeat
+     *
+     * @example
+     * ```tsx
+     * <View backgroundRepeat="no-repeat"></View>
+     * ```
+     */
+    backgroundRepeat?: CSS.Property.BackgroundRepeat | CSS.Property.BackgroundRepeat[] | boolean
 
     bgBlack?: boolean
 
