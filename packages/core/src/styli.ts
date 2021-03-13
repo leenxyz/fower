@@ -76,9 +76,8 @@ class Styli {
   }
 
   isStyliColor = (value: string = '') => {
-    if (!value) return false
     const colors = this.getColors()
-    const [prefix] = value.split('-')
+    const [prefix] = value?.split('-') || []
     return !!colors[downFirst(prefix)]
   }
 
@@ -86,15 +85,13 @@ class Styli {
     return this.getTheme('colors') || {}
   }
 
-  getColorValue = (value: string = ''): string => {
+  getStyliColorValue = (value: string): string => {
     if (!this.isStyliColor(value)) return value
-
     const colors = this.getColors()
-    if (!value.includes('-')) return colors[downFirst(value)]
-
-    const [prefix, postfix] = value.split('-')
-    let color = colors[prefix] ? colors[prefix] : prefix
-    return formatColor(postfix ? `${color}-${postfix}` : color)
+    const [prefix, postfix] = (value || '').split('-') || []
+    const colorName = downFirst(prefix)
+    const color = colors[colorName] || prefix
+    return formatColor(color, postfix)
   }
 
   use = (...plugins: StyliPlugin[]) => {

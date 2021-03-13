@@ -1,36 +1,28 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { formatColor } from '@styli/utils'
 
 export function isColorKey(key: string) {
+
+  if (key === 'c') return true
+
+  // color colorBrand...
+  if (/^color(Brand|Primary|Secondary|Info|Warning|Error|Success)?$/i.test(key)) return true // colorPrimary | color="xxx"
+
+  // red10...
   const Colors = styli.getColors()
-
-  if (key === 'c') return true // c="#999"
-
   if (!!Colors[key]) return true //  red20,blue50...
 
-  if (/^color(.+)?$/.test(key)) return true // colorPrimary | color="xxx"
-
-  /** green20-O20,green20-D20,green20-L20.... */
-  const [, colorName = ''] = key.match(/^(.+)-([TOLDtold])?(\d{0,3})?$/) || []
+  // green20-O20,green20-D20,green20-L20..
+  const [, colorName = ''] = key.match(/^(.+)-([TOLD])?(\d{0,3})?$/i) || []
   if (Colors[colorName]) return true
   return false
 }
 
-export function colorPropToStyle(prop: string, propValue: any): any {
-  const Colors = styli.getColors()
-
-  if (prop === 'color' || prop === 'c') {
-    const [prefix, postfix] = propValue.split('-')
-    const color = Colors[prefix] || prefix
-    return { color: postfix ? formatColor(`${color}-${postfix}`) : color }
+export function colorPropToStyle(propKey: string, propValue: any): any {
+  if (propKey === 'color' || propKey === 'c') {
+    return { color: styli.getStyliColorValue(propValue) }
   }
-
-  const [colorType, postfix] = prop.split('-')
-  const colorName = colorType.replace(/^color/i, '').toLowerCase()
-  const color = Colors[colorName] || colorName
-
-  return { color: postfix ? formatColor(`${color}-${postfix}`) : color }
+  return { color: styli.getStyliColorValue(propKey.replace(/^color/i, '')) }
 }
 
 export default (): StyliPlugin => {

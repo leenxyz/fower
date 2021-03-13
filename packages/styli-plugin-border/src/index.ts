@@ -25,7 +25,7 @@ function formatBorderValue(value: string) {
   const result = value.split(/\s+/)
   // if not like: 1px solid #555
   if (result.length !== 3) return value
-  result[2] = styli.getColorValue(result[2])
+  result[2] = styli.getStyliColorValue(result[2])
   return result.join(' ')
 }
 
@@ -63,11 +63,11 @@ function borderPropToStyle(prop: string, propValue: any) {
 
   /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
   if (styli.isStyliColor(postfix)) {
-    return { borderColor: styli.getColorValue(postfix) }
+    return { borderColor: styli.getStyliColorValue(postfix) }
   }
 
   if (/^color/i.test(postfix)) {
-    return { [prop]: styli.getColorValue(propValue) }
+    return { [prop]: styli.getStyliColorValue(propValue) }
   }
 
   return {
