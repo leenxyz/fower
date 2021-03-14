@@ -24,5 +24,33 @@ describe('styli-plugin-debug', () => {
     }
 
     expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+
+    const atom1 = { propKey: 'debugAll', propValue: true } as Atom
+
+
+    const newAtom1 = {
+      propKey: 'debugAll',
+      propValue: true,
+      style: {
+        '*': { border: '1px solid gold' }
+      },
+      type: 'global',
+    }
+
+    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+
+    const atom2 = { propKey: 'debugChildren', propValue: true } as Atom
+
+    const newAtom2 = {
+      propKey: 'debugChildren',
+      propValue: true,
+      style: {
+        border: '1px solid gold',
+        '> *': { border: '1px solid gold' },
+      },
+      type: 'prefix',
+    }
+
+    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
   })
 })

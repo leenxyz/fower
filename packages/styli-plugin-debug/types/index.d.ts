@@ -1,4 +1,4 @@
-import { StyliPlugin, CSSObject } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
 
 declare const _default: () => StyliPlugin
 export default _default
@@ -12,14 +12,8 @@ declare module '@styli/types' {
      *
      * debug is `.autoClassName{ border: 1px solid gold }`
      *
-     * [NOTE]: development mode only. auto remove in production mode
-     *
      * @example
      * ```tsx
-     * styli.configure({
-     *   dev: process.env.NODE_ENV === 'develop'
-     * })
-     *
      * <View debug></View>
      * ```
      */
@@ -32,14 +26,8 @@ declare module '@styli/types' {
      *
      * debugChildren is `.autoClassName{ border: 1px solid gold, '> *': { border: 1px solid gold } }`
      *
-     * [NOTE]: development mode only. auto remove in production mode
-     *
      * @example
      * ```tsx
-     * styli.configure({
-     *   dev: process.env.NODE_ENV === 'develop'
-     * })
-     *
      * <View debugChildren></View>
      * ```
      */
@@ -50,16 +38,10 @@ declare module '@styli/types' {
      *
      * Styli will auto add border to all element.
      *
-     * debugAll is `*{ border: 1px solid gold }`
-     *
-     * [NOTE]: development mode only. auto remove in production mode
+     * debugAll is `* { border: 1px solid gold }`
      *
      * @example
      * ```tsx
-     * styli.configure({
-     *   dev: process.env.NODE_ENV === 'develop'
-     * })
-     *
      * <View debugAll></View>
      * ```
      */

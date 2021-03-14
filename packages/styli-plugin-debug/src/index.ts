@@ -4,31 +4,45 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-debug',
     isMatch(key) {
-      return /^debug([Cc]hildren|[Aa]ll)?/.test(key)
+      return /^debug(Children|All)?/i.test(key)
     },
     onAtomStyleCreate(atom) {
       const propValueIsTrue = atom.propValue === true
 
-      const stylesMap: any = {
-        debug: { border: '1px solid gold' },
-        debugchildren: {
-          border: '1px solid gold',
-          '> *': { border: '1px solid gold' },
-        },
-        debugall: { '*': { border: '1px solid gold' } },
-      }
+      const { propKey } = atom
+      const { style, type } = getDebugConf(propKey.replace('debug', '').toLowerCase())
 
-      const typesMap: any = {
-        debug: 'prefix',
-        debugchildren: 'prefix',
-        debugall: 'global',
-      }
-      const key = atom.propKey.toLowerCase()
-
-      atom.type = typesMap[key]
-      atom.style = propValueIsTrue ? stylesMap[key] : (atom.propValue as CSSObject)
+      atom.type = type as any
+      atom.style = propValueIsTrue ? style : (atom.propValue as CSSObject)
 
       return atom
     },
+  }
+}
+
+function getDebugConf(key: string) {
+  switch (key) {
+    case 'children':
+      return {
+        style: {
+          border: '1px solid gold',
+          '> *': { border: '1px solid gold' },
+        },
+        type: 'prefix'
+      }
+    case 'all':
+      return {
+        style: {
+          '*': { border: '1px solid gold' }
+        },
+        type: 'global'
+      }
+    default:
+      return {
+        style: {
+          border: '1px solid gold'
+        },
+        type: 'prefix'
+      }
   }
 }
