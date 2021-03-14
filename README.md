@@ -9,6 +9,8 @@ A Atomic CSS in JS library for rapid UI development.
 [![NPM Downloads](https://img.shields.io/npm/dm/@styli/core.svg?style=flat)](https://www.npmjs.com/package/@styli/core)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+[English](README.md) | [中文](docs/README_CN.md)
+
 ## Quick Start
 
 - [Use with React](/docs/use-with-react)
