@@ -3,7 +3,7 @@ import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
-  return /^lh([Nn]one|[Tt]ight|[Ss]nug|[Nn]ormal|[Rr]elaxed|[Ll]oose|-.+)?$/.test(key)
+  return /^lh(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
