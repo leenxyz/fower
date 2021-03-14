@@ -17,7 +17,7 @@ function bgPropToStyle(propKey: string, propValue: any) {
     return { backgroundColor: styli.getStyliColorValue(propValue) }
   }
 
-  return { backgroundColor: styli.getStyliColorValue(propValue.replace(/^bg/i, '')) }
+  return { backgroundColor: styli.getStyliColorValue(propKey.replace(/^bg/i, '')) }
 }
 
 export default (): StyliPlugin => {
