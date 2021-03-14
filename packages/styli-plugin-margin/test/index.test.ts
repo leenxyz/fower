@@ -54,5 +54,21 @@ describe('styli-plugin-margin', () => {
       type: 'style',
     }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+
+    const atom4: Atom = {
+      propKey: 'mx--10rem',
+      propValue: true,
+      key: 'mx--10rem',
+      type: 'style',
+      style: {},
+    }
+    const newAtom4: Atom = {
+      key: 'mx--10rem',
+      propKey: 'mx--10rem',
+      propValue: true,
+      style: { marginLeft: '-10rem', marginRight: '-10rem' },
+      type: 'style',
+    }
+    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })
