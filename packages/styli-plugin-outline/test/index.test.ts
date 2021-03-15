@@ -48,17 +48,17 @@ describe('styli-plugin-outline', () => {
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
-      propKey: 'outlineOffset',
+      propKey: 'outlineOffset-2px',
       propValue: true,
-      key: 'outlineOffset',
+      key: 'outlineOffset-2px',
       type: 'style',
       style: {},
     }
     const newAtom3: Atom = {
-      propKey: 'outlineOffset',
+      propKey: 'outlineOffset-2px',
       propValue: true,
-      style: { outlineOffset: '1px' },
-      key: 'outlineOffset',
+      style: { outlineOffset: '2px' },
+      key: 'outlineOffset-2px',
       type: 'style',
     }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)

@@ -3,18 +3,22 @@ import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isOutLineKey(key: string) {
-  const isOutlineNone = /^outline[nN]one$/.test(key)
-  const isOutlineOffset = /^outline[Oo]ffset(-.+)?$/.test(key)
-  const isOutline = /^outline$/.test(key)
-  return isOutlineNone || isOutlineOffset || isOutline
+  return key === 'outline' || isOutLineNone(key) || isOutLineOffset(key)
+}
+
+function isOutLineNone(key: string) {
+  return /^outlineNone$/i.test(key)
+}
+
+function isOutLineOffset(key: string) {
+  return /^outlineOffset(-.+)?$/i.test(key)
 }
 
 export function outLinePropToStyle(propKey: string, propValue: any): any {
-  const [, keyIsNone] = propKey.match(/^outline([nN]one)$/) || []
-  if (keyIsNone) return { outline: 'none' }
+  if (isOutLineNone(propKey)) return { outline: 'none' }
 
-  const [, keyIsOffset, , offsetValue] = propKey.match(/^outline([Oo]ffset)(-(.+))?$/) || []
-  if (keyIsOffset) {
+  if (isOutLineOffset(propKey)) {
+    const [, , offsetValue] = propKey.match(/^outlineOffset(-(.+))?$/i) || []
     return {
       outlineOffset: isValidPropValue(propValue) ? propValue : styli.getValue(offsetValue || 1),
     }
