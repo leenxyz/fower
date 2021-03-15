@@ -1,13 +1,13 @@
 import { StyliPlugin } from '@styli/types'
 
-export const overFlowTypes = ['visible', 'hidden', 'scroll']
-
 export function isOverFlowKey(key: string) {
-  return /^overflow[XY]?$/.test(key)
+  return /^overflow[XY]?$/i.test(key)
 }
 
 export function overFlowPropToStyle(prop: string, propValue: any): any {
-  return { [prop]: propValue }
+  if (prop === 'overflow') return { [prop]: propValue }
+  const key = prop.replace(/[a-z]$/, last => last.toUpperCase())
+  return { [key]: propValue }
 }
 
 export default (): StyliPlugin => {
