@@ -12,39 +12,39 @@ export default () => {
         Background
       </Box>
 
-      <View f-20 bgRed50>
+      <View f-20 bgRed500>
         BgRed50
       </View>
 
-      <View f-20 bgRed50-T20>
+      <View f-20 bgRed500-T20>
         BgRed50-T20
       </View>
 
-      <View f-20 bgRed50-T20 bgRed50-D20--hover>
+      <View f-20 bgRed500-T20 bgRed500-D20--hover>
         BgRed50-D20--hover
       </View>
 
-      <View f-20 bgRed50-T30 bgRed50-D30--hover={false}>
+      <View f-20 bgRed500-T30 bgRed500-D30--hover={false}>
         BgRed50-D30--hover=false
       </View>
 
-      <View f-20 bgColor="#000-T40">
+      <View f-20 bg="#000-T40">
         bg #000-T40
       </View>
 
-      <View f-20 bgColor="rgba(1,1,1,0.1)-O40">
+      <View f-20 bg="rgba(1,1,1,0.1)-O40">
         bgColor rgba(1,1,1,0.1)-O40
       </View>
 
-      <View f-20 bgRed50 bgGreen50--hover>
+      <View f-20 bgRed500 bgGreen50--hover>
         bgGreen50--hover
       </View>
 
-      <View f-20 bg="green30">
+      <View f-20 bg="green300">
         bg="green30"
       </View>
 
-      <View f-20 bg="green30-D20">
+      <View f-20 bg="green300-D20">
         bg="green30-D20"
       </View>
 

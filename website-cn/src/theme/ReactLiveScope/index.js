@@ -28,7 +28,7 @@ const ButtonExample = (props) => (
 const Wrapper = (props) => {
   const { children, ...rest } = props
   return (
-    <View p-20 bgGray10 evenly f-20 centerY {...rest}>
+    <View p-20 bgGray10 toEvenly f-20 centerY {...rest}>
       {children}
     </View>
   )

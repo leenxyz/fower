@@ -5,7 +5,7 @@ export const LineHeight = () => {
   return (
     <View f-16 borderGray20-1 p-20>
       <View lhNone mb-20>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhNone
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
@@ -13,7 +13,7 @@ export const LineHeight = () => {
         voluptatum quae eum fugit earum.
       </View>
       <View lhTight mb-20>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhTight
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
@@ -21,7 +21,7 @@ export const LineHeight = () => {
         voluptatum quae eum fugit earum.
       </View>
       <View lhSnug mb-20>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhSnug
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
@@ -29,7 +29,7 @@ export const LineHeight = () => {
         voluptatum quae eum fugit earum.
       </View>
       <View lhNormal mb-20>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhNormal
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
@@ -37,7 +37,7 @@ export const LineHeight = () => {
         voluptatum quae eum fugit earum.
       </View>
       <View lhRelaxed mb-20>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhRelaxed
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet
@@ -45,7 +45,7 @@ export const LineHeight = () => {
         voluptatum quae eum fugit earum.
       </View>
       <View lhLoose>
-        <View gray60 f-14 mb-4>
+        <View gray600 f-14 mb-4>
           lhLoose
         </View>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet

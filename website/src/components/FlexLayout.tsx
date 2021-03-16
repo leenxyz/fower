@@ -24,12 +24,12 @@ class LayoutEntity {
 
   @field({
     label: 'Layout Alignment',
-    value: ['centerX'],
+    value: ['toCenterX'],
     component: 'Checkbox',
     enum: [
       { label: 'center', value: 'center' },
-      { label: 'centerX', value: 'centerX' },
-      { label: 'centerY', value: 'centerY' },
+      { label: 'toCenterX', value: 'toCenterX' },
+      { label: 'toCenterY', value: 'toCenterY' },
       { label: 'left', value: 'left' },
       { label: 'top', value: 'top' },
       { label: 'right', value: 'right' },
@@ -73,13 +73,13 @@ export const FlexLayout = () => {
   return (
     <View>
       <View bgGray30 h-300 {...containerProps}>
-        <View s-50 bgBlue30 center>
+        <View s-50 bgBlue30 toCenter>
           A
         </View>
-        <View s-120 bgGreen30 center>
+        <View s-120 bgGreen30 toCenter>
           B
         </View>
-        <View s-80 bgOrange30 center>
+        <View s-80 bgOrange30 toCenter>
           C
         </View>
       </View>

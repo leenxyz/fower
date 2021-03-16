@@ -23,13 +23,13 @@ import { View, Text, Image } from '@styli/react'
 
 export default () => {
   return (
-    <View centerY p-10 w-260 bgWhite rounded-10 shadowMD>
+    <View toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
       <Image circle-48 src="/img/jobs.jpg" />
       <View ml-10>
         <View f-20 fontBold>
           Steve Jobs
         </View>
-        <Text gray80>Co-founder of Apple Inc.</Text>
+        <Text gray800>Co-founder of Apple Inc.</Text>
       </View>
     </View>
   )
@@ -40,13 +40,13 @@ The code above will build the following UI:
 
 ```jsx live
 <View bgGray10 p6>
-  <View centerY p-10 w-260 bgWhite rounded-10 shadowMD>
+  <View toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
     <Image circle-48 src="/img/jobs.jpg" />
     <View ml-10>
       <View f-20 fontBold>
         Steve Jobs
       </View>
-      <Text gray80>Co-founder of Apple Inc.</Text>
+      <Text gray800>Co-founder of Apple Inc.</Text>
     </View>
   </View>
 </View>
@@ -103,7 +103,7 @@ export const Input = styled('input')
 Atomic Props can also be used directly in html elements. In other words, you can directly add Atomic Props to html tags, the code is similar to the following:
 
 ```jsx
-<div p6 f5 bgRed20>
+<div p6 f5 bgRed200>
   Use styli in HTML tag
 </div>
 ```
@@ -130,7 +130,7 @@ import React from 'react'
 
 export default () => {
   return (
-    <div p6 f5 bgRed20>
+    <div p6 f5 bgRed200>
       Use styli with Babel Preset
     </div>
   )
