@@ -78,7 +78,7 @@ class Styli {
   isStyliColor = (value: string = '') => {
     const colors = this.getColors()
     const [prefix] = value?.split('-') || []
-    return !!colors[downFirst(prefix)]
+    return !!colors[downFirst(prefix)] || /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(prefix)
   }
 
   getColors = () => {
@@ -87,6 +87,7 @@ class Styli {
 
   getStyliColorValue = (value: string): string => {
     if (!this.isStyliColor(value)) return value
+
     const colors = this.getColors()
     const [prefix, postfix] = (value || '').split('-') || []
     const colorName = downFirst(prefix)
