@@ -7,23 +7,23 @@ describe('styli-plugin-layout-engine', () => {
   it('isMatch', () => {
     expect(isMatch!('row')).toEqual(true)
     expect(isMatch!('column')).toEqual(true)
-    expect(isMatch!('center')).toEqual(true)
-    expect(isMatch!('centerX')).toEqual(true)
-    expect(isMatch!('centerY')).toEqual(true)
-    expect(isMatch!('evenly')).toEqual(true)
-    expect(isMatch!('around')).toEqual(true)
-    expect(isMatch!('between')).toEqual(true)
-    expect(isMatch!('bottom')).toEqual(true)
-    expect(isMatch!('top')).toEqual(true)
-    expect(isMatch!('left')).toEqual(true)
-    expect(isMatch!('right')).toEqual(true)
+    expect(isMatch!('toCenter')).toEqual(true)
+    expect(isMatch!('toCenterX')).toEqual(true)
+    expect(isMatch!('toCenterY')).toEqual(true)
+    expect(isMatch!('toEvenly')).toEqual(true)
+    expect(isMatch!('toAround')).toEqual(true)
+    expect(isMatch!('toBetween')).toEqual(true)
+    expect(isMatch!('toBottom')).toEqual(true)
+    expect(isMatch!('toTop')).toEqual(true)
+    expect(isMatch!('toLeft')).toEqual(true)
+    expect(isMatch!('toRight')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
-    const sheet1 = { props: { row: true, center: true } } as any
-    const atom1 = { propKey: 'center', propValue: true } as Atom
+    const sheet1 = { props: { row: true, toCenter: true } } as any
+    const atom1 = { propKey: 'toCenter', propValue: true } as Atom
     const newAtom1 = {
-      propKey: 'center',
+      propKey: 'toCenter',
       propValue: true,
       style: {
         justifyContent: 'center',
