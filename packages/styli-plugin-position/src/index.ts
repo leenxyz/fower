@@ -5,10 +5,16 @@ import { isValidPropValue } from '@styli/utils'
 export const positionKeys = ['static', 'fixed', 'absolute', 'relative', 'sticky']
 
 export function isPositionKey(key: string) {
-  return /^(top|right|bottom|left)(-.+)?$/gi.test(key) || positionKeys.includes(key)
+  return (
+    /^(top|right|bottom|left)(-.+)?$/gi.test(key) ||
+    positionKeys.includes(key) ||
+    key === 'position'
+  )
 }
 
 export function positionPropToStyle(prop: string, propValue: any): any {
+  if (prop === 'position') return { position: propValue }
+
   /** @example absolute, relative  */
   if (positionKeys.includes(prop)) return { position: prop }
 

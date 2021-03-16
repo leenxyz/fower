@@ -13,10 +13,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View position="block"></View>
+     * <View position="absolute"></View>
      * ```
      */
-    display?: CSS.Property.Position | CSS.Property.Position[] | Fn
+    position?: CSS.Property.Position | CSS.Property.Position[] | Fn
 
     /**
      * Set position to static
