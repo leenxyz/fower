@@ -43,18 +43,87 @@ declare module '@styli/types' {
      */
     toCenterY?: boolean
 
+    /**
+     * Make all element align to left, either row or column
+     * 让所以有元素靠左对齐，不管是row还是column布局
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toLeft></View>
+     * <View toLeft toBottom></View>
+     * ```
+     */
     toLeft?: boolean
 
+    /**
+     * Make all element align to right, either row or column
+     * 让所以有元素靠右对齐，不管是row还是column布局
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toRight></View>
+     * <View toRight toBottom></View>
+     * ```
+     */
     toRight?: boolean
 
+    /**
+     * Make all element align to top, either row or column
+     * 让所以有元素靠上对齐，不管是row还是column布局
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toTop></View>
+     * ```
+     */
     toTop?: boolean
 
+    /**
+     * Make all element align to bottom, either row or column
+     * 让所以有元素靠下对齐，不管是row还是column布局
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toBottom></View>
+     * ```
+     */
     toBottom?: boolean
 
+    /**
+     * Make all element align with flex between, either row or column
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toBetween></View>
+     * ```
+     */
     toBetween?: boolean
 
+    /**
+     * Make all element align with flex around, either row or column
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toAround></View>
+     * ```
+     */
     toAround?: boolean
 
+    /**
+     * Make all element align with flex evenly, either row or column
+     *
+     * @example
+     *
+     * ```tsx
+     * <View toEvenly></View>
+     * ```
+     */
     toEvenly?: boolean
 
     toStretch?: boolean
