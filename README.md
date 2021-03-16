@@ -34,3 +34,9 @@ Frequently viewed docs:
 ## License
 
 [MIT License](https://github.com/forsigner/styli/blob/master/LICENSE)
+
+## TODO
+
+- styli-plugin-container
+- styli-plugin-box-sizing
+- styli-plugin-visibility

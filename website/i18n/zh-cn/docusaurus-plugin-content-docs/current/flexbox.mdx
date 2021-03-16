@@ -15,8 +15,8 @@ Flexbox 是一种用于按行或按列布局元素的一维布局方法 。元�
 
 ```jsx live
 <View row>
-  <View s-100 bgBlue30></View>
-  <View s-100 bgGreen30></View>
+  <View s-100 bgBlue300></View>
+  <View s-100 bgGreen300></View>
 </View>
 ```
 
@@ -25,9 +25,9 @@ Flexbox 是一种用于按行或按列布局元素的一维布局方法 。元�
 使用 justify{type} 和 align{type} 格式的 Props 可以控制 flex 容器内元素的对齐方式。
 
 ```jsx live
-<View row justifyEnd alignCenter>
-  <View s-100 bgBlue30></View>
-  <View s-100 bgGreen30></View>
+<View row justifyEnd itemsCenter>
+  <View s-100 bgBlue300></View>
+  <View s-100 bgGreen300></View>
 </View>
 ```
 
@@ -56,10 +56,10 @@ Flexbox 是一种用于按行或按列布局元素的一维布局方法 。元�
 
 ```jsx live
 <View row wrap>
-  <View h-100 w-240 bgBlue30></View>
-  <View h-100 w-240 bgGreen30></View>
-  <View h-100 w-240 bgYellow30></View>
-  <View h-100 w-240 bgRed30></View>
+  <View h-100 w-240 bgBlue300></View>
+  <View h-100 w-240 bgGreen300></View>
+  <View h-100 w-240 bgYellow300></View>
+  <View h-100 w-240 bgRed300></View>
 </View>
 ```
 
@@ -71,13 +71,13 @@ Styli 中 `flex` props 可以控制 `flex-grow`, `flex-shrink` 和 `flex-basis`�
 
 ```jsx live
 <View row wrap>
-  <View h-100 w-100 bgBlue30 center>
+  <View h-100 w-100 bgBlue300 toCenter>
     width: 100
   </View>
-  <View h-100 w-100 bgGreen30 center>
+  <View h-100 w-100 bgGreen300 toCenter>
     width: 100
   </View>
-  <View h-100 flex-1 bgYellow30 center>
+  <View h-100 flex-1 bgYellow300 toCenter>
     flex-1
   </View>
 </View>

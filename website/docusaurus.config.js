@@ -32,7 +32,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
 
-    // sidebarCollapsible: false,
+    sidebarCollapsible: false,
     disableSwitch: true,
 
     liveCodeBlock: {

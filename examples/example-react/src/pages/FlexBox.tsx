@@ -8,7 +8,7 @@ export default () => {
       <Box h-200 f-12 debugChildren row justifyBetween itemsEnd>
         <Box s-100>AAA</Box>
         <Box selfStretch>BBB</Box>
-        <Box s-100 center>
+        <Box s-100 toCenter>
           CCC
         </Box>
       </Box>

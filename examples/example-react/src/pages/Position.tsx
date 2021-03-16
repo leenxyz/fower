@@ -8,7 +8,7 @@ export default () => {
         Positon
       </Box>
 
-      <View s-200 debugChildren relative>
+      <View s-200 debugChildren position="relative">
         <View s-100></View>
       </View>
 

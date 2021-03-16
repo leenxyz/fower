@@ -22,17 +22,17 @@ margin 是高频率使用的属性，所以我们使用缩写。
 使用 `m-{size}` 格式的 Props 可以控制元素四周的 margin。
 
 ```jsx live
-<View bgGray10 left>
-  <View bgBlue30 s-100 m-0>
+<View bgGray100 toLeft>
+  <View bgBlue300 s-100 m-0>
     Hello
   </View>
-  <View bgBlue30 s-100 m={20}>
+  <View bgBlue300 s-100 m={20}>
     Hello
   </View>
-  <View bgBlue30 s-100 m="40px">
+  <View bgBlue300 s-100 m="40px">
     Hello
   </View>
-  <View bgBlue30 s-100 m="10px 20px">
+  <View bgBlue300 s-100 m="10px 20px">
     Hello
   </View>
 </View>
@@ -43,17 +43,17 @@ margin 是高频率使用的属性，所以我们使用缩写。
 使用 `m{t|r|b|l}-{size}` 格式的 Props 可以控制元素某一边的 margin。
 
 ```jsx live
-<View bgGray10 left>
-  <View ml-10 bgBlue30 s-100>
+<View bgGray100 toLeft>
+  <View ml-10 bgBlue300 s-100>
     Hello
   </View>
-  <View mt-10 bgTeal20 s-100>
+  <View mt-10 bgTeal200 s-100>
     Hello
   </View>
-  <View mr-10 bgRed20 s-100>
+  <View mr-10 bgRed200 s-100>
     Hello
   </View>
-  <View mb-10 bgYellow20 s-100>
+  <View mb-10 bgYellow200 s-100>
     Hello
   </View>
 </View>
@@ -64,7 +64,7 @@ margin 是高频率使用的属性，所以我们使用缩写。
 使用 `px-{size}` 格式的 Props 可以控制元素水平方向的 margin。
 
 ```jsx live
-<View bgBlue30 left>
+<View bgBlue300 toLeft>
   <View mx-10 s-100 bgBlue50>
     Hello
   </View>
@@ -76,7 +76,7 @@ margin 是高频率使用的属性，所以我们使用缩写。
 使用 `my-{size}` 格式的 Props 可以控制元素垂直方向的 margin。
 
 ```jsx live
-<View bgBlue30 left>
+<View bgBlue300 toLeft>
   <View my-10 s-100 bgBlue50>
     Hello
   </View>
@@ -107,12 +107,12 @@ margin 是高频率使用的属性，所以我们使用缩写。
 ```jsx live
 <Wrapper>
   <View s-100 debugChildren>
-    <View m-20-5 bgBlue30>
+    <View m-20-5 bgBlue300>
       Hello
     </View>
   </View>
   <View s-100 debugChildren>
-    <View m--20--5 bgBlue30>
+    <View m--20--5 bgBlue300>
       Hello
     </View>
   </View>
@@ -127,8 +127,8 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m-10 m--hover={5}>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m-10 m--hover={5}>
       hover
     </View>
   </View>
@@ -141,8 +141,8 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 mt={[20, 15, 10, 5]}>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 mt={[20, 15, 10, 5]}>
       media query
     </View>
   </View>
@@ -155,33 +155,33 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m1>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m1>
       m1
     </View>
   </View>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m2>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m2>
       m2
     </View>
   </View>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m3>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m3>
       m3
     </View>
   </View>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m4>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m4>
       m4
     </View>
   </View>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m5>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m5>
       m5
     </View>
   </View>
-  <View s-100 bgBlue30>
-    <View center bgBlue40 m6>
+  <View s-100 bgBlue300>
+    <View toCenter bgBlue40 m6>
       m6
     </View>
   </View>

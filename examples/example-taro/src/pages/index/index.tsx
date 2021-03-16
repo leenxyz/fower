@@ -30,7 +30,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View className="index" transform="revert" center>
+      <View className="index" transform="revert" toCenter>
         <Text>Hello world!</Text>
       </View>
     )

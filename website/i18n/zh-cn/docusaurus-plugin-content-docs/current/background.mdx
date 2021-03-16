@@ -20,9 +20,9 @@ title: background 背景
 
 ```jsx live
 <Wrapper>
-  <View s-100 bgGreen30></View>
-  <View s-100 bgBlue30></View>
-  <View s-100 bgPurple30></View>
+  <View s-100 bgGreen300></View>
+  <View s-100 bgBlue300></View>
+  <View s-100 bgPurple300></View>
 </Wrapper>
 ```
 
@@ -86,7 +86,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgBlue30 bgBlue50--hover>
+  <View toCenter s-100 bgBlue300 bgBlue50--hover>
     hover
   </View>
 </Wrapper>
@@ -98,11 +98,11 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center h-100 w-200 bgColor={['blue10', 'red30', 'yellow50', 'green70']}>
+  <View toCenter h-100 w-200 bgColor={['blue10', 'red30', 'yellow50', 'green70']}>
     media query
   </View>
   <View
-    center
+    toCenter
     h-100
     w-200
     bgImg="https://avatars2.githubusercontent.com/u/2668081"
@@ -118,8 +118,8 @@ styli 支持了大量常用的伪类。
 使用设计系统属性，让您的应用更有规范
 
 ```jsx live
-<View bgGray10 p-20 row>
-  <View center h-20 w9 bgBlue30>
+<View bgGray100 p-20 row>
+  <View toCenter h-20 w9 bgBlue300>
     w9
   </View>
 </View>

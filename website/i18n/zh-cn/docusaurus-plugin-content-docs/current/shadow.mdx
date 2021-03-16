@@ -9,7 +9,7 @@ title: shadow 阴影
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgWhite shadow="0 24px 48px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0,0,0,0.02)">
+  <View toCenter s-100 bgWhite shadow="0 24px 48px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0,0,0,0.02)">
     shadow
   </View>
 </Wrapper>
@@ -24,7 +24,7 @@ styli 支持了大量常用的伪类。
 ```jsx live
 <Wrapper>
   <View
-    center
+    toCenter
     s-100
     bgWhite
     shadow--hover="0 0 0 3px rgba(66, 153, 225, 0.5)"
@@ -33,7 +33,7 @@ styli 支持了大量常用的伪类。
     hover
   </View>
   <View
-    center
+    toCenter
     s-100
     bgWhite
     shadow---active="0 0 0 3px rgba(66, 153, 225, 0.5)"
@@ -53,7 +53,7 @@ styli 支持了大量常用的伪类。
   <View
     h-100
     w-200
-    center
+    toCenter
     shadow={[
       '0 1px 1px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0,0,0,0.01)',
       '0 0 0 3px rgba(66, 153, 225, 0.5)',
@@ -75,25 +75,25 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-50 bgWhite shadowXS>
+  <View toCenter s-50 bgWhite shadowXS>
     XS
   </View>
-  <View center s-60 bgWhite shadowSM>
+  <View toCenter s-60 bgWhite shadowSM>
     SM
   </View>
-  <View center s-70 bgWhite bgWhite shadowBase>
+  <View toCenter s-70 bgWhite bgWhite shadowBase>
     Base
   </View>
-  <View center s-80 bgWhite shadowMD>
+  <View toCenter s-80 bgWhite shadowMD>
     MD
   </View>
-  <View center s-90 bgWhite shadowLG>
+  <View toCenter s-90 bgWhite shadowLG>
     LG
   </View>
-  <View center s-100 bgWhite shadowXL>
+  <View toCenter s-100 bgWhite shadowXL>
     XL
   </View>
-  <View center s-110 bgWhite shadowXXL>
+  <View toCenter s-110 bgWhite shadowXXL>
     XXL
   </View>
 </Wrapper>

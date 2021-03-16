@@ -9,11 +9,11 @@ title: zIndex 层级
 
 ```tsx live
 <Wrapper>
-  <View s-100 bgBlue30 relative>
-    <View s-50 center bgBlue50 absolute zIndex-1>
+  <View s-100 bgBlue300 relative>
+    <View s-50 toCenter bgBlue50 absolute zIndex-1>
       big
     </View>
-    <View s-30 center bgBlue70 absolute zIndex-2>
+    <View s-30 toCenter bgBlue70 absolute zIndex-2>
       small
     </View>
   </View>
@@ -28,11 +28,11 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View s-100 bgBlue30 relative>
-    <View s-50 center bgBlue50 absolute zIndex-1>
+  <View s-100 bgBlue300 relative>
+    <View s-50 toCenter bgBlue50 absolute zIndex-1>
       big
     </View>
-    <View s-30 center bgBlue70 absolute zIndex--hover={2}>
+    <View s-30 toCenter bgBlue70 absolute zIndex--hover={2}>
       small
     </View>
   </View>
@@ -45,7 +45,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 zIndex={[1, 2, 3, 4]} bgBlue30>
+  <View toCenter s-100 zIndex={[1, 2, 3, 4]} bgBlue300>
     media query
   </View>
 </Wrapper>

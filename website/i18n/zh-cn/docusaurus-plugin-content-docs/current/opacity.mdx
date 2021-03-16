@@ -9,11 +9,11 @@ title: opacity 透明度
 
 ```jsx live
 <View row toCenter>
-  <View s-100 bgBlue30 opacity-20></View>
-  <View s-100 bgBlue30 opacity-40></View>
-  <View s-100 bgBlue30 opacity-60></View>
-  <View s-100 bgBlue30 opacity={80}></View>
-  <View s-100 bgBlue30 opacity-100></View>
+  <View s-100 bgBlue300 opacity-20></View>
+  <View s-100 bgBlue300 opacity-40></View>
+  <View s-100 bgBlue300 opacity-60></View>
+  <View s-100 bgBlue300 opacity={80}></View>
+  <View s-100 bgBlue300 opacity-100></View>
 </View>
 ```
 
@@ -25,7 +25,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgBlue30 opacity-100 opacity--hover={50}>
+  <View toCenter s-100 bgBlue300 opacity-100 opacity--hover={50}>
     hover
   </View>
 </Wrapper>
@@ -37,7 +37,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 opacity={[10, 30, 50, 70]} bgBlue30>
+  <View toCenter s-100 opacity={[10, 30, 50, 70]} bgBlue300>
     media query
   </View>
 </Wrapper>

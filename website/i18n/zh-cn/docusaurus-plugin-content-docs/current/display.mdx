@@ -9,7 +9,7 @@ title: display 显示
 
 ```tsx live
 <Wrapper>
-  <View display="block" s-100 bgBlue30>
+  <View display="block" s-100 bgBlue300>
     <View display="inline" s-50 bgBlue50></View>
   </View>
 </Wrapper>
@@ -21,7 +21,7 @@ Styli 提供了大量快捷属性方便开发者
 
 ```tsx live
 <Wrapper>
-  <View block s-100 bgBlue30>
+  <View block s-100 bgBlue300>
     <View inline bgBlue50>
       哈哈哈
     </View>
@@ -46,7 +46,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgBlue30 relative>
+  <View toCenter s-100 bgBlue300 relative>
     <View relative absolute--hover L-10 T-10 bgBlue50>
       hover
     </View>
@@ -60,7 +60,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 display={['fixed', 'absolute', 'relative', 'static']} bgBlue30>
+  <View toCenter s-100 display={['fixed', 'absolute', 'relative', 'static']} bgBlue300>
     media query
   </View>
 </Wrapper>

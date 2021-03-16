@@ -7,7 +7,7 @@ title: outline 轮廓
 
 ```jsx live
 <Wrapper>
-  <Input p2 outline="1px dotted red" bgGray20 bgWhite--focus />
+  <Input p2 outline="1px dotted red" bgGray200 bgWhite--focus />
 </Wrapper>
 ```
 
@@ -19,7 +19,7 @@ outlineNone 属性可以快速消除轮廓
 
 ```jsx live
 <Wrapper>
-  <Input p2 outlineNone bgGray20 bgWhite--focus />
+  <Input p2 outlineNone bgGray200 bgWhite--focus />
 </Wrapper>
 ```
 
@@ -29,7 +29,7 @@ outlineOffset 属性快速设置轮廓偏移量
 
 ```jsx live
 <Wrapper>
-  <Input p2 bgGray20 outlineOffset-10 outline="2px dotted red" />
+  <Input p2 bgGray200 outlineOffset-10 outline="2px dotted red" />
 </Wrapper>
 ```
 
@@ -41,7 +41,7 @@ styli 支持了大量常用的伪类。
 
 ```jsx live
 <Wrapper>
-  <View center s-100 bgBlue30 outline="1px dotted red" outlineNone--hover>
+  <View toCenter s-100 bgBlue30 outline="1px dotted red" outlineNone--hover>
     hover
   </View>
 </Wrapper>
@@ -54,10 +54,10 @@ styli 支持了大量常用的伪类。
 ```jsx live
 <Wrapper>
   <View
-    center
+    toCenter
     s-100
     outline={['1px dotted red', '2px dotted blue', '3px dotted yellow', '4px dotted green']}
-    bgBlue30
+    bgBlue300
   >
     media query
   </View>

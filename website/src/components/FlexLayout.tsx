@@ -42,71 +42,71 @@ import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
 
 export const FlexLayout = () => {
   return <div>flex haha</div>
-//   const result = useForm(LayoutEntity)
-//   const { state, helpers, actions } = result
-//   const alignment: string[] = helpers.getValue('alignment')
-//   const direction = helpers.getValue('direction')
+  //   const result = useForm(LayoutEntity)
+  //   const { state, helpers, actions } = result
+  //   const alignment: string[] = helpers.getValue('alignment')
+  //   const direction = helpers.getValue('direction')
 
-//   useEffect(() => {
-//     if (alignment.length == 1 && alignment[0] === 'center') {
-//       actions.setDisableds({ alignment: true })
-//       return
-//     }
-//     actions.setDisableds({ alignment: state.values.alignment.length == 2 })
-//   }, [alignment])
+  //   useEffect(() => {
+  //     if (alignment.length == 1 && alignment[0] === 'center') {
+  //       actions.setDisableds({ alignment: true })
+  //       return
+  //     }
+  //     actions.setDisableds({ alignment: state.values.alignment.length == 2 })
+  //   }, [alignment])
 
-//   const containerProps = alignment.reduce(
-//     (prev, cur) => ({
-//       ...prev,
-//       [cur]: true,
-//     }),
-//     { [direction]: true } as any,
-//   )
+  //   const containerProps = alignment.reduce(
+  //     (prev, cur) => ({
+  //       ...prev,
+  //       [cur]: true,
+  //     }),
+  //     { [direction]: true } as any,
+  //   )
 
-//   const propsString = `${direction} ${alignment.join(' ')}`
+  //   const propsString = `${direction} ${alignment.join(' ')}`
 
-//   const exampleCode = `<View bgGray30 h-300 ${propsString}>
-//   <View s-50 bgBlue30>A</View>
-//   <View s-120 bgGreen30>B</View>
-//   <View s-80 bgOrange30>C</View>
-// </View>`
+  //   const exampleCode = `<View bgGray30 h-300 ${propsString}>
+  //   <View s-50 bgBlue300>A</View>
+  //   <View s-120 bgGreen300>B</View>
+  //   <View s-80 bgOrange300>C</View>
+  // </View>`
 
-//   return (
-//     <View>
-//       <View bgGray30 h-300 {...containerProps}>
-//         <View s-50 bgBlue30 toCenter>
-//           A
-//         </View>
-//         <View s-120 bgGreen30 toCenter>
-//           B
-//         </View>
-//         <View s-80 bgOrange30 toCenter>
-//           C
-//         </View>
-//       </View>
-//       <EntityForm use={result}>
-//         <View left mt-20>
-//           <View mr-30>
-//             <Field name="direction"></Field>
-//           </View>
-//           <View>
-//             <Field name="alignment"></Field>
-//           </View>
-//         </View>
-//       </EntityForm>
-//       <Highlight {...defaultProps} theme={theme} code={exampleCode} language="jsx">
-//         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-//           <pre className={className} style={style}>
-//             {tokens.map((line, i) => (
-//               <div {...getLineProps({ line, key: i })}>
-//                 {line.map((token, key) => (
-//                   <span {...getTokenProps({ token, key })} />
-//                 ))}
-//               </div>
-//             ))}
-//           </pre>
-//         )}
-//       </Highlight>
-//     </View>
-//   )
+  //   return (
+  //     <View>
+  //       <View bgGray30 h-300 {...containerProps}>
+  //         <View s-50 bgBlue300 toCenter>
+  //           A
+  //         </View>
+  //         <View s-120 bgGreen300 toCenter>
+  //           B
+  //         </View>
+  //         <View s-80 bgOrange300 toCenter>
+  //           C
+  //         </View>
+  //       </View>
+  //       <EntityForm use={result}>
+  //         <View left mt-20>
+  //           <View mr-30>
+  //             <Field name="direction"></Field>
+  //           </View>
+  //           <View>
+  //             <Field name="alignment"></Field>
+  //           </View>
+  //         </View>
+  //       </EntityForm>
+  //       <Highlight {...defaultProps} theme={theme} code={exampleCode} language="jsx">
+  //         {({ className, style, tokens, getLineProps, getTokenProps }) => (
+  //           <pre className={className} style={style}>
+  //             {tokens.map((line, i) => (
+  //               <div {...getLineProps({ line, key: i })}>
+  //                 {line.map((token, key) => (
+  //                   <span {...getTokenProps({ token, key })} />
+  //                 ))}
+  //               </div>
+  //             ))}
+  //           </pre>
+  //         )}
+  //       </Highlight>
+  //     </View>
+  //   )
 }

@@ -7,16 +7,16 @@ title: 属性设计规范
 
 ```tsx live
 <Wrapper>
-  <View s-100 bgBlue20 center style={{ color: 'red' }}>
+  <View s-100 bgBlue200 toCenter style={{ color: 'red' }}>
     Hi, Styli
   </View>
-  <View s-100 bgBlue20 center color="red">
+  <View s-100 bgBlue200 toCenter color="red">
     Hi, Styli
   </View>
-  <View s-100 bgBlue20 center c="red">
+  <View s-100 bgBlue200 toCenter c="red">
     Hi, Styli
   </View>
-  <View s-100 bgBlue20 center red>
+  <View s-100 bgBlue200 toCenter red>
     Hi, Styli
   </View>
 </Wrapper>
@@ -79,7 +79,7 @@ Styli 中集成整合了包含多个属性的复合属性。
 | 属性                                         | 实例                                         | 表示                              |
 | -------------------------------------------- | -------------------------------------------- | --------------------------------- |
 | [s](shape)                                   | `<View s-100 />`                             | 矩形                              |
-| [center{X\|Y}](layout-engine)                | `<View center />`                            | flex:子元素在父元素中垂直水平居中 |
+| [center{X\|Y}](layout-engine)                | `<View toCenter />`                            | flex:子元素在父元素中垂直水平居中 |
 | [{left\|right\|bottom\|left}](layout-engine) | `<View bottom />`                            | flex:子元素在父元素中位置         |
 | [space{X\|Y}](space)                         | `<View space-100 />`                         | 子元素间隔                        |
 | [ellipsis](ellipsis)                         | `<View ellipsis2-100 />`                     | 文本溢出省略                      |

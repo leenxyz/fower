@@ -21,6 +21,15 @@ const ButtonExample = (props) => (
   />
 )
 
+const Wrapper = (props) => {
+  const { children, ...rest } = props
+  return (
+    <View p-20 bgGray10 toEvenly f-20 toCenterY {...rest}>
+      {children}
+    </View>
+  )
+}
+
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
@@ -35,6 +44,7 @@ const ReactLiveScope = {
   Image,
   Heading,
   Anchor,
+  Wrapper
 }
 
 export default ReactLiveScope
