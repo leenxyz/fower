@@ -1,10 +1,23 @@
-import { StyliPlugin } from '@styli/types'
+import { StyliPlugin, Theme } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
 
+type Fn = (theme: Theme) => CSS.Property.Position | CSS.Property.Position[]
+
 declare module '@styli/types' {
   export interface AtomicProps {
+    /**
+     * Set position
+     *
+     * @example
+     * ```tsx
+     * <View position="block"></View>
+     * ```
+     */
+    display?: CSS.Property.Position | CSS.Property.Position[] | Fn
+
     /**
      * Set position to static
      *
@@ -58,57 +71,57 @@ declare module '@styli/types' {
     /**
      * Set top
      *
-     * T-10 is `top: 10px`
+     * top-10 is `top: 10px`
      *
      * @example
      * ```tsx
-     * <View T-0></View>
-     * <View T-10px></View>
-     * <View T--10rem></View>
+     * <View top-0></View>
+     * <View top-10px></View>
+     * <View top--10rem></View>
      * ```
      */
-    T?: boolean | number | string
+    top?: boolean | number | string
 
     /**
      * Set right
      *
-     * R-10 is `right: 10px`
+     * right-10 is `right: 10px`
      *
      * @example
      * ```tsx
-     * <View R-0></View>
-     * <View R-10px></View>
-     * <View R--10rem></View>
+     * <View right-0></View>
+     * <View right-10px></View>
+     * <View right--10rem></View>
      * ```
      */
-    R?: boolean | number | string
+    right?: boolean | number | string
 
     /**
      * Set bottom
      *
-     * B-10 is `bottom: 10px`
+     * bottom-10 is `bottom: 10px`
      *
      * @example
      * ```tsx
-     * <View B-0></View>
-     * <View B-10px></View>
-     * <View B--10rem></View>
+     * <View bottom-0></View>
+     * <View bottom-10px></View>
+     * <View bottom--10rem></View>
      * ```
      */
-    B?: boolean | number | string
+    bottom?: boolean | number | string
 
     /**
      * Set left
      *
-     * L-10 is `left: 10px`
+     * left-10 is `left: 10px`
      *
      * @example
      * ```tsx
-     * <View L-0></View>
-     * <View L-10px></View>
-     * <View L--10rem></View>
+     * <View left-0></View>
+     * <View left-10px></View>
+     * <View left--10rem></View>
      * ```
      */
-    L?: boolean | number | string
+    left?: boolean | number | string
   }
 }

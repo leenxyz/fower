@@ -8,45 +8,51 @@ describe('styli-plugin-position', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
   const sheet = {} as any
   it('isMatch', () => {
-    expect(isMatch!('T')).toEqual(true)
-    expect(isMatch!('B-10')).toEqual(true)
-    expect(isMatch!('L-10rem')).toEqual(true)
+    expect(isMatch!('top')).toEqual(true)
+    expect(isMatch!('bottom-10')).toEqual(true)
+    expect(isMatch!('left-10rem')).toEqual(true)
     expect(isMatch!('fixed')).toEqual(true)
     expect(isMatch!('absolute')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = { propKey: 'T', propValue: 10, type: 'style', key: 'T', style: {} }
+    const atom1: Atom = { propKey: 'top', propValue: 10, type: 'style', key: 'top', style: {} }
     const newAtom1: Atom = {
-      propKey: 'T',
+      propKey: 'top',
       propValue: 10,
       style: { top: 10 },
       type: 'style',
-      key: 'T',
+      key: 'top',
     }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2: Atom = { propKey: 'B-20', propValue: true, type: 'style', key: 'T', style: {} }
+    const atom2: Atom = {
+      propKey: 'bottom-20',
+      propValue: true,
+      type: 'style',
+      key: 'top',
+      style: {},
+    }
     const newAtom2: Atom = {
-      propKey: 'B-20',
+      propKey: 'bottom-20',
       propValue: true,
       style: { bottom: 20 },
       type: 'style',
-      key: 'T',
+      key: 'top',
     }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
-      propKey: 'L-10rem',
+      propKey: 'left-10rem',
       propValue: true,
       type: 'style',
-      key: 'L-10rem',
+      key: 'left-10rem',
       style: {},
     }
     const newAtom3: Atom = {
       type: 'style',
-      key: 'L-10rem',
-      propKey: 'L-10rem',
+      key: 'left-10rem',
+      propKey: 'left-10rem',
       propValue: true,
       style: { left: '10rem' },
     }
