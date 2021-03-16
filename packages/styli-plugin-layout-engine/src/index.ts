@@ -3,11 +3,6 @@ import { StyliPlugin } from '@styli/types'
 export const G = {
   flex: 'flex',
 
-  toTop: 'toTop',
-  toLeft: 'toLeft',
-  toRight: 'toRight',
-  toBottom: 'toBottom',
-
   start: 'start',
   end: 'end',
   between: 'between',
@@ -15,33 +10,44 @@ export const G = {
   evenly: 'evenly',
   center: 'center',
   space: 'space',
-
   stretch: 'stretch',
 
   row: 'row',
   column: 'column',
 }
 
-const centerX = `${G.center}X`
+const toTop = 'toTop'
+const toLeft = 'toLeft'
+const toRight = 'toRight'
+const toBottom = 'toBottom'
 
-const centerY = `${G.center}Y`
+const toBetween = 'toBetween'
+const toAround = 'toAround'
+const toEvenly = 'toEvenly'
+const toStretch = 'toStretch'
 
+const toCenter = 'toCenter'
+const toCenterX = 'toCenterX'
+const toCenterY = 'toCenterY'
+
+// all layout engine atomic key
 const flexAlign = [
   G.row,
   G.column,
-  G.center,
-  centerX,
-  centerY,
-  centerX.toLowerCase(),
-  centerY.toLowerCase(),
-  G.toLeft,
-  G.toRight,
-  G.toTop,
-  G.toBottom,
-  G.between,
-  G.around,
-  G.evenly,
-  G.stretch,
+
+  toLeft,
+  toRight,
+  toTop,
+  toBottom,
+
+  toCenter,
+  toCenterX,
+  toCenterY,
+
+  toBetween,
+  toAround,
+  toEvenly,
+  toStretch,
 ]
 
 export const flexMaps = {
@@ -66,59 +72,57 @@ function getDirection(props: any): string {
   return G.row
 }
 
+/**
+ * Get alignment style
+ * 这里比较复杂
+ * @param propKey
+ * @param props
+ * @returns
+ */
 export function alignmentPropToStyle(propKey: string, props: any) {
   if (propKey === 'direction') return
-  const { center } = props
+  const { toCenter } = props
   const direction = getDirection(props)
   const style: any = {}
-  const rules: { [key: string]: string[] } = {}
 
+  let styleKey: 'justifyContent' | 'alignItems' = '' as any
+
+  /** 根据 row 和 column 设置属性，这里比较复杂 */
   if (direction.startsWith('row')) {
-    rules.justifyContent = [
-      G.toLeft,
-      G.toRight,
-      centerX,
-      centerX.toLowerCase(),
-      G.between,
-      G.around,
-      G.evenly,
-    ]
-    rules.alignItems = [G.toTop, G.toBottom, centerY, G.stretch]
-  } else {
-    rules.justifyContent = [
-      G.toTop,
-      G.toBottom,
-      centerY,
-      centerY.toLowerCase(),
-      G.between,
-      G.around,
-      G.evenly,
-    ]
-    rules.alignItems = [G.toLeft, G.toRight, centerX, G.stretch]
-  }
+    if ([toLeft, toRight, toCenterX, toBetween, toAround, toEvenly].includes(propKey)) {
+      styleKey = 'justifyContent'
+    }
 
-  for (const [key, positions] of Object.entries(rules)) {
-    for (const p of positions) {
-      if (!props[p]) continue // need match props key
-      if ([G.toTop, G.toLeft].includes(p)) {
-        style[key] = flexMaps.start
-      } else if ([G.toBottom, G.toRight].includes(p)) {
-        style[key] = flexMaps.end
-      } else if ([centerX, centerY, centerX.toLowerCase(), centerY.toLowerCase()].includes(p)) {
-        style[key] = G.center
-      } else if (p === G.between) {
-        style[key] = flexMaps.between
-      } else if (p === G.around) {
-        style[key] = flexMaps.around
-      } else if (p === G.evenly) {
-        style[key] = flexMaps.evenly
-      } else if (p === G.stretch) {
-        style[key] = flexMaps.stretch
-      }
+    if ([toTop, toBottom, toCenterY, toStretch].includes(propKey)) {
+      styleKey = 'alignItems'
+    }
+  } else {
+    if ([toTop, toBottom, toCenterY, toBetween, toAround, toEvenly].includes(propKey)) {
+      styleKey = 'justifyContent'
+    }
+    if ([toLeft, toRight, toCenterX, toStretch].includes(propKey)) {
+      styleKey = 'alignItems'
     }
   }
 
-  if (center) {
+  /** 设置样式 */
+  if ([toTop, toLeft].includes(propKey)) {
+    style[styleKey] = flexMaps.start
+  } else if ([toBottom, toRight].includes(propKey)) {
+    style[styleKey] = flexMaps.end
+  } else if ([toCenterX, toCenterY].includes(propKey)) {
+    style[styleKey] = G.center
+  } else if (propKey === toBetween) {
+    style[styleKey] = flexMaps.between
+  } else if (propKey === toAround) {
+    style[styleKey] = flexMaps.around
+  } else if (propKey === toEvenly) {
+    style[styleKey] = flexMaps.evenly
+  } else if (propKey === toStretch) {
+    style[styleKey] = flexMaps.stretch
+  }
+
+  if (toCenter) {
     style.justifyContent = G.center
     style.alignItems = G.center
   }
@@ -133,7 +137,7 @@ export default (): StyliPlugin => {
     onAtomStyleCreate(atom, sheet) {
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
-      if ([G.toLeft, G.toRight, G.toTop, G.toBottom].includes(atom.propKey)) {
+      if ([toLeft, toRight, toTop, toBottom, toCenterX, toCenterY].includes(atom.propKey)) {
         const direction = getDirection(sheet.props)
         atom.className = direction + '-' + atom.propKey
         atom.cache = false

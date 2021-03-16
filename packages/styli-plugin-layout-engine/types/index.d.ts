@@ -16,10 +16,10 @@ declare module '@styli/types' {
      * ```
      * @example
      * ```tsx
-     * <View center></View>
+     * <View toCenter></View>
      * ```
      */
-    center?: boolean
+    toCenter?: boolean
 
     /**
      * Set center in x axis，不管该容器是 row 还是 column, 只会在 x 轴生效
@@ -27,10 +27,10 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View centerX></View>
+     * <View toCenterX></View>
      * ```
      */
-    centerX?: boolean
+    toCenterX?: boolean
 
     /**
      * Set center in y axis，不管该容器是 row 还是 column, 只会在 y 轴生效
@@ -38,10 +38,10 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View centerY></View>
+     * <View toCenterY></View>
      * ```
      */
-    centerY?: boolean
+    toCenterY?: boolean
 
     toLeft?: boolean
 
@@ -51,12 +51,12 @@ declare module '@styli/types' {
 
     toBottom?: boolean
 
-    between?: boolean
+    toBetween?: boolean
 
-    around?: boolean
+    toAround?: boolean
 
-    evenly?: boolean
+    toEvenly?: boolean
 
-    stretch?: boolean
+    toStretch?: boolean
   }
 }
