@@ -7,7 +7,6 @@
     "packages": [
       "packages/*",
       "examples/*",
-      "bone-ui/*",
       "website",
       "website-cn"
     ]
