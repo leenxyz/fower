@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.someSidebar.category.Docusaurus": {
+    "message": "Docusaurus",
+    "description": "The label for category Docusaurus in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Styli": {
+    "message": "Styli",
+    "description": "The label for category Styli in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Design System": {
+    "message": "Design System",
+    "description": "The label for category Design System in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Atomic Props": {
+    "message": "Atomic Props",
+    "description": "The label for category Atomic Props in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Api": {
+    "message": "Api",
+    "description": "The label for category Api in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Examples": {
+    "message": "Examples",
+    "description": "The label for category Examples in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.FAQS": {
+    "message": "FAQS",
+    "description": "The label for category FAQS in sidebar someSidebar"
+  }
+}

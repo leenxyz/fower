@@ -1,0 +1,174 @@
+---
+id: typography
+title: font 文字
+---
+
+import { LineHeight } from '@site/src/components/LineHeight'
+
+## 字体大小
+
+使用 `f-{size}` 格式的 Props 可以控制字体的大小。
+
+:::info
+`fontSize` 属性是高频使用的样式，所以简化为 `f`。
+:::
+
+```jsx live
+<Wrapper>
+  <Text f-20>王勃</Text>
+  <Text f={40}> 李白</Text>
+  <Text f-4rem> 杜甫</Text>
+</Wrapper>
+```
+
+## 字体粗细
+
+```jsx live
+<Wrapper column>
+  <View fontWeight-100>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontWeight-400>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontWeight={400}>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```
+
+## 行高
+
+```jsx live
+<Wrapper column>
+  <View lh-20>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lh-3em>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lh="1.5em">落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```
+
+## 文本对齐
+
+使用 `textLeft`、`textCenter`、`textRight`、`textJustify` 控制文本的对齐方式。
+
+```jsx live
+<Wrapper block>
+  <View textLeft>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textCenter>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textRight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View textJustify>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```
+
+## 文字颜色
+
+### 使用设计系统的颜色
+
+```jsx live
+<Wrapper>
+  <Text gray600>王勃</Text>
+  <Text colorPrimary> 李白</Text>
+  <Text green40> 杜甫</Text>
+</Wrapper>
+```
+
+所有的预设颜色：[Color palette](/docs/design-system-color)
+
+### 使用 `color` props
+
+```jsx live
+<Wrapper>
+  <Text c="#999">王勃</Text>
+  <Text c="deeppink"> 李白</Text>
+  <Text color="#20B2AA"> 杜甫</Text>
+</Wrapper>
+```
+
+### 速改变颜色透明度
+
+```jsx live
+<Wrapper>
+  <View c="#ed8936">#ed8936</View>
+  <View c="#ed8936-T8">#ed8936-T8</View>
+  <View c="#ed8936-O6">#ed8936-O6</View>
+  <View c="#ed8936-L4">#ed8936-L4</View>
+  <View c="#ed8936-H2">#ed8936-H2</View>
+</Wrapper>
+```
+
+## 伪类
+
+styli 支持了大量常用的伪类。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<Wrapper>
+  <View center s-100 f-14 f--hover={18} red50--hover bgBlue30>
+    f--hover=18
+  </View>
+</Wrapper>
+```
+
+## 媒体查询
+
+数组格式的 value 能让您便捷的使用媒体查询能力
+
+```jsx live
+<Wrapper>
+  <View center s-100 f={[18, 16, 14, 12]} bgBlue30>
+    media query
+  </View>
+</Wrapper>
+```
+
+## 设计系统
+
+使用设计系统属性，让您的应用更有规范
+
+### 字体大小
+
+```jsx live
+<Wrapper>
+  <View center w-50 f1 bgBlue30>
+    f1
+  </View>
+  <View center w-50 f2 bgBlue30>
+    f2
+  </View>
+  <View center w-50 f3 bgBlue30>
+    f3
+  </View>
+  <View center w-50 f4 bgBlue30>
+    f4
+  </View>
+  <View center w-50 f5 bgBlue30>
+    f5
+  </View>
+  <View center w-50 f6 bgBlue30>
+    f6
+  </View>
+</Wrapper>
+```
+
+### 字体粗细
+
+```jsx live
+<Wrapper column>
+  <View fontHairline>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontThin>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontLight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontMedium>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontSemibold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontBold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View fontExtrabold>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```
+
+### 行高
+
+```jsx live
+<Wrapper column>
+  <View lhNone>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhTight>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhSnug>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhNormal>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhRelaxed>落霞与孤鹜齐飞，秋水共长天一色。</View>
+  <View lhLoose>落霞与孤鹜齐飞，秋水共长天一色。</View>
+</Wrapper>
+```

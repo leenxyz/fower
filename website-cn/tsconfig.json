@@ -1,8 +1,0 @@
-{
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  },
-  "include": ["src/"]
-}

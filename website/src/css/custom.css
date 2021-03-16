@@ -8,7 +8,6 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #25c2a0;
-  /* --ifm-color-primary: #e96900; */
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -16,16 +15,6 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
-  --ifm-navbar-shadow: none;
-  --ifm-toc-border-color: white;
-}
-
-.footer--dark {
-  --ifm-footer-background-color: #000;
-}
-
-html {
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important; */
 }
 
 body {

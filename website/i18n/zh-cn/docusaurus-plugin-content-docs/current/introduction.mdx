@@ -4,7 +4,7 @@ title: 简介
 sidebar_label: 简介
 ---
 
-en...
+中文
 
 承认吧，写 CSS 是一件痛苦的事情。
 
@@ -12,11 +12,27 @@ en...
 
 CSS，甚至不能称之为一门编程语言，但它却庞大而复杂，有及其多的样式属性，而且新特性还在不多增加中。回想你学习并精通 CSS 的过程，除了要学习基本 padding、margin、color 等基础知识，你还要熟悉选择器 (熟悉全部高级选择器够你搞一阵了)，CSS3 各种新特性 (从基本的阴影渐变到各种动画)，用于布局控制的 flexbox 和 grid 等，新的 CSS 变量，还有旧时的浮动等黑科技...CSS 发展了 20 多年了，里面既有精华也有糟粕，要熟悉 CSS 的全貌，是一件非常费时的事情。最重要的是，对于大部分人，要完成界面的开发，只需使用 CSS 中的很小一部分样式属性。
 
-Styli 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不再痛苦。
+**Styli 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不再痛苦。**
 
-在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式，Styli 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。
+_在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式，Styli 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。_
 
-Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
+**Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。**
+
+## 例子
+
+首先看看使用 Styli 时，我们的代码是怎样写的？
+
+```jsx live
+<View centerY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image circle-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View f-20 fontBold>
+      Steve Jobs
+    </View>
+    <Text gray80>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
+```
 
 ## 特点
 
@@ -43,22 +59,6 @@ Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、R
 - **Programmable**
 
   Styli 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。
-
-## A quick example
-
-下面我们看看使用 Styli 时，我们的代码是怎样写的？
-
-```jsx live
-<View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-  <Image circle-48 src="/img/jobs.jpg" />
-  <View ml-10>
-    <View f-20 fontBold>
-      Steve Jobs
-    </View>
-    <Text gray800>Co-founder of Apple Inc.</Text>
-  </View>
-</View>
-```
 
 ## 灵感
 

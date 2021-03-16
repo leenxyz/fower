@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "My Site",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.React": {
+    "message": "React",
+    "description": "Navbar item with label React"
+  },
+  "item.label.Vue": {
+    "message": "Vue",
+    "description": "Navbar item with label Vue"
+  },
+  "item.label.React native": {
+    "message": "React native",
+    "description": "Navbar item with label React native"
+  }
+}
