@@ -10,6 +10,7 @@ describe('styli-plugin-margin', () => {
     expect(isMatch!('my')).toEqual(true)
     expect(isMatch!('mx-10')).toEqual(true)
     expect(isMatch!('mx-10rem')).toEqual(true)
+    expect(isMatch!('m--10rem-1px')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
@@ -70,5 +71,21 @@ describe('styli-plugin-margin', () => {
       type: 'style',
     }
     expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+
+    const atom5: Atom = {
+      propKey: 'mx--10rem-1px',
+      propValue: true,
+      key: 'mx--10rem-1px',
+      type: 'style',
+      style: {},
+    }
+    const newAtom5: Atom = {
+      key: 'mx--10rem-1px',
+      propKey: 'mx--10rem-1px',
+      propValue: true,
+      style: { marginLeft: '-10rem', marginRight: '-10rem' },
+      type: 'style',
+    }
+    expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
   })
 })
