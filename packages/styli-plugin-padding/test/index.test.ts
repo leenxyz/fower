@@ -57,5 +57,21 @@ describe('styli-plugin-padding', () => {
       style: { paddingLeft: '10rem', paddingRight: '10rem' },
     }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+
+    const atom4: Atom = {
+      propKey: 'px--10rem-1px',
+      propValue: true,
+      key: 'px--10rem-1px',
+      type: 'style',
+      style: {},
+    }
+    const newAtom4: Atom = {
+      key: 'px--10rem-1px',
+      propKey: 'px--10rem-1px',
+      propValue: true,
+      style: { paddingLeft: '-10rem', paddingRight: '-10rem' },
+      type: 'style',
+    }
+    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })
