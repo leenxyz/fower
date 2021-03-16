@@ -8,40 +8,40 @@ export default () => {
         Shadow
       </Box>
 
-      <View py-50 row evenly>
-        <View bgWhite s-128 rounded-4 center shadowXS>
+      <View py-50 row toEvenly>
+        <View bgWhite s-128 rounded-4 toCenter shadowXS>
           shadowXS
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowSM>
+        <View bgWhite s-128 rounded-4 toCenter shadowSM>
           shadowSM
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowBase>
+        <View bgWhite s-128 rounded-4 toCenter shadowBase>
           shadowBase
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowMD>
+        <View bgWhite s-128 rounded-4 toCenter shadowMD>
           shadowMD
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowLG>
+        <View bgWhite s-128 rounded-4 toCenter shadowLG>
           shadowLG
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowXL>
+        <View bgWhite s-128 rounded-4 toCenter shadowXL>
           shadowXL
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowXXL>
+        <View bgWhite s-128 rounded-4 toCenter shadowXXL>
           shadowXXL
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowInner>
+        <View bgWhite s-128 rounded-4 toCenter shadowInner>
           shadowInner
         </View>
 
-        <View bgWhite s-128 rounded-4 center shadowOutline>
+        <View bgWhite s-128 rounded-4 toCenter shadowOutline>
           shadowOutline
         </View>
       </View>

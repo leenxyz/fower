@@ -72,7 +72,7 @@ export default () => {
         f-10
         bg={`url(${IMAGEs.DEFAULT_AVATAR}) center 100%`}
         circle-200
-        center
+        toCenter
       >
         bg="url('https://...') center 100%"
       </View>
@@ -83,7 +83,7 @@ export default () => {
         bgSize="100p"
         bgPos="center"
         circle-200
-        center
+        toCenter
         column
       >
         <View>bgImg="https://..."</View>

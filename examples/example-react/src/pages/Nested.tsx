@@ -8,7 +8,7 @@ export default () => {
   return (
     <View
       s="100"
-      center
+      toCenter
       mt-100
       f={[10, 20, 30, 40]}
       css={{

@@ -7,7 +7,7 @@ export default () => {
       <Box f-30 fontBold>
         Size
       </Box>
-      <View evenly wrap f-12>
+      <View toEvenly wrap f-12>
         <View w9 h5 bgBlue20>
           w9 h5
         </View>
@@ -59,7 +59,7 @@ export default () => {
           responsive
         </View>
       </View>
-      <View evenly wrap>
+      <View toEvenly wrap>
         <View w={[1 / 3, '100%', 400]} h-100 bgRed20></View>
         <View w={[1 / 3, '100%', 400]} h-100 bgGreen20></View>
         <View w={[1 / 3, '100%', 400]} h-100 bgYellow20></View>
