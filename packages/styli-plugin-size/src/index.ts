@@ -24,32 +24,26 @@ export function isSquareKey(key: string) {
 export function sizePropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [key, ...values] = prop.split(/\b/)
-  const lowerKey = key.toLowerCase()
+  if (isSquareKey(prop)) {
+    const [, , xValue, , yValue] = prop.match(/^s(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
 
-  // ['-','10px', '-', '10px] => ['10px', '10px]
-  const sizeValues = values.reduce((result, cur, idx) => {
-    if (idx % 2) return result
-    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
-  }, [] as any)
-
-  // s-10px-5px
-  if (sizeValues.length === 2) {
-    const [width, height] = sizeValues
-    sizeMaps['w'].forEach((k: any) => {
-      style[k] = styli.getValue(width)
-    })
-
-    sizeMaps['h'].forEach((k: any) => {
-      style[k] = styli.getValue(height)
-    })
-  } else {
-    const sizeValue = isValidPropValue(propValue) ? propValue : sizeValues[0]
-    sizeMaps[lowerKey].forEach((k: any) => {
-      style[k] = styli.getValue(sizeValue)
-    })
+    if (xValue && yValue) {
+      sizeMaps['w'].forEach((k: any) => {
+        style[k] = styli.getValue(xValue)
+      })
+      sizeMaps['h'].forEach((k: any) => {
+        style[k] = styli.getValue(yValue)
+      })
+      return style
+    }
   }
 
+  const [, key = '', , value] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-(.+))?$/) || []
+
+  const sizeValue = isValidPropValue(propValue) ? propValue : value
+  sizeMaps[key.toLowerCase()].forEach((k: any) => {
+    style[k] = styli.getValue(sizeValue)
+  })
   return style
 }
 

@@ -35,5 +35,11 @@ describe('bgColor', () => {
       const finalAtom = { propKey: 'backgroundColor', propValue: 'gray30-T10', style: { backgroundColor: 'rgba(51,51,51,0.9)' } } as Atom
       expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
     })
+
+    it('<View backgroundColor="#000-T10"></View>', () => {
+      const atom = { propKey: 'backgroundColor', propValue: '#000-T10' } as Atom
+      const finalAtom = { propKey: 'backgroundColor', propValue: '#000-T10', style: { backgroundColor: 'rgba(0,0,0,0.9)' } } as Atom
+      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
+    })
   })
 })

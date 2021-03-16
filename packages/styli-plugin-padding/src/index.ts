@@ -33,30 +33,25 @@ export function isPaddingKey(key: string) {
 
 export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, ...values] = prop.split(/\b/)
 
-  // ['--','10px', '-', '10px] => ['-10px', '10px]
-  const paddingValues = values.reduce((result, cur, idx) => {
-    if (idx % 2) return result
-    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
-  }, [] as any)
+  const [, direction = '', , xValue, , yValue] = prop.match(/^p([ltrbxy])(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
 
-  // p-10px--5px
-  if (paddingValues.length === 2) {
-    const [x, y] = paddingValues
+  // m--1px-1px
+  if (xValue && yValue) {
     paddingMaps['px'].forEach((k: any) => {
-      style[k] = styli.getValue(x)
+      style[k] = styli.getValue(xValue)
     })
-
     paddingMaps['py'].forEach((k: any) => {
-      style[k] = styli.getValue(y)
+      style[k] = styli.getValue(yValue)
     })
-  } else {
-    const paddingValue = isValidPropValue(propValue) ? propValue : paddingValues[0]
-    paddingMaps[key].forEach((k: any) => {
-      style[k] = styli.getValue(paddingValue)
-    })
+    return style
   }
+
+  const paddingValue = isValidPropValue(propValue) ? propValue : xValue
+  paddingMaps['p' + direction].forEach((k: any) => {
+    style[k] = styli.getValue(paddingValue)
+  })
+
   return style
 }
 

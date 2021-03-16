@@ -3,30 +3,11 @@ import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {
-  padding: 'padding',
   margin: 'margin',
-  flex: 'flex',
   top: 'top',
   left: 'left',
   right: 'right',
-  start: 'start',
-  end: 'end',
   bottom: 'bottom',
-  between: 'between',
-  around: 'around',
-  evenly: 'evenly',
-  center: 'center',
-  space: 'space',
-  row: 'row',
-  column: 'column',
-  nowrap: 'nowrap',
-  wrap: 'wrap',
-
-  static: 'static',
-  fixed: 'fixed',
-  absolute: 'absolute',
-  relative: 'relative',
-  sticky: 'sticky',
 }
 
 export const P = {
@@ -52,33 +33,29 @@ export function isMarginKey(key: string) {
 
 export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const [key, ...values] = prop.split(/\b/)
 
-  // ['--','10px', '-', '10px] => ['-10px', '10px]
-  const marginValues = values.reduce((result, cur, idx) => {
-    if (idx % 2) return result
-    return [...result, (cur.length === 2 ? '-' : '') + values[idx + 1]]
-  }, [] as any)
+  const [, direction = '', , xValue, , yValue] = prop.match(/^m([ltrbxy])(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
 
-  // m-10px--5px
-  if (marginValues.length === 2) {
-    const [x, y] = marginValues
+  // m--1px-1px
+  if (xValue && yValue) {
     marginMaps['mx'].forEach((k: any) => {
-      style[k] = styli.getValue(x)
+      style[k] = styli.getValue(xValue)
     })
-
     marginMaps['my'].forEach((k: any) => {
-      style[k] = styli.getValue(y)
+      style[k] = styli.getValue(yValue)
     })
-  } else {
-    const marginValue = isValidPropValue(propValue) ? propValue : marginValues[0]
-    marginMaps[key].forEach((k: any) => {
-      style[k] = styli.getValue(marginValue)
-    })
+    return style
   }
+
+  // m-1px
+  const marginValue = isValidPropValue(propValue) ? propValue : xValue
+  marginMaps['m' + direction].forEach((k: any) => {
+    style[k] = styli.getValue(marginValue)
+  })
 
   return style
 }
+
 
 export default (): StyliPlugin => {
   return {

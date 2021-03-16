@@ -10,6 +10,7 @@ describe('styli-plugin-position', () => {
     expect(isMatch!('s-20')).toEqual(true)
     expect(isMatch!('circle-10rem')).toEqual(true)
     expect(isMatch!('maxH-10')).toEqual(true)
+    expect(isMatch!('s-10px-20px')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
@@ -64,5 +65,21 @@ describe('styli-plugin-position', () => {
       style: { maxHeight: '10px' },
     }
     expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+
+    const atom5: Atom = {
+      propKey: 's-10px-20px',
+      propValue: true,
+      key: 's-10px-20px',
+      type: 'style',
+      style: {},
+    }
+    const newAtom5: Atom = {
+      key: 's-10px-20px',
+      type: 'style',
+      propKey: 's-10px-20px',
+      propValue: true,
+      style: { width: '10px', height: '20px' },
+    }
+    expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
   })
 })

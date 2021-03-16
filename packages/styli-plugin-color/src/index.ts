@@ -1,12 +1,16 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 
+function isColorTheme(key: string) {
+  return /^color(Brand|Primary|Secondary|Info|Warning|Error|Success)(-[TODL]\d+)$/i.test(key)
+}
+
 export function isColorKey(key: string) {
 
-  if (key === 'c') return true
+  if (key === 'c' || key === 'color') return true
 
-  // color colorBrand...
-  if (/^color(Brand|Primary|Secondary|Info|Warning|Error|Success)?$/i.test(key)) return true // colorPrimary | color="xxx"
+  // colorBrand...
+  if (isColorTheme(key)) return true
 
   // red10...
   const Colors = styli.getColors()
@@ -22,6 +26,11 @@ export function colorPropToStyle(propKey: string, propValue: any): any {
   if (propKey === 'color' || propKey === 'c') {
     return { color: styli.getStyliColorValue(propValue) }
   }
+
+  if (isColorTheme(propKey)) {
+    return { color: styli.getStyliColorValue(propKey) }
+  }
+
   return { color: styli.getStyliColorValue(propKey.replace(/^color/i, '')) }
 }
 
