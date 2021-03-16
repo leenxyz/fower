@@ -5,11 +5,11 @@ title: layout 布局
 
 import { FlexLayout } from '@site/src/components/FlexLayout'
 
-Styli 提供了一个强大的基于 Flexbox 的布局引擎，通过调整布局的方向(Direction)和对齐(Alignment)，可以实现大部分的布局。相比传统的 flex 布局，Styli 的布局更加抽象精简，Styli 的布局抽象为 `center、centerX、centerY、left、top、right、bottom` 七种原子对齐方式，使用时你可以忘记传统 flex 布局中的主轴（main axis）和交叉轴（cross axis）的概念，你只需要有方向感即可。
+Styli 提供了一个强大的基于 Flexbox 的布局引擎，通过调整布局的方向(Direction)和对齐(Alignment)，可以实现大部分的布局。相比传统的 flex 布局，Styli 的布局更加抽象精简，Styli 的布局抽象为 `center、toCenterX、toCenterY、left、top、right、bottom` 七种原子对齐方式，使用时你可以忘记传统 flex 布局中的主轴（main axis）和交叉轴（cross axis）的概念，你只需要有方向感即可。
 
 布局方向：`row、column`。
 
-布局对齐：`center、centerX、centerY、left、top、right、bottom`。
+布局对齐：`center、toCenterX、toCenterY、left、top、right、bottom`。
 
 通过调整对齐方式，你可以实现各种常用的布局:
 
@@ -17,24 +17,24 @@ Styli 提供了一个强大的基于 Flexbox 的布局引擎，通过调整布�
 
 ## 对齐方式详解
 
-对齐方式可以单独使用，也可以组合使用，使用时，先设置不同的布局方向 (row or column)，然后设置相应的原子属性即可。因为 Styli 的布局抽象为 `center、centerX、centerY、left、top、right、bottom` 七种原子对齐方式，所以使用时你可以忘记传统 flex 布局中的主轴（main axis）和交叉轴（cross axis）的概念。
+对齐方式可以单独使用，也可以组合使用，使用时，先设置不同的布局方向 (row or column)，然后设置相应的原子属性即可。因为 Styli 的布局抽象为 `center、toCenterX、toCenterY、left、top、right、bottom` 七种原子对齐方式，所以使用时你可以忘记传统 flex 布局中的主轴（main axis）和交叉轴（cross axis）的概念。
 
 对齐方式的原子属性:
 
 - `center` 容器内元素**水平垂直居中** (单独使用)
-- `centerX` 容器内元素**水平居中**，可以和 `centerY`、`top`、`bottom` 组合
-- `centerY` 容器内元素**垂直居中**，可以和 `centerX`、`left`、`right` 组合
-- `left` 容器内元素全部靠**左\***排列 (默认)，可以和 `centerX`、`left`、`right` 组合
-- `right` 容器内元素全部靠**右**排列，可以和 `centerY`、`top`、`bottom` 组合
-- `bottom` 容器内元素全部靠**下**排列，可以和 `centerX`、`left`、`right` 组合
+- `toCenterX` 容器内元素**水平居中**，可以和 `toCenterY`、`top`、`bottom` 组合
+- `toCenterY` 容器内元素**垂直居中**，可以和 `toCenterX`、`left`、`right` 组合
+- `left` 容器内元素全部靠**左\***排列 (默认)，可以和 `toCenterX`、`left`、`right` 组合
+- `right` 容器内元素全部靠**右**排列，可以和 `toCenterY`、`top`、`bottom` 组合
+- `bottom` 容器内元素全部靠**下**排列，可以和 `toCenterX`、`left`、`right` 组合
 
 所有组合:
 
-- `centerX top`
-- `centerX bottom`
-- `centerY left`
-- `centerY right`
-- `centerX centerY`
+- `toCenterX top`
+- `toCenterX bottom`
+- `toCenterY left`
+- `toCenterY right`
+- `toCenterX toCenterY`
 - `top left` 容器内元素全部靠**左上角**排列
 - `top right ` 容器内元素全部靠**右上角**排列
 - `bottom left ` 容器内元素全部靠**左下角**排列

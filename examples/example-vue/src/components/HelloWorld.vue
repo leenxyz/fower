@@ -30,7 +30,7 @@
       <div s-100 center>CCC</div>
     </div>
 
-    <div h-200 f-12 debugChildren centerX bottom>
+    <div h-200 f-12 debugChildren toCenterX bottom>
       <div s-100>AAA</div>
       <div s-100 center>BBB</div>
     </div>

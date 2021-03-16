@@ -28,13 +28,13 @@ import { View } from '@styli/react'
 
 export function UserCard() {
   return (
-    <View centerY p-10 w-260 rounded-10 shadow bgWhite>
+    <View toCenterY p-10 w-260 rounded-10 shadow bgWhite>
       <Image circle-48 src="/img/jobs.jpg" />
       <View ml-10>
         <View f-20 fontBold>
           Steve Jobs
         </View>
-        <Text gray80>Co-founder of Apple Inc.</Text>
+        <Text gray800>Co-founder of Apple Inc.</Text>
       </View>
     </View>
   )

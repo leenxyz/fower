@@ -8,7 +8,7 @@ export default () => {
 
       <Text
         f-40
-        red50
+        red500
         css={{
           textShadow: '1px 0 5px #FC0',
           textDecoration: 'underline',

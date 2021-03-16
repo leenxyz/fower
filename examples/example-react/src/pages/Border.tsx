@@ -30,8 +30,8 @@ export default () => {
           border="4px solid green30-D20"
         </View>
 
-        <View s-100 borderT="4px solid  green40">
-          borderT="1px solid green40"
+        <View s-100 borderT="4px solid  green400">
+          borderT="1px solid green400"
         </View>
 
         <View s-100 borderR="1px solid gray">

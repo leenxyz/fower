@@ -5,33 +5,78 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as React from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import clsx from 'clsx'
+import * as React from 'react';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import clsx from 'clsx';
+import Translate from '@docusaurus/Translate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import usePrismTheme from '@theme/hooks/usePrismTheme';
 import { View, Text } from '@styli/react'
+import styles from './styles.module.css';
 
-import styles from './styles.module.css'
-
-function Playground({ children, theme, transformCode, ...props }) {
+function Header({ translateId, description, text }) {
   return (
-    <LiveProvider
-      code={children.replace(/\n$/, '')}
-      transformCode={transformCode || ((code) => `${code};`)}
-      theme={theme}
-      {...props}
-    >
+    <div className={clsx(styles.playgroundHeader)}>
+      <Translate id={translateId} description={description}>
+        {text}
+      </Translate>
+    </div>
+  );
+}
+
+function ResultWithHeader() {
+  return (
+    <>
       <div className={styles.playgroundPreview}>
         <LivePreview />
         <LiveError />
       </div>
-      <View relative>
-        <LiveEditor className={styles.playgroundEditor} />
-        <Text f-14 fontBold green400 absolute top-2 right-10>
-          LIVE DEMO
-        </Text>
-      </View>
-    </LiveProvider>
-  )
+    </>
+  );
 }
 
-export default Playground
+function EditorWithHeader() {
+  return (
+    <View relative>
+      <LiveEditor className={styles.playgroundEditor} />
+      <Text f-14 fontBold green400 absolute top-2 right-10>
+        LIVE DEMO
+        </Text>
+    </View>
+  );
+}
+
+export default function Playground({ children, transformCode, ...props }) {
+  const {
+    isClient,
+    siteConfig: {
+      themeConfig: {
+        liveCodeBlock: { playgroundPosition },
+      },
+    },
+  } = useDocusaurusContext();
+  const prismTheme = usePrismTheme();
+
+  return (
+    <div className={styles.playgroundContainer}>
+      <LiveProvider
+        key={isClient}
+        code={isClient ? children.replace(/\n$/, '') : ''}
+        transformCode={transformCode || ((code) => `${code};`)}
+        theme={prismTheme}
+        {...props}>
+        {playgroundPosition === 'top' ? (
+          <>
+            <ResultWithHeader />
+            <EditorWithHeader />
+          </>
+        ) : (
+          <>
+            <EditorWithHeader />
+            <ResultWithHeader />
+          </>
+        )}
+      </LiveProvider>
+    </div>
+  );
+}

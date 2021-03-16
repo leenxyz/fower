@@ -35,6 +35,10 @@ module.exports = {
     // sidebarCollapsible: false,
     disableSwitch: true,
 
+    liveCodeBlock: {
+      playgroundPosition: 'top'
+    },
+
     gtag: {
       trackingID: 'G-XZJ9WJDM06',
       // Optional fields.
@@ -44,8 +48,8 @@ module.exports = {
     navbar: {
       title: 'Styli',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Logo',
+        src: '/img/logo.png',
       },
       items: [
         {

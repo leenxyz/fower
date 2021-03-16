@@ -56,7 +56,7 @@ export default () => {
         c="#666-L20"
       </View>
 
-      <View f-20 c="green40">
+      <View f-20 c="green400">
         c="green400"
       </View>
 
@@ -65,7 +65,7 @@ export default () => {
       </View>
 
       <View f-20 c="green400-T20">
-        c="green40-T20"
+        c="green400-T20"
       </View>
 
       <View f-20 c="primary">
@@ -76,16 +76,16 @@ export default () => {
         c="primary-D40"
       </View>
 
-      <View f-20 red500 green50--hover>
-        green50--hover
+      <View f-20 red500 green500--hover>
+        green500--hover
       </View>
 
-      <View f-20 red500 green50-T20--hover>
-        green50-T20--hover
+      <View f-20 red500 green500-T20--hover>
+        green500-T20--hover
       </View>
 
-      <View f-20 red500 green50-D20--hover>
-        green50-D20--hover
+      <View f-20 red500 green500-D20--hover>
+        green500-D20--hover
       </View>
 
       <View f-20 c="#000" c--hover="#000-T50">
@@ -97,7 +97,7 @@ export default () => {
       </View>
 
       <View f-20 red500 green500--active>
-        green50--active
+        green500--active
       </View>
 
       <View f-20 c={['yellowgreen', 'purple', 'deeppink', 'info']}>
