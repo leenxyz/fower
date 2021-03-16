@@ -1,12 +1,12 @@
-import { Atom, StyliPlugin } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
 
 export const G = {
   flex: 'flex',
 
-  top: 'top',
-  left: 'left',
-  right: 'right',
-  bottom: 'bottom',
+  toTop: 'toTop',
+  toLeft: 'toLeft',
+  toRight: 'toRight',
+  toBottom: 'toBottom',
 
   start: 'start',
   end: 'end',
@@ -34,10 +34,10 @@ const flexAlign = [
   centerY,
   centerX.toLowerCase(),
   centerY.toLowerCase(),
-  G.left,
-  G.right,
-  G.top,
-  G.bottom,
+  G.toLeft,
+  G.toRight,
+  G.toTop,
+  G.toBottom,
   G.between,
   G.around,
   G.evenly,
@@ -66,14 +66,6 @@ function getDirection(props: any): string {
   return G.row
 }
 
-function posFormat(atom: Atom) {
-  const propKey = atom.propKey
-  if (['toTop', 'toLeft', 'toBottom', 'toRight'].includes(propKey)) {
-    atom.propKey = propKey.split(/(?=[A-Z])/)[1].toLowerCase()
-  }
-  return atom
-}
-
 export function alignmentPropToStyle(propKey: string, props: any) {
   if (propKey === 'direction') return
   const { center } = props
@@ -83,34 +75,34 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 
   if (direction.startsWith('row')) {
     rules.justifyContent = [
-      G.left,
-      G.right,
+      G.toLeft,
+      G.toRight,
       centerX,
       centerX.toLowerCase(),
       G.between,
       G.around,
       G.evenly,
     ]
-    rules.alignItems = [G.top, G.bottom, centerY, G.stretch]
+    rules.alignItems = [G.toTop, G.toBottom, centerY, G.stretch]
   } else {
     rules.justifyContent = [
-      G.top,
-      G.bottom,
+      G.toTop,
+      G.toBottom,
       centerY,
       centerY.toLowerCase(),
       G.between,
       G.around,
       G.evenly,
     ]
-    rules.alignItems = [G.left, G.right, centerX, G.stretch]
+    rules.alignItems = [G.toLeft, G.toRight, centerX, G.stretch]
   }
 
   for (const [key, positions] of Object.entries(rules)) {
     for (const p of positions) {
       if (!props[p]) continue // need match props key
-      if ([G.top, G.left].includes(p)) {
+      if ([G.toTop, G.toLeft].includes(p)) {
         style[key] = flexMaps.start
-      } else if ([G.bottom, G.right].includes(p)) {
+      } else if ([G.toBottom, G.toRight].includes(p)) {
         style[key] = flexMaps.end
       } else if ([centerX, centerY, centerX.toLowerCase(), centerY.toLowerCase()].includes(p)) {
         style[key] = G.center
@@ -139,10 +131,9 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-layout-engine',
     isMatch: isAlignmentKey,
     onAtomStyleCreate(atom, sheet) {
-      atom = posFormat(atom)
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
-      if ([G.left, G.right, G.top, G.bottom].includes(atom.propKey)) {
+      if ([G.toLeft, G.toRight, G.toTop, G.toBottom].includes(atom.propKey)) {
         const direction = getDirection(sheet.props)
         atom.className = direction + '-' + atom.propKey
         atom.cache = false
