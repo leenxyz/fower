@@ -11,6 +11,7 @@ declare module '@styli/types' {
      * @example
      * ```tsx
      * <View zIndex-10></View>
+     * <View zIndex--10></View>
      * <View zIndex={10}></View>
      * ```
      */

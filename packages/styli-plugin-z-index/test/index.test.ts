@@ -29,5 +29,13 @@ describe('styli-plugin-z-index', () => {
       style: { zIndex: '-1' },
     }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+
+    const atom4 = { propKey: 'zIndex', propValue: '-1' } as Atom
+    const newAtom4 = {
+      propKey: 'zIndex',
+      propValue: '-1',
+      style: { zIndex: '-1' },
+    }
+    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
   })
 })

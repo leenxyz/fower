@@ -6,11 +6,8 @@ export function isZIndexKey(key: string) {
 }
 
 export function zIndexPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { zIndex: propValue }
-  const [, symbol = '', value] = prop.split(/\b-*?/)
-  const [, minus = ''] = symbol.split('')
-  const zIndexValue = isValidPropValue(propValue) ? propValue : minus + value
-
+  const [, , value] = prop.match(/^zIndex(-(-?\d+))?/) || []
+  const zIndexValue = isValidPropValue(propValue) ? propValue : value
   return { zIndex: zIndexValue }
 }
 
