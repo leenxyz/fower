@@ -22,29 +22,16 @@ export function isSquareKey(key: string) {
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
-  const style: any = {}
+  const [, matchKey, , xValue, , yValue] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
+  const key = matchKey.toLowerCase()
 
-  if (isSquareKey(prop)) {
-    const [, , xValue, , yValue] = prop.match(/^s(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
+  const sizeValue = isValidPropValue(propValue) ? [propValue] : [xValue, yValue]
 
-    if (xValue && yValue) {
-      sizeMaps['w'].forEach((k: any) => {
-        style[k] = styli.getValue(xValue)
-      })
-      sizeMaps['h'].forEach((k: any) => {
-        style[k] = styli.getValue(yValue)
-      })
-      return style
-    }
-  }
-
-  const [, key = '', , value] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-(.+))?$/) || []
-
-  const sizeValue = isValidPropValue(propValue) ? propValue : value
-  sizeMaps[key.toLowerCase()].forEach((k: any) => {
-    style[k] = styli.getValue(sizeValue)
-  })
-  return style
+  return sizeMaps[key].reduce((style: any, cur: string, idx: number) => {
+    const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : xValue)
+    style[cur] = styli.getValue(currentValue)
+    return style
+  }, {} as any)
 }
 
 export default (): StyliPlugin => {
