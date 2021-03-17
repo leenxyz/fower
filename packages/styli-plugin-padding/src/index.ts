@@ -34,7 +34,8 @@ export function isPaddingKey(key: string) {
 export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [, direction = '', , xValue, , yValue] = prop.match(/^p([ltrbxy])(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] = prop.match(/^(p[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const key = matchKey.toLowerCase()
 
   // m--1px-1px
   if (xValue && yValue) {
@@ -48,7 +49,7 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   }
 
   const paddingValue = isValidPropValue(propValue) ? propValue : xValue
-  paddingMaps['p' + direction].forEach((k: any) => {
+  paddingMaps[key].forEach((k: any) => {
     style[k] = styli.getValue(paddingValue)
   })
 
