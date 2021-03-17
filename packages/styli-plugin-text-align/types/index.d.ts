@@ -1,7 +1,10 @@
-import { StyliPlugin } from '@styli/types'
+import { StyliPlugin, Theme } from '@styli/types'
+import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
+
+type Fn = (theme: Theme) => CSS.Property.TextAlign | CSS.Property.TextAlign[]
 
 declare module '@styli/types' {
   export interface AtomicProps {
@@ -13,7 +16,7 @@ declare module '@styli/types' {
      * <View textAlign="center"></View>
      * ```
      */
-    textAlign?: string | string[]
+    textAlign?: CSS.Property.TextAlign | CSS.Property.TextAlign[] | Fn
 
     /**
      * Set textAlign to left

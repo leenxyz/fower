@@ -1,0 +1,45 @@
+---
+id: font-weight
+title: Font Weight
+---
+
+| Atomic Props                            | CSS Properties        |
+| --------------------------------------- | --------------------- |
+| fontHairline                            | font-weight: 100;     |
+| fontThin                                | font-weight: 200;     |
+| fontLight                               | font-weight: 300;     |
+| fontNormal                              | font-weight: 400;     |
+| fontMedium                              | font-weight: 500;     |
+| fontSemibold                            | font-weight: 600;     |
+| fontBold                                | font-weight: 700;     |
+| fontExtrabold                           | font-weight: 800;     |
+| fontWeight-{value} / fontWeight={value} | font-weight: {value}; |
+
+## Usage
+
+There are two ways to control the font weight, one is to use a preset value, and the other is to use a precise value.
+
+### Use preset value
+
+```jsx live
+<View f-28>
+  <View fontHairline>Lorem ipsum dolor sit amet</View>
+  <View fontThin>Lorem ipsum dolor sit amet</View>
+  <View fontLight>Lorem ipsum dolor sit amet</View>
+  <View fontNormal>Lorem ipsum dolor sit amet</View>
+  <View fontMedium>Lorem ipsum dolor sit amet</View>
+  <View fontSemibold>Lorem ipsum dolor sit amet</View>
+  <View fontBold>Lorem ipsum dolor sit amet</View>
+  <View fontExtrabold>Lorem ipsum dolor sit amet</View>
+</View>
+```
+
+### Use precise value
+
+```jsx live
+<View f-24>
+  <View fontWeight-100>Lorem ipsum dolor sit amet</View>
+  <View fontWeight-400>Lorem ipsum dolor sit amet</View>
+  <View fontWeight={600}>Lorem ipsum dolor sit amet</View>
+</View>
+```

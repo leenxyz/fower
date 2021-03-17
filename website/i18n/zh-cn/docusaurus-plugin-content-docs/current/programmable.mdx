@@ -18,19 +18,19 @@ JSX 是一个有非常优秀的技术，它可以代替 HTML，让你声明式�
 ```jsx
 const textColor = '#000'
 
-<Text c={textColor}>Hello word!</Text>
+<Text color={textColor}>Hello word!</Text>
 ```
 
 ## 条件
 
 ```jsx
-<Text c={isTrue ? 'red' : 'green'}>Hello word!</Text>
+<Text color={isTrue ? 'red' : 'green'}>Hello word!</Text>
 ```
 
 ## 函数
 
 ```tsx
-<Text c={() => '#000'}>Hello word!</Text>
+<Text color={() => '#000'}>Hello word!</Text>
 ```
 
 Styli 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。

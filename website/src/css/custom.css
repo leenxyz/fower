@@ -15,6 +15,10 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+
+  --ifm-table-stripe-background: transparent;
+
+  --ifm-scrollbar-track-background-color: transparent;
 }
 
 body {
@@ -70,4 +74,34 @@ table {
   flex-wrap: wrap;
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+
+.markdown table th,
+table td {
+  text-align: left;
+  border: 0 solid #000;
+  padding: 10px 0;
+}
+
+.markdown table tr {
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 0 solid var(--ifm-table-border-color);
+}
+
+.markdown table tr td:nth-child(1) {
+  color: #e11d48;
+}
+
+.markdown table tr td:nth-child(2) {
+  color: #ea580c;
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  height: var(--ifm-scrollbar-size);
+  width: var(--ifm-scrollbar-size);
 }

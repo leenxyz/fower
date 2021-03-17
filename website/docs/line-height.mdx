@@ -1,0 +1,35 @@
+---
+id: line-height
+title: Line Height
+---
+
+import { LineHeight } from '@site/src/components/LineHeight'
+
+## Line Height
+
+There are two ways to control the line height of the text, one is to use a preset value, and the other is to use a precise pass value.
+
+Use preset value: `lhNone`、`lhTight`、`lhSnug`、`lhNormal`、`lhRelaxed`、`lhLoose`.
+
+<LineHeight />
+
+```jsx
+<View>
+  <View lhNone>Lorem ipsum dolor sit amet...</View>
+  <View lhTight>Lorem ipsum dolor sit amet...</View>
+  <View lhSnug>Lorem ipsum dolor sit amet...</View>
+  <View lhNormal>Lorem ipsum dolor sit amet...</View>
+  <View lhRelaxed>Lorem ipsum dolor sit amet...</View>
+  <View lhLoose>Lorem ipsum dolor sit amet...</View>
+</View>
+```
+
+Use precise value:
+
+```jsx
+<View f-20>
+  <View lh-20>Lorem ipsum dolor sit amet...</View>
+  <View lh-3em>Lorem ipsum dolor sit amet...</View>
+  <View lh="1.5em">Lorem ipsum dolor sit amet...</View>
+</View>
+```

@@ -3,99 +3,99 @@ id: margin
 title: Margin
 ---
 
-Control the margin of an element using the `m{t|r|b|l|x|y}-{size}` Atomic Props.
+Control the margin of an element using the `m{t|r|b|l|x|y}-{value}` Atomic Props.
 
-## Margin Props
+| Atomic Props            | CSS Properties                               |
+| ----------------------- | -------------------------------------------- |
+| m-{value} / m={value}   | margin: {value};                             |
+| mt-{value} / mt={value} | margin-top: {value};                         |
+| mr-{value} / mr={value} | margin-right: {value};                       |
+| mb-{value} / mb={value} | margin-bottom: {value};                      |
+| ml-{value} / ml={value} | margin-left: {value};                        |
+| mx-{value} / mx={value} | margin-left: {value}; margin-right: {value}; |
+| my-{value} / my={value} | margin-top: {value}; margin-bottom: {value}; |
 
 `margin` is a style attribute used frequently, so we use abbreviations.
 
-- `m` margin
-- `mt` margin-top
-- `mr` margin-right
-- `mb` margin-bottom
-- `ml` margin-left
-- `mx` margin-left and margin-right
-- `my` margin-top and margin-bottom
-
 ### Margin of all sides
 
-Control the margin on all sides of an element using the `m-{size}` Atomic Props.
+Control the margin on all sides of an element using the `m-{value}` Atomic Props.
 
 ```jsx live
 <View bgGray100 toLeft>
   <View bgGreen200 s-100 m-0>
-    Hello
+    m-0
   </View>
   <View bgGreen200 s-100 m={20}>
-    Hello
+    m={'{20}'}
   </View>
   <View bgGreen200 s-100 m="40px">
-    Hello
+    m="40px"
   </View>
-  <View bgGreen200 s-100 m="10px 20px">
-    Hello
+  <View bgGreen200 s-120 m="10px 20px">
+    m="10px 20px"
   </View>
 </View>
 ```
 
 ### Margin of one side
 
-Control the margin on one side of an element using the `m{t|r|b|l}-{size}` Atomic Props.
+Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atomic Props.
 
 ```jsx live
 <View bgGray100 toLeft>
   <View ml-10 bgGreen200 s-100>
-    Hello
+    ml-10
   </View>
   <View mt-10 bgTeal200 s-100>
-    Hello
+    mt-10
   </View>
   <View mr-10 bgRed200 s-100>
-    Hello
+    mr-10
   </View>
   <View mb-10 bgYellow200 s-100>
-    Hello
+    mb-10
   </View>
 </View>
 ```
 
 ### Horizontal margin
 
-Control the horizontal margin of an element using the `mx-{size}` Atomic Props.
+Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
 
 ```jsx live
 <View bgGray100 toLeft>
   <View mx-10 s-100 bgRed200>
-    Hello
+    mx-10
   </View>
 </View>
 ```
 
 ### Vertical marign
 
-Control the vertical margin of an element using the `my-{size}` Atomic Props.
+Control the vertical margin of an element using the `my-{value}` Atomic Props.
 
 ```jsx live
 <View bgGray100 toLeft>
   <View my-10 s-100 bgRed200>
-    Hello
+    my-10
   </View>
 </View>
 ```
 
-### 设置负 margin
+### Negative margins
 
-Control the negative margin of an element using the `m{t|r|b|l|x|y}--{size}` Atomic Props.
+Control the negative margin of an element using the `m{t|r|b|l|x|y}--{value}` Atomic Props.
 
 Of course, you can also use `ml={-10}` to set negative margin of an element.
 
 ```jsx live
-<View p-50 debugChildren>
-  <View ml--10>Hello</View>
-  <View mr--10px>Hello</View>
-  <View mt--1rem>Hello</View>
-  <View mb={-10}>Hello</View>
-  <View ml="-10px">Hello</View>
-  <View mr="-1rem">Hello</View>
+<View m-20 bgGray200 s-200>
+  <View ml--20 s-100 bgRed500-T60>
+    ml--20
+  </View>
+  <View mt="-1rem" s-100 bgOrange400-T60>
+    mt="-1rem"
+  </View>
 </View>
 ```

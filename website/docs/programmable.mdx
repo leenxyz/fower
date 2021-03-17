@@ -19,13 +19,13 @@ I believe that managing the structure and style of UI in a cohesive way will gra
 ```jsx
 const textColor = '#000'
 
-<Text c={textColor}>Hello word!</Text>
+<Text color={textColor}>Hello word!</Text>
 ```
 
 ## Condition
 
 ```jsx
-<Text c={isTrue ? 'red' : 'green'}>Hello word!</Text>
+<Text color={isTrue ? 'red' : 'green'}>Hello word!</Text>
 ```
 
 ## Function
@@ -36,6 +36,6 @@ function getColor() {
 }
 
 export default () => {
-  return <Text c={getColor()}>Hello word!</Text>
+  return <Text color={getColor()}>Hello word!</Text>
 }
 ```

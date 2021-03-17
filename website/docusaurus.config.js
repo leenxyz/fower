@@ -88,52 +88,6 @@ module.exports = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Introduction',
-              to: 'docs/introduction',
-            },
-            {
-              label: 'Getting started',
-              to: 'docs/getting-started',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/styli',
-            },
-            {
-              label: 'Github',
-              href: 'https://github.com/forsigner/styli',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            // {
-            //   label: 'GitHub',
-            //   href: 'https://github.com/forsigner/styli',
-            // },
-          ],
-        },
-
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Styli`,
-    },
   },
   presets: [
     [

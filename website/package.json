@@ -45,7 +45,8 @@
     "clsx": "^1.1.1",
     "entity-form": "^0.1.1",
     "npm-to-yarn": "^1.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "simplebar-react": "^2.3.0"
   },
   "devDependencies": {
     "@styli/babel-preset-styli": "^0.26.0"

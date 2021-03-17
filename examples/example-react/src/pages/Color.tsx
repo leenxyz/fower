@@ -36,44 +36,44 @@ export default () => {
         colorPrimary-L20
       </View>
 
-      <View f-20 c="yellowgreen">
+      <View f-20 color="yellowgreen">
         yellowgreen
       </View>
 
-      <View f-20 c="#000">
+      <View f-20 color="#000">
         #000
       </View>
 
-      <View f-20 c="#000-T50">
+      <View f-20 color="#000-T50">
         #000-T50
       </View>
 
-      <View f-20 c="#666-D20">
+      <View f-20 color="#666-D20">
         #666-D20
       </View>
 
-      <View f-20 c="#666-L20">
-        c="#666-L20"
+      <View f-20 color="#666-L20">
+        color="#666-L20"
       </View>
 
-      <View f-20 c="green400">
-        c="green400"
+      <View f-20 color="green400">
+        color="green400"
       </View>
 
-      <View f-20 c="green400-O20">
-        c="green400-O20"
+      <View f-20 color="green400-O20">
+        color="green400-O20"
       </View>
 
-      <View f-20 c="green400-T20">
-        c="green400-T20"
+      <View f-20 color="green400-T20">
+        color="green400-T20"
       </View>
 
-      <View f-20 c="primary">
-        c="primary"
+      <View f-20 color="primary">
+        color="primary"
       </View>
 
-      <View f-20 c="primary-D40">
-        c="primary-D40"
+      <View f-20 color="primary-D40">
+        color="primary-D40"
       </View>
 
       <View f-20 red500 green500--hover>
@@ -88,7 +88,7 @@ export default () => {
         green500-D20--hover
       </View>
 
-      <View f-20 c="#000" c--hover="#000-T50">
+      <View f-20 color="#000" c--hover="#000-T50">
         #000--hover
       </View>
 
@@ -100,8 +100,8 @@ export default () => {
         green500--active
       </View>
 
-      <View f-20 c={['yellowgreen', 'purple', 'deeppink', 'info']}>
-        c=['yellowgreen', 'purple', 'deeppink', 'red']
+      <View f-20 color={['yellowgreen', 'purple', 'deeppink', 'info']}>
+        color=['yellowgreen', 'purple', 'deeppink', 'red']
       </View>
 
       <View f-20 trueGray500>

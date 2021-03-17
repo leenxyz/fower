@@ -3,23 +3,27 @@ id: size
 title: Size
 ---
 
-使用 `s-{size}` 格式的 Props 快速把元素变为正方形。
+使用 `s-{value}` 格式的 Props 快速把元素变为正方形。
 
-### 用法
+| Atomic Props          | CSS Properties                   |
+| --------------------- | -------------------------------- |
+| s-{value} / s={value} | width: {value}; height: {value}; |
+
+## Usage
 
 ```jsx live
-<View toLeft>
-  <View s-50 bgYellow200>
-    Hello
+<View toLeft white>
+  <View s-50 bgYellow400 toCenter>
+    s-50
   </View>
-  <View s-5rem bgGreen200>
-    Hello
+  <View s-5rem bgGreen400 toCenter>
+    s-5rem
   </View>
-  <View s={100} bgBlue200>
-    Hello
+  <View s={100} bgBlue400 toCenter>
+    s={'{100}'}
   </View>
-  <View s="150px" bgPurple200>
-    Hello
+  <View s="150px" bgPurple400 toCenter>
+    s="150px"
   </View>
 </View>
 ```

@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { createStyle } from '@styli/core'
 import { styled } from '@styli/styled'
-import { Text, View, Image, Anchor } from '@styli/react'
+import { Text, View, Image, Anchor, Box } from '@styli/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled('button')
@@ -42,6 +42,7 @@ const ReactLiveScope = {
   Text,
   View,
   Image,
+  Box,
   Heading,
   Anchor,
   Wrapper

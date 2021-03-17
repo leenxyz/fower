@@ -29,25 +29,70 @@ module.exports = {
       // 'plugin',
       'typescript',
     ],
-    'Atomic Props': [
-      'typography',
+
+    'LAYOUT': [
+
+    ],
+
+    'SPACING': [
       'padding',
       'margin',
+      'space-between',
+    ],
+    'SIZING': [
       'width',
+      'min-width',
+      'max-width',
       'height',
+      'min-height',
+      'max-height',
       'size',
       'circle',
-      'color',
+    ],
+    "TYPOGRAPHY": [
+      'font-size',
+      'font-weight',
+      'text-color',
+      'line-height',
+      'text-alignment',
+      'text-transform',
+    ],
+    'BACKGROUND': [
       'background-color',
-      'layout-engine',
-      'flexbox',
+    ],
+
+    'BORDER': [
+      'background-color',
       'border',
       'rounded',
+    ],
+
+
+    'Layout Engine': [
+      'layout-engine',
+    ],
+
+    'FLEXBOX': [
+      'flexbox',
+    ],
+
+
+    'GRID': [
+      'flexbox',
+    ],
+    'BOX ALIGNMENT': [
+
+    ],
+
+    'EFFECT': [
       'shadow',
       'opacity',
     ],
+    'INTERACTIVITY': [
+
+    ],
+
     Api: ['styled', 'css', 'createStyle'],
-    // Components: ['view', 'text', 'image', 'anchor'],
     Examples: ['example-avatar', 'example-media-object'],
     FAQS: ['faq-1', 'faq-2', 'faq-3'],
   },

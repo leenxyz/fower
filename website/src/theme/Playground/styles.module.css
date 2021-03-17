@@ -38,6 +38,9 @@
 .playgroundPreview {
   border: 1px solid var(--ifm-color-emphasis-200);
   padding: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
 }
 
 .playgroundPreview:last-of-type,
