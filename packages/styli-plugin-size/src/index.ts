@@ -14,20 +14,16 @@ export const sizeMaps: any = {
 }
 
 export function isSizeKey(key: string) {
-  return /^([wh]|circle|min[HWhw]|max[HWhw])(-.+)?$/.test(key)
-}
-
-export function isSquareKey(key: string) {
-  return /^s(-[\dA-Za-z]+){0,2}$/.test(key)
+  return /^([wh]|circle|min[HWhw]|max[HWhw])(-[\dA-Z-a-z]+)?$|^s(-[\dA-Za-z]+){0,2}$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
-  const [, matchKey, , xValue, , yValue] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
   const sizeValue = isValidPropValue(propValue) ? [propValue] : [xValue, yValue]
 
-  return sizeMaps[key].reduce((style: any, cur: string, idx: number) => {
+  return (sizeMaps[key] || []).reduce((style: any, cur: string, idx: number) => {
     const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : xValue)
     style[cur] = styli.getValue(currentValue)
     return style
@@ -38,7 +34,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-size',
     isMatch: (propKey) => {
-      return isSizeKey(propKey) || isSquareKey(propKey)
+      return isSizeKey(propKey)
     },
     beforeAtomStyleCreate(atom) {
       const { propKey } = atom
