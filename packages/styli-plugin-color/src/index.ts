@@ -6,7 +6,6 @@ function isColorTheme(key: string) {
 }
 
 export function isColorKey(key: string) {
-
   if (key === 'c' || key === 'color') return true
 
   // colorBrand...

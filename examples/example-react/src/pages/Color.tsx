@@ -103,6 +103,10 @@ export default () => {
       <View f-20 c={['yellowgreen', 'purple', 'deeppink', 'info']}>
         c=['yellowgreen', 'purple', 'deeppink', 'red']
       </View>
+
+      <View f-20 trueGray500>
+        trueGray500
+      </View>
     </View>
   );
 };

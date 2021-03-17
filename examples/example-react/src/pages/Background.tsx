@@ -12,6 +12,10 @@ export default () => {
         Background
       </Box>
 
+      <View f-20 bgLime400>
+        bgLime400
+      </View>
+
       <View f-20 bgRed500>
         BgRed50
       </View>
