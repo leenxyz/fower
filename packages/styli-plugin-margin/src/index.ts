@@ -34,9 +34,9 @@ export function isMarginKey(key: string) {
 export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [, direction = '', , xValue, , yValue] = prop.match(/^m([ltrbxy])(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] = prop.match(/^(m[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const key = matchKey.toLowerCase()
 
-  // m--1px-1px
   if (xValue && yValue) {
     marginMaps['mx'].forEach((k: any) => {
       style[k] = styli.getValue(xValue)
@@ -47,15 +47,13 @@ export function marginPropToStyle(prop: string, propValue: any) {
     return style
   }
 
-  // m-1px
   const marginValue = isValidPropValue(propValue) ? propValue : xValue
-  marginMaps['m' + direction].forEach((k: any) => {
+  marginMaps[key].forEach((k: any) => {
     style[k] = styli.getValue(marginValue)
   })
 
   return style
 }
-
 
 export default (): StyliPlugin => {
   return {
