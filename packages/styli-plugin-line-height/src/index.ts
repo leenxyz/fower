@@ -3,7 +3,7 @@ import { StyliPlugin } from '@styli/types'
 import { downFirst, isValidPropValue } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
-  return /^lh(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
+  return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
@@ -11,7 +11,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
     return { lineHeight: styli.getValue(propValue) }
   }
 
-  const [, value = ''] = prop.match(/lh-?(\w+)?/) || []
+  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
 
   const leadings = styli.getTheme('lineHeight') || {}
   const inline = styli.getConfig('inline')

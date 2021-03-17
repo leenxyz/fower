@@ -10,11 +10,11 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lh-10></View>
-     * <View lh="10px"></View>
+     * <View leading-10></View>
+     * <View leading="10px"></View>
      * ```
      */
-    lh?: PropValue
+    leading?: PropValue
 
     /**
      * Set lineHeight
@@ -23,10 +23,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhNone></View>
+     * <View leadingNone></View>
      * ```
      */
-    lhNone?: boolean
+    leadingNone?: boolean
 
     /**
      * Set lineHeight
@@ -35,10 +35,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhTight></View>
+     * <View leadingTight></View>
      * ```
      */
-    lhTight?: boolean
+    leadingTight?: boolean
 
     /**
      * Set lineHeight
@@ -47,10 +47,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhSnug></View>
+     * <View leadingSnug></View>
      * ```
      */
-    lhSnug?: boolean
+    leadingSnug?: boolean
 
     /**
      * Set lineHeight
@@ -59,10 +59,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhNormal></View>
+     * <View leadingNormal></View>
      * ```
      */
-    lhNormal?: boolean
+    leadingNormal?: boolean
 
     /**
      * Set lineHeight
@@ -71,10 +71,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhRelaxed></View>
+     * <View leadingRelaxed></View>
      * ```
      */
-    lhRelaxed?: boolean
+    leadingRelaxed?: boolean
 
     /**
      * Set lineHeight
@@ -83,9 +83,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View lhLoose></View>
+     * <View leadingLoose></View>
      * ```
      */
-    lhLoose?: boolean
+    leadingLoose?: boolean
   }
 }

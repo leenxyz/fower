@@ -15,23 +15,23 @@ describe('styli-plugin-line-height', () => {
   const sheet = {} as any
 
   it('isMatch', () => {
-    expect(isMatch!('lh')).toEqual(true)
-    expect(isMatch!('lh-10')).toEqual(true)
-    expect(isMatch!('lhNone')).toEqual(true)
-    expect(isMatch!('lhTight')).toEqual(true)
+    expect(isMatch!('leading')).toEqual(true)
+    expect(isMatch!('leading-10')).toEqual(true)
+    expect(isMatch!('leadingNone')).toEqual(true)
+    expect(isMatch!('leadingTight')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'lh', propValue: 10 } as Atom
-    const newAtom1 = { propKey: 'lh', propValue: 10, style: { lineHeight: '10px' } }
+    const atom1 = { propKey: 'leading', propValue: 10 } as Atom
+    const newAtom1 = { propKey: 'leading', propValue: 10, style: { lineHeight: '10px' } }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'lh-20', propValue: true } as Atom
-    const newAtom2 = { propKey: 'lh-20', propValue: true, style: { lineHeight: '20px' } }
+    const atom2 = { propKey: 'leading-20', propValue: true } as Atom
+    const newAtom2 = { propKey: 'leading-20', propValue: true, style: { lineHeight: '20px' } }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
-    const atom3 = { propKey: 'lhNone', propValue: true } as Atom
-    const newAtom3 = { propKey: 'lhNone', propValue: true, style: { lineHeight: 1 } }
+    const atom3 = { propKey: 'leadingNone', propValue: true } as Atom
+    const newAtom3 = { propKey: 'leadingNone', propValue: true, style: { lineHeight: 1 } }
     expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
   })
 })
