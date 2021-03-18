@@ -6,9 +6,9 @@ export default _default
 declare module '@styli/types' {
   export interface AtomicProps {
     /**
-     * Set children element space.
+     * Set children elements space.
      *
-     * It will add 'margin-right', 'margin-bottom' to children element
+     * It will add 'margin-right', 'margin-bottom' to children elements
      *
      * @example
      * ```tsx
@@ -19,7 +19,7 @@ declare module '@styli/types' {
     space?: PropValue
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
      *
@@ -28,7 +28,7 @@ declare module '@styli/types' {
     space0?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -38,7 +38,7 @@ declare module '@styli/types' {
     space1?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -48,7 +48,7 @@ declare module '@styli/types' {
     space2?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -58,7 +58,7 @@ declare module '@styli/types' {
     space3?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -68,7 +68,7 @@ declare module '@styli/types' {
     space4?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -78,7 +78,7 @@ declare module '@styli/types' {
     space5?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -88,7 +88,7 @@ declare module '@styli/types' {
     space6?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -98,7 +98,7 @@ declare module '@styli/types' {
     space7?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -108,7 +108,7 @@ declare module '@styli/types' {
     space8?: boolean
 
     /**
-     * Set children element space.
+     * Set children elements space.
      *
      * NOTE: Theme restrict.
 
@@ -130,9 +130,9 @@ declare module '@styli/types' {
     space20?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
-     * It will add 'margin-right' to children element
+     * It will add 'margin-right' to children elements
      *
      * @example
      * ```tsx
@@ -143,7 +143,7 @@ declare module '@styli/types' {
     spaceX?: PropValue
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -153,7 +153,7 @@ declare module '@styli/types' {
     spaceX0?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -163,7 +163,7 @@ declare module '@styli/types' {
     spaceX1?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -173,7 +173,7 @@ declare module '@styli/types' {
     spaceX2?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -183,7 +183,7 @@ declare module '@styli/types' {
     spaceX3?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -193,7 +193,7 @@ declare module '@styli/types' {
     spaceX4?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -203,7 +203,7 @@ declare module '@styli/types' {
     spaceX5?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -213,7 +213,7 @@ declare module '@styli/types' {
     spaceX6?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -223,7 +223,7 @@ declare module '@styli/types' {
     spaceX7?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -233,7 +233,7 @@ declare module '@styli/types' {
     spaceX8?: boolean
 
     /**
-     * Set children element horizontal orientation space.
+     * Set children elements horizontal orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -255,9 +255,9 @@ declare module '@styli/types' {
     spaceX20?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
-     * It will add 'margin-bottom' to children element
+     * It will add 'margin-bottom' to children elements
      *
      * @example
      * ```tsx
@@ -268,7 +268,7 @@ declare module '@styli/types' {
     spaceY?: PropValue
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -278,7 +278,7 @@ declare module '@styli/types' {
     spaceY0?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -288,7 +288,7 @@ declare module '@styli/types' {
     spaceY1?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -298,7 +298,7 @@ declare module '@styli/types' {
     spaceY2?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -308,7 +308,7 @@ declare module '@styli/types' {
     spaceY3?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -318,7 +318,7 @@ declare module '@styli/types' {
     spaceY4?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -328,7 +328,7 @@ declare module '@styli/types' {
     spaceY5?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -338,7 +338,7 @@ declare module '@styli/types' {
     spaceY6?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -348,7 +348,7 @@ declare module '@styli/types' {
     spaceY7?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 
@@ -358,7 +358,7 @@ declare module '@styli/types' {
     spaceY8?: boolean
 
     /**
-     * Set children element vertical orientation space.
+     * Set children elements vertical orientation space.
      *
      * NOTE: Theme restrict.
 

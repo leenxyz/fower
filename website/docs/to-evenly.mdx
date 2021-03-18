@@ -1,0 +1,29 @@
+---
+id: to-evenly
+title: To Evenly
+---
+
+import { LayoutEngine10 } from '@site/src/components/LayoutEngine'
+
+Atomic Props to make children elements evenly.
+
+| Atomic Props | Effect                        |
+| ------------ | ----------------------------- |
+| toEvenly     | Make children elements evenly |
+
+## Usage
+
+Use `toEvenly` to make children elements evenly.
+
+```jsx live
+<View toEvenly bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Compose
+
+`toEvenly` can compose with `toTop`、`toCenterY`、`toBottom`、`ttoLeft`、`toCenterX`、`toRight`:
+
+<LayoutEngine10 />

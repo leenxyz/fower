@@ -30,16 +30,31 @@ module.exports = {
       'typescript',
     ],
 
-    'LAYOUT': [
+    'Styli Layout': [
+      'styli-layout-introduction',
+      'to-center',
+      'to-center-x',
+      'to-center-y',
+      'to-left',
+      'to-right',
+      'to-top',
+      'to-bottom',
+      'to-between',
+      'to-evenly',
+      'to-around',
+    ],
+
+
+    'Layout': [
 
     ],
 
-    'SPACING': [
+    'Spacing': [
       'padding',
       'margin',
       'space-between',
     ],
-    'SIZING': [
+    'Sizing': [
       'width',
       'min-width',
       'max-width',
@@ -49,7 +64,7 @@ module.exports = {
       'size',
       'circle',
     ],
-    "TYPOGRAPHY": [
+    "Typography": [
       'font-size',
       'font-weight',
       'text-color',
@@ -57,34 +72,31 @@ module.exports = {
       'text-alignment',
       'text-transform',
     ],
-    'BACKGROUND': [
+    'Background': [
       'background-color',
     ],
 
-    'BORDER': [
+    'Border': [
       'background-color',
       'border',
       'rounded',
     ],
 
 
-    'Layout Engine': [
-      'layout-engine',
-    ],
-
-    'FLEXBOX': [
+    'Flexbox': [
       'flexbox',
     ],
 
 
-    'GRID': [
-      'flexbox',
+    'Grid': [
+      'grid-template-columns',
+      'gap',
     ],
-    'BOX ALIGNMENT': [
+    'Box Alignment': [
 
     ],
 
-    'EFFECT': [
+    'Effect': [
       'shadow',
       'opacity',
     ],
