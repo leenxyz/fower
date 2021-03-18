@@ -6,7 +6,7 @@
     "build": "umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "umi-test",
+    "test": "echo example-react",
     "test:coverage": "umi-test --coverage"
   },
   "gitHooks": {

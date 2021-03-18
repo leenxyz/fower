@@ -11,7 +11,7 @@ export default (): StyliPlugin => {
 
       const breakpoints = styli.getTheme('breakpoints')
 
-      if (!breakpoints.length) {
+      if (!breakpoints?.length) {
         console.error('theme breakpoints not provide')
       }
 

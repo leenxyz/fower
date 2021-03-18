@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { Atom, ModifierType, SheetType, StyliPlugin } from '@styli/types'
+import { Atom, SheetType, StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 import plugin from '../src'
 
@@ -38,11 +38,11 @@ const textPlugin = (): StyliPlugin => {
       const { propKey, propValue } = atom
       if (isValidPropValue(propValue)) {
         atom.style = {
-          fontSize: styli.getValue('' + propValue, ModifierType.text),
+          fontSize: styli.getValue('' + propValue),
         }
       } else {
         const [, value] = propKey.split('-')
-        atom.style = { fontSize: styli.getValue(value, ModifierType.text) }
+        atom.style = { fontSize: styli.getValue(value) }
       }
 
       return atom

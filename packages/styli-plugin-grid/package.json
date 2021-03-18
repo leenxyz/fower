@@ -14,11 +14,12 @@
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
   },
+
   "author": "forsigner",
   "module": "dist/styli-plugin-grid.esm.js",
   "dependencies": {

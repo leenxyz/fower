@@ -6,8 +6,7 @@
     "types": "index.d.ts",
     "scripts": {
         "build": "echo 'build'",
-        "test": "echo 'build:test'",
-        "lint": "tsdx lint"
+        "test": "echo 'build:test'"
     },
     "dependencies": {
         "csstype": "^3.0.6"

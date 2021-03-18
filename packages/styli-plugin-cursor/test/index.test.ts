@@ -12,8 +12,8 @@ describe('styli-plugin-cursor', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = { propKey: 'cursor', propValue: true, key: 'cursor', type: 'style' }
-    const newAtom1 = { propKey: 'cursor', propValue: true, style: { cursor: 'pointer' } }
+    const atom1 = { propKey: 'cursor', propValue: 'pointer', key: 'cursor', type: 'style' } as Atom
+    const newAtom1 = { propKey: 'cursor', propValue: 'pointer', style: { cursor: 'pointer' } }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'cursorNone', propValue: true } as Atom

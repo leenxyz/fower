@@ -12,7 +12,7 @@
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint"
   },
   "author": "forsigner",
