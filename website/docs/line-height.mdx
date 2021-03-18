@@ -5,31 +5,40 @@ title: Line Height
 
 import { LineHeight } from '@site/src/components/LineHeight'
 
-## Line Height
+| Atomic Props   | CSS Properties      |
+| -------------- | ------------------- |
+| leadingNone    | line-height: 1;     |
+| leadingTight   | line-height: 1.25;  |
+| leadingSnug    | line-height: 1.375; |
+| leadingNormal  | line-height: 1.5;   |
+| leadingRelaxed | line-height: 1.625; |
+| leadingLoose   | line-height: 2;     |
+
+## Usage
 
 There are two ways to control the line height of the text, one is to use a preset value, and the other is to use a precise pass value.
 
-Use preset value: `lhNone`、`lhTight`、`lhSnug`、`lhNormal`、`lhRelaxed`、`lhLoose`.
+Use preset value: `leadingNone`、`leadingTight`、`leadingSnug`、`leadingNormal`、`leadingRelaxed`、`leadingLoose`.
 
 <LineHeight />
 
 ```jsx
 <View>
-  <View lhNone>Lorem ipsum dolor sit amet...</View>
-  <View lhTight>Lorem ipsum dolor sit amet...</View>
-  <View lhSnug>Lorem ipsum dolor sit amet...</View>
-  <View lhNormal>Lorem ipsum dolor sit amet...</View>
-  <View lhRelaxed>Lorem ipsum dolor sit amet...</View>
-  <View lhLoose>Lorem ipsum dolor sit amet...</View>
+  <View leadingNone>Lorem ipsum dolor sit amet...</View>
+  <View leadingTight>Lorem ipsum dolor sit amet...</View>
+  <View leadingSnug>Lorem ipsum dolor sit amet...</View>
+  <View leadingNormal>Lorem ipsum dolor sit amet...</View>
+  <View leadingRelaxed>Lorem ipsum dolor sit amet...</View>
+  <View leadingLoose>Lorem ipsum dolor sit amet...</View>
 </View>
 ```
 
 Use precise value:
 
-```jsx
+```jsx live
 <View f-20>
-  <View lh-20>Lorem ipsum dolor sit amet...</View>
-  <View lh-3em>Lorem ipsum dolor sit amet...</View>
-  <View lh="1.5em">Lorem ipsum dolor sit amet...</View>
+  <View leading-20>Lorem ipsum dolor sit amet...</View>
+  <View leading-3em>Lorem ipsum dolor sit amet...</View>
+  <View leading="1.5em">Lorem ipsum dolor sit amet...</View>
 </View>
 ```

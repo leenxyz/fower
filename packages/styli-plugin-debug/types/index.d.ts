@@ -22,7 +22,7 @@ declare module '@styli/types' {
     /**
      * debugChildren
      *
-     * Styli will auto add border to self and children element
+     * Styli will auto add border to self and children elements
      *
      * debugChildren is `.autoClassName{ border: 1px solid gold, '> *': { border: 1px solid gold } }`
      *

@@ -1,0 +1,29 @@
+---
+id: to-center-y
+title: To CenterY
+---
+
+import { LayoutEngine8 } from '@site/src/components/LayoutEngine'
+
+Atomic Props to make children elements align to center vertical.
+
+| Atomic Props | Effect                                          |
+| ------------ | ----------------------------------------------- |
+| toCenterY    | Make children elements align to center vertical |
+
+## Usage
+
+Center vertical quickly with `toCenterY` prop:
+
+```jsx live
+<View toCenterY bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Compose
+
+`toCenterY` can compose with `toLeft`、`toCenterX`、`toRight`、`toBetween`、`toEvenly`、`toAround`:
+
+<LayoutEngine8 />

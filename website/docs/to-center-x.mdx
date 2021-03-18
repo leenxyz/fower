@@ -1,0 +1,29 @@
+---
+id: to-center-x
+title: To CenterX
+---
+
+import { LayoutEngine7 } from '@site/src/components/LayoutEngine'
+
+Atomic Props to make children elements align to center horizontal.
+
+| Atomic Props | Effect                                            |
+| ------------ | ------------------------------------------------- |
+| toCenterX    | Make children elements align to center horizontal |
+
+## Usage
+
+Center horizontal quickly with `toCenterX` prop:
+
+```jsx live
+<View toCenterX bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Compose
+
+`toCenterX` can compose with `toTop`、`toCenterY`、`toBottom`、`toBetween`、`toEvenly`、`toAround`:
+
+<LayoutEngine7 />

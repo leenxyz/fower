@@ -1,0 +1,29 @@
+---
+id: to-right
+title: To Right
+---
+
+Atomic Props to make children elements align to right.
+
+import { LayoutEngine4 } from '@site/src/components/LayoutEngine'
+
+| Atomic Props | Effect                                |
+| ------------ | ------------------------------------- |
+| toRight      | Make children elements align to right |
+
+## Usage
+
+Use `toTop` to make children elements align to right.
+
+```jsx live
+<View toRight bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Compose
+
+`toRight` can compose with `toTop`、`toCenterY`、`toBottom`、`toBetween`、`toEvenly`、`toAround`:
+
+<LayoutEngine4 />

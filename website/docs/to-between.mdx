@@ -1,0 +1,29 @@
+---
+id: to-between
+title: To Between
+---
+
+import { LayoutEngine9 } from '@site/src/components/LayoutEngine'
+
+Atomic Props to make children elements space between.
+
+| Atomic Props | Effect                               |
+| ------------ | ------------------------------------ |
+| toBetween    | Make children elements space between |
+
+## Usage
+
+Use `toBetween` to make children elements space between.
+
+```jsx live
+<View toBetween bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Compose
+
+`toBetween` can compose with `toTop`、`toCenterY`、`toBottom`、`ttoLeft`、`toCenterX`、`toRight`:
+
+<LayoutEngine9 />

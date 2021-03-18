@@ -7,9 +7,7 @@
     "packages": [
       "packages/*",
       "examples/*",
-      "website",
-      "website-en",
-      "website-cn"
+      "website"
     ]
   },
   "scripts": {

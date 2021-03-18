@@ -1,0 +1,50 @@
+---
+id: gap
+title: Gap
+---
+
+| Atomic Props      | CSS Properties       |
+| ----------------- | -------------------- |
+| gap-{value}       | gap: {value};        |
+| rowGap-{value}    | row-gap: {value};    |
+| columnGap-{value} | column-gap: {value}; |
+
+## Usage
+
+## Gap
+
+```jsx live
+<Box grid gridTemplateColumns-2 gap-20 white fontBold f-20>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    1
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    2
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    3
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    4
+  </Box>
+</Box>
+```
+
+## Row Gap and Column Gap
+
+```jsx live
+<Box grid gridTemplateColumns-2 rowGap-10 columnGap-20 white fontBold f-20>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    1
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    2
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    3
+  </Box>
+  <Box py1 rounded-4 toCenter bgTeal400>
+    4
+  </Box>
+</Box>
+```
