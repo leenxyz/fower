@@ -6,7 +6,7 @@ function isMatch(key: string) {
   return /^(row|column)?Gap(-.+)?$|^gridTemplateColumns(-.+)?$/i.test(key)
 }
 
-function flexPropToStyle(propKey: string, propValue: any): any {
+function gridPropToStyle(propKey: string, propValue: any): any {
   const style: any = {}
 
   if (propKey.startsWith('gridTemplateColumns')) {
@@ -29,7 +29,7 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-grid',
     isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = flexPropToStyle(atom.propKey, atom.propValue)
+      atom.style = gridPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
   }
