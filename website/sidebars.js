@@ -46,7 +46,12 @@ module.exports = {
 
 
     'Layout': [
-
+      'display',
+      'position',
+      'top-right-bottom-left',
+      'z-index',
+      'overflow',
+      'debug'
     ],
 
     'Spacing': [
@@ -71,6 +76,7 @@ module.exports = {
       'line-height',
       'text-alignment',
       'text-transform',
+      'ellipsis',
     ],
     'Background': [
       'background-color',
@@ -84,7 +90,12 @@ module.exports = {
 
 
     'Flexbox': [
-      'flexbox',
+      // Flex Direction
+      // Flex Wrap
+      // Flex
+      // Flex Grow
+      // Flex Shrink
+      // Order
     ],
 
 
@@ -94,14 +105,25 @@ module.exports = {
     ],
     'Box Alignment': [
 
+      // Justify Content
+      // Justify Items
+      // Justify Self
+      // Align Content
+      // Align Items
+      // Align Self
+      // Place Content
+      // Place Items
+      // Place Self
+
     ],
 
     'Effect': [
       'shadow',
       'opacity',
     ],
-    'INTERACTIVITY': [
-
+    'Interactivity': [
+      'outline',
+      'cursor',
     ],
 
     Api: ['styled', 'css', 'createStyle'],

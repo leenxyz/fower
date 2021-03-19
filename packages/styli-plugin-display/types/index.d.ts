@@ -41,6 +41,16 @@ declare module '@styli/types' {
     inlineBlock?: boolean
 
     /**
+     * Set display to inline-flex
+     *
+     * @example
+     * ```tsx
+     * <View inlineFlex></View>
+     * ```
+     */
+    inlineFlex?: boolean
+
+    /**
      * Set display to block
      *
      * @example
@@ -49,6 +59,16 @@ declare module '@styli/types' {
      * ```
      */
     block?: boolean
+
+    /**
+     * Set display to flex
+     *
+     * @example
+     * ```tsx
+     * <View flex></View>
+     * ```
+     */
+    flex?: boolean
 
     /**
      * Set display to grid
@@ -65,10 +85,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View hide></View>
+     * <View hidden></View>
      * ```
      */
-    hide?: boolean
+    hidden?: boolean
 
     /**
      * Set display to table

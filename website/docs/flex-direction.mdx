@@ -1,0 +1,66 @@
+---
+id: flex-direction
+title: Flex Direction
+---
+
+Atomic props for controlling the direction of flex items.
+
+| Atomic Props          | CSS Properties          |
+| --------------------- | ----------------------- |
+| row                   | flex-direction: row;    |
+| column                | flex-direction: column; |
+| flexDirection={value} | flex-direction: {value} |
+
+## row
+
+Use `row` props to position flex items horizontally.
+
+```jsx live
+<Box white spaceX3 row>
+  <Box bgAmber400 p10>
+    A
+  </Box>
+  <Box bgAmber400 p10>
+    B
+  </Box>
+  <Box bgAmber400 p10>
+    C
+  </Box>
+</Box>
+```
+
+## column
+
+Use `column` props to position flex items vertically.
+
+```jsx live
+<Box white spaceY3 column>
+  <Box bgAmber400 p6>
+    A
+  </Box>
+  <Box bgAmber400 p6>
+    B
+  </Box>
+  <Box bgAmber400 p6>
+    C
+  </Box>
+</Box>
+```
+
+## flexDirection
+
+Use `flexDirection={value}` to set items direction.
+
+```jsx live
+<Box white flexDirection="row-reverse">
+  <Box bgAmber400 p6 m3>
+    A
+  </Box>
+  <Box bgAmber400 p6 m3>
+    B
+  </Box>
+  <Box bgAmber400 p6 m3>
+    C
+  </Box>
+</Box>
+```

@@ -1,0 +1,54 @@
+---
+id: overflow
+title: Overflow
+---
+
+Atomic props for controlling how an element's overflow attribute.
+
+| Atomic Props      | CSS Properties      |
+| ----------------- | ------------------- |
+| overflow={value}  | overflow: {value}   |
+| overflowX={value} | overflow-x: {value} |
+| overflowY={value} | overflow-y:{value}  |
+
+## Overflow
+
+Use `overflow` props to set an element's overflow.
+
+```jsx live
+<View s-200 overflow="auto" bgGray100 p4>
+  <View s-400>
+    View Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
+    eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+    voluptatum quae eum fugit earum.
+  </View>
+</View>
+```
+
+## OverflowX
+
+Use `overflowX` props to set an element's overflowX.
+
+```jsx live
+<View s-200 overflowX="auto" overflowY="hidden" bgGray100 p4>
+  <View s-400>
+    View Lorem ipsum dolor sit amet, consectetur adipisicing elit Assumenda, quia temporibus eveniet
+    a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+    voluptatum quae eum fugit earum.
+  </View>
+</View>
+```
+
+## OverflowY
+
+Use `overflowY` props to set an element's overflowY.
+
+```jsx live
+<View s-200 overflowY="auto" overflowX="hidden" bgGray100 p4>
+  <View s-400>
+    View Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
+    eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+    voluptatum quae eum fugit earum.
+  </View>
+</View>
+```

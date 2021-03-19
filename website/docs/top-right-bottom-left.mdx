@@ -1,0 +1,63 @@
+---
+id: top-right-bottom-left
+title: Top / Right / Bottom / Left
+---
+
+Atomic props for controlling the placement of positioned elements.
+
+| Atomic Props                    | CSS Properties |
+| ------------------------------- | -------------- |
+| top-{value} / top={value}       | top={value}    |
+| right-{value} / right={value}   | right={value}  |
+| bottom-{value} / bottom={value} | bottom={value} |
+| left-{value} / left={value}     | left={value}   |
+
+## Top
+
+Use `top` props to set an element's top position.
+
+```jsx live
+<View relative s-160 bgAmber100>
+  <View bgAmber400 s-80 absolute top-20></View>
+</View>
+```
+
+## Right
+
+Use `right` props to set an element's right position.
+
+```jsx live
+<View relative s-160 bgAmber100>
+  <View bgAmber400 s-80 absolute right={20}></View>
+</View>
+```
+
+## Bottom
+
+Use `bottom` props to set an element's bottom position.
+
+```jsx live
+<View relative s-160 bgAmber100>
+  <View bgAmber400 s-80 absolute bottom="20%"></View>
+</View>
+```
+
+## Left
+
+Use `left` props to set an element's left position.
+
+```jsx live
+<View relative s-160 bgAmber100>
+  <View bgAmber400 s-80 absolute left-20></View>
+</View>
+```
+
+## Negative values
+
+Use `right--{value}` like props to set an element's Negative position.
+
+```jsx live
+<View relative s-160 bgAmber100>
+  <View bgAmber400 s-80 absolute top-20 right--20></View>
+</View>
+```

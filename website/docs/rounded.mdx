@@ -1,11 +1,26 @@
 ---
 id: rounded
-title: Rounded
+title: Border Radius
 ---
 
-使用 `rounded{T|R|B|L|TL|TR|BL|BR}-{size}` 格式的 Props 可以控制元素的圆角大小。
+Atomic props for controlling the border radius of an element.
 
-## 四周圆角
+| Atomic Props                              | CSS Properties                                                               |
+| ----------------------------------------- | ---------------------------------------------------------------------------- |
+| rounded-{value} / rounded={value}         | border-radius: {value};                                                      |
+| roundedFull-{value} / roundedFull={value} | border-radius: 9999px;                                                       |
+| roundedT-{value} / roundedT={value}       | border-top-left-radius: {value};<br/>border-top-right-radius: {value};       |
+| roundedR-{value} / roundedR={value}       | border-top-right-radius: {value};<br/>border-bottom-right-radius: {value};   |
+| roundedB-{value} / roundedB={value}       | border-bottom-left-radius: {value};<br/>border-bottom-right-radius: {value}; |
+| roundedL-{value} / roundedL={value}       | border-top-left-radius: {value};<br/>border-bottom-left-radius: {value};     |
+| roundedTL-{value} / roundedTL={value}     | border-top-left-radius: {value};                                             |
+| roundedTR-{value} / roundedTR={value}     | border-top-right-radius: {value};                                            |
+| roundedBL-{value} / roundedBL={value}     | border-bottom-left-radius: {value};                                          |
+| roundedBR-{value} / roundedBR={value}     | border-bottom-right-radius: {value};                                         |
+
+## Rounded corners
+
+Use `rounded-{size}` to set rounded corner of an element.
 
 ```jsx live
 <View toEvenly>
@@ -16,7 +31,9 @@ title: Rounded
 </View>
 ```
 
-## 某一方向
+## One sides corners
+
+Use `rounded{T|R|B|L}-{size}` to set one side corner of an element.
 
 ```jsx live
 <View toEvenly>
@@ -27,7 +44,9 @@ title: Rounded
 </View>
 ```
 
-## 单个圆角
+## Single cornner
+
+Use `rounded{TL|TR|BL|BR}-{size}` to single corner of an element.
 
 ```jsx live
 <View toEvenly>
@@ -38,15 +57,13 @@ title: Rounded
 </View>
 ```
 
-## 使用伪类
+## roundedFull
 
-你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
-
-> Styli 支持的伪类：[查看](/docs/pseudo)
+Use the `roundedFull` props to create pills and circles.
 
 ```jsx live
 <View toEvenly>
-  <View s-100 bgYellow200 rounded-20--hover></View>
-  <View s-100 bgGreen200 rounded-20--active></View>
+  <View w-200 h-100 bgYellow200 roundedFull></View>
+  <View s-100 bgYellow200 roundedFull></View>
 </View>
 ```

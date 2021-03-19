@@ -1,0 +1,34 @@
+---
+id: flex-wrap
+title: Flex Wrap
+---
+
+Atomic props for controlling how flex items wrap.
+
+| Atomic Props     | CSS Properties     |
+| ---------------- | ------------------ |
+| flexWrap={value} | flex-wrap: {value} |
+
+## Wrap
+
+Use `flexWrap="wrap"` props to allow flex items to wrap.
+
+```jsx live
+<Box spaceX3 row flexWrap="wrap">
+  <Box bgAmber400 m2 p4 w-300></Box>
+  <Box bgAmber500 m2 p4 w-300></Box>
+  <Box bgAmber400 m2 p4 w-300></Box>
+</Box>
+```
+
+## No Wrap
+
+Use `flexWrap="nowrap"` props to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary.
+
+```jsx live
+<Box spaceX3 row flexWrap="nowrap">
+  <Box bgAmber400 m2 p4 w-300></Box>
+  <Box bgAmber500 m2 p4 w-300></Box>
+  <Box bgAmber400 m2 p4 w-300></Box>
+</Box>
+```

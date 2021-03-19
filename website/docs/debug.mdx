@@ -1,0 +1,47 @@
+---
+id: debug
+title: debug 调试
+---
+
+`debug{Children|All}` 系列属性，它将自动为元素添加边框，使得 UI 开发更加直观。
+
+import { styli } from '@styli/core'
+styli.config.dev = true
+
+:::info
+生产模式下将不生效。
+:::
+
+## debug
+
+debug 属性将自动为自身元素添加边框
+
+```tsx live
+<Wrapper>
+  <View s-100 bghWhite debug></View>
+</Wrapper>
+```
+
+## debugChildren
+
+debugChildren 属性将自动为自身元素及一级子元素添加边框
+
+```tsx live
+<Wrapper debugChildren>
+  <View s-100 bghWhite toCenter></View>
+  <View s-100 bghWhite toCenter></View>
+</Wrapper>
+```
+
+## debugAll
+
+debugAll 属性将为整个文档的所有元素添加边框
+
+```tsx
+const Body = styled('body')
+<Body debugAll={false}>
+  // other code
+</Body>
+```
+
+**注意: debugAll 为全局注入属性。组件与 debugAll 没有对应关系，所以 debugAll 属性值不能进行 true/false 切换操作。**

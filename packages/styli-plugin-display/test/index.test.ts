@@ -6,7 +6,7 @@ describe('styli-plugin-display', () => {
   const sheet = {} as SheetType
 
   it('isMatch', () => {
-    expect(isMatch!('hide')).toEqual(true)
+    expect(isMatch!('hidden')).toEqual(true)
     expect(isMatch!('inline')).toEqual(true)
     expect(isMatch!('inlineBlock')).toEqual(true)
     expect(isMatch!('block')).toEqual(true)
@@ -16,8 +16,8 @@ describe('styli-plugin-display', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'hide', propValue: true } as Atom
-    const newAtom1 = { propKey: 'hide', propValue: true, style: { display: 'none' } }
+    const atom1 = { propKey: 'hidden', propValue: true } as Atom
+    const newAtom1 = { propKey: 'hidden', propValue: true, style: { display: 'none' } }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'inline', propValue: true } as Atom
