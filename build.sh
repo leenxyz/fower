@@ -40,6 +40,8 @@ Parallel=("
   styli-plugin-grid
   styli-plugin-ellipsis
   styli-plugin-cursor
+  styli-plugin-box-sizing
+  styli-plugin-visibility
   babel-preset-styli
 ")
 

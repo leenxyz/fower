@@ -38,6 +38,3 @@ Frequently viewed docs:
 ## TODO
 
 - styli-plugin-container
-- styli-plugin-box-sizing
-- styli-plugin-visibility
-
