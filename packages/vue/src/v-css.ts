@@ -1,4 +1,4 @@
-import { Sheet, styli, styleManager } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 
 function isArray(data: string) {
   return /^\[(\w+,)*\w+\]$/.test(data)
@@ -31,7 +31,7 @@ export default {
     const sheet = new Sheet(props, styli.getTheme())
 
     /** insert css to style element */
-    styleManager.insertStyles(sheet.toCss())
+    sheet.insertRule()
 
     /** rm no use attr */
     const parsedProps = sheet.getParsedProps()

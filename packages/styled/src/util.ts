@@ -1,4 +1,4 @@
-import { createStyle, css, Sheet, styleManager } from '@styli/core'
+import { createStyle, css, Sheet } from '@styli/core'
 import { trimStr } from '@styli/utils'
 import { Args } from './types'
 
@@ -31,7 +31,7 @@ export function getCssParsedProps(props: any, value: any, args: Args) {
 
   if (finalClassName) {
     parsedProps.className = finalClassName
-    styleManager.insertStyles(sheet.toCss())
+    sheet.insertRule()
   }
 
   return parsedProps

@@ -1,7 +1,6 @@
 import { CSSObject, Props } from '@styli/types'
 import { modifierToProps } from '@styli/utils'
 import { Sheet } from '../Sheet'
-import { styleManager } from '../styleManager'
 import { styli } from '../styli'
 
 export function css(...args: (string | CSSObject)[]) {
@@ -14,7 +13,7 @@ export function css(...args: (string | CSSObject)[]) {
   )
 
   const sheet = new Sheet(props, styli.getTheme())
-  styleManager.insertStyles(sheet.toCss())
+  sheet.insertRule()
 
   return sheet.getClassNames()
 }

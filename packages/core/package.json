@@ -21,6 +21,7 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
+    "@emotion/sheet": "^1.0.1",
     "@styli/types": "^0.26.0",
     "@styli/utils": "^0.26.0"
   }

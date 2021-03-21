@@ -7,7 +7,9 @@ import {
   parseCSSProp,
   cssObjToStr,
   trimStr,
+  isBrowser,
 } from '@styli/utils'
+import { StyleSheet } from '@emotion/sheet'
 import { corePlugin } from './plugin'
 import { styli } from './styli'
 
@@ -239,5 +241,18 @@ export class Sheet {
       const styliProp = atoms.find((atom) => atom.key === propKey)
       return styliProp ? result : { ...result, [propKey]: propValue }
     }, {} as Props)
+  }
+
+  insertRule() {
+    if (!isBrowser) return
+
+    const styleSheet = new StyleSheet({
+      key: 'data-styli',
+      container: document.head,
+    })
+
+    const rule = this.toCss()
+    if (!rule) return
+    styleSheet.insert(rule)
   }
 }

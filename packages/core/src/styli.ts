@@ -1,4 +1,12 @@
-import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
+import {
+  formatColor,
+  downFirst,
+  isNumber,
+  isPercentNumber,
+  classifyPlugins,
+  isBrowser,
+} from '@styli/utils'
+import { StyleSheet } from '@emotion/sheet'
 import {
   StyliPlugin,
   Configuration,
@@ -11,6 +19,18 @@ import {
 import { defaultConfig } from './config'
 
 class Styli {
+  constructor() {
+    const rule = '*{border: 0 solid #ccc;box-sizing: border-box}'
+    if (isBrowser) {
+      const styleSheet = new StyleSheet({
+        key: 'data-styli',
+        container: document.head,
+      })
+
+      styleSheet.insert(rule)
+    }
+  }
+
   private config: Preset = defaultConfig
 
   // cache control

@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { Sheet, styleManager, styli } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 import { trimStr } from '@styli/utils'
 
 /**
@@ -27,7 +27,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
     }
   } else {
     const { className = '' } = props || {}
-    styleManager.insertStyles(sheet.toCss())
+    sheet.insertRule()
     const finalClassName = trimStr(`${sheet.getClassNames()} ${className}`)
     if (finalClassName) parsedProps.className = finalClassName
   }

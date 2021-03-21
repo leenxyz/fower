@@ -1,5 +1,5 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { Sheet, styleManager, styli } from '@styli/core'
+import { Sheet, styli } from '@styli/core'
 import { AtomicProps, As } from '@styli/types'
 import { themeContext } from '@styli/theming'
 import { trimStr } from '@styli/utils'
@@ -39,7 +39,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
           }
         } else {
           const { className = '' } = rest || {}
-          styleManager.insertStyles(sheet.toCss())
+          sheet.insertRule()
           const finalClassName = trimStr(`${sheet.getClassNames()} ${className}`)
 
           if (finalClassName) parsedProps.className = finalClassName
