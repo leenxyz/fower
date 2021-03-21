@@ -5,8 +5,6 @@ describe('styli-plugin-layout-engine', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
 
   it('isMatch', () => {
-    expect(isMatch!('row')).toEqual(true)
-    expect(isMatch!('column')).toEqual(true)
     expect(isMatch!('toCenter')).toEqual(true)
     expect(isMatch!('toCenterX')).toEqual(true)
     expect(isMatch!('toCenterY')).toEqual(true)
