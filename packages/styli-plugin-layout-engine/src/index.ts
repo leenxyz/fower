@@ -119,7 +119,12 @@ export default (): StyliPlugin => {
     onStyleCreate(sheet) {
       if (!sheet.atoms || !sheet.atoms.length) return
 
-      const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-flexbox')
+      const matched = sheet.atoms.find(
+        (i) =>
+          i.matchedPlugin === 'styli-plugin-flexbox' ||
+          i.matchedPlugin === 'styli-plugin-layout-engine',
+      )
+
       if (!matched) return
 
       const direction = getFlexDirection(sheet.props)
