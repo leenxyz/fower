@@ -93,6 +93,7 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
       className={clsx('menu__list-item', {
         'menu__list-item--collapsed': collapsed,
       })}
+      style={{ marginBottom: 10 }}
       key={label}
     >
       <a
@@ -118,7 +119,7 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
         style={{
           height: menuListHeight,
           marginLeft: 0,
-          fontSize: 16,
+          fontSize: 15,
         }}
         onTransitionEnd={() => {
           if (!collapsed) {

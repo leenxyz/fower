@@ -30,7 +30,7 @@ module.exports = {
       'typescript',
     ],
 
-    'Styli Layout': [
+    'Layout Toolkit': [
       'styli-layout-introduction',
       'to-center',
       'to-center-x',
@@ -44,15 +44,6 @@ module.exports = {
       'to-around',
     ],
 
-
-    'Layout': [
-      'display',
-      'position',
-      'top-right-bottom-left',
-      'z-index',
-      'overflow',
-      'debug'
-    ],
 
     'Spacing': [
       'padding',
@@ -76,25 +67,30 @@ module.exports = {
       'line-height',
       'text-alignment',
       'text-transform',
-      'ellipsis',
+      // 'ellipsis',
     ],
+
     'Background': [
       'background-color',
+      // 'background-repeat',
+      // 'background-image',
     ],
 
     'Border': [
-      'background-color',
-      'border',
       'rounded',
+      'border-width',
+      'border-color',
+      'border-style',
     ],
 
 
     'Flexbox': [
-      // Flex Direction
-      // Flex Wrap
-      // Flex
-      // Flex Grow
-      // Flex Shrink
+      'flex-direction',
+      'flex-wrap',
+      'flex',
+      'flex-grow',
+      'flex-shrink',
+      // 'flex-basis',
       // Order
     ],
 
@@ -103,24 +99,28 @@ module.exports = {
       'grid-template-columns',
       'gap',
     ],
+
     'Box Alignment': [
+      'justify-content',
+      'align-items',
+      'align-content',
+      'align-self',
+    ],
 
-      // Justify Content
-      // Justify Items
-      // Justify Self
-      // Align Content
-      // Align Items
-      // Align Self
-      // Place Content
-      // Place Items
-      // Place Self
-
+    'Layout': [
+      'display',
+      'position',
+      'top-right-bottom-left',
+      'z-index',
+      'overflow',
+      // 'debug'
     ],
 
     'Effect': [
       'shadow',
       'opacity',
     ],
+
     'Interactivity': [
       'outline',
       'cursor',
