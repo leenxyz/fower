@@ -77,3 +77,10 @@ export function classifyPlugins(plugins: StyliPlugin[]): PluginCategory {
 export function trimStr(str = '') {
   return str.replace(/\s{2,}/g, ' ').trim()
 }
+
+export function getFlexDirection(props: any): string {
+  if (props.row) return 'row'
+  if (props.column) return 'column'
+  if (props.flexDirection) return props.flexDirection
+  return 'row'
+}

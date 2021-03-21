@@ -16,7 +16,7 @@ declare module '@styli/types' {
      * <View border="10"></View>
      * ```
      */
-    border?: CSS.Property.Border | boolean
+    border?: boolean | string | number
 
     /**
      * Set borderTop
@@ -137,19 +137,6 @@ declare module '@styli/types' {
     borderNone?: boolean
 
     /**
-     * Set borderWidth
-     *
-     * @example
-     * ```tsx
-     * <View borderWidth-10></View>
-     * <View borderWidth-10px></View>
-     * <View borderWidth="10px"></View>
-     * <View borderWidth={10}></View>
-     * ```
-     */
-    borderWidth?: CSS.Property.BorderWidth | number | boolean
-
-    /**
      * Set borderColor
      *
      * @example
@@ -158,134 +145,6 @@ declare module '@styli/types' {
      * ```
      */
     borderColor?: StyliColor | boolean
-
-    /**
-     * Set borderTopWidth
-     *
-     * @example
-     * ```tsx
-     * <View borderTopWidth-1></View>
-     * <View borderTopWidth="1"></View>
-     * <View borderTopWidth="1px"></View>
-     * ```
-     */
-    borderTopWidth?: CSS.Property.BorderTopWidth | number | boolean
-
-    /**
-     * Set borderTopColor
-     *
-     * @example
-     * ```tsx
-     * <View borderTopColor="gray20"></View>
-     * ```
-     */
-    borderTopColor?: StyliColor | boolean
-
-    /**
-     * Set borderTopStyle
-     *
-     * @example
-     * ```tsx
-     * <View borderTopStyle="solid"></View>
-     * ```
-     */
-    borderTopStyle?: CSS.Property.BorderTopStyle | boolean
-
-    /**
-     * Set borderLeftWidth
-     *
-     * @example
-     * ```tsx
-     * <View borderLeftWidth-1></View>
-     * <View borderLeftWidth="1"></View>
-     * <View borderLeftWidth="1px"></View>
-     * ```
-     */
-    borderLeftWidth?: CSS.Property.BorderLeftWidth | number | boolean
-
-    /**
-     * Set borderLeftColor
-     *
-     * @example
-     * ```tsx
-     * <View borderLeftColor="gray20"></View>
-     * ```
-     */
-    borderLeftColor?: StyliColor | boolean
-
-    /**
-     * Set borderLeftStyle
-     *
-     * @example
-     * ```tsx
-     * <View borderLeftStyle="solid"></View>
-     * ```
-     */
-    borderLeftStyle?: CSS.Property.BorderLeftStyle | boolean
-
-    /**
-     * Set borderBottomWidth
-     *
-     * @example
-     * ```tsx
-     * <View borderBottomWidth-1></View>
-     * <View borderBottomWidth="1"></View>
-     * <View borderBottomWidth="1px"></View>
-     * ```
-     */
-    borderBottomWidth?: CSS.Property.BorderBottomWidth | number | boolean
-
-    /**
-     * Set borderBottomColor
-     *
-     * @example
-     * ```tsx
-     * <View borderBottomColor="gray20"></View>
-     * ```
-     */
-    borderBottomColor?: StyliColor | boolean
-
-    /**
-     * Set borderBottomStyle
-     *
-     * @example
-     * ```tsx
-     * <View borderBottomStyle="solid"></View>
-     * ```
-     */
-    borderBottomStyle?: CSS.Property.BorderBottomStyle | boolean
-
-    /**
-     * Set borderRightWidth
-     *
-     * @example
-     * ```tsx
-     * <View borderRightWidth-1></View>
-     * <View borderRightWidth="1"></View>
-     * <View borderRightWidth="1px"></View>
-     * ```
-     */
-    borderRightWidth?: CSS.Property.BorderRightWidth | number | boolean
-
-    /**
-     * Set borderRightColor
-     *
-     * @example
-     * ```tsx
-     * <View borderRightColor="gray20"></View>
-     * ```
-     */
-    borderRightColor?: StyliColor | boolean
-
-    /**
-     * Set borderRightStyle
-     *
-     * @example
-     * ```tsx
-     * <View borderRightStyle="solid"></View>
-     * ```
-     */
-    borderRightStyle?: CSS.Property.BorderRightStyle | boolean
 
     borderBlack?: boolean
 

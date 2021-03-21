@@ -31,14 +31,11 @@ function formatBorderValue(value: string) {
 
 function borderPropToStyle(prop: string, propValue: any) {
   if (prop === 'border') {
-    if (typeof propValue === 'boolean') {
-      return { borderWidth: styli.getValue(1) }
-    }
-    return { border: formatBorderValue(propValue) }
+    return { borderWidth: styli.getValue(1) }
   }
 
   const colors = styli.getColors()
-  const postfix = prop.replace(/^border/, '')
+  const postfix = prop.replace(/^border/, '') || ''
 
   /** @example borderSolid,borderDashed-2 */
   if (/^(Solid|Dashed|Dotted|Double|None)$/i.test(postfix)) {
@@ -50,7 +47,8 @@ function borderPropToStyle(prop: string, propValue: any) {
     const position = postfix.replace(/-\d+$/, '')
     const borderPosition = positionMaps[position.toUpperCase()] ?? ''
     const key = `border${borderPosition}Width`
-    return { [key]: styli.getValue(postfix.replace(/^-/i, '')) }
+    const [, value] = postfix.split('-')
+    return { [key]: styli.getValue(value) }
   }
 
   /** @example borderT, borderR */

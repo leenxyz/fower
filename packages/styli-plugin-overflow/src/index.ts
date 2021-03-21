@@ -6,7 +6,7 @@ export function isOverFlowKey(key: string) {
 
 export function overFlowPropToStyle(prop: string, propValue: any): any {
   if (prop === 'overflow') return { [prop]: propValue }
-  const key = prop.replace(/[a-z]$/, last => last.toUpperCase())
+  const key = prop.replace(/[a-z]$/, (last) => last.toUpperCase())
   return { [key]: propValue }
 }
 

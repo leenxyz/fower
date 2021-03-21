@@ -49,181 +49,107 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View direction="row"></View>
-     * <View direction="row-reverse"></View>
-     * <View direction="column"></View>
-     * <View direction="column-reverse"></View>
+     * <View flexDirection="row"></View>
+     * <View flexDirection="row-reverse"></View>
+     * <View flexDirection="column"></View>
+     * <View flexDirection="column-reverse"></View>
      * ```
      */
-    direction?: CSS.Property.FlexDirection | CSS.Property.FlexDirection[]
+    flexDirection?: CSS.Property.FlexDirection | CSS.Property.FlexDirection[]
 
     /**
-     * Flex items nowrap
-     * ```css
-     * { flex-wrap: nowrap }
-     * ```
+     * set flex-flow、flex-shrink、flex-basis
+     *
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex
      * @example
      * ```tsx
-     * <View nowrap></View>
+     * <View flex={1}></View> // flex: 1 1 0%;
+     * <View flexAuto></View> // flex: 1 1 auto;
+     * <View flexInitial></View> // flex: 0 1 auto;
+     * <View flexNone></View> // flex: none;
      * ```
      */
-    nowrap?: boolean
+    flex?: CSS.Property.Flex | CSS.Property.Flex[] | boolean
 
     /**
-     * Flex items wrap
-     * ```css
-     * { flex-wrap: wrap }
-     * ```
+     * set flex: 1 1 auto;
+     *
      * @example
      * ```tsx
-     * <View wrap></View>
+     * <View flexAuto></View> // flex: 1 1 auto;
      * ```
      */
-    wrap?: boolean
+    flexAuto?: boolean
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: flex-start }
-     * ```
+     * set flex: 0 1 auto;
+     *
      * @example
      * ```tsx
-     * <View justifyStart></View>
+     * <View flexInitial></View> // flex: 0 1 auto;
      * ```
      */
-    justifyStart?: boolean
+    flexInitial?: boolean
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: flex-end }
-     * ```
+     * set flex="none" // flex: 0 0 auto;
+     *
      * @example
      * ```tsx
-     * <View justifyEnd></View>
+     * <View flexNone></View> // flex: none;
      * ```
      */
-    justifyEnd?: boolean
+    flexNone?: boolean
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: center }
-     * ```
+     * set order
+     *
      * @example
      * ```tsx
-     * <View justifyCenter></View>
+     * <View order-1></View> // order: 1;
+     * <View order="1"></View> // order: 1;
      * ```
      */
-    justifyCenter?: boolean
+    order?: PropValue
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: space-between }
-     * ```
+     * Set flex-basis, Defaults to auto
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
      * @example
      * ```tsx
-     * <View justifyBetween></View>
+     * <View flexWrap="wrap"></View>
      * ```
      */
-    justifyBetween?: boolean
+    flexWrap?: CSS.Property.FlexWrap | CSS.Property.FlexWrap[] | boolean
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: space-around }
-     * ```
+     * Set flex-grow, Defaults to 0
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
      * @example
      * ```tsx
-     * <View justifyAround></View>
+     * <View flexGrow={1}></View>
      * ```
      */
-    justifyAround?: boolean
+    flexGrow?: CSS.Property.FlexGrow | CSS.Property.FlexGrow[] | boolean
 
     /**
-     * Set justify-content
-     * ```css
-     * { justify-content: space-around }
-     * ```
+     * Set flex-shrink, Defaults to 1
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
      * @example
      * ```tsx
-     * <View justifyAround></View>
+     * <View flexShrink={2}></View>
      * ```
      */
-    justifyEvenly?: boolean
+    flexShrink?: CSS.Property.FlexShrink | CSS.Property.FlexShrink[] | boolean
 
     /**
-     * Set align-items
-     * ```css
-     * { align-items: flex-start }
-     * ```
+     * Set flex-basis, Defaults to auto
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
      * @example
      * ```tsx
-     * <View itemsStart></View>
+     * <View flexBasis="10px"></View>
      * ```
      */
-    itemsStart?: boolean
-
-    /**
-     * Set align-items
-     * ```css
-     * { align-items: flex-end }
-     * ```
-     * @example
-     * ```tsx
-     * <View itemsEnd></View>
-     * ```
-     */
-    itemsEnd?: boolean
-
-    /**
-     * Set align-items
-     * ```css
-     * { align-items: center }
-     * ```
-     * @example
-     * ```tsx
-     * <View itemsCenter></View>
-     * ```
-     */
-    itemsCenter?: boolean
-
-    /**
-     * Set align-items
-     * ```css
-     * { align-items: baseline }
-     * ```
-     * @example
-     * ```tsx
-     * <View itemsBaseline></View>
-     * ```
-     */
-    itemsBaseline?: boolean
-
-    /**
-     * Set align-items
-     * ```css
-     * { align-items: stretch }
-     * ```
-     * @example
-     * ```tsx
-     * <View itemsStretch></View>
-     * ```
-     */
-    itemsStretch?: boolean
-
-    selfAuto?: boolean
-    selfStart?: boolean
-    selfEnd?: boolean
-    selfCenter?: boolean
-    selfStretch?: boolean
-
-    contentStart?: boolean
-    contentEnd?: boolean
-    contentCenter?: boolean
-    contentBetween?: boolean
-    contentAround?: boolean
-    contentStretch?: boolean
+    flexBasis?: CSS.Property.FlexBasis | CSS.Property.FlexBasis[] | boolean
   }
 }

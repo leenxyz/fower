@@ -39,7 +39,7 @@ declare module '@styli/types' {
      * multiline of text ellipsis
      *
      * NOTE: webkit only
-     * @see https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
+     * @See https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
      *
      * @example
      * ```tsx
@@ -55,7 +55,7 @@ declare module '@styli/types' {
      * multiline of text ellipsis
      *
      * NOTE: webkit only
-     * @see https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
+     * @See https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
      *
      * @example
      * ```tsx
@@ -71,7 +71,7 @@ declare module '@styli/types' {
      * multiline of text ellipsis
      *
      * NOTE: webkit only
-     * @see https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
+     * @See https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
      *
      * @example
      * ```tsx
@@ -87,7 +87,7 @@ declare module '@styli/types' {
      * multiline of text ellipsis
      *
      * NOTE: webkit only
-     * @see https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
+     * @See https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-line-clamp
      *
      * @example
      * ```tsx

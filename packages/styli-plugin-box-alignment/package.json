@@ -1,5 +1,5 @@
 {
-  "name": "styli-plugin-flex-item",
+  "name": "styli-plugin-box-alignment",
   "version": "0.26.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/styli-plugin-flex-item.esm.js",
+  "module": "dist/styli-plugin-box-alignment.esm.js",
   "dependencies": {
     "@styli/types": "^0.26.0",
     "@styli/utils": "^0.26.0"

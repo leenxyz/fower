@@ -1,20 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-
-export const G = {
-  flex: 'flex',
-
-  start: 'start',
-  end: 'end',
-  between: 'between',
-  around: 'around',
-  evenly: 'evenly',
-  center: 'center',
-  space: 'space',
-  stretch: 'stretch',
-
-  row: 'row',
-  column: 'column',
-}
+import { getFlexDirection } from '@styli/utils'
 
 const toTop = 'toTop'
 const toLeft = 'toLeft'
@@ -30,11 +15,14 @@ const toCenter = 'toCenter'
 const toCenterX = 'toCenterX'
 const toCenterY = 'toCenterY'
 
-// all layout engine atomic key
-const flexAlign = [
-  G.row,
-  G.column,
+const flexStart = 'flex-start'
+const flexEnd = 'flex-end'
+const spaceBetween = 'space-between'
+const spaceAround = 'space-around'
+const spaceEvenly = 'space-evenly'
+const center = 'center'
 
+const layoutToolkits = [
   toLeft,
   toRight,
   toTop,
@@ -50,26 +38,8 @@ const flexAlign = [
   toStretch,
 ]
 
-export const flexMaps = {
-  start: `${G.flex}-${G.start}`,
-  end: `${G.flex}-${G.end}`,
-  between: `${G.space}-${G.between}`,
-  around: `${G.space}-${G.around}`,
-  evenly: `${G.space}-${G.evenly}`,
-  center: G.center,
-  baseline: 'baseline',
-  stretch: 'stretch',
-}
-
-export function isAlignmentKey(key: string) {
-  return flexAlign.includes(key) || key === 'direction'
-}
-
-function getDirection(props: any): string {
-  if (props.row) return G.row
-  if (props.column) return G.column
-  if (props.direction) return props.direction
-  return G.row
+export function isMatch(key: string) {
+  return layoutToolkits.includes(key)
 }
 
 /**
@@ -82,7 +52,7 @@ function getDirection(props: any): string {
 export function alignmentPropToStyle(propKey: string, props: any) {
   if (propKey === 'direction') return
   const { toCenter } = props
-  const direction = getDirection(props)
+  const direction = getFlexDirection(props)
   const style: any = {}
 
   let styleKey: 'justifyContent' | 'alignItems' = '' as any
@@ -107,24 +77,24 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 
   /** 设置样式 */
   if ([toTop, toLeft].includes(propKey)) {
-    style[styleKey] = flexMaps.start
+    style[styleKey] = flexStart
   } else if ([toBottom, toRight].includes(propKey)) {
-    style[styleKey] = flexMaps.end
+    style[styleKey] = flexEnd
   } else if ([toCenterX, toCenterY].includes(propKey)) {
-    style[styleKey] = G.center
+    style[styleKey] = center
   } else if (propKey === toBetween) {
-    style[styleKey] = flexMaps.between
+    style[styleKey] = spaceBetween
   } else if (propKey === toAround) {
-    style[styleKey] = flexMaps.around
+    style[styleKey] = spaceAround
   } else if (propKey === toEvenly) {
-    style[styleKey] = flexMaps.evenly
+    style[styleKey] = spaceEvenly
   } else if (propKey === toStretch) {
-    style[styleKey] = flexMaps.stretch
+    style[styleKey] = spaceEvenly
   }
 
   if (toCenter) {
-    style.justifyContent = G.center
-    style.alignItems = G.center
+    style.justifyContent = center
+    style.alignItems = center
   }
 
   return style
@@ -133,32 +103,37 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-layout-engine',
-    isMatch: isAlignmentKey,
+    isMatch,
     onAtomStyleCreate(atom, sheet) {
       atom.style = alignmentPropToStyle(atom.propKey, sheet.props)
 
-      if ([toLeft, toRight, toTop, toBottom, toCenterX, toCenterY].includes(atom.propKey)) {
-        const direction = getDirection(sheet.props)
-        atom.className = direction + '-' + atom.propKey
-        atom.cache = false
-      }
+      // if ([toLeft, toRight, toTop, toBottom, toCenterX, toCenterY].includes(atom.propKey)) {
+      //   const direction = getDirection(sheet.props)
+      //   atom.className = direction + '-' + atom.propKey
+      //   atom.cache = false
+      // }
       return atom
     },
+
+    // TODO: 需要优化
     onStyleCreate(sheet) {
       if (!sheet.atoms || !sheet.atoms.length) return
 
-      const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-layout-engine')
+      const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-flexbox')
       if (!matched) return
 
-      const direction = getDirection(sheet.props)
-      const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)
+      const direction = getFlexDirection(sheet.props)
+
+      const prefix = 'flexDirection-'
+
+      const directionAtom = sheet.atoms.find((i) => i.propKey === prefix + direction)
 
       if (!directionAtom) {
         sheet.atoms.push({
-          key: 'direction-' + direction,
-          propKey: 'direction-' + direction,
+          key: prefix + direction,
+          propKey: prefix + direction,
           propValue: '',
-          className: 'direction-' + direction,
+          className: prefix + direction,
           type: 'style',
           style: { flexDirection: direction as any },
         })

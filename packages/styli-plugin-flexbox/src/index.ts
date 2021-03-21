@@ -1,93 +1,43 @@
 import { StyliPlugin } from '@styli/types'
+import { getFlexDirection } from '@styli/utils'
 
-const G = {
-  flex: 'flex',
-  start: 'start',
-  end: 'end',
-  between: 'between',
-  around: 'around',
-  evenly: 'evenly',
-  center: 'center',
-  space: 'space',
-  row: 'row',
-  column: 'column',
-  nowrap: 'nowrap',
-  wrap: 'wrap',
+const row = 'row'
+const column = 'column'
+
+const maps: any = {
+  auto: '1 1 auto',
+  initial: '0 1 auto',
+  none: 'none',
 }
 
-const flexMaps: any = {
-  auto: 'auto',
-  start: `${G.flex}-${G.start}`,
-  end: `${G.flex}-${G.end}`,
-  between: `${G.space}-${G.between}`,
-  around: `${G.space}-${G.around}`,
-  evenly: `${G.space}-${G.evenly}`,
-  center: G.center,
-  baseline: 'baseline',
-  stretch: 'stretch',
-}
+const flexReg = /^flex(Auto|Initial|None)$/i
 
-const justify = [
-  'justifyStart',
-  'justifyEnd',
-  'justifyCenter',
-  'justifyBetween',
-  'justifyAround',
-  'justifyEvenly',
-]
-const items = ['itemsStart', 'itemsEnd', 'itemsCenter', 'itemsBaseline', 'itemsStretch']
-const self = ['selfAuto', 'selfStart', 'selfEnd', 'selfCenter', 'selfStretch']
-const content = [
-  'contentStart',
-  'contentEnd',
-  'contentCenter',
-  'contentBetween',
-  'contentAround',
-  'contentStretch',
-]
+const isFlexProps = (key: string) =>
+  /^(flex|order|flexGrow|flexShrink|flexBasis|flexWrap)$/i.test(key)
 
-function isFlexBoxKey(key: string) {
+export function isMatch(key: string) {
   return (
-    [G.row, G.column, G.wrap, G.nowrap].includes(key) ||
-    justify.includes(key) ||
-    items.includes(key) ||
-    self.includes(key) ||
-    content.includes(key)
+    [row, column].includes(key) ||
+    isFlexProps(key) ||
+    flexReg.test(key) ||
+    /^flexDirection$/i.test(key)
   )
 }
 
-function getDirection(props: any): string {
-  if (props.row) return G.row
-  if (props.column) return G.column
-  if (props.direction) return props.direction
-  return G.row
-}
-
-function flexPropToStyle(prop: string) {
+export function flexItemPropToStyle(prop: string, propValue: any) {
   const style: any = {}
-  const wraps = [G.nowrap, G.wrap]
 
-  // set flex-wrap
-  if (wraps.includes(prop)) style.flexWrap = prop as any
-
-  // justify-content
-  if (prop.startsWith('justify')) {
-    style.justifyContent = flexMaps[prop.replace('justify', '').toLocaleLowerCase()]
+  if (isFlexProps(prop)) {
+    style[prop] = propValue
   }
 
-  //align-self
-  if (prop.startsWith('self')) {
-    style.alignSelf = flexMaps[prop.replace('self', '').toLocaleLowerCase()]
+  if (/^flexDirection$/.test(prop)) {
+    // style[prop] = propValue
   }
 
-  //align-content
-  if (prop.startsWith('content')) {
-    style.alignContent = flexMaps[prop.replace('content', '').toLocaleLowerCase()]
-  }
-
-  // align-items
-  if (prop.startsWith('items')) {
-    style.alignItems = flexMaps[prop.replace('items', '').toLocaleLowerCase()]
+  if (flexReg.test(prop)) {
+    const posfix = prop.replace(/^flex/, '').toLowerCase()
+    style.flex = maps[posfix]
   }
 
   return style
@@ -96,27 +46,31 @@ function flexPropToStyle(prop: string) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-flexbox',
-    isMatch: isFlexBoxKey,
+    isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = flexPropToStyle(atom.propKey)
+      atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
       return atom
     },
 
+    // TODO: 需要优化
     onStyleCreate(sheet) {
       if (!sheet.atoms || !sheet.atoms.length) return
 
       const matched = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-flexbox')
       if (!matched) return
 
-      const direction = getDirection(sheet.props)
-      const directionAtom = sheet.atoms.find((i) => i.propKey === 'direction-' + direction)
+      const direction = getFlexDirection(sheet.props)
+
+      const prefix = 'flexDirection-'
+
+      const directionAtom = sheet.atoms.find((i) => i.propKey === prefix + direction)
 
       if (!directionAtom) {
         sheet.atoms.push({
-          key: 'direction-' + direction,
-          propKey: 'direction-' + direction,
+          key: prefix + direction,
+          propKey: prefix + direction,
           propValue: '',
-          className: 'direction-' + direction,
+          className: prefix + direction,
           type: 'style',
           style: { flexDirection: direction as any },
         })

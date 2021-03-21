@@ -19,18 +19,6 @@ declare module '@styli/types' {
     rounded?: PropValue
 
     /**
-     * Set borderRadius to 0
-     *
-     * roundedNone is `border-radius: 0;`
-     *
-     * @example
-     * ```tsx
-     * <View roundedNone></View>
-     * ```
-     */
-    roundedNone?: PropValue
-
-    /**
      * Set borderRadius to 9999px
      *
      * roundedFull is `border-radius: 9999px;`

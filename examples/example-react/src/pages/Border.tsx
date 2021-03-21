@@ -5,58 +5,85 @@ export default () => {
   return (
     <View>
       <Box>Border</Box>
-      <View f-12 wrap space-10>
-        <View s-100 border>
+
+      <View toEvenly mb6 bgGray100>
+        <View toCenter p4 bgOrange200 border-0 borderOrange500>
+          border-0
+        </View>
+        <View toCenter p4 bgOrange200 border borderOrange500>
           border
         </View>
-
-        <View s-100 border-2>
+        <View toCenter p4 bgOrange200 border-2 borderOrange500>
           border-2
         </View>
-
-        <View s-100 border borderRed50>
-          borderRed50
+        <View toCenter p4 bgOrange200 border-4 borderOrange500>
+          border-4
         </View>
+        <View toCenter p4 bgOrange200 border-8 borderOrange500>
+          border-8
+        </View>
+      </View>
 
-        <View s-100 border-2 borderRed50 borderDashed>
+      <View toEvenly mb6 bgGray100>
+        <View toCenter p4 bgOrange200 borderT-2 borderOrange500>
+          borderT-2
+        </View>
+        <View toCenter p4 bgOrange200 borderR-2 borderOrange500>
+          borderR-2
+        </View>
+        <View toCenter p4 bgOrange200 borderB-2 borderOrange500>
+          borderB-2
+        </View>
+        <View toCenter p4 bgOrange200 borderL-2 borderOrange500>
+          borderL-2
+        </View>
+      </View>
+
+      <View toEvenly mb6 bgGray100>
+        <View toCenter p4 bgOrange200 border-4 borderOrange500 borderSolid>
+          borderSolid
+        </View>
+        <View toCenter p4 bgOrange200 borderT-4 borderOrange500 borderDashed>
           borderDashed
         </View>
-
-        <View s-100 border="1px solid gray">
-          border="1px solid gray"
+        <View toCenter p4 bgOrange200 borderR-4 borderOrange500 borderDotted>
+          borderDotted
         </View>
-
-        <View s-100 border="4px solid green30-O50">
-          border="4px solid green30-D20"
+        <View toCenter p4 bgOrange200 borderB-4 borderOrange500 borderDouble>
+          borderDouble
         </View>
-
-        <View s-100 borderT="4px solid  green400">
-          borderT="1px solid green400"
+        <View toCenter p4 bgOrange200 border-4 borderOrange500 borderNone>
+          borderNone
         </View>
+      </View>
 
-        <View s-100 borderR="1px solid gray">
-          borderR="1px solid gray"
+      <View toEvenly mb6 bgGray100>
+        <View toCenter p4 border-2 borderPurple500>
+          borderPurple500
         </View>
-
-        <View s-100 borderB="1px solid gray">
-          borderB="1px solid gray"
+        <View toCenter p4 border-2 borderTeal500>
+          borderTeal500
         </View>
-
-        <View s-100 borderL="1px solid gray">
-          borderL="1px solid gray"
+        <View toCenter p4 border-2 borderCyan500>
+          borderCyan500
         </View>
-
-        <View s-100 border="4px solid gray" border--hover="4px solid red30-D5">
-          border--hover="1px solid red30"
+        <View toCenter p4 border-2 borderAmber500>
+          borderAmber500
         </View>
+      </View>
 
-        <View
-          s-100
-          borderTopWidth={1}
-          borderTopStyle="solid"
-          borderTopColor="brown"
-        >
-          borderTopWidth="1px" BorderTopStyle="solid" borderTopColor="brown"
+      <View toEvenly mb6 bgGray100>
+        <View toCenter p4 border-2 borderPurple500-T20>
+          borderPurple500-T40
+        </View>
+        <View toCenter p4 border-2 borderTeal500-T40>
+          borderTeal500-T60
+        </View>
+        <View toCenter p4 border-2 borderCyan500-T60>
+          borderCyan500
+        </View>
+        <View toCenter p4 border-2 borderAmber500-T80>
+          borderAmber500-T80
         </View>
       </View>
     </View>

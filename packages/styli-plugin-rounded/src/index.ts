@@ -28,7 +28,7 @@ export const roundedMaps: any = {
 }
 
 export function isRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])?(-.+)?$/.test(key)
+  return /^rounded([TLRB]|T[LR]|B[LR])?(-.+)?$/.test(key) || key === 'roundedFull'
 }
 
 export function roundedPropToStyle(prop: string, propValue: any) {
