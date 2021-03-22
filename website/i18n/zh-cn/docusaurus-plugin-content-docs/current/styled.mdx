@@ -1,0 +1,85 @@
+---
+id: styled
+title: styled
+---
+
+> `import { styled } from '@styli/styled'`
+
+你可以使用 `styled` 创建一个 Styli 组件，同时赋予该组件原子属性功能。
+
+:::info
+`styled` 可以在所有 React-like 的框架中使用，如 React、React-native、Preact、Taro 等。
+:::
+
+## Styling element
+
+被 `styled` 包裹的元素，可以使用 Styli 的任何原子属性改变组件样式。
+
+```jsx live
+function StyledElement() {
+  const Text = styled('span')
+  return (
+    <Text f-30 fontBold green400>
+      Hello world
+    </Text>
+  )
+}
+```
+
+## Styling any Component
+
+除了包裹 html elment，`styled` 也支持包裹任何组件，同样，包裹后可以使用 Styli 的任何原子属性改变组件样式。
+
+:::info
+被 `styled` 包裹的组件，必须要有 `className` prop。
+:::
+
+```jsx live
+function StyledAnyComponent() {
+  const Button = ({ children, className }) => <button className={className}>{children}</button>
+  const StyledButton = styled(Button)
+
+  return (
+    <StyledButton f-18 white bgGreen400 p-10 rounded-4 border-0>
+      styled button
+    </StyledButton>
+  )
+}
+```
+
+## Reuse style
+
+为了更好地复用样式，使用`styled`创建组件时，我们可以给组件初始化计划一些样式。
+
+使用 modifier：
+
+```js
+const StyledItem = styled(Item, 'p-10 bgRed white f-30')
+```
+
+如果 modifier 不能满足，你可以使用 CSS Object style：
+
+```js
+const StyledItem = styled(Item, {
+  display: 'inline-block',
+  lineHeight: '30px',
+})
+```
+
+或者两种并存：
+
+```js
+const StyledItem = styled(Item, 'p-10 bgRed white f-30', {
+  display: 'inline-block',
+  lineHeight: '30px',
+})
+```
+
+或者接受多个参数:
+
+```js
+const StyledItem = styled(Item, 'p-10', 'bgRed', 'white', 'f-30', {
+  display: 'inline-block',
+  lineHeight: '30px',
+})
+```

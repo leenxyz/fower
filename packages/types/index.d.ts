@@ -124,7 +124,7 @@ declare namespace StyliTypes {
      *
      * ```tsx
      * import React, { FC } from 'react'
-     * import { styled } from '@styli/react'
+     * import { styled } from '@styli/styled'
      *
      * interface TestProps {
      *   center: string

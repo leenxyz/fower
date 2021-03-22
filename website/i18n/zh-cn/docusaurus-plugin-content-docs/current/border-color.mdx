@@ -1,0 +1,52 @@
+---
+id: border-color
+title: Border Color
+---
+
+Atomic props for controlling the style of an element's borders.
+
+| Atomic Props      | CSS Properties         |
+| ----------------- | ---------------------- |
+| border{colorName} | border-color: {color}; |
+
+## Usage
+
+Use `border{colorName}` props to control an element's border color.
+
+```jsx live
+<View toEvenly>
+  <View toCenter p4 border-2 borderPurple500>
+    borderPurple500
+  </View>
+  <View toCenter p4 border-2 borderTeal500>
+    borderTeal500
+  </View>
+  <View toCenter p4 border-2 borderCyan500>
+    borderCyan500
+  </View>
+  <View toCenter p4 border-2 borderAmber500>
+    borderAmber500
+  </View>
+</View>
+```
+
+## Border opacity
+
+Use `-T{0-100}` postfix to control an element's border color opacity.
+
+```jsx live
+<View toEvenly>
+  <View toCenter p4 border-2 borderPurple500-T20>
+    borderPurple500-T40
+  </View>
+  <View toCenter p4 border-2 borderTeal500-T40>
+    borderTeal500-T60
+  </View>
+  <View toCenter p4 border-2 borderCyan500-T60>
+    borderCyan500
+  </View>
+  <View toCenter p4 border-2 borderAmber500-T80>
+    borderAmber500-T80
+  </View>
+</View>
+```

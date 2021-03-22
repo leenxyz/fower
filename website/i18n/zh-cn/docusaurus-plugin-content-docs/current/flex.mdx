@@ -1,0 +1,71 @@
+---
+id: flex
+title: Flex
+---
+
+| Atomic Props | CSS Properties  |
+| ------------ | --------------- |
+| flexAuto     | flex: 1 1 auto; |
+| flexInitial  | flex: 0 1 auto; |
+| flexNone     | flex: 'none'    |
+| flex={value} | flex: {value}   |
+
+## Flex Initial
+
+Use `flexInitial` props to allow a flex item to shrink but not grow, taking into account its initial size.
+
+```jsx live
+<Box spaceX3 flexInitial>
+  <Box bgAmber400 p10>
+    Short
+  </Box>
+  <Box bgAmber400 p10>
+    Medium length
+  </Box>
+</Box>
+```
+
+```jsx live
+<Box spaceX3 flexInitial>
+  <Box bgAmber400 p4>
+    Short
+  </Box>
+  <Box bgAmber400 p4>
+    Medium length
+  </Box>
+  <Box bgAmber400 p4>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ad labore ipsam, aut rem quo
+    repellat esse tempore id, quidem
+  </Box>
+</Box>
+```
+
+## Flex None
+
+Use `flexNone` props to prevent a flex item from growing or shrinking.
+
+```jsx live
+<Box spaceX3 flexInitial>
+  <Box bgAmber400 p4 flex={1}>
+    Item that can grow or shrink if needed
+  </Box>
+  <Box bgAmber500 p4 flexNone>
+    Item that cannot grow or shrink
+  </Box>
+  <Box bgAmber400 p4 flex="1">
+    Item that can grow or shrink if needed
+  </Box>
+</Box>
+```
+
+## Any Value
+
+Use `flex={value}` to set any flex value.
+
+```jsx live
+<Box spaceX3 row>
+  <Box bgAmber400 p4 flex={1}></Box>
+  <Box bgAmber500 p4 flex={2}></Box>
+  <Box bgAmber400 p4 flex={1}></Box>
+</Box>
+```

@@ -1,0 +1,35 @@
+---
+id: createStyle
+title: createStyle
+---
+
+可以使用 `createStyle` 函数创建样式，然后把样式使用在非 Styli 组件上。
+
+使用 modifiers:
+
+```jsx
+import React from 'react'
+import { createStyle } from '@styli/core'
+
+const cardStyle = createStyle('p-20 s-400 bgRed')
+
+export default () => {
+  return <div style={cardStyle}></div>
+}
+```
+
+还可以使用 CSS 对象:
+
+```jsx
+import React from 'react'
+import { createStyle } from '@styli/core'
+
+const cardStyle = createStyle('p-20 s-400 bgRed', {
+  background: '#fff',
+  fontSize: 14,
+})
+
+export default () => {
+  return <div style={cardStyle}></div>
+}
+```

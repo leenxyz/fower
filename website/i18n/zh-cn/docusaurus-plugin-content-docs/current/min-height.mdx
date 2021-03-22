@@ -1,0 +1,32 @@
+---
+id: min-height
+title: Min Height
+---
+
+使用 minH-{value} 格式的 Props 可以控制元素的最小高度。
+
+| Atomic Props                | CSS Properties       |
+| --------------------------- | -------------------- |
+| minH-{value} / minH={value} | min-height: {value}; |
+
+## Usage
+
+```jsx live
+<View toCenter white h-100 bgGray100>
+  <View minH-50 bgRed400 p2>
+    minH-50
+  </View>
+  <View minH-5rem bgYellow400 p2>
+    minH-5rem
+  </View>
+  <View minH={50} bgGreen400 p2>
+    minH={'{50}'}
+  </View>
+  <View minH="100px" bgBlue400 p2>
+    minH="100px"
+  </View>
+  <View minH="80%" bgPurple400 p2>
+    minH="80%"
+  </View>
+</View>
+```

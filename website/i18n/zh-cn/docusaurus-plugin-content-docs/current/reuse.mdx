@@ -1,0 +1,37 @@
+---
+id: reuse
+sidebar_label: Reuse
+title: 复用
+---
+
+当一个组件用到特别多的原子属性，并且这个样式会多个组件用到，这时建议创建一个自定义组件。
+
+## Styled HTML 元素
+
+```jsx
+import React from 'react'
+import { Button } from '@styli/react'
+
+export const MyButton = styled('button', 'p-10 f-18 bgYello400 rounded-8', {
+  textShadow: '1px 0 5px #FC0',
+})
+```
+
+## Styled 第三方组件
+
+```jsx
+import { styled } from '@styli/styled'
+import { Button } from 'antd'
+
+const StyledButton = styled(Button)
+
+function Demo() {
+  return (
+    <div>
+      <StyledButton p-10>click me</StyledButton>
+    </div>
+  )
+}
+```
+
+**注意:** 被 `styled` 包裹的组件必须拥有 className 属性。

@@ -42,5 +42,53 @@
   "sidebar.someSidebar.category.FAQS": {
     "message": "FAQS",
     "description": "The label for category FAQS in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Layout Toolkit": {
+    "message": "Layout Toolkit",
+    "description": "The label for category Layout Toolkit in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Spacing": {
+    "message": "Spacing",
+    "description": "The label for category Spacing in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Sizing": {
+    "message": "Sizing",
+    "description": "The label for category Sizing in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Typography": {
+    "message": "Typography",
+    "description": "The label for category Typography in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Background": {
+    "message": "Background",
+    "description": "The label for category Background in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Border": {
+    "message": "Border",
+    "description": "The label for category Border in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Flexbox": {
+    "message": "Flexbox",
+    "description": "The label for category Flexbox in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Grid": {
+    "message": "Grid",
+    "description": "The label for category Grid in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Box Alignment": {
+    "message": "Box Alignment",
+    "description": "The label for category Box Alignment in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Layout": {
+    "message": "Layout",
+    "description": "The label for category Layout in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Effect": {
+    "message": "Effect",
+    "description": "The label for category Effect in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Interactivity": {
+    "message": "Interactivity",
+    "description": "The label for category Interactivity in sidebar someSidebar"
   }
 }

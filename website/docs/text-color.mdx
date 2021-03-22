@@ -8,31 +8,31 @@ title: Text Color
 | {colorName}   | color: {named color}; |
 | color={value} | color: {value};       |
 
-## 使用设计系统的颜色
+## Use color in preset
 
 ```jsx live
-<View f-20>
-  <Text gray600>王勃</Text>
-  <Text colorPrimary> 李白</Text>
-  <Text green400> 杜甫</Text>
+<View f-20 toEvenly>
+  <Text gray600>gray600</Text>
+  <Text colorPrimary>colorPrimary</Text>
+  <Text green400>green400</Text>
 </View>
 ```
 
-所有的预设颜色：[Color palette](/docs/design-system-color)
+call preset color：[Color palette](/docs/design-system-color#color-palette)
 
-## 使用 `color` props
+## Use `color` props
 
 ```jsx live
-<View f-20>
-  <Text color="orange400">王勃</Text>
-  <Text color="deeppink"> 李白</Text>
-  <Text color="#4fd1c5"> 杜甫</Text>
+<View f-20 toEvenly>
+  <Text color="orange400">orange400</Text>
+  <Text color="deeppink">deeppink</Text>
+  <Text color="#4fd1c5">#4fd1c5</Text>
 </View>
 ```
 
-## 颜色透明度
+## Color opacity
 
-transparentize color 变更透明
+transparentize color:
 
 ```jsx live
 <View row toEvenly>
@@ -45,9 +45,7 @@ transparentize color 变更透明
 </View>
 ```
 
-## 颜色不透明度
-
-opacify color 变不透明
+## opacify color
 
 ```jsx live
 <View row toEvenly>
@@ -58,9 +56,7 @@ opacify color 变不透明
 </View>
 ```
 
-## 颜色变亮
-
-lighten color 变亮
+## lighten color
 
 ```jsx live
 <View row toEvenly>
@@ -73,9 +69,7 @@ lighten color 变亮
 </View>
 ```
 
-## 颜色变暗
-
-darken color 变暗
+## darken color
 
 ```jsx live
 <View row toEvenly>

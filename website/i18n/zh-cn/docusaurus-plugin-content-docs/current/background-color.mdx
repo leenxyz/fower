@@ -1,0 +1,35 @@
+---
+id: background-color
+title: Background Color
+---
+
+Atomic props for controlling the background color of an element.
+
+| Atomic Props  | CSS Properties             |
+| ------------- | -------------------------- |
+| bg{colorName} | background-color: {color}; |
+| bg={color}    | background-color: {color}; |
+
+## Usage preset color
+
+Use `bg{colorName}` props to control the background color of an element.
+
+```jsx live
+<View toEvenly>
+  <View rounded-8 s-100 bgGreen400></View>
+  <View rounded-8 s-100 bgBlue400></View>
+  <View rounded-8 s-100 bgPurple400></View>
+</View>
+```
+
+## Custom color
+
+Set any background color using `bg={value}` props.
+
+```jsx live
+<View toEvenly>
+  <View rounded-8 s-100 bg="#ed8936"></View>
+  <View rounded-8 s-100 bg="rgba(44,200, 400)"></View>
+  <View rounded-8 s-100 bg="indigo"></View>
+</View>
+```

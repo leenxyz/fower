@@ -1,0 +1,33 @@
+---
+id: outline
+title: Outline
+---
+
+Atomic props for controlling the stack order of an element.
+
+| Atomic Props    | CSS Properties    |
+| --------------- | ----------------- |
+| outlineNone     | outline: none;    |
+| outline={value} | outline: {value}; |
+
+## None Outline
+
+Use `outlineNone` props to remove outline of an element.
+
+```jsx live
+<View toEvenly>
+  <Input p2 bgGray200 placeholder="default input" />
+  <Input p2 outlineNone bgGray200 placeholder="none outline" />
+</View>
+```
+
+## Set Outline
+
+Use `outline` props to set outline for an element.
+
+```jsx live
+<View toEvenly>
+  <Input p2 bgGray200 placeholder="default input" />
+  <Input p2 bgGray200 outline--focus="2px dotted red" placeholder="outline on focus" />
+</View>
+```

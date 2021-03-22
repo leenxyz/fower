@@ -1,0 +1,90 @@
+---
+id: position
+title: Position
+---
+
+Atomic props for controlling how an element is positioned.
+
+| Atomic Props     | CSS Properties      |
+| ---------------- | ------------------- |
+| static           | position: static;   |
+| fixed            | position: fixed;    |
+| absolute         | position: absolute; |
+| relative         | position: relative; |
+| sticky           | position: sticky;   |
+| position={value} | position: {value};  |
+
+## Static
+
+Use `static` props to set static position for an element.
+
+```jsx live
+<View relative s-160 bgBlue100>
+  <View bgAmber400 s-100 static toCenter>
+    static
+  </View>
+</View>
+```
+
+## Relative
+
+Use `relative` props to set relative position for an element.
+
+```jsx live
+<View relative s-160 bgBlue100>
+  relative
+  <View bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+    absolute
+  </View>
+</View>
+```
+
+## Absolute
+
+Use `absolute` props to set absolute position for an element.
+
+```jsx live
+<View relative s-160 bgBlue100>
+  <View bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+    absolute
+  </View>
+</View>
+```
+
+## Fixed
+
+Use `fixed` props to set fixed position for an element.
+
+```jsx live
+<View toCenter bgWhite shadow rounded-8 s-80 fixed bottom-10>
+  fixed
+</View>
+```
+
+## Sticky
+
+Use `sticky` props to set sticky position for an element.
+
+```jsx live
+<View relative s-200 overflow="auto" bgGray100 p4>
+  <View>View Lorem ipsum dolor sit amet, consectetur adipisicing elit.</View>
+  <View toCenter bgYellow200 shadow rounded-8 s-80 sticky top-0>
+    sticky
+  </View>
+  <View>
+    View Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
+    eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
+    voluptatum quae eum fugit earum.
+  </View>
+</View>
+```
+
+## Position
+
+if the preset atomic props can not be satisfied，you can use `position` props.
+
+```jsx live
+<View toCenter rounded-8 s-80 position={2 > 1 ? 'absolute' : 'relative'}>
+  position
+</View>
+```

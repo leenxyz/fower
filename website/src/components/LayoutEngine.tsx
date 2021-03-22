@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { Box, styled } from '@styli/react'
+import { Box } from '@styli/react'
+import { styled } from '@styli/styled'
 
 interface Props {
   className?: string

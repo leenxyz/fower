@@ -1,0 +1,72 @@
+---
+id: theme
+sidebar_label: Theme
+title: 主题
+---
+
+## 安装
+
+```bash
+npm i @styli/theming
+```
+
+## 使用
+
+### 使用 ThemeProvider 注入主题
+
+在 React App 的最顶层，使用 ThemeProvider 注入主题对象。
+
+```jsx title="App.tsx"
+import React from 'react'
+import { ThemeProvider } from '@styli/theming'
+
+const theme = {
+  colors: {
+    primary: 'deeppink',
+  },
+}
+
+export const App = ({ children }) => {
+  return (
+    <div>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </div>
+  )
+}
+```
+
+### 在组件中使用
+
+在 ThemeProvider 注入主题后，你就可以在任何原子属性使用主题了。
+
+```jsx title="pages/Home.tsx"
+import React from 'react'
+import { Text } from '@styli/react'
+
+export const Home = ({ children }) => {
+  return (
+    <div>
+      <Text color={(theme) => theme.colors.primary}></Text>
+    </div>
+  )
+}
+```
+
+### 使用 useTheme
+
+你也可以使用 Styli 提供的一个 React Hooks: `useTheme`，更灵活的使用主题。
+
+```jsx title="pages/Home.tsx"
+import React from 'react'
+import { Text } from '@styli/react'
+import { useTheme } from '@styli/theming'
+
+export const Home = ({ children }) => {
+  const theme = useTheme()
+  return (
+    <div>
+      <Text color={theme.colors.primary}></Text>
+    </div>
+  )
+}
+```

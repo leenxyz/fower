@@ -1,0 +1,74 @@
+---
+id: cursor
+title: Cursor
+---
+
+Atomic props for controlling the cursor style when hovering over an element.
+
+| Atomic Props       | CSS Properties        |
+| ------------------ | --------------------- |
+| cursorAlias        | cursor: alias         |
+| cursorAllScroll    | cursor: all-scroll    |
+| cursorAuto         | cursor: auto          |
+| cursorCell         | cursor: cell          |
+| cursorColResize    | cursor: col-resize    |
+| cursorContextMenu  | cursor: context-menu  |
+| cursorCopy         | cursor: copy          |
+| cursorCrosshair    | cursor: crosshair     |
+| cursorDefault      | cursor: default       |
+| cursorEResize      | cursor: e-resize      |
+| cursorEwResize     | cursor: ew-resize     |
+| cursorGrab         | cursor: grab          |
+| cursorGrabbing     | cursor: grabbing      |
+| cursorHelp         | cursor: help          |
+| cursorMove         | cursor: move          |
+| cursorNResize      | cursor: n-resize      |
+| cursorNeResize     | cursor: ne-resize     |
+| cursorNeswResize   | cursor: nesw-resize   |
+| cursorNoDrop       | cursor: no-drop       |
+| cursorNone         | cursor: none          |
+| cursorNotAllowed   | cursor: not-allowed   |
+| cursorNsResize     | cursor: ns-resize     |
+| cursorNwResize     | cursor: nw-resize     |
+| cursorNwseResize   | cursor: nwse-resize   |
+| cursorPointer      | cursor: pointer       |
+| cursorProgress     | cursor: progress      |
+| cursorRowResize    | cursor: row-resize    |
+| cursorSResize      | cursor: s-resize      |
+| cursorSeResize     | cursor: se-resize     |
+| cursorSwResize     | cursor: sw-resize     |
+| cursorText         | cursor: text          |
+| cursorVerticalText | cursor: vertical-text |
+| cursorWResize      | cursor: w-resize      |
+| cursorWait         | cursor: wait          |
+| cursorZoomIn       | cursor: zoom-in       |
+| cursorZoomOut      | cursor: zoom-out      |
+| cursor={value}     | cursor: {value}       |
+
+## Usage
+
+Use `cursor{value}` props to set cursor style for an element.
+
+```jsx live
+<View spaceX-10 row white>
+  <View toCenter bgAmber500 rounded-8 s-100 cursorNotAllowed>
+    NotAllowed
+  </View>
+  <View toCenter bgAmber500 rounded-8 s-100 cursorPointer>
+    Pointer
+  </View>
+  <View toCenter bgAmber500 rounded-8 s-100 cursorGrab>
+    Grab
+  </View>
+</View>
+```
+
+## Cursor
+
+if the preset atomic props can not be satisfied，you can use `cursor` props.
+
+```jsx live
+<View white toCenter bgAmber500 circle-100 cursor="pointer">
+  cursor
+</View>
+```

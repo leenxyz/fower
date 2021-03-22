@@ -1,0 +1,70 @@
+---
+id: align-items
+title: Align Items
+---
+
+Atomic props for controlling how flex and grid items are positioned along a container's cross axis.
+
+| Atomic Props        | CSS Properties        |
+| ------------------- | --------------------- |
+| alignItems ={value} | align-items: {value}; |
+
+## Start
+
+Use `alignItems="start"` to align items to the start of the container's cross axis.
+
+```jsx live
+<Box spaceX4 alignItems="flex-start">
+  <Box bgAmber400 w-100 py4></Box>
+  <Box bgAmber400 w-100 py8></Box>
+  <Box bgAmber400 w-100 py6></Box>
+</Box>
+```
+
+## Center
+
+Use `alignItems="center"` to align items along the center of the container's cross axis.
+
+```jsx live
+<Box spaceX4 alignItems="center">
+  <Box bgAmber400 w-100 py4></Box>
+  <Box bgAmber400 w-100 py8></Box>
+  <Box bgAmber400 w-100 py6></Box>
+</Box>
+```
+
+## End
+
+Use `alignItems="flex-end"` to align items to the end of the container's cross axis.
+
+```jsx live
+<Box spaceX4 alignItems="flex-end">
+  <Box bgAmber400 w-100 py4></Box>
+  <Box bgAmber400 w-100 py8></Box>
+  <Box bgAmber400 w-100 py6></Box>
+</Box>
+```
+
+## Baseline
+
+Use `alignItems="baseline"` to align items along the container's cross axis such that all of their baselines align.
+
+```jsx live
+<Box spaceX4 alignItems="baseline">
+  <Box bgAmber400 w-100 py4></Box>
+  <Box bgAmber400 w-100 py8></Box>
+  <Box bgAmber400 w-100 py6></Box>
+</Box>
+```
+
+## Stretch
+
+Use `alignItems="stretch"` to stretch items to fill the container's cross axis.
+
+```jsx live
+<Box spaceX4 alignItems="stretch">
+  <Box bgAmber400 w-100 py4></Box>
+  <Box bgAmber400 w-100 py8></Box>
+  <Box bgAmber400 w-100 py6></Box>
+</Box>
+```

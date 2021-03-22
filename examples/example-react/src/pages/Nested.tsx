@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@styli/react';
+import { styled } from '@styli/styled';
 
 export const View = styled('div');
 export const Text = styled('span');

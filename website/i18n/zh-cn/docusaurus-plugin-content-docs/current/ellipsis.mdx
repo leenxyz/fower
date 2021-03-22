@@ -1,0 +1,41 @@
+---
+id: ellipsis
+title: ellipsis 文字省略
+---
+
+使用 `ellipsis{lineNum}-{maxWidth}` 格式的属性，可以快速设置文本省略。
+
+## 单行文本省略
+
+`ellipsis` 属性默认行数为 1，默认最大宽度为 100
+
+```tsx live
+<Wrapper>
+  <View h-100 w-200 bgBlue300>
+    <View ellipsis>Styli.Styli.Styli.Styli</View>
+  </View>
+  <View h-100 w-200 bgBlue300>
+    <View ellipsis1-100>Styli.Styli.Styli.Styli</View>
+  </View>
+  <View h-100 w-200 bgBlue300>
+    <View ellipsis-150>Styli.Styli.Styli.Styli</View>
+  </View>
+</Wrapper>
+```
+
+## 多行文本省略
+
+```tsx live
+<Wrapper>
+  <View h-100 w-200 bgBlue300>
+    <View ellipsis2>Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli</View>
+  </View>
+  <View h-100 w-200 bgBlue300>
+    <View ellipsis3-150>
+      Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli.Styli
+    </View>
+  </View>
+</Wrapper>
+```
+
+**注意: 多行文本省略使用了实验性质的 [box-orient](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-orient)，请酌情使用 **

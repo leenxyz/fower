@@ -1,0 +1,113 @@
+---
+id: styli-layout-introduction
+title: Introduction
+---
+
+import {
+  LayoutEngine1,
+  LayoutEngine2,
+  LayoutEngine3,
+  LayoutEngine4,
+  LayoutEngine5,
+  LayoutEngine6,
+  LayoutEngine7,
+  LayoutEngine8,
+  LayoutEngine9,
+  LayoutEngine10,
+  LayoutEngine11,
+} from '@site/src/components/LayoutEngine'
+
+Styli 提供了一个强大的基于 Flexbox 的布局工具，通过调整布局的方向(Direction)和对齐(Alignment)，可以实现大部分的布局，使布局工作更轻松。
+
+相比传统的 flex 布局，Styli 的布局更加抽象精简，Styli 的布局抽象为 `toCenter`、`toCenterX`、`toCenterY`、`toLeft`、`toTop`、`toRight`、`toBottom`、`toBetween`、`toEvenly`、`toAround` 十种原子对齐方式，使用时你可以忘记传统 flex 布局中的主轴（main axis）和交叉轴（cross axis）的概念，你只需要有方向感即可。
+
+## 和 Flexbox 对比
+
+Styli Layout base on Flexbox, Compare to Flexbox, it has several advantages:
+
+Styli Layout 基于 Flexbox ，与 Flexbox 相比，它具有以下优点：
+
+- **Less API **：您不必记住 Flexbox 的所有 API，只需记住 10 个原子属性：`toCenter`，`toCenterX`，`toCenterY`，`toLeft`，`toTop`，`toRight`。 ，`toBottom`，`toBetween`，`toEvenly，`toAround`。
+
+- **Easy to learn**: 更直观，心智负担更低。 无需了解主轴和交叉轴。
+
+## 核心概念
+
+布局方向：`row、column`。
+
+布局对齐：`toCenter、toCenterX、toCenterY、toLeft、toTop、toRight、toBottom`、`toBetween`、`toEvenly`、`toAround`。
+
+## Live Demo
+
+```jsx live
+<View row toCenter bgGray100 s-200>
+  <View s-60 bgAmber400 rounded-8></View>
+  <View s-80 bgBlue400 rounded-8></View>
+</View>
+```
+
+## Layout base on row
+
+All Alignment Props with row direction:
+
+<LayoutEngine1 />
+
+## Layout base on column
+
+All Alignment Props with column direction:
+
+<LayoutEngine2 />
+
+## Compose base on toLeft
+
+All Layout compose with **toLeft**:
+
+<LayoutEngine3 />
+
+## Compose base on toRight
+
+All Layout compose with **toRight**:
+
+<LayoutEngine4 />
+
+## Compose base on toTop
+
+All Layout compose with **toTop**:
+
+<LayoutEngine5 />
+
+## Compose base on toBottom
+
+All Layout compose with **toBottom**:
+
+<LayoutEngine6 />
+
+## Compose base on toCenterX
+
+All Layout compose with **toCenterX**:
+
+<LayoutEngine7 />
+
+## Compose base on toCenterY
+
+All Layout compose with **toCenterY**:
+
+<LayoutEngine8 />
+
+## Compose base on toBetween
+
+All Layout compose with **toBetween**:
+
+<LayoutEngine9 />
+
+## Compose base on toEvenly
+
+All Layout compose with **toEvenly**:
+
+<LayoutEngine10 />
+
+## Compose base on toAround
+
+All Layout compose with **toAround**:
+
+<LayoutEngine11 />

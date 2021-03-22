@@ -1,0 +1,38 @@
+---
+id: flex-shrink
+title: Flex Shrink
+---
+
+Atomic props for controlling how flex items shrink.
+
+| Atomic Props       | CSS Properties       |
+| ------------------ | -------------------- |
+| flexShrink={value} | flex-shrink: {value} |
+
+## Shrink
+
+Use `flexShrink={1}` to allow a flex item to shrink if needed.
+
+```jsx live
+<Box spaceX3 row>
+  <Box bgAmber400 p4 w-100></Box>
+  <Box bgAmber500 p4 flexShrink={1} w-600>
+    Shrink
+  </Box>
+  <Box bgAmber400 p4 w-100></Box>
+</Box>
+```
+
+## Don't shrink
+
+Use `flexShrink={0}` to prevent a flex item from shrinking.
+
+```jsx live
+<Box spaceX3 row>
+  <Box bgAmber400 p4 w-100></Box>
+  <Box bgAmber500 p4 flexShrink={0} w-600>
+    Not Shrink
+  </Box>
+  <Box bgAmber400 p4 w-100></Box>
+</Box>
+```

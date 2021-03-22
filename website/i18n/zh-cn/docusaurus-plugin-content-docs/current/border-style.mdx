@@ -1,0 +1,38 @@
+---
+id: border-style
+title: Border Style
+---
+
+Atomic props for controlling the style of an element's borders.
+
+| Atomic Props | CSS Properties        |
+| ------------ | --------------------- |
+| borderSolid  | border-style: solid;  |
+| borderDashed | border-style: dashed; |
+| borderDotted | border-style: dotted; |
+| borderDouble | border-style: double; |
+| borderNone   | border-style: none;   |
+
+## Usage
+
+Use `border{style}` props to control an element's border style.
+
+```jsx live
+<View toEvenly>
+  <View toCenter p4 bgOrange200 border-4 borderOrange500 borderSolid>
+    borderSolid
+  </View>
+  <View toCenter p4 bgOrange200 borderT-4 borderOrange500 borderDashed>
+    borderDashed
+  </View>
+  <View toCenter p4 bgOrange200 borderR-4 borderOrange500 borderDotted>
+    borderDotted
+  </View>
+  <View toCenter p4 bgOrange200 borderB-4 borderOrange500 borderDouble>
+    borderDouble
+  </View>
+  <View toCenter p4 bgOrange200 border-4 borderOrange500 borderNone>
+    borderNone
+  </View>
+</View>
+```

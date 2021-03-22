@@ -1,0 +1,82 @@
+---
+id: justify-content
+title: Justify Content
+---
+
+Atomic props for controlling how flex and grid items are positioned along a container's main axis.
+
+| Atomic Props           | CSS Properties            |
+| ---------------------- | ------------------------- |
+| justifyContent={value} | justify-content: {value}; |
+
+## Start
+
+Use `justifyContent="flex-start"` to justify items against the start of the container's main axis.
+
+```jsx live
+<Box spaceX4 justifyContent="flex-start">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```
+
+## Center
+
+Use `justifyContent="center"` to justify items along the center of the container's main axis.
+
+```jsx live
+<Box spaceX4 justifyContent="center">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```
+
+## End
+
+Use `justifyContent="flex-end"` to justify items against the end of the container's main axis.
+
+```jsx live
+<Box spaceX4 justifyContent="flex-end">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```
+
+## Space between
+
+Use `justifyContent="space-between"` to justify items along the container's main axis such that there is an equal amount of space between each item.
+
+```jsx live
+<Box spaceX4 justifyContent="space-between">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```
+
+## Space around
+
+Use `justifyContent="space-around"` to justify items along the container's main axis such that there is an equal amount of space on each side of each item.
+
+```jsx live
+<Box spaceX4 justifyContent="space-around">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```
+
+## Space evenly
+
+Use `justifyContent="space-evenly"` to justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `justifyContent="space-around"`.
+
+```jsx live
+<Box spaceX4 justifyContent="space-evenly">
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+  <Box bgAmber400 s-100></Box>
+</Box>
+```

@@ -1,0 +1,35 @@
+---
+id: space-between
+title: Space Between
+---
+
+Atomic props for controlling the space between child elements.
+
+| Atomic Props   | CSS Properties                                 |
+| -------------- | ---------------------------------------------- |
+| spaceX-{value} | >\*:not(:last-child) { margin-right: {value}}  |
+| spaceY-{value} | >\*:not(:last-child) { margin-bottom: {value}} |
+
+## Add horizontal space between children
+
+Control the horizontal space between elements using the `spaceX-{value}` props.
+
+```jsx live
+<View spaceX-10 row>
+  <View bgAmber400 rounded-8 s-100></View>
+  <View bgAmber400 rounded-8 s-100></View>
+  <View bgAmber400 rounded-8 s-100></View>
+</View>
+```
+
+## Add vertical space between children
+
+Control the vertical space between elements using the spaceY-{value} props.
+
+```jsx live
+<View spaceY-10 column>
+  <View bgAmber400 rounded-8 h-60></View>
+  <View bgAmber400 rounded-8 h-60></View>
+  <View bgAmber400 rounded-8 h-60></View>
+</View>
+```

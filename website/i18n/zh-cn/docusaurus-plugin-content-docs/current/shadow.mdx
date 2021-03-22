@@ -1,0 +1,74 @@
+---
+id: shadow
+title: Shadow
+---
+
+| Atomic Props   | CSS Properties      |
+| -------------- | ------------------- |
+| shadowXS       | box-shadow: {XS}    |
+| shadowSM       | box-shadow: {SM}    |
+| shadowBase     | box-shadow: {Base}  |
+| shadowMD       | box-shadow: {MD}    |
+| shadowLG       | box-shadow: {LG}    |
+| shadowXL       | box-shadow: {XL}    |
+| shadowXXL      | box-shadow: {XXL}   |
+| shadow={value} | box-shadow: {value} |
+
+Styli 内置了阴影管理。
+
+使用 `shadow{SIZE}` 格式的 Props 可以控制元素的 shadow。
+
+## 用法
+
+```jsx live
+<View bgGray100 p-20 toCenterX toBetween>
+  <View toCenter s-50 bgWhite shadowXS>
+    XS
+  </View>
+  <View toCenter s-60 bgWhite shadowSM>
+    SM
+  </View>
+  <View toCenter s-70 bgWhite bgWhite shadowBase>
+    Base
+  </View>
+  <View toCenter s-80 bgWhite shadowMD>
+    MD
+  </View>
+  <View toCenter s-90 bgWhite shadowLG>
+    LG
+  </View>
+  <View toCenter s-100 bgWhite shadowXL>
+    XL
+  </View>
+  <View toCenter s-110 bgWhite shadowXXL>
+    XXL
+  </View>
+</View>
+```
+
+## 默认阴影
+
+```jsx live
+<View bgGray100 p-20 toCenter>
+  <View toCenter s-100 bgWhite shadow>
+    default
+  </View>
+</View>
+```
+
+## 使用伪类
+
+你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
+
+> Styli 支持的伪类：[查看](/docs/pseudo)
+
+```jsx live
+<View bgGray100 p-20 row>
+  <View toCenter s-100 bgWhite shadowXS shadowXL--hover mr-20>
+    hover
+  </View>
+  <View toCenter s-100 bgWhite shadowMD shadowXL--active>
+    active
+  </View>
+</View>
+```

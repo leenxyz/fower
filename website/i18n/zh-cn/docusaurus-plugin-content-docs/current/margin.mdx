@@ -1,0 +1,101 @@
+---
+id: margin
+title: Margin
+---
+
+Control the margin of an element using the `m{t|r|b|l|x|y}-{value}` Atomic Props.
+
+| Atomic Props            | CSS Properties                               |
+| ----------------------- | -------------------------------------------- |
+| m-{value} / m={value}   | margin: {value};                             |
+| mt-{value} / mt={value} | margin-top: {value};                         |
+| mr-{value} / mr={value} | margin-right: {value};                       |
+| mb-{value} / mb={value} | margin-bottom: {value};                      |
+| ml-{value} / ml={value} | margin-left: {value};                        |
+| mx-{value} / mx={value} | margin-left: {value}; margin-right: {value}; |
+| my-{value} / my={value} | margin-top: {value}; margin-bottom: {value}; |
+
+`margin` is a style attribute used frequently, so we use abbreviations.
+
+### Margin of all sides
+
+Control the margin on all sides of an element using the `m-{value}` Atomic Props.
+
+```jsx live
+<View bgGray100 toLeft>
+  <View bgGreen200 s-100 m-0>
+    m-0
+  </View>
+  <View bgGreen200 s-100 m={20}>
+    m={'{20}'}
+  </View>
+  <View bgGreen200 s-100 m="40px">
+    m="40px"
+  </View>
+  <View bgGreen200 s-120 m="10px 20px">
+    m="10px 20px"
+  </View>
+</View>
+```
+
+### Margin of one side
+
+Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atomic Props.
+
+```jsx live
+<View bgGray100 toLeft>
+  <View ml-10 bgGreen200 s-100>
+    ml-10
+  </View>
+  <View mt-10 bgTeal200 s-100>
+    mt-10
+  </View>
+  <View mr-10 bgRed200 s-100>
+    mr-10
+  </View>
+  <View mb-10 bgYellow200 s-100>
+    mb-10
+  </View>
+</View>
+```
+
+### Horizontal margin
+
+Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
+
+```jsx live
+<View bgGray100 toLeft>
+  <View mx-10 s-100 bgRed200>
+    mx-10
+  </View>
+</View>
+```
+
+### Vertical marign
+
+Control the vertical margin of an element using the `my-{value}` Atomic Props.
+
+```jsx live
+<View bgGray100 toLeft>
+  <View my-10 s-100 bgRed200>
+    my-10
+  </View>
+</View>
+```
+
+### Negative margins
+
+Control the negative margin of an element using the `m{t|r|b|l|x|y}--{value}` Atomic Props.
+
+Of course, you can also use `ml={-10}` to set negative margin of an element.
+
+```jsx live
+<View m-20 bgGray200 s-200>
+  <View ml--20 s-100 bgRed500-T60>
+    ml--20
+  </View>
+  <View mt="-1rem" s-100 bgOrange400-T60>
+    mt="-1rem"
+  </View>
+</View>
+```

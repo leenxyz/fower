@@ -1,0 +1,69 @@
+---
+id: rounded
+title: Border Radius
+---
+
+Atomic props for controlling the border radius of an element.
+
+| Atomic Props                              | CSS Properties                                                               |
+| ----------------------------------------- | ---------------------------------------------------------------------------- |
+| rounded-{value} / rounded={value}         | border-radius: {value};                                                      |
+| roundedFull-{value} / roundedFull={value} | border-radius: 9999px;                                                       |
+| roundedT-{value} / roundedT={value}       | border-top-left-radius: {value};<br/>border-top-right-radius: {value};       |
+| roundedR-{value} / roundedR={value}       | border-top-right-radius: {value};<br/>border-bottom-right-radius: {value};   |
+| roundedB-{value} / roundedB={value}       | border-bottom-left-radius: {value};<br/>border-bottom-right-radius: {value}; |
+| roundedL-{value} / roundedL={value}       | border-top-left-radius: {value};<br/>border-bottom-left-radius: {value};     |
+| roundedTL-{value} / roundedTL={value}     | border-top-left-radius: {value};                                             |
+| roundedTR-{value} / roundedTR={value}     | border-top-right-radius: {value};                                            |
+| roundedBL-{value} / roundedBL={value}     | border-bottom-left-radius: {value};                                          |
+| roundedBR-{value} / roundedBR={value}     | border-bottom-right-radius: {value};                                         |
+
+## Rounded corners
+
+Use `rounded-{size}` to set rounded corner of an element.
+
+```jsx live
+<View toEvenly>
+  <View s-100 bgYellow200 rounded-6></View>
+  <View s-100 bgRed200 rounded-10px></View>
+  <View s-100 bgGreen200 rounded={20}></View>
+  <View s-100 bgBlue200 rounded="50px"></View>
+</View>
+```
+
+## One sides corners
+
+Use `rounded{T|R|B|L}-{size}` to set one side corner of an element.
+
+```jsx live
+<View toEvenly>
+  <View s-100 bgYellow200 roundedT-20></View>
+  <View s-100 bgRed200 roundedR-20></View>
+  <View s-100 bgGreen200 roundedB-20></View>
+  <View s-100 bgBlue200 roundedL-20></View>
+</View>
+```
+
+## Single cornner
+
+Use `rounded{TL|TR|BL|BR}-{size}` to single corner of an element.
+
+```jsx live
+<View toEvenly>
+  <View s-100 bgYellow200 roundedTL-20></View>
+  <View s-100 bgRed200 roundedTR-20></View>
+  <View s-100 bgGreen200 roundedBL-20></View>
+  <View s-100 bgBlue200 roundedBR-20></View>
+</View>
+```
+
+## roundedFull
+
+Use the `roundedFull` props to create pills and circles.
+
+```jsx live
+<View toEvenly>
+  <View w-200 h-100 bgYellow200 roundedFull></View>
+  <View s-100 bgYellow200 roundedFull></View>
+</View>
+```

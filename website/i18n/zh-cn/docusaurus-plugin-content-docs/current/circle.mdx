@@ -1,0 +1,27 @@
+---
+id: circle
+title: Circle
+---
+
+| Atomic Props                    | CSS Properties                                          |
+| ------------------------------- | ------------------------------------------------------- |
+| circle-{value} / circle={value} | width: {value}; height: {value}; border-radius: {value} |
+
+### 用法
+
+```jsx live
+<View toLeft>
+  <View circle-50 bgYellow200 toCenter>
+    Hello
+  </View>
+  <View circle-5rem bgGreen200 toCenter>
+    Hello
+  </View>
+  <View circle={100} bgBlue200 toCenter>
+    Hello
+  </View>
+  <View circle="150px" bgPurple200 toCenter>
+    Hello
+  </View>
+</View>
+```
