@@ -1,55 +1,24 @@
 ---
 id: introduction
-title: 简介
-sidebar_label: 简介
+title: Introduction
 ---
 
-en...
+We had to admit it, writing CSS is painful.
 
-承认吧，写 CSS 是一件痛苦的事情。
+In my experience of UI development, most people feel painful for writing CSS. Most Front-end developers find it boring to write CSS, and most Back-end developers find it difficult to master CSS.
 
-在我多年前端开发经历中，大部分人都为写 CSS 而感到痛苦，大部分前端开发者觉得写 CSS 很枯燥，大部分后端开发者觉得精通 CSS 很难。
+CSS, which can't even be called a programming language, but it is huge and complex, with so many style attributes, and new features are still not being added.
 
-CSS，甚至不能称之为一门编程语言，但它却庞大而复杂，有及其多的样式属性，而且新特性还在不多增加中。回想你学习并精通 CSS 的过程，除了要学习基本 padding、margin、color 等基础知识，你还要熟悉选择器 (熟悉全部高级选择器够你搞一阵了)，CSS3 各种新特性 (从基本的阴影渐变到各种动画)，用于布局控制的 flexbox 和 grid 等，新的 CSS 变量，还有旧时的浮动等黑科技...CSS 发展了 20 多年了，里面既有精华也有糟粕，要熟悉 CSS 的全貌，是一件非常费时的事情。最重要的是，对于大部分人，要完成界面的开发，只需使用 CSS 中的很小一部分样式属性。
+Styli is a style library that allows you to develop UI efficiently, and let you write CSS without pain.
 
-Styli 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不再痛苦。
-
-在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式，Styli 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。
-
-Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。
-
-## 特点
-
-- **Atomic Props**
-
-  Styli 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我们应该重新思考什么是最佳实践。
-
-- **Framework-agnostic，框架无关**
-
-  这是我们研发 Styli 重要动机(Motivation)之一，我们团队的产品同时需要支持 Web、App、小程序等平台，我们没找到可以跨框架的样式解决方案，为了团队能在不同框进行 UI 开发中使用统一的写法，我们创建了 Styli。
-
-- **Type Safe，类型安全**
-
-  我们团队是 TypeScript 的深度使用者，夸张是到了离开 Type Safe 就不会写代码的地步。Styli 是完全类型安全的，特别是配合 JSX，开发体验会非常棒，类型提供很好的智能提示和文档，且不需借助特定的编辑器插件实现智能提示。
-
-- **Less Code，更少的代码**
-
-  使用 Styli，同样的 UI，你可以使用更少的代码实现，特别是在 JSX 中，布尔类型的 props 值是可以省略的，让 Styli 实现了 "key as value" 的模式，让样式代码量大大减少。
-
-- **Less CSS, More JS**
-
-  请逐渐忘记 CSS，我们希望 utility 能覆盖 80%以上常规场景，对于特殊场景比如复杂 CSS animation、CSS Transform，或者是小众场景比如 User Select 等，我们仍建议使用原生 CSS 解决
-
-- **Programmable**
-
-  Styli 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。
+In Styli, we write styles directly in Markup through "Atomic props". The "Atomic props" provided by Styli does not support all CSS features. It is only a subset of CSS and only contains some of what we consider to be the essence of CSS The good parts, through these atomic properties, you can complete most of the work of UI development.
 
 ## A quick example
 
-下面我们看看使用 Styli 时，我们的代码是怎样写的？
+Let's take a look at how to use Styli with a **Live DEMO**:
 
 ```jsx live
-<View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+<View toCenterY p-10 w-260 rounded-10 shadow>
   <Image circle-48 src="/img/jobs.jpg" />
   <View ml-10>
     <View f-20 fontBold>
@@ -60,7 +29,60 @@ Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、R
 </View>
 ```
 
-## 灵感
+## Feature
+
+- **Atomic Props**
+
+  Styli uses **Atomic Props** to write the style. For decades, separating HTML, CSS and JS is the best practice in Front-end development , but with the advent of the componentization era, we should rethink what best practices are.
+
+- **Framework-agnostic**
+
+  Framework-agnostic is one of important motivations for the creating of Styli. Styli supports Web, React Native, and Mini Program. With Styli, you can write style with the same way in Web, React Native, and Mini Program.
+
+- **High Performance**
+  Atomic props design also enables super fast rendering. Rendered declarations get cached and can therefore be reused immediately. Additionally, there are several performance benefits by rendering styles with JavaScript. First of all, CSS is only generated and attached as it is needed. Also, it uses single class selectors which are among the fastest CSS selectors available.
+
+- **Type Safe**
+
+  Our team is a deep user of TypeScript. Styli is completely type-safe, especially with JSX, the development experience will be great, the type provides very good IntelliSense and documents, and no need to rely on specific editor plugin to achieve IntelliSense.
+
+- **Less Code**
+
+  Using Styli, you can develop UI with less code, especially in JSX, the boolean prop value of can be omitted, that we call it the **"key as value"** pattern, it can reduce a lot of style code.
+
+- **Less CSS, More JS**
+
+  Please gradually weaken CSS. We hope that utilities can cover more than 80% of regular scenes. For special scenes such as complex CSS animation, CSS Transform, we still recommend using native CSS.
+
+- **Programmable**
+
+  Styli is a solution of CSS in JS. When you are building the user interface, you are essentially writing JS, not CSS. It's more flexible than CSS. Especially in dynamic scenes, Styli can handle it more elegantly.
+
+## Comparison
+
+- **CSS Framework**
+
+  For example, Bootstrap, Bulma, Foundation, Semantic UI, PureCSS, Materialize these, I call it traditional CSS frameworks, usually these frameworks are used for rapid development of Web applications, more popular in the JQuery era. The disadvantages are also obvious. If your interface has a lot of custom designs, it will be painful to use. Styli is not a traditional CSS framework.
+
+- **UI Framework**
+
+  For example, Ant-design, Material-UI, Vuetify, React-Bootstrap, these UI Frameworks are created with the component era, and are often binded with some Front-end frameworks (React, Vue, Angular). Similarly, Styli is not an UI framework.
+
+- **BEM/SMACSS/OOCSS 等**
+
+  Some methodology for writing CSS, I think you should know it. They make a fuss on the principle of "separation of Concerns". This is the biggest difference between Styli and them. Styli does not advocate "separation of Concerns"
+
+- **CSS in JS**
+
+  CSS in JS was developed by the React community. What is it? Long story shor, it is to use JS to write CSS. Popular solutions include Styled Components, Emotion, JSS, Radium, etc. Styli also is a solution of CSS in JS what's the difference? The difference is that Styli uses the "Atomic props" method to write style, the concept is similar to "Atomic CSS".
+
+- **Atomic CSS、Tailwindcss、Tachyons**
+
+  The atomic CSS is a non-traditional CSS solution, And I like it very much. Styli also uses this concept. But the difference is that they are writing CSS, while Styli is writing JS.
+
+  In fact, you can understand Styli as "Atomic CSS" + "CSS in JS", which I call "Atomic Props".
+
+## Inspiration
 
 Inspired by:
 

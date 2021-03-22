@@ -3,19 +3,19 @@ id: use-with-taro
 title: Use with Taro
 ---
 
-[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) 是一个 React-like 的框架，在 Taro 中使用 Styli 和在 React 中使用非常类似。
+[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) is a React-like framework，Using Styli in Taro is very similar to using it in React.
 
-## 安装
+## Installation
 
 ```bash
 npm i @styli/core @styli/taro
 ```
 
-注意，除了需要 `@styli/core`，你还需安装和 Taro 对应的组件包 `@styli/taro`。
+Besides `@styli/core`, we also need taro binding package `@styli/taro`.
 
-## 使用
+## Usage
 
-下面我们使用 `View`、`Image`、`Text` 三个组件，实现一个用户信息卡片界面。
+Now we're going to build a user profile card ui with `View`,`Image`,`Text`.
 
 ```jsx live
 <View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
@@ -29,19 +29,19 @@ npm i @styli/core @styli/taro
 </View>
 ```
 
-可以看到，我们用非常简洁的代码，实现了一个比较复杂的界面。咋一看，你可能会说："这不是变相的内联样式吗？"，这确实和内联样式相似，把样式写在 JSX 上，但这也许这是他们唯一的相似点。Styli 编写样式的方式，我们况且称之为 "Atomic props" 吧。
+As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Styli, I call it "Atomic props".
 
-相比内联样式，"Atomic props"有很多优点：
+Compared with inline style, "Atomic props" has many advantages:
 
-- **代码更简洁**，使用内联样式代码量更大，很容易让 JSX 变得乱糟糟，但使用 "Atomic props" 保留了 JSX 的简洁性，可读性更好。
+- **Less Code**, inline styles has a larger amount of code, which can easily make JSX messy, but "Atomic props" retains the simplicity of JSX and is more readable.
 
-- **样式复用**，使用内联样式，很容易让代码快速膨胀，使用 "Atomic props"，代码大小并不会随着项目的大小膨胀太多。
+- **Style reuse**, using inline styles, it is easy to quickly expand the code, using "Atomic props", the code size will not expand too much as the project grows.
 
 ## @styli/taro
 
-`@styli/taro` 的代码非常简单，里面没有任何黑魔法，只是用 `styled` 对 `@tarojs/components` 进行简单包裹。
+The source code of `@styli/taro` is very simple:
 
-```jsx title="@styli/taro 源码"
+```jsx title="@styli/taro Source code"
 import { styled } from '@styli/styled'
 import Taro from '@tarojs/components'
 
@@ -90,7 +90,3 @@ export const OfficialAccount = styled(Taro.OfficialAccount)
 export const NavigationBar = styled(Taro.NavigationBar)
 export const PageMeta = styled(Taro.PageMeta)
 ```
-
-你也可以直接在 Github 中查看`@styli/taro`的源码：[Souce code](https://github.com/forsigner/styli/blob/master/packages/taro/src/index.tsx)。
-
-大部分场景，你都可以用 `@styli/taro` 代替 `@tarojs/components`。

@@ -1,16 +1,14 @@
 ---
 id: design-system-color
 sidebar_label: Color
-title: 颜色
+title: Color
 ---
 
 import { Colors } from '@site/src/components/Colors'
 
-使用 Styli，你可以系统地管理颜色，
+The default color palette in Styli.
 
-## 使用颜色
-
-直接使用颜色属性设置字体颜色：
+## Text Color
 
 ```jsx live
 <Text f-24 green500 fontBold>
@@ -18,15 +16,7 @@ import { Colors } from '@site/src/components/Colors'
 </Text>
 ```
 
-使用 `primary`、`info`、`success`、`warn`等颜色:
-
-```jsx live
-<Text f-24 colorPrimary fontBold>
-  Hello
-</Text>
-```
-
-背景颜色的使用：
+## Background Color
 
 ```jsx live
 <View bgOrange300 orange700 toCenter s-100 f-20>
@@ -36,6 +26,6 @@ import { Colors } from '@site/src/components/Colors'
 
 ## Color palette
 
-> Styli preset-color，borrow from tailwindcss color。
+Styli preset colors，borrow from tailwindcss color。
 
 <Colors />
