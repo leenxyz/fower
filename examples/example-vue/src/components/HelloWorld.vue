@@ -1,14 +1,14 @@
 <template>
   <div debugChildren>
-    <h1 m-20 :c="color" class="red" textRight p-10 bgRed20 block @click="clickTitle">
+    <h1 m-20 :c="color" class="red bgred400" textRight p-10 bgRed200 block @click="clickTitle">
       {{ msg }} {{ color }}
     </h1>
-    <p green60 fontBold borderT="1px solid green">
+    <p green60 fontBold borderT="1px solid green" bgRed400>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
     </p>
 
-    <div h-200 f-12 debugChildren row justifyBetween itemsEnd>
+    <div h-200 f-12 debugChildren toRight>
       <div s-100></div>
       <div s-100></div>
       <div s-100></div>
@@ -17,22 +17,18 @@
     <div circle-100></div>
 
     <div left debugChildren>
-      <div h-100 maxW-50 bgYellow20>maxW-50</div>
-      <div w-100 maxH-50 bgYellow20>maxH-50</div>
-      <div h-100 minW-50 bgYellow20>minW-50</div>
-      <div w-100 minH-50 bgYellow20>minH-50</div>
-      <div w="[100,200,300,400]" bgYellow20>w="[200,400,600,800]"</div>
+      <div h-100 maxW-50 bgYellow200>maxW-50</div>
+      <div h-100 maxW-50 bgYellow200>maxW-50</div>
+      <div w-100 maxH-50 bgYellow200>maxH-50</div>
+      <div h-100 minW-50 bgYellow200>minW-50</div>
+      <div w-100 minH-50 bgYellow200>minH-50</div>
+      <div w="[100,200,300,400]" bgYellow200>w="[200,400,600,800]"</div>
     </div>
 
-    <div h-200 f-12 debugChildren row justifyBetween itemsEnd>
+    <div h-200 f-12 toEvenly>
       <div s-100>AAA</div>
       <div selfStretch>BBB</div>
       <div s-100 toCenter>CCC</div>
-    </div>
-
-    <div h-200 f-12 debugChildren toCenterX bottom>
-      <div s-100>AAA</div>
-      <div s-100 toCenter>BBB</div>
     </div>
   </div>
 </template>

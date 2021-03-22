@@ -3,7 +3,7 @@ import presetDefault from '@styli/preset-default'
 import _Vue, { PluginFunction } from 'vue'
 import vStyli from '@/v-css'
 
-styli.configure(presetDefault)
+styli.configure(() => presetDefault)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -40,7 +40,4 @@ if ('false' === process.env.ES_BUILD) {
   }
 }
 // Default export is library as a whole, registered via Vue.use()
-export const vStyliPlugin = plugin
-export * from '@styli/core'
-export * from '@styli/utils'
-export * from '@styli/styled'
+export default plugin

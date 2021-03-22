@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { vStyliPlugin } from '@styli/vue'
+import VueStyli from '@styli/vue'
 
 Vue.config.productionTip = false
 
-Vue.use(vStyliPlugin)
+Vue.use(VueStyli)
 
 new Vue({
   render: (h) => h(App),
