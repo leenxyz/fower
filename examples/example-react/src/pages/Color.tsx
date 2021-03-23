@@ -88,7 +88,7 @@ export default () => {
         green500-D20--hover
       </View>
 
-      <View f-20 color="#000" c--hover="#000-T50">
+      <View f-20 color="#000" color--hover="#000-T50">
         #000--hover
       </View>
 
@@ -100,9 +100,9 @@ export default () => {
         green500--active
       </View>
 
-      <View f-20 color={['yellowgreen', 'purple', 'deeppink', 'info']}>
+      <Box f-20 color={['yellowgreen', 'purple', 'deeppink', 'info']}>
         color=['yellowgreen', 'purple', 'deeppink', 'red']
-      </View>
+      </Box>
 
       <View f-20 trueGray500>
         trueGray500

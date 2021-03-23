@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Box, ThemeProvider, styli } from '@styli/react';
+import { View, Box } from '@styli/react';
+import { ThemeProvider } from '@styli/theming';
+import { styli } from '@styli/core';
 
 export default () => {
   return (
