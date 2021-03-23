@@ -1,8 +1,12 @@
 import { styli } from '@styli/core'
+import { styled } from '@styli/styled'
 import presetDefault from '@styli/preset-default'
 
-export * from './Box'
-export * from './components'
 export { jsx } from './jsx'
+export { Box, BoxComponent } from './Box'
+
+export const View = styled('div')
+export const Text = styled('span')
+export const Image = styled('img')
 
 styli.configure(() => presetDefault)
