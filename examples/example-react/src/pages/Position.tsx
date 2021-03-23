@@ -1,32 +1,32 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box f-30 fontBold>
         Positon
       </Box>
 
-      <View s-200 debugChildren position="relative">
-        <View s-100></View>
-      </View>
+      <Box s-200 debugChildren position="relative">
+        <Box s-100></Box>
+      </Box>
 
-      <View s-200 debugChildren relative>
-        <View s-100 absolute right-0></View>
-      </View>
+      <Box s-200 debugChildren relative>
+        <Box s-100 absolute right-0></Box>
+      </Box>
 
-      <View s-200 debugChildren relative>
-        <View s-100 absolute right={0}></View>
-      </View>
+      <Box s-200 debugChildren relative>
+        <Box s-100 absolute right={0}></Box>
+      </Box>
 
-      <View s-200 debugChildren relative>
-        <View s-100 absolute right--10></View>
-      </View>
+      <Box s-200 debugChildren relative>
+        <Box s-100 absolute right--10></Box>
+      </Box>
 
-      <View s-200 debugChildren relative>
-        <View s-100 absolute right={10} top-10></View>
-      </View>
-    </View>
+      <Box s-200 debugChildren relative>
+        <Box s-100 absolute right={10} top-10></Box>
+      </Box>
+    </Box>
   );
 };

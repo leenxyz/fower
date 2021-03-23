@@ -1,105 +1,105 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box f-30 fontBold>
         Margin
       </Box>
 
-      <View debug>
-        <View inlineBlock>
-          <View m4 inlineBlock>
+      <Box debug>
+        <Box inlineBlock>
+          <Box m4 inlineBlock>
             m4
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View m-20px-10px inlineBlock>
+        <Box inlineBlock>
+          <Box m-20px-10px inlineBlock>
             m-20px-10px
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View mt4 inlineBlock>
+        <Box inlineBlock>
+          <Box mt4 inlineBlock>
             mt4
-          </View>
-        </View>
-        <View inlineBlock>
-          <View mr4 inlineBlock>
+          </Box>
+        </Box>
+        <Box inlineBlock>
+          <Box mr4 inlineBlock>
             mr4
-          </View>
-        </View>
-        <View inlineBlock>
-          <View mb4 inlineBlock>
+          </Box>
+        </Box>
+        <Box inlineBlock>
+          <Box mb4 inlineBlock>
             mb4
-          </View>
-        </View>
-        <View inlineBlock>
-          <View ml4 inlineBlock>
+          </Box>
+        </Box>
+        <Box inlineBlock>
+          <Box ml4 inlineBlock>
             ml4
-          </View>
-        </View>
-        <View inlineBlock>
-          <View mx4 inlineBlock>
+          </Box>
+        </Box>
+        <Box inlineBlock>
+          <Box mx4 inlineBlock>
             mx4
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View my4 inlineBlock>
+        <Box inlineBlock>
+          <Box my4 inlineBlock>
             my4
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View m-20 inlineBlock>
+        <Box inlineBlock>
+          <Box m-20 inlineBlock>
             m-20
-          </View>
-        </View>
-        <View inlineBlock>
-          <View mt-20 inlineBlock>
+          </Box>
+        </Box>
+        <Box inlineBlock>
+          <Box mt-20 inlineBlock>
             m-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View mt-20 inlineBlock>
+        <Box inlineBlock>
+          <Box mt-20 inlineBlock>
             mt-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View mr-20 inlineBlock>
+        <Box inlineBlock>
+          <Box mr-20 inlineBlock>
             mr-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View mt-20 inlineBlock>
+        <Box inlineBlock>
+          <Box mt-20 inlineBlock>
             mt-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View ml-20 inlineBlock>
+        <Box inlineBlock>
+          <Box ml-20 inlineBlock>
             ml-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View mx-20 inlineBlock>
+        <Box inlineBlock>
+          <Box mx-20 inlineBlock>
             mx-20
-          </View>
-        </View>
+          </Box>
+        </Box>
 
-        <View inlineBlock>
-          <View my-20 inlineBlock>
+        <Box inlineBlock>
+          <Box my-20 inlineBlock>
             my-20
-          </View>
-        </View>
-      </View>
-    </View>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };

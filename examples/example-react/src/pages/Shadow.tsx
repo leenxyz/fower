@@ -1,50 +1,50 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View f-16 gray60>
+    <Box f-16 gray60>
       <Box f-30 fontBold>
         Shadow
       </Box>
 
-      <View py-50 row toEvenly>
-        <View bgWhite s-128 rounded-4 toCenter shadowXS>
+      <Box py-50 row toEvenly>
+        <Box bgWhite s-128 rounded-4 toCenter shadowXS>
           shadowXS
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowSM>
+        <Box bgWhite s-128 rounded-4 toCenter shadowSM>
           shadowSM
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowBase>
+        <Box bgWhite s-128 rounded-4 toCenter shadowBase>
           shadowBase
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowMD>
+        <Box bgWhite s-128 rounded-4 toCenter shadowMD>
           shadowMD
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowLG>
+        <Box bgWhite s-128 rounded-4 toCenter shadowLG>
           shadowLG
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowXL>
+        <Box bgWhite s-128 rounded-4 toCenter shadowXL>
           shadowXL
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowXXL>
+        <Box bgWhite s-128 rounded-4 toCenter shadowXXL>
           shadowXXL
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowInner>
+        <Box bgWhite s-128 rounded-4 toCenter shadowInner>
           shadowInner
-        </View>
+        </Box>
 
-        <View bgWhite s-128 rounded-4 toCenter shadowOutline>
+        <Box bgWhite s-128 rounded-4 toCenter shadowOutline>
           shadowOutline
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+    </Box>
   );
 };

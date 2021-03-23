@@ -1,25 +1,25 @@
 import React from 'react';
-import { View } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
-      <View f-28>
-        <View fontHairline>Lorem ipsum dolor sit amet</View>
-        <View fontThin>Lorem ipsum dolor sit amet</View>
-        <View fontLight>Lorem ipsum dolor sit amet</View>
-        <View fontNormal>Lorem ipsum dolor sit amet</View>
-        <View fontMedium>Lorem ipsum dolor sit amet</View>
-        <View fontSemibold>Lorem ipsum dolor sit amet</View>
-        <View fontBold>Lorem ipsum dolor sit amet</View>
-        <View fontExtrabold>Lorem ipsum dolor sit amet</View>
-      </View>
+    <Box>
+      <Box f-28>
+        <Box fontHairline>Lorem ipsum dolor sit amet</Box>
+        <Box fontThin>Lorem ipsum dolor sit amet</Box>
+        <Box fontLight>Lorem ipsum dolor sit amet</Box>
+        <Box fontNormal>Lorem ipsum dolor sit amet</Box>
+        <Box fontMedium>Lorem ipsum dolor sit amet</Box>
+        <Box fontSemibold>Lorem ipsum dolor sit amet</Box>
+        <Box fontBold>Lorem ipsum dolor sit amet</Box>
+        <Box fontExtrabold>Lorem ipsum dolor sit amet</Box>
+      </Box>
 
-      <View f-24>
-        <View fontWeight-100>Lorem ipsum dolor sit amet</View>
-        <View fontWeight-400>Lorem ipsum dolor sit amet</View>
-        <View fontWeight={600}>Lorem ipsum dolor sit amet</View>
-      </View>
-    </View>
+      <Box f-24>
+        <Box fontWeight-100>Lorem ipsum dolor sit amet</Box>
+        <Box fontWeight-400>Lorem ipsum dolor sit amet</Box>
+        <Box fontWeight={600}>Lorem ipsum dolor sit amet</Box>
+      </Box>
+    </Box>
   );
 };

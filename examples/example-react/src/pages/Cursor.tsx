@@ -1,58 +1,58 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box f-30 fontBold>
         Cursor
       </Box>
 
-      <View row justifyBetween>
-        <View s-100 toCenter bgBlue300 cursorPointer>
+      <Box row justifyBetween>
+        <Box s-100 toCenter bgBlue300 cursorPointer>
           cursorPointer
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorNone>
+        <Box s-100 toCenter bgBlue300 cursorNone>
           cursorNone
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorHelp>
+        <Box s-100 toCenter bgBlue300 cursorHelp>
           cursorHelp
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorProgress>
+        <Box s-100 toCenter bgBlue300 cursorProgress>
           cursorProgress
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorCell>
+        <Box s-100 toCenter bgBlue300 cursorCell>
           cursorCell
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorCopy>
+        <Box s-100 toCenter bgBlue300 cursorCopy>
           cursorCopy
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorGrab>
+        <Box s-100 toCenter bgBlue300 cursorGrab>
           cursorGrab
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursor="alias">
+        <Box s-100 toCenter bgBlue300 cursor="alias">
           cursor=alias
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursor="not-allowed">
+        <Box s-100 toCenter bgBlue300 cursor="not-allowed">
           cursor="not-allowed"
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorNotAllowed>
+        <Box s-100 toCenter bgBlue300 cursorNotAllowed>
           cursorNotAllowed
-        </View>
+        </Box>
 
-        <View s-100 toCenter bgBlue300 cursorSResize>
+        <Box s-100 toCenter bgBlue300 cursorSResize>
           cursorSResize
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+    </Box>
   );
 };

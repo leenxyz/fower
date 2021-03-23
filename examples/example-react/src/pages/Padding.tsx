@@ -1,63 +1,63 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box f-30 fontBold>
         Padding
       </Box>
 
-      <View debug>
-        <View p4 inlineBlock>
+      <Box debug>
+        <Box p4 inlineBlock>
           p4
-        </View>
-        <View pt4 inlineBlock>
+        </Box>
+        <Box pt4 inlineBlock>
           pt4
-        </View>
-        <View pr4 inlineBlock>
+        </Box>
+        <Box pr4 inlineBlock>
           pr4
-        </View>
-        <View pb4 inlineBlock>
+        </Box>
+        <Box pb4 inlineBlock>
           pb4
-        </View>
-        <View pl4 inlineBlock>
+        </Box>
+        <Box pl4 inlineBlock>
           pl4
-        </View>
-        <View px4 inlineBlock>
+        </Box>
+        <Box px4 inlineBlock>
           px4
-        </View>
-        <View py4 inlineBlock>
+        </Box>
+        <Box py4 inlineBlock>
           py4
-        </View>
+        </Box>
 
-        <View p-20 inlineBlock>
+        <Box p-20 inlineBlock>
           p-20
-        </View>
+        </Box>
 
-        <View p-20px-10px inlineBlock>
+        <Box p-20px-10px inlineBlock>
           p-20px-10px
-        </View>
+        </Box>
 
-        <View pt-20 inlineBlock>
+        <Box pt-20 inlineBlock>
           pt-20
-        </View>
-        <View pr-20 inlineBlock>
+        </Box>
+        <Box pr-20 inlineBlock>
           pr-20
-        </View>
-        <View pt-20 inlineBlock>
+        </Box>
+        <Box pt-20 inlineBlock>
           pt-20
-        </View>
-        <View pl-20 inlineBlock>
+        </Box>
+        <Box pl-20 inlineBlock>
           pl-20
-        </View>
-        <View px-20 inlineBlock>
+        </Box>
+        <Box px-20 inlineBlock>
           px-40
-        </View>
-        <View py-20 inlineBlock>
+        </Box>
+        <Box py-20 inlineBlock>
           py-40
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+    </Box>
   );
 };

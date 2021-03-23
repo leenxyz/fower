@@ -1,30 +1,30 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box f-30 fontBold>
         OutLine
       </Box>
-      <View debug toCenter>
-        <View toCenter s-200>
+      <Box debug toCenter>
+        <Box toCenter s-200>
           <Box as="input" defaultValue="common input" />
-        </View>
-        <View toCenter s-200>
+        </Box>
+        <Box toCenter s-200>
           <Box as="input" outlineNone defaultValue="outlineNone" />
-        </View>
-        <View toCenter s-200>
+        </Box>
+        <Box toCenter s-200>
           <Box as="input" outlineOffset-10 defaultValue="outlineOffset-10" />
-        </View>
-        <View toCenter s-200>
+        </Box>
+        <Box toCenter s-200>
           <Box
             as="input"
             outline="8px ridge rgba(170, 50, 220, .6)"
             defaultValue="8px ridge rgba(170, 50, 220, .6)"
           />
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+    </Box>
   );
 };

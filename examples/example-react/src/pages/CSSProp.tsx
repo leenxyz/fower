@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Box, Text } from '@styli/react';
+import { Box, Text } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box>CSS Prop</Box>
 
       <Text
@@ -17,7 +17,7 @@ export default () => {
         Hi, Styli!
       </Text>
 
-      <View
+      <Box
         f-40
         css={{
           backgroundColor: '#edf2f7',
@@ -34,7 +34,7 @@ export default () => {
       >
         <div className="title">Nested demo</div>
         <span>Hi, Styli!</span>
-      </View>
-    </View>
+      </Box>
+    </Box>
   );
 };
