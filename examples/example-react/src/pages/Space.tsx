@@ -1,55 +1,55 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 import { styled } from '@styli/styled';
 
 export default () => {
   return (
-    <View>
-      <Box f-30 fontBold>
+    <Box>
+      <Box text3XL fontBold>
         Size
       </Box>
-      <View space-10 row w-350 wrap>
-        <View bgBlue200 s-100>
+      <Box space-10 row w-350 wrap>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           space-10
-        </View>
-      </View>
+        </Box>
+      </Box>
 
-      <View spaceX-10 row debugChildren>
-        <View bgBlue200 s-100>
+      <Box spaceX-10 row debugChildren>
+        <Box bgBlue200 s-100>
           spaceX-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           spaceX-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           spaceX-10
-        </View>
-      </View>
+        </Box>
+      </Box>
 
-      <View spaceY-10 column debugChildren>
-        <View s-100>spaceY-10</View>
-        <View bgBlue200 s-100>
+      <Box spaceY-10 column debugChildren>
+        <Box s-100>spaceY-10</Box>
+        <Box bgBlue200 s-100>
           spaceY-10
-        </View>
-        <View bgBlue200 s-100>
+        </Box>
+        <Box bgBlue200 s-100>
           spaceY-10
-        </View>
-      </View>
-    </View>
+        </Box>
+      </Box>
+    </Box>
   );
 };

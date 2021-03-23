@@ -24,7 +24,7 @@ const ItemB = () => {
 
 const Type: FC<{ type?: string }> = ({ children, type = 'row' }) => {
   return (
-    <Box toCenter mb2 mt2 f-12 spaceX1>
+    <Box toCenter mb2 mt2 textXS spaceX1>
       <Box toCenter px2 py-2 rounded-999 bgGray300 inlineBlock>
         {type}
       </Box>

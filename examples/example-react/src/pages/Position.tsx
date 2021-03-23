@@ -4,7 +4,7 @@ import { Box } from '@styli/react';
 export default () => {
   return (
     <Box>
-      <Box f-30 fontBold>
+      <Box text3XL fontBold>
         Positon
       </Box>
 

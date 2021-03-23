@@ -4,7 +4,7 @@ import { Box } from '@styli/react';
 export default () => {
   return (
     <Box>
-      <Box f-30 fontBold as="h1">
+      <Box text3XL fontBold as="h1">
         OutLine
       </Box>
       <Box debug overflow="hidden">

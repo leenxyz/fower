@@ -6,10 +6,10 @@ import { styli } from '@styli/core';
 export default () => {
   return (
     <ThemeProvider theme={styli.getTheme()}>
-      <Box f-30 fontBold>
+      <Box text3XL fontBold>
         Size
       </Box>
-      <Box toEvenly wrap f-12>
+      <Box toEvenly wrap textXS>
         <Box w9 h5 bgBlue200>
           w9 h5
         </Box>

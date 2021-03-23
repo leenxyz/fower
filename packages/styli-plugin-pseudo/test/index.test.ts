@@ -9,9 +9,9 @@ describe('styli-plugin-pseudo', () => {
 
   it('middleware', () => {
     const atom1: Atom = {
-      propKey: 'f-10--hover',
+      propKey: 'text-10--hover',
       propValue: true,
-      key: 'f-10--hover',
+      key: 'text-10--hover',
       type: 'style',
       style: {},
     }

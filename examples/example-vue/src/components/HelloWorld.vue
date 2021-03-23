@@ -8,7 +8,7 @@
       check out the
     </p>
 
-    <div h-200 f-12 debugChildren toRight>
+    <div h-200 textXS debugChildren toRight>
       <div s-100></div>
       <div s-100></div>
       <div s-100></div>
@@ -25,7 +25,7 @@
       <div w="[100,200,300,400]" bgYellow200>w="[200,400,600,800]"</div>
     </div>
 
-    <div h-200 f-12 toEvenly>
+    <div h-200 textXS toEvenly>
       <div s-100>AAA</div>
       <div selfStretch>BBB</div>
       <div s-100 toCenter>CCC</div>

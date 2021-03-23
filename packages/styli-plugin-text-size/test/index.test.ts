@@ -7,8 +7,8 @@ describe('styli-plugin-text-size', () => {
 
   it('isMatch', () => {
     expect(isMatch!('f')).toEqual(true)
-    expect(isMatch!('f-10')).toEqual(true)
-    expect(isMatch!('f-10rem')).toEqual(true)
+    expect(isMatch!('text-10')).toEqual(true)
+    expect(isMatch!('text-10rem')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
@@ -22,26 +22,26 @@ describe('styli-plugin-text-size', () => {
     }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2: Atom = { propKey: 'f-20', propValue: true, key: 'f-20', type: 'style', style: {} }
+    const atom2: Atom = { propKey: 'textXL', propValue: true, key: 'textXL', type: 'style', style: {} }
     const newAtom2: Atom = {
-      propKey: 'f-20',
+      propKey: 'textXL',
       propValue: true,
       style: { fontSize: '20px' },
-      key: 'f-20',
+      key: 'textXL',
       type: 'style',
     }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
-      propKey: 'f-10rem',
+      propKey: 'text-10rem',
       propValue: true,
-      key: 'f-10rem',
+      key: 'text-10rem',
       type: 'style',
       style: {},
     }
     const newAtom3: Atom = {
-      key: 'f-10rem',
-      propKey: 'f-10rem',
+      key: 'text-10rem',
+      propKey: 'text-10rem',
       propValue: true,
       style: { fontSize: '10rem' },
       type: 'style',

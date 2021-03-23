@@ -7,7 +7,7 @@ export default () => {
       <Box>CSS Prop</Box>
 
       <Text
-        f-40
+        text4XL
         red500
         css={{
           textShadow: '1px 0 5px #FC0',
@@ -18,7 +18,7 @@ export default () => {
       </Text>
 
       <Box
-        f-40
+        text4XL
         css={{
           backgroundColor: '#edf2f7',
           ':hover': {

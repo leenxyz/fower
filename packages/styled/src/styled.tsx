@@ -19,7 +19,7 @@ const { Consumer } = themeContext
  * ```
  * styled(View)
  *
- * styled(View, 'f-20 fontBold', 'textCenter', { color: 'red' })
+ * styled(View, 'textXL fontBold', 'textCenter', { color: 'red' })
  *
  * styled(View, {
  *   color: 'red'

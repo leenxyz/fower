@@ -3,8 +3,8 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <Box f-16 gray60>
-      <Box f-30 fontBold>
+    <Box textBase gray60>
+      <Box text3XL fontBold>
         Shadow
       </Box>
 

@@ -19,7 +19,7 @@ title: styled
 function StyledElement() {
   const Text = styled('span')
   return (
-    <Text f-30 fontBold green400>
+    <Text text3XL fontBold green400>
       Hello world
     </Text>
   )
@@ -40,7 +40,7 @@ function StyledAnyComponent() {
   const StyledButton = styled(Button)
 
   return (
-    <StyledButton f-18 white bgGreen400 p-10 rounded-4 border-0>
+    <StyledButton textLG white bgGreen400 p-10 rounded-4 border-0>
       styled button
     </StyledButton>
   )
@@ -54,7 +54,7 @@ function StyledAnyComponent() {
 使用 modifier：
 
 ```js
-const StyledItem = styled(Item, 'p-10 bgRed white f-30')
+const StyledItem = styled(Item, 'p-10 bgRed white text3XL')
 ```
 
 如果 modifier 不能满足，你可以使用 CSS Object style：
@@ -69,7 +69,7 @@ const StyledItem = styled(Item, {
 或者两种并存：
 
 ```js
-const StyledItem = styled(Item, 'p-10 bgRed white f-30', {
+const StyledItem = styled(Item, 'p-10 bgRed white text3XL', {
   display: 'inline-block',
   lineHeight: '30px',
 })
@@ -78,7 +78,7 @@ const StyledItem = styled(Item, 'p-10 bgRed white f-30', {
 或者接受多个参数:
 
 ```js
-const StyledItem = styled(Item, 'p-10', 'bgRed', 'white', 'f-30', {
+const StyledItem = styled(Item, 'p-10', 'bgRed', 'white', 'text3XL', {
   display: 'inline-block',
   lineHeight: '30px',
 })

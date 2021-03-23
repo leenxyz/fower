@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Box } from '@styli/react';
+import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <View>
+    <Box>
       <Box>basic box</Box>
       <Box as="span" p2 orange400>
         Span1
@@ -15,6 +15,6 @@ export default () => {
       <Box as="a" red400 href="https://google.com" target="_blank">
         Google
       </Box>
-    </View>
+    </Box>
   );
 };

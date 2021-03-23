@@ -3,7 +3,7 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <Box f-20>
+    <Box textXL>
       <Box textLeft>Lorem ipsum dolor sit amet</Box>
       <Box textCenter>Lorem ipsum dolor sit amet</Box>
       <Box textRight>Lorem ipsum dolor sit amet</Box>

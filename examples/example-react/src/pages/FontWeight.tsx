@@ -4,7 +4,7 @@ import { Box } from '@styli/react';
 export default () => {
   return (
     <Box>
-      <Box f-28>
+      <Box text3XL>
         <Box fontHairline>Lorem ipsum dolor sit amet</Box>
         <Box fontThin>Lorem ipsum dolor sit amet</Box>
         <Box fontLight>Lorem ipsum dolor sit amet</Box>
@@ -15,7 +15,7 @@ export default () => {
         <Box fontExtrabold>Lorem ipsum dolor sit amet</Box>
       </Box>
 
-      <Box f-24>
+      <Box text2XL>
         <Box fontWeight-100>Lorem ipsum dolor sit amet</Box>
         <Box fontWeight-400>Lorem ipsum dolor sit amet</Box>
         <Box fontWeight={600}>Lorem ipsum dolor sit amet</Box>
