@@ -24,6 +24,6 @@ yarn build
 Run a example to test ui.
 
 ```bash
-cd packages/example-react #or cd packages/example-vue
+cd examples/example-react
 yarn start
 ```
