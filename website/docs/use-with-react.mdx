@@ -11,7 +11,7 @@ Styli is great fit for React-like framework or library, Let's get started with [
 npm i @styli/react
 ```
 
-## Usage
+## Usage with Box component
 
 Now we're going to build a user profile card ui with `Box` component:
 
@@ -51,14 +51,7 @@ Atomic Props can also be used directly in html elements. In other words, you can
 </div>
 ```
 
-To use Atomic Props in html elements, there are two ways to use them:
-
-- Babel Preset
-- JSX Pragma
-
-### Babel Preset
-
-The first way is to add a babel preset `@styli/babel-preset-styli` to the project by configuring babel.
+To use Atomic Props in html elements, you should add a babel preset `@styli/babel-preset-styli` to the project by configuring babel.
 
 ```json title=".babelrc"
 {
@@ -92,30 +85,6 @@ declare module 'react' {
 ```
 
 ![hint](/img/Intellisense.png)
-
-### JSX Pragma
-
-If you cannot control the babel configuration of the project, you can use the **JSX Pragma** instead:
-
-```jsx
-/** @jsx jsx */
-import { jsx } from '@styli/react'
-
-export default () => {
-  return (
-    <div p6 f5 bgOrange20>
-      Use styli with JSX Pragma
-    </div>
-  )
-}
-```
-
-Why the components above can use Atomic Props in HTML directly? It is because the following statement of `JSX Pragma` is added at the beginning of the component.
-
-```jsx
-/** @jsx jsx */
-import { jsx } from '@styli/react'
-```
 
 ## Example source code
 

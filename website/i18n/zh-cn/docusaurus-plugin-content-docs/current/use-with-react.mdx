@@ -12,11 +12,7 @@ title: 在 react 中使用
 npm i @styli/react -S
 ```
 
-## 用法
-
-我们提供了两种使用方式: 1、使用组件库组件。2、使用 HTML 标签
-
-### 使用组件库组件
+## 使用组件库组件
 
 使用组件库组件可以做到真正的**开箱即用**，无需任何配置
 
@@ -38,9 +34,7 @@ import { Box } from '@styli/react'
 </Box>
 ```
 
-注意: 当组件库组件不满足您的需求时，您可以使用 [styled](styled) API 创建您的自定义可复用组件。
-
-### 使用 HTML 元素
+## 使用 HTML 元素
 
 Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。也就是到说，你直接可以在 html 标签中添加原子属性，代码类似下面：
 
@@ -50,14 +44,7 @@ Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。�
 </div>
 ```
 
-要在 html 标签中使用原子属性，可以有两种使用方式：
-
-- Babel Preset
-- JSX Pragma
-
-#### Babel Preset
-
-第一种方式是通过配置 babel，为项目添加 babel preset: `@styli/babel-preset-styli`。
+要在 html 标签中使用原子属性，可以通过配置 babel，为项目添加 babel preset: `@styli/babel-preset-styli`。
 
 ```json title=".babelrc"
 {
@@ -88,30 +75,6 @@ declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}
 }
 
-```
-
-#### JSX Pragma
-
-此外，你还可以通过 `JSX Pragma` 的方式：
-
-```jsx
-/** @jsx jsx */
-import { jsx } from '@styli/react'
-
-export default () => {
-  return (
-    <div p6 f5 bgOrange20>
-      Use styli with JSX Pragma
-    </div>
-  )
-}
-```
-
-为什么上面的组件可以在 HTML 中直接使用原子属性呢？是因为组件的开头增加下面 `JSX Pragma` 的声明。
-
-```jsx
-/** @jsx jsx */
-import { jsx } from '@styli/react'
 ```
 
 ## 实例源码
