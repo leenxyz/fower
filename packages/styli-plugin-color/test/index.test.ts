@@ -66,47 +66,5 @@ describe('styli-plugin-color', () => {
       }
       expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
     })
-
-    // <View colorRed></View>
-    it('colorRed', () => {
-      const atom = {
-        propKey: 'colorRed',
-        propValue: true,
-        style: {},
-        type: 'style' as any,
-        key: 'colorRed',
-        value: true,
-      }
-      const newAtom = {
-        propKey: 'colorRed',
-        propValue: true,
-        type: 'style',
-        key: 'colorRed',
-        value: true,
-        style: { color: 'blue' },
-      }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
-    })
-
-    // <View colorBrand-T10></View>
-    it('colorBrand', () => {
-      const atom = {
-        propKey: 'colorBrand-T10',
-        propValue: true,
-        style: {},
-        type: 'style' as any,
-        key: 'colorBrand-T10',
-        value: true,
-      }
-      const newAtom = {
-        propKey: 'colorBrand-T10',
-        propValue: true,
-        type: 'style',
-        key: 'colorBrand-T10',
-        value: true,
-        style: { color: 'rgba(0,0,0,0.9)' },
-      }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
-    })
   })
 })
