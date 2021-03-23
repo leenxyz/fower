@@ -6,104 +6,145 @@ export default _default
 declare module '@styli/types' {
   export interface AtomicProps {
     /**
-     * Set fontSize
+     * Set textSize to any size
      *
      * @example
      * ```tsx
-     * <View f-10></View>
-     * <View f={10}></View>
-     * <View f-10rem></View>
-     * <View f="10rem"></View>
+     * <Box text-14></Box>
+     * <Box text={14}></Box>
+     * <Box text="1.5rem"></Box>
      * ```
      */
-    f?: PropValue
+    text?: PropValue
 
     /**
-     * Set fontSize
+     * Set textSize to xs, default is 12px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f1 is `font-size: 10px`
+     * @example
+     * ```tsx
+     * <Box textXS></Box>
+     * ```
      */
-    f1?: boolean
+    textXS?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to sm, default is 14px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f2 is `font-size: 20px`
+     * @example
+     * ```tsx
+     * <Box textSM></Box>
+     * ```
      */
-    f2?: boolean
+    textSM?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to base, default is 16px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f3 is `font-size: 30px`
+     * @example
+     * ```tsx
+     * <Box textBase></Box>
+     * ```
      */
-    f3?: boolean
+    textBase?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to lg, default is 18px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f4 is `font-size: 40px`
+     * @example
+     * ```tsx
+     * <Box textLG></Box>
+     * ```
      */
-    f4?: boolean
+    textLG?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to xl, default is 20px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f5 is `font-size: 50px`
+     * @example
+     * ```tsx
+     * <Box textXL></Box>
+     * ```
      */
-    f5?: boolean
+    textXL?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to 2xl, default is 24px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f6 is `font-size: 60px`
+     * @example
+     * ```tsx
+     * <Box text2XL></Box>
+     * ```
      */
-    f6?: boolean
+    text2XL?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to 3xl, default is 30px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f7 is `font-size: 70px`
+     * @example
+     * ```tsx
+     * <Box text3XL></Box>
+     * ```
      */
-    f7?: boolean
+    text3XL?: boolean
 
     /**
-     * Set fontSize
+     * Set textSize to 4xl, default is 36px
      *
-     * NOTE: Theme restrict.
-     *
-     * if fontSizes is [10, 20, 30, 40, 50, 60, 70, 80]
-     *
-     * f8 is `font-size: 80px`
+     * @example
+     * ```tsx
+     * <Box text4XL></Box>
+     * ```
      */
-    f8?: boolean
+    text4XL?: boolean
+
+    /**
+     * Set textSize to 5xl, default is 48px
+     *
+     * @example
+     * ```tsx
+     * <Box text5XL</Box>
+     * ```
+     */
+    text5XL?: boolean
+
+    /**
+     * Set textSize to 6xl, default is 60px
+     *
+     * @example
+     * ```tsx
+     * <Box text6XL></Box>
+     * ```
+     */
+    text6XL?: boolean
+
+    /**
+     * Set textSize to 7xl, default is 72px
+     *
+     * @example
+     * ```tsx
+     * <Box text7XL></Box>
+     * ```
+     */
+    text7XL?: boolean
+
+    /**
+     * Set textSize 8xl lg, default is 96px
+     *
+     * @example
+     * ```tsx
+     * <Box text8XL></Box>
+     * ```
+     */
+    text8XL?: boolean
+
+    /**
+     * Set textSize to 9xl, default is 128px
+     *
+     * @example
+     * ```tsx
+     * <Box text9XL></Box>
+     * ```
+     */
+    text9XL?: boolean
   }
 }

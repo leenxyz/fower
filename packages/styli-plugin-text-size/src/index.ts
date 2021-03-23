@@ -2,16 +2,24 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
-export function isTextSizeKey(key: string) {
-  return /^f(-.+)?$/.test(key)
+function isPreset(key: string) {
+  return /^text(xs|sm|base|lg|[2-9]?xl)$/i.test(key)
+}
+export function isMatch(key: string) {
+  return /^text(-.+)?$/.test(key) || isPreset(key)
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) {
-    return {
-      fontSize: styli.getValue(propValue),
-    }
+    return { fontSize: styli.getValue(propValue) }
   }
+
+  if (isPreset(prop)) {
+    const fontSize = styli.getTheme('fontSize')
+    const key = prop.replace(/^text/, '').toLowerCase()
+    return { fontSize: fontSize[key] }
+  }
+
   const [, value] = prop.split('-')
 
   return { fontSize: styli.getValue(value) }
@@ -20,24 +28,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-text-size',
-    isMatch: isTextSizeKey,
-    beforeAtomStyleCreate(atom) {
-      const { propKey } = atom
-      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-      if (!key || !value || key !== 'f') return atom
-
-      const fontSizes = styli.getTheme('fontSizes') || []
-
-      if (!fontSizes.length) {
-        console.error('theme fontSize is not provide')
-      }
-      return {
-        ...atom,
-        propKey: key,
-        propValue: fontSizes[Number(value)],
-        className: propKey,
-      }
-    },
+    isMatch,
     onAtomStyleCreate(atom) {
       atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
       return atom
