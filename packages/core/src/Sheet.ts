@@ -7,11 +7,10 @@ import {
   parseCSSProp,
   cssObjToStr,
   trimStr,
-  isBrowser,
 } from '@styli/utils'
-import { StyleSheet } from '@emotion/sheet'
 import { corePlugin } from './plugin'
 import { styli } from './styli'
+import { styleManager } from './styleManager'
 
 /**
  * Sheet, One Component map to one Sheet
@@ -244,15 +243,7 @@ export class Sheet {
   }
 
   insertRule() {
-    if (!isBrowser) return
-
-    const styleSheet = new StyleSheet({
-      key: 'data-styli',
-      container: document.head,
-    })
-
     const rule = this.toCss()
-    if (!rule) return
-    styleSheet.insert(rule)
+    styleManager.insertStyles(rule)
   }
 }
