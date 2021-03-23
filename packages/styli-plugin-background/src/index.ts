@@ -3,17 +3,17 @@ import { StyliPlugin } from '@styli/types'
 import { isBgKey, isBgImgKey, isBgPosKey, isBgRepeatKey, isBgSizeKey, isMatch } from './utils'
 
 function bgPropToStyle(propKey: string, propValue: any) {
-  if (isBgImgKey(propKey)) return { backgroundImage: `url("${propValue}")` }
+  if (isBgImgKey(propKey)) return { backgroundImage: propValue }
   if (isBgPosKey(propKey)) return { backgroundPosition: styli.getValue(propValue) }
   if (isBgSizeKey(propKey)) return { backgroundSize: styli.getValue(propValue) }
   if (isBgRepeatKey(propKey)) return { backgroundRepeat: propValue }
 
   if (isBgKey(propKey)) {
-    return { background: styli.getStyliColorValue(propValue) }
+    return { backgroundColor: styli.getStyliColorValue(propValue) }
   }
 
-  // handle bgColor, backgroundColor
-  if (/^(bgColor|backgroundColor)$/.test(propKey)) {
+  // handle  backgroundColor
+  if (/^backgroundColor$/i.test(propKey)) {
     return { backgroundColor: styli.getStyliColorValue(propValue) }
   }
 

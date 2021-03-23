@@ -15,76 +15,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View bg="url(https://styli.js.org/img/logo.png) center no-repeat"></View>
+     * <View bg="#112233"></View>
+     * <View bg="red"></View>
+     * <View bg="red500"></View>
      * ```
      */
     bg?: BgColor | BgColorFn
-
-    /**
-     * Set background
-     *
-     * same with bg
-     *
-     * @example
-     * ```tsx
-     * <View background="url(https://styli.js.org/img/logo.png) center no-repeat"></View>
-     * ```
-     */
-    background?: BgColor | BgColorFn
-
-    /**
-     * Set backgroundColor
-     *
-     * @example
-     * ```tsx
-     * <View bgColor="bgRed"></View>
-     * ```
-     */
-    bgColor?: BgColor | BgColorFn
-
-    /**
-     * Set backgroundColor
-     *
-     * same with bgColor
-     *
-     * @example
-     * ```tsx
-     * <View backgroundColor="bgRed"></View>
-     * ```
-     */
-    backgroundColor?: BgColor | BgColorFn
-
-    /**
-     * Set backgroundImage
-     *
-     * @example
-     * ```tsx
-     * <View bgImg="https://styli.js.org/img/logo.png"></View>
-     * ```
-     */
-    bgImg?: string | boolean
-
-    /**
-     * Set backgroundImage
-     *
-     * same with bgImg
-     *
-     * @example
-     * ```tsx
-     * <View backgroundImage="https://styli.js.org/img/logo.png"></View>
-     * ```
-     */
-    backgroundImage?: string | boolean
-
-    /**
-     * Set backgroundPosition
-     *
-     * @example
-     * ```tsx
-     * <View bgPos="top left"></View>
-     * ```
-     */
-    bgPos?: string | boolean
 
     /**
      * Set backgroundPosition
@@ -96,17 +32,22 @@ declare module '@styli/types' {
      * <View backgroundPosition="top left"></View>
      * ```
      */
-    backgroundPosition?: string | boolean
+    backgroundImage?: CSS.Property.BackgroundImage | CSS.Property.BackgroundImage[] | boolean
 
     /**
-     * Set backgroundSize
+     * Set backgroundPosition
+     *
+     * same with bgPos
      *
      * @example
      * ```tsx
-     * <View bgSize="100% 100%"></View>
+     * <View backgroundPosition="top left"></View>
      * ```
      */
-    bgSize?: string | boolean
+    backgroundPosition?:
+      | CSS.Property.BackgroundPosition
+      | CSS.Property.BackgroundPosition[]
+      | boolean
 
     /**
      * Set backgroundSize
@@ -119,16 +60,6 @@ declare module '@styli/types' {
      * ```
      */
     backgroundSize?: string | boolean
-
-    /**
-     * Set backgroundRepeat
-     *
-     * @example
-     * ```tsx
-     * <View bgRepeat="no-repeat"></View>
-     * ```
-     */
-    bgRepeat?: CSS.Property.BackgroundRepeat | CSS.Property.BackgroundRepeat[] | boolean
 
     /**
      * Set backgroundRepeat
