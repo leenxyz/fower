@@ -12,7 +12,7 @@ declare namespace StyliTypes {
     position = 'position',
     text = 'text',
     size = 'size',
-    ZIndex = 'ZIndex',
+    zIndex = 'zIndex',
     opacity = 'opacity',
     shadow = 'shadow',
     flex = 'flex',
@@ -203,9 +203,23 @@ declare namespace StyliTypes {
   interface Theme {
     breakpoints: string[] | number[]
     spacing: string[] | number[]
-    fontSizes: string[] | number[]
     headings: string[] | number[]
     iconSizes: string[] | number[]
+    fontSize: {
+      xs: string | number
+      sm: string | number
+      base: string | number
+      lg: string | number
+      xl: string | number
+      '2xl': string | number
+      '3xl': string | number
+      '4xl': string | number
+      '5xl': string | number
+      '6xl': string | number
+      '7xl': string | number
+      '8xl': string | number
+      '9xl': string | number
+    }
     lineHeight: {
       none: number | string
       tight: number | string
