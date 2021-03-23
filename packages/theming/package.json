@@ -1,6 +1,6 @@
 {
   "name": "@styli/theming",
-  "version": "0.26.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,6 +21,6 @@
   "author": "forsigner",
   "module": "dist/theming.esm.js",
   "dependencies": {
-    "@styli/types": "^0.26.0"
+    "@styli/types": "^1.0.0-alpha.0"
   }
 }

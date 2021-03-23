@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-rounded",
-  "version": "0.26.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-rounded.esm.js",
   "dependencies": {
-    "@styli/core": "^0.26.0",
-    "@styli/types": "^0.26.0",
-    "@styli/utils": "^0.26.0"
+    "@styli/core": "^1.0.0-alpha.0",
+    "@styli/types": "^1.0.0-alpha.0",
+    "@styli/utils": "^1.0.0-alpha.0"
   }
 }

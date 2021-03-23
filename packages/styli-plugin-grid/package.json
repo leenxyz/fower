@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-grid",
-  "version": "0.26.0",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -19,11 +19,10 @@
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
   },
-
   "author": "forsigner",
   "module": "dist/styli-plugin-grid.esm.js",
   "dependencies": {
-    "@styli/types": "^0.26.0",
-    "@styli/utils": "^0.26.0"
+    "@styli/types": "^1.0.0-alpha.0",
+    "@styli/utils": "^1.0.0-alpha.0"
   }
 }

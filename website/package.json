@@ -1,7 +1,6 @@
 {
-  "name": "website",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@styli/website",
+  "version": "1.0.0-alpha.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -26,20 +25,19 @@
       "last 1 safari version"
     ]
   },
-
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.71",
-    "@docusaurus/preset-classic": "2.0.0-alpha.71",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.71",
+    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.71",
     "@docusaurus/plugin-google-gtag": "2.0.0-alpha.71",
     "@docusaurus/plugin-sitemap": "2.0.0-alpha.71",
-    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.71",
-    "@docusaurus/module-type-aliases": "2.0.0-alpha.71",
+    "@docusaurus/preset-classic": "2.0.0-alpha.71",
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.71",
     "@mdx-js/react": "^1.6.21",
-    "@styli/react": "^0.26.0",
-    "@styli/theming": "^0.26.0",
-    "@types/react-helmet": "^6.1.0",
+    "@styli/react": "^1.0.0-alpha.0",
+    "@styli/theming": "^1.0.0-alpha.0",
     "@tsconfig/docusaurus": "^1.0.2",
+    "@types/react-helmet": "^6.1.0",
     "antd": "^4.8.2",
     "babel-plugin-jsx-pragmatic": "^1.0.2",
     "clsx": "^1.1.1",
@@ -49,6 +47,6 @@
     "simplebar-react": "^2.3.0"
   },
   "devDependencies": {
-    "@styli/babel-preset-styli": "^0.26.0"
+    "@styli/babel-preset-styli": "^1.0.0-alpha.0"
   }
 }

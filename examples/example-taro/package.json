@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-taro",
-  "version": "0.25.0",
+  "version": "1.0.0-alpha.0",
   "description": "@styli/taro demo",
   "templateInfo": {
     "name": "default",
