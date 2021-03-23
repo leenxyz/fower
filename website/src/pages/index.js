@@ -1,4 +1,3 @@
-
 import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
@@ -6,43 +5,56 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
+import Translate from '@docusaurus/Translate'
 
 const features = [
   {
     title: 'Atomic Props',
     description: (
-      <>
+      <Translate id="home.feature1.desc" description="The homepage welcome message">
         Write styles with Atomic Props, rapid to develop complicated UI by composing Atomic Props.
-      </>
+      </Translate>
     ),
   },
   {
     title: 'Scoped style',
     description: (
-      <>Borned with scoped styles, So don't worry any conflicts due to the globalnamespace.</>
+      <Translate id="home.feature2.desc" description="The homepage welcome message">
+        Borned with scoped styles, So don't worry any conflicts due to the globalnamespace.
+      </Translate>
     ),
   },
   {
     title: 'Type Safe',
     description: (
-      <>
+      <Translate id="home.feature3.desc" description="The homepage welcome message">
         Perfect support for TypeScript, which bring Type definition,IntelliSense,Self documentation.
-      </>
+      </Translate>
     ),
   },
   {
     title: 'Less Code, Write faster',
     description: (
-      <>With Atomic Props and "Key as Value" pattern, You can develop UI with less code.</>
+      <Translate id="home.feature4.desc" description="The homepage welcome message">
+        With Atomic Props and "Key as Value" pattern, You can develop UI with less code.
+      </Translate>
     ),
   },
   {
     title: 'Less CSS, More JS',
-    description: <>Styli is a CSS-in-JS solution, Most of the time you are writing JavaScript。</>,
+    description: (
+      <Translate id="home.feature5.desc" description="The homepage welcome message">
+        Styli is a CSS-in-JS solution, Most of the time you are writing JavaScript.
+      </Translate>
+    ),
   },
   {
     title: 'Framework-agnostic',
-    description: <>Not tied to any framework, Can use with React,Vue,React native etc.</>,
+    description: (
+      <Translate id="home.feature6.desc" description="The homepage welcome message">
+        Not tied to any framework, Can use with React,Vue,React native etc.
+      </Translate>
+    ),
   },
 ]
 
@@ -71,13 +83,20 @@ function Home() {
           An <span className={styles.red}>Atomic CSS</span>{' '}
           <span className={styles.green}>in JS</span> library for rapid UI development
         </div>
-        <div className={styles.side}>CSS is painful，let's use JS.</div>
+        <div className={styles.side}>
+          <Translate id="home.subtitle" description="The homepage welcome message">
+            Get Started
+          </Translate>
+        </div>
+
         <div className={styles.wrapLink}>
           <Link
             className={clsx('button button--primary button--lg', styles.getStarted)}
             to={useBaseUrl('docs/installation')}
           >
-            Get Started
+            <Translate id="home.getStated" description="The homepage welcome message">
+              Get Started
+            </Translate>
           </Link>
           <iframe
             className={styles.indexCtasGitHubButton}

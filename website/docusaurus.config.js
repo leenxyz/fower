@@ -36,7 +36,7 @@ module.exports = {
     disableSwitch: true,
 
     liveCodeBlock: {
-      playgroundPosition: 'top'
+      playgroundPosition: 'top',
     },
 
     gtag: {
@@ -78,6 +78,12 @@ module.exports = {
           position: 'left',
         },
         {
+          to: 'docs/use-with-taro',
+          activeBasePath: 'docs/use-with-taro',
+          label: 'Taro',
+          position: 'left',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -94,7 +100,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-
           path: 'docs',
           include: ['**/*.md', '**/*.mdx'], // Extensions to include.
 
@@ -114,6 +119,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-  ],
-};
+  plugins: [],
+}

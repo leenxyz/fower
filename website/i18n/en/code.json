@@ -154,5 +154,15 @@
   "theme.common.skipToMainContent": {
     "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+
+  "home.getStated": {
+    "message": "Get Started",
+    "description": "快速开始"
+  },
+
+  "home.subtitle": {
+    "message": "CSS is painful，let's use JS.",
+    "description": "subtitle"
   }
 }

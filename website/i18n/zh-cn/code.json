@@ -154,5 +154,39 @@
   "theme.common.skipToMainContent": {
     "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+
+  "home.getStated": {
+    "message": "快速开始",
+    "description": "快速开始"
+  },
+
+  "home.subtitle": {
+    "message": "写CSS是痛苦的，让我们使用JS吧",
+    "description": "subtitle"
+  },
+  "home.feature1.desc": {
+    "message": "使用 Atomic Props 编写样式，通过组合 Atomic Props 快速开发复杂的UI。",
+    "description": "feature"
+  },
+  "home.feature2.desc": {
+    "message": "天然的局部样式，因此不必担心由于全局样式而引起的任何冲突。",
+    "description": "feature"
+  },
+  "home.feature3.desc": {
+    "message": "对TypeScript完美支持，带来良好的类型定义、智能提示、自带文档。",
+    "description": "feature"
+  },
+  "home.feature4.desc": {
+    "message": "使用 Atomic Props 和 'Key as Value' 模式，你可以使用更少的代码来开发UI。",
+    "description": "feature"
+  },
+  "home.feature5.desc": {
+    "message": "Styli是一种 CSS-in-JS 解决方案，大多数时候您是在编写JavaScript。",
+    "description": "feature"
+  },
+  "home.feature6.desc": {
+    "message": "不依赖任何框架，可与React，Vue，React native，小程序等框架一起使用。",
+    "description": "feature"
   }
 }
