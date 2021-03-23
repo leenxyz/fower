@@ -25,11 +25,11 @@ How to use the spacing? Use it by Atomic props like `p{spacing}`, `m{spacing}`, 
 For an example:
 
 ```jsx live
-<View toCenterX>
-  <View s-100 bgRed400 mr2></View>
-  <View s-100 bgYellow40 mr2></View>
-  <View s-100 bgGreen400></View>
-</View>
+<Box toCenterX>
+  <Box s-100 bgRed400 mr2></Box>
+  <Box s-100 bgYellow40 mr2></Box>
+  <Box s-100 bgGreen400></Box>
+</Box>
 ```
 
 The `mr2` in the above example, it is the preset spacing in the design system, which is equivalent `to margin-right: 8px`.
@@ -41,11 +41,11 @@ Spacing can be used in five attributes: `padding`, `margin`, `width`, `height`, 
 In some cases, the spacing of the design system cannot meet your UI needs. This is a more flexible way you can use: **precise values**. Any value can be set through the middle bar `-`, such as the following `s-100`, `mr-20`, will produce styles `width: 100px; height: 100px`, `margin-right: 20px`:
 
 ```jsx live
-<View toCenterX>
-  <View s-100 bgRed400 mr-20></View>
-  <View s-100 bgYellow40 mr-20></View>
-  <View s-100 bgGreen400></View>
-</View>
+<Box toCenterX>
+  <Box s-100 bgRed400 mr-20></Box>
+  <Box s-100 bgYellow40 mr-20></Box>
+  <Box s-100 bgGreen400></Box>
+</Box>
 ```
 
 In most cases, it is recommended to use regular spacing in the project, which will make your UI more design and rhythmic.

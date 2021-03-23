@@ -26,11 +26,11 @@ const myPreset = {
 下面我们看一个示例:
 
 ```jsx live
-<View toCenterX>
-  <View s-100 bgRed400 mr2></View>
-  <View s-100 bgYellow40 mr2></View>
-  <View s-100 bgGreen400></View>
-</View>
+<Box toCenterX>
+  <Box s-100 bgRed400 mr2></Box>
+  <Box s-100 bgYellow40 mr2></Box>
+  <Box s-100 bgGreen400></Box>
+</Box>
 ```
 
 注意上面例子中的 `mr2`，它就是了设计系统中预设的间距，它相当于 `margin-right: 8px`。
@@ -42,11 +42,11 @@ const myPreset = {
 某些情况，设计系统的间距并不能满足你 UI 需求，这是你可使用一种更灵活的方式：精确值，通过中杠 `-` 可以设置任何数值，比如下面的 `s-100`、`mr-20`，会生产样式 `width: 100px; height: 100px`、`margin-right: 20px`：
 
 ```jsx live
-<View toCenterX>
-  <View s-100 bgRed400 mr-20></View>
-  <View s-100 bgYellow40 mr-20></View>
-  <View s-100 bgGreen400></View>
-</View>
+<Box toCenterX>
+  <Box s-100 bgRed400 mr-20></Box>
+  <Box s-100 bgYellow40 mr-20></Box>
+  <Box s-100 bgGreen400></Box>
+</Box>
 ```
 
 大部分情况，建议在项目中使用有规律的间距，这会让你的 UI 更有设计感，更有韵律.

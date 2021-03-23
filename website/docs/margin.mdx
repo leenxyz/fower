@@ -22,20 +22,20 @@ Control the margin of an element using the `m{t|r|b|l|x|y}-{value}` Atomic Props
 Control the margin on all sides of an element using the `m-{value}` Atomic Props.
 
 ```jsx live
-<View bgGray100 toLeft>
-  <View bgGreen200 s-100 m-0>
+<Box bgGray100 toLeft>
+  <Box bgGreen200 s-100 m-0>
     m-0
-  </View>
-  <View bgGreen200 s-100 m={20}>
+  </Box>
+  <Box bgGreen200 s-100 m={20}>
     m={'{20}'}
-  </View>
-  <View bgGreen200 s-100 m="40px">
+  </Box>
+  <Box bgGreen200 s-100 m="40px">
     m="40px"
-  </View>
-  <View bgGreen200 s-120 m="10px 20px">
+  </Box>
+  <Box bgGreen200 s-120 m="10px 20px">
     m="10px 20px"
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ### Margin of one side
@@ -43,20 +43,20 @@ Control the margin on all sides of an element using the `m-{value}` Atomic Props
 Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atomic Props.
 
 ```jsx live
-<View bgGray100 toLeft>
-  <View ml-10 bgGreen200 s-100>
+<Box bgGray100 toLeft>
+  <Box ml-10 bgGreen200 s-100>
     ml-10
-  </View>
-  <View mt-10 bgTeal200 s-100>
+  </Box>
+  <Box mt-10 bgTeal200 s-100>
     mt-10
-  </View>
-  <View mr-10 bgRed200 s-100>
+  </Box>
+  <Box mr-10 bgRed200 s-100>
     mr-10
-  </View>
-  <View mb-10 bgYellow200 s-100>
+  </Box>
+  <Box mb-10 bgYellow200 s-100>
     mb-10
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ### Horizontal margin
@@ -64,11 +64,11 @@ Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atom
 Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
 
 ```jsx live
-<View bgGray100 toLeft>
-  <View mx-10 s-100 bgRed200>
+<Box bgGray100 toLeft>
+  <Box mx-10 s-100 bgRed200>
     mx-10
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ### Vertical marign
@@ -76,11 +76,11 @@ Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
 Control the vertical margin of an element using the `my-{value}` Atomic Props.
 
 ```jsx live
-<View bgGray100 toLeft>
-  <View my-10 s-100 bgRed200>
+<Box bgGray100 toLeft>
+  <Box my-10 s-100 bgRed200>
     my-10
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ### Negative margins
@@ -90,12 +90,12 @@ Control the negative margin of an element using the `m{t|r|b|l|x|y}--{value}` At
 Of course, you can also use `ml={-10}` to set negative margin of an element.
 
 ```jsx live
-<View m-20 bgGray200 s-200>
-  <View ml--20 s-100 bgRed500-T60>
+<Box m-20 bgGray200 s-200>
+  <Box ml--20 s-100 bgRed500-T60>
     ml--20
-  </View>
-  <View mt="-1rem" s-100 bgOrange400-T60>
+  </Box>
+  <Box mt="-1rem" s-100 bgOrange400-T60>
     mt="-1rem"
-  </View>
-</View>
+  </Box>
+</Box>
 ```

@@ -21,21 +21,21 @@ npm i @styli/react -S
 使用组件库组件可以做到真正的**开箱即用**，无需任何配置
 
 ```tsx
-import { View, Image, Text } from '@styli/react'
+import { Box } from '@styli/react'
 ```
 
 使用组件，实现一个用户信息卡片界面。
 
 ```jsx live
-<View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+<Box toCenterY p-10 w-260 bgWhite rounded-10 shadow>
   <Image circle-48 src="/img/jobs.jpg" />
-  <View ml-10>
-    <View f-20 fontBold>
+  <Box ml-10>
+    <Box f-20 fontBold>
       Steve Jobs
-    </View>
-    <Text gray800>Co-founder of Apple Inc.</Text>
-  </View>
-</View>
+    </Box>
+    <Box gray800>Co-founder of Apple Inc.</Box>
+  </Box>
+</Box>
 ```
 
 注意: 当组件库组件不满足您的需求时，您可以使用 [styled](styled) API 创建您的自定义可复用组件。

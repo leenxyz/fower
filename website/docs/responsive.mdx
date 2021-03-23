@@ -20,8 +20,8 @@ Each Atomic Props of Styli supports responsiveness, not just a container that su
 Styli provides a very quick way of writing responsive styles. This way of writing is called Array Props. This way of writing may seem strange at first, but in fact it is very concise and efficient:
 
 ```jsx
-<View>
-  <View
+<Box>
+  <Box
     w={[
       1, // 100% below the smallest breakpoint
       1 / 2, // 50% from the next breakpoint and up
@@ -31,14 +31,14 @@ Styli provides a very quick way of writing responsive styles. This way of writin
   />
 
   {/* responsive font size */}
-  <View f={[1, 2, 3, 4]} />
+  <Box f={[1, 2, 3, 4]} />
 
   {/* responsive margin */}
-  <View m={[1, 2, 3, 4]} />
+  <Box m={[1, 2, 3, 4]} />
 
   {/* responsive padding */}
-  <View p={[1, 2, 3, 4]} />
-</View>
+  <Box p={[1, 2, 3, 4]} />
+</Box>
 ```
 
 The `fontSize`, `margin`, `padding` and `width` above are all responsive. In fact, any Atomic Props can be written in this way to achieve responsiveness.

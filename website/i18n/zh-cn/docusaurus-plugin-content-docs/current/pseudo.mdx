@@ -25,14 +25,14 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 ## Disabled
 
 ```jsx live
-<View toCenter>
+<Box toCenter>
   <Button bgRed300 red800 p4 rounded-10 border="none" mr-20>
     Normal
   </Button>
   <Button disabled bgRed300 opacity-70--disabled red800 p4 rounded-10 border="none">
     Disabled
   </Button>
-</View>
+</Box>
 ```
 
 ## Focus
@@ -44,11 +44,11 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 ## Child
 
 ```jsx live
-<View>
-  <View red400--first-child>One</View>
-  <View>Two</View>
-  <View green400--last-child>Three</View>
-</View>
+<Box>
+  <Box red400--first-child>One</Box>
+  <Box>Two</Box>
+  <Box green400--last-child>Three</Box>
+</Box>
 ```
 
 ## 支持的伪类

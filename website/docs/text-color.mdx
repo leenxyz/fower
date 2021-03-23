@@ -11,11 +11,11 @@ title: Text Color
 ## Use color in preset
 
 ```jsx live
-<View f-20 toEvenly>
+<Box f-20 toEvenly>
   <Text gray600>gray600</Text>
   <Text colorPrimary>colorPrimary</Text>
   <Text green400>green400</Text>
-</View>
+</Box>
 ```
 
 call preset color：[Color palette](/docs/design-system-color#color-palette)
@@ -23,11 +23,11 @@ call preset color：[Color palette](/docs/design-system-color#color-palette)
 ## Use `color` props
 
 ```jsx live
-<View f-20 toEvenly>
+<Box f-20 toEvenly>
   <Text color="orange400">orange400</Text>
   <Text color="deeppink">deeppink</Text>
   <Text color="#4fd1c5">#4fd1c5</Text>
-</View>
+</Box>
 ```
 
 ## Color opacity
@@ -35,70 +35,70 @@ call preset color：[Color palette](/docs/design-system-color#color-palette)
 transparentize color:
 
 ```jsx live
-<View row toEvenly>
-  <View orange500>orange500</View>
-  <View orange500-T40>orange500-T40</View>
-  <View color="red500">red500</View>
-  <View color="red500-T40">red500-T40</View>
-  <View color="#4fd1c5">#4fd1c5</View>
-  <View color="#4fd1c5-T40">#4fd1c5-T40</View>
-</View>
+<Box row toEvenly>
+  <Box orange500>orange500</Box>
+  <Box orange500-T40>orange500-T40</Box>
+  <Box color="red500">red500</Box>
+  <Box color="red500-T40">red500-T40</Box>
+  <Box color="#4fd1c5">#4fd1c5</Box>
+  <Box color="#4fd1c5-T40">#4fd1c5-T40</Box>
+</Box>
 ```
 
 ## opacify color
 
 ```jsx live
-<View row toEvenly>
-  <View color="rgba(0,0,0,0.2)">rgba(0,0,0,0.2)</View>
-  <View color="rgba(0,0,0,0.2)-O40">rgba(0,0,0,0.2)-O40</View>
-  <View color="rgba(0,0,0,0.2)-O60">rgba(0,0,0,0.2)-O60</View>
-  <View color="rgba(0,0,0,0.2)-O80">rgba(0,0,0,0.2)-O80</View>
-</View>
+<Box row toEvenly>
+  <Box color="rgba(0,0,0,0.2)">rgba(0,0,0,0.2)</Box>
+  <Box color="rgba(0,0,0,0.2)-O40">rgba(0,0,0,0.2)-O40</Box>
+  <Box color="rgba(0,0,0,0.2)-O60">rgba(0,0,0,0.2)-O60</Box>
+  <Box color="rgba(0,0,0,0.2)-O80">rgba(0,0,0,0.2)-O80</Box>
+</Box>
 ```
 
 ## lighten color
 
 ```jsx live
-<View row toEvenly>
-  <View orange500>orange500</View>
-  <View orange500-L40>orange500-L40</View>
-  <View color="red500">red500</View>
-  <View color="red500-L40">red500-L40</View>
-  <View color="#4fd1c5">#4fd1c5</View>
-  <View color="#4fd1c5-L40">#4fd1c5-L40</View>
-</View>
+<Box row toEvenly>
+  <Box orange500>orange500</Box>
+  <Box orange500-L40>orange500-L40</Box>
+  <Box color="red500">red500</Box>
+  <Box color="red500-L40">red500-L40</Box>
+  <Box color="#4fd1c5">#4fd1c5</Box>
+  <Box color="#4fd1c5-L40">#4fd1c5-L40</Box>
+</Box>
 ```
 
 ## darken color
 
 ```jsx live
-<View row toEvenly>
-  <View orange500>orange500</View>
-  <View orange500-D30>orange500-D30</View>
-  <View color="red500">red500</View>
-  <View color="red500-D30">red500-D30</View>
-  <View color="#4fd1c5">#4fd1c5</View>
-  <View color="#4fd1c5-D30">#4fd1c5-D30</View>
-</View>
+<Box row toEvenly>
+  <Box orange500>orange500</Box>
+  <Box orange500-D30>orange500-D30</Box>
+  <Box color="red500">red500</Box>
+  <Box color="red500-D30">red500-D30</Box>
+  <Box color="#4fd1c5">#4fd1c5</Box>
+  <Box color="#4fd1c5-D30">#4fd1c5-D30</Box>
+</Box>
 ```
 
 ## Hover
 
 ```jsx live
-<View f-20 row toEvenly>
+<Box f-20 row toEvenly>
   <Text green400 red400--hover>
     Hello
   </Text>
   <Text color="#4fd1c5" color--hover="purple">
     Hello
   </Text>
-</View>
+</Box>
 ```
 
 hover with transparentize, lighten, darken:
 
 ```jsx live
-<View f-20 row toEvenly>
+<Box f-20 row toEvenly>
   <Text green400 green400-T60--hover>
     Hello
   </Text>
@@ -108,7 +108,7 @@ hover with transparentize, lighten, darken:
   <Text green400 green400-D30--hover>
     Hello
   </Text>
-</View>
+</Box>
 ```
 
 ## Focus

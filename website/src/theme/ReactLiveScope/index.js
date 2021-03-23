@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { createStyle } from '@styli/core'
 import { styled } from '@styli/styled'
-import { Text, View, Image, Box } from '@styli/react'
+import { Text, Box, View, Image } from '@styli/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled('button')
@@ -24,9 +24,9 @@ const ButtonExample = (props) => (
 const Wrapper = (props) => {
   const { children, ...rest } = props
   return (
-    <View p-20 bgGray10 toEvenly f-20 toCenterY {...rest}>
+    <Box p-20 bgGray10 toEvenly f-20 toCenterY {...rest}>
       {children}
-    </View>
+    </Box>
   )
 }
 
@@ -40,9 +40,9 @@ const ReactLiveScope = {
   createStyle,
   styled,
   Text,
+  Box,
   View,
   Image,
-  Box,
   Heading,
   Wrapper,
 }

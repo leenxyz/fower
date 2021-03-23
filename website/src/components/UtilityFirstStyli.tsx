@@ -1,18 +1,18 @@
 import React from 'react'
-import { View, Image, Text } from '@styli/react'
+import { Box } from '@styli/react'
 
 export const UtilityFirstStyli = () => {
   return (
-    <View toCenter bgGray200 h-200>
-      <View toCenterY p-20 w-300 bgWhite rounded-10>
-        <Image s-60 rounded-8 src="/img/jobs.jpg" />
-        <View ml-10>
-          <View f-22 fontBold>
+    <Box toCenter bgGray200 h-200>
+      <Box toCenterY p-20 w-300 bgWhite rounded-10>
+        <Box as="img" s-60 rounded-8 src="/img/jobs.jpg" />
+        <Box ml-10>
+          <Box f-22 fontBold>
             Steve Jobs
-          </View>
-          <Text gray800>Co-founder of Apple Inc.</Text>
-        </View>
-      </View>
-    </View>
+          </Box>
+          <Box gray800>Co-founder of Apple Inc.</Box>
+        </Box>
+      </Box>
+    </Box>
   )
 }

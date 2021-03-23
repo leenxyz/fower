@@ -15,7 +15,7 @@ Atomic props for controlling the stack order of an element.
 function Demo() {
   const Item = styled('div', 'white toCenter shadow bgAmber400 circle-80 absolute')
   return (
-    <View white relative h-160 bgAmber100 p6>
+    <Box white relative h-160 bgAmber100 p6>
       <Item zIndex-20>20</Item>
       <Item left-80 zIndex-10>
         10
@@ -23,7 +23,7 @@ function Demo() {
       <Item left-140 zIndex-0>
         0
       </Item>
-    </View>
+    </Box>
   )
 }
 ```

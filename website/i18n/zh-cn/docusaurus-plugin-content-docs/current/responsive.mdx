@@ -19,8 +19,8 @@ Styli 的每个原子属性都支持响应式，而不是只是某个容器支�
 Styli 提供一种非常快捷方面的写法编写响应式样式，这种写法叫做数组属性 (Array Props)，这样写法咋看貌似很奇怪，实际上它非常简洁高效:
 
 ```jsx
-<View>
-  <View
+<Box>
+  <Box
     w={[
       1, // 100% below the smallest breakpoint
       1 / 2, // 50% from the next breakpoint and up
@@ -30,14 +30,14 @@ Styli 提供一种非常快捷方面的写法编写响应式样式，这种写�
   />
 
   {/* responsive font size */}
-  <View f={[1, 2, 3, 4]} />
+  <Box f={[1, 2, 3, 4]} />
 
   {/* responsive margin */}
-  <View m={[1, 2, 3, 4]} />
+  <Box m={[1, 2, 3, 4]} />
 
   {/* responsive padding */}
-  <View p={[1, 2, 3, 4]} />
-</View>
+  <Box p={[1, 2, 3, 4]} />
+</Box>
 ```
 
 上面的 fontSize，margin，padding 和 width 都是响应式，实际上，任何原子属性都可以用这种写法实现响应式。

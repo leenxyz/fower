@@ -45,7 +45,7 @@ npm i @styli/core @styli/react-native
 
 ## 使用
 
-Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提供的 View、Text、Image 等组件，你可以快速实现复杂界面。
+Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提供的 `Box` 组件，你可以快速实现复杂界面。
 
 <GettingStarted />
 
@@ -61,19 +61,19 @@ Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提
 
 ```jsx
 import React from 'react'
-import { View, Text, Image } from '@styli/react'
+import { Box } from '@styli/react'
 
 export default () => {
   return (
-    <View toCenterY p-10 w-260 bgWhite rounded-10>
+    <Box toCenterY p-10 w-260 bgWhite rounded-10>
       <Image circle-48 src="/img/jobs.jpg" />
-      <View ml-10>
-        <View f-20 fontBold>
+      <Box ml-10>
+        <Box f-20 fontBold>
           Steve Jobs
-        </View>
+        </Box>
         <Text gray800>Co-founder of Apple Inc.</Text>
-      </View>
-    </View>
+      </Box>
+    </Box>
   )
 }
 ```
@@ -82,7 +82,7 @@ export default () => {
   <TabItem value="vue">
 
 ```js
-TODO: vue
+wip...
 ```
 
   </TabItem>

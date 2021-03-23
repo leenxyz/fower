@@ -19,11 +19,11 @@ Atomic props for controlling how an element is positioned.
 Use `static` props to set static position for an element.
 
 ```jsx live
-<View relative s-160 bgBlue100>
-  <View bgAmber400 s-100 static toCenter>
+<Box relative s-160 bgBlue100>
+  <Box bgAmber400 s-100 static toCenter>
     static
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Relative
@@ -31,12 +31,12 @@ Use `static` props to set static position for an element.
 Use `relative` props to set relative position for an element.
 
 ```jsx live
-<View relative s-160 bgBlue100>
+<Box relative s-160 bgBlue100>
   relative
-  <View bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+  <Box bgBlue400-T20 s-80 absolute bottom-0 toCenter>
     absolute
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Absolute
@@ -44,11 +44,11 @@ Use `relative` props to set relative position for an element.
 Use `absolute` props to set absolute position for an element.
 
 ```jsx live
-<View relative s-160 bgBlue100>
-  <View bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+<Box relative s-160 bgBlue100>
+  <Box bgBlue400-T20 s-80 absolute bottom-0 toCenter>
     absolute
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Fixed
@@ -56,9 +56,9 @@ Use `absolute` props to set absolute position for an element.
 Use `fixed` props to set fixed position for an element.
 
 ```jsx live
-<View toCenter bgWhite shadow rounded-8 s-80 fixed bottom-10>
+<Box toCenter bgWhite shadow rounded-8 s-80 fixed bottom-10>
   fixed
-</View>
+</Box>
 ```
 
 ## Sticky
@@ -66,17 +66,17 @@ Use `fixed` props to set fixed position for an element.
 Use `sticky` props to set sticky position for an element.
 
 ```jsx live
-<View relative s-200 overflow="auto" bgGray100 p4>
-  <View>View Lorem ipsum dolor sit amet, consectetur adipisicing elit.</View>
-  <View toCenter bgYellow200 shadow rounded-8 s-80 sticky top-0>
+<Box relative s-200 overflow="auto" bgGray100 p4>
+  <Box>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Box>
+  <Box toCenter bgYellow200 shadow rounded-8 s-80 sticky top-0>
     sticky
-  </View>
-  <View>
-    View Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
+  </Box>
+  <Box>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
     eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
     voluptatum quae eum fugit earum.
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Position
@@ -84,7 +84,7 @@ Use `sticky` props to set sticky position for an element.
 if the preset atomic props can not be satisfied，you can use `position` props.
 
 ```jsx live
-<View toCenter rounded-8 s-80 position={2 > 1 ? 'absolute' : 'relative'}>
+<Box toCenter rounded-8 s-80 position={2 > 1 ? 'absolute' : 'relative'}>
   position
-</View>
+</Box>
 ```

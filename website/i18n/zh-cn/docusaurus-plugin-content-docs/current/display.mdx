@@ -19,11 +19,11 @@ title: Display
 Use `block` props to create a block-level element.
 
 ```jsx live
-<View spaceY-10>
-  <View bgAmber400 rounded-8 h-60 block></View>
-  <View bgAmber400 rounded-8 h-60 block></View>
-  <View bgAmber400 rounded-8 h-60 block></View>
-</View>
+<Box spaceY-10>
+  <Box bgAmber400 rounded-8 h-60 block></Box>
+  <Box bgAmber400 rounded-8 h-60 block></Box>
+  <Box bgAmber400 rounded-8 h-60 block></Box>
+</Box>
 ```
 
 ## Inline
@@ -31,17 +31,17 @@ Use `block` props to create a block-level element.
 Use `inline` props to create an inline element.
 
 ```jsx live
-<View white spaceX2>
-  <View bgAmber400 rounded-8 p4 inline>
+<Box white spaceX2>
+  <Box bgAmber400 rounded-8 p4 inline>
     A
-  </View>
-  <View bgAmber400 rounded-8 p4 inline>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inline>
     B
-  </View>
-  <View bgAmber400 rounded-8 p4 inline>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inline>
     C
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Inline Block
@@ -49,17 +49,17 @@ Use `inline` props to create an inline element.
 Use `inlineBlock` props to create an inline block-level element.
 
 ```jsx live
-<View white spaceX2>
-  <View bgAmber400 rounded-8 p4 inlineBlock>
+<Box white spaceX2>
+  <Box bgAmber400 rounded-8 p4 inlineBlock>
     A
-  </View>
-  <View bgAmber400 rounded-8 p4 inlineBlock>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inlineBlock>
     B
-  </View>
-  <View bgAmber400 rounded-8 p4 inlineBlock>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inlineBlock>
     C
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Flex
@@ -67,31 +67,31 @@ Use `inlineBlock` props to create an inline block-level element.
 Use `flex` props to create a block-level flex container.
 
 ```jsx live
-<View spaceY2>
-  <View white spaceX2 flex bgAmber100 p4>
-    <View bgAmber400 rounded-8 p4>
+<Box spaceY2>
+  <Box white spaceX2 flex bgAmber100 p4>
+    <Box bgAmber400 rounded-8 p4>
       A
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       B
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       C
-    </View>
-  </View>
+    </Box>
+  </Box>
 
-  <View white spaceX2 flex bgAmber100 p4>
-    <View bgAmber400 rounded-8 p4>
+  <Box white spaceX2 flex bgAmber100 p4>
+    <Box bgAmber400 rounded-8 p4>
       A
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       B
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       C
-    </View>
-  </View>
-</View>
+    </Box>
+  </Box>
+</Box>
 ```
 
 ## Inline Flex
@@ -99,31 +99,31 @@ Use `flex` props to create a block-level flex container.
 Use `inlineFlex` props to create an inline flex container.
 
 ```jsx live
-<View spaceX2>
-  <View white spaceX2 inlineFlex bgAmber100 p4>
-    <View bgAmber400 rounded-8 p4>
+<Box spaceX2>
+  <Box white spaceX2 inlineFlex bgAmber100 p4>
+    <Box bgAmber400 rounded-8 p4>
       A
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       B
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       C
-    </View>
-  </View>
+    </Box>
+  </Box>
 
-  <View white spaceX2 inlineFlex bgAmber100 p4>
-    <View bgAmber400 rounded-8 p4>
+  <Box white spaceX2 inlineFlex bgAmber100 p4>
+    <Box bgAmber400 rounded-8 p4>
       A
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       B
-    </View>
-    <View bgAmber400 rounded-8 p4>
+    </Box>
+    <Box bgAmber400 rounded-8 p4>
       C
-    </View>
-  </View>
-</View>
+    </Box>
+  </Box>
+</Box>
 ```
 
 ## Grid
@@ -167,17 +167,17 @@ Use `grid` props to create a grid container.
 Use `hidden` props to set an element to `display: none`.
 
 ```jsx live
-<View white spaceX2>
-  <View bgAmber400 rounded-8 p4 hidden>
+<Box white spaceX2>
+  <Box bgAmber400 rounded-8 p4 hidden>
     A
-  </View>
-  <View bgAmber400 rounded-8 p4 inlineBlock>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inlineBlock>
     B
-  </View>
-  <View bgAmber400 rounded-8 p4 inlineBlock>
+  </Box>
+  <Box bgAmber400 rounded-8 p4 inlineBlock>
     C
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Display
@@ -185,8 +185,8 @@ Use `hidden` props to set an element to `display: none`.
 if the preset atomic props can not be satisfied，you can use `display` props.
 
 ```jsx live
-<View spaceY-10>
-  <View bgAmber400 rounded-8 s-100 display="inline-grid"></View>
-  <View bgAmber400 rounded-8 s-100 display="table"></View>
-</View>
+<Box spaceY-10>
+  <Box bgAmber400 rounded-8 s-100 display="inline-grid"></Box>
+  <Box bgAmber400 rounded-8 s-100 display="table"></Box>
+</Box>
 ```

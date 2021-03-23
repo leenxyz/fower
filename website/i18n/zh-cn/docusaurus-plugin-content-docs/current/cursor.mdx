@@ -50,17 +50,17 @@ Atomic props for controlling the cursor style when hovering over an element.
 Use `cursor{value}` props to set cursor style for an element.
 
 ```jsx live
-<View spaceX-10 row white>
-  <View toCenter bgAmber500 rounded-8 s-100 cursorNotAllowed>
+<Box spaceX-10 row white>
+  <Box toCenter bgAmber500 rounded-8 s-100 cursorNotAllowed>
     NotAllowed
-  </View>
-  <View toCenter bgAmber500 rounded-8 s-100 cursorPointer>
+  </Box>
+  <Box toCenter bgAmber500 rounded-8 s-100 cursorPointer>
     Pointer
-  </View>
-  <View toCenter bgAmber500 rounded-8 s-100 cursorGrab>
+  </Box>
+  <Box toCenter bgAmber500 rounded-8 s-100 cursorGrab>
     Grab
-  </View>
-</View>
+  </Box>
+</Box>
 ```
 
 ## Cursor
@@ -68,7 +68,7 @@ Use `cursor{value}` props to set cursor style for an element.
 if the preset atomic props can not be satisfied，you can use `cursor` props.
 
 ```jsx live
-<View white toCenter bgAmber500 circle-100 cursor="pointer">
+<Box white toCenter bgAmber500 circle-100 cursor="pointer">
   cursor
-</View>
+</Box>
 ```

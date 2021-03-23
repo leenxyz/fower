@@ -13,18 +13,18 @@ Styli does not advocate "separation of Concerns", Styli use **Atomic Props** to 
 
 Code snippet using Styli:
 
-<UtilityFirstStyli />
-
-```jsx
-<View toCenterY p-20 w-300 bgWhite rounded-10>
-  <Image s-60 rounded-8 src="/img/jobs.jpg" />
-  <View ml-10>
-    <View f-22 fontBold>
-      Steve Jobs
-    </View>
-    <Text gray800>Co-founder of Apple Inc.</Text>
-  </View>
-</View>
+```jsx live
+<Box bgGray100 p6>
+  <Box toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
+    <Box as="img" circle-48 src="/img/jobs.jpg" />
+    <Box ml-10>
+      <Box f-20 fontBold>
+        Steve Jobs
+      </Box>
+      <Box gray800>Co-founder of Apple Inc.</Box>
+    </Box>
+  </Box>
+</Box>
 ```
 
 At first glance, You may be very resistant to abbreviations like `toCenterY p-20 w-300 bgWhite rounded-10`. It’s a bit simple and rude, but I promise, it will make you happy later.
