@@ -1,4 +1,3 @@
-
 module.exports = {
   someSidebar: {
     'Getting Started': [
@@ -47,13 +46,8 @@ module.exports = {
       'to-around',
     ],
 
-
-    'Spacing': [
-      'padding',
-      'margin',
-      'space-between',
-    ],
-    'Sizing': [
+    Spacing: ['padding', 'margin', 'space-between'],
+    Sizing: [
       'width',
       'min-width',
       'max-width',
@@ -63,7 +57,7 @@ module.exports = {
       'size',
       'circle',
     ],
-    "Typography": [
+    Typography: [
       'font-size',
       'font-weight',
       'text-color',
@@ -73,21 +67,15 @@ module.exports = {
       // 'ellipsis',
     ],
 
-    'Background': [
+    Background: [
       'background-color',
       // 'background-repeat',
       // 'background-image',
     ],
 
-    'Border': [
-      'rounded',
-      'border-width',
-      'border-color',
-      'border-style',
-    ],
+    Border: ['rounded', 'border-width', 'border-color', 'border-style'],
 
-
-    'Flexbox': [
+    Flexbox: [
       'flex-direction',
       'flex-wrap',
       'flex',
@@ -97,20 +85,11 @@ module.exports = {
       // Order
     ],
 
+    Grid: ['grid-template-columns', 'gap'],
 
-    'Grid': [
-      'grid-template-columns',
-      'gap',
-    ],
+    'Box Alignment': ['justify-content', 'align-items', 'align-content', 'align-self'],
 
-    'Box Alignment': [
-      'justify-content',
-      'align-items',
-      'align-content',
-      'align-self',
-    ],
-
-    'Layout': [
+    Layout: [
       'display',
       'position',
       'top-right-bottom-left',
@@ -119,15 +98,9 @@ module.exports = {
       // 'debug'
     ],
 
-    'Effect': [
-      'shadow',
-      'opacity',
-    ],
+    Effect: ['shadow', 'opacity'],
 
-    'Interactivity': [
-      'outline',
-      'cursor',
-    ],
+    Interactivity: ['outline', 'cursor'],
 
     // Api: ['styled', 'css', 'createStyle'],
     // Examples: ['example-avatar', 'example-media-object'],

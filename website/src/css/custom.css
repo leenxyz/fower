@@ -93,14 +93,13 @@ table td {
 }
 
 .markdown table tr td:nth-child(1) {
-  font-size: 13px;
+  font-size: 14px;
   color: #3b82f6;
 }
 
 .markdown table tr td:nth-child(2) {
-  font-size: 13px;
-  color: #3b82f6;
-  color: #0ea5e9;
+  font-size: 14px;
+  color: #a855f7;
 }
 
 .navbar {
