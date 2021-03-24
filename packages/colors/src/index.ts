@@ -1,4 +1,6 @@
-export const colors = {
+import { Colors } from '@styli/types'
+
+export const colors: Colors = {
   transparent: 'transparent',
   white: '#ffffff',
   black: '#000',

@@ -4,7 +4,6 @@ import flexItem from 'styli-plugin-box-alignment'
 import color from 'styli-plugin-color'
 import display from 'styli-plugin-display'
 import flexBox from 'styli-plugin-flexbox'
-import grid from 'styli-plugin-grid'
 import layoutEngine from 'styli-plugin-layout-engine'
 import lineHeight from 'styli-plugin-line-height'
 import margin from 'styli-plugin-margin'
@@ -22,25 +21,14 @@ import textTransform from 'styli-plugin-text-transform'
 import textWeight from 'styli-plugin-text-weight'
 import zIndex from 'styli-plugin-z-index'
 import outline from 'styli-plugin-outline'
-import cursor from 'styli-plugin-cursor'
 import ellipsis from 'styli-plugin-ellipsis'
-import debug from 'styli-plugin-debug'
-import css from 'styli-plugin-css'
-import reset from 'styli-plugin-reset'
-import pseudo from 'styli-plugin-pseudo'
-import mediaQueries from 'styli-plugin-media-queries'
-import space from 'styli-plugin-space'
 
 export const plugins = [
-  debug(),
-  css(),
-  reset(),
   background(),
   border(),
   color(),
   display(),
   flexBox(),
-  grid(),
   flexItem(),
   layoutEngine(),
   lineHeight(),
@@ -58,10 +46,6 @@ export const plugins = [
   textTransform(),
   textWeight(),
   zIndex(),
-  cursor(),
   outline(),
   ellipsis(),
-  pseudo(),
-  mediaQueries(),
-  space(),
 ]

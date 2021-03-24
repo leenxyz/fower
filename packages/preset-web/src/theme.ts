@@ -1,5 +1,5 @@
 import { Theme } from '@styli/types'
-import { colors } from './colors'
+import { colors } from '@styli/colors'
 
 export const theme: Theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
@@ -52,7 +52,6 @@ export const theme: Theme = {
     relaxed: 1.625,
     loose: 2,
   },
-  borderColors: ['#dddddd', '#f0f0f0'],
   borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: '0',

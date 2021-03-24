@@ -1,13 +1,13 @@
 import { Preset } from '@styli/types'
+import { Theme } from '@styli/types'
 import { plugins } from './plugins'
 import { theme } from './theme'
 
 export const presetReactNative: Preset = {
-  prefix: '',
-  important: false,
-  unit: 'px',
+  unit: 'none',
+  inline: true,
+  theme: theme as Theme,
   plugins,
-  theme,
 }
 
 export default presetReactNative

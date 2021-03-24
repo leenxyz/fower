@@ -228,7 +228,6 @@ declare namespace StyliTypes {
       relaxed: number | string
       loose: number | string
     }
-    borderColors: string[]
     borderWidths: string[] | number[]
     borderRadius: {
       none: number | string
@@ -259,6 +258,14 @@ declare namespace StyliTypes {
     transparent: string
     black: string
     white: string
+
+    brand: string
+    primary: string
+    secondary: string
+    info: string
+    warning: string
+    error: string
+    success: string
 
     rose50: string // '#fff1f2'
     rose100: string // '#ffe4e6'

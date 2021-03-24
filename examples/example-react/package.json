@@ -3,10 +3,10 @@
   "version": "1.0.0-alpha.2",
   "scripts": {
     "start": "umi dev",
-    "build": "umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "echo example-react"
+    "build": "echo 'build'",
+    "test": "echo 'build:test'"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

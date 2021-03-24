@@ -5,6 +5,7 @@ cd packages/types && npm run build
 Sequential=("
   utils
   core
+  colors 
 ")
 
 Parallel=("

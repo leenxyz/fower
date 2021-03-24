@@ -26,7 +26,8 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "test": "echo example-taro"
+    "build": "echo 'build'",
+    "test": "echo 'build:test'"
   },
   "browserslist": [
     "last 3 versions",

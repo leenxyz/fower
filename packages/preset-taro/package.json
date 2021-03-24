@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.2",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "types/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "types"
@@ -22,6 +22,7 @@
   "author": "forsigner",
   "module": "dist/preset-taro.esm.js",
   "dependencies": {
+    "@styli/colors": "^1.0.0-alpha.2",
     "@styli/types": "^1.0.0-alpha.2",
     "styli-plugin-background": "^1.0.0-alpha.2",
     "styli-plugin-border": "^1.0.0-alpha.2",
