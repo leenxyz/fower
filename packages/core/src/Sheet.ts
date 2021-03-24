@@ -184,12 +184,13 @@ export class Sheet {
   }
 
   /**
-   * get class string
+   * get rules for sheet.insertRule
+   * @returns
    */
-  toCss(): string {
+  toCssRules(): string[] {
     const mediaCss: any = {}
 
-    const css = this.atoms.reduce((result, atom) => {
+    const css = this.atoms.reduce<string[]>((result, atom) => {
       const { className = '', type, style = {} } = atom
 
       // no style in falsy prop
@@ -200,15 +201,14 @@ export class Sheet {
       if (className) styli.classNameCache.set(className, true)
 
       if (type === 'prefix') {
-        return result + parseCSSProp(style, className)
+        return [...result, ...parseCSSProp(style, className)]
       }
-
       if (type === 'global') {
-        return result + parseCSSProp(style)
+        return [...result, ...parseCSSProp(style)]
       }
 
       if (type === 'style') {
-        return result + `.${className} { ${cssObjToStr(style)} }`
+        return [...result, `.${className} { ${cssObjToStr(style)} }`]
       }
 
       if (type === 'media-queries') {
@@ -218,15 +218,13 @@ export class Sheet {
       }
 
       return result
-    }, '')
+    }, [])
 
     if (!isEmptyObj(mediaCss)) {
       this.setUniteClassName()
-      return Object.entries(mediaCss).reduce(
-        (str, [breakpoint, mediaCssStr]) =>
-          str + `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`,
-        css,
-      )
+      return Object.entries(mediaCss).reduce<string[]>((r, [breakpoint, mediaCssStr]) => {
+        return [...r, `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`]
+      }, css)
     }
 
     return css
@@ -243,7 +241,7 @@ export class Sheet {
   }
 
   insertRule() {
-    const rule = this.toCss()
-    styleManager.insertStyles(rule)
+    const rules = this.toCssRules()
+    styleManager.insertStyles(rules)
   }
 }

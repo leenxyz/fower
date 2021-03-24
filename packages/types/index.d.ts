@@ -181,7 +181,7 @@ declare namespace StyliTypes {
     createAtomClassName(atom: Atom): Atom
     getClassNames(): string
     toStyles(): CSSProperties
-    toCss(): string
+    toCssRules(): string[]
     getParsedProps(): Props
   }
 

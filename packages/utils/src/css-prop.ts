@@ -1,5 +1,10 @@
 import { cssKeyToStyleKey } from './util'
 
+interface KeyValue {
+  key: string
+  value: any
+}
+
 /**
  * @example
  * ```
@@ -81,7 +86,7 @@ export function getCssObjectPaths(target: any): any {
  *
  * ```
  */
-export function mergeCssObjectPaths(paths: any) {
+export function mergeCssObjectPaths(paths: any): KeyValue[] {
   return paths.reduce((result: any, c: any) => {
     // 合并路径
     const isValue = !Array.isArray(c)
@@ -123,19 +128,18 @@ export function mergeCssObjectPaths(paths: any) {
  * .css-123 {border: 1px solid;color:red};.css-123.button{font-size:12px;display:block};
  * ```
  */
-export function parseCSSProp(cssObj: any, className = ''): string {
+export function parseCSSProp(cssObj: any, className = ''): string[] {
   const originPaths = getCssObjectPaths(cssObj)
   const paths = mergeCssObjectPaths(originPaths)
 
-  return paths
-    .map(({ key, value }: any) => {
-      const isPseudo = /^::?.+/.test(key)
+  const rules = paths.map(({ key, value }) => {
+    const isPseudo = /^::?.+/.test(key)
 
-      let str = ''
-      for (let i in value) {
-        str = `${str}${[i]}: ${value[i]};`
-      }
-      return `${className ? '.' + className : ''}${isPseudo ? key : ' ' + key}{${str}}`
-    })
-    .join('')
+    let str = ''
+    for (let i in value) {
+      str = `${str}${[i]}: ${value[i]};`
+    }
+    return `${className ? '.' + className : ''}${isPseudo ? key : ' ' + key}{${str}}`
+  })
+  return rules
 }

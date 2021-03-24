@@ -7,16 +7,18 @@ class StyleManager {
     const $style = document.createElement('style')
 
     $style.dataset.styli = 'styli'
-    $style.innerHTML = '' // TODO: global style
     document.head.append($style)
     this.$style = $style
     return $style
   }
 
-  insertStyles(cssStr: string) {
-    if (!isBrowser || !cssStr) return
+  insertStyles(rules: string[] = []) {
+    if (!isBrowser || !rules.length) return
     if (!this.$style) this.createStyleElement()
-    this.$style.innerHTML = this.$style.innerHTML + cssStr
+
+    for (const rule of rules) {
+      this.$style.sheet?.insertRule(rule)
+    }
   }
 }
 
