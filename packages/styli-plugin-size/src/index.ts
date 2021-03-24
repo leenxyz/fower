@@ -5,7 +5,7 @@ import { isValidPropValue } from '@styli/utils'
 export const sizeMaps: any = {
   w: ['width'],
   h: ['height'],
-  s: ['width', 'height'],
+  square: ['width', 'height'],
   circle: ['width', 'height', 'borderRadius'],
   minw: ['minWidth'],
   maxw: ['maxWidth'],
@@ -13,12 +13,13 @@ export const sizeMaps: any = {
   maxh: ['maxHeight'],
 }
 
-export function isSizeKey(key: string) {
-  return /^([wh]|circle|min[HWhw]|max[HWhw])(-[\dA-Z-a-z]+)?$|^s(-[\dA-Za-z]+){0,2}$/.test(key)
+export function isMatch(key: string) {
+  return /^([wh]|square|circle|min[HWhw]|max[HWhw])(-[\dA-Z-a-z]+)?$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
-  const [, matchKey = '', , xValue, , yValue] = prop.match(/^([swh]|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] =
+    prop.match(/^([wh]|square|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
   const sizeValue = isValidPropValue(propValue) ? [propValue] : [xValue, yValue]
@@ -33,9 +34,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-size',
-    isMatch: (propKey) => {
-      return isSizeKey(propKey)
-    },
+    isMatch,
     beforeAtomStyleCreate(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []

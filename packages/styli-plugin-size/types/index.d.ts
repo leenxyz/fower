@@ -258,21 +258,19 @@ declare module '@styli/types' {
     h20?: boolean
 
     /**
-     * Set size
+     * Set square size
      *
-     * s-10 is `width: 10px; height: 10px;`
-     *
-     * s-10-4 is `width: 10px; height: 4px`
+     * square-10 is `width: 10px; height: 10px;`
      *
      * @example
      * ```tsx
-     * <View s-10></View>
-     * <View s-1rem></View>
-     * <View s-10p></View>
-     * <View s={a + b}></View>
+     * <View square-10></View>
+     * <View square-1rem></View>
+     * <View square-10p></View>
+     * <View square={a + b}></View>
      * ```
      */
-    s?: PropValue
+    square?: PropValue
 
     /**
      * Set size
@@ -282,7 +280,7 @@ declare module '@styli/types' {
      *
      * s0 is `width: 0px; height: 0px`
      */
-    s0?: boolean
+    square0?: boolean
 
     /**
      * Set size
@@ -292,7 +290,7 @@ declare module '@styli/types' {
      *
      * s1 is `width:4px; height: 4px`
      */
-    s1?: boolean
+    square1?: boolean
 
     /**
      * Set size
@@ -302,7 +300,7 @@ declare module '@styli/types' {
      *
      * s2 is `width:8px; height: 8px`
      */
-    s2?: boolean
+    square2?: boolean
 
     /**
      * Set size
@@ -312,7 +310,7 @@ declare module '@styli/types' {
      *
      * s3 is `width:12px; height: 12px`
      */
-    s3?: boolean
+    square3?: boolean
 
     /**
      * Set size
@@ -322,7 +320,7 @@ declare module '@styli/types' {
      *
      * s4 is `width:16px; height: 16px`
      */
-    s4?: boolean
+    square4?: boolean
 
     /**
      * Set size
@@ -332,7 +330,7 @@ declare module '@styli/types' {
      *
      * s5 is `width:20px; height: 20px`
      */
-    s5?: boolean
+    square5?: boolean
 
     /**
      * Set size
@@ -342,7 +340,7 @@ declare module '@styli/types' {
      *
      * s6 is `width:24px; height: 24px`
      */
-    s6?: boolean
+    square6?: boolean
 
     /**
      * Set size
@@ -352,7 +350,7 @@ declare module '@styli/types' {
      *
      * s7 is `width:28px; height: 28px`
      */
-    s7?: boolean
+    square7?: boolean
 
     /**
      * Set size
@@ -362,7 +360,7 @@ declare module '@styli/types' {
      *
      * s8 is `width:32px; height: 32px`
      */
-    s8?: boolean
+    square8?: boolean
 
     /**
      * Set size
@@ -372,19 +370,19 @@ declare module '@styli/types' {
      *
      * s9 is `width:36px; height: 36px`
      */
-    s9?: boolean
+    square9?: boolean
 
-    s10?: boolean
-    s11?: boolean
-    s12?: boolean
-    s13?: boolean
-    s14?: boolean
-    s15?: boolean
-    s16?: boolean
-    s17?: boolean
-    s18?: boolean
-    s19?: boolean
-    s20?: boolean
+    square10?: boolean
+    square11?: boolean
+    square12?: boolean
+    square13?: boolean
+    square14?: boolean
+    square15?: boolean
+    square16?: boolean
+    square17?: boolean
+    square18?: boolean
+    square19?: boolean
+    square20?: boolean
 
     /**
      * Set circle
