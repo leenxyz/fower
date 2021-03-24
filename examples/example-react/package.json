@@ -22,6 +22,7 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "@umijs/preset-react": "1.x",
+    "@styli/react": "^1.0.0-alpha.3",
     "umi": "^3.3.9"
   },
   "devDependencies": {
