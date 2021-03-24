@@ -1,5 +1,21 @@
-import React from 'react';
-import { Box } from '@styli/react';
+import { Box, injectGlobalStyle } from '@styli/react';
+
+injectGlobalStyle({
+  '*': {},
+  body: {
+    margin: '0',
+    backgroundColor: 'red',
+    ':hover': {
+      backgroundColor: 'green',
+    },
+  },
+  div: {
+    backgroundColor: 'yellow',
+    ':hover': {
+      backgroundColor: 'blue',
+    },
+  },
+});
 
 export default function IndexPage() {
   return (

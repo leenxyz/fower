@@ -86,7 +86,7 @@ export function mergeCssObjectPaths(paths: any) {
     // 合并路径
     const isValue = !Array.isArray(c)
     const value = isValue ? c : c.pop()
-    const path = isValue ? '' : c.join(' ')
+    const path = isValue ? '' : c.join('')
 
     const idx = result.findIndex(({ key }: any) => key === path)
     result[idx === -1 ? result.length : idx] = {
@@ -137,5 +137,5 @@ export function parseCSSProp(cssObj: any, className = ''): string {
       }
       return `${className ? '.' + className : ''}${isPseudo ? key : ' ' + key}{${str}}`
     })
-    .join(' ')
+    .join('')
 }

@@ -5,7 +5,13 @@ import { styli } from '@styli/core';
 export default () => {
   return (
     <ThemeProvider theme={styli.getTheme()}>
-      <Box text3XL fontBold>
+      <Box
+        text3XL
+        fontBold
+        css={{
+          border: 'none',
+        }}
+      >
         Size
       </Box>
       <Box toEvenly textXS>

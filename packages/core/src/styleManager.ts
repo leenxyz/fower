@@ -7,7 +7,7 @@ class StyleManager {
     const $style = document.createElement('style')
 
     $style.dataset.styli = 'styli'
-    $style.innerHTML = '*{border: 0 solid #ccc;box-sizing: border-box}' // TODO: global style
+    $style.innerHTML = '' // TODO: global style
     document.head.append($style)
     this.$style = $style
     return $style
