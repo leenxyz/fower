@@ -1,5 +1,5 @@
 {
-  "name": "@styli/preset-default",
+  "name": "@styli/preset-taro",
   "version": "1.0.0-alpha.2",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/preset-default.esm.js",
+  "module": "dist/preset-taro.esm.js",
   "dependencies": {
     "@styli/types": "^1.0.0-alpha.2",
     "styli-plugin-background": "^1.0.0-alpha.2",

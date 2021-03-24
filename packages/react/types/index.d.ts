@@ -1,4 +1,4 @@
-/// <reference types="@styli/preset-default" />
+/// <reference types="@styli/preset-web" />
 /// <reference types="react" />
 import React, { PropsWithChildren, ComponentProps } from 'react'
 import { AtomicProps, As } from '@styli/types'

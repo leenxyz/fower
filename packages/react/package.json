@@ -20,7 +20,7 @@
   "module": "dist/react.esm.js",
   "dependencies": {
     "@styli/core": "^1.0.0-alpha.2",
-    "@styli/preset-default": "^1.0.0-alpha.2",
+    "@styli/preset-web": "^1.0.0-alpha.2",
     "@styli/styled": "^1.0.0-alpha.2",
     "@styli/theming": "^1.0.0-alpha.2",
     "@styli/types": "^1.0.0-alpha.2",

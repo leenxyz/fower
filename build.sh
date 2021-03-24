@@ -46,7 +46,9 @@ Parallel=("
 ")
 
 Others=("
-  preset-default
+  preset-web
+  preset-react-native
+  preset-taro
   styli-transform
   theming
   styled

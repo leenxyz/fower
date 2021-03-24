@@ -2,7 +2,7 @@ import { Preset } from '@styli/types'
 import { plugins } from './plugins'
 import { theme } from './theme'
 
-export const presetDefault: Preset = {
+export const presetTaro: Preset = {
   prefix: '',
   important: false,
   unit: 'px',
@@ -10,4 +10,4 @@ export const presetDefault: Preset = {
   theme,
 }
 
-export default presetDefault
+export default presetTaro
