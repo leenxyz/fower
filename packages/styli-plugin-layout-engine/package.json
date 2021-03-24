@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-layout-engine",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,7 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-layout-engine.esm.js",
   "dependencies": {
-    "@styli/types": "^1.0.0-alpha.2",
-    "@styli/utils": "^1.0.0-alpha.2"
+    "@styli/types": "^1.0.0-alpha.3",
+    "@styli/utils": "^1.0.0-alpha.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@styli/website",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -34,8 +34,8 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.72",
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.72",
     "@mdx-js/react": "^1.6.21",
-    "@styli/react": "^1.0.0-alpha.2",
-    "@styli/theming": "^1.0.0-alpha.2",
+    "@styli/react": "^1.0.0-alpha.3",
+    "@styli/theming": "^1.0.0-alpha.3",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react-helmet": "^6.1.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",
@@ -47,6 +47,6 @@
     "simplebar-react": "^2.3.0"
   },
   "devDependencies": {
-    "@styli/babel-preset-styli": "^1.0.0-alpha.2"
+    "@styli/babel-preset-styli": "^1.0.0-alpha.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@styli/taro",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,9 +19,9 @@
   "author": "forsigner",
   "module": "dist/taro.esm.js",
   "dependencies": {
-    "@styli/core": "^1.0.0-alpha.2",
-    "@styli/preset-taro": "^1.0.0-alpha.2",
-    "@styli/styled": "^1.0.0-alpha.2"
+    "@styli/core": "^1.0.0-alpha.3",
+    "@styli/preset-taro": "^1.0.0-alpha.3",
+    "@styli/styled": "^1.0.0-alpha.3"
   },
   "devDependencies": {
     "@tarojs/components": "^3.0.23"
