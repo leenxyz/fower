@@ -7,10 +7,10 @@ describe('styli-plugin-position', () => {
 
   it('isMatch', () => {
     expect(isMatch!('w')).toEqual(true)
-    expect(isMatch!('s-20')).toEqual(true)
+    expect(isMatch!('square-20')).toEqual(true)
     expect(isMatch!('circle-10rem')).toEqual(true)
     expect(isMatch!('maxH-10')).toEqual(true)
-    expect(isMatch!('s-10px-20px')).toEqual(true)
+    expect(isMatch!('square-10px')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {
@@ -24,12 +24,18 @@ describe('styli-plugin-position', () => {
     }
     expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
 
-    const atom2: Atom = { propKey: 's-20', propValue: true, key: 's-20', type: 'style', style: {} }
+    const atom2: Atom = {
+      propKey: 'square-20',
+      propValue: true,
+      key: 'square-20',
+      type: 'style',
+      style: {},
+    }
     const newAtom2: Atom = {
-      propKey: 's-20',
+      propKey: 'square-20',
       propValue: true,
       style: { width: '20px', height: '20px' },
-      key: 's-20',
+      key: 'square-20',
       type: 'style',
     }
     expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
@@ -67,18 +73,18 @@ describe('styli-plugin-position', () => {
     expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
 
     const atom5: Atom = {
-      propKey: 's-10px-20px',
+      propKey: 'square-10px',
       propValue: true,
-      key: 's-10px-20px',
+      key: 'square-10px',
       type: 'style',
       style: {},
     }
     const newAtom5: Atom = {
-      key: 's-10px-20px',
+      key: 'square-10px',
       type: 'style',
-      propKey: 's-10px-20px',
+      propKey: 'square-10px',
       propValue: true,
-      style: { width: '10px', height: '20px' },
+      style: { width: '10px', height: '10px' },
     }
     expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
   })

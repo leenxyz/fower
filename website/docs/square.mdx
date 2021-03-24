@@ -1,0 +1,29 @@
+---
+id: square
+title: Square
+---
+
+Use `square-{value}` props to create a square element
+
+| Atomic Props                    | CSS Properties                   |
+| ------------------------------- | -------------------------------- |
+| square-{value} / square={value} | width: {value}; height: {value}; |
+
+## Usage
+
+```jsx live
+<Box toLeft white>
+  <Box square-50 bgYellow400 toCenter>
+    square-50
+  </Box>
+  <Box square-5rem bgGreen400 toCenter>
+    square-5rem
+  </Box>
+  <Box square={100} bgBlue400 toCenter>
+    square={'{100}'}
+  </Box>
+  <Box square="150px" bgPurple400 toCenter>
+    square="150px"
+  </Box>
+</Box>
+```

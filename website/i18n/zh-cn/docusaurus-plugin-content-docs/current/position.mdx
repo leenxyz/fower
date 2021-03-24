@@ -19,8 +19,8 @@ Atomic props for controlling how an element is positioned.
 Use `static` props to set static position for an element.
 
 ```jsx live
-<Box relative s-160 bgBlue100>
-  <Box bgAmber400 s-100 static toCenter>
+<Box relative square bgBlue100>
+  <Box bgAmber400 square-100 static toCenter>
     static
   </Box>
 </Box>
@@ -31,9 +31,9 @@ Use `static` props to set static position for an element.
 Use `relative` props to set relative position for an element.
 
 ```jsx live
-<Box relative s-160 bgBlue100>
+<Box relative square bgBlue100>
   relative
-  <Box bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+  <Box bgBlue400-T20 square-80 absolute bottom-0 toCenter>
     absolute
   </Box>
 </Box>
@@ -44,8 +44,8 @@ Use `relative` props to set relative position for an element.
 Use `absolute` props to set absolute position for an element.
 
 ```jsx live
-<Box relative s-160 bgBlue100>
-  <Box bgBlue400-T20 s-80 absolute bottom-0 toCenter>
+<Box relative square bgBlue100>
+  <Box bgBlue400-T20 square-80 absolute bottom-0 toCenter>
     absolute
   </Box>
 </Box>
@@ -56,7 +56,7 @@ Use `absolute` props to set absolute position for an element.
 Use `fixed` props to set fixed position for an element.
 
 ```jsx live
-<Box toCenter bgWhite shadow rounded-8 s-80 fixed bottom-10>
+<Box toCenter bgWhite shadow rounded-8 square-80 fixed bottom-10>
   fixed
 </Box>
 ```
@@ -66,9 +66,9 @@ Use `fixed` props to set fixed position for an element.
 Use `sticky` props to set sticky position for an element.
 
 ```jsx live
-<Box relative s-200 overflow="auto" bgGray100 p4>
+<Box relative square-200 overflow="auto" bgGray100 p4>
   <Box>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Box>
-  <Box toCenter bgYellow200 shadow rounded-8 s-80 sticky top-0>
+  <Box toCenter bgYellow200 shadow rounded-8 square-80 sticky top-0>
     sticky
   </Box>
   <Box>
@@ -84,7 +84,7 @@ Use `sticky` props to set sticky position for an element.
 if the preset atomic props can not be satisfied，you can use `position` props.
 
 ```jsx live
-<Box toCenter rounded-8 s-80 position={2 > 1 ? 'absolute' : 'relative'}>
+<Box toCenter rounded-8 square-80 position={2 > 1 ? 'absolute' : 'relative'}>
   position
 </Box>
 ```

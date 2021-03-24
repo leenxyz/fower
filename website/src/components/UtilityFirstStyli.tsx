@@ -5,7 +5,7 @@ export const UtilityFirstStyli = () => {
   return (
     <Box toCenter bgGray200 h-200>
       <Box toCenterY p-20 w-300 bgWhite rounded-10>
-        <Box as="img" s-60 rounded-8 src="/img/jobs.jpg" />
+        <Box as="img" square-60 rounded-8 src="/img/jobs.jpg" />
         <Box ml-10>
           <Box text2XL fontBold>
             Steve Jobs

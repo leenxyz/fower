@@ -13,8 +13,8 @@ declare module '@styli/types' {
      * @example
      * ```tsx
      * <View ellipsis></View>
-     * <View ellipsis-200></View>
-     * <View ellipsis-200px></View>
+     * <View ellipsisquare-200></View>
+     * <View ellipsisquare-200px></View>
      * <View ellipsis="200rem></View>
      * ```
      */

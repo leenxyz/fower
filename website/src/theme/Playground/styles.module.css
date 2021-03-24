@@ -14,13 +14,13 @@
   padding: 0.75rem;
   text-transform: uppercase;
   font-weight: bold;
-  background: var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasisquare-200);
   color: var(--ifm-color-content);
   font-size: var(--ifm-code-font-size);
 }
 
 .playgroundHeader:first-of-type {
-  background: var(--ifm-color-emphasis-600);
+  background: var(--ifm-color-emphasisquare-600);
   color: var(--ifm-color-content-inverse);
   /* border-top-left-radius: var(--ifm-global-radius); */
   /* border-top-right-radius: var(--ifm-global-radius); */
@@ -36,7 +36,7 @@
 }
 
 .playgroundPreview {
-  border: 1px solid var(--ifm-color-emphasis-200);
+  border: 1px solid var(--ifm-color-emphasisquare-200);
   padding: 1rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;

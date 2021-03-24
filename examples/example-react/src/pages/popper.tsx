@@ -14,7 +14,7 @@ export default () => {
   return (
     <Box p-200>
       <Box
-        s-100
+        square-100
         bgBlue20
         type="button"
         ref={setReferenceElement}
@@ -29,7 +29,7 @@ export default () => {
       </Box>
 
       <Box
-        s-200
+        square-200
         bgYellow20
         ref={setPopperElement}
         style={{

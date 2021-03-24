@@ -54,7 +54,7 @@ module.exports = {
       'height',
       'min-height',
       'max-height',
-      'size',
+      'square',
       'circle',
     ],
     Typography: [

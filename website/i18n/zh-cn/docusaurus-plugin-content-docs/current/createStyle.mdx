@@ -11,7 +11,7 @@ title: createStyle
 import React from 'react'
 import { createStyle } from '@styli/core'
 
-const cardStyle = createStyle('p-20 s-400 bgRed')
+const cardStyle = createStyle('p-20 square-400 bgRed')
 
 export default () => {
   return <div style={cardStyle}></div>
@@ -24,7 +24,7 @@ export default () => {
 import React from 'react'
 import { createStyle } from '@styli/core'
 
-const cardStyle = createStyle('p-20 s-400 bgRed', {
+const cardStyle = createStyle('p-20 square-400 bgRed', {
   background: '#fff',
   fontSize: 14,
 })

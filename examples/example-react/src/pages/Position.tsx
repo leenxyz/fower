@@ -8,24 +8,24 @@ export default () => {
         Positon
       </Box>
 
-      <Box s-200 debugChildren position="relative">
-        <Box s-100></Box>
+      <Box square-200 debugChildren position="relative">
+        <Box square-100></Box>
       </Box>
 
-      <Box s-200 debugChildren relative>
-        <Box s-100 absolute right-0></Box>
+      <Box square-200 debugChildren relative>
+        <Box square-100 absolute right-0></Box>
       </Box>
 
-      <Box s-200 debugChildren relative>
-        <Box s-100 absolute right={0}></Box>
+      <Box square-200 debugChildren relative>
+        <Box square-100 absolute right={0}></Box>
       </Box>
 
-      <Box s-200 debugChildren relative>
-        <Box s-100 absolute right--10></Box>
+      <Box square-200 debugChildren relative>
+        <Box square-100 absolute right--10></Box>
       </Box>
 
-      <Box s-200 debugChildren relative>
-        <Box s-100 absolute right={10} top-10></Box>
+      <Box square-200 debugChildren relative>
+        <Box square-100 absolute right={10} top-10></Box>
       </Box>
     </Box>
   );

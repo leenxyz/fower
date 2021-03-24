@@ -9,9 +9,9 @@
     </p>
 
     <div h-200 textXS debugChildren toRight>
-      <div s-100></div>
-      <div s-100></div>
-      <div s-100></div>
+      <div square-100></div>
+      <div square-100></div>
+      <div square-100></div>
     </div>
 
     <div circle-100></div>
@@ -26,9 +26,9 @@
     </div>
 
     <div h-200 textXS toEvenly>
-      <div s-100>AAA</div>
+      <div square-100>AAA</div>
       <div selfStretch>BBB</div>
-      <div s-100 toCenter>CCC</div>
+      <div square-100 toCenter>CCC</div>
     </div>
   </div>
 </template>

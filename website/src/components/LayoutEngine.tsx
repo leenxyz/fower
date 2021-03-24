@@ -15,11 +15,11 @@ const ContainerComponent: FC<Props> = ({ children, ...rest }) => {
 }
 
 const ItemA = () => {
-  return <Box s-40 bgAmber400 rounded-8></Box>
+  return <Box square-40 bgAmber400 rounded-8></Box>
 }
 
 const ItemB = () => {
-  return <Box s-60 bgBlue400 rounded-8></Box>
+  return <Box square-60 bgBlue400 rounded-8></Box>
 }
 
 const Type: FC<{ type?: string }> = ({ children, type = 'row' }) => {

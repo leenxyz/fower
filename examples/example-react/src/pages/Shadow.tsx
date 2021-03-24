@@ -9,39 +9,39 @@ export default () => {
       </Box>
 
       <Box py-50 row toEvenly>
-        <Box bgWhite s-128 rounded-4 toCenter shadowXS>
+        <Box bgWhite square-128 rounded-4 toCenter shadowXS>
           shadowXS
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowSM>
+        <Box bgWhite square-128 rounded-4 toCenter shadowSM>
           shadowSM
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowBase>
+        <Box bgWhite square-128 rounded-4 toCenter shadowBase>
           shadowBase
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowMD>
+        <Box bgWhite square-128 rounded-4 toCenter shadowMD>
           shadowMD
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowLG>
+        <Box bgWhite square-128 rounded-4 toCenter shadowLG>
           shadowLG
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowXL>
+        <Box bgWhite square-128 rounded-4 toCenter shadowXL>
           shadowXL
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowXXL>
+        <Box bgWhite square-128 rounded-4 toCenter shadowXXL>
           shadowXXL
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowInner>
+        <Box bgWhite square-128 rounded-4 toCenter shadowInner>
           shadowInner
         </Box>
 
-        <Box bgWhite s-128 rounded-4 toCenter shadowOutline>
+        <Box bgWhite square-128 rounded-4 toCenter shadowOutline>
           shadowOutline
         </Box>
       </Box>

@@ -23,16 +23,16 @@ Control the margin on all sides of an element using the `m-{value}` Atomic Props
 
 ```jsx live
 <Box bgGray100 toLeft>
-  <Box bgGreen200 s-100 m-0>
+  <Box bgGreen200 square-100 m-0>
     m-0
   </Box>
-  <Box bgGreen200 s-100 m={20}>
+  <Box bgGreen200 square-100 m={20}>
     m={'{20}'}
   </Box>
-  <Box bgGreen200 s-100 m="40px">
+  <Box bgGreen200 square-100 m="40px">
     m="40px"
   </Box>
-  <Box bgGreen200 s-120 m="10px 20px">
+  <Box bgGreen200 square-120 m="10px 20px">
     m="10px 20px"
   </Box>
 </Box>
@@ -44,16 +44,16 @@ Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atom
 
 ```jsx live
 <Box bgGray100 toLeft>
-  <Box ml-10 bgGreen200 s-100>
+  <Box ml-10 bgGreen200 square-100>
     ml-10
   </Box>
-  <Box mt-10 bgTeal200 s-100>
+  <Box mt-10 bgTeal200 square-100>
     mt-10
   </Box>
-  <Box mr-10 bgRed200 s-100>
+  <Box mr-10 bgRed200 square-100>
     mr-10
   </Box>
-  <Box mb-10 bgYellow200 s-100>
+  <Box mb-10 bgYellow200 square-100>
     mb-10
   </Box>
 </Box>
@@ -65,7 +65,7 @@ Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
 
 ```jsx live
 <Box bgGray100 toLeft>
-  <Box mx-10 s-100 bgRed200>
+  <Box mx-10 square-100 bgRed200>
     mx-10
   </Box>
 </Box>
@@ -77,7 +77,7 @@ Control the vertical margin of an element using the `my-{value}` Atomic Props.
 
 ```jsx live
 <Box bgGray100 toLeft>
-  <Box my-10 s-100 bgRed200>
+  <Box my-10 square-100 bgRed200>
     my-10
   </Box>
 </Box>
@@ -90,11 +90,11 @@ Control the negative margin of an element using the `m{t|r|b|l|x|y}--{value}` At
 Of course, you can also use `ml={-10}` to set negative margin of an element.
 
 ```jsx live
-<Box m-20 bgGray200 s-200>
-  <Box ml--20 s-100 bgRed500-T60>
+<Box m-20 bgGray200 square-200>
+  <Box ml--20 square-100 bgRed500-T60>
     ml--20
   </Box>
-  <Box mt="-1rem" s-100 bgOrange400-T60>
+  <Box mt="-1rem" square-100 bgOrange400-T60>
     mt="-1rem"
   </Box>
 </Box>
