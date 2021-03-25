@@ -121,16 +121,26 @@ declare module '@styli/types' {
     p9?: boolean
 
     p10?: boolean
+
     p11?: boolean
     p12?: boolean
-    p13?: boolean
     p14?: boolean
-    p15?: boolean
     p16?: boolean
-    p17?: boolean
-    p18?: boolean
-    p19?: boolean
     p20?: boolean
+    p24?: boolean
+    p28?: boolean
+    p32?: boolean
+    p36?: boolean
+    p40?: boolean
+    p44?: boolean
+    p48?: boolean
+    p52?: boolean
+    p56?: boolean
+    p60?: boolean
+    p64?: boolean
+    p72?: boolean
+    p80?: boolean
+    p96?: boolean
 
     /**
      * Set padding horizontal
@@ -249,14 +259,23 @@ declare module '@styli/types' {
     px10?: boolean
     px11?: boolean
     px12?: boolean
-    px13?: boolean
     px14?: boolean
-    px15?: boolean
     px16?: boolean
-    px17?: boolean
-    px18?: boolean
-    px19?: boolean
     px20?: boolean
+    px24?: boolean
+    px28?: boolean
+    px32?: boolean
+    px36?: boolean
+    px40?: boolean
+    px44?: boolean
+    px48?: boolean
+    px52?: boolean
+    px56?: boolean
+    px60?: boolean
+    px64?: boolean
+    px72?: boolean
+    px80?: boolean
+    px96?: boolean
 
     /**
      * Set padding vertical
@@ -375,14 +394,23 @@ declare module '@styli/types' {
     py10?: boolean
     py11?: boolean
     py12?: boolean
-    py13?: boolean
     py14?: boolean
-    py15?: boolean
     py16?: boolean
-    py17?: boolean
-    py18?: boolean
-    py19?: boolean
     py20?: boolean
+    py24?: boolean
+    py28?: boolean
+    py32?: boolean
+    py36?: boolean
+    py40?: boolean
+    py44?: boolean
+    py48?: boolean
+    py52?: boolean
+    py56?: boolean
+    py60?: boolean
+    py64?: boolean
+    py72?: boolean
+    py80?: boolean
+    py96?: boolean
 
     /**
      * Set paddingTop
@@ -501,14 +529,23 @@ declare module '@styli/types' {
     pt10?: boolean
     pt11?: boolean
     pt12?: boolean
-    pt13?: boolean
     pt14?: boolean
-    pt15?: boolean
     pt16?: boolean
-    pt17?: boolean
-    pt18?: boolean
-    pt19?: boolean
     pt20?: boolean
+    pt24?: boolean
+    pt28?: boolean
+    pt32?: boolean
+    pt36?: boolean
+    pt40?: boolean
+    pt44?: boolean
+    pt48?: boolean
+    pt52?: boolean
+    pt56?: boolean
+    pt60?: boolean
+    pt64?: boolean
+    pt72?: boolean
+    pt80?: boolean
+    pt96?: boolean
 
     /**
      * Set padding bottom, pb is padding-bottom
@@ -627,14 +664,23 @@ declare module '@styli/types' {
     pb10?: boolean
     pb11?: boolean
     pb12?: boolean
-    pb13?: boolean
     pb14?: boolean
-    pb15?: boolean
     pb16?: boolean
-    pb17?: boolean
-    pb18?: boolean
-    pb19?: boolean
     pb20?: boolean
+    pb24?: boolean
+    pb28?: boolean
+    pb32?: boolean
+    pb36?: boolean
+    pb40?: boolean
+    pb44?: boolean
+    pb48?: boolean
+    pb52?: boolean
+    pb56?: boolean
+    pb60?: boolean
+    pb64?: boolean
+    pb72?: boolean
+    pb80?: boolean
+    pb96?: boolean
 
     /**
      * Set paddingRight
@@ -753,14 +799,23 @@ declare module '@styli/types' {
     pr10?: boolean
     pr11?: boolean
     pr12?: boolean
-    pr13?: boolean
     pr14?: boolean
-    pr15?: boolean
     pr16?: boolean
-    pr17?: boolean
-    pr18?: boolean
-    pr19?: boolean
     pr20?: boolean
+    pr24?: boolean
+    pr28?: boolean
+    pr32?: boolean
+    pr36?: boolean
+    pr40?: boolean
+    pr44?: boolean
+    pr48?: boolean
+    pr52?: boolean
+    pr56?: boolean
+    pr60?: boolean
+    pr64?: boolean
+    pr72?: boolean
+    pr80?: boolean
+    pr96?: boolean
 
     /**
      * Set paddingLeft
@@ -879,13 +934,22 @@ declare module '@styli/types' {
     pl10?: boolean
     pl11?: boolean
     pl12?: boolean
-    pl13?: boolean
     pl14?: boolean
-    pl15?: boolean
     pl16?: boolean
-    pl17?: boolean
-    pl18?: boolean
-    pl19?: boolean
     pl20?: boolean
+    pl24?: boolean
+    pl28?: boolean
+    pl32?: boolean
+    pl36?: boolean
+    pl40?: boolean
+    pl44?: boolean
+    pl48?: boolean
+    pl52?: boolean
+    pl56?: boolean
+    pl60?: boolean
+    pl64?: boolean
+    pl72?: boolean
+    pl80?: boolean
+    pl96?: boolean
   }
 }

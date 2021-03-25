@@ -40,9 +40,9 @@ export default (): StyliPlugin => {
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !sizeMaps[key]) return atom
 
-      const sizes = styli.getTheme<string[]>('spacing') || []
+      const sizes = styli.getTheme('spacing')
 
-      if (!sizes.length) {
+      if (!sizes) {
         console.error('theme spacing is not provide')
       }
 

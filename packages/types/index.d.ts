@@ -211,7 +211,38 @@ declare namespace StyliTypes {
       '2xl': string
     }
 
-    spacing: string[] | number[]
+    spacing: {
+      0: string | number
+      1: string | number
+      2: string | number
+      3: string | number
+      4: string | number
+      5: string | number
+      6: string | number
+      7: string | number
+      8: string | number
+      9: string | number
+      10: string | number
+      11: string | number
+      12: string | number
+      14: string | number
+      16: string | number
+      20: string | number
+      24: string | number
+      28: string | number
+      32: string | number
+      36: string | number
+      40: string | number
+      44: string | number
+      48: string | number
+      52: string | number
+      56: string | number
+      60: string | number
+      64: string | number
+      72: string | number
+      80: string | number
+      96: string | number
+    }
     headings: string[] | number[]
     fontSize: {
       xs: string | number
@@ -261,9 +292,12 @@ declare namespace StyliTypes {
     borderRadius: {
       none: number | string
       sm: number | string
-      default: number | string
+      base: number | string
       md: number | string
       lg: number | string
+      xl: number | string
+      '2xl': number | string
+      '3xl': number | string
       full: number | string
     }
     shadow: {

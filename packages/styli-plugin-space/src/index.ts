@@ -35,11 +35,12 @@ export default (): StyliPlugin => {
     beforeAtomStyleCreate(atom) {
       const { propKey } = atom
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
+
       if (!key || !value || !isSpaceKey(key)) return atom
 
-      const spacing = styli.getTheme<string[]>('spacing') || []
+      const spacing = styli.getTheme('spacing')
 
-      if (!spacing.length) {
+      if (!spacing) {
         console.error('theme spacing is not provide')
       }
 

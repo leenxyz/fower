@@ -34,7 +34,8 @@ export function isMarginKey(key: string) {
 export function marginPropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [, matchKey = '', , xValue, , yValue] = prop.match(/^(m[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] =
+    prop.match(/^(m[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
   if (xValue && yValue) {
@@ -64,9 +65,9 @@ export default (): StyliPlugin => {
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !marginMaps[key]) return atom
 
-      const spacing = styli.getTheme<string[]>('spacing') || []
+      const spacing = styli.getTheme('spacing')
 
-      if (!spacing.length) {
+      if (!spacing) {
         console.error('theme spacing is not provide')
       }
 

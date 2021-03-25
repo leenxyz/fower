@@ -3,11 +3,9 @@ import { StyliPlugin } from '@styli/types'
 
 export const positionKeys = ['static', 'fixed', 'absolute', 'relative', 'sticky']
 
-export function isPositionKey(key: string) {
+export function isMatch(key: string) {
   return (
-    /^(top|right|bottom|left)(-.+)?$/gi.test(key) ||
-    positionKeys.includes(key) ||
-    key === 'position'
+    /^(top|right|bottom|left)(-.+)?$/i.test(key) || positionKeys.includes(key) || key === 'position'
   )
 }
 
@@ -31,7 +29,27 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-position',
-    isMatch: isPositionKey,
+    isMatch,
+
+    beforeAtomStyleCreate(atom) {
+      const { propKey } = atom
+      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
+      if (!key || !value || !isMatch(key)) return atom
+
+      const spacing = styli.getTheme('spacing')
+
+      if (!spacing) {
+        console.error('theme spacing is not provide')
+      }
+
+      return {
+        ...atom,
+        propKey: key,
+        propValue: spacing[Number(value)],
+        className: propKey,
+        classNames: [propKey],
+      }
+    },
     onAtomStyleCreate(atom) {
       atom.style = positionPropToStyle(atom.propKey, atom.propValue)
       return atom

@@ -117,18 +117,26 @@ declare module '@styli/types' {
      * w9 is `width: 36px`
      */
     w9?: boolean
-
     w10?: boolean
     w11?: boolean
     w12?: boolean
-    w13?: boolean
     w14?: boolean
-    w15?: boolean
     w16?: boolean
-    w17?: boolean
-    w18?: boolean
-    w19?: boolean
     w20?: boolean
+    w24?: boolean
+    w28?: boolean
+    w32?: boolean
+    w36?: boolean
+    w40?: boolean
+    w44?: boolean
+    w48?: boolean
+    w52?: boolean
+    w56?: boolean
+    w60?: boolean
+    w64?: boolean
+    w72?: boolean
+    w80?: boolean
+    w96?: boolean
 
     /**
      * Set height
@@ -244,18 +252,26 @@ declare module '@styli/types' {
      * h9 is `height: 36px`
      */
     h9?: boolean
-
     h10?: boolean
     h11?: boolean
     h12?: boolean
-    h13?: boolean
     h14?: boolean
-    h15?: boolean
     h16?: boolean
-    h17?: boolean
-    h18?: boolean
-    h19?: boolean
     h20?: boolean
+    h24?: boolean
+    h28?: boolean
+    h32?: boolean
+    h36?: boolean
+    h40?: boolean
+    h44?: boolean
+    h48?: boolean
+    h52?: boolean
+    h56?: boolean
+    h60?: boolean
+    h64?: boolean
+    h72?: boolean
+    h80?: boolean
+    h96?: boolean
 
     /**
      * Set square size
@@ -371,18 +387,26 @@ declare module '@styli/types' {
      * s9 is `width:36px; height: 36px`
      */
     square9?: boolean
-
     square10?: boolean
     square11?: boolean
     square12?: boolean
-    square13?: boolean
     square14?: boolean
-    square15?: boolean
     square16?: boolean
-    square17?: boolean
-    square18?: boolean
-    square19?: boolean
     square20?: boolean
+    square24?: boolean
+    square28?: boolean
+    square32?: boolean
+    square36?: boolean
+    square40?: boolean
+    square44?: boolean
+    square48?: boolean
+    square52?: boolean
+    square56?: boolean
+    square60?: boolean
+    square64?: boolean
+    square72?: boolean
+    square80?: boolean
+    square96?: boolean
 
     /**
      * Set circle
@@ -501,14 +525,23 @@ declare module '@styli/types' {
     circle10?: boolean
     circle11?: boolean
     circle12?: boolean
-    circle13?: boolean
     circle14?: boolean
-    circle15?: boolean
     circle16?: boolean
-    circle17?: boolean
-    circle18?: boolean
-    circle19?: boolean
     circle20?: boolean
+    circle24?: boolean
+    circle28?: boolean
+    circle32?: boolean
+    circle36?: boolean
+    circle40?: boolean
+    circle44?: boolean
+    circle48?: boolean
+    circle52?: boolean
+    circle56?: boolean
+    circle60?: boolean
+    circle64?: boolean
+    circle72?: boolean
+    circle80?: boolean
+    circle96?: boolean
 
     /**
      * Set minWidth
@@ -624,18 +657,26 @@ declare module '@styli/types' {
      * minW9 is `min-width:36px`
      */
     minW9?: boolean
-
     minW10?: boolean
     minW11?: boolean
     minW12?: boolean
-    minW13?: boolean
     minW14?: boolean
-    minW15?: boolean
     minW16?: boolean
-    minW17?: boolean
-    minW18?: boolean
-    minW19?: boolean
     minW20?: boolean
+    minW24?: boolean
+    minW28?: boolean
+    minW32?: boolean
+    minW36?: boolean
+    minW40?: boolean
+    minW44?: boolean
+    minW48?: boolean
+    minW52?: boolean
+    minW56?: boolean
+    minW60?: boolean
+    minW64?: boolean
+    minW72?: boolean
+    minW80?: boolean
+    minW96?: boolean
 
     /**
      * Set maxHeight
@@ -751,18 +792,26 @@ declare module '@styli/types' {
      * maxW9 is `max-width: 36px`
      */
     maxW9?: boolean
-
     maxW10?: boolean
     maxW11?: boolean
     maxW12?: boolean
-    maxW13?: boolean
     maxW14?: boolean
-    maxW15?: boolean
     maxW16?: boolean
-    maxW17?: boolean
-    maxW18?: boolean
-    maxW19?: boolean
     maxW20?: boolean
+    maxW24?: boolean
+    maxW28?: boolean
+    maxW32?: boolean
+    maxW36?: boolean
+    maxW40?: boolean
+    maxW44?: boolean
+    maxW48?: boolean
+    maxW52?: boolean
+    maxW56?: boolean
+    maxW60?: boolean
+    maxW64?: boolean
+    maxW72?: boolean
+    maxW80?: boolean
+    maxW96?: boolean
 
     /**
      * Set min-height
@@ -878,18 +927,26 @@ declare module '@styli/types' {
      * minH9 is `min-height: 36px`
      */
     minH9?: boolean
-
     minH10?: boolean
     minH11?: boolean
     minH12?: boolean
-    minH13?: boolean
     minH14?: boolean
-    minH15?: boolean
     minH16?: boolean
-    minH17?: boolean
-    minH18?: boolean
-    minH19?: boolean
     minH20?: boolean
+    minH24?: boolean
+    minH28?: boolean
+    minH32?: boolean
+    minH36?: boolean
+    minH40?: boolean
+    minH44?: boolean
+    minH48?: boolean
+    minH52?: boolean
+    minH56?: boolean
+    minH60?: boolean
+    minH64?: boolean
+    minH72?: boolean
+    minH80?: boolean
+    minH96?: boolean
 
     /**
      * Set max-height
@@ -1005,17 +1062,25 @@ declare module '@styli/types' {
      * maxH9 is `max-height: 36px`
      */
     maxH9?: boolean
-
     maxH10?: boolean
     maxH11?: boolean
     maxH12?: boolean
-    maxH13?: boolean
     maxH14?: boolean
-    maxH15?: boolean
     maxH16?: boolean
-    maxH17?: boolean
-    maxH18?: boolean
-    maxH19?: boolean
     maxH20?: boolean
+    maxH24?: boolean
+    maxH28?: boolean
+    maxH32?: boolean
+    maxH36?: boolean
+    maxH40?: boolean
+    maxH44?: boolean
+    maxH48?: boolean
+    maxH52?: boolean
+    maxH56?: boolean
+    maxH60?: boolean
+    maxH64?: boolean
+    maxH72?: boolean
+    maxH80?: boolean
+    maxH96?: boolean
   }
 }

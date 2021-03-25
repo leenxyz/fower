@@ -123,14 +123,23 @@ declare module '@styli/types' {
     m10?: boolean
     m11?: boolean
     m12?: boolean
-    m13?: boolean
     m14?: boolean
-    m15?: boolean
     m16?: boolean
-    m17?: boolean
-    m18?: boolean
-    m19?: boolean
     m20?: boolean
+    m24?: boolean
+    m28?: boolean
+    m32?: boolean
+    m36?: boolean
+    m40?: boolean
+    m44?: boolean
+    m48?: boolean
+    m52?: boolean
+    m56?: boolean
+    m60?: boolean
+    m64?: boolean
+    m72?: boolean
+    m80?: boolean
+    m96?: boolean
 
     /**
      * Set margin horizontal
@@ -246,18 +255,26 @@ declare module '@styli/types' {
      * mx9 is `margin-left: 36px; margin-right: 36px`
      */
     mx9?: boolean
-
     mx10?: boolean
     mx11?: boolean
     mx12?: boolean
-    mx13?: boolean
     mx14?: boolean
-    mx15?: boolean
     mx16?: boolean
-    mx17?: boolean
-    mx18?: boolean
-    mx19?: boolean
     mx20?: boolean
+    mx24?: boolean
+    mx28?: boolean
+    mx32?: boolean
+    mx36?: boolean
+    mx40?: boolean
+    mx44?: boolean
+    mx48?: boolean
+    mx52?: boolean
+    mx56?: boolean
+    mx60?: boolean
+    mx64?: boolean
+    mx72?: boolean
+    mx80?: boolean
+    mx96?: boolean
 
     /**
      * Set margin vertical
@@ -373,18 +390,26 @@ declare module '@styli/types' {
      * my9 is `margin-left: 36px; margin-right: 36px`
      */
     my9?: boolean
-
     my10?: boolean
     my11?: boolean
     my12?: boolean
-    my13?: boolean
     my14?: boolean
-    my15?: boolean
     my16?: boolean
-    my17?: boolean
-    my18?: boolean
-    my19?: boolean
     my20?: boolean
+    my24?: boolean
+    my28?: boolean
+    my32?: boolean
+    my36?: boolean
+    my40?: boolean
+    my44?: boolean
+    my48?: boolean
+    my52?: boolean
+    my56?: boolean
+    my60?: boolean
+    my64?: boolean
+    my72?: boolean
+    my80?: boolean
+    my96?: boolean
 
     /**
      * Set marginTop
@@ -500,18 +525,26 @@ declare module '@styli/types' {
      * mt9 is `margin-top: 36px`
      */
     mt9?: boolean
-
     mt10?: boolean
     mt11?: boolean
     mt12?: boolean
-    mt13?: boolean
     mt14?: boolean
-    mt15?: boolean
     mt16?: boolean
-    mt17?: boolean
-    mt18?: boolean
-    mt19?: boolean
     mt20?: boolean
+    mt24?: boolean
+    mt28?: boolean
+    mt32?: boolean
+    mt36?: boolean
+    mt40?: boolean
+    mt44?: boolean
+    mt48?: boolean
+    mt52?: boolean
+    mt56?: boolean
+    mt60?: boolean
+    mt64?: boolean
+    mt72?: boolean
+    mt80?: boolean
+    mt96?: boolean
 
     /**
      * Set margin bottom, mb is margin-bottom
@@ -627,18 +660,26 @@ declare module '@styli/types' {
      * mb9 is `margin-bottom: 36px`
      */
     mb9?: boolean
-
     mb10?: boolean
     mb11?: boolean
     mb12?: boolean
-    mb13?: boolean
     mb14?: boolean
-    mb15?: boolean
     mb16?: boolean
-    mb17?: boolean
-    mb18?: boolean
-    mb19?: boolean
     mb20?: boolean
+    mb24?: boolean
+    mb28?: boolean
+    mb32?: boolean
+    mb36?: boolean
+    mb40?: boolean
+    mb44?: boolean
+    mb48?: boolean
+    mb52?: boolean
+    mb56?: boolean
+    mb60?: boolean
+    mb64?: boolean
+    mb72?: boolean
+    mb80?: boolean
+    mb96?: boolean
 
     /**
      * Set marginRight
@@ -754,18 +795,26 @@ declare module '@styli/types' {
      * mr9 is `margin-right: 36px`
      */
     mr9?: boolean
-
     mr10?: boolean
     mr11?: boolean
     mr12?: boolean
-    mr13?: boolean
     mr14?: boolean
-    mr15?: boolean
     mr16?: boolean
-    mr17?: boolean
-    mr18?: boolean
-    mr19?: boolean
     mr20?: boolean
+    mr24?: boolean
+    mr28?: boolean
+    mr32?: boolean
+    mr36?: boolean
+    mr40?: boolean
+    mr44?: boolean
+    mr48?: boolean
+    mr52?: boolean
+    mr56?: boolean
+    mr60?: boolean
+    mr64?: boolean
+    mr72?: boolean
+    mr80?: boolean
+    mr96?: boolean
 
     /**
      * Set marginLeft
@@ -881,17 +930,25 @@ declare module '@styli/types' {
      * ml9 is `margin-left: 36px`
      */
     ml9?: boolean
-
     ml10?: boolean
     ml11?: boolean
     ml12?: boolean
-    ml13?: boolean
     ml14?: boolean
-    ml15?: boolean
     ml16?: boolean
-    ml17?: boolean
-    ml18?: boolean
-    ml19?: boolean
     ml20?: boolean
+    ml24?: boolean
+    ml28?: boolean
+    ml32?: boolean
+    ml36?: boolean
+    ml40?: boolean
+    ml44?: boolean
+    ml48?: boolean
+    ml52?: boolean
+    ml56?: boolean
+    ml60?: boolean
+    ml64?: boolean
+    ml72?: boolean
+    ml80?: boolean
+    ml96?: boolean
   }
 }

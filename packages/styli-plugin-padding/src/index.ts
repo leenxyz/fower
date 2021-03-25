@@ -34,7 +34,8 @@ export function isPaddingKey(key: string) {
 export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [, matchKey = '', , xValue, , yValue] = prop.match(/^(p[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , xValue, , yValue] =
+    prop.match(/^(p[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
   // m--1px-1px
@@ -65,9 +66,9 @@ export default (): StyliPlugin => {
       const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
       if (!key || !value || !propValue || !paddingMaps[key]) return atom
 
-      const spacing = styli.getTheme<string[]>('spacing') || []
+      const spacing = styli.getTheme('spacing')
 
-      if (!spacing.length) {
+      if (!spacing) {
         console.error('theme spacing is not provide')
       }
 

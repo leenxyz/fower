@@ -116,18 +116,26 @@ declare module '@styli/types' {
      * space9 is `margin-right: 36px; margin-bottom:36px`
      */
     space9?: boolean
-
     space10?: boolean
     space11?: boolean
     space12?: boolean
-    space13?: boolean
     space14?: boolean
-    space15?: boolean
     space16?: boolean
-    space17?: boolean
-    space18?: boolean
-    space19?: boolean
     space20?: boolean
+    space24?: boolean
+    space28?: boolean
+    space32?: boolean
+    space36?: boolean
+    space40?: boolean
+    space44?: boolean
+    space48?: boolean
+    space52?: boolean
+    space56?: boolean
+    space60?: boolean
+    space64?: boolean
+    space72?: boolean
+    space80?: boolean
+    space96?: boolean
 
     /**
      * Set children elements horizontal orientation space.
@@ -241,18 +249,26 @@ declare module '@styli/types' {
      * spaceX9 is `margin-right: 36px`
      */
     spaceX9?: boolean
-
     spaceX10?: boolean
     spaceX11?: boolean
     spaceX12?: boolean
-    spaceX13?: boolean
     spaceX14?: boolean
-    spaceX15?: boolean
     spaceX16?: boolean
-    spaceX17?: boolean
-    spaceX18?: boolean
-    spaceX19?: boolean
     spaceX20?: boolean
+    spaceX24?: boolean
+    spaceX28?: boolean
+    spaceX32?: boolean
+    spaceX36?: boolean
+    spaceX40?: boolean
+    spaceX44?: boolean
+    spaceX48?: boolean
+    spaceX52?: boolean
+    spaceX56?: boolean
+    spaceX60?: boolean
+    spaceX64?: boolean
+    spaceX72?: boolean
+    spaceX80?: boolean
+    spaceX96?: boolean
 
     /**
      * Set children elements vertical orientation space.
@@ -366,17 +382,25 @@ declare module '@styli/types' {
      * spaceY9 is `margin-bottom: 36px`
      */
     spaceY9?: boolean
-
     spaceY10?: boolean
     spaceY11?: boolean
     spaceY12?: boolean
-    spaceY13?: boolean
     spaceY14?: boolean
-    spaceY15?: boolean
     spaceY16?: boolean
-    spaceY17?: boolean
-    spaceY18?: boolean
-    spaceY19?: boolean
     spaceY20?: boolean
+    spaceY24?: boolean
+    spaceY28?: boolean
+    spaceY32?: boolean
+    spaceY36?: boolean
+    spaceY40?: boolean
+    spaceY44?: boolean
+    spaceY48?: boolean
+    spaceY52?: boolean
+    spaceY56?: boolean
+    spaceY60?: boolean
+    spaceY64?: boolean
+    spaceY72?: boolean
+    spaceY80?: boolean
+    spaceY96?: boolean
   }
 }
