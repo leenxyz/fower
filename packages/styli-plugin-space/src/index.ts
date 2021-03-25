@@ -48,6 +48,7 @@ export default (): StyliPlugin => {
         propKey: key,
         propValue: spacing[Number(value)],
         className: propKey,
+        classNames: [propKey],
       }
     },
     onAtomStyleCreate(atom) {
