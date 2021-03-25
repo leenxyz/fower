@@ -218,9 +218,15 @@ export class Sheet {
     if (!isEmptyObj(mediaCss)) {
       this.setUniteClassName()
       return Object.entries(mediaCss)
-        .reverse()
-        .reduce<string[]>((r, [breakpoint, mediaCssStr]) => {
-          const rule = `@media screen and (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`
+        .reverse() // 因为 insertRule 有顺序
+        .reduce<string[]>((r, cur) => {
+          const [breakpoint, mediaCssStr] = cur
+          let rule = `.${this.className}{${mediaCssStr}}`
+
+          /** this is responsive endpoint style */
+          if (breakpoint !== 'base') {
+            rule = `@media (min-width: ${breakpoint}) {${rule}}`
+          }
           return [...r, rule]
         }, css)
     }

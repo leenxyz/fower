@@ -208,7 +208,7 @@ declare namespace StyliTypes {
       md: string
       lg: string
       xl: string
-      xxl: string
+      '2xl': string
     }
 
     spacing: string[] | number[]

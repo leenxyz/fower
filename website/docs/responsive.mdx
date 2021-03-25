@@ -43,8 +43,6 @@ Styli provides a very quick way of writing responsive styles. This way of writin
 
 The `fontSize`, `margin`, `padding` and `width` above are all responsive. In fact, any Atomic Props can be written in this way to achieve responsiveness.
 
-The Array Props is borrowed from [styled-system](https://styled-system.com/), thanks to styled-system for inventing such an elegant API.
-
 ## Endpoints
 
 By default, responsive has four breakpoints:
@@ -67,5 +65,43 @@ By default, responsive has four breakpoints:
 /* Extra Large (xl) */
 @media (min-width: 1280px) {
   /* ... */
+}
+```
+
+## Style map
+
+```jsx
+<Box width={[100, 200, 300, 400, 500]} />
+```
+
+It'll generate a CSS that looks like below:
+
+```css
+.box {
+  width: 100px;
+}
+
+@media (min-width: 640px) {
+  .box {
+    width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .box {
+    width: 500px;
+  }
 }
 ```

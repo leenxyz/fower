@@ -26,9 +26,11 @@ export default (): StyliPlugin => {
           sheet,
         )
 
+        const key = breakpoints[breakpointKeys[i - 1]] || 'base'
+
         return {
           ...result,
-          [breakpoints[breakpointKeys[i]]]: newAtom.style,
+          [key]: newAtom.style,
         }
       }, {})
 
