@@ -206,7 +206,6 @@ declare namespace StyliTypes {
     breakpoints: string[] | number[]
     spacing: string[] | number[]
     headings: string[] | number[]
-    iconSizes: string[] | number[]
     fontSize: {
       xs: string | number
       sm: string | number

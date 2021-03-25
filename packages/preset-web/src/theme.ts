@@ -28,7 +28,6 @@ export const theme: Theme = {
     '80px',
   ],
   headings: ['48px', '32px', '24px', , '20px', '16px', '14px'] as string[] | number[],
-  iconSizes: ['16px', '24px', '32px'],
   fontSize: {
     xs: '12px',
     sm: '14px',

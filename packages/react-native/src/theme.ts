@@ -22,7 +22,6 @@ export const theme: Partial<Theme> = {
     '9xl': 128,
   },
   headings: [48, 32, 24, , 20, 16, 14] as string[] | number[],
-  iconSizes: [16, 24, 32],
   lineHeight: {
     none: 1,
     tight: 1.25,

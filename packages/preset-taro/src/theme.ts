@@ -6,7 +6,6 @@ export const theme: Partial<Theme> = {
   spacing: ['0', '4rpx', '8rpx', '12rpx', '16rpx', '20rpx', '24rpx', '28rpx', '32rpx', '36rpx'],
   sizes: ['0', '4rpx', '8rpx', '12rpx', '16rpx', '20rpx', '24rpx', '28rpx', '32rpx', '36rpx'],
   headings: ['48rpx', '32rpx', '24rpx', , '20rpx', '16rpx', '14rpx'] as string[] | number[],
-  iconSizes: ['16rpx', '24rpx', '32rpx'],
   fontSize: {
     xs: '12rpx',
     sm: '14rpx',

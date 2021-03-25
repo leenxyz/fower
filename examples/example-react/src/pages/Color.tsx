@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from '@styli/react';
 
 export default () => {
@@ -6,6 +5,10 @@ export default () => {
     <Box>
       <Box text3XL fontBold>
         Color
+      </Box>
+
+      <Box textXL red500>
+        Red500
       </Box>
 
       <Box textXL red500>
@@ -60,12 +63,8 @@ export default () => {
         color="green400"
       </Box>
 
-      <Box textXL color="green400-O20">
-        color="green400-O20"
-      </Box>
-
-      <Box textXL color="green400-T20">
-        color="green400-T20"
+      <Box textXL color="green400-T40">
+        color="green400-T40"
       </Box>
 
       <Box textXL color="primary">
