@@ -30,7 +30,7 @@ export function transform(source: string, styli: any) {
       } else {
         // inject className
         toCss(path, sheet, attrs)
-        css += sheet.toCss()
+        css += sheet.toCssRules().join('')
       }
 
       removeParsedProp(path, sheet, props)

@@ -28,7 +28,6 @@ export function transparentize(color: string, amount: number = 0) {
  * ```
  */
 export function formatColor(value: string, postFix?: string): string {
-
   // #000, #000-T10, #000000, #000000-T10
   const canFormat = /^#([A-F0-9]{3}){1,2}(-[TODL]\d+)?$/i.test(value)
 

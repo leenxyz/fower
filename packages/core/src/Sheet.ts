@@ -1,13 +1,6 @@
 import { Props, Atom, Theme, CSSProperties } from '@styli/types'
-import {
-  isEmptyObj,
-  isPlainType,
-  isEqual,
-  hash,
-  parseCSSProp,
-  cssObjToStr,
-  trimStr,
-} from '@styli/utils'
+import { toRules } from '@styli/css-object-processor'
+import { isEmptyObj, isPlainType, isEqual, hash, cssObjToStr, trimStr } from '@styli/utils'
 import { corePlugin } from './plugin'
 import { styli } from './styli'
 import { styleManager } from './styleManager'
@@ -201,10 +194,10 @@ export class Sheet {
       if (className) styli.classNameCache.set(className, true)
 
       if (type === 'prefix') {
-        return [...result, ...parseCSSProp(style, className)]
+        return [...result, ...toRules(style, className)]
       }
       if (type === 'global') {
-        return [...result, ...parseCSSProp(style)]
+        return [...result, ...toRules(style)]
       }
 
       if (type === 'style') {

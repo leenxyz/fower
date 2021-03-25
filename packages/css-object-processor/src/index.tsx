@@ -1,6 +1,6 @@
-import { cssKeyToStyleKey } from './util'
-
-interface KeyValue {
+import { cssKeyToStyleKey } from '@styli/utils'
+import { CSSObject } from '@styli/types'
+interface ParsedItem {
   key: string
   value: any
 }
@@ -86,7 +86,7 @@ export function getCssObjectPaths(target: any): any {
  *
  * ```
  */
-export function mergeCssObjectPaths(paths: any): KeyValue[] {
+export function mergeCssObjectPaths(paths: any): ParsedItem[] {
   return paths.reduce((result: any, c: any) => {
     // 合并路径
     const isValue = !Array.isArray(c)
@@ -102,33 +102,13 @@ export function mergeCssObjectPaths(paths: any): KeyValue[] {
   }, [])
 }
 
-/**
- * @example
- * ```
- * Convert
- * [
- *    {
- *      key: '',
- *      value: {
- *        border: '1px solid',
- *        color: 'red'
- *      }
- *    },
- *    {
- *      key: '.button',
- *      value: {
- *        'font-size': '12px'
- *        display: 'block'
- *      }
- *    }
- * ]
- *
- * To
- *
- * .css-123 {border: 1px solid;color:red};.css-123.button{font-size:12px;display:block};
- * ```
- */
-export function parseCSSProp(cssObj: any, className = ''): string[] {
+export function parse(cssObj: any): ParsedItem[] {
+  const originPaths = getCssObjectPaths(cssObj)
+  const paths = mergeCssObjectPaths(originPaths)
+  return paths
+}
+
+export function toRules(cssObj: CSSObject, className = ''): string[] {
   const originPaths = getCssObjectPaths(cssObj)
   const paths = mergeCssObjectPaths(originPaths)
 
@@ -139,7 +119,12 @@ export function parseCSSProp(cssObj: any, className = ''): string[] {
     for (let i in value) {
       str = `${str}${[i]}: ${value[i]};`
     }
-    return `${className ? '.' + className : ''}${isPseudo ? key : ' ' + key}{${str}}`
+
+    const selector = isPseudo ? key : ' ' + key
+    const classNameWrapper = className ? '.' + className : ''
+
+    return `${classNameWrapper}${selector}{${str}}`
   })
+
   return rules
 }

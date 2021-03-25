@@ -1,5 +1,5 @@
 {
-  "name": "@styli/core",
+  "name": "@styli/css-object-processor",
   "version": "1.0.0-alpha.3",
   "license": "MIT",
   "main": "dist/index.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
@@ -19,9 +19,8 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/css-object-processor.esm.js",
   "dependencies": {
-    "@styli/css-object-processor": "^1.0.0-alpha.3",
     "@styli/types": "^1.0.0-alpha.3",
     "@styli/utils": "^1.0.0-alpha.3"
   }
