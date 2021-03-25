@@ -106,6 +106,8 @@ declare namespace StyliTypes {
 
     className?: string
 
+    classNames?: string[]
+
     /**
      * plugin name matched for this atom
      */

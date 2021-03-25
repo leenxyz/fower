@@ -22,6 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-css.esm.js",
   "dependencies": {
+    "@styli/css-object-processor": "^1.0.0-alpha.3",
     "@styli/types": "^1.0.0-alpha.3",
     "@styli/utils": "^1.0.0-alpha.3"
   }

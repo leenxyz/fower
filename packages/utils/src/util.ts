@@ -38,6 +38,13 @@ export function isPlainDirective(key: string) {
   return /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
 }
 
+/**
+ *
+ * @param key
+ * @returns
+ * @example
+ * backgroundColor -> background-color
+ */
 export function cssKeyToStyleKey(key: string) {
   return /^[A-Z].+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }

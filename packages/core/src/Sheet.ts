@@ -131,11 +131,13 @@ export class Sheet {
 
     if (typeof propValue === 'boolean') {
       atom.className = `${prefix}${propKey}`
+      atom.classNames = [`${prefix}${propKey}`]
       return atom
     }
 
     const postfix = this.getClassPostfix(propValue)
     atom.className = `${prefix}${propKey}-${postfix}`
+    atom.classNames = [`${prefix}${propKey}-${postfix}`]
 
     return atom
   }
@@ -194,7 +196,7 @@ export class Sheet {
       if (className) styli.classNameCache.set(className, true)
 
       if (type === 'prefix') {
-        return [...result, ...toRules(style, className)]
+        return [...result, ...toRules(style, atom?.classNames?.[0])]
       }
       if (type === 'global') {
         return [...result, ...toRules(style)]

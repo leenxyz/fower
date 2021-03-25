@@ -3,5 +3,6 @@ import { toRules } from '@styli/css-object-processor'
 import { styleManager } from '@styli/core'
 
 export function injectGlobalStyle(cssObj: CSSObject) {
-  styleManager.insertStyles(toRules(cssObj))
+  const rules = toRules(cssObj)
+  styleManager.insertStyles(rules)
 }

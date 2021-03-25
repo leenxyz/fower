@@ -1,15 +1,22 @@
-import { cssKeyToStyleKey } from '@styli/utils'
+import { cssKeyToStyleKey, hash } from '@styli/utils'
 import { CSSObject } from '@styli/types'
+
+type Dict = Record<string, any>
+type FlattenItem = (string | Dict)[]
+
 interface ParsedItem {
-  key: string
-  value: any
+  selector: string
+  style: Dict
 }
 
 /**
- * @example
- * ```
- * Convert
  *
+ * @param cssObj
+ * @returns
+ *
+ * @example
+ *
+ * ```
  * const css = {
  *    border: '1px solid',
  *    color: 'red',
@@ -29,28 +36,35 @@ interface ParsedItem {
  * ]
  * ```
  */
-export function getCssObjectPaths(target: any): any {
-  if (typeof target === 'object') {
-    const keys = Object.keys(target)
-    // 遍历第一层
-    return keys.reduce((p, k) => {
-      // 第一层值
-      const value = target[k]
-      const child = getCssObjectPaths(value)
+export function flatten(cssObj: CSSObject): FlattenItem[] {
+  // false value
+  if (!cssObj) return cssObj
 
-      // 对象类型
-      if (typeof child === 'object') {
-        return child.reduce((r: any, a: any) => {
-          return [...r, [k, ...a]]
-        }, p)
-        // 值类型
-      } else {
-        return [...p, [{ [cssKeyToStyleKey(k)]: child }]]
-      }
-    }, [])
-  } else {
-    return target
-  }
+  //  not object, just css primitive value like '10px', 'red
+  if (typeof cssObj !== 'object') return cssObj
+
+  // responsive value
+  if (Array.isArray(cssObj)) return cssObj
+
+  /** is plain object */
+  const keys = Object.keys(cssObj)
+
+  // 遍历第一层
+  return keys.reduce<FlattenItem[]>((result, key) => {
+    // 第一层值
+    const value = (cssObj as any)[key]
+
+    const flattenResult = flatten(value)
+
+    /** primitive value */
+    if (!Array.isArray(flattenResult)) {
+      return [...result, [{ [cssKeyToStyleKey(key)]: flattenResult }]]
+    }
+
+    return flattenResult.reduce<FlattenItem[]>((r, cur) => {
+      return [...r, [key, ...cur]]
+    }, result)
+  }, [])
 }
 
 /**
@@ -58,26 +72,28 @@ export function getCssObjectPaths(target: any): any {
  * ```
  * Convert
  *
- * [
- *    [{ border: '1px solid'}]
- *    [{ color: 'red'}]
- *    ['.button', { font-size: '12px'}]
- *    ['.button', { display: 'block'}]
- * ]
+ * const css = {
+ *    border: '1px solid',
+ *    color: 'red',
+ *    '.button': {
+ *       fontSize: '12px'
+ *       display: 'block'
+ *    }
+ * }
  *
  * To
  *
  * [
  *    {
- *      key: '',
- *      value: {
+ *      selector: '',
+ *      style: {
  *        border: '1px solid',
  *        color: 'red'
  *      }
  *    },
  *    {
- *      key: '.button',
- *      value: {
+ *      selector: '.button',
+ *      style: {
  *        'font-size': '12px'
  *        display: 'block'
  *      }
@@ -86,44 +102,61 @@ export function getCssObjectPaths(target: any): any {
  *
  * ```
  */
-export function mergeCssObjectPaths(paths: any): ParsedItem[] {
-  return paths.reduce((result: any, c: any) => {
-    // 合并路径
-    const isValue = !Array.isArray(c)
-    const value = isValue ? c : c.pop()
-    const path = isValue ? '' : c.join('')
 
-    const idx = result.findIndex(({ key }: any) => key === path)
-    result[idx === -1 ? result.length : idx] = {
-      key: path,
-      value: Object.assign({}, idx === -1 ? {} : result[idx].value, value),
-    }
-    return result
+export function parse(cssObj: CSSObject): ParsedItem[] {
+  const flattenItems = flatten(cssObj)
+
+  const paths = flattenItems.reduce<ParsedItem[]>((result, item) => {
+    const style = item.pop() as Dict
+    const selector = item.join('')
+
+    return [...result, { selector, style }]
   }, [])
-}
 
-export function parse(cssObj: any): ParsedItem[] {
-  const originPaths = getCssObjectPaths(cssObj)
-  const paths = mergeCssObjectPaths(originPaths)
   return paths
 }
 
-export function toRules(cssObj: CSSObject, className = ''): string[] {
-  const originPaths = getCssObjectPaths(cssObj)
-  const paths = mergeCssObjectPaths(originPaths)
+/**
+ * { color: 'red' } => 'color: red'
+ * @param style
+ *
+ */
+function toRuleContent(style: Dict) {
+  let str = ''
+  for (const [key, value] of Object.entries(style)) {
+    str += `${key}: ${value}`
+  }
+  return str
+}
 
-  const rules = paths.map(({ key, value }) => {
-    const isPseudo = /^::?.+/.test(key)
+/**
+ *  to rules can insertRule
+ * @param cssObj
+ * @param className
+ * @returns
+ */
+export function toRules(cssObj: CSSObject, className?: string): string[] {
+  // const hashed = hash(JSON.stringify(cssObj))
+  // const selfClassName = className ?? 'css-' + hashed
+  // const wrapperSelector = `.${selfClassName}`
+  const wrapperSelector = className ? `.${className}` : ''
 
-    let str = ''
-    for (let i in value) {
-      str = `${str}${[i]}: ${value[i]};`
+  const parsed = parse(cssObj)
+
+  const rules = parsed.map(({ selector, style }) => {
+    const ruleContent = toRuleContent(style)
+
+    // not nested style
+    if (selector === '') {
+      const atomicClassName = `css-${hash(JSON.stringify(style))}`
+      return `.${atomicClassName} {${ruleContent}}`
     }
 
-    const selector = isPseudo ? key : ' ' + key
-    const classNameWrapper = className ? '.' + className : ''
+    const isPseudo = /^::?.+/.test(selector)
+    const connector = isPseudo ? '' : ' '
+    const finalSelector = wrapperSelector + connector + selector
 
-    return `${classNameWrapper}${selector}{${str}}`
+    return `${finalSelector} {${ruleContent}}`
   })
 
   return rules
