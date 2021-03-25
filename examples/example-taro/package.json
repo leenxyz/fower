@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-taro",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "@styli/taro demo",
   "templateInfo": {
     "name": "default",
@@ -37,11 +37,11 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@styli/taro": "^1.0.0-alpha.4",
     "@tarojs/components": "3.1.0-beta.4",
     "@tarojs/react": "3.1.0-beta.4",
     "@tarojs/runtime": "3.1.0-beta.4",
     "@tarojs/taro": "3.1.0-beta.4",
-    "@styli/taro": "^1.0.0-alpha.3",
     "react": "17.x",
     "react-dom": "17.x"
   },

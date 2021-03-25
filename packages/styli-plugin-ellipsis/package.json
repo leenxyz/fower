@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-ellipsis",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-ellipsis.esm.js",
   "dependencies": {
-    "@styli/core": "^1.0.0-alpha.3",
-    "@styli/types": "^1.0.0-alpha.3",
-    "@styli/utils": "^1.0.0-alpha.3"
+    "@styli/core": "^1.0.0-alpha.4",
+    "@styli/types": "^1.0.0-alpha.4",
+    "@styli/utils": "^1.0.0-alpha.4"
   }
 }

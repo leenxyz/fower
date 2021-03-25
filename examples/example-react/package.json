@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-react",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "scripts": {
     "start": "umi dev",
     "postinstall": "umi generate tmp",
@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "@styli/react": "^1.0.0-alpha.4",
     "@umijs/preset-react": "1.x",
-    "@styli/react": "^1.0.0-alpha.3",
     "umi": "^3.3.9"
   },
   "devDependencies": {
