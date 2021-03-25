@@ -9,7 +9,6 @@ import {
   isPercentNumber,
   cssKeyToStyleKey,
   isPlainType,
-  formatColor,
 } from '../src'
 
 describe('styli-utils', () => {

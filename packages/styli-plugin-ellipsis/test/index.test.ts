@@ -11,7 +11,7 @@ describe('styli-plugin-ellipsis', () => {
   it('isMatch', () => {
     expect(isMatch!('ellipsis')).toEqual(true)
     expect(isMatch!('ellipsis1')).toEqual(true)
-    expect(isMatch!('ellipsisquare-100')).toEqual(true)
+    expect(isMatch!('ellipsis-100')).toEqual(true)
     expect(isMatch!('ellipsis2-200')).toEqual(true)
   })
 
