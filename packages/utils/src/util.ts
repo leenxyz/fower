@@ -1,4 +1,5 @@
 import { noCase } from 'no-case'
+import hash from 'string-hash'
 import { StyliPlugin, PluginCategory } from '@styli/types'
 
 export function upFirst(s: string = '') {
@@ -90,4 +91,9 @@ export function getFlexDirection(props: any): string {
   if (props.column) return 'column'
   if (props.flexDirection) return props.flexDirection
   return 'row'
+}
+
+export function styleToClassName(style: any, prefix = 'css-') {
+  const hashed = hash(JSON.stringify(style))
+  return prefix + hashed
 }

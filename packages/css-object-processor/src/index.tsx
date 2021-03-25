@@ -1,4 +1,4 @@
-import { cssKeyToStyleKey, hash } from '@styli/utils'
+import { cssKeyToStyleKey, styleToClassName } from '@styli/utils'
 import { CSSObject } from '@styli/types'
 
 type Dict = Record<string, any>
@@ -136,9 +136,6 @@ function toRuleContent(style: Dict) {
  * @returns
  */
 export function toRules(cssObj: CSSObject, className?: string): string[] {
-  // const hashed = hash(JSON.stringify(cssObj))
-  // const selfClassName = className ?? 'css-' + hashed
-  // const wrapperSelector = `.${selfClassName}`
   const wrapperSelector = className ? `.${className}` : ''
 
   const parsed = parse(cssObj)
@@ -148,7 +145,7 @@ export function toRules(cssObj: CSSObject, className?: string): string[] {
 
     // not nested style
     if (selector === '') {
-      const atomicClassName = `css-${hash(JSON.stringify(style))}`
+      const atomicClassName = styleToClassName(style)
       return `.${atomicClassName} {${ruleContent}}`
     }
 
