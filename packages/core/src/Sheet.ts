@@ -217,9 +217,12 @@ export class Sheet {
 
     if (!isEmptyObj(mediaCss)) {
       this.setUniteClassName()
-      return Object.entries(mediaCss).reduce<string[]>((r, [breakpoint, mediaCssStr]) => {
-        return [...r, `@media (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`]
-      }, css)
+      return Object.entries(mediaCss)
+        .reverse()
+        .reduce<string[]>((r, [breakpoint, mediaCssStr]) => {
+          const rule = `@media screen and (min-width: ${breakpoint}) { .${this.className}{${mediaCssStr}} }`
+          return [...r, rule]
+        }, css)
     }
 
     return css

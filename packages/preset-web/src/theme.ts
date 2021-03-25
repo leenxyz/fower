@@ -2,7 +2,21 @@ import { Theme } from '@styli/types'
 import { colors } from '@styli/colors'
 
 export const theme: Theme = {
-  breakpoints: ['640px', '768px', '1024px', '1280px'],
+  breakpoints: {
+    // => @media (min-width: 640px) { ... }
+    sm: '640px',
+    // => @media (min-width: 768px) { ... }
+    md: '768px',
+
+    // => @media (min-width: 1024px) { ... }
+    lg: '1024px',
+
+    // => @media (min-width: 1280px) { ... }
+    xl: '1280px',
+
+    // => @media (min-width: 1536px) { ... }
+    xxl: '1536px',
+  },
   colors,
   spacing: [
     '0',

@@ -203,7 +203,14 @@ declare namespace StyliTypes {
   }
 
   interface Theme {
-    breakpoints: string[] | number[]
+    breakpoints: {
+      sm: string
+      md: string
+      lg: string
+      xl: string
+      xxl: string
+    }
+
     spacing: string[] | number[]
     headings: string[] | number[]
     fontSize: {

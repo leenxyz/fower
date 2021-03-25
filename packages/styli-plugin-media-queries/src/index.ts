@@ -9,18 +9,26 @@ export default (): StyliPlugin => {
 
       if (!Array.isArray(propValue) || !plugin.isMatch!(propKey)) return atom
 
-      const breakpoints = styli.getTheme('breakpoints')
+      const breakpoints = styli.getTheme('breakpoints') || {}
+      const breakpointKeys = Object.keys(breakpoints)
 
-      if (!breakpoints?.length) {
+      if (!breakpointKeys.length) {
         console.error('theme breakpoints not provide')
       }
 
       atom.type = 'media-queries'
-      atom.style = propValue.reduce((result, cur, idx) => {
-        const newAtom = plugin.onAtomStyleCreate!({ ...atom, propValue: cur }, sheet)
+      atom.style = propValue.reduce((result, cur, i) => {
+        const newAtom = plugin.onAtomStyleCreate!(
+          {
+            ...atom,
+            propValue: cur,
+          },
+          sheet,
+        )
+
         return {
           ...result,
-          [breakpoints[idx]]: newAtom.style,
+          [breakpoints[breakpointKeys[i]]]: newAtom.style,
         }
       }, {})
 
