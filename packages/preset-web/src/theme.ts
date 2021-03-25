@@ -5,6 +5,7 @@ export const theme: Theme = {
   breakpoints: {
     // => @media (min-width: 640px) { ... }
     sm: '640px',
+
     // => @media (min-width: 768px) { ... }
     md: '768px',
 
@@ -65,6 +66,14 @@ export const theme: Theme = {
     relaxed: 1.625,
     loose: 2,
   },
+  letterSpacings: {
+    tighter: '-0.9px',
+    tight: '-0.45px',
+    normal: '0px',
+    wide: '0.45px',
+    wider: '0.9px',
+    widest: '1.8px',
+  },
   borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: '0',
@@ -93,7 +102,7 @@ export const theme: Theme = {
     normal: 400,
     medium: 500,
     semibold: 600,
-    bold: 'bold',
+    bold: 700,
     extrabold: 800,
     black: 900,
   },

@@ -58,7 +58,7 @@ export const theme: Partial<Theme> = {
     normal: 400,
     medium: 500,
     semibold: 600,
-    bold: 'bold',
+    bold: 700,
     extrabold: 800,
     black: 900,
   },

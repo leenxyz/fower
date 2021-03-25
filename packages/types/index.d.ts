@@ -228,6 +228,19 @@ declare namespace StyliTypes {
       '8xl': string | number
       '9xl': string | number
     }
+
+    fontWeights: {
+      hairline: string | number
+      thin: string | number
+      light: string | number
+      normal: string | number
+      medium: string | number
+      semibold: string | number
+      bold: string | number
+      extrabold: string | number
+      black: string | number
+    }
+
     lineHeight: {
       none: number | string
       tight: number | string
@@ -235,6 +248,14 @@ declare namespace StyliTypes {
       normal: number | string
       relaxed: number | string
       loose: number | string
+    }
+    letterSpacings: {
+      tighter: number | string
+      tight: number | string
+      normal: number | string
+      wide: number | string
+      wider: number | string
+      widest: number | string
     }
     borderWidths: string[] | number[]
     borderRadius: {

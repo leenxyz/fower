@@ -1,5 +1,9 @@
 # TODO List
 
+- left,top, right,bottom support spacing
+
+- plugin-letter-spacing
+
 - Global Styles
 
 ```js
