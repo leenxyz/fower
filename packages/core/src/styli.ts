@@ -1,4 +1,4 @@
-import { formatColor, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
+import { downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
 import {
   StyliPlugin,
   Configuration,
@@ -88,12 +88,17 @@ class Styli {
     return this.getTheme('colors') || {}
   }
 
-  getStyliColorValue = (value: string): string => {
+  /**
+   * #444-D30 -> ['#444', 'D30']
+   * @param value
+   * @returns
+   */
+  extractColor = (value: string): [string, string] => {
     const colors = this.getColors()
     const [prefix, postfix] = (value || '').split('-') || []
     const colorName = downFirst(prefix)
     const color = colors[colorName] || prefix
-    return formatColor(color, postfix)
+    return [color, postfix]
   }
 
   use = (...plugins: StyliPlugin[]) => {

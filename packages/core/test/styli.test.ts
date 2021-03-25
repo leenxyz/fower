@@ -37,14 +37,6 @@ describe('styli-core', () => {
     expect(styli.isStyliColor('gray30-T10')).toBeTruthy()
   })
 
-  it('getStyliColorValue', () => {
-    expect(styli.getStyliColorValue('gray30')).toEqual('#333333')
-    expect(styli.getStyliColorValue('gray30-T10')).toEqual('rgba(51,51,51,0.9)')
-    expect(styli.getStyliColorValue('gray30-O10')).toEqual('#333333')
-    expect(styli.getStyliColorValue('gray30-D10')).toEqual('#191919')
-    expect(styli.getStyliColorValue('gray30-L10')).toEqual('#4d4d4d')
-  })
-
   it('use', () => {
     const plugin: StyliPlugin = {
       name: 'styli-plugin-test',

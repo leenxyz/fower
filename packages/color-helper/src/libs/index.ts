@@ -196,10 +196,10 @@ export function getColorFromRgbValue(value: RgbValue | RgbaValue): string {
 }
 
 /**
- * @description Deepen color
- * @param {string} color   Hex|Rgb|Rgba color or color keyword
- * @param {number} percent of Deepen (1-100)
- * @return {string} Rgba color
+ * Deepen color
+ * @param color Hex|Rgb|Rgba color or color keyword
+ * @param percent percent of Deepen (1-100)
+ * @returns Rgba color
  */
 export function darken(color: string, percent = 0): string {
   let rgbaValue = getRgbaValue(color)
@@ -212,10 +212,10 @@ export function darken(color: string, percent = 0): string {
 }
 
 /**
- * @description Brighten color
- * @param {string} color   Hex|Rgb|Rgba color or color keyword
- * @param {number} percent of brighten (1-100)
- * @return {string} Rgba color
+ *  Brighten color
+ * @param color Hex|Rgb|Rgba color or color keyword
+ * @param percent  of brighten (1-100)
+ * @returns Rgba color
  */
 export function lighten(color: string, percent = 0): string {
   let rgbaValue = getRgbaValue(color)
@@ -228,10 +228,11 @@ export function lighten(color: string, percent = 0): string {
 }
 
 /**
- * @description Adjust color opacity
- * @param {string} color   Hex|Rgb|Rgba color or color keyword
- * @param {number} percent of opacity
- * @return {string} Rgba color
+ *
+ * description Adjust color opacity
+ * @param color Hex|Rgb|Rgba color or color keyword
+ * @param percent  percent of opacity
+ * @returns  Rgba color
  */
 export function fade(color: string, percent = 100): string {
   const rgbValue = getRgbValue(color)

@@ -1,4 +1,5 @@
 import { styli } from '@styli/core'
+import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
 import { isNumber } from '@styli/utils'
 
@@ -25,7 +26,9 @@ function formatBorderValue(value: string) {
   const result = value.split(/\s+/)
   // if not like: 1px solid #555
   if (result.length !== 3) return value
-  result[2] = styli.getStyliColorValue(result[2])
+
+  const [color, posfix] = styli.extractColor(result[2])
+  result[2] = formatColor(color, posfix)
   return result.join(' ')
 }
 
@@ -61,11 +64,13 @@ function borderPropToStyle(prop: string, propValue: any) {
 
   /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
   if (styli.isStyliColor(postfix)) {
-    return { borderColor: styli.getStyliColorValue(postfix) }
+    const [color, posfix] = styli.extractColor(postfix)
+    return { borderColor: formatColor(color, posfix) }
   }
 
   if (/^color/i.test(postfix)) {
-    return { [prop]: styli.getStyliColorValue(propValue) }
+    const [color, posfix] = styli.extractColor(postfix)
+    return { [prop]: formatColor(color, posfix) }
   }
 
   return {

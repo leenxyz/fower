@@ -1,4 +1,5 @@
 import { styli } from '@styli/core'
+import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
 import { isBgKey, isBgImgKey, isBgPosKey, isBgRepeatKey, isBgSizeKey, isMatch } from './utils'
 
@@ -9,15 +10,18 @@ function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgRepeatKey(propKey)) return { backgroundRepeat: propValue }
 
   if (isBgKey(propKey)) {
-    return { backgroundColor: styli.getStyliColorValue(propValue) }
+    const [color, posfix] = styli.extractColor(propValue)
+    return { backgroundColor: formatColor(color, posfix) }
   }
 
   // handle  backgroundColor
   if (/^backgroundColor$/i.test(propKey)) {
-    return { backgroundColor: styli.getStyliColorValue(propValue) }
+    const [color, posfix] = styli.extractColor(propValue)
+    return { backgroundColor: formatColor(color, posfix) }
   }
 
-  return { backgroundColor: styli.getStyliColorValue(propKey.replace(/^bg/i, '')) }
+  const [color, posfix] = styli.extractColor(propKey.replace(/^bg/i, ''))
+  return { backgroundColor: formatColor(color, posfix) }
 }
 
 export default (): StyliPlugin => {

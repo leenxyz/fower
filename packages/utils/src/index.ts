@@ -4,5 +4,4 @@ import hash from 'string-hash'
 
 export { isBrowser, isEqual, hash }
 
-export * from './colors'
 export * from './util'

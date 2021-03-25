@@ -1,12 +1,11 @@
 {
-  "name": "styli-plugin-background",
+  "name": "@styli/color-helper",
   "version": "1.0.0-alpha.3",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "types/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -20,11 +19,5 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/styli-plugin-background.esm.js",
-  "dependencies": {
-    "@styli/color-helper": "^1.0.0-alpha.3",
-    "@styli/core": "^1.0.0-alpha.3",
-    "@styli/types": "^1.0.0-alpha.3",
-    "@styli/utils": "^1.0.0-alpha.3"
-  }
+  "module": "dist/color-helper.esm.js"
 }

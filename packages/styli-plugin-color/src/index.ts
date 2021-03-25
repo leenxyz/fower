@@ -1,4 +1,5 @@
 import { styli } from '@styli/core'
+import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
 
 function isColorTheme(key: string) {
@@ -23,15 +24,18 @@ export function isColorKey(key: string) {
 
 export function colorPropToStyle(propKey: string, propValue: any): any {
   if (propKey === 'color') {
-    return { color: styli.getStyliColorValue(propValue) }
+    const [color, posfix] = styli.extractColor(propValue)
+    return { color: formatColor(color, posfix) }
   }
 
   if (isColorTheme(propKey)) {
     const colorName = propKey.replace(/^color/, '')
-    return { color: styli.getStyliColorValue(colorName) }
+    const [color, posfix] = styli.extractColor(colorName)
+    return { color: formatColor(color, posfix) }
   }
 
-  return { color: styli.getStyliColorValue(propKey.replace(/^color/i, '')) }
+  const [color, posfix] = styli.extractColor(propKey.replace(/^color/i, ''))
+  return { color: formatColor(color, posfix) }
 }
 
 export default (): StyliPlugin => {
