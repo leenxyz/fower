@@ -15,7 +15,7 @@ import rounded from 'styli-plugin-rounded'
 import size from 'styli-plugin-size'
 import textAlign from 'styli-plugin-text-align'
 import textSize from 'styli-plugin-text-size'
-import textWeight from 'styli-plugin-text-weight'
+import fontWeight from 'styli-plugin-font-weight'
 import zIndex from 'styli-plugin-z-index'
 
 export const plugins = [
@@ -36,6 +36,6 @@ export const plugins = [
   size(),
   textAlign(),
   textSize(),
-  textWeight(),
+  fontWeight(),
   zIndex(),
 ]

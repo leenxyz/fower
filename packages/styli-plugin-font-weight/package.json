@@ -1,5 +1,5 @@
 {
-  "name": "styli-plugin-text-weight",
+  "name": "styli-plugin-font-weight",
   "version": "1.0.0-alpha.4",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/styli-plugin-text-weight.esm.js",
+  "module": "dist/styli-plugin-font-weight.esm.js",
   "dependencies": {
     "@styli/core": "^1.0.0-alpha.4",
     "@styli/types": "^1.0.0-alpha.4",

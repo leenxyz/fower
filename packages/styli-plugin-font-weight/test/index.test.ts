@@ -2,7 +2,7 @@ import { styli } from '@styli/core'
 import { Atom } from '@styli/types'
 import plugin from '../src'
 
-describe('styli-plugin-text-weight', () => {
+describe('styli-plugin-font-weight', () => {
   styli.configure(() => {
     return {
       theme: {

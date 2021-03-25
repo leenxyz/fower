@@ -18,7 +18,7 @@ import textAlign from 'styli-plugin-text-align'
 import textHeading from 'styli-plugin-text-heading'
 import textSize from 'styli-plugin-text-size'
 import textTransform from 'styli-plugin-text-transform'
-import textWeight from 'styli-plugin-text-weight'
+import fontWeight from 'styli-plugin-font-weight'
 import zIndex from 'styli-plugin-z-index'
 import outline from 'styli-plugin-outline'
 import ellipsis from 'styli-plugin-ellipsis'
@@ -44,7 +44,7 @@ export const plugins = [
   textHeading(),
   textSize(),
   textTransform(),
-  textWeight(),
+  fontWeight(),
   zIndex(),
   outline(),
   ellipsis(),
