@@ -60,13 +60,15 @@ export const theme: Partial<Theme> = {
     relaxed: 1.625,
     loose: 2,
   },
-  borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: 0,
     sm: 2,
-    default: 4,
+    base: 4,
     md: 6,
     lg: 8,
+    xl: 12,
+    '2xl': 16,
+    '3xl': 24,
     full: 9999,
   },
   fontWeights: {

@@ -288,7 +288,6 @@ declare namespace StyliTypes {
       wider: number | string
       widest: number | string
     }
-    borderWidths: string[] | number[]
     borderRadius: {
       none: number | string
       sm: number | string

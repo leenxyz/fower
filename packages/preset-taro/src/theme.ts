@@ -60,13 +60,15 @@ export const theme: Partial<Theme> = {
     loose: 2,
   },
   borderColors: ['#dddddd', '#f0f0f0'],
-  borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: '0',
     sm: '2rpx',
-    default: '4rpx',
+    base: '4rpx',
     md: '6rpx',
     lg: '8rpx',
+    xl: '12rpx',
+    '2xl': '16rpx',
+    '3xl': '24rpx',
     full: '9999rpx',
   },
   shadow: {

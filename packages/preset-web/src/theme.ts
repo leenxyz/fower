@@ -83,13 +83,15 @@ export const theme: Theme = {
     wider: '0.9px',
     widest: '1.8px',
   },
-  borderWidths: [0, 1, 2, 4],
   borderRadius: {
     none: '0',
     sm: '2px',
-    default: '4px',
+    base: '4px',
     md: '6px',
     lg: '8px',
+    xl: '12px',
+    '2xl': '16px',
+    '3xl': '24px',
     full: '9999px',
   },
   shadow: {

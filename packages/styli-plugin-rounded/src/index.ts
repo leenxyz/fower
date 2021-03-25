@@ -27,23 +27,48 @@ export const roundedMaps: any = {
   roundedBR: [`${P.bottom}${P.right}`],
 }
 
-export function isRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])?(-.+)?$/.test(key) || key === 'roundedFull'
-}
+const presetReg = /(none|sm|md|lg|[23]?xl|full)$/i
 
+export function isRoundedKey(key: string) {
+  return /^rounded([TLRB]|T[LR]|B[LR])?(none|sm|md|lg|[23]?xl|full)?(-.+)?$/i.test(key)
+}
+/**
+ * TODO: need improve
+ * @param prop
+ * @param propValue
+ * @returns
+ */
 export function roundedPropToStyle(prop: string, propValue: any) {
   let style: any = {}
+  const borderRadius = styli.getTheme('borderRadius')
+
+  // <Box rounded></Box>
+  if (prop === 'rounded' && typeof propValue === 'boolean') {
+    return { borderRadius: borderRadius['base'] }
+  }
+
+  //  roundedNone|roundedSM|roundedXL|roundedFull..
+  if (presetReg.test(prop) && typeof propValue === 'boolean') {
+    const [themeKey] = prop.match(presetReg) || []
+    if (themeKey && borderRadius[themeKey.toLowerCase()]) {
+      const key = prop.replace(themeKey, '')
+      const roundedValue = borderRadius[themeKey.toLowerCase()]
+      if (key === 'rounded') {
+        return { borderRadius: roundedValue }
+      } else {
+        for (const p of roundedMaps[key]) {
+          style[`border${p}Radius`] = roundedValue
+        }
+        return style
+      }
+    }
+  }
+
   const [key, value] = prop.split('-')
   const roundedValue = isValidPropValue(propValue) ? propValue : value
 
   /** @example rounded-4, rounded-8 */
   if (key === 'rounded') return { borderRadius: styli.getValue(roundedValue) }
-
-  /** @example roundedFull */
-  if (/^roundedFull$/i.test(key)) return { borderRadius: '9999px' }
-
-  /** @example roundedNone */
-  if (/^roundedNone$/i.test(key)) return { borderRadius: 0 }
 
   for (const p of roundedMaps[key]) {
     style[`border${p}Radius`] = styli.getValue(roundedValue)

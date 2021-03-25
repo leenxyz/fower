@@ -28,7 +28,15 @@ declare module '@styli/types' {
      * <View roundedFull></View>
      * ```
      */
-    roundedFull?: PropValue
+    roundedFull?: boolean
+
+    roundedNone?: boolean
+    roundedSM?: boolean
+    roundedMD?: boolean
+    roundedLG?: boolean
+    roundedXL?: boolean
+    rounded2XL?: boolean
+    rounded3XL?: boolean
 
     /**
      * Set borderTopLeftRadius and borderTopRightRadius
@@ -44,6 +52,14 @@ declare module '@styli/types' {
      */
     roundedT?: PropValue
 
+    roundedTNone?: boolean
+    roundedTSM?: boolean
+    roundedTMD?: boolean
+    roundedTLG?: boolean
+    roundedTXL?: boolean
+    roundedT2XL?: boolean
+    roundedT3XL?: boolean
+
     /**
      * Set borderTopRightRadius and borderBottomRightRadius
      *
@@ -57,6 +73,14 @@ declare module '@styli/types' {
      * ```
      */
     roundedR?: PropValue
+
+    roundedRNone?: boolean
+    roundedRSM?: boolean
+    roundedRMD?: boolean
+    roundedRLG?: boolean
+    roundedRXL?: boolean
+    roundedR2XL?: boolean
+    roundedR3XL?: boolean
 
     /**
      * Set borderBottomLeftRadius and borderBottomRightRadius
@@ -72,6 +96,14 @@ declare module '@styli/types' {
      */
     roundedB?: PropValue
 
+    roundedBNone?: boolean
+    roundedBSM?: boolean
+    roundedBMD?: boolean
+    roundedBLG?: boolean
+    roundedBXL?: boolean
+    roundedB2XL?: boolean
+    roundedB3XL?: boolean
+
     /**
      * Set borderTopLeftRadius and borderBottomLeftRadius
      *
@@ -85,6 +117,14 @@ declare module '@styli/types' {
      * ```
      */
     roundedL?: PropValue
+
+    roundedLNone?: boolean
+    roundedLSM?: boolean
+    roundedLMD?: boolean
+    roundedLLG?: boolean
+    roundedLXL?: boolean
+    roundedL2XL?: boolean
+    roundedL3XL?: boolean
 
     /**
      * Set borderTopLeftRadius
@@ -100,6 +140,14 @@ declare module '@styli/types' {
      */
     roundedTL?: PropValue
 
+    roundedTLNone?: boolean
+    roundedTLSM?: boolean
+    roundedTLMD?: boolean
+    roundedTLLG?: boolean
+    roundedTLXL?: boolean
+    roundedTL2XL?: boolean
+    roundedTL3XL?: boolean
+
     /**
      * Set borderTopRightRadius
      *
@@ -114,6 +162,14 @@ declare module '@styli/types' {
      */
     roundedTR?: PropValue
 
+    roundedTRNone?: boolean
+    roundedTRSM?: boolean
+    roundedTRMD?: boolean
+    roundedTRLG?: boolean
+    roundedTRXL?: boolean
+    roundedTR2XL?: boolean
+    roundedTR3XL?: boolean
+
     /**
      * Set borderBottomLeftRadius
      *
@@ -127,6 +183,13 @@ declare module '@styli/types' {
      * ```
      */
     roundedBL?: PropValue
+    roundedBLNone?: boolean
+    roundedBLSM?: boolean
+    roundedBLMD?: boolean
+    roundedBLLG?: boolean
+    roundedBLXL?: boolean
+    roundedBL2XL?: boolean
+    roundedBL3XL?: boolean
 
     /**
      * Set borderBottomRightRadius
@@ -141,5 +204,12 @@ declare module '@styli/types' {
      * ```
      */
     roundedBR?: PropValue
+    roundedBRNone?: boolean
+    roundedBRSM?: boolean
+    roundedBRMD?: boolean
+    roundedBRLG?: boolean
+    roundedBRXL?: boolean
+    roundedBR2XL?: boolean
+    roundedBR3XL?: boolean
   }
 }
