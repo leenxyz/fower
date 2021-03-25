@@ -9,9 +9,7 @@ import {
   isPercentNumber,
   cssKeyToStyleKey,
   isPlainType,
-  getCssObjectPaths,
-  mergeCssObjectPaths,
-  formatColor
+  formatColor,
 } from '../src'
 
 describe('styli-utils', () => {
@@ -70,46 +68,5 @@ describe('styli-utils', () => {
     expect(isPlainType('10p')).toEqual(true)
     expect(isPlainType(null)).toEqual(false)
     expect(isPlainType(new Date())).toEqual(false)
-  })
-
-  const css = {
-    border: '1px solid',
-    color: 'red',
-    '.button': {
-      fontSize: '12px',
-      display: 'block',
-    },
-  }
-
-  const paths = [
-    [{ border: '1px solid' }],
-    [{ color: 'red' }],
-    ['.button', { 'font-size': '12px' }],
-    ['.button', { display: 'block' }],
-  ]
-
-  const mergedPaths = [
-    {
-      key: '',
-      value: {
-        border: '1px solid',
-        color: 'red',
-      },
-    },
-    {
-      key: '.button',
-      value: {
-        'font-size': '12px',
-        display: 'block',
-      },
-    },
-  ]
-
-  it('getCssObjectPaths', () => {
-    expect(getCssObjectPaths(css)).toEqual(paths)
-  })
-
-  it('mergeCssObjectPaths', () => {
-    expect(mergeCssObjectPaths(paths)).toEqual(mergedPaths)
   })
 })
