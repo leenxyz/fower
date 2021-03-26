@@ -1,6 +1,6 @@
 {
   "name": "@styli/styled",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,10 +24,10 @@
     "@types/hoist-non-react-statics": "^3.3.1"
   },
   "dependencies": {
-    "@styli/core": "^1.0.0-alpha.4",
-    "@styli/theming": "^1.0.0-alpha.4",
-    "@styli/types": "^1.0.0-alpha.4",
-    "@styli/utils": "^1.0.0-alpha.4",
+    "@styli/core": "^1.0.0-alpha.5",
+    "@styli/theming": "^1.0.0-alpha.5",
+    "@styli/types": "^1.0.0-alpha.5",
+    "@styli/utils": "^1.0.0-alpha.5",
     "hoist-non-react-statics": "^3.3.2"
   }
 }

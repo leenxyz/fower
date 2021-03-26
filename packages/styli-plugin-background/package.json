@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-background",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-background.esm.js",
   "dependencies": {
-    "@styli/color-helper": "^1.0.0-alpha.4",
-    "@styli/core": "^1.0.0-alpha.4",
-    "@styli/types": "^1.0.0-alpha.4",
-    "@styli/utils": "^1.0.0-alpha.4"
+    "@styli/color-helper": "^1.0.0-alpha.5",
+    "@styli/core": "^1.0.0-alpha.5",
+    "@styli/types": "^1.0.0-alpha.5",
+    "@styli/utils": "^1.0.0-alpha.5"
   }
 }
