@@ -65,15 +65,8 @@ declare namespace StyliTypes {
    * the className will auto add by styli core
    * ```
    *
-   * type global. convert result should not add a className and it can not be used in inline style
-   * @example
-   * ```
-   * <View clear></View>
    *
-   * clear => *{ padding: 0; margin: 0 }
-   * ```
-   *
-   * type media-queries. convert result should add a className and it can not be used in inline style
+   * type responsive. convert result should add a className and it can not be used in inline style
    * @example
    * ```
    * <View p={[10, 20, 30, 40]}></View>
@@ -85,33 +78,45 @@ declare namespace StyliTypes {
    * type invalid. propValue is falsy. styli core will collect and remove it from origin attr or prop
    * @example
    * ```
-   * <View p={false} w={() => false}></View>
+   * <View p={false} ></View>
    * ```
    */
-  type AtomType = 'style' | 'prefix' | 'global' | 'media-queries' | 'invalid'
+  type AtomType = 'style' | 'prefix' | 'responsive' | 'invalid'
 
   interface Atom {
     /**
      * propKey may changed by plugin, so use key record origin propKey
      */
-    key: 'css' | 'debug' | 'reset' | ({} & string)
+    key: 'css' | 'debug' | ({} & string)
 
-    propKey: 'css' | 'debug' | 'reset' | ({} & string)
+    /**
+     * original propKey, 原始的propkey
+     * @example
+     * <Box red200></Box> propKey is red200
+     * <Box red200--hover></Box> propKey is red200--hover
+     */
+    propKey: 'css' | 'debug' | ({} & string)
 
-    propValue: string | number | boolean | CSSObject | ((theme: Theme, props: any) => any)
+    propValue: string | number | boolean | CSSObject
 
     style: CSSObject
 
     type: AtomType
 
-    className?: string
-
+    /**
+     * className list of atom
+     */
     classNames?: string[]
 
     /**
      * plugin name matched for this atom
      */
     matchedPlugin?: string
+
+    /**
+     * if handled, this atom is ready to push to parser.atoms
+     */
+    handled?: boolean
 
     /**
      * atom can be cached
@@ -129,23 +134,23 @@ declare namespace StyliTypes {
      * import { styled } from '@styli/styled'
      *
      * interface TestProps {
-     *   center: string
+     *   toCenter: string
      * }
      *
-     * const Test: FC<TestProp> = ({ center, className }) => {
-     *    return <View className={className}>{center}</View>
+     * const Test: FC<TestProp> = ({ toCenter, className }) => {
+     *    return <View className={className}>{toCenter}</View>
      * }
      *
      * const StyledTest = styled(Test)
      *
-     * // center prop will be handled by Styli. And convert it to className prop.
-     * <StyledTest center />
+     * // toCenter prop will be handled by Styli. And convert it to className prop.
+     * <StyledTest toCenter />
      *
-     * // center prop will be handled by Test Component.
-     * <StyledTest center styliIgnore={['center']} />
+     * // toCenter prop will be handled by Test Component.
+     * <StyledTest toCenter excludedProps={['toCenter']} />
      * ```
      */
-    styliIgnore?: string[]
+    excludedProps?: string[]
 
     /**
      * This Atomic Prop can improve code readability and semantically.
@@ -168,20 +173,25 @@ declare namespace StyliTypes {
     style?: any
     className?: string
     css?: any
+
+    /**
+     * props not convert to atomic props
+     */
+    excludedProps?: string[]
     [key: string]: any
   }
 
-  interface SheetType {
+  interface ParserType {
     props: Props
     theme: Theme
     atoms: Atom[]
-    className: string
+    uniqueClassName: string
     classNames: string[]
-    setUniteClassName(): void
+
+    setUniqueClassName(): void
     traverseProps(): void
     getClassPostfix(): string
-
-    createAtomClassName(atom: Atom): Atom
+    createAtomClassNames(atom: Atom): Atom
     getClassNames(): string
     toStyles(): CSSProperties
     toCssRules(): string[]
@@ -190,20 +200,33 @@ declare namespace StyliTypes {
 
   interface StyliPlugin {
     name: string
-    isMatch?(key: string): boolean
-    beforeAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
-    onAtomStyleCreate?(atom: Atom, sheet: SheetType): Atom
-    onStyleCreate?(sheet: SheetType): void
-    onAtomModify?(plugin: StyliPlugin, atoms: Atom, sheet: SheetType, theme: Theme): Atom
-  }
 
-  interface PluginCategory {
-    atomModifiers: StyliPlugin[]
-    atomStyleCreations: StyliPlugin[]
-    styleCreations: StyliPlugin[]
+    isMatch?(key: string): boolean
+
+    /**
+     * before atom style creating
+     * to modify some atom attr before creating
+     * @param atom
+     * @param parser
+     */
+    beforeAtomStyleCreate?(atom: Atom, parser: ParserType): Atom
+
+    /**
+     * on atom style creating
+     * @param atom
+     * @param parser
+     */
+    onAtomStyleCreate?(atom: Atom, parser: ParserType): Atom
+
+    /**
+     * after atom style created
+     * @param parser
+     */
+    afterAtomStyleCreate?(parser: ParserType): void
   }
 
   interface Theme {
+    colorMode?: string
     breakpoints: {
       sm: string
       md: string
@@ -314,6 +337,9 @@ declare namespace StyliTypes {
     }
 
     colors: Colors
+    modes?: {
+      [modeName: string]: Omit<Theme, 'modes'>
+    }
   }
 
   interface Colors {

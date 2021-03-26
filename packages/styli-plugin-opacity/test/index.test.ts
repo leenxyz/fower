@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-opacity', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('opacity')).toEqual(true)
@@ -25,7 +25,7 @@ describe('styli-plugin-opacity', () => {
       key: 'opacity',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'opacity',
@@ -41,7 +41,7 @@ describe('styli-plugin-opacity', () => {
       key: 'opacity',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'opacity-20',
@@ -57,6 +57,6 @@ describe('styli-plugin-opacity', () => {
       key: 'opacity',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

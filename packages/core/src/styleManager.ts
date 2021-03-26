@@ -16,9 +16,10 @@ class StyleManager {
     if (!isBrowser || !rules.length) return
     if (!this.$style) this.createStyleElement()
 
-    for (const rule of rules) {
-      this.$style.sheet?.insertRule(rule)
-    }
+    this.$style.innerHTML = this.$style.innerHTML + rules.join('')
+    // for (const rule of rules) {
+    //   this.$style.sheet?.insertRule(rule)
+    // }
   }
 }
 

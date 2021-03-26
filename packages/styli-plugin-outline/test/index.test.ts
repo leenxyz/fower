@@ -1,9 +1,9 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-outline', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('outline')).toEqual(true)
@@ -29,7 +29,7 @@ describe('styli-plugin-outline', () => {
       key: 'outline',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'outlineNone',
@@ -45,7 +45,7 @@ describe('styli-plugin-outline', () => {
       key: 'outlineNone',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'outlineOffset-2px',
@@ -61,7 +61,7 @@ describe('styli-plugin-outline', () => {
       key: 'outlineOffset-2px',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4: Atom = {
       propKey: 'outlineOffset',
@@ -77,6 +77,6 @@ describe('styli-plugin-outline', () => {
       propValue: '10px',
       style: { outlineOffset: '10px' },
     }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

@@ -1,18 +1,18 @@
-import { createStyle, css, Sheet } from '@styli/core'
+import { createStyle, css, Parser } from '@styli/core'
 import { trimStr } from '@styli/utils'
 import { Args } from './types'
 
 // handle inline style
 export function getInLineParsedProps(props: any, value: any, args: Args) {
-  const sheet = new Sheet(props, value)
-  const parsedProps = sheet.getParsedProps()
+  const parser = new Parser(props, value)
+  const parsedProps = parser.getParsedProps()
 
   if (Array.isArray(props.style)) {
-    parsedProps.style = [createStyle(...args), sheet.toStyles(), props.style]
+    parsedProps.style = [createStyle(...args), parser.toStyles(), props.style]
   } else {
     parsedProps.style = {
       ...createStyle(...args),
-      ...sheet.toStyles(),
+      ...parser.toStyles(),
       ...props.style,
     }
   }
@@ -22,16 +22,16 @@ export function getInLineParsedProps(props: any, value: any, args: Args) {
 
 // handle css style
 export function getCssParsedProps(props: any, value: any, args: Args) {
-  const sheet = new Sheet(props, value)
-  const parsedProps = sheet.getParsedProps()
+  const parser = new Parser(props, value)
+  const parsedProps = parser.getParsedProps()
 
   const { className = '' } = props || {}
 
-  const finalClassName = trimStr(`${css(...args)} ${sheet.getClassNames()} ${className}`)
+  const finalClassName = trimStr(`${css(...args)} ${parser.getClassNames()} ${className}`)
 
   if (finalClassName) {
     parsedProps.className = finalClassName
-    sheet.insertRule()
+    parser.insertRule()
   }
 
   return parsedProps

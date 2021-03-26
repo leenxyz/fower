@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-text-size', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('text')).toEqual(true)
@@ -20,7 +20,7 @@ describe('styli-plugin-text-size', () => {
       key: 'text',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom3: Atom = {
       propKey: 'text-10rem',
@@ -36,6 +36,6 @@ describe('styli-plugin-text-size', () => {
       style: { fontSize: '10rem' },
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

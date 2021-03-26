@@ -1,4 +1,4 @@
-import { styli, Sheet } from '../src'
+import { styli, Parser } from '../src'
 
 const config = {
   unit: 'px',
@@ -33,13 +33,13 @@ const props = {
 describe('styli-core', () => {
   styli.configure(() => config)
 
-  const sheet = new Sheet(props, styli.getTheme())
+  const parser = new Parser(props, styli.getTheme())
 
   it('toStyles', () => {
-    expect(sheet.toStyles()).toMatchObject({ fontSize: '10' })
+    expect(parser.toStyles()).toMatchObject({ fontSize: '10' })
   })
 
   it('getParsedProps', () => {
-    expect(sheet.getParsedProps()).toMatchObject({ style: { fontWeight: 'bold' }, children: {} })
+    expect(parser.getParsedProps()).toMatchObject({ style: { fontWeight: 'bold' }, children: {} })
   })
 })

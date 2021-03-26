@@ -1,9 +1,9 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-visibility', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('visibility')).toEqual(true)
@@ -25,7 +25,7 @@ describe('styli-plugin-visibility', () => {
         type: 'style',
         style: { visibility: 'hidden' },
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
   })
 })

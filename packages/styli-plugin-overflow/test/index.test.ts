@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-overflow', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('overflow')).toEqual(true)
@@ -25,7 +25,7 @@ describe('styli-plugin-overflow', () => {
       key: 'overflow',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'overflowX',
@@ -41,6 +41,6 @@ describe('styli-plugin-overflow', () => {
       key: 'overflowX',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

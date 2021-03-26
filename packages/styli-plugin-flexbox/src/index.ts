@@ -53,10 +53,10 @@ export default (): StyliPlugin => {
     },
 
     // TODO: 需要优化
-    onStyleCreate(sheet) {
-      if (!sheet.atoms || !sheet.atoms.length) return
+    afterAtomStyleCreate(parser) {
+      if (!parser.atoms || !parser.atoms.length) return
 
-      const matched = sheet.atoms.find(
+      const matched = parser.atoms.find(
         (i) =>
           i.matchedPlugin === 'styli-plugin-flexbox' ||
           i.matchedPlugin === 'styli-plugin-layout-engine',
@@ -64,31 +64,31 @@ export default (): StyliPlugin => {
 
       if (!matched) return
 
-      const direction = getFlexDirection(sheet.props)
+      const direction = getFlexDirection(parser.props)
 
       const prefix = 'flexDirection-'
 
-      const directionAtom = sheet.atoms.find((i) => i.propKey === prefix + direction)
+      const directionAtom = parser.atoms.find((i) => i.propKey === prefix + direction)
 
       if (!directionAtom) {
-        sheet.atoms.push({
+        parser.atoms.push({
           key: prefix + direction,
           propKey: prefix + direction,
           propValue: '',
-          className: prefix + direction,
+          classNames: [prefix + direction],
           type: 'style',
           style: { flexDirection: direction as any },
         })
       }
 
-      const displayAtom = sheet.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
+      const displayAtom = parser.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
 
       if (!displayAtom) {
-        sheet.atoms.push({
+        parser.atoms.push({
           key: 'display-flex',
           propKey: 'display-flex',
           propValue: '',
-          className: 'display-flex',
+          classNames: ['display-flex'],
           type: 'style',
           cache: true,
           matchedPlugin: 'styli-plugin-display',

@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-position', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('w')).toEqual(true)
@@ -22,7 +22,7 @@ describe('styli-plugin-position', () => {
       key: 'w',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'square-20',
@@ -38,7 +38,7 @@ describe('styli-plugin-position', () => {
       key: 'square-20',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'circle-10rem',
@@ -54,7 +54,7 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { width: '10rem', height: '10rem', borderRadius: '10rem' },
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4: Atom = {
       propKey: 'maxH-10',
@@ -70,7 +70,7 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { maxHeight: '10px' },
     }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
 
     const atom5: Atom = {
       propKey: 'square-10px',
@@ -86,6 +86,6 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { width: '10px', height: '10px' },
     }
-    expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
+    expect(onAtomStyleCreate!(atom5, parser)).toMatchObject(newAtom5)
   })
 })

@@ -16,7 +16,6 @@ import rounded from 'styli-plugin-rounded'
 import shadow from 'styli-plugin-shadow'
 import size from 'styli-plugin-size'
 import textAlign from 'styli-plugin-text-align'
-import textHeading from 'styli-plugin-text-heading'
 import textSize from 'styli-plugin-text-size'
 import textTransform from 'styli-plugin-text-transform'
 import fontWeight from 'styli-plugin-font-weight'
@@ -26,15 +25,11 @@ import cursor from 'styli-plugin-cursor'
 import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
 import css from 'styli-plugin-css'
-import reset from 'styli-plugin-reset'
-import pseudo from 'styli-plugin-pseudo'
-import mediaQueries from 'styli-plugin-media-queries'
 import space from 'styli-plugin-space'
 
 export const plugins = [
   debug(),
   css(),
-  reset(),
   background(),
   border(),
   color(),
@@ -53,7 +48,6 @@ export const plugins = [
   shadow(),
   size(),
   textAlign(),
-  textHeading(),
   textSize(),
   textTransform(),
   fontWeight(),
@@ -61,7 +55,5 @@ export const plugins = [
   cursor(),
   outline(),
   ellipsis(),
-  pseudo(),
-  mediaQueries(),
   space(),
 ]

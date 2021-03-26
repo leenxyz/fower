@@ -28,28 +28,17 @@ export const paddingMaps: any = {
 }
 
 export function isPaddingKey(key: string) {
-  return /^p[ltrbxy]?(--?[\dA-Za-z]+){0,2}$/.test(key)
+  return /^p[ltrbxy]?(--?[\dA-Z]+){0,2}$/i.test(key)
 }
 
 export function paddingPropToStyle(prop: string, propValue: any) {
   const style: any = {}
 
-  const [, matchKey = '', , xValue, , yValue] =
-    prop.match(/^(p[ltrbxy]?)(-(-?[\d+A-Z]+))?(-(-?[\d+A-Z]+))?$/i) || []
+  const result = prop.match(/^(p[ltrbxy]?)(-(-?[\d+a-z]+))?$/i) || []
+  const [, matchKey = '', , value] = result
   const key = matchKey.toLowerCase()
 
-  // m--1px-1px
-  if (xValue && yValue) {
-    paddingMaps['px'].forEach((k: any) => {
-      style[k] = styli.getValue(xValue)
-    })
-    paddingMaps['py'].forEach((k: any) => {
-      style[k] = styli.getValue(yValue)
-    })
-    return style
-  }
-
-  const paddingValue = isValidPropValue(propValue) ? propValue : xValue
+  const paddingValue = isValidPropValue(propValue) ? propValue : value
   paddingMaps[key].forEach((k: any) => {
     style[k] = styli.getValue(paddingValue)
   })
@@ -61,26 +50,8 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-padding',
     isMatch: isPaddingKey,
-    beforeAtomStyleCreate(atom) {
-      const { propKey, propValue } = atom
-      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-      if (!key || !value || !propValue || !paddingMaps[key]) return atom
-
-      const spacing = styli.getTheme('spacing')
-
-      if (!spacing) {
-        console.error('theme spacing is not provide')
-      }
-
-      return {
-        ...atom,
-        propKey: key,
-        propValue: spacing[Number(value)],
-        className: propKey,
-      }
-    },
     onAtomStyleCreate(atom) {
-      atom.style = paddingPropToStyle(atom.propKey, atom.propValue)
+      atom.style = paddingPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

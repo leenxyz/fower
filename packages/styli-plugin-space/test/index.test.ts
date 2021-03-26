@@ -1,9 +1,9 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-space', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('space')).toEqual(true)
@@ -26,6 +26,6 @@ describe('styli-plugin-space', () => {
         },
       },
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
   })
 })

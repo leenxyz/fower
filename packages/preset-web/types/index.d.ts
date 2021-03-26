@@ -15,7 +15,6 @@
 /// <reference types="styli-plugin-shadow" />
 /// <reference types="styli-plugin-size" />
 /// <reference types="styli-plugin-text-align" />
-/// <reference types="styli-plugin-text-heading" />
 /// <reference types="styli-plugin-text-size" />
 /// <reference types="styli-plugin-text-transform" />
 /// <reference types="styli-plugin-font-weight" />
@@ -25,9 +24,6 @@
 /// <reference types="styli-plugin-ellipsis" />
 /// <reference types="styli-plugin-debug" />
 /// <reference types="styli-plugin-css" />
-/// <reference types="styli-plugin-reset" />
-/// <reference types="styli-plugin-pseudo" />
-/// <reference types="styli-plugin-media-queries" />
 /// <reference types="styli-plugin-space" />
 /// <reference types="@styli/types" />
 import { Preset, Theme } from '@styli/types'

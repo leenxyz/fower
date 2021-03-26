@@ -30,28 +30,8 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-position',
     isMatch,
-
-    beforeAtomStyleCreate(atom) {
-      const { propKey } = atom
-      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-      if (!key || !value || !isMatch(key)) return atom
-
-      const spacing = styli.getTheme('spacing')
-
-      if (!spacing) {
-        console.error('theme spacing is not provide')
-      }
-
-      return {
-        ...atom,
-        propKey: key,
-        propValue: spacing[Number(value)],
-        className: propKey,
-        classNames: [propKey],
-      }
-    },
     onAtomStyleCreate(atom) {
-      atom.style = positionPropToStyle(atom.propKey, atom.propValue)
+      atom.style = positionPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

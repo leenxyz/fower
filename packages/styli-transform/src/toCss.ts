@@ -1,8 +1,8 @@
 import { trimStr } from '@styli/utils'
 import * as t from '@babel/types'
 
-export function toCss(path: any, sheet: any, attrs: any) {
-  const classNames = sheet.getClassNames()
+export function toCss(path: any, parser: any, attrs: any) {
+  const classNames = parser.getClassNames()
 
   if (!classNames) return
 

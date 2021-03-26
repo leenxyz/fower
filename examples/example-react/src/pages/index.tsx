@@ -1,5 +1,6 @@
 import { Box, injectGlobalStyle } from '@styli/react';
 import { setTheme, styli } from '@styli/core';
+import { ThemeProvider, useColorMode } from '@styli/theming';
 
 // injectGlobalStyle({
 //   '*': {},
@@ -27,33 +28,51 @@ setTheme({
     sm: '',
     '4xl': '',
   },
+  modes: {
+    dark: {
+      colors: {
+        red500: '#666',
+      },
+    },
+  },
 });
 
-console.log('---styli.', styli.getConfig());
-
 export default function IndexPage() {
+  const [colorMode, setColorMode] = useColorMode();
   return (
-    <div>
-      <Box
-        as="h1"
-        css={{
-          border: '1px solid red',
-          fontSize: '40px',
-          background: '#888',
-          ':hover': {
-            backgroundColor: 'orange',
-          },
-        }}
-      >
-        Page index
-      </Box>
-      <Box color="rose600">gogo</Box>
-      <Box as="h2" bgBlue100 p4 color="colorHello">
-        gogo
-      </Box>
-      <Box as="h2" bgYellow400 p4 bgOrange400--hover>
-        SubTitle
-      </Box>
-    </div>
+    <ThemeProvider theme={styli.config.theme!}>
+      <div>
+        {/* <Box
+          as="button"
+          onClick={() => {
+            setColorMode(colorMode === 'default' ? 'dark' : 'default');
+          }}
+        >
+          切换 {colorMode}
+        </Box> */}
+
+        <Box
+          // style={{ backgroundColor: 'yellowgreen' }}
+          red500
+          bgAmber100
+          bgRed100--hover
+          p={[10, 40, 80, 120, 200]}
+          // p6--hover
+        >
+          gogo
+        </Box>
+
+        <Box as="h2" red500 p4 bgYellow100 bgAmber100-D10--hover>
+          gogo
+        </Box>
+
+        {/* <Box as="h2" red500 p4 color="colorHello">
+          gogo
+        </Box> */}
+        {/* <Box as="h2" bgYellow400 p4 bgOrange400--hover>
+          SubTitle
+        </Box> */}
+      </div>
+    </ThemeProvider>
   );
 }

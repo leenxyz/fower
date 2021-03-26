@@ -1,10 +1,10 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 import './config'
 
 describe('bgColor', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('backgroundColor')).toEqual(true)
@@ -18,7 +18,7 @@ describe('bgColor', () => {
         propValue: 'gray30',
         style: { backgroundColor: '#333333' },
       } as Atom
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(finalAtom)
     })
 
     it('<View backgroundColor="gray30-T10"></View>', () => {
@@ -28,7 +28,7 @@ describe('bgColor', () => {
         propValue: 'gray30-T10',
         style: { backgroundColor: 'rgba(51,51,51,0.9)' },
       } as Atom
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(finalAtom)
     })
 
     it('<View backgroundColor="#000-T10"></View>', () => {
@@ -38,7 +38,7 @@ describe('bgColor', () => {
         propValue: '#000-T10',
         style: { backgroundColor: 'rgba(0,0,0,0.9)' },
       } as Atom
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(finalAtom)
     })
   })
 })

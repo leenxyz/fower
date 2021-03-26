@@ -1,7 +1,7 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { Sheet, styli } from '@styli/core'
+import { Parser, styli } from '@styli/core'
 import { AtomicProps, As } from '@styli/types'
-import { themeContext } from '@styli/theming'
+import { themeContext, useColorMode } from '@styli/theming'
 import { trimStr } from '@styli/utils'
 const { Consumer } = themeContext
 
@@ -21,26 +21,28 @@ export interface BoxComponent<T extends As, P = any> {
 
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const { as = 'div', ...rest } = props as any
+  const [colorMode] = useColorMode()
   return (
     <Consumer>
-      {(value: any) => {
-        const sheet = new Sheet(rest, value)
-        const parsedProps: any = sheet.getParsedProps()
+      {(theme: any) => {
+        const parser = new Parser(rest, { colorMode, ...theme })
+        const parsedProps: any = parser.getParsedProps()
+
         const inline = styli.getConfig('inline')
 
         if (inline) {
           if (Array.isArray(rest.style)) {
-            parsedProps.style = [sheet.toStyles(), rest.style]
+            parsedProps.style = [parser.toStyles(), rest.style]
           } else {
             parsedProps.style = {
-              ...sheet.toStyles(),
+              ...parser.toStyles(),
               ...rest.style,
             }
           }
         } else {
           const { className = '' } = rest || {}
-          sheet.insertRule()
-          const finalClassName = trimStr(`${sheet.getClassNames()} ${className}`)
+          parser.insertRule()
+          const finalClassName = trimStr(`${parser.getClassNames()} ${className}`)
 
           if (finalClassName) parsedProps.className = finalClassName
         }

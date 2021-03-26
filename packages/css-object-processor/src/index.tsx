@@ -1,4 +1,4 @@
-import { cssKeyToStyleKey, styleToClassName } from '@styli/utils'
+import { cssKeyToStyleKey, objectToClassName } from '@styli/utils'
 import { CSSObject } from '@styli/types'
 
 type Dict = Record<string, any>
@@ -145,7 +145,7 @@ export function toRules(cssObj: CSSObject, className?: string): string[] {
 
     // not nested style
     if (selector === '') {
-      const atomicClassName = styleToClassName(style)
+      const atomicClassName = objectToClassName(style)
       return `.${atomicClassName} {${ruleContent}}`
     }
 

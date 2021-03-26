@@ -15,7 +15,6 @@ import rounded from 'styli-plugin-rounded'
 import shadow from 'styli-plugin-shadow'
 import size from 'styli-plugin-size'
 import textAlign from 'styli-plugin-text-align'
-import textHeading from 'styli-plugin-text-heading'
 import textSize from 'styli-plugin-text-size'
 import textTransform from 'styli-plugin-text-transform'
 import fontWeight from 'styli-plugin-font-weight'
@@ -41,7 +40,6 @@ export const plugins = [
   shadow(),
   size(),
   textAlign(),
-  textHeading(),
   textSize(),
   textTransform(),
   fontWeight(),

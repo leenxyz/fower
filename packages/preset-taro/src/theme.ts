@@ -59,7 +59,6 @@ export const theme: Partial<Theme> = {
     relaxed: 1.625,
     loose: 2,
   },
-  borderColors: ['#dddddd', '#f0f0f0'],
   borderRadius: {
     none: '0',
     sm: '2rpx',

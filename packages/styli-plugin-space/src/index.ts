@@ -3,7 +3,7 @@ import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
 export function isSpaceKey(key: string) {
-  return /^space[xXyY]?(-[\dA-Za-z]+)?$/.test(key)
+  return /^space[xy]?(-[\dA-Z]+)?$/i.test(key)
 }
 
 const spaceMap: any = {
@@ -12,8 +12,8 @@ const spaceMap: any = {
   y: ['marginBottom'],
 }
 
-export function spacePropToStyle(propKey: string, propValue: any) {
-  const [, pos = 'all', , val] = propKey.match(/^space([XY])?(-([\dA-Za-z]+))?$/i) || []
+export function spacePropToStyle(key: string, propValue: any) {
+  const [, pos = 'all', , val] = key.match(/^space([XY])?(-([\dA-Za-z]+))?$/i) || []
   const position = pos.toLowerCase() as any
 
   const value = isValidPropValue(propValue) ? propValue : val
@@ -32,29 +32,9 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-space',
     isMatch: isSpaceKey,
-    beforeAtomStyleCreate(atom) {
-      const { propKey } = atom
-      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-
-      if (!key || !value || !isSpaceKey(key)) return atom
-
-      const spacing = styli.getTheme('spacing')
-
-      if (!spacing) {
-        console.error('theme spacing is not provide')
-      }
-
-      return {
-        ...atom,
-        propKey: key,
-        propValue: spacing[Number(value)],
-        className: propKey,
-        classNames: [propKey],
-      }
-    },
     onAtomStyleCreate(atom) {
       atom.type = 'prefix'
-      atom.style = spacePropToStyle(atom.propKey, atom.propValue)
+      atom.style = spacePropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

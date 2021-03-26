@@ -18,7 +18,7 @@ describe('styli-plugin-layout-engine', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const sheet1 = { props: { row: true, toCenter: true } } as any
+    const parser1 = { props: { row: true, toCenter: true } } as any
     const atom1 = { propKey: 'toCenter', propValue: true } as Atom
     const newAtom1 = {
       propKey: 'toCenter',
@@ -27,6 +27,6 @@ describe('styli-plugin-layout-engine', () => {
         justifyContent: 'center',
       },
     }
-    expect(onAtomStyleCreate!(atom1, sheet1)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser1)).toMatchObject(newAtom1)
   })
 })

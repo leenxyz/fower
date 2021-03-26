@@ -1,4 +1,4 @@
-import { Sheet, styli } from '@styli/core'
+import { Parser, styli } from '@styli/core'
 
 function isArray(data: string) {
   return /^\[(\w+,)*\w+\]$/.test(data)
@@ -27,14 +27,14 @@ export default {
       if (i) props[i] = true
     })
 
-    /** get sheet */
-    const sheet = new Sheet(props, styli.getTheme())
+    /** get parser */
+    const parser = new Parser(props, styli.getTheme())
 
     /** insert css to style element */
-    sheet.insertRule()
+    parser.insertRule()
 
     /** rm no use attr */
-    const parsedProps = sheet.getParsedProps()
+    const parsedProps = parser.getParsedProps()
     Object.values(el.attributes).forEach(({ name }) => {
       if (name && !(name in parsedProps)) {
         el.removeAttribute(name)
@@ -42,7 +42,7 @@ export default {
     })
 
     /** set className to el */
-    const className = sheet.getClassNames()
+    const className = parser.getClassNames()
     const classList = (className || '').split(' ').filter(Boolean)
 
     el?.classList.add(...classList)

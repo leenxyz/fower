@@ -1,13 +1,5 @@
-import { deepmerge, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
-import {
-  StyliPlugin,
-  Configuration,
-  Preset,
-  Theme,
-  PluginCategory,
-  Atom,
-  ModifierType,
-} from '@styli/types'
+import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
+import { StyliPlugin, Configuration, Preset, Theme, Atom, ModifierType } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { defaultConfig } from './config'
 import { SetThemeParams } from './types'
@@ -17,18 +9,10 @@ class Styli {
 
   // cache control
   classNameCache = new Map<string, boolean>()
+
   atomCache = new Map<string, Atom>()
+
   noMatchCache = new Map<string, boolean>()
-
-  // generate component unite className
-  componentKey = 0
-
-  // plugin classification
-  plugins: PluginCategory = {
-    atomModifiers: [],
-    atomStyleCreations: [],
-    styleCreations: [],
-  }
 
   // user config
   configure = (config: Preset | ((config: Preset) => Preset)) => {
@@ -39,10 +23,6 @@ class Styli {
       // replace config
       this.config = config
     }
-
-    // set plugins
-    const { plugins = [] } = this.config
-    this.plugins = classifyPlugins(plugins)
   }
 
   getConfig = <T = any>(type?: keyof Configuration): T => {
@@ -90,7 +70,11 @@ class Styli {
     return !!colors[downFirst(prefix)] || /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(prefix)
   }
 
-  getColors = () => {
+  getColors = (mode?: string) => {
+    if (mode) {
+      const modeTheme = this.config.theme?.modes?.[mode]
+      return deepmerge(this.config.theme!, modeTheme!)['colors']
+    }
     return this.getTheme('colors') || {}
   }
 
@@ -99,8 +83,8 @@ class Styli {
    * @param value
    * @returns
    */
-  extractColor = (value: string): [string, string] => {
-    const colors = this.getColors()
+  extractColor = (value: string, colors: any): [string, string] => {
+    colors = colors ? colors : this.getColors()
     const [prefix, postfix] = (value || '').split('-') || []
     const colorName = downFirst(prefix)
     const color = colors[colorName] || prefix
@@ -118,7 +102,6 @@ class Styli {
         this.config.plugins[pluginIdx] = plugin
       }
     })
-    this.plugins = classifyPlugins(this.config?.plugins || [])
     return this
   }
 }

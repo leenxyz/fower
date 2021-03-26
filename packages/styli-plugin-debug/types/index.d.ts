@@ -32,19 +32,5 @@ declare module '@styli/types' {
      * ```
      */
     debugChildren?: boolean | CSSObject
-
-    /**
-     * debugAll
-     *
-     * Styli will auto add border to all element.
-     *
-     * debugAll is `* { border: 1px solid gold }`
-     *
-     * @example
-     * ```tsx
-     * <View debugAll></View>
-     * ```
-     */
-    debugAll?: boolean | CSSObject
   }
 }

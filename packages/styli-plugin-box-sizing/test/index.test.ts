@@ -1,9 +1,9 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-box-sizing', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('boxSizing')).toEqual(true)
@@ -27,7 +27,7 @@ describe('styli-plugin-box-sizing', () => {
         type: 'style',
         style: { boxSizing: 'border-box' },
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View borderBox></View>
@@ -45,7 +45,7 @@ describe('styli-plugin-box-sizing', () => {
         type: 'style',
         style: { boxSizing: 'border-box' },
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View contentBox></View>
@@ -63,7 +63,7 @@ describe('styli-plugin-box-sizing', () => {
         type: 'style',
         style: { boxSizing: 'content-box' },
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
   })
 })

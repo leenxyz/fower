@@ -1,6 +1,6 @@
 import { CSSObject, Props } from '@styli/types'
 import { modifierToProps } from '@styli/utils'
-import { Sheet } from '../Sheet'
+import { Parser } from '../Parser'
 import { styli } from '../styli'
 
 export function css(...args: (string | CSSObject)[]) {
@@ -12,8 +12,8 @@ export function css(...args: (string | CSSObject)[]) {
     {} as Props,
   )
 
-  const sheet = new Sheet(props, styli.getTheme())
-  sheet.insertRule()
+  const parser = new Parser(props, styli.getTheme())
+  parser.insertRule()
 
-  return sheet.getClassNames()
+  return parser.getClassNames()
 }

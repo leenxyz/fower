@@ -12,7 +12,7 @@ describe('styli-plugin-line-height', () => {
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('leading')).toEqual(true)
@@ -24,14 +24,14 @@ describe('styli-plugin-line-height', () => {
   it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'leading', propValue: 10 } as Atom
     const newAtom1 = { propKey: 'leading', propValue: 10, style: { lineHeight: '10px' } }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'leading-20', propValue: true } as Atom
     const newAtom2 = { propKey: 'leading-20', propValue: true, style: { lineHeight: '20px' } }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'leadingNone', propValue: true } as Atom
     const newAtom3 = { propKey: 'leadingNone', propValue: true, style: { lineHeight: 1 } }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

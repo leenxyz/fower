@@ -1,10 +1,8 @@
-import { StyliPlugin, Theme } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
 import * as CSS from 'csstype'
 
 declare const _default: () => StyliPlugin
 export default _default
-
-type Fn = (theme: Theme) => CSS.Property.Position | CSS.Property.Position[]
 
 declare module '@styli/types' {
   export interface AtomicProps {
@@ -16,7 +14,7 @@ declare module '@styli/types' {
      * <View position="absolute"></View>
      * ```
      */
-    position?: CSS.Property.Position | CSS.Property.Position[] | Fn
+    position?: CSS.Property.Position | CSS.Property.Position[]
 
     /**
      * Set position to static

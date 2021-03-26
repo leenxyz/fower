@@ -6,7 +6,7 @@ describe('styli-plugin-position', () => {
   styli.configure({ unit: 'px' })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('top')).toEqual(true)
     expect(isMatch!('bottom-10')).toEqual(true)
@@ -24,7 +24,7 @@ describe('styli-plugin-position', () => {
       type: 'style',
       key: 'top',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'bottom-20',
@@ -40,7 +40,7 @@ describe('styli-plugin-position', () => {
       type: 'style',
       key: 'top',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'left-10rem',
@@ -56,7 +56,7 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { left: '10rem' },
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4: Atom = {
       propKey: 'absolute',
@@ -72,6 +72,6 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { position: 'absolute' },
     }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { Sheet, styli } from '@styli/core'
+import { Parser, styli } from '@styli/core'
 import { trimStr } from '@styli/utils'
 
 /**
@@ -15,20 +15,20 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const sheet = new Sheet(props, styli.getTheme())
-  const parsedProps: any = sheet.getParsedProps()
+  const parser = new Parser(props, styli.getTheme())
+  const parsedProps: any = parser.getParsedProps()
   const inline = styli.getConfig('inline')
 
   if (inline) {
     if (Array.isArray(props.style)) {
-      parsedProps.style = [sheet.toStyles(), props.style]
+      parsedProps.style = [parser.toStyles(), props.style]
     } else {
-      parsedProps.style = { ...sheet.toStyles(), ...props.style }
+      parsedProps.style = { ...parser.toStyles(), ...props.style }
     }
   } else {
     const { className = '' } = props || {}
-    sheet.insertRule()
-    const finalClassName = trimStr(`${sheet.getClassNames()} ${className}`)
+    parser.insertRule()
+    const finalClassName = trimStr(`${parser.getClassNames()} ${className}`)
     if (finalClassName) parsedProps.className = finalClassName
   }
 

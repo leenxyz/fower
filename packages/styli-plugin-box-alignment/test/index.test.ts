@@ -1,9 +1,9 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-flex-box', () => {
   const { onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'column', propValue: true } as Atom
@@ -12,10 +12,10 @@ describe('styli-plugin-flex-box', () => {
       propValue: true,
       style: {},
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'flexWrap', propValue: 'wrap' } as Atom
     const newAtom2 = { propKey: 'flexWrap', propValue: 'wrap', style: { flexWrap: 'wrap' } }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

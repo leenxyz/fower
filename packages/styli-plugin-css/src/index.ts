@@ -1,6 +1,6 @@
 import { CSSObject, StyliPlugin } from '@styli/types'
 import { parse } from '@styli/css-object-processor'
-import { styleToClassName } from '@styli/utils'
+import { objectToClassName } from '@styli/utils'
 
 export default (): StyliPlugin => {
   return {
@@ -14,15 +14,14 @@ export default (): StyliPlugin => {
 
       // TODO: parse 了多次， 性能需要优化
       const parsed = parse(atom.propValue as any)
-      const wrapperClassName = styleToClassName(atom.propValue)
+      const wrapperClassName = objectToClassName(atom.propValue)
 
       const atomicClassNames = parsed
         .filter((i) => i.selector === '')
-        .map((i) => styleToClassName(i.style))
+        .map((i) => objectToClassName(i.style))
 
       const classNames = [wrapperClassName, ...atomicClassNames]
 
-      atom.className = classNames.join(' ')
       atom.classNames = classNames
       return atom
     },

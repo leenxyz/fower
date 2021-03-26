@@ -1,10 +1,10 @@
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 import './config'
 
 describe('bgRepeat', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('backgroundRepeat')).toEqual(true)
@@ -18,7 +18,7 @@ describe('bgRepeat', () => {
         propValue: 'no-repeat',
         style: { backgroundRepeat: 'no-repeat' },
       } as Atom
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(finalAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(finalAtom)
     })
   })
 })

@@ -1,6 +1,5 @@
 import { noCase } from 'no-case'
 import hash from 'string-hash'
-import { StyliPlugin, PluginCategory } from '@styli/types'
 
 export function upFirst(s: string = '') {
   return s.replace(/^[a-z]/, (g) => g.toUpperCase())
@@ -12,6 +11,10 @@ export function downFirst(s: string = '') {
 
 export function kebab(s: string) {
   return noCase(s).replace(/\s/g, '-')
+}
+
+export function isBooleanFalse(value: any) {
+  return typeof value === 'boolean' && value === false
 }
 
 export function isNumber(str: any) {
@@ -60,28 +63,6 @@ export function modifierToProps(modifier: string) {
   return modifier.split(/[\s\t\n]+/).reduce((result, cur) => ({ ...result, [cur]: true }), {})
 }
 
-export function classifyPlugins(plugins: StyliPlugin[]): PluginCategory {
-  return plugins.reduce(
-    (result, cur) => {
-      if (cur.onAtomModify) {
-        result.atomModifiers.push(cur)
-      }
-      if (cur.onAtomStyleCreate) {
-        result.atomStyleCreations.push(cur)
-      }
-      if (cur.onStyleCreate) {
-        result.styleCreations.push(cur)
-      }
-      return result
-    },
-    {
-      atomModifiers: [],
-      atomStyleCreations: [],
-      styleCreations: [],
-    } as PluginCategory,
-  )
-}
-
 export function trimStr(str = '') {
   return str.replace(/\s{2,}/g, ' ').trim()
 }
@@ -93,7 +74,7 @@ export function getFlexDirection(props: any): string {
   return 'row'
 }
 
-export function styleToClassName(style: any, prefix = 'css-') {
+export function objectToClassName(style: any, prefix = 'css-') {
   const hashed = hash(JSON.stringify(style))
   return prefix + hashed
 }

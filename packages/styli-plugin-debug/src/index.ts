@@ -4,7 +4,7 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-debug',
     isMatch(key) {
-      return /^debug(Children|All)?/i.test(key)
+      return /^debug(Children)?/i.test(key)
     },
     onAtomStyleCreate(atom) {
       const propValueIsTrue = atom.propValue === true
@@ -28,21 +28,14 @@ function getDebugConf(key: string) {
           border: '1px solid gold',
           '> *': { border: '1px solid gold' },
         },
-        type: 'prefix'
-      }
-    case 'all':
-      return {
-        style: {
-          '*': { border: '1px solid gold' }
-        },
-        type: 'global'
+        type: 'prefix',
       }
     default:
       return {
         style: {
-          border: '1px solid gold'
+          border: '1px solid gold',
         },
-        type: 'prefix'
+        type: 'prefix',
       }
   }
 }

@@ -16,7 +16,6 @@
 /// <reference types="styli-plugin-shadow" />
 /// <reference types="styli-plugin-size" />
 /// <reference types="styli-plugin-text-align" />
-/// <reference types="styli-plugin-text-heading" />
 /// <reference types="styli-plugin-text-size" />
 /// <reference types="styli-plugin-text-transform" />
 /// <reference types="styli-plugin-font-weight" />

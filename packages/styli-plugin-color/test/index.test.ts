@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { SheetType } from '@styli/types'
+import { ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-color', () => {
@@ -12,7 +12,7 @@ describe('styli-plugin-color', () => {
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('red')).toEqual(true)
@@ -39,7 +39,7 @@ describe('styli-plugin-color', () => {
         value: true,
         style: { color: 'blue' },
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View color="red"></View>
@@ -60,7 +60,7 @@ describe('styli-plugin-color', () => {
         key: 'red',
         value: true,
       }
-      expect(onAtomStyleCreate!(atom, sheet)).toMatchObject(newAtom)
+      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
   })
 })

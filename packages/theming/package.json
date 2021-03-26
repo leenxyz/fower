@@ -21,6 +21,7 @@
   "author": "forsigner",
   "module": "dist/theming.esm.js",
   "dependencies": {
-    "@styli/types": "^1.0.0-alpha.5"
+    "@styli/types": "^1.0.0-alpha.5",
+    "stook": "^1.0.0"
   }
 }

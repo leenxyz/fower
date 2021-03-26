@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-// import { Atom, SheetType } from '@styli/types'
+// import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-border', () => {
@@ -12,7 +12,7 @@ describe('styli-plugin-border', () => {
   }))
 
   const { isMatch } = plugin()
-  // const sheet = {} as SheetType
+  // const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('border')).toEqual(true)

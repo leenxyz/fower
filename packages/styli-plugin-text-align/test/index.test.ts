@@ -6,7 +6,7 @@ describe('styli-plugin-text-align', () => {
   styli.configure({ unit: 'px' })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('textAlign')).toEqual(true)
@@ -28,7 +28,7 @@ describe('styli-plugin-text-align', () => {
       key: 'textAlign',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'textCenter',
@@ -44,6 +44,6 @@ describe('styli-plugin-text-align', () => {
       key: 'textCenter',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

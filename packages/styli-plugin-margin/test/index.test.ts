@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-margin', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('m')).toEqual(true)
     expect(isMatch!('ml')).toEqual(true)
@@ -22,7 +22,7 @@ describe('styli-plugin-margin', () => {
       key: 'm',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'ml-20',
@@ -38,7 +38,7 @@ describe('styli-plugin-margin', () => {
       key: 'ml-20',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'mx-10rem',
@@ -54,7 +54,7 @@ describe('styli-plugin-margin', () => {
       style: { marginLeft: '10rem', marginRight: '10rem' },
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4: Atom = {
       propKey: 'mx--10rem',
@@ -70,22 +70,6 @@ describe('styli-plugin-margin', () => {
       style: { marginLeft: '-10rem', marginRight: '-10rem' },
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
-
-    const atom5: Atom = {
-      propKey: 'm-1px--10rem',
-      propValue: true,
-      key: 'm-1px--10rem',
-      type: 'style',
-      style: {},
-    }
-    const newAtom5: Atom = {
-      key: 'm-1px--10rem',
-      propKey: 'm-1px--10rem',
-      propValue: true,
-      style: { marginLeft: '1px', marginRight: '1px', marginTop: '-10rem', marginBottom: '-10rem' },
-      type: 'style',
-    }
-    expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
+    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

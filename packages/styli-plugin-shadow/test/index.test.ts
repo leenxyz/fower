@@ -12,7 +12,7 @@ describe('styli-plugin-shadow', () => {
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('shadow')).toEqual(true)
     expect(isMatch!('shadowXS')).toEqual(true)
@@ -33,7 +33,7 @@ describe('styli-plugin-shadow', () => {
       propValue: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       style: { boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05)' },
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'shadowXS',
@@ -49,6 +49,6 @@ describe('styli-plugin-shadow', () => {
       key: 'shadowXS',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

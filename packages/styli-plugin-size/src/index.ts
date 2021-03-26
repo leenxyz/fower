@@ -14,18 +14,18 @@ export const sizeMaps: any = {
 }
 
 export function isMatch(key: string) {
-  return /^([wh]|square|circle|min[HWhw]|max[HWhw])(-[\dA-Z-a-z]+)?$/.test(key)
+  return /^([wh]|square|circle|min[hw]|max[hw])(-[\dA-Z-a-z]+)?$/.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
-  const [, matchKey = '', , xValue, , yValue] =
-    prop.match(/^([wh]|square|circle|min[HWhw]|max[HWhw])(-([\d+A-Z]+))?(-([\d+A-Z]+))?$/i) || []
+  const [, matchKey = '', , value] =
+    prop.match(/^([wh]|square|circle|min[hw]|max[hw])(-([\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
-  const sizeValue = isValidPropValue(propValue) ? [propValue] : [xValue, yValue]
+  const sizeValue = isValidPropValue(propValue) ? [propValue] : [value]
 
   return (sizeMaps[key] || []).reduce((style: any, cur: string, idx: number) => {
-    const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : xValue)
+    const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : value)
     style[cur] = styli.getValue(currentValue)
     return style
   }, {} as any)
@@ -35,26 +35,8 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-size',
     isMatch,
-    beforeAtomStyleCreate(atom) {
-      const { propKey } = atom
-      const [, key, value] = propKey.match(/^([a-zA-Z]+)(\d+)$/) || []
-      if (!key || !value || !sizeMaps[key]) return atom
-
-      const sizes = styli.getTheme('spacing')
-
-      if (!sizes) {
-        console.error('theme spacing is not provide')
-      }
-
-      return {
-        ...atom,
-        propKey: key,
-        propValue: sizes[Number(value)],
-        className: propKey,
-      }
-    },
     onAtomStyleCreate(atom) {
-      atom.style = sizePropToStyle(atom.propKey, atom.propValue)
+      atom.style = sizePropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

@@ -1,6 +1,7 @@
 import { styli } from '@styli/core'
 import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
+import { deepmerge } from '@styli/utils'
 
 export function isColorKey(key: string) {
   if (key === 'color') return true
@@ -15,13 +16,14 @@ export function isColorKey(key: string) {
   return false
 }
 
-export function colorPropToStyle(propKey: string, propValue: any): any {
+export function colorPropToStyle(propKey: string, propValue: any, colors: any): any {
   if (propKey === 'color') {
-    const [color, posfix] = styli.extractColor(propValue)
+    const [color, posfix] = styli.extractColor(propValue, colors)
     return { color: formatColor(color, posfix) }
   }
 
-  const [color, posfix] = styli.extractColor(propKey.replace(/^color/i, ''))
+  const [color, posfix] = styli.extractColor(propKey.replace(/^color/i, ''), colors)
+
   return { color: formatColor(color, posfix) }
 }
 
@@ -29,8 +31,15 @@ export default (): StyliPlugin => {
   return {
     name: 'styli-plugin-color',
     isMatch: isColorKey,
-    onAtomStyleCreate(atom) {
-      atom.style = colorPropToStyle(atom.propKey, atom.propValue)
+    onAtomStyleCreate(atom, parser) {
+      const { theme } = parser
+      const { colorMode = 'default' } = parser.theme || {}
+      const colors =
+        colorMode === 'default'
+          ? theme?.colors
+          : deepmerge(theme, theme?.modes?.[colorMode] || {})['colors']
+
+      atom.style = colorPropToStyle(atom.propKey, atom.propValue, colors)
       return atom
     },
   }

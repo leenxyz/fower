@@ -6,7 +6,7 @@ describe('styli-plugin-text-transform', () => {
   styli.configure({ unit: 'px' })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('normalcase')).toEqual(true)
     expect(isMatch!('lowercase')).toEqual(true)
@@ -27,7 +27,7 @@ describe('styli-plugin-text-transform', () => {
       style: { textTransform: 'none' },
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       key: 'lowercase',
@@ -43,6 +43,6 @@ describe('styli-plugin-text-transform', () => {
       style: { textTransform: 'lowercase' },
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

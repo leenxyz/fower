@@ -1,12 +1,12 @@
 import { styli } from '@styli/core'
-import { Atom, SheetType } from '@styli/types'
+import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-ellipsis', () => {
   styli.configure(() => ({ unit: 'px' }))
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as SheetType
+  const parser = {} as ParserType
 
   it('isMatch', () => {
     expect(isMatch!('ellipsis')).toEqual(true)
@@ -27,7 +27,7 @@ describe('styli-plugin-ellipsis', () => {
         whiteSpace: 'nowrap',
       },
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'ellipsis1', propValue: true } as Atom
     const newAtom2 = {
@@ -40,7 +40,7 @@ describe('styli-plugin-ellipsis', () => {
         whiteSpace: 'nowrap',
       },
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'ellipsis-300', propValue: true } as Atom
     const newAtom3 = {
@@ -53,7 +53,7 @@ describe('styli-plugin-ellipsis', () => {
         whiteSpace: 'nowrap',
       },
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4 = { propKey: 'ellipsis2', propValue: true } as Atom
     const newAtom4 = {
@@ -67,7 +67,7 @@ describe('styli-plugin-ellipsis', () => {
         WebkitLineClamp: 2,
       },
     }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
 
     const atom5 = { propKey: 'ellipsis6-500', propValue: true } as Atom
     const newAtom5 = {
@@ -81,6 +81,6 @@ describe('styli-plugin-ellipsis', () => {
         WebkitLineClamp: 6,
       },
     }
-    expect(onAtomStyleCreate!(atom5, sheet)).toMatchObject(newAtom5)
+    expect(onAtomStyleCreate!(atom5, parser)).toMatchObject(newAtom5)
   })
 })

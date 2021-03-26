@@ -4,7 +4,7 @@ import plugin from '../src'
 describe('styli-plugin-position', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
 
-  const sheet = {} as any
+  const parser = {} as any
 
   it('isMatch', () => {
     expect(isMatch!('rounded')).toEqual(true)
@@ -29,7 +29,7 @@ describe('styli-plugin-position', () => {
         borderRadius: '10px',
       },
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'roundedT-10',
@@ -45,7 +45,7 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { borderTopLeftRadius: '10px', borderTopRightRadius: '10px' },
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'roundedBR-10rem',
@@ -61,6 +61,6 @@ describe('styli-plugin-position', () => {
       propValue: true,
       style: { borderBottomRightRadius: '10rem' },
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

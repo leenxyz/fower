@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-padding', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const sheet = {} as any
+  const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('p')).toEqual(true)
     expect(isMatch!('pl')).toEqual(true)
@@ -21,7 +21,7 @@ describe('styli-plugin-padding', () => {
       key: 'p',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom1, sheet)).toMatchObject(newAtom1)
+    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2: Atom = {
       propKey: 'pl-20',
@@ -37,7 +37,7 @@ describe('styli-plugin-padding', () => {
       key: 'pl-20',
       type: 'style',
     }
-    expect(onAtomStyleCreate!(atom2, sheet)).toMatchObject(newAtom2)
+    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3: Atom = {
       propKey: 'px-10rem',
@@ -53,22 +53,6 @@ describe('styli-plugin-padding', () => {
       propValue: true,
       style: { paddingLeft: '10rem', paddingRight: '10rem' },
     }
-    expect(onAtomStyleCreate!(atom3, sheet)).toMatchObject(newAtom3)
-
-    const atom4: Atom = {
-      propKey: 'p--10rem-1px',
-      propValue: true,
-      key: 'p--10rem-1px',
-      type: 'style',
-      style: {},
-    }
-    const newAtom4: Atom = {
-      key: 'p--10rem-1px',
-      propKey: 'p--10rem-1px',
-      propValue: true,
-      style: { paddingLeft: '-10rem', paddingRight: '-10rem', paddingTop: '1px', paddingBottom: '1px' },
-      type: 'style',
-    }
-    expect(onAtomStyleCreate!(atom4, sheet)).toMatchObject(newAtom4)
+    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })
