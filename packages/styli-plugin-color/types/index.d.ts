@@ -1,14 +1,11 @@
-import * as CSS from 'csstype'
-import { StyliPlugin, Theme } from '@styli/types'
+import { StyliPlugin, Theme, StyliColor } from '@styli/types'
 
 declare const _default: () => StyliPlugin
 export default _default
 
-type Color =
-  | CSS.Property.Color
-  | CSS.Property.Color[]
-  | ((theme: Theme) => CSS.Property.Color | CSS.Property.Color[])
-  | boolean
+type Color = StyliColor | StyliColor[] | boolean
+
+type ColorFn = (theme: Theme) => Color
 
 declare module '@styli/types' {
   export interface AtomicProps {
@@ -41,7 +38,7 @@ declare module '@styli/types' {
      * <Box color="red500-D20"></Box> // darken color 变暗
      * ```
      */
-    color?: Color
+    color?: Color | ColorFn
 
     rose50?: boolean // '#fff1f2'
     rose100?: boolean // '#ffe4e6'

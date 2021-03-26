@@ -1,21 +1,6 @@
 import React from 'react'
 import styles from './colors.module.css'
 
-// {
-//   name: '颜色',
-//   colors: {
-//     black: '#000000',
-//     white: '#ffff',
-//     brand: '#f56565',
-//     primary: '#f56565',
-//     secondary: '#f687b3',
-//     info: '#63b3ed',
-//     warning: '#f6ad55',
-//     error: '#f56565',
-//     success: '#68d391',
-//   },
-// },
-
 interface Item {
   name: string
   colors: Record<string, string>

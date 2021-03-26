@@ -23,6 +23,7 @@
   "dependencies": {
     "@styli/css-object-processor": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",
-    "@styli/utils": "^1.0.0-alpha.5"
+    "@styli/utils": "^1.0.0-alpha.5",
+    "type-fest": "^1.0.1"
   }
 }

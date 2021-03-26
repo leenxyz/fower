@@ -176,6 +176,7 @@ declare namespace StyliTypes {
     theme: Theme
     atoms: Atom[]
     className: string
+    classNames: string[]
     setUniteClassName(): void
     traverseProps(): void
     getClassPostfix(): string
@@ -313,21 +314,12 @@ declare namespace StyliTypes {
     }
 
     colors: Colors
-    [key: string]: any
   }
 
   interface Colors {
     transparent: string
     black: string
     white: string
-
-    brand: string
-    primary: string
-    secondary: string
-    info: string
-    warning: string
-    error: string
-    success: string
 
     rose50: string // '#fff1f2'
     rose100: string // '#ffe4e6'

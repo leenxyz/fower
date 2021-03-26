@@ -1,4 +1,5 @@
 import { Box, injectGlobalStyle } from '@styli/react';
+import { setTheme, styli } from '@styli/core';
 
 // injectGlobalStyle({
 //   '*': {},
@@ -15,7 +16,20 @@ import { Box, injectGlobalStyle } from '@styli/react';
 //       backgroundColor: 'blue',
 //     },
 //   },
+
 // });
+
+setTheme({
+  colors: {
+    colorHello: '#ff9900',
+  },
+  breakpoints: {
+    sm: '',
+    '4xl': '',
+  },
+});
+
+console.log('---styli.', styli.getConfig());
 
 export default function IndexPage() {
   return (
@@ -32,6 +46,10 @@ export default function IndexPage() {
         }}
       >
         Page index
+      </Box>
+      <Box color="rose600">gogo</Box>
+      <Box as="h2" bgBlue100 p4 color="colorHello">
+        gogo
       </Box>
       <Box as="h2" bgYellow400 p4 bgOrange400--hover>
         SubTitle

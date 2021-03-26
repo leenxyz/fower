@@ -1,4 +1,4 @@
-import { downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
+import { deepmerge, downFirst, isNumber, isPercentNumber, classifyPlugins } from '@styli/utils'
 import {
   StyliPlugin,
   Configuration,
@@ -8,10 +8,12 @@ import {
   Atom,
   ModifierType,
 } from '@styli/types'
+import { PartialDeep } from 'type-fest'
 import { defaultConfig } from './config'
+import { SetThemeParams } from './types'
 
 class Styli {
-  private config: Preset = defaultConfig
+  config: Preset = defaultConfig
 
   // cache control
   classNameCache = new Map<string, boolean>()
@@ -72,7 +74,11 @@ class Styli {
 
   getTheme = <T = any>(themeKey?: keyof Theme): T => {
     if (!themeKey) return this.config.theme as any
-    return this.config?.theme?.[themeKey]
+    return this.config?.theme?.[themeKey] as any
+  }
+
+  setTheme = (partialThemeConfig: PartialDeep<SetThemeParams>) => {
+    this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
   }
 
   isStyliColor = (value: string = '') => {

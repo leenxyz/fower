@@ -5,14 +5,6 @@ export const colors: Colors = {
   white: '#ffffff',
   black: '#000',
 
-  brand: '#4fd1c5',
-  primary: '#4fd1c5',
-  secondary: '#f687b3',
-  info: '#63b3ed',
-  warning: '#f6ad55',
-  error: '#f56565',
-  success: '#68d391',
-
   rose50: '#fff1f2',
   rose100: '#ffe4e6',
   rose200: '#fecdd3',
