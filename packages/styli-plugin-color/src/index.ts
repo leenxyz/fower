@@ -2,15 +2,8 @@ import { styli } from '@styli/core'
 import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
 
-function isColorTheme(key: string) {
-  return /^color(Brand|Primary|Secondary|Info|Warning|Error|Success)(-[TODL]\d+)?$/i.test(key)
-}
-
 export function isColorKey(key: string) {
   if (key === 'color') return true
-
-  // colorBrand, colorPrimary-D20...
-  if (isColorTheme(key)) return true
 
   // red10...
   const Colors = styli.getColors()
@@ -25,12 +18,6 @@ export function isColorKey(key: string) {
 export function colorPropToStyle(propKey: string, propValue: any): any {
   if (propKey === 'color') {
     const [color, posfix] = styli.extractColor(propValue)
-    return { color: formatColor(color, posfix) }
-  }
-
-  if (isColorTheme(propKey)) {
-    const colorName = propKey.replace(/^color/, '')
-    const [color, posfix] = styli.extractColor(colorName)
     return { color: formatColor(color, posfix) }
   }
 

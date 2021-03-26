@@ -22,7 +22,6 @@ export default function IndexPage() {
     <div>
       <Box
         as="h1"
-        // colorPrimary
         css={{
           border: '1px solid red',
           fontSize: '40px',

@@ -7,8 +7,6 @@ describe('styli-plugin-color', () => {
     theme: {
       colors: {
         red: 'blue',
-        colorRed: true,
-        colorBrand: '#000',
       },
     } as any,
   })
@@ -20,8 +18,6 @@ describe('styli-plugin-color', () => {
     expect(isMatch!('red')).toEqual(true)
     expect(isMatch!('blue')).toEqual(false)
     expect(isMatch!('color')).toEqual(true)
-    expect(isMatch!('colorRed')).toEqual(true)
-    expect(isMatch!('colorBrand')).toEqual(true)
   })
 
   describe('onAtomStyleCreate', () => {

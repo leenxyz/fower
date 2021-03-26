@@ -43,20 +43,6 @@ declare module '@styli/types' {
      */
     color?: Color
 
-    colorBrand?: boolean
-
-    colorPrimary?: boolean
-
-    colorSecondary?: boolean
-
-    colorInfo?: boolean
-
-    colorWarning?: boolean
-
-    colorError?: boolean
-
-    colorSuccess?: boolean
-
     rose50?: boolean // '#fff1f2'
     rose100?: boolean // '#ffe4e6'
     rose200?: boolean // '#fecdd3'
