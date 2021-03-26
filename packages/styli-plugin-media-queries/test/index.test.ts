@@ -41,9 +41,10 @@ describe('styli-plugin-media-queries', () => {
       propValue: [10, 20, 30, 40] as any,
       type: 'media-queries',
       style: {
-        '100px': { fontSize: '10px' },
-        '200px': { fontSize: '20px' },
-        '300px': { fontSize: '40px' },
+        base: { fontSize: '10px' },
+        '640px': { fontSize: '20px' },
+        '768px': { fontSize: '30px' },
+        '1024px': { fontSize: '40px' },
       } as any,
     } as Atom
     expect(onAtomModify!(textPlugin(), atom, sheet, {} as any)).toMatchObject(newAtom)
