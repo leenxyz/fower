@@ -1,10 +1,11 @@
-import { CSSObject, ParserType } from '@styli/types'
+import { CSSObject } from '@styli/types'
+import { Parser } from '@styli/parser'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-css', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
-  const parser = {} as ParserType
+  const parser = {} as Parser
 
   it('isMatch', () => {
     expect(isMatch!('css')).toEqual(true)

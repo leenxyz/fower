@@ -1,8 +1,7 @@
-import { ParserType } from '@styli/types'
+import { Parser } from '../parser'
 import { Atom } from '@styli/atom'
-import { styli } from '../styli'
 
-export function responsivePreprocessor(atom: Atom, parser: ParserType): Atom {
+export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   const { propValue } = atom
 
   // not responsive style, return atom
@@ -16,7 +15,7 @@ export function responsivePreprocessor(atom: Atom, parser: ParserType): Atom {
     console.error('theme breakpoints not provide')
   }
 
-  const plugin = plugins.find((i) => i.isMatch?.(atom.key))
+  const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))
 
   if (!plugin) return atom
 

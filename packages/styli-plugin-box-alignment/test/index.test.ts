@@ -1,10 +1,10 @@
-import { ParserType } from '@styli/types'
+import { Parser } from '@styli/parser'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-flex-box', () => {
   const { onAtomStyleCreate } = plugin()
-  const parser = {} as ParserType
+  const parser = {} as Parser
 
   it('onAtomStyleCreate', () => {
     const atom1 = { propKey: 'column', propValue: true } as Atom

@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { ParserType } from '@styli/types'
+import { Parser } from '@styli/parser'
 import plugin from '../src'
 
 describe('styli-plugin-color', () => {
@@ -12,7 +12,7 @@ describe('styli-plugin-color', () => {
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()
-  const parser = {} as ParserType
+  const parser = {} as Parser
 
   it('isMatch', () => {
     expect(isMatch!('red')).toEqual(true)

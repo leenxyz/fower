@@ -1,5 +1,6 @@
 import { createElement } from 'react'
-import { Parser, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Parser } from '@styli/parser'
 import { trimStr } from '@styli/utils'
 
 /**
@@ -15,7 +16,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
     return createElement.apply(null, arguments as any)
   }
 
-  const parser = new Parser(props, styli.getTheme())
+  const parser = new Parser(props, styli.getTheme(), styli)
   const parsedProps: any = parser.getParsedProps()
   const inline = styli.getConfig('inline')
 

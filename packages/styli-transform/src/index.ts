@@ -1,7 +1,7 @@
 import generate from '@babel/generator'
 import traverse from '@babel/traverse'
 import { parse } from '@babel/parser'
-import { Parser } from '@styli/core'
+import { Parser } from '@styli/parser'
 import { createProps } from './createProps'
 import { removeParsedProp } from './removeParsedProp'
 import { toCss } from './toCss'
@@ -23,7 +23,7 @@ export function transform(source: string, styli: any) {
 
       const { props } = createProps(attrs)
 
-      const parser = new Parser(props, styli.getTheme())
+      const parser: any = new Parser(props, styli.getTheme(), styli)
 
       if (styli.getConfig('inline')) {
         toStyle(path, parser, attrs)

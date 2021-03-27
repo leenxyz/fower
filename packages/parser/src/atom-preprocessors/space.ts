@@ -1,13 +1,11 @@
 import { Atom } from '@styli/atom'
 
-import { styli } from '../styli'
-
 /**
  * @example p2,mx4,left10,spaceX4...
  */
 const spaceReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw])(\d+)$/i
 
-export function spacePreprocessor(atom: Atom): Atom {
+export function spacePreprocessor(atom: Atom, styli: any): Atom {
   const { propKey } = atom
 
   if (!spaceReg.test(atom.key)) return atom

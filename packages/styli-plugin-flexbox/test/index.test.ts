@@ -3,7 +3,7 @@ import plugin from '../src'
 
 describe('styli-plugin-flex-box', () => {
   const { isMatch } = plugin()
-  // const parser = {} as ParserType
+  // const parser = {} as Parser
 
   it('isMatch', () => {
     expect(isMatch!('flex')).toEqual(true)

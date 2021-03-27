@@ -1,5 +1,6 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { Parser, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Parser } from '@styli/parser'
 import { AtomicProps, As } from '@styli/types'
 import { themeContext, useColorMode } from '@styli/theming'
 import { trimStr } from '@styli/utils'
@@ -25,7 +26,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   return (
     <Consumer>
       {(theme: any) => {
-        const parser = new Parser(rest, { colorMode, ...theme })
+        const parser = new Parser(rest, { colorMode, ...theme }, styli)
         const parsedProps: any = parser.getParsedProps()
 
         const inline = styli.getConfig('inline')

@@ -1,5 +1,6 @@
 import * as CSS from 'csstype'
 import { Atom } from '@styli/atom'
+import { Parser } from '@styli/parser'
 
 // tslint:disable-next-line:export-just-namespace
 export = StyliTypes
@@ -32,42 +33,6 @@ declare namespace StyliTypes {
     | {
         [K in keyof T]?: T[K] extends object ? CSSObject<T[K]> : CSSProperties
       }
-
-  /**
-   * type style. convert result can be used in inline style directly
-   * @example
-   * ```
-   * <View p-10px></View>
-   *
-   * p-10px => padding: 10px
-   * ```
-   *
-   * type prefix. convert result must add a className and it can not be used in inline style
-   * @example
-   * ```
-   * <View css={{ ':hover': { color: 'red' } }}></View>
-   *
-   * { ':hover': { color: 'red' } } => .className:hover{ color: 'red' }
-   * the className will auto add by styli core
-   * ```
-   *
-   *
-   * type responsive. convert result should add a className and it can not be used in inline style
-   * @example
-   * ```
-   * <View p={[10, 20, 30, 40]}></View>
-   *
-   * p={[10, 20, 30, 40] => @media(min-width: 100px) { .className { padding: 10px }}   *   4
-   * the className will auto add by styli core
-   * ```
-   *
-   * type invalid. propValue is falsy. styli core will collect and remove it from origin attr or prop
-   * @example
-   * ```
-   * <View p={false} ></View>
-   * ```
-   */
-  type AtomType = 'style' | 'prefix' | 'responsive' | 'invalid'
 
   interface AtomicProps {
     /**
@@ -125,23 +90,6 @@ declare namespace StyliTypes {
     [key: string]: any
   }
 
-  interface ParserType {
-    props: Props
-    theme: Theme
-    atoms: Atom[]
-    uniqueClassName: string
-    classNames: string[]
-
-    setUniqueClassName(): void
-    traverseProps(): void
-    getClassPostfix(): string
-    createAtomClassNames(atom: Atom): Atom
-    getClassNames(): string
-    toStyles(): CSSProperties
-    toCssRules(): string[]
-    getParsedProps(): Props
-  }
-
   interface StyliPlugin {
     name: string
 
@@ -153,20 +101,20 @@ declare namespace StyliTypes {
      * @param atom
      * @param parser
      */
-    beforeAtomStyleCreate?(atom: Atom, parser: ParserType): Atom
+    beforeAtomStyleCreate?(atom: Atom, parser: Parser): Atom
 
     /**
      * on atom style creating
      * @param atom
      * @param parser
      */
-    onAtomStyleCreate?(atom: Atom, parser: ParserType): Atom
+    onAtomStyleCreate?(atom: Atom, parser: Parser): Atom
 
     /**
      * after atom style created
      * @param parser
      */
-    afterAtomStyleCreate?(parser: ParserType): void
+    afterAtomStyleCreate?(parser: Parser): void
   }
 
   interface Theme {

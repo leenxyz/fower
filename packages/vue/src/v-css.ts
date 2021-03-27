@@ -1,4 +1,5 @@
-import { Parser, styli } from '@styli/core'
+import { styli } from '@styli/core'
+import { Parser } from '@styli/parser'
 
 function isArray(data: string) {
   return /^\[(\w+,)*\w+\]$/.test(data)
@@ -28,7 +29,7 @@ export default {
     })
 
     /** get parser */
-    const parser = new Parser(props, styli.getTheme())
+    const parser = new Parser(props, styli.getTheme(), styli)
 
     /** insert css to style element */
     parser.insertRule()

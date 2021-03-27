@@ -11,7 +11,7 @@ describe('styli-plugin-border', () => {
   }))
 
   const { isMatch } = plugin()
-  // const parser = {} as ParserType
+  // const parser = {} as Parser
 
   it('isMatch', () => {
     expect(isMatch!('border')).toEqual(true)

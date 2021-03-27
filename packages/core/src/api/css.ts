@@ -1,6 +1,6 @@
 import { CSSObject, Props } from '@styli/types'
 import { modifierToProps } from '@styli/utils'
-import { Parser } from '../Parser'
+import { Parser } from '@styli/parser'
 import { styli } from '../styli'
 
 export function css(...args: (string | CSSObject)[]) {
@@ -12,7 +12,7 @@ export function css(...args: (string | CSSObject)[]) {
     {} as Props,
   )
 
-  const parser = new Parser(props, styli.getTheme())
+  const parser = new Parser(props, styli.getTheme(), styli)
   parser.insertRule()
 
   return parser.getClassNames()

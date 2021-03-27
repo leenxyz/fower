@@ -23,6 +23,7 @@
     "@babel/traverse": "^7.12.10",
     "@babel/types": "^7.12.11",
     "@styli/core": "^1.0.0-alpha.5",
+    "@styli/parser": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",
     "@styli/utils": "^1.0.0-alpha.5"
   }

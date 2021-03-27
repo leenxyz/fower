@@ -1,9 +1,7 @@
-import { Props, Theme, CSSProperties } from '@styli/types'
 import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { toRules } from '@styli/css-object-processor'
 import { isEmptyObj, isPlainType, hash, cssObjToStr, objectToClassName } from '@styli/utils'
-import { styli } from './styli'
 import { runPreprocessors } from './atom-preprocessors'
 import { classNameCache } from './cache'
 
@@ -21,18 +19,18 @@ export class Parser {
    */
   uniqueClassName: string = ''
 
-  constructor(readonly props: Props = {}, readonly theme: Theme) {
+  constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
   }
 
   /**
    * traverse Props to init atoms
    */
-  private traverseProps(props: Props): void {
+  private traverseProps(props: any): void {
     if (isEmptyObj(props)) return
 
     const { excludedProps = [] } = props
-    const { plugins = [] } = styli.config
+    const { plugins = [] } = this.styli.config
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
@@ -45,7 +43,7 @@ export class Parser {
         key: propKey,
       })
 
-      let newAtom: Atom = runPreprocessors(initialAtom, this as any)
+      let newAtom: Atom = runPreprocessors(initialAtom, this as any, this.styli)
 
       // if handled, push to this.atoms and skip it
       if (newAtom?.handled) {
@@ -101,7 +99,7 @@ export class Parser {
     if (ignoreType.includes(type)) return atom
 
     /** global className prefix */
-    const configPrefix = styli.getConfig('prefix')
+    const configPrefix = this.styli.getConfig('prefix')
     const prefix = configPrefix ? configPrefix + '-' : ''
 
     // if boolean type props, use prop key as className
@@ -146,7 +144,7 @@ export class Parser {
     return this.atoms.reduce((result, atom) => {
       if (atom.type !== 'style') return result // not style type
       return { ...result, ...atom.style }
-    }, {} as CSSProperties)
+    }, {} as any)
   }
 
   /**
@@ -207,14 +205,14 @@ export class Parser {
     return css
   }
 
-  getParsedProps(): Props {
+  getParsedProps(): any {
     const { props, atoms } = this
     if (isEmptyObj(props)) return {}
 
-    return Object.entries(props).reduce((result: Props, [propKey, propValue]) => {
+    return Object.entries(props).reduce((result: any, [propKey, propValue]) => {
       const styliProp = atoms.find((atom) => atom.propKey === propKey || atom.key == propKey)
       return styliProp ? result : { ...result, [propKey]: propValue }
-    }, {} as Props)
+    }, {} as any)
   }
 
   insertRule() {
