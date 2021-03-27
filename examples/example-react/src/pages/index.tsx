@@ -51,7 +51,7 @@ export default function IndexPage() {
           切换 {colorMode}
         </Box> */}
 
-        <Box
+        {/* <Box
           // style={{ backgroundColor: 'yellowgreen' }}
           red500
           bgAmber100
@@ -60,18 +60,34 @@ export default function IndexPage() {
           // p6--hover
         >
           gogo
-        </Box>
+        </Box> */}
 
-        <Box as="h2" red500 p4 bgYellow100 bgAmber100-D10--hover>
+        {/* <Box as="h2" red500 p4 bgYellow100 bgAmber100-D10--hover>
           gogo
-        </Box>
+        </Box> */}
 
         {/* <Box as="h2" red500 p4 color="colorHello">
           gogo
         </Box> */}
-        {/* <Box as="h2" bgYellow400 p4 bgOrange400--hover>
+        <Box
+          as="h2"
+          rounded3XL
+          m10
+          css={{
+            backgroundColor: 'bisque',
+            // padding: 20,
+            padding: '20px',
+            ':hover': {
+              backgroundColor: 'yellow',
+            },
+            '.child': {
+              color: 'white',
+            },
+          }}
+        >
           SubTitle
-        </Box> */}
+          <Box className="child">Child</Box>
+        </Box>
       </div>
     </ThemeProvider>
   );
