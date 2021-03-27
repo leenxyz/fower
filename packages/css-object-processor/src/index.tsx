@@ -6,6 +6,7 @@ type FlattenItem = (string | Dict)[]
 
 interface ParsedItem {
   selector: string
+  selectorType: 'void' | 'child' | 'pseudo'
   style: Dict
 }
 
@@ -109,8 +110,12 @@ export function parse(cssObj: CSSObject): ParsedItem[] {
   const paths = flattenItems.reduce<ParsedItem[]>((result, item) => {
     const style = item.pop() as Dict
     const selector = item.join('')
+    let selectorType: ParsedItem['selectorType'] = 'child'
+    const isPseudo = /^::?.+/.test(selector)
+    if (isPseudo) selectorType = 'pseudo'
+    if (selector === '') selectorType = 'void'
 
-    return [...result, { selector, style }]
+    return [...result, { selector, style, selectorType }]
   }, [])
 
   return paths
@@ -140,17 +145,16 @@ export function toRules(cssObj: CSSObject, className?: string): string[] {
 
   const parsed = parse(cssObj)
 
-  const rules = parsed.map(({ selector, style }) => {
+  const rules = parsed.map(({ selector, selectorType, style }) => {
     const ruleContent = toRuleContent(style)
 
     // not nested style
-    if (selector === '') {
+    if (selectorType === 'void') {
       const atomicClassName = objectToClassName(style)
       return `.${atomicClassName} {${ruleContent}}`
     }
 
-    const isPseudo = /^::?.+/.test(selector)
-    const connector = isPseudo ? '' : ' '
+    const connector = selectorType === 'pseudo' ? '' : ' '
     const finalSelector = wrapperSelector + connector + selector
 
     return `${finalSelector} {${ruleContent}}`
