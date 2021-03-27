@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-opacity', () => {
@@ -11,52 +11,52 @@ describe('styli-plugin-opacity', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'opacity',
       propValue: true,
       key: 'opacity',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+    const newAtom1 = new Atom({
       propKey: 'opacity',
       propValue: true,
       style: { opacity: 0.5 },
       key: 'opacity',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'opacity',
       propValue: 80,
       key: 'opacity',
       type: 'style',
       style: {},
-    }
-    const newAtom2: Atom = {
+    })
+    const newAtom2 = new Atom({
       propKey: 'opacity',
       propValue: 80,
       style: { opacity: 0.8 },
       key: 'opacity',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
-    const atom3: Atom = {
+    const atom3 = new Atom({
       propKey: 'opacity-20',
       propValue: true,
       key: 'opacity',
       type: 'style',
       style: {},
-    }
-    const newAtom3: Atom = {
+    })
+    const newAtom3 = new Atom({
       propKey: 'opacity-20',
       propValue: true,
       style: { opacity: 0.2 },
       key: 'opacity',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

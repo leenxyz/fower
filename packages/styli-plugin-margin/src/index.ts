@@ -1,5 +1,6 @@
 import { styli } from '@styli/core'
-import { Atom, StyliPlugin } from '@styli/types'
+import { StyliPlugin } from '@styli/types'
+import { Atom } from '@styli/atom'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
 export const G = {

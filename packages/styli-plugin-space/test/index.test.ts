@@ -1,4 +1,5 @@
-import { Atom, ParserType } from '@styli/types'
+import { ParserType } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-space', () => {
@@ -13,8 +14,14 @@ describe('styli-plugin-space', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = { propKey: 'space', propValue: 10, style: {}, key: 'space', type: 'style' }
-    const newAtom1: Atom = {
+    const atom1 = new Atom({
+      propKey: 'space',
+      propValue: 10,
+      style: {},
+      key: 'space',
+      type: 'style',
+    })
+    const newAtom1 = new Atom({
       propKey: 'space',
       propValue: 10,
       key: 'space',
@@ -25,7 +32,7 @@ describe('styli-plugin-space', () => {
           marginBottom: '10px',
         },
       },
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
   })
 })

@@ -1,4 +1,5 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
+
 import { styli } from '../styli'
 
 /**

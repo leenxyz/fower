@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-text-size', () => {
@@ -12,30 +12,36 @@ describe('styli-plugin-text-size', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = { propKey: 'text', propValue: 10, key: 'text', type: 'style', style: {} }
-    const newAtom1: Atom = {
+    const atom1 = new Atom({
+      propKey: 'text',
+      propValue: 10,
+      key: 'text',
+      type: 'style',
+      style: {},
+    })
+    const newAtom1 = new Atom({
       propKey: 'text',
       propValue: 10,
       style: { fontSize: '10px' },
       key: 'text',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom3: Atom = {
+    const atom3 = new Atom({
       propKey: 'text-10rem',
       propValue: true,
       key: 'text-10rem',
       type: 'style',
       style: {},
-    }
-    const newAtom3: Atom = {
+    })
+    const newAtom3 = new Atom({
       key: 'text-10rem',
       propKey: 'text-10rem',
       propValue: true,
       style: { fontSize: '10rem' },
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

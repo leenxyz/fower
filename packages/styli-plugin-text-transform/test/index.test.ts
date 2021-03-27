@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-text-transform', () => {
@@ -13,36 +13,38 @@ describe('styli-plugin-text-transform', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'normalcase',
       propValue: true,
       key: 'normalcase',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+
+    const newAtom1 = new Atom({
       propKey: 'normalcase',
       key: 'normalcase',
       propValue: true,
       style: { textTransform: 'none' },
       type: 'style',
-    }
+    })
+
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       key: 'lowercase',
       propKey: 'lowercase',
       propValue: true,
       type: 'style',
       style: {},
-    }
-    const newAtom2: Atom = {
+    })
+    const newAtom2 = new Atom({
       key: 'lowercase',
       propKey: 'lowercase',
       propValue: true,
       style: { textTransform: 'lowercase' },
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

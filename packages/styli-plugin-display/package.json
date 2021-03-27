@@ -22,6 +22,7 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-display.esm.js",
   "dependencies": {
+    "@styli/atom": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",
     "@styli/utils": "^1.0.0-alpha.5"
   }

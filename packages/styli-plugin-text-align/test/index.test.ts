@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-text-align', () => {
@@ -14,36 +14,36 @@ describe('styli-plugin-text-align', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'textAlign',
       propValue: 'center',
       key: 'textAlign',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+    const newAtom1 = new Atom({
       propKey: 'textAlign',
       propValue: 'center',
       style: { textAlign: 'center' },
       key: 'textAlign',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'textCenter',
       propValue: true,
       key: 'textCenter',
       type: 'style',
       style: {},
-    }
-    const newAtom2: Atom = {
+    })
+    const newAtom2 = new Atom({
       propKey: 'textCenter',
       propValue: true,
       style: { textAlign: 'center' },
       key: 'textCenter',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

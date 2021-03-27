@@ -1,4 +1,5 @@
-import { Atom, CSSObject, ParserType } from '@styli/types'
+import { CSSObject, ParserType } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-css', () => {
@@ -19,21 +20,21 @@ describe('styli-plugin-css', () => {
       },
     }
 
-    const atom: Atom = {
+    const atom = new Atom({
       key: 'css',
       propKey: 'css',
       propValue: value,
       style: {},
       type: 'prefix',
-    }
+    })
 
-    const newAtom: Atom = {
+    const newAtom = new Atom({
       key: 'css',
       propKey: 'css',
       propValue: value,
       style: value,
       type: 'prefix',
-    }
+    })
 
     expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
   })

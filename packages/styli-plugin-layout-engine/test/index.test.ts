@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-layout-engine', () => {

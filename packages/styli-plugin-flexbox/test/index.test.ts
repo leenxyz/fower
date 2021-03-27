@@ -1,4 +1,4 @@
-// import { Atom, ParserType } from '@styli/types'
+// import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-flex-box', () => {

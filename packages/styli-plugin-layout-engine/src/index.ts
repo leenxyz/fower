@@ -1,4 +1,5 @@
 import { StyliPlugin } from '@styli/types'
+import { Atom } from '@styli/atom'
 import { getFlexDirection } from '@styli/utils'
 
 const toTop = 'toTop'
@@ -128,29 +129,32 @@ export default (): StyliPlugin => {
       const directionAtom = parser.atoms.find((i) => i.propKey === prefix + direction)
 
       if (!directionAtom) {
-        parser.atoms.push({
-          key: prefix + direction,
-          propKey: prefix + direction,
-          propValue: '',
-          classNames: [prefix + direction],
-          type: 'style',
-          style: { flexDirection: direction as any },
-        })
+        parser.atoms.push(
+          new Atom({
+            key: prefix + direction,
+            propKey: prefix + direction,
+            propValue: '',
+            classNames: [prefix + direction],
+            type: 'style',
+            style: { flexDirection: direction as any },
+          }),
+        )
       }
 
       const displayAtom = parser.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
 
       if (!displayAtom) {
-        parser.atoms.push({
-          key: 'display-flex',
-          propKey: 'display-flex',
-          propValue: '',
-          classNames: ['display-flex'],
-          type: 'style',
-          cache: true,
-          matchedPlugin: 'styli-plugin-display',
-          style: { display: 'flex' },
-        })
+        parser.atoms.push(
+          new Atom({
+            key: 'display-flex',
+            propKey: 'display-flex',
+            propValue: '',
+            classNames: ['display-flex'],
+            type: 'style',
+            matchedPlugin: 'styli-plugin-display',
+            style: { display: 'flex' },
+          }),
+        )
       }
     },
   }

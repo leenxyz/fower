@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-margin', () => {
@@ -14,62 +14,62 @@ describe('styli-plugin-margin', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = { propKey: 'm', propValue: 10, key: 'm', type: 'style', style: {} }
-    const newAtom1: Atom = {
+    const atom1 = new Atom({ propKey: 'm', propValue: 10, key: 'm', type: 'style', style: {} })
+    const newAtom1 = new Atom({
       propKey: 'm',
       propValue: 10,
       style: { margin: '10px' },
       key: 'm',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'ml-20',
       propValue: true,
       key: 'ml-20',
       type: 'style',
       style: {},
-    }
-    const newAtom2: Atom = {
+    })
+    const newAtom2 = new Atom({
       propKey: 'ml-20',
       propValue: true,
       style: { marginLeft: '20px' },
       key: 'ml-20',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
-    const atom3: Atom = {
+    const atom3 = new Atom({
       propKey: 'mx-10rem',
       propValue: true,
       key: 'mx-10rem',
       type: 'style',
       style: {},
-    }
-    const newAtom3: Atom = {
+    })
+    const newAtom3 = new Atom({
       key: 'mx-10rem',
       propKey: 'mx-10rem',
       propValue: true,
       style: { marginLeft: '10rem', marginRight: '10rem' },
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
-    const atom4: Atom = {
+    const atom4 = new Atom({
       propKey: 'mx--10rem',
       propValue: true,
       key: 'mx--10rem',
       type: 'style',
       style: {},
-    }
-    const newAtom4: Atom = {
+    })
+    const newAtom4 = new Atom({
       key: 'mx--10rem',
       propKey: 'mx--10rem',
       propValue: true,
       style: { marginLeft: '-10rem', marginRight: '-10rem' },
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

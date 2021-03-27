@@ -1,15 +1,24 @@
 type AtomType = 'style' | 'prefix' | 'responsive' | 'invalid'
 
 interface Options {
+  key: 'css' | 'debug' | ({} & string)
   propKey: 'css' | 'debug' | ({} & string)
   propValue: any
+  style: any
+  type: AtomType
+  classNames: string[]
+  matchedPlugin: string
 }
 
 export class Atom {
-  constructor(options: Partial<Options>) {
-    this.key = options?.propKey ?? ''
-    this.propKey = options?.propKey ?? ''
-    this.propValue = options?.propValue
+  constructor(options: Partial<Options> = {}) {
+    this.key = options.key || options.propKey || ''
+    this.propKey = options.propKey ?? ''
+    this.propValue = options.propValue
+    this.style = options.style
+    this.type = options.type ?? 'style'
+    this.classNames = options.classNames ?? []
+    this.matchedPlugin = options.matchedPlugin ?? ''
   }
 
   /**

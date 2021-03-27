@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-overflow', () => {
@@ -11,36 +11,36 @@ describe('styli-plugin-overflow', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'overflow',
       propValue: 'scroll',
       key: 'overflow',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+    const newAtom1 = new Atom({
       propKey: 'overflow',
       propValue: 'scroll',
       style: { overflow: 'scroll' },
       key: 'overflow',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'overflowX',
       propValue: 'scroll',
       key: 'overflowX',
       type: 'style',
       style: {},
-    }
-    const newAtom2: Atom = {
+    })
+    const newAtom2 = new Atom({
       propKey: 'overflowX',
       propValue: 'scroll',
       style: { overflowX: 'scroll' },
       key: 'overflowX',
       type: 'style',
-    }
+    })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

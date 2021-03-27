@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-position', () => {
@@ -13,14 +13,14 @@ describe('styli-plugin-position', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'rounded',
       propValue: 10,
       key: 'rounded',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+    const newAtom1 = new Atom({
       key: 'rounded',
       type: 'style',
       propKey: 'rounded',
@@ -28,16 +28,16 @@ describe('styli-plugin-position', () => {
       style: {
         borderRadius: '10px',
       },
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'roundedT-10',
       propValue: true,
       key: 'roundedT-10',
       type: 'style',
       style: {},
-    }
+    })
     const newAtom2 = {
       key: 'roundedT-10',
       type: 'style',
@@ -47,20 +47,20 @@ describe('styli-plugin-position', () => {
     }
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
-    const atom3: Atom = {
+    const atom3 = new Atom({
       propKey: 'roundedBR-10rem',
       propValue: true,
       key: 'roundedBR-10rem',
       type: 'style',
       style: {},
-    }
-    const newAtom3: Atom = {
+    })
+    const newAtom3 = new Atom({
       key: 'roundedBR-10rem',
       type: 'style',
       propKey: 'roundedBR-10rem',
       propValue: true,
       style: { borderBottomRightRadius: '10rem' },
-    }
+    })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

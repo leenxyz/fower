@@ -1,5 +1,6 @@
+import { Atom } from '@styli/atom'
 import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
-import { StyliPlugin, Configuration, Preset, Theme, Atom } from '@styli/types'
+import { StyliPlugin, Configuration, Preset, Theme } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { defaultConfig } from './config'
 import { SetThemeParams } from './types'
@@ -80,7 +81,7 @@ class Styli {
    * @param value
    * @returns
    */
-  extractColor = (value: string, colors: any): [string, string] => {
+  extractColor = (value: string, colors?: any): [string, string] => {
     colors = colors ? colors : this.getColors()
     const [prefix, postfix] = (value || '').split('-') || []
     const colorName = downFirst(prefix)

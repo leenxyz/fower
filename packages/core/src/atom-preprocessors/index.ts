@@ -1,4 +1,5 @@
-import { Atom, ParserType } from '@styli/types'
+import { ParserType } from '@styli/types'
+import { Atom } from '@styli/atom'
 import { commonPreprocessor } from './common'
 import { pseudoPreprocessor } from './pseudo'
 import { spacePreprocessor } from './space'

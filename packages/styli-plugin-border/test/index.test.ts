@@ -1,5 +1,4 @@
 import { styli } from '@styli/core'
-// import { Atom, ParserType } from '@styli/types'
 import plugin from '../src'
 
 describe('styli-plugin-border', () => {

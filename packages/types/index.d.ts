@@ -1,4 +1,5 @@
 import * as CSS from 'csstype'
+import { Atom } from '@styli/atom'
 
 // tslint:disable-next-line:export-just-namespace
 export = StyliTypes
@@ -67,48 +68,6 @@ declare namespace StyliTypes {
    * ```
    */
   type AtomType = 'style' | 'prefix' | 'responsive' | 'invalid'
-
-  interface Atom {
-    /**
-     * propKey may changed by plugin, so use key record origin propKey
-     */
-    key: 'css' | 'debug' | ({} & string)
-
-    /**
-     * original propKey, 原始的propkey
-     * @example
-     * <Box red200></Box> propKey is red200
-     * <Box red200--hover></Box> propKey is red200--hover
-     */
-    propKey: 'css' | 'debug' | ({} & string)
-
-    propValue: string | number | boolean | CSSObject
-
-    style: CSSObject
-
-    type: AtomType
-
-    /**
-     * className list of atom
-     */
-    classNames?: string[]
-
-    /**
-     * plugin name matched for this atom
-     */
-    matchedPlugin?: string
-
-    /**
-     * if handled, this atom is ready to push to parser.atoms
-     */
-    handled?: boolean
-
-    /**
-     * atom can be cached
-     * TODO: 命名有歧义，需解释什么时候可以被 cached
-     */
-    cache?: boolean
-  }
 
   interface AtomicProps {
     /**

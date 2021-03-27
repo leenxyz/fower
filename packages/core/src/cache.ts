@@ -1,4 +1,4 @@
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 
 // cache control
 export const classNameCache = new Map<string, boolean>()

@@ -1,5 +1,5 @@
 import { styli } from '@styli/core'
-import { Atom } from '@styli/types'
+import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-shadow', () => {
@@ -19,29 +19,29 @@ describe('styli-plugin-shadow', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1: Atom = {
+    const atom1 = new Atom({
       propKey: 'shadow',
       propValue: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       key: 'shadow',
       type: 'style',
       style: {},
-    }
-    const newAtom1: Atom = {
+    })
+    const newAtom1 = new Atom({
       key: 'shadow',
       type: 'style',
       propKey: 'shadow',
       propValue: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       style: { boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05)' },
-    }
+    })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2: Atom = {
+    const atom2 = new Atom({
       propKey: 'shadowXS',
       propValue: true,
       key: 'shadowXS',
       type: 'style',
       style: {},
-    }
+    })
     const newAtom2 = {
       propKey: 'shadowXS',
       propValue: true,

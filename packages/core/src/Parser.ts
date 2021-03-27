@@ -1,5 +1,5 @@
-import { Props, Theme, Atom, CSSProperties } from '@styli/types'
-import { Atom as MyAtom } from '@styli/atom'
+import { Props, Theme, CSSProperties } from '@styli/types'
+import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { toRules } from '@styli/css-object-processor'
 import { isEmptyObj, isPlainType, hash, cssObjToStr, objectToClassName } from '@styli/utils'
@@ -39,22 +39,11 @@ export class Parser {
       // the prop should be excluded by user setting
       if (excludedProps.includes(propKey)) continue
 
-      let initialAtom = {
+      let initialAtom = new Atom({
         propKey,
         propValue,
-        type: 'style',
         key: propKey,
-        handled: false,
-      } as Atom
-
-      console.log(
-        'initialAtom:',
-        initialAtom,
-        new MyAtom({
-          propKey,
-          propValue,
-        }),
-      )
+      })
 
       let newAtom: Atom = runPreprocessors(initialAtom, this as any)
 
