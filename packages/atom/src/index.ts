@@ -42,6 +42,7 @@ interface Options {
   type: AtomType
   classNames: string[]
   matchedPlugin: string
+  handled: boolean
 }
 
 export class Atom {
@@ -53,6 +54,7 @@ export class Atom {
     this.type = options.type ?? 'style'
     this.classNames = options.classNames ?? []
     this.matchedPlugin = options.matchedPlugin ?? ''
+    this.handled = options.handled ?? false
   }
 
   /**
