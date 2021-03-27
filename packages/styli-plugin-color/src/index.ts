@@ -37,7 +37,7 @@ export default (): StyliPlugin => {
       const colors =
         colorMode === 'default'
           ? theme?.colors
-          : deepmerge(theme, theme?.modes?.[colorMode] || {})['colors']
+          : deepmerge<any>(theme, theme?.modes?.[colorMode] || {})['colors']
 
       atom.style = colorPropToStyle(atom.propKey, atom.propValue, colors)
       return atom

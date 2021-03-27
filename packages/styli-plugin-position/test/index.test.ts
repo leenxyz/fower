@@ -26,22 +26,6 @@ describe('styli-plugin-position', () => {
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2 = new Atom({
-      propKey: 'bottom-20',
-      propValue: true,
-      type: 'style',
-      key: 'top',
-      style: {},
-    })
-    const newAtom2 = new Atom({
-      propKey: 'bottom-20',
-      propValue: true,
-      style: { bottom: 20 },
-      type: 'style',
-      key: 'top',
-    })
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
-
     const atom3 = new Atom({
       propKey: 'left-10rem',
       propValue: true,

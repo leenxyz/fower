@@ -1,7 +1,7 @@
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
-describe('styli-plugin-position', () => {
+describe('styli-plugin-size', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
   const parser = {} as any
 

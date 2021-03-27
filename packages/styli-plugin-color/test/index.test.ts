@@ -1,4 +1,5 @@
 import { styli } from '@styli/core'
+import { Atom } from '@styli/atom'
 import { Parser } from '@styli/parser'
 import plugin from '../src'
 
@@ -23,43 +24,40 @@ describe('styli-plugin-color', () => {
   describe('onAtomStyleCreate', () => {
     // <View red></View>
     it('red', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'red',
         propValue: true,
         style: {},
         type: 'style' as any,
         key: 'red',
-        value: true,
-      }
-      const newAtom = {
+      })
+      const newAtom = new Atom({
         propKey: 'red',
         propValue: true,
         type: 'style',
         key: 'red',
-        value: true,
         style: { color: 'blue' },
-      }
+      })
+
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View color="red"></View>
     it('color', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'color',
         propValue: 'red',
         style: {},
         type: 'style' as any,
         key: 'red',
-        value: true,
-      }
-      const newAtom = {
+      })
+      const newAtom = new Atom({
         propKey: 'color',
         propValue: 'red',
         style: { color: 'blue' },
         type: 'style' as any,
         key: 'red',
-        value: true,
-      }
+      })
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
     })
   })

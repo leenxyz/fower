@@ -14,7 +14,7 @@ export const sizeMaps: any = {
 }
 
 export function isMatch(key: string) {
-  return /^([wh]|square|circle|min[hw]|max[hw])(-[\dA-Z-a-z]+)?$/.test(key)
+  return /^([wh]|square|circle|min[hw]|max[hw])(-[\dA-Z-a-z]+)?$/i.test(key)
 }
 
 export function sizePropToStyle(prop: string, propValue: any) {
