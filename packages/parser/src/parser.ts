@@ -1,9 +1,9 @@
 import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
+import { parse } from '@styli/css-object-processor'
+import { isEmptyObj, cssObjToStr, isPlainType, hash, objectToClassName } from '@styli/utils'
 import { toRules } from '@styli/css-object-processor'
-import { isEmptyObj, isPlainType, hash, cssObjToStr, objectToClassName } from '@styli/utils'
 import { runPreprocessors } from './atom-preprocessors'
-import { classNameCache } from './cache'
 
 /**
  * An Abstract tool to handle atomic props
@@ -13,11 +13,6 @@ export class Parser {
    * atom parsed from props
    */
   atoms: Atom[] = []
-
-  /**
-   * unique className hash by component props
-   */
-  uniqueClassName: string = ''
 
   constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
@@ -36,6 +31,12 @@ export class Parser {
     for (let [propKey, propValue] of Object.entries(props)) {
       // the prop should be excluded by user setting
       if (excludedProps.includes(propKey)) continue
+
+      // parse css prop
+      if (propKey === 'css') {
+        this.parseCSSProp(propValue)
+        continue
+      }
 
       let initialAtom = new Atom({
         propKey,
@@ -62,15 +63,55 @@ export class Parser {
           newAtom = plugin.onAtomStyleCreate(newAtom, this as any)
         }
 
-        newAtom = {
-          ...this.createAtomClassNames(newAtom),
-          matchedPlugin: plugin.name,
-        }
+        newAtom.className = this.getAtomClassName(newAtom)
+        newAtom.matchedPlugin = plugin.name
+        newAtom.handled = true
 
         this.atoms.push(newAtom)
         break // break from this plugin
       }
     }
+  }
+
+  /**
+   *  parse CSS prop
+   * @param propValue 
+   * @example 
+   * ```jsx
+      <Box
+        css={{
+          backgroundColor: 'bisque',
+          padding: '20px',
+          ':hover': {
+            backgroundColor: 'yellow',
+          },
+          '.child': {
+            color: 'white',
+          },
+        }}
+      >
+        SubTitle
+        <Box className="child">Child</Box>
+      </Box>
+   * ```
+   */
+  private parseCSSProp(propValue: any) {
+    const parsed = parse(propValue)
+    const prefixClassName = objectToClassName(propValue)
+
+    const atoms = parsed.reduce<Atom[]>((r, { selector, selectorType, style }) => {
+      const isNested = selectorType !== 'void'
+      const atom = new Atom({ propKey: 'css' })
+      atom.style = isNested ? { [selector]: style } : style
+      atom.type = selectorType === 'void' ? 'style' : 'prefix'
+      atom.className = isNested ? prefixClassName : objectToClassName(style)
+
+      return [...r, atom]
+    }, [])
+
+    console.log('css atoms:', atoms)
+
+    this.atoms = [...this.atoms, ...atoms]
   }
 
   /**
@@ -86,32 +127,23 @@ export class Parser {
   }
 
   /**
-   * create ClassNames for Atom
-   * 普通atomic props className 只有一个, 但 css props 的className有多个，所以使用数组
+   * create ClassName for Atom
    * @param atom
    */
-  createAtomClassNames(atom: Atom) {
-    const { propKey = '', propValue, classNames, type } = atom
-    const ignoreType = ['responsive', 'invalid']
+  private getAtomClassName(atom: Atom) {
+    const { propKey = '', propValue, className } = atom
 
-    if (classNames?.length) return atom
-
-    if (ignoreType.includes(type)) return atom
+    if (className) return className
 
     /** global className prefix */
     const configPrefix = this.styli.getConfig('prefix')
     const prefix = configPrefix ? configPrefix + '-' : ''
 
     // if boolean type props, use prop key as className
-    if (typeof propValue === 'boolean') {
-      atom.classNames = [`${prefix}${propKey}`]
-      return atom
-    }
+    if (typeof propValue === 'boolean') `${prefix}${propKey}`
 
     const postfix = this.getClassPostfix(propValue)
-    atom.classNames = [`${prefix}${propKey}-${postfix}`]
-
-    return atom
+    return `${prefix}${propKey}-${postfix}`
   }
 
   getAtomCacheKey(propKey: string, propValue: any) {
@@ -119,22 +151,11 @@ export class Parser {
     return `${propKey}-${propValue}`
   }
 
-  private setUniqueClassName() {
-    if (!this.uniqueClassName) this.uniqueClassName = objectToClassName(this.props)
-  }
-
   /**
    * get component classNames
    */
-  getClassNames() {
-    const atomClassNames = this.atoms
-      .map((i) => {
-        if (i.type === 'responsive') this.setUniqueClassName()
-        return i.classNames?.join(' ')
-      })
-      .concat(this.uniqueClassName)
-      .join(' ')
-    return atomClassNames
+  getClassNames(): string[] {
+    return this.atoms.map((i) => i.className)
   }
 
   /**
@@ -152,57 +173,12 @@ export class Parser {
    * @returns
    */
   toCssRules(): string[] {
-    const responsiveCSS: any = {}
-
-    const css = this.atoms.reduce<string[]>((result, atom) => {
-      const { classNames, type, style = {} } = atom
-      const [className] = classNames || []
-
-      // no style in falsy prop
-      if (type === 'invalid') return result
-
-      // empty style
-      if (isEmptyObj(style)) return result
-
-      // if in classNameCache, no need to insert to stylesheet
-      if (classNameCache.get(className)) return result
-
-      if (className) classNameCache.set(className, true)
-
-      if (type === 'prefix') {
-        return [...result, ...toRules(style, className)]
-      }
-
-      if (type === 'style') {
-        return [...result, `.${className} { ${cssObjToStr(style)} }`]
-      }
-
-      if (type === 'responsive') {
-        for (const [breakpoint, responsiveStyle] of Object.entries(style)) {
-          responsiveCSS[breakpoint] = cssObjToStr(responsiveStyle, responsiveCSS[breakpoint])
-        }
-      }
-
-      return result
+    console.log('this.atoms', this.atoms)
+    const rules = this.atoms.reduce<string[]>((result, atom) => {
+      return [...result, ...this.getAtomRules(atom)]
     }, [])
 
-    if (!isEmptyObj(responsiveCSS)) {
-      this.setUniqueClassName()
-      return Object.entries(responsiveCSS)
-        .reverse() // 因为 insertRule 有顺序
-        .reduce<string[]>((r, cur) => {
-          const [breakpoint, mediaCssStr] = cur
-          let rule = `.${this.uniqueClassName}{${mediaCssStr}}`
-
-          /** this is responsive endpoint style */
-          if (breakpoint !== 'base') {
-            rule = `@media (min-width: ${breakpoint}) {${rule}}`
-          }
-          return [...r, rule]
-        }, css)
-    }
-
-    return css
+    return rules
   }
 
   getParsedProps(): any {
@@ -218,5 +194,55 @@ export class Parser {
   insertRule() {
     const rules = this.toCssRules()
     styleSheet.insertStyles(rules)
+  }
+
+  getAtomRules(atom: Atom): string[] {
+    let rules: string[] = []
+    const { className, type, style = {} } = atom
+    const responsiveCSS: any = {}
+
+    // no style in falsy prop
+    if (type === 'invalid') rules = []
+
+    // empty style
+    if (isEmptyObj(style)) rules = []
+
+    // if in classNameCache, no need to insert to stylesheet
+    // if (classNameCache.get(className)) return result
+    // if (className) classNameCache.set(className, true)
+
+    if (type === 'prefix') {
+      rules = toRules(style, className)
+    }
+
+    if (type === 'style') {
+      rules = [`.${className} { ${cssObjToStr(style)} }`]
+    }
+
+    if (type === 'responsive') {
+      for (const [breakpoint, responsiveStyle] of Object.entries(style)) {
+        responsiveCSS[breakpoint] = cssObjToStr(responsiveStyle, responsiveCSS[breakpoint])
+      }
+
+      const prefixClassName = objectToClassName(atom.propValue)
+
+      const responsiveRules = Object.entries(responsiveCSS)
+        .reverse() // 因为 insertRule 有顺序
+        .reduce<string[]>((r, cur) => {
+          const [breakpoint, cssStr] = cur
+          let rule = `.${prefixClassName}{${cssStr}}`
+
+          // this is responsive endpoint style
+          if (breakpoint !== 'base')
+            // TODO: important ?
+            // rule = `@media (min-width: ${breakpoint}) {${rule}}`
+            rule = `@media (min-width: ${breakpoint}) {${rule.replace(';', ' !important')}}`
+
+          return [...r, rule]
+        }, [])
+      rules = responsiveRules
+    }
+
+    return rules
   }
 }

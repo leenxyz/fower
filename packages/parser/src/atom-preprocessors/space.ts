@@ -23,7 +23,7 @@ export function spacePreprocessor(atom: Atom, styli: any): Atom {
 
   atom.key = key
   atom.propValue = spacing[value] // value from theme
-  atom.classNames = [propKey]
+  atom.className = propKey
 
   return atom
 }

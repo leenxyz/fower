@@ -37,7 +37,7 @@ export function pseudoPreprocessor(atom: Atom, parser: Parser, styli: any): Atom
 
   atom.key = key
   atom.type = 'prefix'
-  atom.classNames = [propKey]
+  atom.className = propKey
   atom.handled = true
 
   return atom

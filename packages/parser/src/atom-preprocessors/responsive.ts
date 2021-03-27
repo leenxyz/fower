@@ -1,5 +1,6 @@
-import { Parser } from '../parser'
+import { objectToClassName } from '@styli/utils'
 import { Atom } from '@styli/atom'
+import { Parser } from '../parser'
 
 export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   const { propValue } = atom
@@ -19,6 +20,7 @@ export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): 
 
   if (!plugin) return atom
 
+
   const result = propValue.reduce((result, cur, i) => {
     const { style } = plugin.onAtomStyleCreate!({ ...atom, propValue: cur }, parser)
 
@@ -32,6 +34,7 @@ export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): 
 
   atom.style = result
   atom.type = 'responsive'
+  atom.className = objectToClassName(propValue)
   atom.handled = true
 
   return atom

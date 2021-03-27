@@ -5,7 +5,7 @@ import { pseudoPreprocessor } from './pseudo'
 import { spacePreprocessor } from './space'
 import { responsivePreprocessor } from './responsive'
 
-export function runPreprocessors(initialAtom: Atom, parser: Parser, styli: any) {
+export function runPreprocessors(initialAtom: Atom, parser: Parser, styli: any): Atom {
   let atom = { ...initialAtom }
   atom = commonPreprocessor(atom)
 

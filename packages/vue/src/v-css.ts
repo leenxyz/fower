@@ -43,8 +43,7 @@ export default {
     })
 
     /** set className to el */
-    const className = parser.getClassNames()
-    const classList = (className || '').split(' ').filter(Boolean)
+    const classList = parser.getClassNames()
 
     el?.classList.add(...classList)
   },

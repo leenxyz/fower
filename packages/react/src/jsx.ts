@@ -1,7 +1,6 @@
 import { createElement } from 'react'
 import { styli } from '@styli/core'
 import { Parser } from '@styli/parser'
-import { trimStr } from '@styli/utils'
 
 /**
  * JSX Pragma
@@ -29,7 +28,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
   } else {
     const { className = '' } = props || {}
     parser.insertRule()
-    const finalClassName = trimStr(`${parser.getClassNames()} ${className}`)
+    const finalClassName = [...parser.getClassNames(), className].join(' ')
     if (finalClassName) parsedProps.className = finalClassName
   }
 

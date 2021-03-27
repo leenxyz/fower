@@ -20,11 +20,8 @@
   },
   "author": "forsigner",
   "module": "dist/utils.esm.js",
-  "devDependencies": {
-    "@styli/types": "^1.0.0-alpha.5",
-    "@types/string-hash": "^1.1.1"
-  },
   "dependencies": {
+    "@types/string-hash": "^1.1.1",
     "deepmerge": "^4.2.2",
     "fast-deep-equal": "^3.1.3",
     "is-in-browser": "^1.1.3",

@@ -23,7 +23,6 @@
 /// <reference types="styli-plugin-cursor" />
 /// <reference types="styli-plugin-ellipsis" />
 /// <reference types="styli-plugin-debug" />
-/// <reference types="styli-plugin-css" />
 /// <reference types="styli-plugin-space" />
 /// <reference types="@styli/types" />
 import { Preset, Theme } from '@styli/types'

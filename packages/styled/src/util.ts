@@ -1,6 +1,5 @@
 import { createStyle, css, styli } from '@styli/core'
 import { Parser } from '@styli/parser'
-import { trimStr } from '@styli/utils'
 import { Args } from './types'
 
 // handle inline style
@@ -28,7 +27,7 @@ export function getCssParsedProps(props: any, value: any, args: Args) {
 
   const { className = '' } = props || {}
 
-  const finalClassName = trimStr(`${css(...args)} ${parser.getClassNames()} ${className}`)
+  const finalClassName = [css(...args), ...parser.getClassNames(), className].join(' ')
 
   if (finalClassName) {
     parsedProps.className = finalClassName

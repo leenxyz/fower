@@ -24,12 +24,10 @@ import outline from 'styli-plugin-outline'
 import cursor from 'styli-plugin-cursor'
 import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
-import css from 'styli-plugin-css'
 import space from 'styli-plugin-space'
 
 export const plugins = [
   debug(),
-  css(),
   background(),
   border(),
   color(),

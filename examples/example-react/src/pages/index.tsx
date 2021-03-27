@@ -25,7 +25,6 @@ setTheme({
     colorHello: '#ff9900',
   },
   breakpoints: {
-    sm: '',
     '4xl': '',
   },
   modes: {
@@ -51,16 +50,17 @@ export default function IndexPage() {
           切换 {colorMode}
         </Box> */}
 
-        {/* <Box
+        <Box
           // style={{ backgroundColor: 'yellowgreen' }}
-          red500
+          // red500
           bgAmber100
           bgRed100--hover
           p={[10, 40, 80, 120, 200]}
+          color={['red', 'blue', 'teal']}
           // p6--hover
         >
           gogo
-        </Box> */}
+        </Box>
 
         {/* <Box as="h2" red500 p4 bgYellow100 bgAmber100-D10--hover>
           gogo
@@ -69,10 +69,12 @@ export default function IndexPage() {
         {/* <Box as="h2" red500 p4 color="colorHello">
           gogo
         </Box> */}
-        <Box
+        {/* <Box
           as="h2"
           rounded3XL
+          // roundedSM--hover
           m10
+          gray400--hover
           css={{
             backgroundColor: 'bisque',
             // padding: 20,
@@ -86,8 +88,10 @@ export default function IndexPage() {
           }}
         >
           SubTitle
-          <Box className="child">Child</Box>
-        </Box>
+          <Box className="child" bgBlue200--hover>
+            Child
+          </Box>
+        </Box> */}
       </div>
     </ThemeProvider>
   );

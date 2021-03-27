@@ -7,7 +7,7 @@ import {
   isValidPropValue,
   isEmptyObj,
   isPercentNumber,
-  cssKeyToStyleKey,
+  jsKeyToCssKey,
   isPlainType,
 } from '../src'
 
@@ -48,9 +48,9 @@ describe('styli-utils', () => {
     expect(isPercentNumber('10p')).toEqual(true)
   })
 
-  it('cssKeyToStyleKey', () => {
-    expect(cssKeyToStyleKey('WebkitLineClamp')).toEqual('-webkit-line-clamp')
-    expect(cssKeyToStyleKey('lineHeight')).toEqual('line-height')
+  it('jsKeyToCssKey', () => {
+    expect(jsKeyToCssKey('WebkitLineClamp')).toEqual('-webkit-line-clamp')
+    expect(jsKeyToCssKey('lineHeight')).toEqual('line-height')
   })
 
   it('isPlainType', () => {

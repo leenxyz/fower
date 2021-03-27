@@ -15,5 +15,5 @@ export function css(...args: (string | CSSObject)[]) {
   const parser = new Parser(props, styli.getTheme(), styli)
   parser.insertRule()
 
-  return parser.getClassNames()
+  return parser.getClassNames().join(' ')
 }

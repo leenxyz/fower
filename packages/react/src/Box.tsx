@@ -3,7 +3,6 @@ import { styli } from '@styli/core'
 import { Parser } from '@styli/parser'
 import { AtomicProps, As } from '@styli/types'
 import { themeContext, useColorMode } from '@styli/theming'
-import { trimStr } from '@styli/utils'
 const { Consumer } = themeContext
 
 export interface BoxComponent<T extends As, P = any> {
@@ -43,7 +42,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
         } else {
           const { className = '' } = rest || {}
           parser.insertRule()
-          const finalClassName = trimStr(`${parser.getClassNames()} ${className}`)
+          const finalClassName = [...parser.getClassNames(), className].join(' ')
 
           if (finalClassName) parsedProps.className = finalClassName
         }

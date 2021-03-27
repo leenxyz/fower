@@ -1,5 +1,13 @@
-import { cssKeyToStyleKey, objectToClassName } from '@styli/utils'
-import { CSSObject } from '@styli/types'
+import * as CSS from 'csstype'
+import { jsKeyToCssKey, objectToClassName } from '@styli/utils'
+
+type CSSProperties = CSS.Properties<number | string>
+type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
+type CSSObject<T = any> =
+  | (CSSProperties & PseudosObject)
+  | {
+      [K in keyof T]?: T[K] extends object ? CSSObject<T[K]> : CSSProperties
+    }
 
 type Dict = Record<string, any>
 type FlattenItem = (string | Dict)[]
@@ -59,7 +67,7 @@ export function flatten(cssObj: CSSObject): FlattenItem[] {
 
     /** primitive value */
     if (!Array.isArray(flattenResult)) {
-      return [...result, [{ [cssKeyToStyleKey(key)]: flattenResult }]]
+      return [...result, [{ [jsKeyToCssKey(key)]: flattenResult }]]
     }
 
     return flattenResult.reduce<FlattenItem[]>((r, cur) => {

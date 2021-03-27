@@ -1,4 +1,3 @@
-import { trimStr } from '@styli/utils'
 import * as t from '@babel/types'
 
 export function toCss(path: any, parser: any, attrs: any) {
@@ -11,7 +10,7 @@ export function toCss(path: any, parser: any, attrs: any) {
 
   if (oClassName) {
     // merge style
-    oClassName.value.value = trimStr(oClassName.value.value + ' ' + classNames)
+    oClassName.value.value = oClassName.value.value + ' ' + classNames
   } else {
     // insert style
     const className = t.jsxAttribute(t.jsxIdentifier('className'), t.stringLiteral(classNames))
