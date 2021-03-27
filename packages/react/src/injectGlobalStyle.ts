@@ -1,8 +1,8 @@
 import { CSSObject } from '@styli/types'
 import { toRules } from '@styli/css-object-processor'
-import { styleManager } from '@styli/core'
+import { styleSheet } from '@styli/sheet'
 
 export function injectGlobalStyle(cssObj: CSSObject) {
   const rules = toRules(cssObj)
-  styleManager.insertStyles(rules)
+  styleSheet.insertStyles(rules)
 }

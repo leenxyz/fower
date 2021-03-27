@@ -1,6 +1,6 @@
 import { isBrowser } from '@styli/utils'
 
-class StyleManager {
+class StyleSheet {
   private $style!: HTMLStyleElement
 
   private createStyleElement(): HTMLStyleElement {
@@ -23,4 +23,4 @@ class StyleManager {
   }
 }
 
-export const styleManager = new StyleManager()
+export const styleSheet = new StyleSheet()

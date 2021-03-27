@@ -1,8 +1,8 @@
 import { Props, Atom, Theme, CSSProperties } from '@styli/types'
+import { styleSheet } from '@styli/sheet'
 import { toRules } from '@styli/css-object-processor'
 import { isEmptyObj, isPlainType, hash, cssObjToStr, objectToClassName } from '@styli/utils'
 import { styli } from './styli'
-import { styleManager } from './styleManager'
 import { runPreprocessors } from './atom-preprocessors'
 
 /**
@@ -215,6 +215,6 @@ export class Parser {
 
   insertRule() {
     const rules = this.toCssRules()
-    styleManager.insertStyles(rules)
+    styleSheet.insertStyles(rules)
   }
 }
