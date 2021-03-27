@@ -1,5 +1,5 @@
 {
-  "name": "@styli/core",
+  "name": "@styli/atom",
   "version": "1.0.0-alpha.5",
   "license": "MIT",
   "main": "dist/index.js",
@@ -19,9 +19,8 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/core.esm.js",
+  "module": "dist/atom.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.0.0-alpha.5",
     "@styli/css-object-processor": "^1.0.0-alpha.5",
     "@styli/sheet": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",

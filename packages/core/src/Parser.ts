@@ -1,9 +1,11 @@
-import { Props, Atom, Theme, CSSProperties } from '@styli/types'
+import { Props, Theme, Atom, CSSProperties } from '@styli/types'
+import { Atom as MyAtom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { toRules } from '@styli/css-object-processor'
 import { isEmptyObj, isPlainType, hash, cssObjToStr, objectToClassName } from '@styli/utils'
 import { styli } from './styli'
 import { runPreprocessors } from './atom-preprocessors'
+import { classNameCache } from './cache'
 
 /**
  * An Abstract tool to handle atomic props
@@ -44,6 +46,15 @@ export class Parser {
         key: propKey,
         handled: false,
       } as Atom
+
+      console.log(
+        'initialAtom:',
+        initialAtom,
+        new MyAtom({
+          propKey,
+          propValue,
+        }),
+      )
 
       let newAtom: Atom = runPreprocessors(initialAtom, this as any)
 
@@ -163,9 +174,13 @@ export class Parser {
       // no style in falsy prop
       if (type === 'invalid') return result
 
-      if (styli.classNameCache.get(className) || isEmptyObj(style)) return result
+      // empty style
+      if (isEmptyObj(style)) return result
 
-      if (className) styli.classNameCache.set(className, true)
+      // if in classNameCache, no need to insert to stylesheet
+      if (classNameCache.get(className)) return result
+
+      if (className) classNameCache.set(className, true)
 
       if (type === 'prefix') {
         return [...result, ...toRules(style, className)]

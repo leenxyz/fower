@@ -1,14 +1,11 @@
 import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
-import { StyliPlugin, Configuration, Preset, Theme, Atom, ModifierType } from '@styli/types'
+import { StyliPlugin, Configuration, Preset, Theme, Atom } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { defaultConfig } from './config'
 import { SetThemeParams } from './types'
 
 class Styli {
   config: Preset = defaultConfig
-
-  // cache control
-  classNameCache = new Map<string, boolean>()
 
   atomCache = new Map<string, Atom>()
 
@@ -30,7 +27,7 @@ class Styli {
     return this.config[type] as any
   }
 
-  getValue(value: string | number, type?: ModifierType) {
+  getValue(value: string | number) {
     let numValue = value
     // w-80p => width: 80%
     if (isPercentNumber('' + value)) {
@@ -45,7 +42,7 @@ class Styli {
       }
 
       if (this.config.unit !== 'none' && this.config.transformUnit) {
-        return this.config.transformUnit(numValue, type)
+        return this.config.transformUnit(numValue)
       }
     }
 

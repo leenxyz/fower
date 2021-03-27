@@ -5,21 +5,6 @@ export = StyliTypes
 export as namespace StyliTypes
 
 declare namespace StyliTypes {
-  enum ModifierType {
-    margin = 'margin',
-    padding = 'padding',
-    border = 'border',
-    position = 'position',
-    text = 'text',
-    size = 'size',
-    zIndex = 'zIndex',
-    opacity = 'opacity',
-    shadow = 'shadow',
-    flex = 'flex',
-    flexItem = 'flexItem',
-    lineHeight = 'lineHeight',
-  }
-
   type StyliColor = CSS.Property.Color | keyof Colors
 
   type As = React.ElementType
@@ -166,7 +151,7 @@ declare namespace StyliTypes {
     important?: boolean
     theme: Theme
     plugins: StyliPlugin[]
-    transformUnit(data: string | number, type?: ModifierType): string
+    transformUnit(data: string | number): string
   }
 
   interface Props {
