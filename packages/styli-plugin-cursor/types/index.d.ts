@@ -14,7 +14,7 @@ declare module '@styli/types' {
      * <View cursor="pointer"></View>
      * ```
      */
-    cursor?: CSS.Property.Cursor | CSS.Property.Cursor[] | boolean
+    cursor?: CSS.Property.Cursor | boolean
 
     /**
      * Set cursor to alias

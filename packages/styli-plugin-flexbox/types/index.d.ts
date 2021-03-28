@@ -55,7 +55,7 @@ declare module '@styli/types' {
      * <View flexDirection="column-reverse"></View>
      * ```
      */
-    flexDirection?: CSS.Property.FlexDirection | CSS.Property.FlexDirection[]
+    flexDirection?: CSS.Property.FlexDirection
 
     /**
      * set flex-flow、flex-shrink、flex-basis
@@ -69,7 +69,7 @@ declare module '@styli/types' {
      * <View flexNone></View> // flex: none;
      * ```
      */
-    flex?: CSS.Property.Flex | CSS.Property.Flex[] | boolean
+    flex?: CSS.Property.Flex | boolean
 
     /**
      * set flex: 1 1 auto;
@@ -120,7 +120,7 @@ declare module '@styli/types' {
      * <View flexWrap="wrap"></View>
      * ```
      */
-    flexWrap?: CSS.Property.FlexWrap | CSS.Property.FlexWrap[] | boolean
+    flexWrap?: CSS.Property.FlexWrap | boolean
 
     /**
      * Set flex-grow, Defaults to 0
@@ -130,7 +130,7 @@ declare module '@styli/types' {
      * <View flexGrow={1}></View>
      * ```
      */
-    flexGrow?: CSS.Property.FlexGrow | CSS.Property.FlexGrow[] | boolean
+    flexGrow?: CSS.Property.FlexGrow | boolean
 
     /**
      * Set flex-shrink, Defaults to 1
@@ -140,7 +140,7 @@ declare module '@styli/types' {
      * <View flexShrink={2}></View>
      * ```
      */
-    flexShrink?: CSS.Property.FlexShrink | CSS.Property.FlexShrink[] | boolean
+    flexShrink?: CSS.Property.FlexShrink | boolean
 
     /**
      * Set flex-basis, Defaults to auto
@@ -150,6 +150,6 @@ declare module '@styli/types' {
      * <View flexBasis="10px"></View>
      * ```
      */
-    flexBasis?: CSS.Property.FlexBasis | CSS.Property.FlexBasis[] | boolean
+    flexBasis?: CSS.Property.FlexBasis | boolean
   }
 }

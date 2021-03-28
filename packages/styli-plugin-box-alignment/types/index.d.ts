@@ -14,7 +14,7 @@ declare module '@styli/types' {
      * <View justifyContent="flex-start"></View>
      * ```
      */
-    justifyContent?: CSS.Property.JustifyContent | CSS.Property.JustifyContent[] | boolean
+    justifyContent?: CSS.Property.JustifyContent | boolean
 
     /**
      * Set justify-items
@@ -24,7 +24,7 @@ declare module '@styli/types' {
      * <View justifyItems="start"></View>
      * ```
      */
-    justifyItems?: CSS.Property.JustifyItems | CSS.Property.JustifyItems[] | boolean
+    justifyItems?: CSS.Property.JustifyItems | boolean
 
     /**
      * Set justify-self
@@ -34,7 +34,7 @@ declare module '@styli/types' {
      * <View justifySelf="start"></View>
      * ```
      */
-    justifySelf?: CSS.Property.JustifySelf | CSS.Property.JustifySelf[] | boolean
+    justifySelf?: CSS.Property.JustifySelf | boolean
 
     /**
      * Set align-items
@@ -44,7 +44,7 @@ declare module '@styli/types' {
      * <View alignItems="stretch"></View>
      * ```
      */
-    alignItems?: CSS.Property.AlignItems | CSS.Property.AlignItems[] | boolean
+    alignItems?: CSS.Property.AlignItems | boolean
 
     /**
      * Set align-content
@@ -55,7 +55,7 @@ declare module '@styli/types' {
      * <View alignContent="flex-start"></View>
      * ```
      */
-    alignContent?: CSS.Property.AlignContent | CSS.Property.AlignContent[] | boolean
+    alignContent?: CSS.Property.AlignContent | boolean
 
     /**
      * Set align-self
@@ -65,6 +65,6 @@ declare module '@styli/types' {
      * <View alignSelf="auto"></View>
      * ```
      */
-    alignSelf?: CSS.Property.AlignSelf | CSS.Property.AlignSelf[] | boolean
+    alignSelf?: CSS.Property.AlignSelf | boolean
   }
 }

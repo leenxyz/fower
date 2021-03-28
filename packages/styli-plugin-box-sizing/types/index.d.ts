@@ -18,7 +18,7 @@ declare module '@styli/types' {
      * <View boxSizing="content-box">Hello world</View>
      * ```
      */
-    boxSizing: CSS.Property.BoxSizing | CSS.Property.BoxSizing[] | boolean
+    boxSizing: CSS.Property.BoxSizing | boolean
 
     /**
      * Set boxSizing to contentBox

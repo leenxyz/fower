@@ -14,7 +14,7 @@ declare module '@styli/types' {
      * <View textAlign="center"></View>
      * ```
      */
-    textAlign?: CSS.Property.TextAlign | CSS.Property.TextAlign[]
+    textAlign?: CSS.Property.TextAlign 
 
     /**
      * Set textAlign to left

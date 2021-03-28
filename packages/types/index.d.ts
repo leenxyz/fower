@@ -18,11 +18,9 @@ declare namespace StyliTypes {
 
   type StyliHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
 
-  type FnValue = number | string | (boolean | number | string)[]
-
   type Preset = Partial<Configuration>
 
-  type PropValue = FnValue | boolean | number | string | (boolean | number | string)[]
+  type PropValue = boolean | number | string
 
   type CSSProperties = CSS.Properties<number | string>
 

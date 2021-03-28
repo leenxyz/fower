@@ -3,8 +3,6 @@ import { StyliPlugin, StyliColor } from '@styli/types'
 declare const _default: () => StyliPlugin
 export default _default
 
-type Color = StyliColor | StyliColor[] | boolean
-
 declare module '@styli/types' {
   export interface AtomicProps {
     /**
@@ -36,7 +34,7 @@ declare module '@styli/types' {
      * <Box color="red500-D20"></Box> // darken color 变暗
      * ```
      */
-    color?: Color
+    color?: StyliColor | boolean
 
     rose50?: boolean // '#fff1f2'
     rose100?: boolean // '#ffe4e6'

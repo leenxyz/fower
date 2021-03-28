@@ -4,10 +4,6 @@ import * as CSS from 'csstype'
 declare const _default: () => StyliPlugin
 export default _default
 
-type BgColor = StyliColor | StyliColor[] | boolean
-
-type BgColorFn = (theme: Theme) => BgColor
-
 declare module '@styli/types' {
   export interface AtomicProps {
     /**
@@ -20,7 +16,7 @@ declare module '@styli/types' {
      * <View bg="red500"></View>
      * ```
      */
-    bg?: BgColor | BgColorFn
+    bg?: StyliColor | boolean
 
     /**
      * Set backgroundPosition
@@ -32,7 +28,7 @@ declare module '@styli/types' {
      * <View backgroundPosition="top left"></View>
      * ```
      */
-    backgroundImage?: CSS.Property.BackgroundImage | CSS.Property.BackgroundImage[] | boolean
+    backgroundImage?: CSS.Property.BackgroundImage | boolean
 
     /**
      * Set backgroundPosition
@@ -44,10 +40,7 @@ declare module '@styli/types' {
      * <View backgroundPosition="top left"></View>
      * ```
      */
-    backgroundPosition?:
-      | CSS.Property.BackgroundPosition
-      | CSS.Property.BackgroundPosition[]
-      | boolean
+    backgroundPosition?: CSS.Property.BackgroundPosition | boolean
 
     /**
      * Set backgroundSize
@@ -71,7 +64,7 @@ declare module '@styli/types' {
      * <View backgroundRepeat="no-repeat"></View>
      * ```
      */
-    backgroundRepeat?: CSS.Property.BackgroundRepeat | CSS.Property.BackgroundRepeat[] | boolean
+    backgroundRepeat?: CSS.Property.BackgroundRepeat | boolean
 
     bgBlack?: boolean
 

@@ -14,7 +14,7 @@ declare module '@styli/types' {
      * <View position="absolute"></View>
      * ```
      */
-    position?: CSS.Property.Position | CSS.Property.Position[]
+    position?: CSS.Property.Position 
 
     /**
      * Set position to static

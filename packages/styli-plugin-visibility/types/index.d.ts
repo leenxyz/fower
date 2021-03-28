@@ -14,6 +14,6 @@ declare module '@styli/types' {
      * <View visibility="hidden">Hello world</View>
      * ```
      */
-    visibility: CSS.Property.Visibility | CSS.Property.Visibility[] | boolean
+    visibility: CSS.Property.Visibility | boolean
   }
 }

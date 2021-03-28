@@ -35,13 +35,10 @@ export class Parser {
   isValidProp(propKey: string, propValue: any): boolean {
     const validTypes = ['string', 'boolean', 'number', 'undefined']
     if (propKey === 'css') return true
+
     const type = typeof propValue
     if (validTypes.includes(type)) return true
 
-    // only primitive array
-    if (Array.isArray(propValue)) {
-      return propValue.every((i) => validTypes.includes(typeof i))
-    }
     return false
   }
 

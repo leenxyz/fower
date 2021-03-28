@@ -16,7 +16,7 @@ declare module '@styli/types' {
      * <Box gap={10}></Box>
      * ```
      */
-    gap?: number | number[] | boolean
+    gap?: number | boolean
 
     /**
      * Set grid column gap
@@ -29,7 +29,7 @@ declare module '@styli/types' {
      * <Box columnGap={10}></Box>
      * ```
      */
-    columnGap?: number | number[] | boolean
+    columnGap?: number | boolean
 
     /**
      * Set grid row gap
@@ -42,7 +42,7 @@ declare module '@styli/types' {
      * <Box rowGap={10}></Box>
      * ```
      */
-    rowGap?: number | number[] | boolean
+    rowGap?: number | boolean
 
     /**
      * Set gridTemplateColumns
@@ -52,6 +52,6 @@ declare module '@styli/types' {
      * <Box gridTemplateColumns-4></Box>
      * ```
      */
-    gridTemplateColumns?: number | number[] | boolean
+    gridTemplateColumns?: number | boolean
   }
 }

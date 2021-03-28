@@ -16,7 +16,7 @@ declare module '@styli/types' {
      * <View display="inline-block"></View>
      * ```
      */
-    display?: CSS.Property.Display | CSS.Property.Display[]
+    display?: CSS.Property.Display
 
     /**
      * Set display to inline
