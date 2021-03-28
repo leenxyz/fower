@@ -41,7 +41,6 @@ export interface SetThemeParams {
     96: string | number
     [key: string]: any
   }
-  headings: string[] | number[]
   fontSize: {
     xs: string | number
     sm: string | number

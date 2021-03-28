@@ -18,7 +18,7 @@ declare namespace StyliTypes {
 
   type StyliHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
 
-  type FnValue = (theme: Theme) => boolean | number | string | (boolean | number | string)[]
+  type FnValue = number | string | (boolean | number | string)[]
 
   type Preset = Partial<Configuration>
 
@@ -149,7 +149,7 @@ declare namespace StyliTypes {
   }
 
   interface Theme {
-    colorMode?: string
+    modes?: string[] // eg: modes: ['dark', 'yellow']
     breakpoints: {
       sm: string
       md: string
@@ -190,7 +190,6 @@ declare namespace StyliTypes {
       80: string | number
       96: string | number
     }
-    headings: string[] | number[]
     fontSize: {
       xs: string | number
       sm: string | number

@@ -35,7 +35,6 @@ export const theme: Partial<Theme> = {
     80: '320rpx',
     96: '384rpx',
   },
-  headings: ['48rpx', '32rpx', '24rpx', , '20rpx', '16rpx', '14rpx'] as string[] | number[],
   fontSize: {
     xs: '12rpx',
     sm: '14rpx',
