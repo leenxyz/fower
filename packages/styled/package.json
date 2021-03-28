@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@styli/core": "^1.0.0-alpha.5",
-    "@styli/theming": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",
     "@styli/utils": "^1.0.0-alpha.5",
     "hoist-non-react-statics": "^3.3.2"

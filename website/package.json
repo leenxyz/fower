@@ -36,7 +36,6 @@
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.72",
     "@mdx-js/react": "^1.6.21",
     "@styli/react": "^1.0.0-alpha.5",
-    "@styli/theming": "^1.0.0-alpha.5",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react-helmet": "^6.1.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",

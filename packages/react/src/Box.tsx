@@ -2,8 +2,8 @@ import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } f
 import { styli } from '@styli/core'
 import { Parser } from '@styli/parser'
 import { AtomicProps, As } from '@styli/types'
-import { themeContext, useColorMode } from '@styli/theming'
-const { Consumer } = themeContext
+
+const { getTheme } = styli
 
 export interface BoxComponent<T extends As, P = any> {
   <AsType extends As>(
@@ -21,33 +21,27 @@ export interface BoxComponent<T extends As, P = any> {
 
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const { as = 'div', ...rest } = props as any
-  const [colorMode] = useColorMode()
-  return (
-    <Consumer>
-      {(theme: any) => {
-        const parser = new Parser(rest, { colorMode, ...theme }, styli)
-        const parsedProps: any = parser.getParsedProps()
+  const theme = getTheme()
+  const parser = new Parser(rest, theme, styli)
+  const parsedProps: any = parser.getParsedProps()
 
-        const inline = styli.getConfig('inline')
+  const inline = styli.getConfig('inline')
 
-        if (inline) {
-          if (Array.isArray(rest.style)) {
-            parsedProps.style = [parser.toStyles(), rest.style]
-          } else {
-            parsedProps.style = {
-              ...parser.toStyles(),
-              ...rest.style,
-            }
-          }
-        } else {
-          const { className = '' } = rest || {}
-          parser.insertRule()
-          const finalClassName = [...parser.getClassNames(), className].join(' ')
+  if (inline) {
+    if (Array.isArray(rest.style)) {
+      parsedProps.style = [parser.toStyles(), rest.style]
+    } else {
+      parsedProps.style = {
+        ...parser.toStyles(),
+        ...rest.style,
+      }
+    }
+  } else {
+    const { className = '' } = rest || {}
+    parser.insertRule()
+    const finalClassName = [...parser.getClassNames(), className].join(' ')
 
-          if (finalClassName) parsedProps.className = finalClassName
-        }
-        return createElement(as, { ref, ...parsedProps })
-      }}
-    </Consumer>
-  )
+    if (finalClassName) parsedProps.className = finalClassName
+  }
+  return createElement(as, { ref, ...parsedProps })
 }) as any

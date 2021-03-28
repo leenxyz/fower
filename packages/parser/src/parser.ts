@@ -1,7 +1,7 @@
 import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
-import { isEmptyObj, cssObjToStr, isPlainType, hash, objectToClassName } from '@styli/utils'
+import { isEmptyObj, cssObjToStr, hash, objectToClassName } from '@styli/utils'
 import { toRules } from '@styli/css-object-processor'
 import { runPreprocessors } from './atom-preprocessors'
 import { atomCache, classNameCache } from './cache'
@@ -95,6 +95,7 @@ export class Parser {
         }
 
         atom.className = this.getAtomClassName(atom)
+
         atom.matchedPlugin = plugin.name
         atom.handled = true
         atom.id = `${propKey}-${propValue}`
@@ -104,8 +105,6 @@ export class Parser {
         break // break from this plugin
       }
     }
-
-    console.log('push------------atoms', atomCache)
   }
 
   /**
@@ -178,15 +177,10 @@ export class Parser {
     const prefix = configPrefix ? configPrefix + '-' : ''
 
     // if boolean type props, use prop key as className
-    if (typeof propValue === 'boolean') `${prefix}${propKey}`
+    if (typeof propValue === 'boolean') return `${prefix}${propKey}`
 
     const postfix = this.getClassPostfix(propValue)
     return `${prefix}${propKey}-${postfix}`
-  }
-
-  getAtomCacheKey(propKey: string, propValue: any) {
-    if (!isPlainType(propValue)) return ''
-    return `${propKey}-${propValue}`
   }
 
   /**
@@ -254,7 +248,8 @@ export class Parser {
     }
 
     if (type === 'style') {
-      rules = [`.${className} { ${cssObjToStr(style)} }`]
+      const prefix = atom.prefixClassName ? `.${atom.prefixClassName} ` : ''
+      rules = [`${prefix}.${className} { ${cssObjToStr(style)} }`]
     }
 
     if (type === 'responsive') {

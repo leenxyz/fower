@@ -260,9 +260,6 @@ declare namespace StyliTypes {
     }
 
     colors: Colors
-    modes?: {
-      [modeName: string]: Omit<Theme, 'modes'>
-    }
   }
 
   interface Colors {

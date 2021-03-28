@@ -1,10 +1,9 @@
 import { Box } from '@styli/react';
-import { ThemeProvider } from '@styli/theming';
 import { styli } from '@styli/core';
 
 export default () => {
   return (
-    <ThemeProvider theme={styli.getTheme()}>
+    <div>
       <Box
         text3XL
         fontBold
@@ -71,6 +70,6 @@ export default () => {
         <Box w={[1 / 3, '100%', 400]} h-100 bgGreen200></Box>
         <Box w={[1 / 3, '100%', 400]} h-100 bgYellow200></Box>
       </Box>
-    </ThemeProvider>
+    </div>
   );
 };

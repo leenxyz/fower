@@ -1,7 +1,6 @@
 import { styli } from '@styli/core'
 import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
-import { deepmerge } from '@styli/utils'
 
 export function isColorKey(key: string) {
   if (key === 'color') return true
@@ -33,12 +32,7 @@ export default (): StyliPlugin => {
     isMatch: isColorKey,
     onAtomStyleCreate(atom, parser) {
       const { theme } = parser
-      const { colorMode = 'default' } = parser.theme || {}
-      const colors =
-        colorMode === 'default'
-          ? theme?.colors
-          : deepmerge<any>(theme, theme?.modes?.[colorMode] || {})['colors']
-
+      const colors = theme?.colors
       atom.style = colorPropToStyle(atom.propKey, atom.propValue, colors)
       return atom
     },

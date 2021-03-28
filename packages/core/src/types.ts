@@ -117,10 +117,6 @@ export interface SetThemeParams {
   }
 
   colors: SetThemeColorsConfig
-
-  modes: {
-    [modeName: string]: Omit<SetThemeParams, 'modes'>
-  }
 }
 
 interface SetThemeColorsConfig {

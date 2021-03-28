@@ -70,11 +70,7 @@ class Styli {
     return !!colors[downFirst(prefix)] || /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(prefix)
   }
 
-  getColors = (mode?: string) => {
-    if (mode) {
-      const modeTheme = this.config.theme?.modes?.[mode]
-      return deepmerge(this.config.theme!, modeTheme!)['colors']
-    }
+  getColors = () => {
     return this.getTheme('colors') || {}
   }
 

@@ -2,6 +2,7 @@ import { Parser } from '../parser'
 import { Atom } from '@styli/atom'
 import { commonPreprocessor } from './common'
 import { pseudoPreprocessor } from './pseudo'
+import { modePreprocessor } from './mode'
 import { spacePreprocessor } from './space'
 import { responsivePreprocessor } from './responsive'
 
@@ -12,6 +13,7 @@ export function runPreprocessors(initialAtom: Atom, parser: Parser, styli: any):
   if (atom.type === 'invalid') return atom
 
   atom = pseudoPreprocessor(atom, parser, styli)
+  atom = modePreprocessor(atom, parser, styli)
   atom = spacePreprocessor(atom, styli)
   atom = responsivePreprocessor(atom, parser, styli)
 

@@ -16,11 +16,7 @@ import { Helmet } from 'react-helmet'
 
 import type { Props } from '@theme/Layout'
 
-// import { ThemeProvider, useTheme } from '@styli/theming';
-
 import './styles.css'
-
-
 
 function Layout(props: Props): JSX.Element {
   const { children, noFooter, wrapperClassName } = props

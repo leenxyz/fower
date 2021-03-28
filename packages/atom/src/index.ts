@@ -13,6 +13,8 @@ export class Atom {
 
   id: string = ''
 
+  mode: string = ''
+
   /**
    * propKey may changed by plugin, so use key record origin propKey
    */
@@ -36,6 +38,8 @@ export class Atom {
    * className of this atom
    */
   className: string
+
+  prefixClassName: string = ''
 
   /**
    * plugin name matched for this atom

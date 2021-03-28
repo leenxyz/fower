@@ -25,7 +25,6 @@
     "@styli/preset-web": "^1.0.0-alpha.5",
     "@styli/sheet": "^1.0.0-alpha.5",
     "@styli/styled": "^1.0.0-alpha.5",
-    "@styli/theming": "^1.0.0-alpha.5",
     "@styli/types": "^1.0.0-alpha.5",
     "@styli/utils": "^1.0.0-alpha.5"
   }
