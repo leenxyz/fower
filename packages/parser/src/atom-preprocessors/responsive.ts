@@ -1,14 +1,10 @@
-import { objectToClassName } from '@styli/utils'
 import { Atom } from '@styli/atom'
 import { Parser } from '../parser'
+import { spacePreprocessor } from './space'
 
 export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
-  const { propValue } = atom
-
-  // not responsive style, return atom
-  if (!Array.isArray(propValue)) return atom
+  const { propKey, propValue } = atom
   const { plugins = [] } = styli.config
-
   const breakpoints = styli.getTheme('breakpoints') || {}
   const breakpointKeys = Object.keys(breakpoints)
 
@@ -16,25 +12,29 @@ export function responsivePreprocessor(atom: Atom, parser: Parser, styli: any): 
     console.error('theme breakpoints not provide')
   }
 
+  const regStr = `--(${breakpointKeys.join('|')})`
+
+  if (!new RegExp(regStr).test(propKey)) return atom
+
+  const result = propKey.match(new RegExp(`(.*)${regStr}`)) || []
+
+  let [, key, point] = result
+
+  // check is theme space key, if yes, preprocess it
+  atom = spacePreprocessor({ ...atom, key }, styli)
+
+  /** handle style */
   const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))
+  if (plugin) {
+    atom = plugin.onAtomStyleCreate!({ ...atom, key: atom.key }, parser)
+    atom.style = atom.style
+  }
 
-  if (!plugin) return atom
-
-
-  const result = propValue.reduce((result, cur, i) => {
-    const { style } = plugin.onAtomStyleCreate!({ ...atom, propValue: cur }, parser)
-
-    const key = breakpoints[breakpointKeys[i - 1]] || 'base'
-
-    return {
-      ...result,
-      [key]: style,
-    }
-  }, {})
-
-  atom.style = result
+  atom.key = key
+  atom.breakpoint = point
   atom.type = 'responsive'
-  atom.className = objectToClassName(propValue)
+  atom.id = `${propKey}-${propValue}`
+  atom.className = propKey
   atom.handled = true
 
   return atom

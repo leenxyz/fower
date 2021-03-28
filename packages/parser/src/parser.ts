@@ -230,7 +230,6 @@ export class Parser {
   getAtomRules(atom: Atom): string[] {
     let rules: string[] = []
     const { className, type, style = {} } = atom
-    const responsiveCSS: any = {}
 
     // no style in falsy prop
     if (type === 'invalid') rules = []
@@ -238,7 +237,6 @@ export class Parser {
     // empty style
     if (isEmptyObj(style)) rules = []
 
-    // TODO: need improve
     // if in classNameCache, no need to insert to stylesheet
     if (classNameCache.get(className)) return []
     if (className) classNameCache.set(className, true)
@@ -253,27 +251,11 @@ export class Parser {
     }
 
     if (type === 'responsive') {
-      for (const [breakpoint, responsiveStyle] of Object.entries(style)) {
-        responsiveCSS[breakpoint] = cssObjToStr(responsiveStyle, responsiveCSS[breakpoint])
-      }
-
-      const prefixClassName = objectToClassName(atom.propValue)
-
-      const responsiveRules = Object.entries(responsiveCSS)
-        .reverse() // 因为 insertRule 有顺序
-        .reduce<string[]>((r, cur) => {
-          const [breakpoint, cssStr] = cur
-          let rule = `.${prefixClassName}{${cssStr}}`
-
-          // this is responsive endpoint style
-          if (breakpoint !== 'base')
-            // TODO: important ?
-            // rule = `@media (min-width: ${breakpoint}) {${rule}}`
-            rule = `@media (min-width: ${breakpoint}) {${rule.replace(';', ' !important')}}`
-
-          return [...r, rule]
-        }, [])
-      rules = responsiveRules
+      const breakpoints = this.styli.getTheme('breakpoints') || {}
+      const breakpoint = breakpoints[atom.breakpoint]
+      let rule = `.${className} { ${cssObjToStr(style)} }`
+      rule = `@media (min-width: ${breakpoint}) {${rule}}`
+      rules = [rule]
     }
 
     return rules

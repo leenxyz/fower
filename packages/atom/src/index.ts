@@ -15,6 +15,8 @@ export class Atom {
 
   mode: string = ''
 
+  breakpoint: string = ''
+
   /**
    * propKey may changed by plugin, so use key record origin propKey
    */
