@@ -12,7 +12,7 @@ function isPseudoKey(str: string) {
 }
 
 export function pseudoPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
-  const { propKey } = atom
+  const { propKey, propValue } = atom
 
   // not pseudo style, return atom
   if (!isPseudoKey(propKey)) return atom
@@ -38,6 +38,7 @@ export function pseudoPreprocessor(atom: Atom, parser: Parser, styli: any): Atom
   atom.key = key
   atom.type = 'prefix'
   atom.className = propKey
+  atom.id = `${propKey}-${propValue}`
   atom.handled = true
 
   return atom

@@ -4,6 +4,7 @@ import { parse } from '@styli/css-object-processor'
 import { isEmptyObj, cssObjToStr, isPlainType, hash, objectToClassName } from '@styli/utils'
 import { toRules } from '@styli/css-object-processor'
 import { runPreprocessors } from './atom-preprocessors'
+import { atomCache, classNameCache } from './cache'
 
 /**
  * An Abstract tool to handle atomic props
@@ -16,6 +17,32 @@ export class Parser {
 
   constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
+  }
+
+  addAtom(atom: Atom) {
+    if (!atomCache.get(atom.id)) {
+      atomCache.set(atom.id, atom)
+    }
+    this.atoms.push(atom)
+  }
+
+  /**
+   * prop that can to handle
+   * @param propKey
+   * @param propValue
+   * @returns
+   */
+  isValidProp(propKey: string, propValue: any): boolean {
+    const validTypes = ['string', 'boolean', 'number', 'undefined']
+    if (propKey === 'css') return true
+    const type = typeof propValue
+    if (validTypes.includes(type)) return true
+
+    // only primitive array
+    if (Array.isArray(propValue)) {
+      return propValue.every((i) => validTypes.includes(typeof i))
+    }
+    return false
   }
 
   /**
@@ -32,45 +59,53 @@ export class Parser {
       // the prop should be excluded by user setting
       if (excludedProps.includes(propKey)) continue
 
-      // parse css prop
+      if (!this.isValidProp(propKey, propValue)) continue
+
+      const cachedAtom = atomCache.get(`${propKey}-${propValue}`)
+      if (cachedAtom) {
+        this.addAtom(cachedAtom)
+        continue
+      }
+
       if (propKey === 'css') {
+        // parse css prop
         this.parseCSSProp(propValue)
         continue
       }
 
-      let initialAtom = new Atom({
-        propKey,
-        propValue,
-        key: propKey,
-      })
+      let initialAtom = new Atom({ propKey, propValue })
 
-      let newAtom: Atom = runPreprocessors(initialAtom, this as any, this.styli)
+      let atom: Atom = runPreprocessors(initialAtom, this as any, this.styli)
 
       // if handled, push to this.atoms and skip it
-      if (newAtom?.handled) {
-        this.atoms.push(newAtom)
+      if (atom?.handled) {
+        this.addAtom(atom)
         continue
       }
 
       for (const plugin of plugins) {
-        if (!plugin.isMatch?.(newAtom.key)) continue
+        if (!plugin.isMatch?.(atom.key)) continue
 
         if (plugin.beforeAtomStyleCreate) {
-          newAtom = plugin.beforeAtomStyleCreate(newAtom, this as any)
+          atom = plugin.beforeAtomStyleCreate(atom, this as any)
         }
 
         if (plugin.onAtomStyleCreate) {
-          newAtom = plugin.onAtomStyleCreate(newAtom, this as any)
+          atom = plugin.onAtomStyleCreate(atom, this as any)
         }
 
-        newAtom.className = this.getAtomClassName(newAtom)
-        newAtom.matchedPlugin = plugin.name
-        newAtom.handled = true
+        atom.className = this.getAtomClassName(atom)
+        atom.matchedPlugin = plugin.name
+        atom.handled = true
+        atom.id = `${propKey}-${propValue}`
 
-        this.atoms.push(newAtom)
+        this.addAtom(atom)
+
         break // break from this plugin
       }
     }
+
+    console.log('push------------atoms', atomCache)
   }
 
   /**
@@ -99,19 +134,22 @@ export class Parser {
     const parsed = parse(propValue)
     const prefixClassName = objectToClassName(propValue)
 
-    const atoms = parsed.reduce<Atom[]>((r, { selector, selectorType, style }) => {
+    for (const { selector, selectorType, style } of parsed) {
       const isNested = selectorType !== 'void'
       const atom = new Atom({ propKey: 'css' })
       atom.style = isNested ? { [selector]: style } : style
       atom.type = selectorType === 'void' ? 'style' : 'prefix'
       atom.className = isNested ? prefixClassName : objectToClassName(style)
+      atom.id = objectToClassName(
+        {
+          propKey: atom.propKey,
+          style: atom.style,
+        },
+        'atom-',
+      )
 
-      return [...r, atom]
-    }, [])
-
-    console.log('css atoms:', atoms)
-
-    this.atoms = [...this.atoms, ...atoms]
+      this.addAtom(atom)
+    }
   }
 
   /**
@@ -173,7 +211,6 @@ export class Parser {
    * @returns
    */
   toCssRules(): string[] {
-    console.log('this.atoms', this.atoms)
     const rules = this.atoms.reduce<string[]>((result, atom) => {
       return [...result, ...this.getAtomRules(atom)]
     }, [])
@@ -207,9 +244,10 @@ export class Parser {
     // empty style
     if (isEmptyObj(style)) rules = []
 
+    // TODO: need improve
     // if in classNameCache, no need to insert to stylesheet
-    // if (classNameCache.get(className)) return result
-    // if (className) classNameCache.set(className, true)
+    if (classNameCache.get(className)) return []
+    if (className) classNameCache.set(className, true)
 
     if (type === 'prefix') {
       rules = toRules(style, className)
