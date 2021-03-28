@@ -1,16 +1,18 @@
-import { Atom } from '@styli/atom'
 import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
 import { StyliPlugin, Configuration, Preset, Theme } from '@styli/types'
 import { PartialDeep } from 'type-fest'
-import { defaultConfig } from './config'
 import { SetThemeParams } from './types'
 
 class Styli {
-  config: Preset = defaultConfig
-
-  atomCache = new Map<string, Atom>()
-
-  noMatchCache = new Map<string, boolean>()
+  config: Preset = {
+    unit: 'px',
+    inline: false,
+    plugins: [],
+    theme: {} as Theme,
+    transformUnit: (value: string | number) => {
+      return '' + value + this.config.unit
+    },
+  }
 
   // user config
   configure = (config: Preset | ((config: Preset) => Preset)) => {
