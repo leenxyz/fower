@@ -1,6 +1,6 @@
 {
   "name": "@styli/sheet",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,6 +19,5 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/sheet.esm.js",
-  "dependencies": {}
+  "module": "dist/sheet.esm.js"
 }
