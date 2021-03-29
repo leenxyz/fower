@@ -2,6 +2,9 @@ import { StyliPlugin } from '@styli/types'
 import { Atom } from '@styli/atom'
 import { getFlexDirection } from '@styli/utils'
 
+const row = 'row'
+const column = 'column'
+
 const toTop = 'toTop'
 const toLeft = 'toLeft'
 const toRight = 'toRight'
@@ -40,7 +43,7 @@ const layoutToolkits = [
 ]
 
 export function isMatch(key: string) {
-  return layoutToolkits.includes(key)
+  return [row, column].includes(key) || layoutToolkits.includes(key)
 }
 
 /**
@@ -110,15 +113,10 @@ export default (): StyliPlugin => {
       return atom
     },
 
-    // TODO: 需要优化
     afterAtomStyleCreate(parser) {
-      if (!parser.atoms || !parser.atoms.length) return
+      if (!parser.atoms.length) return
 
-      const matched = parser.atoms.find(
-        (i) =>
-          i.matchedPlugin === 'styli-plugin-flexbox' ||
-          i.matchedPlugin === 'styli-plugin-layout-engine',
-      )
+      const matched = parser.atoms.find((i) => isMatch(i.propKey))
 
       if (!matched) return
 
@@ -126,36 +124,25 @@ export default (): StyliPlugin => {
 
       const prefix = 'flexDirection-'
 
-      const directionAtom = parser.atoms.find((i) => i.propKey === prefix + direction)
+      parser.addAtom(
+        new Atom({
+          key: prefix + direction,
+          propKey: prefix + direction,
+          propValue: true,
+          className: prefix + direction,
+          style: { flexDirection: direction as any },
+        }),
+      )
 
-      if (!directionAtom) {
-        parser.atoms.push(
-          new Atom({
-            key: prefix + direction,
-            propKey: prefix + direction,
-            propValue: '',
-            className: prefix + direction,
-            type: 'style',
-            style: { flexDirection: direction as any },
-          }),
-        )
-      }
-
-      const displayAtom = parser.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
-
-      if (!displayAtom) {
-        parser.atoms.push(
-          new Atom({
-            key: 'display-flex',
-            propKey: 'display-flex',
-            propValue: '',
-            className: 'display-flex',
-            type: 'style',
-            matchedPlugin: 'styli-plugin-display',
-            style: { display: 'flex' },
-          }),
-        )
-      }
+      parser.addAtom(
+        new Atom({
+          key: 'display-flex',
+          propKey: 'display-flex',
+          propValue: true,
+          className: 'display-flex',
+          style: { display: 'flex' },
+        }),
+      )
     },
   }
 }

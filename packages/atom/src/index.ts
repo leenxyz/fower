@@ -1,4 +1,4 @@
-import { Options, AtomType } from './types'
+import { Options } from './types'
 
 interface Meta {
   mode?: string
@@ -6,17 +6,17 @@ interface Meta {
   pseudo?: string
   childSelector?: string
 }
+
 export class Atom {
   constructor(options = {} as Options) {
     this.propKey = options.propKey ?? ''
     this.propValue = options.propValue
     this.key = options.key || this.propKey
     this.style = options.style
-    this.type = options.type ?? 'style'
     this.className = options.className ?? ''
-    this.matchedPlugin = options.matchedPlugin ?? ''
     this.handled = options.handled ?? false
     this.inserted = false
+    this.isValid = true
     this.meta = {}
     this.id =
       typeof this.propValue === 'boolean' ? this.propKey : `${this.propKey}-${this.propValue}`
@@ -43,17 +43,10 @@ export class Atom {
 
   style: any
 
-  type: AtomType
-
   /**
    * className of this atom
    */
   className: string
-
-  /**
-   * plugin name matched for this atom
-   */
-  matchedPlugin: string
 
   /**
    * if handled, this atom is ready to push to parser.atoms
@@ -64,4 +57,6 @@ export class Atom {
    * already inserted to stylesheet
    */
   inserted: boolean
+
+  isValid: boolean
 }

@@ -14,13 +14,12 @@ describe('styli-plugin-size', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = new Atom({ propKey: 'w', propValue: 10, key: 'w', type: 'style', style: {} })
+    const atom1 = new Atom({ propKey: 'w', propValue: 10, key: 'w', style: {} })
     const newAtom1 = new Atom({
       propKey: 'w',
       propValue: 10,
       style: { width: '10px' },
       key: 'w',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -28,7 +27,6 @@ describe('styli-plugin-size', () => {
       propKey: 'square-20',
       propValue: true,
       key: 'square-20',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -36,7 +34,6 @@ describe('styli-plugin-size', () => {
       propValue: true,
       style: { width: '20px', height: '20px' },
       key: 'square-20',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
@@ -44,12 +41,10 @@ describe('styli-plugin-size', () => {
       propKey: 'circle-10rem',
       propValue: true,
       key: 'circle-10rem',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
       key: 'circle-10rem',
-      type: 'style',
       propKey: 'circle-10rem',
       propValue: true,
       style: { width: '10rem', height: '10rem', borderRadius: '10rem' },
@@ -60,12 +55,10 @@ describe('styli-plugin-size', () => {
       propKey: 'maxH-10',
       propValue: true,
       key: 'maxH-10',
-      type: 'style',
       style: {},
     })
     const newAtom4 = new Atom({
       key: 'maxH-10',
-      type: 'style',
       propKey: 'maxH-10',
       propValue: true,
       style: { maxHeight: '10px' },
@@ -76,12 +69,10 @@ describe('styli-plugin-size', () => {
       propKey: 'square-10px',
       propValue: true,
       key: 'square-10px',
-      type: 'style',
       style: {},
     })
     const newAtom5 = new Atom({
       key: 'square-10px',
-      type: 'style',
       propKey: 'square-10px',
       propValue: true,
       style: { width: '10px', height: '10px' },

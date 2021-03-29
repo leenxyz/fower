@@ -20,7 +20,6 @@ describe('styli-plugin-outline', () => {
       propKey: 'outline',
       propValue: true,
       key: 'outline',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
@@ -28,7 +27,6 @@ describe('styli-plugin-outline', () => {
       propValue: true,
       style: { outline: 'none' },
       key: 'outline',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -36,7 +34,6 @@ describe('styli-plugin-outline', () => {
       propKey: 'outlineNone',
       propValue: true,
       key: 'outlineNone',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -44,7 +41,6 @@ describe('styli-plugin-outline', () => {
       propValue: true,
       style: { outline: 'none' },
       key: 'outlineNone',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
@@ -52,7 +48,6 @@ describe('styli-plugin-outline', () => {
       propKey: 'outlineOffset-2px',
       propValue: true,
       key: 'outlineOffset-2px',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
@@ -60,7 +55,6 @@ describe('styli-plugin-outline', () => {
       propValue: true,
       style: { outlineOffset: '2px' },
       key: 'outlineOffset-2px',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
@@ -68,12 +62,10 @@ describe('styli-plugin-outline', () => {
       propKey: 'outlineOffset',
       propValue: '10px',
       key: 'outlineOffset',
-      type: 'style',
       style: {},
     })
     const newAtom4 = new Atom({
       key: 'outlineOffset',
-      type: 'style',
       propKey: 'outlineOffset',
       propValue: '10px',
       style: { outlineOffset: '10px' },

@@ -23,12 +23,10 @@ describe('styli-plugin-shadow', () => {
       propKey: 'shadow',
       propValue: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       key: 'shadow',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
       key: 'shadow',
-      type: 'style',
       propKey: 'shadow',
       propValue: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       style: { boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05)' },
@@ -39,7 +37,6 @@ describe('styli-plugin-shadow', () => {
       propKey: 'shadowXS',
       propValue: true,
       key: 'shadowXS',
-      type: 'style',
       style: {},
     })
     const newAtom2 = {
@@ -47,7 +44,6 @@ describe('styli-plugin-shadow', () => {
       propValue: true,
       style: { boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.05)' },
       key: 'shadowXS',
-      type: 'style',
     }
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })

@@ -31,7 +31,6 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-space',
     isMatch: isSpaceKey,
     onAtomStyleCreate(atom) {
-      atom.type = 'style'
       atom.meta.childSelector = '>*:not(:last-child)'
       atom.style = spacePropToStyle(atom.key, atom.propValue)
       return atom

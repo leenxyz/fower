@@ -7,44 +7,6 @@ export default _default
 declare module '@styli/types' {
   export interface AtomicProps {
     /**
-     * Set flex-direction: row;
-     *
-     * 相当于下面 (自动 display: flex)：
-     *
-     * ```css
-     * {
-     *   flex-direction: row;
-     *   display: flex;
-     * }
-     * ```
-     *
-     * @example
-     * ```tsx
-     * <View row></View>
-     * ```
-     */
-    row?: boolean
-
-    /**
-     * Set flex-direction: column;
-     *
-     * 相当于下面 (自动 display: flex)：
-     *
-     * ```css
-     * {
-     *   flex-direction: column;
-     *   display: flex;
-     * }
-     * ```
-     *
-     * @example
-     * ```tsx
-     * <View column></View>
-     * ```
-     */
-    column?: boolean
-
-    /**
      * set flex-direction
      *
      * @example

@@ -15,7 +15,6 @@ describe('styli-plugin-overflow', () => {
       propKey: 'overflow',
       propValue: 'scroll',
       key: 'overflow',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
@@ -23,7 +22,6 @@ describe('styli-plugin-overflow', () => {
       propValue: 'scroll',
       style: { overflow: 'scroll' },
       key: 'overflow',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -31,7 +29,6 @@ describe('styli-plugin-overflow', () => {
       propKey: 'overflowX',
       propValue: 'scroll',
       key: 'overflowX',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -39,7 +36,6 @@ describe('styli-plugin-overflow', () => {
       propValue: 'scroll',
       style: { overflowX: 'scroll' },
       key: 'overflowX',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })

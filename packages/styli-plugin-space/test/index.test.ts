@@ -19,13 +19,11 @@ describe('styli-plugin-space', () => {
       propValue: 10,
       style: {},
       key: 'space',
-      type: 'style',
     })
     const newAtom1 = new Atom({
       propKey: 'space',
       propValue: 10,
       key: 'space',
-      type: 'style',
       style: {
         '>*:not(:last-child)': {
           marginRight: '10px',

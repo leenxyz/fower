@@ -13,7 +13,7 @@ describe('styli-plugin-cursor', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'cursor', propValue: 'pointer', key: 'cursor', type: 'style' } as Atom
+    const atom1 = { propKey: 'cursor', propValue: 'pointer', key: 'cursor' } as Atom
     const newAtom1 = { propKey: 'cursor', propValue: 'pointer', style: { cursor: 'pointer' } }
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 

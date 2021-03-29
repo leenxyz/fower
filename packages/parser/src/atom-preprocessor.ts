@@ -47,7 +47,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
 
   /** invalid prop */
   if (invalidProps.includes(propKey) || isBooleanFalse(propValue)) {
-    return { ...atom, type: 'invalid' }
+    return { ...atom, isValid: false }
   }
 
   const isMode = regMode.test(propKey) // is mode style
@@ -89,7 +89,6 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   }
 
   // atom.key = key
-  atom.type = 'style'
   atom.className = propKey
   atom.meta = meta
   atom.handled = true

@@ -19,13 +19,11 @@ describe('styli-plugin-box-sizing', () => {
         propKey: 'boxSizing',
         propValue: 'border-box',
         style: {},
-        type: 'style',
       } as Atom
 
       const newAtom = {
         propKey: 'boxSizing',
         propValue: 'border-box',
-        type: 'style',
         style: { boxSizing: 'border-box' },
       }
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
@@ -37,13 +35,11 @@ describe('styli-plugin-box-sizing', () => {
         propKey: 'borderBox',
         propValue: true,
         style: {},
-        type: 'style',
       } as Atom
 
       const newAtom = {
         propKey: 'borderBox',
         propValue: true,
-        type: 'style',
         style: { boxSizing: 'border-box' },
       }
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
@@ -55,13 +51,11 @@ describe('styli-plugin-box-sizing', () => {
         propKey: 'contentBox',
         propValue: true,
         style: {},
-        type: 'style',
       } as Atom
 
       const newAtom = {
         propKey: 'contentBox',
         propValue: true,
-        type: 'style',
         style: { boxSizing: 'content-box' },
       }
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)

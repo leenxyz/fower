@@ -16,12 +16,11 @@ describe('styli-plugin-position', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = new Atom({ propKey: 'top', propValue: 10, type: 'style', key: 'top', style: {} })
+    const atom1 = new Atom({ propKey: 'top', propValue: 10, key: 'top', style: {} })
     const newAtom1 = new Atom({
       propKey: 'top',
       propValue: 10,
       style: { top: 10 },
-      type: 'style',
       key: 'top',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -29,12 +28,10 @@ describe('styli-plugin-position', () => {
     const atom3 = new Atom({
       propKey: 'left-10rem',
       propValue: true,
-      type: 'style',
       key: 'left-10rem',
       style: {},
     })
     const newAtom3 = new Atom({
-      type: 'style',
       key: 'left-10rem',
       propKey: 'left-10rem',
       propValue: true,
@@ -46,12 +43,10 @@ describe('styli-plugin-position', () => {
       propKey: 'absolute',
       propValue: true,
       key: 'absolute',
-      type: 'style',
       style: {},
     })
     const newAtom4 = new Atom({
       key: 'absolute',
-      type: 'style',
       propKey: 'absolute',
       propValue: true,
       style: { position: 'absolute' },

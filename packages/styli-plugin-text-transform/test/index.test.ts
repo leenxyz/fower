@@ -17,7 +17,6 @@ describe('styli-plugin-text-transform', () => {
       propKey: 'normalcase',
       propValue: true,
       key: 'normalcase',
-      type: 'style',
       style: {},
     })
 
@@ -26,7 +25,6 @@ describe('styli-plugin-text-transform', () => {
       key: 'normalcase',
       propValue: true,
       style: { textTransform: 'none' },
-      type: 'style',
     })
 
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -35,7 +33,6 @@ describe('styli-plugin-text-transform', () => {
       key: 'lowercase',
       propKey: 'lowercase',
       propValue: true,
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -43,7 +40,6 @@ describe('styli-plugin-text-transform', () => {
       propKey: 'lowercase',
       propValue: true,
       style: { textTransform: 'lowercase' },
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })

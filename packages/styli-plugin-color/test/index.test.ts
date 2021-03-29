@@ -28,13 +28,11 @@ describe('styli-plugin-color', () => {
         propKey: 'red',
         propValue: true,
         style: {},
-        type: 'style' as any,
         key: 'red',
       })
       const newAtom = new Atom({
         propKey: 'red',
         propValue: true,
-        type: 'style',
         key: 'red',
         style: { color: 'blue' },
       })
@@ -48,14 +46,12 @@ describe('styli-plugin-color', () => {
         propKey: 'color',
         propValue: 'red',
         style: {},
-        type: 'style' as any,
         key: 'red',
       })
       const newAtom = new Atom({
         propKey: 'color',
         propValue: 'red',
         style: { color: 'blue' },
-        type: 'style' as any,
         key: 'red',
       })
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)

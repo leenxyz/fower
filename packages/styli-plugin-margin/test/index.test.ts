@@ -20,7 +20,6 @@ describe('styli-plugin-margin', () => {
       propValue: 10,
       style: { margin: '10px' },
       key: 'm',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -28,7 +27,6 @@ describe('styli-plugin-margin', () => {
       propKey: 'ml-20',
       propValue: true,
       key: 'ml-20',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -36,7 +34,6 @@ describe('styli-plugin-margin', () => {
       propValue: true,
       style: { marginLeft: '20px' },
       key: 'ml-20',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
@@ -44,7 +41,6 @@ describe('styli-plugin-margin', () => {
       propKey: 'mx-10rem',
       propValue: true,
       key: 'mx-10rem',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
@@ -52,7 +48,6 @@ describe('styli-plugin-margin', () => {
       propKey: 'mx-10rem',
       propValue: true,
       style: { marginLeft: '10rem', marginRight: '10rem' },
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
 
@@ -60,7 +55,6 @@ describe('styli-plugin-margin', () => {
       propKey: 'mx--10rem',
       propValue: true,
       key: 'mx--10rem',
-      type: 'style',
       style: {},
     })
     const newAtom4 = new Atom({
@@ -68,7 +62,6 @@ describe('styli-plugin-margin', () => {
       propKey: 'mx--10rem',
       propValue: true,
       style: { marginLeft: '-10rem', marginRight: '-10rem' },
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
   })

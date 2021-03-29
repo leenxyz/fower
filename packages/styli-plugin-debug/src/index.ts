@@ -9,18 +9,11 @@ export default (): StyliPlugin => {
     onAtomStyleCreate(atom) {
       const { propKey } = atom
 
-      if (propKey === 'debug') {
-        atom.type = 'style'
-        atom.style = { border: '1px solid gold' }
-      } else {
-        atom.type = 'style'
-        // TODO:
-
-        atom.style = {
-          border: '1px solid gold',
-          '*': { border: '1px solid gold' },
-        }
+      if (/^debugChildren$/i.test(propKey)) {
+        atom.meta.childSelector = '*'
       }
+
+      atom.style = { border: '1px solid gold' }
 
       return atom
     },

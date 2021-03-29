@@ -17,12 +17,10 @@ describe('styli-plugin-position', () => {
       propKey: 'rounded',
       propValue: 10,
       key: 'rounded',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
       key: 'rounded',
-      type: 'style',
       propKey: 'rounded',
       propValue: 10,
       style: {
@@ -35,12 +33,10 @@ describe('styli-plugin-position', () => {
       propKey: 'roundedT-10',
       propValue: true,
       key: 'roundedT-10',
-      type: 'style',
       style: {},
     })
     const newAtom2 = {
       key: 'roundedT-10',
-      type: 'style',
       propKey: 'roundedT-10',
       propValue: true,
       style: { borderTopLeftRadius: '10px', borderTopRightRadius: '10px' },
@@ -51,12 +47,10 @@ describe('styli-plugin-position', () => {
       propKey: 'roundedBR-10rem',
       propValue: true,
       key: 'roundedBR-10rem',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
       key: 'roundedBR-10rem',
-      type: 'style',
       propKey: 'roundedBR-10rem',
       propValue: true,
       style: { borderBottomRightRadius: '10rem' },

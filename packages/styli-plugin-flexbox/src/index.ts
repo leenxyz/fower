@@ -1,9 +1,4 @@
-import { Atom } from '@styli/atom'
 import { StyliPlugin } from '@styli/types'
-import { getFlexDirection } from '@styli/utils'
-
-const row = 'row'
-const column = 'column'
 
 const maps: any = {
   auto: '1 1 auto',
@@ -17,12 +12,7 @@ const isFlexProps = (key: string) =>
   /^(flex|order|flexGrow|flexShrink|flexBasis|flexWrap)$/i.test(key)
 
 export function isMatch(key: string) {
-  return (
-    [row, column].includes(key) ||
-    isFlexProps(key) ||
-    flexReg.test(key) ||
-    /^flexDirection$/i.test(key)
-  )
+  return isFlexProps(key) || flexReg.test(key) || /^flexDirection$/i.test(key)
 }
 
 export function flexItemPropToStyle(prop: string, propValue: any) {
@@ -51,54 +41,6 @@ export default (): StyliPlugin => {
     onAtomStyleCreate(atom) {
       atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
       return atom
-    },
-
-    // TODO: 需要优化
-    afterAtomStyleCreate(parser) {
-      if (!parser.atoms || !parser.atoms.length) return
-
-      const matched = parser.atoms.find(
-        (i) =>
-          i.matchedPlugin === 'styli-plugin-flexbox' ||
-          i.matchedPlugin === 'styli-plugin-layout-engine',
-      )
-
-      if (!matched) return
-
-      const direction = getFlexDirection(parser.props)
-
-      const prefix = 'flexDirection-'
-
-      const directionAtom = parser.atoms.find((i) => i.propKey === prefix + direction)
-
-      if (!directionAtom) {
-        parser.atoms.push(
-          new Atom({
-            key: prefix + direction,
-            propKey: prefix + direction,
-            propValue: '',
-            className: prefix + direction,
-            type: 'style',
-            style: { flexDirection: direction as any },
-          }),
-        )
-      }
-
-      const displayAtom = parser.atoms.find((i) => i.matchedPlugin === 'styli-plugin-display')
-
-      if (!displayAtom) {
-        parser.atoms.push(
-          new Atom({
-            key: 'display-flex',
-            propKey: 'display-flex',
-            propValue: '',
-            className: 'display-flex',
-            type: 'style',
-            matchedPlugin: 'styli-plugin-display',
-            style: { display: 'flex' },
-          }),
-        )
-      }
     },
   }
 }

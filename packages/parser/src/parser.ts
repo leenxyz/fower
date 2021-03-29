@@ -91,12 +91,18 @@ export class Parser {
         }
 
         atom.className = this.getAtomClassName(atom)
-        atom.matchedPlugin = plugin.name
         atom.handled = true
 
         this.addAtom(atom)
 
         break // break from this plugin
+      }
+    }
+    // console.log('tis.atoms', this.atoms)
+
+    for (const plugin of plugins) {
+      if (plugin.afterAtomStyleCreate) {
+        plugin.afterAtomStyleCreate(this)
       }
     }
   }
@@ -135,7 +141,6 @@ export class Parser {
       if (selectorType === 'child') atom.meta.childSelector = selector
 
       atom.style = style
-      atom.type = 'style'
       atom.className = isVoid ? objectToClassName(style) : prefixClassName
 
       atom.id = objectToClassName({ style })
@@ -195,7 +200,7 @@ export class Parser {
    */
   toStyles() {
     return this.atoms.reduce((result, atom) => {
-      if (atom.type !== 'style') return result // not style type
+      if (!atom.isValid) return result // not style type
       return { ...result, ...atom.style }
     }, {} as any)
   }
@@ -209,26 +214,24 @@ export class Parser {
 
     for (const atom of this.atoms) {
       let rule: string = ''
-      const { className, type, style = {} } = atom
+      const { className, isValid, style = {} } = atom
 
       // no style in falsy prop
-      if (type === 'invalid') continue
+      if (!isValid) continue
 
       // empty style
       if (isEmptyObj(style)) continue
 
       // if(atom.inserted) continue
 
-      if (type === 'style') {
-        const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
+      const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
 
-        let selector = `.${className}`
-        if (pseudo) selector = selector + pseudo
-        if (mode) selector = `.${mode} ${selector}`
-        if (childSelector) selector = `${selector} ${childSelector}`
-        rule = `${selector} { ${cssObjToStr(style)} }`
-        if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
-      }
+      let selector = `.${className}`
+      if (pseudo) selector = selector + pseudo
+      if (mode) selector = `.${mode} ${selector}`
+      if (childSelector) selector = `${selector} ${childSelector}`
+      rule = `${selector} { ${cssObjToStr(style)} }`
+      if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       atom.inserted = true
       rules.push(rule)

@@ -17,13 +17,11 @@ describe('styli-plugin-visibility', () => {
         propKey: 'visibility',
         propValue: 'hidden',
         style: {},
-        type: 'style',
       } as Atom
 
       const newAtom = {
         propKey: 'visibility',
         propValue: 'hidden',
-        type: 'style',
         style: { visibility: 'hidden' },
       }
       expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)

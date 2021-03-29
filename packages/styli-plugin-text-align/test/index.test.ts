@@ -18,7 +18,6 @@ describe('styli-plugin-text-align', () => {
       propKey: 'textAlign',
       propValue: 'center',
       key: 'textAlign',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
@@ -26,7 +25,6 @@ describe('styli-plugin-text-align', () => {
       propValue: 'center',
       style: { textAlign: 'center' },
       key: 'textAlign',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -34,7 +32,6 @@ describe('styli-plugin-text-align', () => {
       propKey: 'textCenter',
       propValue: true,
       key: 'textCenter',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -42,7 +39,6 @@ describe('styli-plugin-text-align', () => {
       propValue: true,
       style: { textAlign: 'center' },
       key: 'textCenter',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
   })

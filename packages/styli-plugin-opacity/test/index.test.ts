@@ -15,7 +15,6 @@ describe('styli-plugin-opacity', () => {
       propKey: 'opacity',
       propValue: true,
       key: 'opacity',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
@@ -23,7 +22,6 @@ describe('styli-plugin-opacity', () => {
       propValue: true,
       style: { opacity: 0.5 },
       key: 'opacity',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -31,7 +29,6 @@ describe('styli-plugin-opacity', () => {
       propKey: 'opacity',
       propValue: 80,
       key: 'opacity',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -39,7 +36,6 @@ describe('styli-plugin-opacity', () => {
       propValue: 80,
       style: { opacity: 0.8 },
       key: 'opacity',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
@@ -47,7 +43,6 @@ describe('styli-plugin-opacity', () => {
       propKey: 'opacity-20',
       propValue: true,
       key: 'opacity',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
@@ -55,7 +50,6 @@ describe('styli-plugin-opacity', () => {
       propValue: true,
       style: { opacity: 0.2 },
       key: 'opacity',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })

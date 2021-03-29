@@ -19,7 +19,6 @@ describe('styli-plugin-padding', () => {
       propValue: 10,
       style: { padding: '10px' },
       key: 'p',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -27,7 +26,6 @@ describe('styli-plugin-padding', () => {
       propKey: 'pl-20',
       propValue: true,
       key: 'pl-20',
-      type: 'style',
       style: {},
     })
     const newAtom2 = new Atom({
@@ -35,7 +33,6 @@ describe('styli-plugin-padding', () => {
       propValue: true,
       style: { paddingLeft: '20px' },
       key: 'pl-20',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
@@ -43,12 +40,10 @@ describe('styli-plugin-padding', () => {
       propKey: 'px-10rem',
       propValue: true,
       key: 'px-10rem',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
       key: 'px-10rem',
-      type: 'style',
       propKey: 'px-10rem',
       propValue: true,
       style: { paddingLeft: '10rem', paddingRight: '10rem' },
