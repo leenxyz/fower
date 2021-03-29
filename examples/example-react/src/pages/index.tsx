@@ -47,18 +47,19 @@ export default function IndexPage() {
         切换 {colorMode}
       </Box>
 
-      <Box red500 bgAmber100 bgRed100--hover p-10 p-40--sm p-60--md p6--hover>
+      {/* <Box red500 bgAmber100 bgRed100--hover p-10 p-40--sm p-60--md p6--hover>
         gogo
-      </Box>
+      </Box> */}
 
-      {/* <Box as="h2" red500 p4 bgYellow100 bgAmber100-D10--hover>
-          gogo
-        </Box> */}
+      {/* <Box as="h2" display="flex" spaceX4 toCenter debug>
+        <Box bgBlue200>AA</Box>
+        <Box bgBlue400>BB</Box>
+      </Box> */}
 
       {/* <Box as="h2" red500 p4 color="colorHello">
           gogo
         </Box> */}
-      {/* <Box
+      <Box
         as="h2"
         rounded3XL
         // roundedSM--hover
@@ -76,14 +77,24 @@ export default function IndexPage() {
           },
           '.child': {
             color: 'white',
+            ':hover': {
+              color: '#ddd',
+            },
+            '.two': {
+              color: 'red',
+              ':hover': {
+                color: '#999',
+              },
+            },
           },
         }}
       >
         SubTitle
-        <Box pt1 pb1 m10 teal400 className="child" bgBlue200--hover>
+        <Box pt1 pb1 m10 className="child">
           Child
+          <Box className="two">two</Box>
         </Box>
-      </Box> */}
+      </Box>
     </div>
   );
 }

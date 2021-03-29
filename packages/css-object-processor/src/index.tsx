@@ -18,6 +18,10 @@ interface ParsedItem {
   style: Dict
 }
 
+function isPseudo(key: string) {
+  return /^::?.+/.test(key)
+}
+
 /**
  *
  * @param cssObj
@@ -114,13 +118,15 @@ export function flatten(cssObj: CSSObject): FlattenItem[] {
 
 export function parse(cssObj: CSSObject): ParsedItem[] {
   const flattenItems = flatten(cssObj)
-
   const paths = flattenItems.reduce<ParsedItem[]>((result, item) => {
     const style = item.pop() as Dict
-    const selector = item.join('')
+    const selector = item.reduce<string>((r, cur) => {
+      if (isPseudo(cur as string)) return `${r}${cur}`
+      return `${r} ${cur}`
+    }, '')
+
     let selectorType: ParsedItem['selectorType'] = 'child'
-    const isPseudo = /^::?.+/.test(selector)
-    if (isPseudo) selectorType = 'pseudo'
+    if (isPseudo(selector)) selectorType = 'pseudo'
     if (selector === '') selectorType = 'void'
 
     return [...result, { selector, style, selectorType }]
@@ -158,7 +164,7 @@ export function toRules(cssObj: CSSObject, className?: string): string[] {
 
     // not nested style
     if (selectorType === 'void') {
-      const atomicClassName = objectToClassName(style)
+      const atomicClassName = objectToClassName(style) || wrapperSelector
       return `.${atomicClassName} {${ruleContent}}`
     }
 

@@ -17,20 +17,20 @@ declare module '@styli/types' {
      * <View debug></View>
      * ```
      */
-    debug?: boolean | CSSObject
+    debug?: boolean
 
     /**
      * debugChildren
      *
      * Styli will auto add border to self and children elements
      *
-     * debugChildren is `.autoClassName{ border: 1px solid gold, '> *': { border: 1px solid gold } }`
+     * debugChildren is `.autoClassName{ border: 1px solid gold, '*': { border: 1px solid gold } }`
      *
      * @example
      * ```tsx
      * <View debugChildren></View>
      * ```
      */
-    debugChildren?: boolean | CSSObject
+    debugChildren?: boolean
   }
 }

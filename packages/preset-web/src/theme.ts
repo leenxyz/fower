@@ -2,6 +2,7 @@ import { Theme } from '@styli/types'
 import { colors } from '@styli/colors'
 
 export const theme: Theme = {
+  modes: ['dark'],
   breakpoints: {
     // => @media (min-width: 640px) { ... }
     sm: '640px',

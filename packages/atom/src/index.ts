@@ -1,6 +1,13 @@
 import { Options, AtomType } from './types'
+
+interface Meta {
+  mode?: string
+  breakpoint?: string
+  pseudo?: string
+  childSelector?: string
+}
 export class Atom {
-  constructor(options: Partial<Options> = {}) {
+  constructor(options = {} as Options) {
     this.propKey = options.propKey ?? ''
     this.propValue = options.propValue
     this.key = options.key || this.propKey
@@ -9,13 +16,15 @@ export class Atom {
     this.className = options.className ?? ''
     this.matchedPlugin = options.matchedPlugin ?? ''
     this.handled = options.handled ?? false
+    this.inserted = false
+    this.meta = {}
+    this.id =
+      typeof this.propValue === 'boolean' ? this.propKey : `${this.propKey}-${this.propValue}`
   }
 
+  meta: Meta
+
   id: string = ''
-
-  mode: string = ''
-
-  breakpoint: string = ''
 
   /**
    * propKey may changed by plugin, so use key record origin propKey
@@ -41,8 +50,6 @@ export class Atom {
    */
   className: string
 
-  prefixClassName: string = ''
-
   /**
    * plugin name matched for this atom
    */
@@ -51,5 +58,10 @@ export class Atom {
   /**
    * if handled, this atom is ready to push to parser.atoms
    */
-  handled: boolean = false
+  handled: boolean
+
+  /**
+   * already inserted to stylesheet
+   */
+  inserted: boolean
 }

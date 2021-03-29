@@ -23,9 +23,7 @@ export function spacePropToStyle(key: string, propValue: any) {
     style[key] = styli.getValue(value)
   })
 
-  return {
-    '>*:not(:last-child)': style,
-  }
+  return style
 }
 
 export default (): StyliPlugin => {
@@ -33,7 +31,8 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-space',
     isMatch: isSpaceKey,
     onAtomStyleCreate(atom) {
-      atom.type = 'prefix'
+      atom.type = 'style'
+      atom.meta.childSelector = '>*:not(:last-child)'
       atom.style = spacePropToStyle(atom.key, atom.propValue)
       return atom
     },

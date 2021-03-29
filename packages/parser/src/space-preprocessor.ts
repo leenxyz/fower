@@ -11,10 +11,11 @@ export function spacePreprocessor(atom: Atom, styli: any): Atom {
   if (!spaceReg.test(atom.key)) return atom
 
   /**
-   *  match props link: m4,mx2,mt9...
+   *  match props link: m4,mx2,mt9, spaceX4...
    *  to m4 -> [ key: m, value: 4 ]
    */
-  const result = atom.key.match(/^([a-z]+)(\d+)$/) || []
+  const result = atom.key.match(/^([a-z]+)(\d+)$/i) || []
+
   const [, key, value] = result
 
   if (!key || !value) return atom

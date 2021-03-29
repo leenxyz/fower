@@ -25,7 +25,7 @@ describe('styli-plugin-space', () => {
       propKey: 'space',
       propValue: 10,
       key: 'space',
-      type: 'prefix',
+      type: 'style',
       style: {
         '>*:not(:last-child)': {
           marginRight: '10px',

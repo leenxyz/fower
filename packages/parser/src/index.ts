@@ -1,2 +1,2 @@
 export { Parser } from './parser'
-export { classNameCache } from './cache'
+export { atomCache } from './cache'

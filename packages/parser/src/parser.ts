@@ -2,9 +2,8 @@ import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
 import { isEmptyObj, cssObjToStr, hash, objectToClassName } from '@styli/utils'
-import { toRules } from '@styli/css-object-processor'
-import { runPreprocessors } from './atom-preprocessors'
-import { atomCache, classNameCache } from './cache'
+import { atomPreprocessor } from './atom-preprocessor'
+import { atomCache } from './cache'
 
 /**
  * An Abstract tool to handle atomic props
@@ -58,7 +57,9 @@ export class Parser {
 
       if (!this.isValidProp(propKey, propValue)) continue
 
-      const cachedAtom = atomCache.get(`${propKey}-${propValue}`)
+      let initialAtom = new Atom({ propKey, propValue })
+
+      const cachedAtom = atomCache.get(initialAtom.id)
       if (cachedAtom) {
         this.addAtom(cachedAtom)
         continue
@@ -70,9 +71,7 @@ export class Parser {
         continue
       }
 
-      let initialAtom = new Atom({ propKey, propValue })
-
-      let atom: Atom = runPreprocessors(initialAtom, this as any, this.styli)
+      let atom: Atom = atomPreprocessor(initialAtom, this as any, this.styli)
 
       // if handled, push to this.atoms and skip it
       if (atom?.handled) {
@@ -92,10 +91,8 @@ export class Parser {
         }
 
         atom.className = this.getAtomClassName(atom)
-
         atom.matchedPlugin = plugin.name
         atom.handled = true
-        atom.id = `${propKey}-${propValue}`
 
         this.addAtom(atom)
 
@@ -131,18 +128,18 @@ export class Parser {
     const prefixClassName = objectToClassName(propValue)
 
     for (const { selector, selectorType, style } of parsed) {
-      const isNested = selectorType !== 'void'
+      const isVoid = selectorType === 'void'
       const atom = new Atom({ propKey: 'css' })
-      atom.style = isNested ? { [selector]: style } : style
-      atom.type = selectorType === 'void' ? 'style' : 'prefix'
-      atom.className = isNested ? prefixClassName : objectToClassName(style)
-      atom.id = objectToClassName(
-        {
-          propKey: atom.propKey,
-          style: atom.style,
-        },
-        'atom-',
-      )
+
+      if (selectorType === 'pseudo') atom.meta.pseudo = selector
+      if (selectorType === 'child') atom.meta.childSelector = selector
+
+      atom.style = style
+      atom.type = 'style'
+      atom.className = isVoid ? objectToClassName(style) : prefixClassName
+
+      atom.id = objectToClassName({ style })
+      atom.handled = true
 
       this.addAtom(atom)
     }
@@ -158,6 +155,10 @@ export class Parser {
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
 
     return isValidClassName ? str : hash(str)
+  }
+
+  private makeResponsiveStyle(breakpoint: string, rule: string) {
+    return `@media (min-width: ${breakpoint}) {${rule}}`
   }
 
   /**
@@ -183,8 +184,10 @@ export class Parser {
   /**
    * get component classNames
    */
-  getClassNames(): string[] {
-    return this.atoms.map((i) => i.className)
+  getClassNames(extraClassName: string = ''): string[] {
+    const classNames = this.atoms.map((i) => i.className)
+    if (extraClassName) classNames.push(extraClassName)
+    return classNames
   }
 
   /**
@@ -202,9 +205,34 @@ export class Parser {
    * @returns
    */
   toCssRules(): string[] {
-    const rules = this.atoms.reduce<string[]>((result, atom) => {
-      return [...result, ...this.getAtomRules(atom)]
-    }, [])
+    const rules: string[] = []
+
+    for (const atom of this.atoms) {
+      let rule: string = ''
+      const { className, type, style = {} } = atom
+
+      // no style in falsy prop
+      if (type === 'invalid') continue
+
+      // empty style
+      if (isEmptyObj(style)) continue
+
+      // if(atom.inserted) continue
+
+      if (type === 'style') {
+        const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
+
+        let selector = `.${className}`
+        if (pseudo) selector = selector + pseudo
+        if (mode) selector = `.${mode} ${selector}`
+        if (childSelector) selector = `${selector} ${childSelector}`
+        rule = `${selector} { ${cssObjToStr(style)} }`
+        if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
+      }
+
+      atom.inserted = true
+      rules.push(rule)
+    }
 
     return rules
   }
@@ -222,39 +250,5 @@ export class Parser {
   insertRule() {
     const rules = this.toCssRules()
     styleSheet.insertStyles(rules)
-  }
-
-  getAtomRules(atom: Atom): string[] {
-    let rules: string[] = []
-    const { className, type, style = {} } = atom
-
-    // no style in falsy prop
-    if (type === 'invalid') rules = []
-
-    // empty style
-    if (isEmptyObj(style)) rules = []
-
-    // if in classNameCache, no need to insert to stylesheet
-    if (classNameCache.get(className)) return []
-    if (className) classNameCache.set(className, true)
-
-    if (type === 'prefix') {
-      rules = toRules(style, className)
-    }
-
-    if (type === 'style') {
-      const prefix = atom.prefixClassName ? `.${atom.prefixClassName} ` : ''
-      rules = [`${prefix}.${className} { ${cssObjToStr(style)} }`]
-    }
-
-    if (type === 'responsive') {
-      const breakpoints = this.styli.getTheme('breakpoints') || {}
-      const breakpoint = breakpoints[atom.breakpoint]
-      let rule = `.${className} { ${cssObjToStr(style)} }`
-      rule = `@media (min-width: ${breakpoint}) {${rule}}`
-      rules = [rule]
-    }
-
-    return rules
   }
 }

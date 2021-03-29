@@ -46,9 +46,6 @@ export default () => {
         <Box circle-100 circle-110--hover bgBlue200>
           circle-110--hover
         </Box>
-        <Box circle={(theme) => theme.spacing?.[9]} bgBlue200>
-          theme
-        </Box>
         <Box h-100 maxW-50 bgYellow200>
           maxW-50
         </Box>
@@ -61,14 +58,6 @@ export default () => {
         <Box w-100 minH-50 bgYellow200>
           minH-50
         </Box>
-        <Box square={[50, 100, 200, 300]} bgBlue200>
-          responsive
-        </Box>
-      </Box>
-      <Box toEvenly>
-        <Box w={[1 / 3, '100%', 400]} h-100 bgRed200></Box>
-        <Box w={[1 / 3, '100%', 400]} h-100 bgGreen200></Box>
-        <Box w={[1 / 3, '100%', 400]} h-100 bgYellow200></Box>
       </Box>
     </div>
   );

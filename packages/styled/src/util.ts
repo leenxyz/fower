@@ -27,7 +27,7 @@ export function getCssParsedProps(props: any, value: any, args: Args) {
 
   const { className = '' } = props || {}
 
-  const finalClassName = [css(...args), ...parser.getClassNames(), className].join(' ')
+  const finalClassName = [css(...args), ...parser.getClassNames(), className].join(' ').trim()
 
   if (finalClassName) {
     parsedProps.className = finalClassName

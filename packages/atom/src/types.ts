@@ -1,12 +1,12 @@
 export interface Options {
-  key: 'css' | 'debug' | ({} & string)
   propKey: 'css' | 'debug' | ({} & string)
-  propValue: any
-  style: any
-  type: AtomType
-  className: string
-  matchedPlugin: string
-  handled: boolean
+  propValue?: any
+  key?: 'css' | 'debug' | ({} & string)
+  style?: any
+  type?: AtomType
+  className?: string
+  matchedPlugin?: string
+  handled?: boolean
 }
 
 /**
@@ -43,4 +43,4 @@ export interface Options {
  * <View p={false} ></View>
  * ```
  */
-export type AtomType = 'style' | 'prefix' | 'responsive' | 'invalid'
+export type AtomType = 'style' | 'invalid'

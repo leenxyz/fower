@@ -51,7 +51,6 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-padding',
     isMatch: isPaddingKey,
     onAtomStyleCreate(atom) {
-      console.log('atom---:', atom)
       atom.style = paddingPropToStyle(atom.key, atom.propValue)
       return atom
     },

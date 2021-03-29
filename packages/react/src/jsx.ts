@@ -28,7 +28,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
   } else {
     const { className = '' } = props || {}
     parser.insertRule()
-    const finalClassName = [...parser.getClassNames(), className].join(' ')
+    const finalClassName = parser.getClassNames(className).join(' ').trim()
     if (finalClassName) parsedProps.className = finalClassName
   }
 
