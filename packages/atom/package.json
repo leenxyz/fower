@@ -1,6 +1,6 @@
 {
   "name": "@styli/atom",
-  "version": "1.0.0-y.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
