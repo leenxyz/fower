@@ -30,7 +30,6 @@ describe('styli-core', () => {
 
   it('use', () => {
     const plugin: StyliPlugin = {
-      name: 'styli-plugin-test',
       isMatch(key: string) {
         return key === 'test'
       },

@@ -10,7 +10,6 @@ function visibilityPropToStyle(propKey: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-visibility',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = visibilityPropToStyle(atom.propKey, atom.propValue)

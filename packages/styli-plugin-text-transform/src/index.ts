@@ -2,7 +2,6 @@ import { StyliPlugin } from '@styli/types'
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-text-transform',
     isMatch(key) {
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
       return caseKeys.includes(key)

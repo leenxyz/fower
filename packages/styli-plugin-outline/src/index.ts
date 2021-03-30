@@ -28,7 +28,6 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-outline',
     isMatch: isOutLineKey,
     onAtomStyleCreate(atom) {
       atom.style = outLinePropToStyle(atom.propKey, atom.propValue)

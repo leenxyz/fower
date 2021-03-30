@@ -113,7 +113,6 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-layout-engine',
     isMatch,
     onAtomStyleCreate(atom, parser) {
       atom.style = alignmentPropToStyle(atom.propKey, parser.props)

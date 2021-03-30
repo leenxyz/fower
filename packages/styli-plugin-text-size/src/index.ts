@@ -27,7 +27,6 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-text-size',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = textSizePropToStyle(atom.propKey, atom.propValue)

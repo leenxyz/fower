@@ -22,7 +22,6 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-font-weight',
     isMatch: isTextWeightKey,
     onAtomStyleCreate(atom) {
       atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)

@@ -51,7 +51,6 @@ export function marginPropToStyle(atom: Atom) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-margin',
     isMatch: isMarginKey,
     onAtomStyleCreate(atom) {
       atom.style = marginPropToStyle(atom)

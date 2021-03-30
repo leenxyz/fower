@@ -9,7 +9,6 @@ interface EllipsisPlugin {
 export default (config?: EllipsisPlugin): StyliPlugin => {
   const { defaultLineNum = 1, defaultMaxWidth = 100 } = config || {}
   return {
-    name: 'styli-plugin-ellipsis',
     isMatch(key) {
       return /^ellipsis(\d+)?(-.+)?$/.test(key)
     },

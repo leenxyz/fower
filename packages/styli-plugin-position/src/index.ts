@@ -27,7 +27,6 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-position',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = positionPropToStyle(atom.key, atom.propValue)

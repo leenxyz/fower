@@ -13,7 +13,6 @@ export function cursorPropToStyle(prop: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-cursor',
     isMatch: isCursorKey,
     onAtomStyleCreate(atom) {
       atom.style = cursorPropToStyle(atom.propKey, atom.propValue)

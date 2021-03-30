@@ -14,7 +14,6 @@ function boxSizingPropToStyle(propKey: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-box-sizing',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = boxSizingPropToStyle(atom.propKey, atom.propValue)

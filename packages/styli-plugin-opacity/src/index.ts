@@ -13,7 +13,6 @@ export function opacityPropToStyle(prop: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-opacity',
     isMatch: isOpacityKey,
     onAtomStyleCreate(atom) {
       atom.style = opacityPropToStyle(atom.propKey, atom.propValue)

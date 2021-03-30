@@ -2,7 +2,6 @@ import { StyliPlugin } from '@styli/types'
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-debug',
     isMatch(key) {
       return /^debug(Children)?/i.test(key)
     },

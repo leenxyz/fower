@@ -120,8 +120,6 @@ declare namespace StyliTypes {
   }
 
   interface StyliPlugin {
-    name: string
-
     isMatch?(key: string): boolean
 
     /**

@@ -36,7 +36,6 @@ export function flexItemPropToStyle(propKey: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-flexbox',
     isMatch,
     onAtomStyleCreate(atom) {
       // specail key: flex={true}

@@ -12,7 +12,6 @@ function flexPropToStyle(prop: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-box-alignment',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = flexPropToStyle(atom.propKey, atom.propValue)

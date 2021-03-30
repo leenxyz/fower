@@ -25,7 +25,6 @@ function gridPropToStyle(propKey: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-grid',
     isMatch,
     onAtomStyleCreate(atom) {
       atom.style = gridPropToStyle(atom.propKey, atom.propValue)

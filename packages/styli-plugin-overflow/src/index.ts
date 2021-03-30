@@ -12,7 +12,6 @@ export function overFlowPropToStyle(prop: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-overflow',
     isMatch: isOverFlowKey,
     onAtomStyleCreate(atom) {
       atom.style = overFlowPropToStyle(atom.propKey, atom.propValue)

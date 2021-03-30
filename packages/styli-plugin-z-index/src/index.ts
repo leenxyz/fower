@@ -13,7 +13,6 @@ export function zIndexPropToStyle(prop: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    name: 'styli-plugin-z-index',
     isMatch: isZIndexKey,
     onAtomStyleCreate(atom) {
       atom.style = zIndexPropToStyle(atom.propKey, atom.propValue)
