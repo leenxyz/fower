@@ -4,8 +4,10 @@ export default () => {
   return (
     <Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
+      <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>
+      <Box text-20px>40 Lorem ipsum dolor sit amet</Box>
       <Box text-17>Lorem ipsum dolor sit amet</Box>
-      <Box text={20}>Lorem ipsum dolor sit amet</Box>
+      <Box text={17}>Lorem ipsum dolor sit amet</Box>
       <Box textXS>Lorem ipsum dolor sit amet</Box>
       <Box textSM>Lorem ipsum dolor sit amet</Box>
       <Box textBase>Lorem ipsum dolor sit amet</Box>

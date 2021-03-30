@@ -290,9 +290,14 @@ export class Parser {
     const { props, atoms } = this
     if (isEmptyObj(props)) return {}
 
-    const parsedProps = Object.entries(props).reduce<any>((result, [propKey, propValue]) => {
-      const find = atoms.find((atom) => [atom.propKey, atom.key].includes(propKey))
-      if (!find) result[propKey] = propValue
+    const entries = Object.entries<any>(props)
+
+    /** ignore atomic prop */
+    const parsedProps = entries.reduce<any>((result, [key, value]) => {
+      const find = atoms.find((atom) => {
+        return [atom.propKey, atom.key, atom.id].includes(key)
+      })
+      if (!find) result[key] = value
       return result
     }, {})
     return parsedProps
