@@ -10,7 +10,6 @@ export default () => {
       s="100"
       toCenter
       mt-100
-      f={[10, 20, 30, 40]}
       css={{
         background: 'red',
         ':hover': {

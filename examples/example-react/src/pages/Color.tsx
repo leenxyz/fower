@@ -64,9 +64,6 @@ export default () => {
       <Box textXL red500 green500--active>
         green500--active
       </Box>
-      <Box textXL color={['yellowgreen', 'purple', 'deeppink', 'info']}>
-        color=['yellowgreen', 'purple', 'deeppink', 'red']
-      </Box>
       <Box textXL trueGray500>
         trueGray500
       </Box>

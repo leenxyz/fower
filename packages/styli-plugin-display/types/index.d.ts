@@ -59,16 +59,6 @@ declare module '@styli/types' {
     block?: boolean
 
     /**
-     * Set display to flex
-     *
-     * @example
-     * ```tsx
-     * <View displayFlex></View>
-     * ```
-     */
-    displayFlex?: boolean
-
-    /**
      * Set display to grid
      *
      * @example

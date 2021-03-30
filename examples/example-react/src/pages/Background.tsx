@@ -57,18 +57,6 @@ export default () => {
       </Box>
 
       <Box
-        textXL
-        bg={['yellowgreen', 'deeppink', 'gray', 'info']}
-        f={[10, 20, 30, 40]}
-      >
-        bg=['yellowgreen', 'deeppink', 'gray', 'info']
-      </Box>
-
-      <Box textXL bg={['yellowgreen', 'deeppink', 'gray', 'info']}>
-        bg=['yellowgreen', 'deeppink', 'gray', 'info']
-      </Box>
-
-      <Box
         bg={`url("${IMAGEs.DEFAULT_AVATAR}") center 100%`}
         circle-200
         toCenter

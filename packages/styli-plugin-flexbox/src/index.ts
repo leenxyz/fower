@@ -15,19 +15,19 @@ export function isMatch(key: string) {
   return isFlexProps(key) || flexReg.test(key) || /^flexDirection$/i.test(key)
 }
 
-export function flexItemPropToStyle(prop: string, propValue: any) {
+export function flexItemPropToStyle(propKey: string, propValue: any) {
   const style: any = {}
 
-  if (isFlexProps(prop)) {
-    style[prop] = propValue
+  if (isFlexProps(propKey)) {
+    style[propKey] = propValue
   }
 
-  if (/^flexDirection$/.test(prop)) {
+  if (/^flexDirection$/.test(propKey)) {
     // style[prop] = propValue
   }
 
-  if (flexReg.test(prop)) {
-    const posfix = prop.replace(/^flex/, '').toLowerCase()
+  if (flexReg.test(propKey)) {
+    const posfix = propKey.replace(/^flex/, '').toLowerCase()
     style.flex = maps[posfix]
   }
 
@@ -39,7 +39,16 @@ export default (): StyliPlugin => {
     name: 'styli-plugin-flexbox',
     isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
+      // specail key: flex={true}
+      if (atom.propKey === 'flex' && typeof atom.propValue === 'boolean') {
+        atom.key = 'display-flex'
+        atom.propKey = 'display-flex'
+        atom.className = 'display-flex'
+        atom.style = { display: 'flex' }
+      } else {
+        atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
+      }
+
       return atom
     },
   }
