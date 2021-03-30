@@ -265,9 +265,7 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      if (atom.inserted) {
-        continue
-      }
+      if (atom.inserted) continue
 
       atom.inserted = true
 

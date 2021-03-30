@@ -1,4 +1,8 @@
 import { Box } from '@styli/react';
+import { configure } from '@styli/core';
+import { presetWebRem } from '@styli/preset-web-rem';
+
+configure(presetWebRem, 'replace');
 
 export default () => {
   return (
