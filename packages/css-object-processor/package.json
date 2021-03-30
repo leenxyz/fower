@@ -1,6 +1,6 @@
 {
   "name": "@styli/css-object-processor",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-y.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/css-object-processor.esm.js",
   "dependencies": {
-    "@styli/utils": "^1.0.0-alpha.6",
+    "@styli/utils": "^1.0.0-y.0",
     "csstype": "^3.0.7"
   }
 }

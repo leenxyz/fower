@@ -1,6 +1,6 @@
 {
   "name": "@styli/babel-preset-styli",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-y.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -20,9 +20,9 @@
   "module": "dist/babel-preset-styli.esm.js",
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.5",
-    "@styli/react": "^1.0.0-alpha.6",
-    "@styli/types": "^1.0.0-alpha.6",
-    "@styli/utils": "^1.0.0-alpha.6",
+    "@styli/react": "^1.0.0-y.0",
+    "@styli/types": "^1.0.0-y.0",
+    "@styli/utils": "^1.0.0-y.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2"
   }
 }

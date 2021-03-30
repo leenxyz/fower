@@ -1,6 +1,6 @@
 {
   "name": "@styli/react-native",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-y.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -21,10 +21,10 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@styli/core": "^1.0.0-alpha.6",
-    "@styli/preset-react-native": "^1.0.0-alpha.6",
-    "@styli/styled": "^1.0.0-alpha.6",
-    "@styli/types": "^1.0.0-alpha.6"
+    "@styli/core": "^1.0.0-y.0",
+    "@styli/preset-react-native": "^1.0.0-y.0",
+    "@styli/styled": "^1.0.0-y.0",
+    "@styli/types": "^1.0.0-y.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.63.46",

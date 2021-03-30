@@ -1,6 +1,6 @@
 {
   "name": "@styli/vue-template-compiler",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-y.0",
   "license": "MIT",
   "main": "index.js",
   "files": [
