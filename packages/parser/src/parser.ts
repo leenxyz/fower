@@ -175,7 +175,7 @@ export class Parser {
     if (className) return className
 
     /** global className prefix */
-    const configPrefix = this.styli.getConfig('prefix')
+    const configPrefix = this.styli.config.prefix
     const prefix = configPrefix ? configPrefix + '-' : ''
 
     // if boolean type props, use prop key as className

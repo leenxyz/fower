@@ -37,7 +37,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   }
 
   const StyledComponent = forwardRef((props: any = {}, ref) => {
-    const inline = styli.getConfig('inline')
+    const { inline } = styli.config
     const parsedProps = inline
       ? getInLineParsedProps(props, theme, args)
       : getCssParsedProps(props, theme, args)

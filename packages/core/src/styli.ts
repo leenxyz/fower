@@ -27,11 +27,6 @@ class Styli {
     }
   }
 
-  getConfig = <T = any>(type?: keyof Configuration): T => {
-    if (!type) return this.config as any
-    return this.config[type] as any
-  }
-
   getValue(value: string | number) {
     let numValue = value
     // w-80p => width: 80%
@@ -54,9 +49,8 @@ class Styli {
     return numValue
   }
 
-  getTheme = <T = any>(themeKey?: keyof Theme): T => {
-    if (!themeKey) return this.config.theme as any
-    return this.config?.theme?.[themeKey] as any
+  getTheme = (): Theme => {
+    return this.config.theme
   }
 
   setTheme = (partialThemeConfig: PartialDeep<SetThemeParams>) => {
@@ -64,7 +58,7 @@ class Styli {
   }
 
   isStyliColor = (value: string = '') => {
-    const colors = this.getColors()
+    const colors: any = this.getColors()
     const [prefix] = value?.split('-') || []
 
     if (!prefix) return false
@@ -73,7 +67,7 @@ class Styli {
   }
 
   getColors = () => {
-    return this.getTheme('colors') || {}
+    return this.getTheme().colors
   }
 
   /**

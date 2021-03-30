@@ -20,7 +20,7 @@ export function spacePreprocessor(atom: Atom, styli: any): Atom {
 
   if (!key || !value) return atom
 
-  const spacing = styli.getTheme('spacing')
+  const { spacing } = styli.getTheme()
 
   atom.key = key
   atom.propValue = spacing[value] // value from theme

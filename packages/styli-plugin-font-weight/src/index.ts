@@ -16,7 +16,7 @@ export function textWeightPropToStyle(prop: string, propValue: any) {
     return { fontWeight: weightValue || propValue }
   }
 
-  const weights = styli.getTheme('fontWeights') || {}
+  const weights = styli.getTheme().fontWeights as any
   return { fontWeight: weights[downFirst(value)] || value }
 }
 

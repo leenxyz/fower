@@ -15,7 +15,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
   }
 
   if (isPreset(prop)) {
-    const fontSize = styli.getTheme('fontSize')
+    const fontSize = styli.getTheme().fontSize as any
     const key = prop.replace(/^text/, '').toLowerCase()
     return { fontSize: fontSize[key] }
   }

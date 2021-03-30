@@ -40,7 +40,7 @@ export function isRoundedKey(key: string) {
  */
 export function roundedPropToStyle(prop: string, propValue: any) {
   let style: any = {}
-  const borderRadius = styli.getTheme('borderRadius')
+  const borderRadius = styli.getTheme().borderRadius as any
 
   // <Box rounded></Box>
   if (prop === 'rounded' && typeof propValue === 'boolean') {

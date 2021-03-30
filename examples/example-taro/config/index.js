@@ -47,7 +47,7 @@ const config = {
                   loader: 'styli-loader',
                   options: {
                     styliConfig: {
-                      ...require('@styli/taro').styli.getConfig(),
+                      ...require('@styli/core').styli.config,
                       inline: false,
                     },
                     output: 'styli.wxss',

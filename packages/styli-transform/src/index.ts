@@ -25,7 +25,7 @@ export function transform(source: string, styli: any) {
 
       const parser: any = new Parser(props, styli.getTheme(), styli)
 
-      if (styli.getConfig('inline')) {
+      if (styli.config.inline) {
         toStyle(path, parser, attrs)
       } else {
         // inject className

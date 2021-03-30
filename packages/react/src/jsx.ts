@@ -17,7 +17,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
 
   const parser = new Parser(props, styli.getTheme(), styli)
   const parsedProps: any = parser.getParsedProps()
-  const inline = styli.getConfig('inline')
+  const { inline } = styli.config
 
   if (inline) {
     if (Array.isArray(props.style)) {

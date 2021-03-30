@@ -25,7 +25,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const parser = new Parser(rest, theme, styli)
   const parsedProps: any = parser.getParsedProps()
 
-  const inline = styli.getConfig('inline')
+  const { inline } = styli.config
 
   if (inline) {
     if (Array.isArray(rest.style)) {
