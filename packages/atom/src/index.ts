@@ -18,8 +18,10 @@ export class Atom {
     this.inserted = false
     this.isValid = true
     this.meta = {}
-    this.id =
-      typeof this.propValue === 'boolean' ? this.propKey : `${this.propKey}-${this.propValue}`
+
+    const { propKey, propValue } = this
+    const id = typeof propValue === 'boolean' ? propKey : `${propKey}-${propValue}`
+    this.id = options.id || id
   }
 
   meta: Meta

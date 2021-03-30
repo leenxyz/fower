@@ -21,10 +21,13 @@ declare module '@styli/types' {
 
     /**
      * set flex-flow、flex-shrink、flex-basis
+     * flex={true} is special, it equal: { display: flex }
      *
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex
      * @example
      * ```tsx
+     * <View flex></View> //  display: flex;
+     * <View flex={1}></View> // flex: 1 1 0%;
      * <View flex={1}></View> // flex: 1 1 0%;
      * <View flexAuto></View> // flex: 1 1 auto;
      * <View flexInitial></View> // flex: 0 1 auto;

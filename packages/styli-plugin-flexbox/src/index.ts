@@ -23,7 +23,7 @@ export function flexItemPropToStyle(propKey: string, propValue: any) {
   }
 
   if (/^flexDirection$/.test(propKey)) {
-    // style[prop] = propValue
+    style[propKey] = propValue
   }
 
   if (flexReg.test(propKey)) {
@@ -41,9 +41,9 @@ export default (): StyliPlugin => {
     onAtomStyleCreate(atom) {
       // specail key: flex={true}
       if (atom.propKey === 'flex' && typeof atom.propValue === 'boolean') {
-        atom.key = 'display-flex'
-        atom.propKey = 'display-flex'
-        atom.className = 'display-flex'
+        atom.key = 'flex'
+        atom.propKey = 'flex'
+        atom.className = 'flex'
         atom.style = { display: 'flex' }
       } else {
         atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)

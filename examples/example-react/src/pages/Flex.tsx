@@ -3,6 +3,13 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
+    <div>
+      <Box toCenter>AAAA</Box>
+      <Box flex>AAAA</Box>
+      <Box flex={1}>AAAA</Box>
+    </div>
+  );
+  return (
     <Box>
       <Box as="h2">Row</Box>
       <Box spaceX3 row>
@@ -31,7 +38,7 @@ export default () => {
       </Box>
 
       <Box as="h2">Row Reverse</Box>
-      <Box flexDirection="row-reverse">
+      <Box flex flexDirection="row-reverse">
         <Box bgAmber400 p6 m3>
           A
         </Box>
@@ -44,7 +51,7 @@ export default () => {
       </Box>
 
       <Box as="h2">Column Reverse</Box>
-      <Box flexDirection="column-reverse">
+      <Box flex flexDirection="column-reverse">
         <Box bgAmber400 p6 m3>
           A
         </Box>

@@ -19,9 +19,9 @@ export class Parser {
   }
 
   addAtom(atom: Atom) {
-    if (!atomCache.get(atom.id)) {
-      atomCache.set(atom.id, atom)
-    }
+    // if not cached, let's cache it
+    if (!atomCache.get(atom.id)) atomCache.set(atom.id, atom)
+
     this.atoms.push(atom)
   }
 
@@ -98,7 +98,6 @@ export class Parser {
         break // break from this plugin
       }
     }
-    // console.log('tis.atoms', this.atoms)
 
     for (const plugin of plugins) {
       if (plugin.afterAtomStyleCreate) {
@@ -212,6 +211,7 @@ export class Parser {
   toCssRules(): string[] {
     const rules: string[] = []
 
+    console.log('cache---', atomCache)
     for (const atom of this.atoms) {
       let rule: string = ''
       const { className, isValid, style = {} } = atom
@@ -222,7 +222,11 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      // if(atom.inserted) continue
+      if (atom.inserted) {
+        continue
+      }
+
+      atom.inserted = true
 
       const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
 
@@ -233,7 +237,6 @@ export class Parser {
       rule = `${selector} { ${cssObjToStr(style)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
-      atom.inserted = true
       rules.push(rule)
     }
 
@@ -244,10 +247,12 @@ export class Parser {
     const { props, atoms } = this
     if (isEmptyObj(props)) return {}
 
-    return Object.entries(props).reduce((result: any, [propKey, propValue]) => {
-      const styliProp = atoms.find((atom) => atom.propKey === propKey || atom.key == propKey)
-      return styliProp ? result : { ...result, [propKey]: propValue }
-    }, {} as any)
+    const parsedProps = Object.entries(props).reduce<any>((result, [propKey, propValue]) => {
+      const find = atoms.find((atom) => [atom.propKey, atom.key].includes(propKey))
+      if (!find) result[propKey] = propValue
+      return result
+    }, {})
+    return parsedProps
   }
 
   insertRule() {

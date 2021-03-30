@@ -1,5 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 import { Atom } from '@styli/atom'
+import { atomCache } from '@styli/parser'
 import { getFlexDirection } from '@styli/utils'
 
 const row = 'row'
@@ -110,6 +111,11 @@ export default (): StyliPlugin => {
     isMatch,
     onAtomStyleCreate(atom, parser) {
       atom.style = alignmentPropToStyle(atom.propKey, parser.props)
+
+      if ([row, column].includes(atom.propKey)) {
+        atom.isValid = false
+      }
+
       return atom
     },
 
@@ -124,25 +130,42 @@ export default (): StyliPlugin => {
 
       const prefix = 'flexDirection-'
 
-      parser.addAtom(
-        new Atom({
-          key: prefix + direction,
-          propKey: prefix + direction,
-          propValue: true,
-          className: prefix + direction,
-          style: { flexDirection: direction as any },
-        }),
-      )
+      const directionKey = prefix + direction
+      const directionAtom = atomCache.get(directionKey)
 
-      parser.addAtom(
-        new Atom({
-          key: 'display-flex',
-          propKey: 'display-flex',
-          propValue: true,
-          className: 'display-flex',
-          style: { display: 'flex' },
-        }),
-      )
+      if (directionAtom) {
+        parser.addAtom(directionAtom)
+      } else {
+        parser.addAtom(
+          new Atom({
+            id: directionKey,
+            key: directionKey,
+            propKey: directionKey,
+            propValue: true,
+            handled: true,
+            className: prefix + direction,
+            style: { flexDirection: direction as any },
+          }),
+        )
+      }
+
+      const flexKey = 'flex'
+      const flexAtom = atomCache.get(flexKey)
+      if (flexAtom) {
+        parser.addAtom(flexAtom)
+      } else {
+        parser.addAtom(
+          new Atom({
+            id: flexKey,
+            key: flexKey,
+            propKey: flexKey,
+            propValue: true,
+            handled: true,
+            className: 'flex',
+            style: { display: 'flex' },
+          }),
+        )
+      }
     },
   }
 }
