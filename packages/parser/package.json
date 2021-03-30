@@ -24,7 +24,6 @@
     "@styli/atom": "^1.0.0",
     "@styli/css-object-processor": "^1.0.0",
     "@styli/sheet": "^1.0.0",
-    "@styli/unitless": "^1.0.0",
     "@styli/utils": "^1.0.0"
   }
 }

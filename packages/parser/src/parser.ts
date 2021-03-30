@@ -9,11 +9,14 @@ import {
   isPercentNumber,
   isNumber,
 } from '@styli/utils'
-import { isUnitless } from '@styli/unitless'
 import { atomPreprocessor } from './atom-preprocessor'
 import { atomCache } from './cache'
+import { isUnitProp } from './is-unit-prop'
 
 type Dict = Record<string, any>
+
+//  high-frequency used props in react
+const reactProps = ['children', 'onClick', 'onChange', 'onBlur']
 
 /**
  * An Abstract tool to handle atomic props
@@ -30,7 +33,7 @@ export class Parser {
 
   formatCssValue(key: string, value: any) {
     // no need unit
-    if (isUnitless(key)) return value
+    if (!isUnitProp(key)) return value
 
     let numValue = value
     // w-80p => width: 80%
@@ -58,7 +61,8 @@ export class Parser {
 
   cssObjToStr(style: Dict) {
     return Object.entries(style).reduce<string>((r, [key, value]) => {
-      return r + `${jsKeyToCssKey(key)}: ${this.formatCssValue(key, value)};`
+      const cssKey = jsKeyToCssKey(key)
+      return r + `${cssKey}: ${this.formatCssValue(cssKey, value)};`
     }, '')
   }
 
@@ -99,11 +103,13 @@ export class Parser {
       // the prop should be excluded by user setting
       if (excludedProps.includes(propKey)) continue
 
+      if (reactProps.includes(propKey)) continue
+
       if (!this.isValidProp(propKey, propValue)) continue
 
-      let initialAtom = new Atom({ propKey, propValue })
+      let atom = new Atom({ propKey, propValue })
 
-      const cachedAtom = atomCache.get(initialAtom.id)
+      const cachedAtom = atomCache.get(atom.id)
       if (cachedAtom) {
         this.addAtom(cachedAtom)
         continue
@@ -115,7 +121,7 @@ export class Parser {
         continue
       }
 
-      let atom: Atom = atomPreprocessor(initialAtom, this as any, this.styli)
+      atom = atomPreprocessor(atom, this as any, this.styli)
 
       // if handled, push to this.atoms and skip it
       if (atom?.handled) {
