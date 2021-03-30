@@ -1,5 +1,4 @@
 import {
-  isEqual,
   upFirst,
   downFirst,
   kebab,
@@ -12,11 +11,6 @@ import {
 } from '../src'
 
 describe('styli-utils', () => {
-  it('isEqual', () => {
-    expect(isEqual({ a: 1 }, { a: 1 })).toEqual(true)
-    expect(isEqual({ a: 1 }, { b: 1 })).toEqual(false)
-  })
-
   it('upFirst', () => {
     expect(upFirst('abc')).toEqual('Abc')
   })

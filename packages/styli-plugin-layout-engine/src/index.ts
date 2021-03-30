@@ -1,7 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 import { Atom } from '@styli/atom'
 import { atomCache } from '@styli/parser'
-import { getFlexDirection } from '@styli/utils'
 
 const row = 'row'
 const column = 'column'
@@ -42,6 +41,13 @@ const layoutToolkits = [
   toEvenly,
   toStretch,
 ]
+
+function getFlexDirection(props: any): string {
+  if (props.row) return 'row'
+  if (props.column) return 'column'
+  if (props.flexDirection) return props.flexDirection
+  return 'row'
+}
 
 export function isMatch(key: string) {
   return [row, column].includes(key) || layoutToolkits.includes(key)

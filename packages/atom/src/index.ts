@@ -1,9 +1,30 @@
 import { Options } from './types'
 
 interface Meta {
+  /**
+   * color mode
+   * @exmple
+   * mode: 'dark'
+   */
   mode?: string
+
+  /**
+   * @exmple
+   * breakpoint: '640px'
+   */
   breakpoint?: string
+
+  /**
+   * @exmple
+   * pseudo: ':hover'
+   */
   pseudo?: string
+
+  /**
+   * child selector for atom.className
+   * @exmple
+   * childSelector: '.child'
+   */
   childSelector?: string
 }
 
@@ -26,6 +47,9 @@ export class Atom {
 
   meta: Meta
 
+  /**
+   * unique id for cache
+   */
   id: string = ''
 
   /**
@@ -60,5 +84,6 @@ export class Atom {
    */
   inserted: boolean
 
+  /** if not valid, do not generate style */
   isValid: boolean
 }

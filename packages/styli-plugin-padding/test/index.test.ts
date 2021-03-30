@@ -13,7 +13,7 @@ describe('styli-plugin-padding', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = new Atom({ propKey: 'p', propValue: 10, key: 'p', type: 'style', style: {} })
+    const atom1 = new Atom({ propKey: 'p', propValue: 10, key: 'p', style: {} })
     const newAtom1 = new Atom({
       propKey: 'p',
       propValue: 10,

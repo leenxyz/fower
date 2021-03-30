@@ -7,7 +7,7 @@
 - Global Styles
 
 ```js
-createGlobalStyle({
+injectGlobalStyle({
   body: {
     margin: '0',
   },

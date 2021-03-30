@@ -14,7 +14,12 @@ describe('styli-plugin-margin', () => {
   })
 
   it('onAtomStyleCreate', () => {
-    const atom1 = new Atom({ propKey: 'm', propValue: 10, key: 'm', type: 'style', style: {} })
+    const atom1 = new Atom({
+      propKey: 'm',
+      propValue: 10,
+      key: 'm',
+      style: {},
+    })
     const newAtom1 = new Atom({
       propKey: 'm',
       propValue: 10,

@@ -60,7 +60,7 @@ describe('css object processor', () => {
     expect(parsed.length).toEqual(5)
 
     expect(parsed[0]).toMatchObject({
-      selector: '.title',
+      selector: ' .title', // TODO
       style: { padding: 1 },
     })
   })

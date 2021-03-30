@@ -1,10 +1,9 @@
 import isBrowser from 'is-in-browser'
-import isEqual from 'fast-deep-equal'
 import hash from 'string-hash'
 import deepmerge from 'deepmerge'
 import { noCase } from 'no-case'
 
-export { isBrowser, isEqual, hash, deepmerge }
+export { isBrowser, hash, deepmerge }
 
 export function upFirst(s: string = '') {
   return s.replace(/^[a-z]/, (g) => g.toUpperCase())
@@ -43,10 +42,6 @@ export function isPlainType(value: any) {
   return plainTypes.includes(typeof value)
 }
 
-export function isPlainDirective(key: string) {
-  return /^[\dA-Za-z]+(--?([\dA-Za-z])+)*$/.test(key)
-}
-
 /**
  *
  * @param key
@@ -66,13 +61,6 @@ export function cssObjToStr(style: any, initStr = '') {
 
 export function modifierToProps(modifier: string) {
   return modifier.split(/[\s\t\n]+/).reduce((result, cur) => ({ ...result, [cur]: true }), {})
-}
-
-export function getFlexDirection(props: any): string {
-  if (props.row) return 'row'
-  if (props.column) return 'column'
-  if (props.flexDirection) return props.flexDirection
-  return 'row'
 }
 
 export function objectToClassName(style: any, prefix = 'css-') {
