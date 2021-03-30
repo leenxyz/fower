@@ -1,6 +1,4 @@
-import React from 'react';
 import { Box } from '@styli/react';
-import { styled } from '@styli/styled';
 
 export default () => {
   return (
