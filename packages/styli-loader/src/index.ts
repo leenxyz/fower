@@ -16,7 +16,7 @@ export default function (source: string, map: any, meta: any) {
   const options: unknown = getOptions(webpackEnv)
   const { styliConfig = {}, output = 'styli.css' } = (options || {}) as LoaderOption
 
-  styli.configure(() => styliConfig)
+  styli.configure(styliConfig)
 
   // 申明异步 loader
   const callback = webpackEnv.async()

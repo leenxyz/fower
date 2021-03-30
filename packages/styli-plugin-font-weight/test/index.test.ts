@@ -3,14 +3,12 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-font-weight', () => {
-  styli.configure(() => {
-    return {
-      theme: {
-        fontWeights: {
-          medium: 500,
-        },
+  styli.configure({
+    theme: {
+      fontWeights: {
+        medium: 500,
       },
-    } as any
+    },
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()

@@ -1,11 +1,9 @@
-import { styli } from "@styli/core"
+import { styli } from '@styli/core'
 
-styli.configure(() => {
-  return {
-    theme: {
-      colors: {
-        gray30: '#333',
-      },
-    } as any,
-  }
+styli.configure({
+  theme: {
+    colors: {
+      gray300: '#333',
+    },
+  },
 })

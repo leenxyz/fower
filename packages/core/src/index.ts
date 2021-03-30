@@ -2,7 +2,7 @@ import { styli } from './styli'
 export * from './api'
 export { styli } from './styli'
 
-const { setTheme } = styli
-const theme = styli.config.theme
+const { setTheme, getTheme } = styli
+// const theme = styli.config.theme
 
-export { setTheme, theme }
+export { setTheme, getTheme }

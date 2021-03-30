@@ -1,10 +1,12 @@
 import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
-import { StyliPlugin, Configuration, Preset, Theme } from '@styli/types'
+import { StyliPlugin, Configuration, Theme } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { SetThemeParams } from './types'
 
+type Strategy = 'replace' | 'merge' | 'deepmerge'
+
 class Styli {
-  config: Preset = {
+  config = {
     unit: 'px',
     inline: false,
     plugins: [],
@@ -12,16 +14,16 @@ class Styli {
     transformUnit: (value: string | number) => {
       return '' + value + this.config.unit
     },
-  }
+  } as Configuration
 
   // user config
-  configure = (config: Preset | ((config: Preset) => Preset)) => {
-    if (typeof config === 'function') {
-      // merge config
-      Object.assign(this.config, config(this.config))
+  configure = (config: PartialDeep<Configuration>, strategy: Strategy = 'deepmerge') => {
+    if (strategy === 'replace') {
+      this.config = config as Configuration
+    } else if (strategy === 'merge') {
+      this.config = { ...this.config, ...config } as any
     } else {
-      // replace config
-      this.config = config
+      this.config = deepmerge(this.config, config) as any
     }
   }
 

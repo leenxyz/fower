@@ -3,7 +3,7 @@ import presetWeb from '@styli/preset-web'
 import _Vue, { PluginFunction } from 'vue'
 import vStyli from '@/v-css'
 
-styli.configure(() => presetWeb)
+styli.configure(presetWeb)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

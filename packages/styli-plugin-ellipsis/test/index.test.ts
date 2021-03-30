@@ -4,7 +4,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-ellipsis', () => {
-  styli.configure(() => ({ unit: 'px' }))
+  styli.configure({ unit: 'px' })
 
   const { isMatch, onAtomStyleCreate } = plugin()
   const parser = {} as Parser

@@ -3,12 +3,10 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-line-height', () => {
-  styli.configure(() => {
-    return {
-      theme: {
-        lineHeight: { none: 1 },
-      } as any,
-    }
+  styli.configure({
+    theme: {
+      lineHeight: { none: 1 },
+    },
   })
 
   const { isMatch, onAtomStyleCreate } = plugin()

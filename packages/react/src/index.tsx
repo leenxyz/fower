@@ -24,4 +24,4 @@ injectGlobalStyle({
   },
 })
 
-styli.configure(() => presetWeb)
+styli.configure(presetWeb)

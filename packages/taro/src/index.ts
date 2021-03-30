@@ -3,8 +3,7 @@ import { styled } from '@styli/styled'
 import * as TaroComponent from '@tarojs/components'
 import { presetTaro } from '@styli/preset-taro'
 
-styli.configure(() => presetTaro)
-
+styli.configure(presetTaro)
 
 export const View = styled(TaroComponent.View)
 export const MovableView = styled(TaroComponent.MovableView)

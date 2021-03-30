@@ -2,13 +2,13 @@ import { styli } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-border', () => {
-  styli.configure(() => ({
+  styli.configure({
     theme: {
       colors: {
-        red: 'blue',
+        red200: 'blue',
       },
-    } as any,
-  }))
+    },
+  })
 
   const { isMatch } = plugin()
   // const parser = {} as Parser

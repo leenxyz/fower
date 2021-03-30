@@ -12,7 +12,7 @@ const config = {
 }
 
 describe('styli-core', () => {
-  styli.configure(() => config)
+  styli.configure(config)
 
   it('getTheme', () => {
     expect(styli.getTheme()).toMatchObject({ colors: { gray30: '#333' } })
