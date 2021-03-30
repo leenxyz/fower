@@ -5,8 +5,8 @@ import { isBgKey, isBgImgKey, isBgPosKey, isBgRepeatKey, isBgSizeKey, isMatch } 
 
 function bgPropToStyle(propKey: string, propValue: any) {
   if (isBgImgKey(propKey)) return { backgroundImage: propValue }
-  if (isBgPosKey(propKey)) return { backgroundPosition: styli.getValue(propValue) }
-  if (isBgSizeKey(propKey)) return { backgroundSize: styli.getValue(propValue) }
+  if (isBgPosKey(propKey)) return { backgroundPosition: propValue }
+  if (isBgSizeKey(propKey)) return { backgroundSize: propValue }
   if (isBgRepeatKey(propKey)) return { backgroundRepeat: propValue }
 
   if (isBgKey(propKey)) {

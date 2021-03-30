@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
@@ -20,7 +19,7 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
   if (isOutLineOffset(propKey)) {
     const [, , offsetValue] = propKey.match(/^outlineOffset(-(.+))?$/i) || []
     return {
-      outlineOffset: isValidPropValue(propValue) ? propValue : styli.getValue(offsetValue || 1),
+      outlineOffset: isValidPropValue(propValue) ? propValue : offsetValue || 1,
     }
   }
 

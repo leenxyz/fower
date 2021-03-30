@@ -23,10 +23,6 @@ describe('styli-core', () => {
     expect(styli.getColors()).toMatchObject({ gray30: '#333' })
   })
 
-  it('getValue', () => {
-    expect(styli.getValue('100')).toEqual('100px')
-  })
-
   it('isStyliColor', () => {
     expect(styli.isStyliColor('gray30')).toBeTruthy()
     expect(styli.isStyliColor('gray30-T10')).toBeTruthy()

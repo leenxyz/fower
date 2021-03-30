@@ -3,6 +3,8 @@ import hash from 'string-hash'
 import deepmerge from 'deepmerge'
 import { noCase } from 'no-case'
 
+type Dict = Record<string, any>
+
 export { isBrowser, hash, deepmerge }
 
 export function upFirst(s: string = '') {
@@ -53,17 +55,11 @@ export function jsKeyToCssKey(key: string): string {
   return /^[A-Z].+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }
 
-export function cssObjToStr(style: any, initStr = '') {
-  return Object.entries(style).reduce((r, [key, value]) => {
-    return r + `${jsKeyToCssKey(key)}: ${value};`
-  }, initStr)
-}
-
 export function modifierToProps(modifier: string) {
   return modifier.split(/[\s\t\n]+/).reduce((result, cur) => ({ ...result, [cur]: true }), {})
 }
 
-export function objectToClassName(style: any, prefix = 'css-') {
+export function objectToClassName(style: Dict, prefix = 'css-') {
   const hashed = hash(JSON.stringify(style))
   return prefix + hashed
 }

@@ -1,15 +1,9 @@
 {
-  "name": "@styli/utils",
+  "name": "@styli/unitless",
   "version": "1.0.0-y.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
@@ -18,13 +12,12 @@
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
   },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "author": "forsigner",
-  "module": "dist/utils.esm.js",
-  "dependencies": {
-    "@types/string-hash": "^1.1.1",
-    "deepmerge": "^4.2.2",
-    "is-in-browser": "^2.0.0",
-    "no-case": "^3.0.4",
-    "string-hash": "^1.1.3"
-  }
+  "module": "dist/unitless.esm.js"
 }

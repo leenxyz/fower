@@ -6,7 +6,9 @@ export default () => {
     <div>
       <Box toCenter>AAAA</Box>
       <Box flex>AAAA</Box>
-      <Box flex={1}>AAAA</Box>
+      <Box flex={1} flexGrow={2}>
+        AAAA
+      </Box>
     </div>
   );
   return (

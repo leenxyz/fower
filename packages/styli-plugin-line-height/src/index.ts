@@ -8,7 +8,7 @@ export function isTextLineHeightKey(key: string) {
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   if (isValidPropValue(propValue)) {
-    return { lineHeight: styli.getValue(propValue) }
+    return { lineHeight: propValue }
   }
 
   const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
@@ -26,7 +26,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
   }
 
   return {
-    lineHeight: styli.getValue(value),
+    lineHeight: value,
   }
 }
 

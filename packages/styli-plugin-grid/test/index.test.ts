@@ -26,14 +26,14 @@ describe('styli-plugin-grid', () => {
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'rowGap', propValue: 1 } as Atom
-    const newAtom2 = { propKey: 'rowGap', propValue: 1, style: { rowGap: '1px' } }
+    const newAtom2 = { propKey: 'rowGap', propValue: 1, style: { rowGap: 1 } }
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'rowGap-1', propValue: true } as Atom
     const newAtom3 = {
       propKey: 'rowGap-1',
       propValue: true,
-      style: { rowGap: '1px' },
+      style: { rowGap: '1' },
     }
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })

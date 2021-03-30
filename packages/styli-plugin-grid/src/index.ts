@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
@@ -18,7 +17,7 @@ function gridPropToStyle(propKey: string, propValue: any): any {
   if (/^(row|column)?Gap(-.+)?$/i.test(propKey)) {
     const [key, value] = propKey.split('-')
     const gapValue = value ? value : propValue
-    style[downFirst(key)] = styli.getValue(gapValue)
+    style[downFirst(key)] = gapValue
   }
 
   return style

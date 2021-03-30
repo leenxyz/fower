@@ -1,7 +1,7 @@
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
-describe('styli-plugin-position', () => {
+describe('styli-plugin-rouned', () => {
   const { isMatch, onAtomStyleCreate } = plugin()
 
   const parser = {} as any
@@ -24,7 +24,7 @@ describe('styli-plugin-position', () => {
       propKey: 'rounded',
       propValue: 10,
       style: {
-        borderRadius: '10px',
+        borderRadius: 10,
       },
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -39,7 +39,7 @@ describe('styli-plugin-position', () => {
       key: 'roundedT-10',
       propKey: 'roundedT-10',
       propValue: true,
-      style: { borderTopLeftRadius: '10px', borderTopRightRadius: '10px' },
+      style: { borderTopLeftRadius: '10', borderTopRightRadius: '10' },
     }
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
 

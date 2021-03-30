@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 
 export const positionKeys = ['static', 'fixed', 'absolute', 'relative', 'sticky']
@@ -17,13 +16,13 @@ export function positionPropToStyle(prop: string, propValue: any): any {
 
   /** @example top={0}, right={10}... */
   if (/^(top|right|bottom|left)$/gi.test(prop)) {
-    return { [prop]: styli.getValue(propValue) }
+    return { [prop]: propValue }
   }
 
   /** @example top-0, right-10, left--10... */
   const [, matchKey, , value] = prop.match(/^(top|right|bottom|left)(-(-?[\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
-  return { [key]: styli.getValue(value) }
+  return { [key]: value }
 }
 
 export default (): StyliPlugin => {

@@ -16,15 +16,13 @@ describe('styli-plugin-text-size', () => {
       propKey: 'text',
       propValue: 10,
       key: 'text',
-      type: 'style',
       style: {},
     })
     const newAtom1 = new Atom({
       propKey: 'text',
       propValue: 10,
-      style: { fontSize: '10px' },
+      style: { fontSize: 10 },
       key: 'text',
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
 
@@ -32,7 +30,6 @@ describe('styli-plugin-text-size', () => {
       propKey: 'text-10rem',
       propValue: true,
       key: 'text-10rem',
-      type: 'style',
       style: {},
     })
     const newAtom3 = new Atom({
@@ -40,7 +37,6 @@ describe('styli-plugin-text-size', () => {
       propKey: 'text-10rem',
       propValue: true,
       style: { fontSize: '10rem' },
-      type: 'style',
     })
     expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
   })

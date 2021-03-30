@@ -68,10 +68,10 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   const roundedValue = isValidPropValue(propValue) ? propValue : value
 
   /** @example rounded-4, rounded-8 */
-  if (key === 'rounded') return { borderRadius: styli.getValue(roundedValue) }
+  if (key === 'rounded') return { borderRadius: roundedValue }
 
   for (const p of roundedMaps[key]) {
-    style[`border${p}Radius`] = styli.getValue(roundedValue)
+    style[`border${p}Radius`] = roundedValue
   }
   return style
 }

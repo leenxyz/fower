@@ -32,10 +32,10 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   const { plugins = [] } = styli.config
   const { propKey, propValue } = atom
   const meta: typeof atom.meta = {}
-  const breakpoints = styli.getTheme('breakpoints') || {}
+  const { breakpoints, modes } = styli.getTheme()
 
   const breakpointKeys = Object.keys(breakpoints)
-  const modeKeys: string[] = styli.getTheme('modes') || []
+  const modeKeys: string[] = modes || []
 
   const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
   const regModeStr = `${connector}(${modeKeys.join('|')})$`

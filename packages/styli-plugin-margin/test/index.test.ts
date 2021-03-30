@@ -23,7 +23,7 @@ describe('styli-plugin-margin', () => {
     const newAtom1 = new Atom({
       propKey: 'm',
       propValue: 10,
-      style: { margin: '10px' },
+      style: { margin: 10 },
       key: 'm',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -37,7 +37,7 @@ describe('styli-plugin-margin', () => {
     const newAtom2 = new Atom({
       propKey: 'ml-20',
       propValue: true,
-      style: { marginLeft: '20px' },
+      style: { marginLeft: '20' },
       key: 'ml-20',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)

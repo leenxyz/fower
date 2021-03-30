@@ -11,7 +11,7 @@ export function isMatch(key: string) {
 
 export function textSizePropToStyle(prop: string, propValue: any) {
   if (isValidPropValue(propValue)) {
-    return { fontSize: styli.getValue(propValue) }
+    return { fontSize: propValue }
   }
 
   if (isPreset(prop)) {
@@ -22,7 +22,7 @@ export function textSizePropToStyle(prop: string, propValue: any) {
 
   const [, value] = prop.split('-')
 
-  return { fontSize: styli.getValue(value) }
+  return { fontSize: value }
 }
 
 export default (): StyliPlugin => {

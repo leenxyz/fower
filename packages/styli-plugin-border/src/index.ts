@@ -1,7 +1,6 @@
 import { styli } from '@styli/core'
 import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
-import { isNumber } from '@styli/utils'
 
 const G = {
   top: 'Top',
@@ -34,10 +33,10 @@ function formatBorderValue(value: string) {
 
 function borderPropToStyle(prop: string, propValue: any) {
   if (prop === 'border') {
-    return { borderWidth: styli.getValue(1) }
+    return { borderWidth: 1 }
   }
 
-  const colors = styli.getColors()
+  const colors = styli.getColors() as any
   const postfix = prop.replace(/^border/, '') || ''
 
   /** @example borderSolid,borderDashed-2 */
@@ -51,7 +50,7 @@ function borderPropToStyle(prop: string, propValue: any) {
     const borderPosition = positionMaps[position.toUpperCase()] ?? ''
     const key = `border${borderPosition}Width`
     const [, value] = postfix.split('-')
-    return { [key]: styli.getValue(value) }
+    return { [key]: value }
   }
 
   /** @example borderT, borderR */
@@ -74,7 +73,7 @@ function borderPropToStyle(prop: string, propValue: any) {
   }
 
   return {
-    [prop]: colors[propValue] || isNumber(propValue) ? styli.getValue(propValue) : propValue,
+    [prop]: colors[propValue] || propValue,
   }
 }
 

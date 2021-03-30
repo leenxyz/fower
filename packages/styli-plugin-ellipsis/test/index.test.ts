@@ -22,7 +22,7 @@ describe('styli-plugin-ellipsis', () => {
       propKey: 'ellipsis',
       propValue: true,
       style: {
-        maxWidth: '100px',
+        maxWidth: 100,
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
@@ -35,7 +35,7 @@ describe('styli-plugin-ellipsis', () => {
       propKey: 'ellipsis1',
       propValue: true,
       style: {
-        maxWidth: '100px',
+        maxWidth: 100,
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
@@ -48,7 +48,7 @@ describe('styli-plugin-ellipsis', () => {
       propKey: 'ellipsis-300',
       propValue: true,
       style: {
-        maxWidth: '300px',
+        maxWidth: '300',
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
@@ -61,7 +61,7 @@ describe('styli-plugin-ellipsis', () => {
       propKey: 'ellipsis2',
       propValue: true,
       style: {
-        maxWidth: '100px',
+        maxWidth: 100,
         display: '-webkit-box',
         WebkitBoxOrient: 'vertical',
         overflow: 'hidden',
@@ -75,7 +75,7 @@ describe('styli-plugin-ellipsis', () => {
       propKey: 'ellipsis6-500',
       propValue: true,
       style: {
-        maxWidth: '500px',
+        maxWidth: '500',
         display: '-webkit-box',
         WebkitBoxOrient: 'vertical',
         overflow: 'hidden',

@@ -1,9 +1,19 @@
 import { Atom } from '@styli/atom'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
-import { isEmptyObj, cssObjToStr, hash, objectToClassName } from '@styli/utils'
+import {
+  isEmptyObj,
+  hash,
+  objectToClassName,
+  jsKeyToCssKey,
+  isPercentNumber,
+  isNumber,
+} from '@styli/utils'
+import { isUnitless } from '@styli/unitless'
 import { atomPreprocessor } from './atom-preprocessor'
 import { atomCache } from './cache'
+
+type Dict = Record<string, any>
 
 /**
  * An Abstract tool to handle atomic props
@@ -16,6 +26,40 @@ export class Parser {
 
   constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
+  }
+
+  formatCssValue(key: string, value: any) {
+    // no need unit
+    if (isUnitless(key)) return value
+
+    let numValue = value
+    // w-80p => width: 80%
+    if (isPercentNumber('' + value)) {
+      return ('' + value).replace('p', '%')
+    }
+
+    if (!isNumber(value)) return value
+
+    numValue = Number(value)
+
+    // if num is between 0 and 1, convert it to percent number.
+    if (numValue < 1 && numValue > 0) {
+      return (numValue * 100).toFixed(6) + '%'
+    }
+
+    const { config } = this.styli
+
+    if (config.unit !== 'none' && config.transformUnit) {
+      return config.transformUnit(numValue)
+    }
+
+    return numValue
+  }
+
+  cssObjToStr(style: Dict) {
+    return Object.entries(style).reduce<string>((r, [key, value]) => {
+      return r + `${jsKeyToCssKey(key)}: ${this.formatCssValue(key, value)};`
+    }, '')
   }
 
   addAtom(atom: Atom) {
@@ -211,7 +255,6 @@ export class Parser {
   toCssRules(): string[] {
     const rules: string[] = []
 
-    console.log('cache---', atomCache)
     for (const atom of this.atoms) {
       let rule: string = ''
       const { className, isValid, style = {} } = atom
@@ -234,7 +277,7 @@ export class Parser {
       if (pseudo) selector = selector + pseudo
       if (mode) selector = `.${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
-      rule = `${selector} { ${cssObjToStr(style)} }`
+      rule = `${selector} { ${this.cssObjToStr(style)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)

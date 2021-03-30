@@ -17,7 +17,7 @@ describe('styli-plugin-padding', () => {
     const newAtom1 = new Atom({
       propKey: 'p',
       propValue: 10,
-      style: { padding: '10px' },
+      style: { padding: 10 },
       key: 'p',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -31,7 +31,7 @@ describe('styli-plugin-padding', () => {
     const newAtom2 = new Atom({
       propKey: 'pl-20',
       propValue: true,
-      style: { paddingLeft: '20px' },
+      style: { paddingLeft: '20' },
       key: 'pl-20',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)

@@ -20,7 +20,7 @@ describe('styli-plugin-position', () => {
     const newAtom1 = new Atom({
       propKey: 'top',
       propValue: 10,
-      style: { top: '10px' },
+      style: { top: 10 },
       key: 'top',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)

@@ -1,4 +1,4 @@
-import { deepmerge, downFirst, isNumber, isPercentNumber } from '@styli/utils'
+import { deepmerge, downFirst } from '@styli/utils'
 import { StyliPlugin, Configuration, Theme } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { SetThemeParams } from './types'
@@ -25,28 +25,6 @@ class Styli {
     } else {
       this.config = deepmerge(this.config, config) as any
     }
-  }
-
-  getValue(value: string | number) {
-    let numValue = value
-    // w-80p => width: 80%
-    if (isPercentNumber('' + value)) {
-      return ('' + value).replace('p', '%')
-    }
-
-    if (isNumber(value)) {
-      numValue = Number(value)
-      // if num is between 0 and 1, convert it to percent number.
-      if (numValue < 1 && numValue > 0) {
-        return (numValue * 100).toFixed(6) + '%'
-      }
-
-      if (this.config.unit !== 'none' && this.config.transformUnit) {
-        return this.config.transformUnit(numValue)
-      }
-    }
-
-    return numValue
   }
 
   getTheme = (): Theme => {

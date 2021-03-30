@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue } from '@styli/utils'
 
@@ -26,7 +25,7 @@ export function sizePropToStyle(prop: string, propValue: any) {
 
   return (sizeMaps[key] || []).reduce((style: any, cur: string, idx: number) => {
     const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : value)
-    style[cur] = styli.getValue(currentValue)
+    style[cur] = currentValue
     return style
   }, {} as any)
 }

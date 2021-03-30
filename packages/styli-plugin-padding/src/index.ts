@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValidPropValue, upFirst } from '@styli/utils'
 
@@ -40,7 +39,7 @@ export function paddingPropToStyle(prop: string, propValue: any) {
 
   const paddingValue = isValidPropValue(propValue) ? propValue : value
   paddingMaps[key].forEach((k: any) => {
-    style[k] = styli.getValue(paddingValue)
+    style[k] = paddingValue
   })
 
   return style

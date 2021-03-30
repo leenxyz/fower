@@ -18,7 +18,7 @@ describe('styli-plugin-size', () => {
     const newAtom1 = new Atom({
       propKey: 'w',
       propValue: 10,
-      style: { width: '10px' },
+      style: { width: 10 },
       key: 'w',
     })
     expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
@@ -32,7 +32,7 @@ describe('styli-plugin-size', () => {
     const newAtom2 = new Atom({
       propKey: 'square-20',
       propValue: true,
-      style: { width: '20px', height: '20px' },
+      style: { width: '20', height: '20' },
       key: 'square-20',
     })
     expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
@@ -61,7 +61,7 @@ describe('styli-plugin-size', () => {
       key: 'maxH-10',
       propKey: 'maxH-10',
       propValue: true,
-      style: { maxHeight: '10px' },
+      style: { maxHeight: '10' },
     })
     expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
 
