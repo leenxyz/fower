@@ -33,6 +33,7 @@ export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
     <div>
+      <Box></Box>
       <Box
         as="button"
         onClick={() => {

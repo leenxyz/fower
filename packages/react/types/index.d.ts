@@ -4,7 +4,7 @@ import React, { PropsWithChildren, ComponentProps } from 'react'
 import { AtomicProps, As } from '@styli/types'
 
 export interface BoxComponent<T extends As, P = any> {
-  <AsType extends As>(
+  <AsType extends As = 'div'>(
     props: {
       as?: AsType
     } & P &

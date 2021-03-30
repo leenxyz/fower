@@ -22,33 +22,6 @@ function isPseudo(key: string) {
   return /^::?.+/.test(key)
 }
 
-/**
- *
- * @param cssObj
- * @returns
- *
- * @example
- *
- * ```
- * const css = {
- *    border: '1px solid',
- *    color: 'red',
- *    '.button': {
- *       fontSize: '12px'
- *       display: 'block'
- *    }
- * }
- *
- * To
- *
- * [
- *    [{ border: '1px solid'}]
- *    [{ color: 'red'}]
- *    ['.button', { font-size: '12px'}]
- *    ['.button', { display: 'block'}]
- * ]
- * ```
- */
 export function flatten(cssObj: CSSObject): FlattenItem[] {
   // false value
   if (!cssObj) return cssObj
@@ -79,42 +52,6 @@ export function flatten(cssObj: CSSObject): FlattenItem[] {
     }, result)
   }, [])
 }
-
-/**
- * @example
- * ```
- * Convert
- *
- * const css = {
- *    border: '1px solid',
- *    color: 'red',
- *    '.button': {
- *       fontSize: '12px'
- *       display: 'block'
- *    }
- * }
- *
- * To
- *
- * [
- *    {
- *      selector: '',
- *      style: {
- *        border: '1px solid',
- *        color: 'red'
- *      }
- *    },
- *    {
- *      selector: '.button',
- *      style: {
- *        'font-size': '12px'
- *        display: 'block'
- *      }
- *    }
- * ]
- *
- * ```
- */
 
 export function parse(cssObj: CSSObject): ParsedItem[] {
   const flattenItems = flatten(cssObj)

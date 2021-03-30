@@ -6,6 +6,8 @@ type Dict = Record<string, any>
 
 export { isBrowser, hash, deepmerge }
 
+export const isDev = process.env.NODE_ENV !== 'production'
+
 export function upFirst(s: string = '') {
   return s.replace(/^[a-z]/, (g) => g.toUpperCase())
 }
