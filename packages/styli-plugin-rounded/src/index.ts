@@ -1,6 +1,6 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue, upFirst } from '@styli/utils'
+import { isValueProp, upFirst } from '@styli/utils'
 
 export const G = {
   top: 'top',
@@ -65,7 +65,7 @@ export function roundedPropToStyle(prop: string, propValue: any) {
   }
 
   const [key, value] = prop.split('-')
-  const roundedValue = isValidPropValue(propValue) ? propValue : value
+  const roundedValue = isValueProp(propValue) ? propValue : value
 
   /** @example rounded-4, rounded-8 */
   if (key === 'rounded') return { borderRadius: roundedValue }

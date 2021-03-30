@@ -1,13 +1,13 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 export function isShadowKey(key: string) {
   return /^shadow(XS|SM|Base|MD|LG|XL|XXL|Outline|None|Inner)?$/.test(key)
 }
 
 export function shadowPropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) return { boxShadow: propValue }
+  if (isValueProp(propValue)) return { boxShadow: propValue }
   const value = prop.replace('shadow', '')
   const shadowSize = value.toLowerCase()
   const shadow = styli.getTheme().shadow as any

@@ -3,11 +3,10 @@ import {
   downFirst,
   kebab,
   isNumber,
-  isValidPropValue,
+  isValueProp,
   isEmptyObj,
   isPercentNumber,
   jsKeyToCssKey,
-  isPlainType,
 } from '../src'
 
 describe('styli-utils', () => {
@@ -19,8 +18,10 @@ describe('styli-utils', () => {
     expect(downFirst('Abc')).toEqual('abc')
   })
 
-  it('kebab', () => {
+  it.only('kebab', () => {
     expect(kebab('aBc')).toEqual('a-bc')
+    expect(kebab('spaceX-1')).toEqual('space-x-1')
+    expect(kebab('p0')).toEqual('p0')
   })
 
   it('isNumber', () => {
@@ -28,9 +29,9 @@ describe('styli-utils', () => {
     expect(isNumber('12.3')).toEqual(true)
   })
 
-  it('isValidPropValue', () => {
-    expect(isValidPropValue('aBc')).toEqual(true)
-    expect(isValidPropValue(true)).toEqual(false)
+  it('isValueProp', () => {
+    expect(isValueProp('aBc')).toEqual(true)
+    expect(isValueProp(true)).toEqual(false)
   })
 
   it('isEmptyObj', () => {
@@ -45,13 +46,5 @@ describe('styli-utils', () => {
   it('jsKeyToCssKey', () => {
     expect(jsKeyToCssKey('WebkitLineClamp')).toEqual('-webkit-line-clamp')
     expect(jsKeyToCssKey('lineHeight')).toEqual('line-height')
-  })
-
-  it('isPlainType', () => {
-    expect(isPlainType(1)).toEqual(true)
-    expect(isPlainType(true)).toEqual(true)
-    expect(isPlainType('10p')).toEqual(true)
-    expect(isPlainType(null)).toEqual(false)
-    expect(isPlainType(new Date())).toEqual(false)
   })
 })

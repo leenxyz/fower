@@ -1,6 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 import { Atom } from '@styli/atom'
-import { isValidPropValue, upFirst } from '@styli/utils'
+import { isValueProp, upFirst } from '@styli/utils'
 
 export const G = {
   margin: 'margin',
@@ -40,7 +40,7 @@ export function marginPropToStyle(atom: Atom) {
   const [, matchKey = '', , value] = result
   const marginKey = matchKey.toLowerCase()
 
-  const marginValue: any = isValidPropValue(propValue) ? propValue : value
+  const marginValue: any = isValueProp(propValue) ? propValue : value
 
   marginMaps[marginKey].forEach((k: any) => {
     style[k] = marginValue

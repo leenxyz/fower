@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 export function isOpacityKey(key: string) {
   return /^opacity(-\d+)?$/.test(key)
@@ -7,7 +7,7 @@ export function isOpacityKey(key: string) {
 
 export function opacityPropToStyle(prop: string, propValue: any): any {
   const [, value = 50] = prop.split('-')
-  const val = isValidPropValue(propValue) ? propValue : value
+  const val = isValueProp(propValue) ? propValue : value
   return { opacity: Number(val) / 100 }
 }
 

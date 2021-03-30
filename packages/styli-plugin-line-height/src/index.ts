@@ -1,13 +1,13 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { downFirst, isValidPropValue } from '@styli/utils'
+import { downFirst, isValueProp } from '@styli/utils'
 
 export function isTextLineHeightKey(key: string) {
   return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
 export function textLineHeightPropToStyle(prop: string, propValue: any): any {
-  if (isValidPropValue(propValue)) {
+  if (isValueProp(propValue)) {
     return { lineHeight: propValue }
   }
 

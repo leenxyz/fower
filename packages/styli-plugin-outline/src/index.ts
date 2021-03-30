@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 export function isOutLineKey(key: string) {
   return key === 'outline' || isOutLineNone(key) || isOutLineOffset(key)
@@ -19,11 +19,11 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
   if (isOutLineOffset(propKey)) {
     const [, , offsetValue] = propKey.match(/^outlineOffset(-(.+))?$/i) || []
     return {
-      outlineOffset: isValidPropValue(propValue) ? propValue : offsetValue || 1,
+      outlineOffset: isValueProp(propValue) ? propValue : offsetValue || 1,
     }
   }
 
-  return { outline: isValidPropValue(propValue) ? propValue : 'none' }
+  return { outline: isValueProp(propValue) ? propValue : 'none' }
 }
 
 export default (): StyliPlugin => {

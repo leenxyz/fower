@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 interface EllipsisPlugin {
   defaultLineNum?: number
@@ -17,7 +17,7 @@ export default (config?: EllipsisPlugin): StyliPlugin => {
       const [, line, width] = atom.propKey.match(/^ellipsis(\d+)?-?(.+)?$/) || []
 
       const lineNum = Number(line || defaultLineNum)
-      const maxWidth = isValidPropValue(atom.propValue) ? atom.propValue : width || defaultMaxWidth
+      const maxWidth = isValueProp(atom.propValue) ? atom.propValue : width || defaultMaxWidth
 
       if (lineNum === 1) {
         atom.style = {

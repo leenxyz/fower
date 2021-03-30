@@ -24,7 +24,6 @@
     "@types/string-hash": "^1.1.1",
     "deepmerge": "^4.2.2",
     "is-in-browser": "^2.0.0",
-    "no-case": "^3.0.4",
     "string-hash": "^1.1.3"
   }
 }

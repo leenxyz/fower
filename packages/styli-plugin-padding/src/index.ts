@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue, upFirst } from '@styli/utils'
+import { isValueProp, upFirst } from '@styli/utils'
 
 export const G = {
   padding: 'padding',
@@ -37,7 +37,7 @@ export function paddingPropToStyle(prop: string, propValue: any) {
   const [, matchKey = '', , value] = result
   const key = matchKey.toLowerCase()
 
-  const paddingValue = isValidPropValue(propValue) ? propValue : value
+  const paddingValue = isValueProp(propValue) ? propValue : value
   paddingMaps[key].forEach((k: any) => {
     style[k] = paddingValue
   })

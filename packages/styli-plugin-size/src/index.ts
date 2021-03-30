@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 export const sizeMaps: any = {
   w: ['width'],
@@ -21,10 +21,10 @@ export function sizePropToStyle(prop: string, propValue: any) {
     prop.match(/^([wh]|square|circle|min[hw]|max[hw])(-([\d+A-Z]+))?$/i) || []
   const key = matchKey.toLowerCase()
 
-  const sizeValue = isValidPropValue(propValue) ? [propValue] : [value]
+  const sizeValue = isValueProp(propValue) ? [propValue] : [value]
 
   return (sizeMaps[key] || []).reduce((style: any, cur: string, idx: number) => {
-    const currentValue = sizeValue[idx] || (isValidPropValue(propValue) ? propValue : value)
+    const currentValue = sizeValue[idx] || (isValueProp(propValue) ? propValue : value)
     style[cur] = currentValue
     return style
   }, {} as any)

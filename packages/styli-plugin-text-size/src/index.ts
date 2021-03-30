@@ -1,6 +1,6 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { isValidPropValue } from '@styli/utils'
+import { isValueProp } from '@styli/utils'
 
 function isPreset(key: string) {
   return /^text(xs|sm|base|lg|[2-9]?xl)$/i.test(key)
@@ -10,7 +10,7 @@ export function isMatch(key: string) {
 }
 
 export function textSizePropToStyle(prop: string, propValue: any) {
-  if (isValidPropValue(propValue)) {
+  if (isValueProp(propValue)) {
     return { fontSize: propValue }
   }
 
