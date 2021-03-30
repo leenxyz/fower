@@ -10,7 +10,6 @@ describe('styli-plugin-margin', () => {
     expect(isMatch!('my')).toEqual(true)
     expect(isMatch!('mx-10')).toEqual(true)
     expect(isMatch!('mx-10rem')).toEqual(true)
-    expect(isMatch!('m--10rem-1px')).toEqual(true)
   })
 
   it('onAtomStyleCreate', () => {

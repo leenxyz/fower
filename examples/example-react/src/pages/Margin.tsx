@@ -7,16 +7,10 @@ export default () => {
         Margin
       </Box>
 
-      <Box debug>
+      <Box debug debugChildren>
         <Box inlineBlock>
           <Box m4 inlineBlock>
             m4
-          </Box>
-        </Box>
-
-        <Box inlineBlock>
-          <Box m-20px-10px inlineBlock>
-            m-20px-10px
           </Box>
         </Box>
 

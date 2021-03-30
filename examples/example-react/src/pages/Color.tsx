@@ -40,12 +40,6 @@ export default () => {
       <Box textXL color="green400-T40">
         color="green400-T40"
       </Box>
-      <Box textXL color="primary">
-        color="primary"
-      </Box>
-      <Box textXL color="primary-D40">
-        color="primary-D40"
-      </Box>
       <Box textXL red500 green500--hover>
         green500--hover
       </Box>
@@ -57,9 +51,6 @@ export default () => {
       </Box>
       <Box textXL color="#000" color--hover="#000-T50">
         #000--hover
-      </Box>
-      <Box textXL coolGray500 colorInfo--hover>
-        colorInfo--hover
       </Box>
       <Box textXL red500 green500--active>
         green500--active

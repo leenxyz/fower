@@ -8,6 +8,7 @@ import { presetWebRem } from '@styli/preset-web-rem';
 export default () => {
   return (
     <Box>
+      <Box text-30>40 Lorem ipsum dolor sit amet</Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
       <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>
       <Box text-20px>40 Lorem ipsum dolor sit amet</Box>

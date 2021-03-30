@@ -1,57 +1,46 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
-import { isValueProp, upFirst } from '@styli/utils'
 
-export const G = {
-  top: 'top',
-  left: 'left',
-  right: 'right',
-  bottom: 'bottom',
-}
+const Top = 'Top'
+const Left = 'Left'
+const Right = 'Right'
+const Bottom = 'Bottom'
 
-export const P = {
-  top: upFirst(G.top),
-  right: upFirst(G.right),
-  bottom: upFirst(G.bottom),
-  left: upFirst(G.left),
-}
-
-export const roundedMaps: any = {
-  roundedT: [`${P.top}${P.left}`, `${P.top}${P.right}`],
-  roundedR: [`${P.top}${P.right}`, `${P.bottom}${P.right}`],
-  roundedB: [`${P.bottom}${P.left}`, `${P.bottom}${P.right}`],
-  roundedL: [`${P.top}${P.left}`, `${P.bottom}${P.left}`],
-  roundedTL: [`${P.top}${P.left}`],
-  roundedTR: [`${P.top}${P.right}`],
-  roundedBL: [`${P.bottom}${P.left}`],
-  roundedBR: [`${P.bottom}${P.right}`],
+export const roundedMaps: Record<string, string[]> = {
+  roundedT: [Top + Left, Top + Right],
+  roundedR: [Top + Right, Bottom + Right],
+  roundedB: [Bottom + Left, Bottom + Right],
+  roundedL: [Top + Left, Bottom + Left],
+  roundedTL: [Top + Left],
+  roundedTR: [Top + Right],
+  roundedBL: [Bottom + Left],
+  roundedBR: [Bottom + Right],
 }
 
 const presetReg = /(none|sm|md|lg|[23]?xl|full)$/i
 
-export function isRoundedKey(key: string) {
-  return /^rounded([TLRB]|T[LR]|B[LR])?(none|sm|md|lg|[23]?xl|full)?(-.+)?$/i.test(key)
+export function isMatch(key: string) {
+  return /^rounded([tlrb]|t[lr]|b[lr])?(none|sm|md|lg|[23]?xl|full)?(-.+)?$/i.test(key)
 }
 /**
  * TODO: need improve
- * @param prop
+ * @param atomKey
  * @param propValue
  * @returns
  */
-export function roundedPropToStyle(prop: string, propValue: any) {
+export function roundedPropToStyle(atomKey: string, propValue: any) {
   let style: any = {}
   const borderRadius = styli.getTheme().borderRadius as any
 
-  // <Box rounded></Box>
-  if (prop === 'rounded' && typeof propValue === 'boolean') {
-    return { borderRadius: borderRadius['base'] }
-  }
+  /** @example rounded-4, rounded-8 */
+  if (atomKey === 'rounded') return { borderRadius: propValue }
 
   //  roundedNone|roundedSM|roundedXL|roundedFull..
-  if (presetReg.test(prop) && typeof propValue === 'boolean') {
-    const [themeKey] = prop.match(presetReg) || []
+  if (presetReg.test(atomKey)) {
+    const [themeKey] = atomKey.match(presetReg) || []
+
     if (themeKey && borderRadius[themeKey.toLowerCase()]) {
-      const key = prop.replace(themeKey, '')
+      const key = atomKey.replace(themeKey, '')
       const roundedValue = borderRadius[themeKey.toLowerCase()]
       if (key === 'rounded') {
         return { borderRadius: roundedValue }
@@ -64,23 +53,17 @@ export function roundedPropToStyle(prop: string, propValue: any) {
     }
   }
 
-  const [key, value] = prop.split('-')
-  const roundedValue = isValueProp(propValue) ? propValue : value
-
-  /** @example rounded-4, rounded-8 */
-  if (key === 'rounded') return { borderRadius: roundedValue }
-
-  for (const p of roundedMaps[key]) {
-    style[`border${p}Radius`] = roundedValue
+  for (const p of roundedMaps[atomKey]) {
+    style[`border${p}Radius`] = propValue
   }
   return style
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isRoundedKey,
+    isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = roundedPropToStyle(atom.propKey, atom.propValue)
+      atom.style = roundedPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

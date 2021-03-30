@@ -6,7 +6,7 @@ export default () => {
       <Box text3XL fontBold>
         Size
       </Box>
-      <Box space-10 row w-350 wrap>
+      <Box space-10 row w-350>
         <Box bgBlue200 square-100>
           space-10
         </Box>

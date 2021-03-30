@@ -1,7 +1,7 @@
 import { Parser } from './parser'
 import { Atom } from '@styli/atom'
 import { isBooleanFalse } from '@styli/utils'
-import { spacePreprocessor } from './space-preprocessor'
+import { digitPreprocessor } from './digit-preprocessor'
 
 const invalidProps = ['excludedProps', 'styliName']
 const connector = '--'
@@ -56,7 +56,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
 
   if (!isMode && !isPseudo && !isResponsive) {
     // handle spacing directly
-    return spacePreprocessor(atom, styli)
+    return digitPreprocessor(atom, styli)
   }
 
   const result = propKey.split(connector)
@@ -79,7 +79,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   }
 
   // check is theme space key, if yes, preprocess it
-  atom = spacePreprocessor({ ...atom, key: atom.key }, styli)
+  atom = digitPreprocessor({ ...atom, key: atom.key }, styli)
 
   /** handle style */
   const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))

@@ -14,15 +14,7 @@ export function positionPropToStyle(prop: string, propValue: any): any {
   /** @example absolute, relative  */
   if (positionKeys.includes(prop)) return { position: prop }
 
-  /** @example top={0}, right={10}... */
-  if (/^(top|right|bottom|left)$/gi.test(prop)) {
-    return { [prop]: propValue }
-  }
-
-  /** @example top-0, right-10, left--10... */
-  const [, matchKey, , value] = prop.match(/^(top|right|bottom|left)(-(-?[\d+A-Z]+))?$/i) || []
-  const key = matchKey.toLowerCase()
-  return { [key]: value }
+  return { [prop]: propValue }
 }
 
 export default (): StyliPlugin => {

@@ -62,17 +62,7 @@ class Styli {
   }
 
   use = (...plugins: StyliPlugin[]) => {
-    plugins.forEach((plugin) => {
-      const idx = this.config?.plugins?.findIndex(
-        (configPlugin: StyliPlugin) => configPlugin.name === plugin.name,
-      )
-      const pluginIdx = (idx === -1 ? this.config?.plugins?.length : idx) as number
-
-      if (this.config?.plugins) {
-        this.config.plugins[pluginIdx] = plugin
-      }
-    })
-    return this
+    this.config.plugins.push(...plugins)
   }
 }
 

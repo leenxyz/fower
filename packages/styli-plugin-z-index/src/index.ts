@@ -1,21 +1,14 @@
 import { StyliPlugin } from '@styli/types'
-import { isValueProp } from '@styli/utils'
 
-export function isZIndexKey(key: string) {
+export function isMatch(key: string) {
   return /^zIndex(--?\d+)?$/.test(key)
-}
-
-export function zIndexPropToStyle(prop: string, propValue: any) {
-  const [, , value] = prop.match(/^zIndex(-(-?\d+))?/) || []
-  const zIndexValue = isValueProp(propValue) ? propValue : value
-  return { zIndex: zIndexValue }
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isZIndexKey,
+    isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = zIndexPropToStyle(atom.propKey, atom.propValue)
+      atom.style = { zIndex: atom.propValue }
       return atom
     },
   }

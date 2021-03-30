@@ -2,29 +2,21 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
-export function isTextWeightKey(key: string) {
-  return /^font([Hh]airline|[Tt]hin|[Ll]ight|[Nn]ormal|[Mm]edium|[Ss]emibold|[Bb]old|[Ee]xtrabold|[Bb]lack)?$|^font[Ww]eight(-.+)?$/.test(
+export function isMatch(key: string) {
+  return /^font(Hairline|Thin|Light|Normal|Medium|Semibold|Bold|Extrabold|Black)?$|^fontWeight(-.+)?$/i.test(
     key,
   )
 }
 
-export function textWeightPropToStyle(prop: string, propValue: any) {
-  const value = prop.replace(/^font|-.+$/g, '')
-
-  if (value.toLowerCase() === 'weight') {
-    const [, weightValue] = prop.split('-')
-    return { fontWeight: weightValue || propValue }
-  }
-
-  const weights = styli.getTheme().fontWeights as any
-  return { fontWeight: weights[downFirst(value)] || value }
-}
-
 export default (): StyliPlugin => {
   return {
-    isMatch: isTextWeightKey,
+    isMatch,
     onAtomStyleCreate(atom) {
-      atom.style = textWeightPropToStyle(atom.propKey, atom.propValue)
+      const { key, propValue } = atom
+      const weights = styli.getTheme().fontWeights as any
+      const posfix = key.replace(/^font/i, '')
+      const value = /^weight$/i.test(posfix) ? propValue : weights[downFirst(posfix)]
+      atom.style = { fontWeight: value }
       return atom
     },
   }

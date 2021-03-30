@@ -7,8 +7,8 @@ export default () => {
         Padding
       </Box>
 
-      <Box debug>
-        <Box p4 inlineBlock>
+      <Box debug debugChildren>
+        <Box p-44px inlineBlock>
           p4
         </Box>
         <Box pt4 inlineBlock>
@@ -32,10 +32,6 @@ export default () => {
 
         <Box p-20 inlineBlock>
           p-20
-        </Box>
-
-        <Box p-20px-10px inlineBlock>
-          p-20px-10px
         </Box>
 
         <Box pt-20 inlineBlock>
