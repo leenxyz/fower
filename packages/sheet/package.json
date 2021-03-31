@@ -19,5 +19,8 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/sheet.esm.js"
+  "module": "dist/sheet.esm.js",
+  "dependencies": {
+    "@styli/utils": "^1.2.0"
+  }
 }
