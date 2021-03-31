@@ -7,8 +7,8 @@ function isMatch(key: string) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
-      atom.style = { [atom.key]: atom.propValue }
+    handleAtom(atom) {
+      atom.style = { [atom.propKey]: atom.propValue }
       return atom
     },
   }

@@ -27,7 +27,7 @@ function bgPropToStyle(propKey: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = bgPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

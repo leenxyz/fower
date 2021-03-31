@@ -3,7 +3,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-outline', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
@@ -15,7 +15,7 @@ describe('styli-plugin-outline', () => {
     expect(isMatch!('outlineoffset-10')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = new Atom({
       propKey: 'outline',
       propValue: true,
@@ -28,7 +28,7 @@ describe('styli-plugin-outline', () => {
       style: { outline: 'none' },
       key: 'outline',
     })
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = new Atom({
       propKey: 'outlineNone',
@@ -42,7 +42,7 @@ describe('styli-plugin-outline', () => {
       style: { outline: 'none' },
       key: 'outlineNone',
     })
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = new Atom({
       propKey: 'outlineOffset-2px',
@@ -56,7 +56,7 @@ describe('styli-plugin-outline', () => {
       style: { outlineOffset: '2px' },
       key: 'outlineOffset-2px',
     })
-    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
+    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4 = new Atom({
       propKey: 'outlineOffset',
@@ -70,6 +70,6 @@ describe('styli-plugin-outline', () => {
       propValue: '10px',
       style: { outlineOffset: '10px' },
     })
-    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
+    expect(handleAtom!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

@@ -11,20 +11,23 @@ describe('styli-plugin-font-weight', () => {
     },
   })
 
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('fontWeight')).toEqual(true)
     expect(isMatch!('fontMedium')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
-    const atom1 = { propKey: 'fontWeight', propValue: '600' } as Atom
-    const newAtom1 = { propKey: 'fontWeight', propValue: '600', style: { fontWeight: '600' } }
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
-
-    const atom2 = { propKey: 'fontMedium', propValue: true } as Atom
-    const newAtom2 = { propKey: 'fontMedium', propValue: true, style: { fontWeight: 500 } }
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+  it('handleAtom', () => {
+    const atom2 = new Atom({
+      propKey: 'fontMedium',
+      propValue: true,
+    })
+    const newAtom2 = new Atom({
+      propKey: 'fontMedium',
+      propValue: true,
+      style: { fontWeight: 500 },
+    })
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

@@ -136,8 +136,8 @@ export class Parser {
           atom = plugin.beforeAtomStyleCreate(atom, this as any)
         }
 
-        if (plugin.onAtomStyleCreate) {
-          atom = plugin.onAtomStyleCreate(atom, this as any)
+        if (plugin.handleAtom) {
+          atom = plugin.handleAtom(atom, this as any)
         }
 
         atom.className = this.getAtomClassName(atom)

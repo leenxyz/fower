@@ -11,8 +11,8 @@ export function isMatch(key: string) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
-      const { key, propValue } = atom
+    handleAtom(atom) {
+      const { key = '', propValue } = atom
       const weights = styli.getTheme().fontWeights as any
       const posfix = key.replace(/^font/i, '')
       const value = /^weight$/i.test(posfix) ? propValue : weights[downFirst(posfix)]

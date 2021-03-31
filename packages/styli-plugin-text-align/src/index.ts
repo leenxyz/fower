@@ -13,7 +13,7 @@ export function textAlignPropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch: isTextAlign,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = textAlignPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

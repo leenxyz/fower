@@ -84,7 +84,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   /** handle style */
   const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))
   if (plugin) {
-    atom = plugin.onAtomStyleCreate!({ ...atom, key: atom.key }, parser)
+    atom = plugin.handleAtom!({ ...atom, key: atom.key }, parser)
     atom.style = atom.style
   }
 

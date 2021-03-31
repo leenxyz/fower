@@ -135,7 +135,7 @@ declare namespace StyliTypes {
      * @param atom
      * @param parser
      */
-    onAtomStyleCreate?(atom: Atom, parser: Parser): Atom
+    handleAtom?(atom: Atom, parser: Parser): Atom
 
     /**
      * after atom style created

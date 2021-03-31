@@ -80,7 +80,7 @@ function borderPropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch: isBorderKey,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = borderPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

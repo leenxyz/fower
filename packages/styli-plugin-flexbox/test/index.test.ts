@@ -10,6 +10,6 @@ describe('styli-plugin-flex-box', () => {
     expect(isMatch!('order')).toEqual(true)
   })
 
-  // it('onAtomStyleCreate', () => {
+  // it('handleAtom', () => {
   // })
 })

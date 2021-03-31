@@ -114,7 +114,7 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom, parser) {
+    handleAtom(atom, parser) {
       atom.style = alignmentPropToStyle(atom.propKey, parser.props)
 
       if ([row, column].includes(atom.propKey)) {

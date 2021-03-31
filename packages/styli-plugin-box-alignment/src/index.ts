@@ -13,7 +13,7 @@ function flexPropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = flexPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

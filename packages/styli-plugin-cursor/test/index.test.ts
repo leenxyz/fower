@@ -3,7 +3,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-cursor', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
@@ -12,17 +12,24 @@ describe('styli-plugin-cursor', () => {
     expect(isMatch!('cursornone')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = { propKey: 'cursor', propValue: 'pointer', key: 'cursor' } as Atom
     const newAtom1 = { propKey: 'cursor', propValue: 'pointer', style: { cursor: 'pointer' } }
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'cursorNone', propValue: true } as Atom
-    const newAtom2 = { propKey: 'cursorNone', propValue: true, style: { cursor: 'none' } }
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    const atom2 = new Atom({
+      propKey: 'cursorNone',
+      propValue: true,
+    })
+    const newAtom2 = new Atom({
+      propKey: 'cursorNone',
+      propValue: true,
+      style: { cursor: 'none' },
+    })
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'cursornone', propValue: true } as Atom
     const newAtom3 = { propKey: 'cursornone', propValue: true, style: { cursor: 'none' } }
-    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
+    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

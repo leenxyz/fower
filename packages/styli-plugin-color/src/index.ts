@@ -29,7 +29,7 @@ export function colorPropToStyle(propKey: string, propValue: any, colors: any): 
 export default (): StyliPlugin => {
   return {
     isMatch: isColorKey,
-    onAtomStyleCreate(atom, parser) {
+    handleAtom(atom, parser) {
       const { theme } = parser
       const colors = theme?.colors
       atom.style = colorPropToStyle(atom.propKey, atom.propValue, colors)

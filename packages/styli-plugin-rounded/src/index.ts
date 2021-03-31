@@ -62,7 +62,7 @@ export function roundedPropToStyle(atomKey: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = roundedPropToStyle(atom.key, atom.propValue)
       return atom
     },

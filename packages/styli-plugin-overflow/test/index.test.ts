@@ -2,7 +2,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-overflow', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as any
 
   it('isMatch', () => {
@@ -10,7 +10,7 @@ describe('styli-plugin-overflow', () => {
     expect(isMatch!('overflowX')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = new Atom({
       propKey: 'overflow',
       propValue: 'scroll',
@@ -23,7 +23,7 @@ describe('styli-plugin-overflow', () => {
       style: { overflow: 'scroll' },
       key: 'overflow',
     })
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = new Atom({
       propKey: 'overflowX',
@@ -37,6 +37,6 @@ describe('styli-plugin-overflow', () => {
       style: { overflowX: 'scroll' },
       key: 'overflowX',
     })
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
   })
 })

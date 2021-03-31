@@ -5,7 +5,7 @@ export default (): StyliPlugin => {
     isMatch(key) {
       return /^debug(Children)?/i.test(key)
     },
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       const { propKey } = atom
 
       if (/^debugChildren$/i.test(propKey)) {

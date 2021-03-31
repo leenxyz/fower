@@ -6,7 +6,7 @@ export default (): StyliPlugin => {
       const caseKeys = ['normalcase', 'uppercase', 'lowercase', 'capitalize']
       return caseKeys.includes(key)
     },
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       const { propKey } = atom
 
       const value: any = propKey === 'normalcase' ? 'none' : propKey

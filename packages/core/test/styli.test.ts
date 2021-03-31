@@ -33,7 +33,7 @@ describe('styli-core', () => {
       isMatch(key: string) {
         return key === 'test'
       },
-      onAtomStyleCreate(atom = {} as any) {
+      handleAtom(atom = {} as any) {
         return atom
       },
     }

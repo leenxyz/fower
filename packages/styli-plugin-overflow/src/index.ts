@@ -13,7 +13,7 @@ export function overFlowPropToStyle(prop: string, propValue: any): any {
 export default (): StyliPlugin => {
   return {
     isMatch: isOverFlowKey,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = overFlowPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

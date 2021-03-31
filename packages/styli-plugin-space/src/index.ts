@@ -24,7 +24,7 @@ export function spacePropToStyle(key: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.meta.childSelector = '>*:not(:last-child)'
       atom.style = spacePropToStyle(atom.key, atom.propValue)
       return atom

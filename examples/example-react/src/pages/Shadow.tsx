@@ -2,7 +2,7 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <Box textBase gray60>
+    <Box textBase gray600>
       <Box text3XL fontBold>
         Shadow
       </Box>

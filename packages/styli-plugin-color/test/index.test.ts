@@ -12,7 +12,7 @@ describe('styli-plugin-color', () => {
     } as any,
   })
 
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
@@ -21,7 +21,7 @@ describe('styli-plugin-color', () => {
     expect(isMatch!('color')).toEqual(true)
   })
 
-  describe('onAtomStyleCreate', () => {
+  describe('handleAtom', () => {
     // <View red></View>
     it('red', () => {
       const atom = new Atom({
@@ -37,7 +37,7 @@ describe('styli-plugin-color', () => {
         style: { color: 'blue' },
       })
 
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View color="red"></View>
@@ -54,7 +54,7 @@ describe('styli-plugin-color', () => {
         style: { color: 'blue' },
         key: 'red',
       })
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
   })
 })

@@ -15,7 +15,7 @@ function boxSizingPropToStyle(propKey: string, propValue: any): any {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = boxSizingPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

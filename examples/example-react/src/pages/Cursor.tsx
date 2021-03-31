@@ -2,12 +2,17 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
+    <Box square-100 toCenter bgBlue300 cursorNone>
+      cursorNone
+    </Box>
+  );
+  return (
     <Box>
       <Box text3XL fontBold>
         Cursor
       </Box>
 
-      <Box row justifyBetween>
+      <Box row toBetween>
         <Box square-100 toCenter bgBlue300 cursorPointer>
           cursorPointer
         </Box>

@@ -3,7 +3,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-box-sizing', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
@@ -12,7 +12,7 @@ describe('styli-plugin-box-sizing', () => {
     expect(isMatch!('contentBox')).toEqual(true)
   })
 
-  describe('onAtomStyleCreate', () => {
+  describe('handleAtom', () => {
     // <View boxSizing="border-box"></View>
     it('boxSizing', () => {
       const atom = {
@@ -26,7 +26,7 @@ describe('styli-plugin-box-sizing', () => {
         propValue: 'border-box',
         style: { boxSizing: 'border-box' },
       }
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View borderBox></View>
@@ -42,7 +42,7 @@ describe('styli-plugin-box-sizing', () => {
         propValue: true,
         style: { boxSizing: 'border-box' },
       }
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View contentBox></View>
@@ -58,7 +58,7 @@ describe('styli-plugin-box-sizing', () => {
         propValue: true,
         style: { boxSizing: 'content-box' },
       }
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
   })
 })

@@ -17,7 +17,9 @@ export function downFirst(s: string = '') {
 }
 
 export function kebab(value: string) {
-  return value.replace(/[A-Z]/g, (capital) => '-' + capital.toLowerCase())
+  return downFirst(value).replace(/[A-Z]/g, (capital) => {
+    return '-' + capital.toLowerCase()
+  })
 }
 
 export function isBooleanFalse(value: any) {

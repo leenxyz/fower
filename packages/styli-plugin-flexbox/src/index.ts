@@ -37,7 +37,7 @@ export function flexItemPropToStyle(propKey: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       // specail key: flex={true}
       if (atom.propKey === 'flex' && typeof atom.propValue === 'boolean') {
         atom.key = 'flex'

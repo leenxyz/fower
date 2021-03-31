@@ -2,7 +2,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-padding', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('p')).toEqual(true)
@@ -12,7 +12,7 @@ describe('styli-plugin-padding', () => {
     expect(isMatch!('px-10rem')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = new Atom({ propKey: 'p', propValue: 10, key: 'p', style: {} })
     const newAtom1 = new Atom({
       propKey: 'p',
@@ -20,34 +20,32 @@ describe('styli-plugin-padding', () => {
       style: { padding: 10 },
       key: 'p',
     })
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = new Atom({
-      propKey: 'pl-20',
-      propValue: true,
-      key: 'pl-20',
-      style: {},
+      propKey: 'pl',
+      propValue: '20',
     })
     const newAtom2 = new Atom({
-      propKey: 'pl-20',
-      propValue: true,
+      propKey: 'pl',
+      propValue: '20',
       style: { paddingLeft: '20' },
-      key: 'pl-20',
+      key: 'pl',
     })
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = new Atom({
-      propKey: 'px-10rem',
-      propValue: true,
-      key: 'px-10rem',
+      propKey: 'px',
+      propValue: '10rem',
+      key: 'px',
       style: {},
     })
     const newAtom3 = new Atom({
-      key: 'px-10rem',
-      propKey: 'px-10rem',
-      propValue: true,
+      key: 'px',
+      propKey: 'px',
+      propValue: '10rem',
       style: { paddingLeft: '10rem', paddingRight: '10rem' },
     })
-    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
+    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

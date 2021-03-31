@@ -2,7 +2,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-layout-engine', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
 
   it('isMatch', () => {
     expect(isMatch!('toCenter')).toEqual(true)
@@ -17,7 +17,7 @@ describe('styli-plugin-layout-engine', () => {
     expect(isMatch!('toRight')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const parser1 = { props: { row: true, toCenter: true } } as any
     const atom1 = { propKey: 'toCenter', propValue: true } as Atom
     const newAtom1 = {
@@ -27,6 +27,6 @@ describe('styli-plugin-layout-engine', () => {
         justifyContent: 'center',
       },
     }
-    expect(onAtomStyleCreate!(atom1, parser1)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser1)).toMatchObject(newAtom1)
   })
 })

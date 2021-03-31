@@ -18,7 +18,7 @@ export function isMatch(key: string) {
 export default (): StyliPlugin => {
   return {
     isMatch,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       const { key, propValue } = atom
       atom.style = sizeMaps[key.toLowerCase()].reduce<any>(
         (style, cur) => ({ ...style, [cur]: propValue }),

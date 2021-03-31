@@ -33,7 +33,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
 export default (): StyliPlugin => {
   return {
     isMatch: isTextLineHeightKey,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = textLineHeightPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

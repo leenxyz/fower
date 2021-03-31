@@ -4,14 +4,14 @@ import plugin from '../src'
 import './config'
 
 describe('bgRepeat', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
     expect(isMatch!('backgroundRepeat')).toEqual(true)
   })
 
-  describe('onAtomStyleCreate', () => {
+  describe('handleAtom', () => {
     it('<View backgroundRepeat="no-repeat"></View>', () => {
       const atom = { propKey: 'backgroundRepeat', propValue: 'no-repeat' } as Atom
       const finalAtom = {
@@ -19,7 +19,7 @@ describe('bgRepeat', () => {
         propValue: 'no-repeat',
         style: { backgroundRepeat: 'no-repeat' },
       } as Atom
-      expect(onAtomStyleCreate!(atom, parser)).toMatchObject(finalAtom)
+      expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
   })
 })

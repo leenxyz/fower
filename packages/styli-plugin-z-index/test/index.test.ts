@@ -5,7 +5,7 @@ import plugin from '../src'
 describe('styli-plugin-z-index', () => {
   styli.configure({ unit: 'px' })
 
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as any
   it('isMatch', () => {
     expect(isMatch!('zIndex')).toEqual(true)
@@ -13,22 +13,10 @@ describe('styli-plugin-z-index', () => {
     expect(isMatch!('zIndex--1')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = { propKey: 'zIndex', propValue: '10' } as Atom
     const newAtom1 = { propKey: 'zIndex', propValue: '10', style: { zIndex: '10' } }
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
-
-    const atom2 = { propKey: 'zIndex-10', propValue: true } as Atom
-    const newAtom2 = { propKey: 'zIndex-10', propValue: true, style: { zIndex: '10' } }
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
-
-    const atom3 = { propKey: 'zIndex--1', propValue: true } as Atom
-    const newAtom3 = {
-      propKey: 'zIndex--1',
-      propValue: true,
-      style: { zIndex: '-1' },
-    }
-    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom4 = { propKey: 'zIndex', propValue: '-1' } as Atom
     const newAtom4 = {
@@ -36,6 +24,6 @@ describe('styli-plugin-z-index', () => {
       propValue: '-1',
       style: { zIndex: '-1' },
     }
-    expect(onAtomStyleCreate!(atom4, parser)).toMatchObject(newAtom4)
+    expect(handleAtom!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

@@ -17,7 +17,7 @@ export function displayPropToStyle(prop: string, propValue: any): any {
 export default (): StyliPlugin => {
   return {
     isMatch: isDisplayKey,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = displayPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

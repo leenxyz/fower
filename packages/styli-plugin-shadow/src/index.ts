@@ -11,6 +11,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
   const value = prop.replace('shadow', '')
   const shadowSize = value.toLowerCase()
   const shadow = styli.getTheme().shadow as any
+
   const shadowValue = shadow[shadowSize || 'base']
 
   if (!shadowValue) {
@@ -22,7 +23,7 @@ export function shadowPropToStyle(prop: string, propValue: any) {
 export default (): StyliPlugin => {
   return {
     isMatch: isShadowKey,
-    onAtomStyleCreate(atom) {
+    handleAtom(atom) {
       atom.style = shadowPropToStyle(atom.propKey, atom.propValue)
       return atom
     },

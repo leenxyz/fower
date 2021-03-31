@@ -20,5 +20,5 @@ describe('styli-plugin-border', () => {
     expect(isMatch!('borderRed-1')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {})
+  it('handleAtom', () => {})
 })

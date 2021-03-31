@@ -3,7 +3,7 @@ import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-grid', () => {
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser
 
   it('isMatch', () => {
@@ -14,7 +14,7 @@ describe('styli-plugin-grid', () => {
     expect(isMatch!('gridTemplateColumns-10px')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = { propKey: 'gridTemplateColumns', propValue: 1 } as Atom
     const newAtom1 = {
       propKey: 'gridTemplateColumns',
@@ -23,11 +23,11 @@ describe('styli-plugin-grid', () => {
         gridTemplateColumns: 'repeat(1, minmax(0px, 1fr))',
       },
     }
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = { propKey: 'rowGap', propValue: 1 } as Atom
     const newAtom2 = { propKey: 'rowGap', propValue: 1, style: { rowGap: 1 } }
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
     const atom3 = { propKey: 'rowGap-1', propValue: true } as Atom
     const newAtom3 = {
@@ -35,6 +35,6 @@ describe('styli-plugin-grid', () => {
       propValue: true,
       style: { rowGap: '1' },
     }
-    expect(onAtomStyleCreate!(atom3, parser)).toMatchObject(newAtom3)
+    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

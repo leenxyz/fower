@@ -5,7 +5,7 @@ import plugin from '../src'
 describe('styli-plugin-text-align', () => {
   styli.configure({ unit: 'px' })
 
-  const { isMatch, onAtomStyleCreate } = plugin()
+  const { isMatch, handleAtom } = plugin()
   const parser = {} as any
 
   it('isMatch', () => {
@@ -13,7 +13,7 @@ describe('styli-plugin-text-align', () => {
     expect(isMatch!('textCenter')).toEqual(true)
   })
 
-  it('onAtomStyleCreate', () => {
+  it('handleAtom', () => {
     const atom1 = new Atom({
       propKey: 'textAlign',
       propValue: 'center',
@@ -26,7 +26,7 @@ describe('styli-plugin-text-align', () => {
       style: { textAlign: 'center' },
       key: 'textAlign',
     })
-    expect(onAtomStyleCreate!(atom1, parser)).toMatchObject(newAtom1)
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = new Atom({
       propKey: 'textCenter',
@@ -40,6 +40,6 @@ describe('styli-plugin-text-align', () => {
       style: { textAlign: 'center' },
       key: 'textCenter',
     })
-    expect(onAtomStyleCreate!(atom2, parser)).toMatchObject(newAtom2)
+    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
   })
 })
