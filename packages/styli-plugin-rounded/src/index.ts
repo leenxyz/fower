@@ -32,8 +32,12 @@ export function roundedPropToStyle(atomKey: string, propValue: any) {
   let style: any = {}
   const borderRadius = styli.getTheme().borderRadius as any
 
-  /** @example rounded-4, rounded-8 */
-  if (atomKey === 'rounded') return { borderRadius: propValue }
+  if (atomKey === 'rounded') {
+    const isBase = typeof propValue === 'boolean'
+    return {
+      borderRadius: isBase ? borderRadius['base'] : propValue,
+    }
+  }
 
   //  roundedNone|roundedSM|roundedXL|roundedFull..
   if (presetReg.test(atomKey)) {
