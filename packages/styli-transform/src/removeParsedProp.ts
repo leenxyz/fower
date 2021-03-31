@@ -1,4 +1,4 @@
-import { Parser } from '@styli/core'
+import { Parser } from '@styli/parser'
 import { Props } from '@styli/types'
 
 export function removeParsedProp(path: any, parser: Parser, props: Props) {
