@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-opacity",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-opacity.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.0.0",
-    "@styli/types": "^1.0.0",
-    "@styli/utils": "^1.0.0"
+    "@styli/atom": "^1.1.0",
+    "@styli/types": "^1.1.0",
+    "@styli/utils": "^1.1.0"
   }
 }
