@@ -59,10 +59,11 @@ export class Parser {
     return numValue
   }
 
-  cssObjToStr(style: Dict) {
+  cssObjToStr(style: Dict, important?: boolean) {
     return Object.entries(style).reduce<string>((r, [key, value]) => {
       const cssKey = jsKeyToCssKey(key)
-      return r + `${cssKey}: ${this.formatCssValue(cssKey, value)};`
+      const posfix = important ? '!important' : ''
+      return r + `${cssKey}: ${this.formatCssValue(cssKey, value)}${posfix};`
     }, '')
   }
 
@@ -275,13 +276,13 @@ export class Parser {
 
       atom.inserted = true
 
-      const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
+      const { pseudo, mode, breakpoint = '', childSelector, important } = atom.meta
 
       let selector = `.${className}`
       if (pseudo) selector = selector + pseudo
       if (mode) selector = `.${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
-      rule = `${selector} { ${this.cssObjToStr(style)} }`
+      rule = `${selector} { ${this.cssObjToStr(style, important)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)

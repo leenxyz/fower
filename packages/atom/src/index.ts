@@ -1,3 +1,4 @@
+import * as CSS from 'csstype'
 import { Options } from './types'
 
 interface Meta {
@@ -26,6 +27,8 @@ interface Meta {
    * childSelector: '.child'
    */
   childSelector?: string
+
+  important?: boolean
 }
 
 export class Atom {
@@ -53,9 +56,16 @@ export class Atom {
   id: string = ''
 
   /**
-   * propKey may changed by plugin, so use key record origin propKey
+   * get the primitive atomic key, exclude value or posfix
+   * @example
+   * m-4 -> m
+   * m={4} -> m
+   * m4 -> m
+   * m4--hover -> m
+   * m4--sm -> m
+   * m4--dark--sm-i -> m
    */
-  key: 'css' | 'debug' | ({} & string)
+  key: string
 
   /**
    * original propKey, 原始的propkey
@@ -67,7 +77,7 @@ export class Atom {
 
   propValue: any
 
-  style: any
+  style: CSS.Properties<number | string>
 
   /**
    * className of this atom

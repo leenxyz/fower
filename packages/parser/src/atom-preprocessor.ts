@@ -44,6 +44,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   const regMode = new RegExp(regModeStr)
   const regPseudo = new RegExp(regPseudoStr)
   const regResponsive = new RegExp(regResponsiveStr)
+  const regImportant = /--i/
 
   /** invalid prop */
   if (invalidProps.includes(propKey) || isBooleanFalse(propValue)) {
@@ -53,8 +54,9 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   const isMode = regMode.test(propKey) // is mode style
   const isPseudo = regPseudo.test(propKey) // is pseudo style
   const isResponsive = regResponsive.test(propKey) // is responsive style
+  const isImportant = regImportant.test(propKey) // is important style
 
-  if (!isMode && !isPseudo && !isResponsive) {
+  if (!isMode && !isPseudo && !isResponsive && !isImportant) {
     // handle spacing directly
     return digitPreprocessor(atom, styli)
   }
@@ -76,6 +78,10 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   if (isResponsive) {
     const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
     meta.breakpoint = breakpoints[breakpointType]
+  }
+
+  if (isImportant) {
+    meta.important = !!result.find((i) => i === 'i')
   }
 
   // check is theme space key, if yes, preprocess it

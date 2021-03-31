@@ -19,14 +19,18 @@ describe('styli-plugin-layout-engine', () => {
 
   it('handleAtom', () => {
     const parser1 = { props: { row: true, toCenter: true } } as any
-    const atom1 = { propKey: 'toCenter', propValue: true } as Atom
-    const newAtom1 = {
+    const atom1 = new Atom({
+      propKey: 'toCenter',
+      propValue: true,
+    })
+    const newAtom1 = new Atom({
       propKey: 'toCenter',
       propValue: true,
       style: {
         justifyContent: 'center',
+        alignItems: 'center',
       },
-    }
+    })
     expect(handleAtom!(atom1, parser1)).toMatchObject(newAtom1)
   })
 })

@@ -39,6 +39,10 @@ export default () => {
         <Box bgWhite square-128 rounded-4 toCenter shadowOutline>
           shadowOutline
         </Box>
+
+        <Box bgWhite square-128 rounded-4 toCenter shadowOutline>
+          shadowOutline
+        </Box>
       </Box>
     </Box>
   );

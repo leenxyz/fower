@@ -56,13 +56,12 @@ export function isMatch(key: string) {
 /**
  * Get alignment style
  * 这里比较复杂
- * @param propKey
+ * @param key
  * @param props
  * @returns
  */
-export function alignmentPropToStyle(propKey: string, props: any) {
-  if (propKey === 'direction') return
-  const { toCenter } = props
+export function alignmentPropToStyle(key: string, props: any) {
+  if (key === 'direction') return
   const direction = getFlexDirection(props)
   const style: any = {}
 
@@ -70,40 +69,38 @@ export function alignmentPropToStyle(propKey: string, props: any) {
 
   /** 根据 row 和 column 设置属性，这里比较复杂 */
   if (direction.startsWith('row')) {
-    if ([toLeft, toRight, toCenterX, toBetween, toAround, toEvenly].includes(propKey)) {
+    if ([toLeft, toRight, toCenterX, toBetween, toAround, toEvenly].includes(key)) {
       styleKey = 'justifyContent'
     }
 
-    if ([toTop, toBottom, toCenterY, toStretch].includes(propKey)) {
+    if ([toTop, toBottom, toCenterY, toStretch].includes(key)) {
       styleKey = 'alignItems'
     }
   } else {
-    if ([toTop, toBottom, toCenterY, toBetween, toAround, toEvenly].includes(propKey)) {
+    if ([toTop, toBottom, toCenterY, toBetween, toAround, toEvenly].includes(key)) {
       styleKey = 'justifyContent'
     }
-    if ([toLeft, toRight, toCenterX, toStretch].includes(propKey)) {
+    if ([toLeft, toRight, toCenterX, toStretch].includes(key)) {
       styleKey = 'alignItems'
     }
   }
 
   /** 设置样式 */
-  if ([toTop, toLeft].includes(propKey)) {
+  if ([toTop, toLeft].includes(key)) {
     style[styleKey] = flexStart
-  } else if ([toBottom, toRight].includes(propKey)) {
+  } else if ([toBottom, toRight].includes(key)) {
     style[styleKey] = flexEnd
-  } else if ([toCenterX, toCenterY].includes(propKey)) {
+  } else if ([toCenterX, toCenterY].includes(key)) {
     style[styleKey] = center
-  } else if (propKey === toBetween) {
+  } else if (key === toBetween) {
     style[styleKey] = spaceBetween
-  } else if (propKey === toAround) {
+  } else if (key === toAround) {
     style[styleKey] = spaceAround
-  } else if (propKey === toEvenly) {
+  } else if (key === toEvenly) {
     style[styleKey] = spaceEvenly
-  } else if (propKey === toStretch) {
+  } else if (key === toStretch) {
     style[styleKey] = spaceEvenly
-  }
-
-  if (toCenter) {
+  } else if (key === toCenter) {
     style.justifyContent = center
     style.alignItems = center
   }
@@ -115,7 +112,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom, parser) {
-      atom.style = alignmentPropToStyle(atom.propKey, parser.props)
+      atom.style = alignmentPropToStyle(atom.key, parser.props)
 
       if ([row, column].includes(atom.propKey)) {
         atom.isValid = false
@@ -127,7 +124,7 @@ export default (): StyliPlugin => {
     afterAtomStyleCreate(parser) {
       if (!parser.atoms.length) return
 
-      const matched = parser.atoms.find((i) => isMatch(i.propKey))
+      const matched = parser.atoms.find((i) => isMatch(i.key))
 
       if (!matched) return
 
