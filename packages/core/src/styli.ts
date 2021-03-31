@@ -64,6 +64,18 @@ class Styli {
   use = (...plugins: StyliPlugin[]) => {
     this.config.plugins.push(...plugins)
   }
+
+  addAtomicProps = (matcher: string | RegExp, handleAtom: StyliPlugin['handleAtom']) => {
+    const plugin: StyliPlugin = {
+      isMatch(key: string) {
+        if (typeof matcher === 'string') return key === matcher
+        if (matcher instanceof RegExp) return matcher.test(key)
+        return false
+      },
+      handleAtom,
+    }
+    this.use(plugin)
+  }
 }
 
 export const styli = new Styli()

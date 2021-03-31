@@ -29,11 +29,22 @@ setTheme({
   },
 });
 
+styli.addAtomicProps('textBody', (atom) => {
+  atom.style = { fontSize: 40 };
+  return atom;
+});
+
+declare module '@styli/types' {
+  export interface AtomicProps {
+    textBody?: boolean;
+  }
+}
+
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
     <div>
-      <Box></Box>
+      <Box textBody>test TExt</Box>
       <Box
         as="button"
         onClick={() => {
