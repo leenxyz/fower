@@ -8,16 +8,12 @@ export default () => {
       </Box>
 
       <Box py-50 row toEvenly>
-        <Box bgWhite square-128 rounded-4 toCenter shadowXS>
-          shadowXS
-        </Box>
-
         <Box bgWhite square-128 rounded-4 toCenter shadowSM>
           shadowSM
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowBase>
-          shadowBase
+        <Box bgWhite square-128 rounded-4 toCenter shadow>
+          Base
         </Box>
 
         <Box bgWhite square-128 rounded-4 toCenter shadowMD>
@@ -32,8 +28,8 @@ export default () => {
           shadowXL
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowXXL>
-          shadowXXL
+        <Box bgWhite square-128 rounded-4 toCenter shadow2XL>
+          shadow2XL
         </Box>
 
         <Box bgWhite square-128 rounded-4 toCenter shadowInner>

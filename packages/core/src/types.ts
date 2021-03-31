@@ -102,13 +102,12 @@ export interface SetThemeParams {
     [key: string]: any
   }
   shadow: {
-    xs: string
     sm: string
     base: string
     md: string
     lg: string
     xl: string
-    xxl: string
+    '2xl': string
     inner: string
     outline: string
     none: string

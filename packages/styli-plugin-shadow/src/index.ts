@@ -3,7 +3,7 @@ import { StyliPlugin } from '@styli/types'
 import { isValueProp } from '@styli/utils'
 
 export function isShadowKey(key: string) {
-  return /^shadow(XS|SM|Base|MD|LG|XL|XXL|Outline|None|Inner)?$/.test(key)
+  return /^shadow(SM|MD|LG|XL|2XL|Outline|None|Inner)?$/i.test(key)
 }
 
 export function shadowPropToStyle(prop: string, propValue: any) {

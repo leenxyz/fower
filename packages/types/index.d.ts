@@ -242,13 +242,13 @@ declare namespace StyliTypes {
       full: number | string
     }
     shadow: {
-      xs: string
+      // xs: string
       sm: string
       base: string
       md: string
       lg: string
       xl: string
-      xxl: string
+      '2xl': string
       inner: string
       outline: string
       none: string

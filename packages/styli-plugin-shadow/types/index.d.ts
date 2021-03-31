@@ -25,34 +25,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowXS></View>
-     * ```
-     */
-    shadowXS?: PropValue
-
-    /**
-     * Set shadow
-     *
-     * NOTE: Theme restrict.
-     *
-     * @example
-     * ```tsx
      * <View shadowSM></View>
      * ```
      */
     shadowSM?: PropValue
-
-    /**
-     * Set shadow
-     *
-     * NOTE: Theme restrict.
-     *
-     * @example
-     * ```tsx
-     * <View shadowBase></View>
-     * ```
-     */
-    shadowBase?: PropValue
 
     /**
      * Set shadow
@@ -97,10 +73,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowXXL></View>
+     * <View shadow2XL></View>
      * ```
      */
-    shadowXXL?: PropValue
+    shadow2XL?: PropValue
 
     /**
      * Set shadow

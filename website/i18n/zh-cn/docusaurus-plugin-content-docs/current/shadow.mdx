@@ -5,13 +5,12 @@ title: Shadow
 
 | Atomic Props   | CSS Properties      |
 | -------------- | ------------------- |
-| shadowXS       | box-shadow: {XS}    |
 | shadowSM       | box-shadow: {SM}    |
-| shadowBase     | box-shadow: {Base}  |
+| shadow         | box-shadow: {Base}  |
 | shadowMD       | box-shadow: {MD}    |
 | shadowLG       | box-shadow: {LG}    |
 | shadowXL       | box-shadow: {XL}    |
-| shadowXXL      | box-shadow: {XXL}   |
+| shadow2XL      | box-shadow: {2XL}   |
 | shadow={value} | box-shadow: {value} |
 
 Styli 内置了阴影管理。
@@ -22,13 +21,10 @@ Styli 内置了阴影管理。
 
 ```jsx live
 <Box bgGray100 p-20 toCenterX toBetween>
-  <Box toCenter square-50 bgWhite shadowXS>
-    XS
-  </Box>
   <Box toCenter square-60 bgWhite shadowSM>
     SM
   </Box>
-  <Box toCenter square-80 bgWhite bgWhite shadowBase>
+  <Box toCenter square-80 bgWhite bgWhite shadow>
     Base
   </Box>
   <Box toCenter square-80 bgWhite shadowMD>
@@ -40,8 +36,8 @@ Styli 内置了阴影管理。
   <Box toCenter square-100 bgWhite shadowXL>
     XL
   </Box>
-  <Box toCenter square-110 bgWhite shadowXXL>
-    XXL
+  <Box toCenter square-110 bgWhite shadow2XL>
+    2XL
   </Box>
 </Box>
 ```
@@ -64,7 +60,7 @@ Styli 内置了阴影管理。
 
 ```jsx live
 <Box bgGray100 p-20 row>
-  <Box toCenter square-100 bgWhite shadowXS shadowXL--hover mr-20>
+  <Box toCenter square-100 bgWhite shadowSM shadowXL--hover mr-20>
     hover
   </Box>
   <Box toCenter square-100 bgWhite shadowMD shadowXL--active>
