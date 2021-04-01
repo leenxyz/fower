@@ -99,12 +99,12 @@ module.exports = {
           label: 'React',
           position: 'left',
         },
-        {
-          to: 'docs/use-with-vue',
-          activeBasePath: 'docs/use-with-vue',
-          label: 'Vue',
-          position: 'left',
-        },
+        // {
+        //   to: 'docs/use-with-vue',
+        //   activeBasePath: 'docs/use-with-vue',
+        //   label: 'Vue',
+        //   position: 'left',
+        // },
         {
           to: 'docs/use-with-rn',
           activeBasePath: 'docs/use-with-rn',

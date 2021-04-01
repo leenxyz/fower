@@ -3,7 +3,7 @@
     <h1 m-20 :c="color" class="red bgred400" textRight p-10 bgRed200 block @click="clickTitle">
       {{ msg }} {{ color }}
     </h1>
-    <p green60 fontBold borderT="1px solid green" bgRed400>
+    <p green60 fontBold bgRed400>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
     </p>

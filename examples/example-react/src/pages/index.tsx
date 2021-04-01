@@ -54,13 +54,8 @@ declare module '@styli/types' {
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
-    <Box textBody info border borderInfo>
-      test Text
-    </Box>
-  );
-  return (
     <div>
-      <Box textBody red300 green300--i--hover toCenter>
+      <Box textBody red300 green300--i--hover toCenter gray500--dark>
         test TExt
       </Box>
       <Box
