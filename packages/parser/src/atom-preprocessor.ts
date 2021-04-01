@@ -31,7 +31,6 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   let atom = { ...initialAtom }
   const { plugins = [] } = styli.config
   const { propKey, propValue } = atom
-  const meta: typeof atom.meta = {}
   const { breakpoints, modes } = styli.getTheme()
 
   const breakpointKeys = Object.keys(breakpoints)
@@ -44,44 +43,57 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
   const regMode = new RegExp(regModeStr)
   const regPseudo = new RegExp(regPseudoStr)
   const regResponsive = new RegExp(regResponsiveStr)
-  const regImportant = /--i/
+  const regImportant = /--i/i
+  const regColorPostfix = /--[told](\d{1,2}|100)($|--)/i
 
   /** invalid prop */
   if (invalidProps.includes(propKey) || isBooleanFalse(propValue)) {
     return { ...atom, isValid: false }
   }
 
-  const isMode = regMode.test(propKey) // is mode style
-  const isPseudo = regPseudo.test(propKey) // is pseudo style
-  const isResponsive = regResponsive.test(propKey) // is responsive style
-  const isImportant = regImportant.test(propKey) // is important style
+  /** handle value like: red500-T40, #666-O30 */
+  if (regColorPostfix.test(propValue)) {
+    const [colorName, postfix] = propValue.split('--')
+    atom.propValue = colorName
+    atom.meta.colorPostfix = postfix
+  }
 
-  if (!isMode && !isPseudo && !isResponsive && !isImportant) {
+  const isMode = regMode.test(propKey)
+  const isPseudo = regPseudo.test(propKey)
+  const isResponsive = regResponsive.test(propKey)
+  const isImportant = regImportant.test(propKey)
+  const isColorPostfix = regColorPostfix.test(propKey)
+
+  if (!isMode && !isPseudo && !isResponsive && !isImportant && !isColorPostfix) {
     // handle spacing directly
     return digitPreprocessor(atom, styli)
   }
 
   const result = propKey.split(connector)
 
-  atom.key = result[0]
+  atom.key = result[0] // key that already removed postfix
 
   if (isMode) {
-    meta.mode = result.find((i) => modeKeys.includes(i))
+    atom.meta.mode = result.find((i) => modeKeys.includes(i))
   }
 
   if (isPseudo) {
     const pseudo = result.find((i) => pseudoKeys.includes(i)) as string
     const pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
-    meta.pseudo = pseudoPrefix + pseudo
+    atom.meta.pseudo = pseudoPrefix + pseudo
   }
 
   if (isResponsive) {
     const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
-    meta.breakpoint = breakpoints[breakpointType]
+    atom.meta.breakpoint = breakpoints[breakpointType]
   }
 
   if (isImportant) {
-    meta.important = !!result.find((i) => i === 'i')
+    atom.meta.important = !!result.find((i) => i === 'i')
+  }
+
+  if (isColorPostfix) {
+    atom.meta.colorPostfix = result.find((i) => regColorPostfix.test(`--${i}`))
   }
 
   // check is theme space key, if yes, preprocess it
@@ -96,7 +108,6 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
 
   // atom.key = key
   atom.className = propKey
-  atom.meta = meta
   atom.handled = true
 
   return atom

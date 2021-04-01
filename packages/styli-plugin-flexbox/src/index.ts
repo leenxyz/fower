@@ -1,6 +1,6 @@
 import { StyliPlugin } from '@styli/types'
 
-const maps: any = {
+const maps: Record<string, string> = {
   auto: '1 1 auto',
   initial: '0 1 auto',
   none: 'none',
@@ -15,19 +15,19 @@ export function isMatch(key: string) {
   return isFlexProps(key) || flexReg.test(key) || /^flexDirection$/i.test(key)
 }
 
-export function flexItemPropToStyle(propKey: string, propValue: any) {
+export function flexItemPropToStyle(key: string, propValue: any) {
   const style: any = {}
 
-  if (isFlexProps(propKey)) {
-    style[propKey] = propValue
+  if (isFlexProps(key)) {
+    style[key] = propValue
   }
 
-  if (/^flexDirection$/.test(propKey)) {
-    style[propKey] = propValue
+  if (/^flexDirection$/.test(key)) {
+    style[key] = propValue
   }
 
-  if (flexReg.test(propKey)) {
-    const posfix = propKey.replace(/^flex/, '').toLowerCase()
+  if (flexReg.test(key)) {
+    const posfix = key.replace(/^flex/, '').toLowerCase()
     style.flex = maps[posfix]
   }
 
@@ -45,7 +45,7 @@ export default (): StyliPlugin => {
         atom.className = 'flex'
         atom.style = { display: 'flex' }
       } else {
-        atom.style = flexItemPropToStyle(atom.propKey, atom.propValue)
+        atom.style = flexItemPropToStyle(atom.key, atom.propValue)
       }
 
       return atom

@@ -1,3 +1,8 @@
+/**
+ *  key === bg
+ * @param key
+ * @returns
+ */
 export function isBgKey(key: string) {
   return /^bg?$/.test(key)
 }

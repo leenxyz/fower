@@ -28,7 +28,30 @@ interface Meta {
    */
   childSelector?: string
 
+  /**
+   * is !important style
+   */
   important?: boolean
+
+  /**
+   * color postfix for opacify,transparent,darken,lighten
+   * @example
+   * gray200--O20 -> O20
+   * gray200--T20 -> T20
+   * #666--D40 -> D40
+   * #999--L40 -> L40
+   */
+  colorPostfix?: string
+
+  /**
+   * color name or value
+   * @example
+   * gray200--O20 -> gray200
+   * gray200--T20 -> gray200
+   * #666--D40 -> #666
+   * #999--L40 -> #999
+   */
+  color?: string
 }
 
 export class Atom {

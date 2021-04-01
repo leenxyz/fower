@@ -1,4 +1,5 @@
 import { Atom } from '@styli/atom'
+import { formatColor } from '@styli/color-helper'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
 import {
@@ -59,11 +60,18 @@ export class Parser {
     return numValue
   }
 
-  cssObjToStr(style: Dict, important?: boolean) {
+  cssObjToStr(style: Dict, meta: Atom['meta']) {
+    const { important, colorPostfix } = meta
     return Object.entries(style).reduce<string>((r, [key, value]) => {
       const cssKey = jsKeyToCssKey(key)
       const posfix = important ? '!important' : ''
-      return r + `${cssKey}: ${this.formatCssValue(cssKey, value)}${posfix};`
+      const colors = this.styli.getColors()
+      if (colorPostfix) {
+        value = formatColor(colors[value] || value, colorPostfix)
+      } else {
+        value = this.formatCssValue(cssKey, colors[value] || value)
+      }
+      return r + `${cssKey}: ${value}${posfix};`
     }, '')
   }
 
@@ -200,18 +208,6 @@ export class Parser {
     }
   }
 
-  /**
-   * generate className postfix if not boolean props
-   * @example #fff -> fff;  50% -> 50p; 1.5 -> 15;
-   */
-  private getClassPostfix(value: any) {
-    const valueStr = String(value)
-    const str = valueStr.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
-    const isValidClassName = /^[a-zA-Z0-9-]+$/.test(str)
-
-    return isValidClassName ? str : hash(str)
-  }
-
   private makeResponsiveStyle(breakpoint: string, rule: string) {
     return `@media (min-width: ${breakpoint}) {${rule}}`
   }
@@ -221,19 +217,17 @@ export class Parser {
    * @param atom
    */
   private getAtomClassName(atom: Atom) {
-    const { propKey = '', propValue, className } = atom
+    const { id, className } = atom
 
     if (className) return className
 
     /** global className prefix */
     const configPrefix = this.styli.config.prefix
     const prefix = configPrefix ? configPrefix + '-' : ''
-
-    // if boolean type props, use prop key as className
-    if (typeof propValue === 'boolean') return `${prefix}${propKey}`
-
-    const postfix = this.getClassPostfix(propValue)
-    return `${prefix}${propKey}-${postfix}`
+    let value = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+    const isValidClassName = /^[a-zA-Z0-9-]+$/.test(value)
+    value = isValidClassName ? value : hash(value).toString()
+    return `${prefix}${value}`
   }
 
   /**
@@ -276,13 +270,13 @@ export class Parser {
 
       atom.inserted = true
 
-      const { pseudo, mode, breakpoint = '', childSelector, important } = atom.meta
+      const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
 
       let selector = `.${className}`
       if (pseudo) selector = selector + pseudo
       if (mode) selector = `.${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
-      rule = `${selector} { ${this.cssObjToStr(style, important)} }`
+      rule = `${selector} { ${this.cssObjToStr(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)

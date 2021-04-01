@@ -12,23 +12,29 @@ describe('bg', () => {
   })
 
   describe('handleAtom', () => {
-    it('<View bg="gray30"></View>', () => {
-      const atom = { propKey: 'bg', propValue: 'gray30' } as Atom
-      const finalAtom = {
+    it('<View bg="gray300"></View>', () => {
+      const atom = new Atom({
         propKey: 'bg',
-        propValue: 'gray30',
-        style: { backgroundColor: '#333333' },
-      } as Atom
+        propValue: 'gray300',
+      })
+      const finalAtom = new Atom({
+        propKey: 'bg',
+        propValue: 'gray300',
+        style: { backgroundColor: 'gray300' },
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
 
-    it('<View bg="gray30-T10"></View>', () => {
-      const atom = { propKey: 'bg', propValue: 'gray30-T10' } as Atom
-      const finalAtom = {
+    it.only('<View bg="gray300--T10"></View>', () => {
+      const atom = new Atom({
         propKey: 'bg',
-        propValue: 'gray30-T10',
-        style: { backgroundColor: 'rgba(51,51,51,0.9)' },
-      } as Atom
+        propValue: 'gray300--T10',
+      })
+      const finalAtom = new Atom({
+        propKey: 'bg',
+        propValue: 'gray300--T10',
+        style: { backgroundColor: 'gray300--T10' },
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
   })

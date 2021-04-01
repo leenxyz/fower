@@ -25,7 +25,6 @@ declare module '@styli/types' {
      * ```tsx
      * <View borderT-10></View>
      * <View borderT={10}></View>
-     * <View borderT="1px solid red"></View>
      * ```
      */
     borderT?: boolean | number | string
@@ -37,7 +36,6 @@ declare module '@styli/types' {
      * ```tsx
      * <View borderR-10></View>
      * <View borderR={10}></View>
-     * <View borderR="1px solid red"></View>
      * ```
      */
     borderR?: boolean | number | string
@@ -49,7 +47,6 @@ declare module '@styli/types' {
      * ```tsx
      * <View borderB-10></View>
      * <View borderB={10}></View>
-     * <View borderB="1px solid red"></View>
      * ```
      */
     borderB?: boolean | number | string
@@ -61,7 +58,6 @@ declare module '@styli/types' {
      * ```tsx
      * <View borderL-10></View>
      * <View borderL={10}></View>
-     * <View borderL="1px solid red"></View>
      * ```
      */
     borderL?: boolean | number | string

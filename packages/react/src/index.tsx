@@ -5,7 +5,7 @@ import { injectGlobalStyle } from './injectGlobalStyle'
 
 export { jsx } from './jsx'
 export { injectGlobalStyle } from './injectGlobalStyle'
-export { Box } from './Box'
+export { Box, BoxComponent } from './Box'
 
 export const View = styled('div')
 export const Text = styled('span')

@@ -66,24 +66,6 @@ declare module '@styli/types' {
      */
     backgroundRepeat?: CSS.Property.BackgroundRepeat | boolean
 
-    bgBlack?: boolean
-
-    bgWhite?: boolean
-
-    bgBrand?: boolean
-
-    bgPrimary?: boolean
-
-    bgSecondary?: boolean
-
-    bgInfo?: boolean
-
-    bgWarning?: boolean
-
-    bgError?: boolean
-
-    bgSuccess?: boolean
-
     bgRose50?: boolean // '#fff1f2'
     bgRose100?: boolean // '#ffe4e6'
     bgRose200?: boolean // '#fecdd3'

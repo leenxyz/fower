@@ -23,11 +23,6 @@ describe('styli-core', () => {
     expect(styli.getColors()).toMatchObject({ gray30: '#333' })
   })
 
-  it('isStyliColor', () => {
-    expect(styli.isStyliColor('gray30')).toBeTruthy()
-    expect(styli.isStyliColor('gray30-T10')).toBeTruthy()
-  })
-
   it('use', () => {
     const plugin: StyliPlugin = {
       isMatch(key: string) {

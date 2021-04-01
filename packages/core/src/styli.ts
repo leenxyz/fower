@@ -35,15 +35,6 @@ class Styli {
     this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
   }
 
-  isStyliColor = (value: string = '') => {
-    const colors: any = this.getColors()
-    const [prefix] = value?.split('-') || []
-
-    if (!prefix) return false
-
-    return !!colors[downFirst(prefix)] || /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(prefix)
-  }
-
   getColors = () => {
     return this.getTheme().colors
   }

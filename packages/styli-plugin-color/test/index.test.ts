@@ -27,17 +27,11 @@ describe('styli-plugin-color', () => {
       const atom = new Atom({
         propKey: 'red',
         propValue: true,
-        style: {},
-        key: 'red',
-      })
-      const newAtom = new Atom({
-        propKey: 'red',
-        propValue: true,
-        key: 'red',
-        style: { color: 'blue' },
       })
 
-      expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
+      expect(handleAtom!(atom, parser).style).toMatchObject({
+        color: 'red',
+      })
     })
 
     // <View color="red"></View>
@@ -45,14 +39,12 @@ describe('styli-plugin-color', () => {
       const atom = new Atom({
         propKey: 'color',
         propValue: 'red',
-        style: {},
-        key: 'red',
       })
       const newAtom = new Atom({
         propKey: 'color',
         propValue: 'red',
-        style: { color: 'blue' },
-        key: 'red',
+        key: 'color',
+        style: { color: 'red' },
       })
       expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })

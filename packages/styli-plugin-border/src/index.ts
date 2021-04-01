@@ -1,87 +1,55 @@
 import { styli } from '@styli/core'
-import { formatColor } from '@styli/color-helper'
 import { StyliPlugin } from '@styli/types'
+import { downFirst } from '@styli/utils'
 
-const G = {
-  top: 'Top',
-  left: 'Left',
-  right: 'Right',
-  bottom: 'Bottom',
+const positionMaps: Record<string, string> = {
+  T: 'Top',
+  L: 'Left',
+  R: 'Right',
+  B: 'Bottom',
 }
 
-const positionMaps: { [key: string]: string } = {
-  T: G.top,
-  L: G.left,
-  R: G.right,
-  B: G.bottom,
-}
-
-function isBorderKey(key: string) {
+function isMatch(key: string) {
   return key.startsWith('border')
 }
 
-// TODO: 这里强制了颜色写在最后
-function formatBorderValue(value: string) {
-  const result = value.split(/\s+/)
-  // if not like: 1px solid #555
-  if (result.length !== 3) return value
-
-  const [color, posfix] = styli.extractColor(result[2])
-  result[2] = formatColor(color, posfix)
-  return result.join(' ')
-}
-
-function borderPropToStyle(prop: string, propValue: any) {
-  if (prop === 'border') {
-    return { borderWidth: 1 }
+function borderPropToStyle(key: string, propValue: any) {
+  if (key === 'border') {
+    return { borderWidth: typeof key === 'boolean' ? 1 : propValue }
   }
 
   const colors = styli.getColors() as any
-  const postfix = prop.replace(/^border/, '') || ''
+  const postfix = key.replace(/^border/, '') || ''
 
-  /** @example borderSolid,borderDashed-2 */
+  /** @example borderSolid,borderDashed */
   if (/^(Solid|Dashed|Dotted|Double|None)$/i.test(postfix)) {
     return { borderStyle: postfix.toLowerCase() }
   }
 
-  /** @example border-0,border-1,border-2,borderT-2,borderB-2 */
-  if (/^[trbl]?-\d+$/i.test(postfix)) {
+  /** @example border-0,border-1,border-2,borderT-2,borderB-2, borderT, borderR={2} */
+  if (/^border[trbl]?$/i.test(key)) {
     const position = postfix.replace(/-\d+$/, '')
     const borderPosition = positionMaps[position.toUpperCase()] ?? ''
-    const key = `border${borderPosition}Width`
-    const [, value] = postfix.split('-')
-    return { [key]: value }
-  }
-
-  /** @example borderT, borderR */
-  if (positionMaps[postfix.toUpperCase()]) {
-    let style: any = {}
-
-    style[`border${positionMaps[postfix.toUpperCase()]}`] = formatBorderValue(propValue)
-    return style
+    const cssKey = `border${borderPosition}Width`
+    return { [cssKey]: propValue }
   }
 
   /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
-  if (styli.isStyliColor(postfix)) {
-    const [color, posfix] = styli.extractColor(postfix)
-    return { borderColor: formatColor(color, posfix) }
-  }
-
-  if (/^color/i.test(postfix)) {
-    const [color, posfix] = styli.extractColor(postfix)
-    return { [prop]: formatColor(color, posfix) }
+  const colorName = downFirst(postfix)
+  if (colors[colorName]) {
+    return { borderColor: colorName }
   }
 
   return {
-    [prop]: colors[propValue] || propValue,
+    [key]: colors[propValue] || propValue,
   }
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isBorderKey,
+    isMatch,
     handleAtom(atom) {
-      atom.style = borderPropToStyle(atom.propKey, atom.propValue)
+      atom.style = borderPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

@@ -13,12 +13,15 @@ describe('bgSize', () => {
 
   describe('handleAtom', () => {
     it('<View backgroundSize="100% 100%"></View>', () => {
-      const atom = { propKey: 'backgroundSize', propValue: '100% 100%' } as Atom
-      const finalAtom = {
+      const atom = new Atom({
+        propKey: 'backgroundSize',
+        propValue: '100% 100%',
+      })
+      const finalAtom = new Atom({
         propKey: 'backgroundSize',
         propValue: '100% 100%',
         style: { backgroundSize: '100% 100%' },
-      } as Atom
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
   })

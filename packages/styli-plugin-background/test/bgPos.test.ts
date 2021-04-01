@@ -13,12 +13,15 @@ describe('bgPos', () => {
 
   describe('handleAtom', () => {
     it('<View backgroundPosition="bottom right"></View>', () => {
-      const atom = { propKey: 'backgroundPosition', propValue: 'bottom right' } as Atom
-      const finalAtom = {
+      const atom = new Atom({
+        propKey: 'backgroundPosition',
+        propValue: 'bottom right',
+      })
+      const finalAtom = new Atom({
         propKey: 'backgroundPosition',
         propValue: 'bottom right',
         style: { backgroundPosition: 'bottom right' },
-      } as Atom
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
   })

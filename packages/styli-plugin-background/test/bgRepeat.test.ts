@@ -13,12 +13,15 @@ describe('bgRepeat', () => {
 
   describe('handleAtom', () => {
     it('<View backgroundRepeat="no-repeat"></View>', () => {
-      const atom = { propKey: 'backgroundRepeat', propValue: 'no-repeat' } as Atom
-      const finalAtom = {
+      const atom = new Atom({
+        propKey: 'backgroundRepeat',
+        propValue: 'no-repeat',
+      })
+      const finalAtom = new Atom({
         propKey: 'backgroundRepeat',
         propValue: 'no-repeat',
         style: { backgroundRepeat: 'no-repeat' },
-      } as Atom
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(finalAtom)
     })
   })
