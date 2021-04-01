@@ -56,7 +56,7 @@ class Styli {
     this.config.plugins.push(...plugins)
   }
 
-  addAtomicProps = (matcher: string | RegExp, handleAtom: StyliPlugin['handleAtom']) => {
+  registerAtomicProps = (matcher: string | RegExp, handleAtom: StyliPlugin['handleAtom']) => {
     const plugin: StyliPlugin = {
       isMatch(key: string) {
         if (typeof matcher === 'string') return key === matcher
@@ -66,6 +66,24 @@ class Styli {
       handleAtom,
     }
     this.use(plugin)
+  }
+
+  /**
+   * the shortcut to register color atomic prop
+   * @param colors
+   */
+  registerColorProps = (colors: Record<string, string>) => {
+    // set Color to theme
+    this.setTheme({
+      colors: { ...this.config.theme.colors, ...colors },
+    })
+
+    for (const [colorKey, value] of Object.entries(colors)) {
+      // register color prop
+      this.registerAtomicProps(colorKey, (atom) => {
+        return { ...atom, style: { color: value } }
+      })
+    }
   }
 }
 

@@ -13,9 +13,11 @@ function isMatch(key: string) {
   return key.startsWith('border')
 }
 
-function borderPropToStyle(key: string, propValue: any) {
+function toStyle(key: string, propValue: any) {
   if (key === 'border') {
-    return { borderWidth: typeof key === 'boolean' ? 1 : propValue }
+    return {
+      borderWidth: typeof propValue === 'boolean' ? 1 : propValue,
+    }
   }
 
   const colors = styli.getColors() as any
@@ -49,7 +51,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = borderPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.propValue)
       return atom
     },
   }

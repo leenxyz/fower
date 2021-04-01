@@ -26,33 +26,36 @@ const Button = styled('button');
 setTheme({
   colors: {
     colorHello: '#ff9900',
+    colorBrand: 'pink',
   },
   breakpoints: {
     '4xl': '',
   },
 });
 
-styli.addAtomicProps('textBody', (atom) => {
+styli.registerAtomicProps('textBody', (atom) => {
   atom.style = { fontSize: 40 };
   return atom;
+});
+
+styli.registerColorProps({
+  info: '#ff0',
 });
 
 declare module '@styli/types' {
   export interface AtomicProps {
     textBody?: boolean;
+    info?: boolean;
+    bgInfo?: boolean;
+    borderInfo?: boolean;
   }
 }
 
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
-    <Box bgGray100 p-20 row>
-      <Box toCenter square-100 bgWhite shadowSM shadowXL--hover mr-20>
-        hover
-      </Box>
-      <Box toCenter square-100 bgWhite shadowMD shadowXL--active>
-        active
-      </Box>
+    <Box textBody info border borderInfo>
+      test Text
     </Box>
   );
   return (

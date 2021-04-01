@@ -146,20 +146,6 @@ declare module '@styli/types' {
 
     borderWhite?: boolean
 
-    borderBrand?: boolean
-
-    borderPrimary?: boolean
-
-    borderSecondary?: boolean
-
-    borderInfo?: boolean
-
-    borderWarning?: boolean
-
-    borderError?: boolean
-
-    borderSuccess?: boolean
-
     borderRose50?: boolean // '#fff1f2'
     borderRose100?: boolean // '#ffe4e6'
     borderRose200?: boolean // '#fecdd3'
