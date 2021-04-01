@@ -67,7 +67,10 @@ export class Atom {
     this.meta = {}
 
     const { propKey, propValue } = this
-    const id = typeof propValue === 'boolean' ? propKey : `${propKey}-${propValue}`
+    const id =
+      typeof propValue === 'boolean'
+        ? propKey
+        : `${propKey}-${String(propValue).replace(/\s/g, '-')}`
     this.id = options.id || id
   }
 

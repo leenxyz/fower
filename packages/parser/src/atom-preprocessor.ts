@@ -51,7 +51,7 @@ export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any):
     return { ...atom, isValid: false }
   }
 
-  /** handle value like: red500-T40, #666-O30 */
+  /** handle value like: red500--T40, #666--O30 */
   if (regColorPostfix.test(propValue)) {
     const [colorName, postfix] = propValue.split('--')
     atom.propValue = colorName

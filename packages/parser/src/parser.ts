@@ -226,7 +226,7 @@ export class Parser {
     const prefix = configPrefix ? configPrefix + '-' : ''
     let value = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(value)
-    value = isValidClassName ? value : hash(value).toString()
+    value = isValidClassName ? value : `css-${hash(value)}`
     return `${prefix}${value}`
   }
 

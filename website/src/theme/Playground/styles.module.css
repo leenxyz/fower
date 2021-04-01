@@ -36,7 +36,7 @@
 }
 
 .playgroundPreview {
-  border: 1px solid var(--ifm-color-emphasisquare-200);
+  border: 1px solid #f0f0f0;
   padding: 1rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;

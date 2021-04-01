@@ -1,6 +1,9 @@
 import { Box, injectGlobalStyle } from '@styli/react';
 import { setTheme, styli } from '@styli/core';
 import { useState } from 'react';
+import { styled } from '@styli/styled';
+
+const Button = styled('button');
 
 // injectGlobalStyle({
 //   '*': {},
@@ -43,8 +46,13 @@ declare module '@styli/types' {
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
-    <Box textBody red300 green300--i--hover toCenter--i-dark toLeft>
-      test TExt
+    <Box bgGray100 p-20 row>
+      <Box toCenter square-100 bgWhite shadowSM shadowXL--hover mr-20>
+        hover
+      </Box>
+      <Box toCenter square-100 bgWhite shadowMD shadowXL--active>
+        active
+      </Box>
     </Box>
   );
   return (

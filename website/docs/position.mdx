@@ -19,7 +19,7 @@ Atomic props for controlling how an element is positioned.
 Use `static` props to set static position for an element.
 
 ```jsx live
-<Box relative square bgBlue100>
+<Box relative square-160  bgBlue100>
   <Box bgAmber400 square-100 static toCenter>
     static
   </Box>
@@ -31,9 +31,9 @@ Use `static` props to set static position for an element.
 Use `relative` props to set relative position for an element.
 
 ```jsx live
-<Box relative square bgBlue100>
+<Box relative square-160  bgBlue100>
   relative
-  <Box bgBlue400-T20 square-80 absolute bottom-0 toCenter>
+  <Box bgBlue400--T20 square-80 absolute bottom-0 toCenter>
     absolute
   </Box>
 </Box>
@@ -44,8 +44,8 @@ Use `relative` props to set relative position for an element.
 Use `absolute` props to set absolute position for an element.
 
 ```jsx live
-<Box relative square bgBlue100>
-  <Box bgBlue400-T20 square-80 absolute bottom-0 toCenter>
+<Box relative square-160  bgBlue100>
+  <Box bgBlue400--T20 square-80 absolute bottom-0 toCenter>
     absolute
   </Box>
 </Box>
@@ -66,15 +66,15 @@ Use `fixed` props to set fixed position for an element.
 Use `sticky` props to set sticky position for an element.
 
 ```jsx live
-<Box relative square-200 overflow="auto" bgGray100 p4>
+<Box relative square-160 -200 overflow="auto" bgGray100 p4>
   <Box>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Box>
   <Box toCenter bgYellow200 shadow rounded-8 square-80 sticky top-0>
     sticky
   </Box>
   <Box>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus
-    eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed
-    voluptatum quae eum fugit earum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a
+    libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum
+    quae eum fugit earum.
   </Box>
 </Box>
 ```

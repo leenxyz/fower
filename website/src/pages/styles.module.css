@@ -16,7 +16,8 @@
 }
 
 .container {
-  max-width: 1120px;
+  /* max-width: 1120px; */
+  max-width: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +39,8 @@
 }
 
 .green {
-  color: var(--ifm-color-primary);
+  /* color: var(--ifm-color-primary); */
+  color: #25c2a0;
 }
 
 .side {
@@ -59,4 +61,8 @@
   margin-top: 20px;
   padding: 0 2rem;
   margin-bottom: 40px;
+}
+
+.getStarted:hover {
+  background-color: #333 !important;
 }

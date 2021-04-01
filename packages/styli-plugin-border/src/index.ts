@@ -34,7 +34,7 @@ function borderPropToStyle(key: string, propValue: any) {
     return { [cssKey]: propValue }
   }
 
-  /** @example borderGray20,borderRed20-O20,borderBlue-T20 */
+  /** @example borderGray20,borderRed20--O20,borderBlue--T20 */
   const colorName = downFirst(postfix)
   if (colors[colorName]) {
     return { borderColor: colorName }

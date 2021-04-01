@@ -51,7 +51,7 @@ export default () => {
         bg="green300--D20"
       </Box>
 
-      <Box textXL white--hover bg="#000-L20" bg--hover="#000">
+      <Box textXL white--hover bg="#000--L20" bg--hover="#000">
         bg--hover="#000"
       </Box>
     </Box>
