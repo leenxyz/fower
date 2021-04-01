@@ -19,54 +19,40 @@ export default () => {
         BgRed50
       </Box>
 
-      <Box textXL bgRed500-T20>
-        BgRed50-T20
+      <Box textXL bgRed500--T20>
+        BgRed50--T20
       </Box>
 
-      <Box textXL bgRed500-T20 bgRed500-D20--hover>
-        BgRed50-D20--hover
+      <Box textXL bgRed500--T20 bgRed500--D20--hover>
+        BgRed50--D20--hover
       </Box>
 
-      <Box textXL bgRed500-T30 bgRed500-D30--hover={false}>
-        BgRed50-D30--hover=false
+      <Box textXL bgRed500--T30 bgRed500--D30--hover={false}>
+        BgRed50--D30--hover=false
       </Box>
 
-      <Box textXL bg="#000-T40">
-        bg #000-T40
+      <Box textXL bg="#000--T40">
+        bg #000--T40
       </Box>
 
-      <Box textXL bg="rgba(1,1,1,0.1)-O40">
-        bgColor rgba(1,1,1,0.1)-O40
+      <Box textXL bg="rgba(1,1,1,0.1)--O40">
+        bgColor rgba(1,1,1,0.1)--O40
       </Box>
 
-      <Box textXL bgRed500 bgGreen50--hover>
-        bgGreen50--hover
+      <Box textXL bgRed500 bgGreen500--hover>
+        bgGreen500--hover
       </Box>
 
       <Box textXL bg="green300">
-        bg="green30"
+        bg="green300"
       </Box>
 
-      <Box textXL bg="green300-D20">
-        bg="green30-D20"
+      <Box textXL bg="green300--D20">
+        bg="green300--D20"
       </Box>
 
-      <Box textXL white bg="#000-L20" bg--hover="#000">
+      <Box textXL white--hover bg="#000-L20" bg--hover="#000">
         bg--hover="#000"
-      </Box>
-
-      <Box
-        bg={`url("${IMAGEs.DEFAULT_AVATAR}") center 100%`}
-        circle-200
-        toCenter
-      >
-        bg="url('https://...') center 100%"
-      </Box>
-
-      <Box text-10 circle-200 toCenter column>
-        <Box>bgImg="https://..."</Box>
-        <Box>bgSize="100p"</Box>
-        <Box>bgPos="center"</Box>
       </Box>
     </Box>
   );

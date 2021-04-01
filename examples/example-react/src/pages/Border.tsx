@@ -72,17 +72,17 @@ export default () => {
       </Box>
 
       <Box toEvenly mb6 bgGray100>
-        <Box toCenter p4 border-2 borderPurple500-T20>
-          borderPurple500-T40
+        <Box toCenter p4 border-2 borderPurple500--T20>
+          borderPurple500--T40
         </Box>
-        <Box toCenter p4 border-2 borderTeal500-T40>
-          borderTeal500-T60
+        <Box toCenter p4 border-2 borderTeal500--T40>
+          borderTeal500--T60
         </Box>
-        <Box toCenter p4 border-2 borderCyan500-T60>
-          borderCyan500
+        <Box toCenter p4 border-2 borderCyan500--T60>
+          borderCyan500--T60
         </Box>
-        <Box toCenter p4 border-2 borderAmber500-T80>
-          borderAmber500-T80
+        <Box toCenter p4 border-2 borderAmber500--T80>
+          borderAmber500--T80
         </Box>
       </Box>
     </Box>

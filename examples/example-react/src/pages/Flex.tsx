@@ -2,15 +2,6 @@ import { Box } from '@styli/react';
 
 export default () => {
   return (
-    <div>
-      <Box toCenter>AAAA</Box>
-      <Box flex>AAAA</Box>
-      <Box flex={1} flexGrow={2}>
-        AAAA
-      </Box>
-    </div>
-  );
-  return (
     <Box>
       <Box as="h2">Row</Box>
       <Box spaceX3 row>
