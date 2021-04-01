@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-box-sizing",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,11 +22,11 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-box-sizing.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.2.0",
-    "@styli/core": "^1.2.0",
-    "@styli/parser": "^1.2.0",
-    "@styli/types": "^1.2.0",
-    "@styli/utils": "^1.2.0",
+    "@styli/atom": "^1.3.0",
+    "@styli/core": "^1.3.0",
+    "@styli/parser": "^1.3.0",
+    "@styli/types": "^1.3.0",
+    "@styli/utils": "^1.3.0",
     "csstype": "^3.0.7"
   }
 }
