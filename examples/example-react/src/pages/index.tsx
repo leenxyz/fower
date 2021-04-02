@@ -98,7 +98,6 @@ export default function IndexPage() {
   return (
     <div>
       <Box
-        headingMD
         // brandDarker
         green300--i--hover
         toCenter

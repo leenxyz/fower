@@ -2,6 +2,31 @@ import { Box, Text } from '@styli/react';
 
 export default () => {
   return (
+    <Box
+      text4XL
+      css={{
+        // p: 1,
+        // p: true,
+        // display: 'flex',
+        // p0: true,
+        backdropFilter: 'inherit',
+        backgroundColor: '#edf2f7',
+        ':hover': {
+          backgroundColor: '#feebc8',
+        },
+        '.title': {
+          fontWeight: 'bold',
+        },
+        span: {
+          color: 'deeppink',
+        },
+      }}
+    >
+      <div className="title">Nested demo</div>
+      <span>Hi, Styli!</span>
+    </Box>
+  );
+  return (
     <Box>
       <Box>CSS Prop</Box>
 

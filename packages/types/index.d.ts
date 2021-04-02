@@ -1,4 +1,5 @@
 import * as CSS from 'csstype'
+import { CSSProperties } from 'react'
 import { Atom } from '@styli/atom'
 import { Parser } from '@styli/parser'
 
@@ -22,14 +23,16 @@ declare namespace StyliTypes {
 
   type PropValue = boolean | number | string
 
-  type CSSProperties = CSS.Properties<number | string>
+  interface StyliCSSProperties extends AtomicProps, Omit<CSSProperties, keyof AtomicProps> {}
 
-  type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
+  type PseudosObject = { [P in CSS.Pseudos]?: StyliCSSProperties }
 
   type CSSObject<T = any> =
-    | (CSSProperties & PseudosObject)
+    | (StyliCSSProperties & PseudosObject)
     | {
-        [K in keyof T]?: T[K] extends object ? CSSObject<T[K]> : CSSProperties
+        [K in keyof T]?: T[K] extends object
+          ? CSSObject<T[K]> & AtomicProps
+          : StyliCSSProperties | number | string | boolean
       }
 
   interface AtomicProps {
