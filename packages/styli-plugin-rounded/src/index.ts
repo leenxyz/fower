@@ -17,10 +17,8 @@ export const roundedMaps: Record<string, string[]> = {
   roundedBR: [Bottom + Right],
 }
 
-const presetReg = /(none|sm|md|lg|[23]?xl|full)$/i
-
 export function isMatch(key: string) {
-  return /^rounded([tlrb]|t[lr]|b[lr])?(none|sm|md|lg|[23]?xl|full)?(-.+)?$/i.test(key)
+  return /^rounded([tlrb]|t[lr]|b[lr])?/i.test(key)
 }
 /**
  * TODO: need improve
@@ -30,12 +28,14 @@ export function isMatch(key: string) {
  */
 export function roundedPropToStyle(atomKey: string, propValue: any) {
   let style: any = {}
-  const borderRadius: any = styli.getTheme().radii
+  const radii: any = styli.getTheme().radii
+  const radiiKeys = Object.keys(radii) || []
+  const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 
   if (atomKey === 'rounded') {
     const isBase = typeof propValue === 'boolean'
     return {
-      borderRadius: isBase ? borderRadius['base'] : propValue,
+      borderRadius: isBase ? radii['base'] : propValue,
     }
   }
 
@@ -43,9 +43,9 @@ export function roundedPropToStyle(atomKey: string, propValue: any) {
   if (presetReg.test(atomKey)) {
     const [themeKey] = atomKey.match(presetReg) || []
 
-    if (themeKey && borderRadius[themeKey.toLowerCase()]) {
+    if (themeKey && radii[themeKey.toLowerCase()]) {
       const key = atomKey.replace(themeKey, '')
-      const roundedValue = borderRadius[themeKey.toLowerCase()]
+      const roundedValue = radii[themeKey.toLowerCase()]
       if (key === 'rounded') {
         return { borderRadius: roundedValue }
       } else {
@@ -57,7 +57,7 @@ export function roundedPropToStyle(atomKey: string, propValue: any) {
     }
   }
 
-  for (const p of roundedMaps[atomKey]) {
+  for (const p of roundedMaps[atomKey] || []) {
     style[`border${p}Radius`] = propValue
   }
   return style

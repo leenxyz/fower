@@ -2,8 +2,8 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { isValueProp } from '@styli/utils'
 
-export function isShadowKey(key: string) {
-  return /^shadow(SM|MD|LG|XL|2XL|Outline|None|Inner)?$/i.test(key)
+export function isMatch(key: string) {
+  return /^shadow/i.test(key)
 }
 
 export function shadowPropToStyle(key: string, propValue: any) {
@@ -22,7 +22,7 @@ export function shadowPropToStyle(key: string, propValue: any) {
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isShadowKey,
+    isMatch: isMatch,
     handleAtom(atom) {
       atom.style = shadowPropToStyle(atom.key, atom.propValue)
       return atom

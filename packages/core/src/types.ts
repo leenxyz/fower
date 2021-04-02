@@ -1,4 +1,5 @@
 export interface SetThemeParams {
+  modes: string[]
   breakpoints: {
     sm: string
     md: string
@@ -8,7 +9,7 @@ export interface SetThemeParams {
     [key: string]: any
   }
 
-  spacing: {
+  spacings: {
     0: string | number
     1: string | number
     2: string | number
@@ -41,7 +42,7 @@ export interface SetThemeParams {
     96: string | number
     [key: string]: any
   }
-  fontSize: {
+  fontSizes: {
     xs: string | number
     sm: string | number
     base: string | number
@@ -71,7 +72,7 @@ export interface SetThemeParams {
     [key: string]: any
   }
 
-  lineHeight: {
+  lineHeights: {
     none: number | string
     tight: number | string
     snug: number | string
@@ -89,7 +90,7 @@ export interface SetThemeParams {
     widest: number | string
     [key: string]: any
   }
-  borderRadius: {
+  radii: {
     none: number | string
     sm: number | string
     base: number | string
@@ -101,7 +102,7 @@ export interface SetThemeParams {
     full: number | string
     [key: string]: any
   }
-  shadow: {
+  shadows: {
     sm: string
     base: string
     md: string

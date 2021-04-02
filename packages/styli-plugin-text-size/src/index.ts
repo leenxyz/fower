@@ -2,17 +2,20 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 
 function isPreset(key: string) {
-  return /^text(xs|sm|base|lg|[2-9]?xl)$/i.test(key)
+  const { fontSizes } = styli.getTheme()
+  const keys = Object.keys(fontSizes) || []
+  const reg = new RegExp(`^text(${keys.join('|')})$`, 'i')
+  return reg.test(key)
 }
 export function isMatch(key: string) {
   return /^text(-.+)?$/.test(key) || isPreset(key)
 }
 
-export function textSizePropToStyle(prop: string, propValue: any) {
-  if (isPreset(prop)) {
+export function textSizePropToStyle(key: string, propValue: any) {
+  if (isPreset(key)) {
     const fontSizes: any = styli.getTheme().fontSizes
-    const key = prop.replace(/^text/, '').toLowerCase()
-    return { fontSize: fontSizes[key] }
+    const fontSizeKey = key.replace(/^text/, '').toLowerCase()
+    return { fontSize: fontSizes[fontSizeKey] }
   }
 
   return { fontSize: propValue }
@@ -22,7 +25,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = textSizePropToStyle(atom.propKey, atom.propValue)
+      atom.style = textSizePropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

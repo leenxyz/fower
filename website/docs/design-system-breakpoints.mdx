@@ -1,0 +1,39 @@
+---
+id: design-system-breakpoints
+sidebar_label: Breakpoints
+title: Breakpoints
+---
+
+Styli comes with a predefined set of commonly used breakpoints.
+
+```jsx
+const config = {
+  theme: {
+    breakpoints: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
+  },
+}
+```
+
+## Customize Breakpoints
+
+You can customize Breakpoints with `setTheme`:
+
+```jsx
+setTheme({
+  breakpoints: {
+    '3xl': '1600px',
+  },
+})
+```
+
+Then you can use it like this:
+
+```jsx live
+<Box bgGreen400 square12 square20--sm square32--md square48--3xl></Box>
+```

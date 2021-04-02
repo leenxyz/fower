@@ -103,6 +103,11 @@ table td {
   color: #a855f7;
 }
 
+.markdown table tr td:nth-child(3) {
+  font-size: 14px;
+  color: #a855f7;
+}
+
 .navbar {
   box-shadow: none;
 }

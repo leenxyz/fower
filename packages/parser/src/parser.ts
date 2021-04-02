@@ -17,7 +17,7 @@ import { isUnitProp } from './is-unit-prop'
 type Dict = Record<string, any>
 
 //  high-frequency used props in react
-const reactProps = ['children', 'onClick', 'onChange', 'onBlur']
+const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className']
 
 /**
  * An Abstract tool to handle atomic props
@@ -27,6 +27,14 @@ export class Parser {
    * atom parsed from props
    */
   atoms: Atom[] = []
+
+  get uniqueClassName() {
+    return objectToClassName(Object.keys(this.props))
+  }
+
+  get hasResponsive() {
+    return !!this.atoms.find((i) => !!i.meta.breakpoint)
+  }
 
   constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
@@ -236,6 +244,7 @@ export class Parser {
   getClassNames(extraClassName: string = ''): string[] {
     const classNames = this.atoms.map((i) => i.className)
     if (extraClassName) classNames.push(extraClassName)
+    if (this.hasResponsive) classNames.unshift(this.uniqueClassName)
     return classNames
   }
 
@@ -256,6 +265,11 @@ export class Parser {
   toCssRules(): string[] {
     const rules: string[] = []
 
+    // sort responsive style
+    this.atoms = this.atoms.sort((a, b) => {
+      return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
+    })
+
     for (const atom of this.atoms) {
       let rule: string = ''
       const { className, isValid, style = {} } = atom
@@ -271,8 +285,9 @@ export class Parser {
       atom.inserted = true
 
       const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
+      const uniqueSelector = this.hasResponsive ? '.' + this.uniqueClassName : ''
 
-      let selector = `.${className}`
+      let selector = `${uniqueSelector}.${className}`
       if (pseudo) selector = selector + pseudo
       if (mode) selector = `.${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`

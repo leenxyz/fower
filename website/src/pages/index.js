@@ -206,11 +206,11 @@ function Home() {
         )}
       </main>
 
-      <Box>
+      {/* <Box>
         {previews.map((item, i) => (
           <CodePreview key={i} {...item}></CodePreview>
         ))}
-      </Box>
+      </Box> */}
     </Layout>
   )
 }

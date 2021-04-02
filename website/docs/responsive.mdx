@@ -15,4 +15,22 @@ This is the responsive style of traditional CSS frameworks, most of which are on
 
 Each Atomic Props of Styli supports responsiveness, not just a container that supports responsiveness, which allows you to implement complex responsive interfaces more easily.
 
+## Postfix
+
+| Breakpoint postfix | Minimum width | CSS                                |
+| ------------------ | ------------- | ---------------------------------- |
+| sm                 | 640px         | @media (min-width: 640px) { ... }  |
+| md                 | 768px         | @media (min-width: 768px) { ... }  |
+| lg                 | 1024px        | @media (min-width: 1024px) { ... } |
+| xl                 | 1280px        | @media (min-width: 1280px) { ... } |
+| 2xl                | 1536px        | @media (min-width: 1536px) { ... } |
+
 ## Usage
+
+Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
+
+```jsx live
+<Box textSM textLG--sm text2XL--md text4XL--lg>
+  Lorem ipsum dolor sit amet
+</Box>
+```

@@ -1,11 +1,64 @@
 import React, { forwardRef } from 'react'
-import { createStyle } from '@styli/core'
+import { createStyle, setTheme } from '@styli/core'
 import { styled } from '@styli/styled'
 import { Text, View, Box, Image } from '@styli/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled('button')
 const Input = styled('input')
+
+import { registerAtomicProps } from '@styli/core'
+
+registerAtomicProps('textHeading', {
+  fontSize: 28,
+  fontWeight: 600,
+  lineHeight: 1.5,
+})
+
+registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
+  const size = atom.propKey.replace('heading', '').toLowerCase()
+  switch (size) {
+    case 'sm':
+      atom.style = { fontSize: 16 }
+      break
+    case 'md':
+      atom.style = { fontSize: 24 }
+      break
+    case 'lg':
+      atom.style = { fontSize: 32 }
+      break
+    default:
+      break
+  }
+  return atom
+})
+
+setTheme({
+  spacings: {
+    100: 400,
+  },
+  breakpoints: {
+    '3xl': '1600px',
+  },
+  radii: {
+    '4xl': 28,
+  },
+  fontSizes: {
+    body: 14,
+  },
+  shadows: {
+    '3xl': '0 32px 64px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0,0,0,0.02)',
+  },
+  colors: {
+    brandLight: '#e0f2fe',
+    brandLighter: '#bae6fd',
+    brandLightest: '#7dd3fc',
+    brandPrimary: '#38bdf8',
+    brandDark: '#0ea5e9',
+    brandDarker: '#0284c7',
+    brandDarkest: '#0369a1',
+  },
+})
 
 const ButtonExample = (props) => (
   <button

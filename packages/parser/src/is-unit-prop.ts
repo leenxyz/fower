@@ -7,6 +7,6 @@ const reg = /(-columns|(^|[^e]-)padding|[^t]-spacing|l-align|rows|(^|(^border|[d
  * @param cssKey css key, eg: border-width
  * @returns
  */
-export function isUnitProp(cssKey: string) {
+export function isUnitProp(cssKey: string = '') {
   return reg.test(cssKey)
 }

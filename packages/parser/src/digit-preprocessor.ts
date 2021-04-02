@@ -27,16 +27,16 @@ export function digitPreprocessor(atom: Atom, styli: any): Atom {
    *  to m-20px -> [ key: m, value: '20px' ]
    */
 
-  const result = atom.key.match(/^([a-z]+)(\d+)$/i) || atom.key.match(/^([a-z]*)--?(\d+[a-z]*?)$/i)
+  const keyStr = atom.key.toString()
+  const result = keyStr.match(/^([a-z]+)(\d+)$/i) || keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i)
 
   if (!result) return atom
 
-  const [, key, value] = result
+  const [, newKey, newPropValue] = result
+  const { spacings } = styli.getTheme()
 
-  const { spacing: spacings } = styli.getTheme()
-
-  atom.key = key
-  atom.propValue = isSpace ? spacings[value] : value
+  atom.key = newKey
+  atom.propValue = isSpace ? spacings[newPropValue] : newPropValue
   atom.className = propKey
 
   return atom

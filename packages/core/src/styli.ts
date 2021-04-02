@@ -1,5 +1,5 @@
 import { deepmerge, downFirst } from '@styli/utils'
-import { StyliPlugin, Configuration, Theme } from '@styli/types'
+import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { SetThemeParams } from './types'
 
@@ -56,34 +56,25 @@ class Styli {
     this.config.plugins.push(...plugins)
   }
 
-  registerAtomicProps = (matcher: string | RegExp, handleAtom: StyliPlugin['handleAtom']) => {
+  registerAtomicProps = (
+    matcher: string | RegExp,
+    handleAtomOrStyleObject: StyliPlugin['handleAtom'] | CSSObject,
+  ) => {
     const plugin: StyliPlugin = {
       isMatch(key: string) {
         if (typeof matcher === 'string') return key === matcher
         if (matcher instanceof RegExp) return matcher.test(key)
         return false
       },
-      handleAtom,
+      handleAtom:
+        typeof handleAtomOrStyleObject === 'function'
+          ? handleAtomOrStyleObject
+          : (atom) => {
+              atom.style = handleAtomOrStyleObject as any
+              return atom
+            },
     }
     this.use(plugin)
-  }
-
-  /**
-   * the shortcut to register color atomic prop
-   * @param colors
-   */
-  registerColorProps = (colors: Record<string, string>) => {
-    // set Color to theme
-    this.setTheme({
-      colors: { ...this.config.theme.colors, ...colors },
-    })
-
-    for (const [colorKey, value] of Object.entries(colors)) {
-      // register color prop
-      this.registerAtomicProps(colorKey, (atom) => {
-        return { ...atom, style: { color: value } }
-      })
-    }
   }
 }
 

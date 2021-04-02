@@ -1,0 +1,127 @@
+---
+id: design-system-spacings
+sidebar_label: Spacings
+title: Spacings
+---
+
+In an application, the spacing of elements should be designed, should not be random. Consistent spacing can improve the quality of UI design and let users feel the professionalism of the product. Styli’s default layout has `4px` as the basic unit, and all spaces are multiples of `4px`. It is recommended that all components and text layouts use these regular spaces.
+
+## Spacing config
+
+Styli uses `4px` as the spacing unit by default. Of course, you can configure your own spacing. You can modify the default spacing by modifying `theme.spacings`.
+
+```jsx
+const config = {
+  theme: {
+    spacings: {
+      0: 0,
+      1: 4,
+      2: 8,
+      3: 12,
+      4: 16,
+      5: 20,
+      6: 24,
+      7: 28,
+      8: 32,
+      9: 36,
+      10: 40,
+      11: 44,
+      12: 48,
+      14: 56,
+      16: 64,
+      20: 80,
+      24: 96,
+      28: 112,
+      32: 128,
+      36: 144,
+      40: 160,
+      44: 176,
+      48: 192,
+      52: 208,
+      56: 224,
+      60: 240,
+      64: 256,
+      72: 288,
+      80: 320,
+      96: 384,
+    },
+  },
+}
+```
+
+## Usage
+
+How to use the spacing?
+
+example1:
+
+```jsx live
+<Box toEvenly>
+  <Box as="img" src="/img/logo.png" circle8 />
+  <Box as="img" src="/img/logo.png" circle12 />
+  <Box as="img" src="/img/logo.png" circle16 />
+  <Box as="img" src="/img/logo.png" circle20 />
+</Box>
+```
+
+Use `circle{8}`, not `circle-{8}`, `circle{8}` is a value designed with constraints. `circle-{8}` is a freestyle value.
+
+example2:
+
+```jsx live
+<Box toCenterX>
+  <Box square-100 bgRed400 mr2></Box>
+  <Box square-100 bgYellow400 mr2></Box>
+  <Box square-100 bgGreen400></Box>
+</Box>
+```
+
+The `mr2` in the above example, it is the preset spacing in the design system, which is equivalent to `margin-right: 8px`.
+
+Spacing can be used in these Atomic Props:
+
+- `p{spacing}`
+- `m{spacing}`
+- `w{spacing}`
+- `maxW{spacing}`
+- `minW{spacing}`
+- `h{spacing}`
+- `maxH{spacing}`
+- `minH{spacing}`
+- `spaceX{spacing}`
+- `spaceY{spacing}`
+- `square{spacing}`
+- `circle{spacing}`
+- `{top|right|bottom|left}{spacing}`
+
+## Compare with precise value
+
+In some cases, the spacing of the design system cannot meet your UI needs. This is a more flexible way you can use: **precise values**. Any value can be set through the middle bar `-`, such as the following `square-100`, `mr-20`, will produce styles `width: 100px; height: 100px`, `margin-right: 20px`:
+
+```jsx live
+<Box toCenterX>
+  <Box square-100 bgRed400 mr-20></Box>
+  <Box square-100 bgYellow400 mr-20></Box>
+  <Box square-100 bgGreen400></Box>
+</Box>
+```
+
+In most cases, it is recommended to use regular spacing in the project, which will make your UI more design and rhythmic.
+
+## Customize Spacings
+
+As you see, `100` is not the preset spacing，you can customize it with `setTheme`:
+
+```jsx
+setTheme({
+  spacings: {
+    100: 400,
+  },
+})
+```
+
+Then you can use it as `m100`, `p100`, `w100`, `circle100`, `top100`, etc.
+
+```jsx live
+<Box bgGreen400 circle100></Box>
+```

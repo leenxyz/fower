@@ -16,22 +16,25 @@ module.exports = {
       'responsive',
       'dynamic-style',
       'programmable',
-      // 'unit',
       'reuse',
-      'design-system-color',
-      'design-system-spacing',
+      'configuration',
+      'register-atomic-props',
       // 'plugin',
       'typescript',
     ],
 
-    Customization: ['configuration', 'theme', 'register-atomic-props', 'register-color-props'],
-
-    // 'Design System': [
-    // 'design-system',
-    // 'design-system-typography',
-    // 'design-system-color',
-    // 'design-system-spacing',
-    // ],
+    'Design System': [
+      'theme',
+      'design-system-spacings',
+      'design-system-colors',
+      'design-system-radii',
+      'design-system-shadows',
+      'design-system-breakpoints',
+      'design-system-font-sizes',
+      'design-system-font-weights',
+      // 'design-system-letter-spacings',
+      'design-system-line-heights',
+    ],
 
     'Layout Toolkit': [
       'styli-layout-introduction',
