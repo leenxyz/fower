@@ -20,7 +20,7 @@ export const theme: Theme = {
     '2xl': '1536px',
   },
   colors,
-  spacing: {
+  spacings: {
     0: 0,
     1: 4,
     2: 8,
@@ -52,7 +52,7 @@ export const theme: Theme = {
     80: 320,
     96: 384,
   },
-  fontSize: {
+  fontSizes: {
     xs: 12,
     sm: 14,
     base: 16,
@@ -67,7 +67,7 @@ export const theme: Theme = {
     '8xl': 96,
     '9xl': 128,
   },
-  lineHeight: {
+  lineHeights: {
     none: 1,
     tight: 1.25,
     snug: 1.375,
@@ -83,7 +83,7 @@ export const theme: Theme = {
     wider: '0.9px',
     widest: '1.8px',
   },
-  borderRadius: {
+  radii: {
     none: 0,
     sm: 2,
     base: 4,
@@ -94,7 +94,7 @@ export const theme: Theme = {
     '3xl': 24,
     full: 9999,
   },
-  shadow: {
+  shadows: {
     sm: '0 1px 3px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0,0,0,0.01)',
     base: '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
     md: '0 4px 8px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',

@@ -5,7 +5,7 @@ import plugin from '../src'
 describe('styli-plugin-line-height', () => {
   styli.configure({
     theme: {
-      lineHeight: { none: 1 },
+      lineHeights: { none: 1 },
     },
   })
 

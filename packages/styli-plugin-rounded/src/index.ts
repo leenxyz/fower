@@ -30,7 +30,7 @@ export function isMatch(key: string) {
  */
 export function roundedPropToStyle(atomKey: string, propValue: any) {
   let style: any = {}
-  const borderRadius = styli.getTheme().borderRadius as any
+  const borderRadius: any = styli.getTheme().radii
 
   if (atomKey === 'rounded') {
     const isBase = typeof propValue === 'boolean'

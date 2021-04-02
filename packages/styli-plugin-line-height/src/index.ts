@@ -13,7 +13,7 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
 
   const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
 
-  const leadings = styli.getTheme().lineHeight as any
+  const leadings: any = styli.getTheme().lineHeights
   const { inline } = styli.config
 
   if (leadings[downFirst(value)]) {

@@ -25,8 +25,15 @@ const Button = styled('button');
 
 setTheme({
   colors: {
-    colorHello: '#ff9900',
-    colorBrand: 'pink',
+    brandLight: '#e0f2fe',
+    brandLighter: '#bae6fd',
+    brandLightest: '#7dd3fc',
+    brandPrimary: '#38bdf8',
+    brandDark: '#0ea5e9',
+    brandDarker: '#0284c7',
+    brandDarkest: '#0369a1',
+
+    foo: '#f90',
   },
   breakpoints: {
     '4xl': '',
@@ -39,7 +46,13 @@ styli.registerAtomicProps('textBody', (atom) => {
 });
 
 styli.registerColorProps({
-  info: '#ff0',
+  // brandLight: '#e0f2fe',
+  // brandLighter: '#bae6fd',
+  // brandLightest: '#7dd3fc',
+  // brandPrimary: '#38bdf8',
+  // brandDark: '#0ea5e9',
+  // brandDarker: '#0284c7',
+  // brandDarkest: '#0369a1',
 });
 
 declare module '@styli/types' {
@@ -48,6 +61,20 @@ declare module '@styli/types' {
     info?: boolean;
     bgInfo?: boolean;
     borderInfo?: boolean;
+
+    brandLight?: boolean;
+    brandLighter?: boolean;
+    brandLightest?: boolean;
+
+    brandPrimary?: boolean;
+
+    brandDark?: boolean;
+    brandDarker?: boolean;
+    brandDarkest?: boolean;
+
+    bgBrandPrimary?: boolean;
+
+    borderBrandPrimary?: boolean;
   }
 }
 
@@ -55,7 +82,16 @@ export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
     <div>
-      <Box textBody red300 green300--i--hover toCenter gray500--dark>
+      <Box
+        textBody
+        // brandDarker
+        green300--i--hover
+        toCenter
+        gray500--dark
+        // bgBrandPrimray
+        border
+        borderBrandPrimary
+      >
         test TExt
       </Box>
       <Box

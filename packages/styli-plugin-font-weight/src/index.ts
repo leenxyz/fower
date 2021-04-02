@@ -13,7 +13,7 @@ export default (): StyliPlugin => {
     isMatch,
     handleAtom(atom) {
       const { key = '', propValue } = atom
-      const weights = styli.getTheme().fontWeights as any
+      const weights: any = styli.getTheme().fontWeights
       const posfix = key.replace(/^font/i, '')
       const value = /^weight$/i.test(posfix) ? propValue : weights[downFirst(posfix)]
       atom.style = { fontWeight: value }

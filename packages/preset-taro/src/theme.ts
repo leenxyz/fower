@@ -2,8 +2,8 @@ import { Theme } from '@styli/types'
 import { colors } from '@styli/colors'
 
 export const theme: Partial<Theme> = {
-  colors: colors,
-  spacing: {
+  colors,
+  spacings: {
     0: 0,
     1: 4,
     2: 8,
@@ -35,7 +35,7 @@ export const theme: Partial<Theme> = {
     80: 320,
     96: 384,
   },
-  fontSize: {
+  fontSizes: {
     xs: 12,
     sm: 14,
     base: 16,
@@ -50,7 +50,7 @@ export const theme: Partial<Theme> = {
     '8xl': 96,
     '9xl': 128,
   },
-  lineHeight: {
+  lineHeights: {
     none: 1,
     tight: 1.25,
     snug: 1.375,
@@ -58,7 +58,7 @@ export const theme: Partial<Theme> = {
     relaxed: 1.625,
     loose: 2,
   },
-  borderRadius: {
+  radii: {
     none: 0,
     sm: 2,
     base: 4,
@@ -69,7 +69,7 @@ export const theme: Partial<Theme> = {
     '3xl': 24,
     full: 9999,
   },
-  shadow: {
+  shadows: {
     sm: '0 1rpx 3rpx rgba(0, 0, 0, 0.12), 0 0 1rpx rgba(0,0,0,0.01)',
     base: '0 2rpx 4rpx rgba(0, 0, 0, 0.12), 0 0 2rpx rgba(0,0,0,0.02)',
     md: '0 4rpx 8rpx rgba(0, 0, 0, 0.12), 0 0 2rpx rgba(0,0,0,0.02)',

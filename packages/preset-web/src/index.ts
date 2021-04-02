@@ -6,8 +6,8 @@ export const presetWeb: Preset = {
   unit: 'px',
   prefix: '',
   important: false,
-  plugins,
   theme,
+  plugins,
 }
 
 export default presetWeb

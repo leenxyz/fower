@@ -18,12 +18,13 @@ module.exports = {
       'programmable',
       // 'unit',
       'reuse',
-      'theme',
       'design-system-color',
       'design-system-spacing',
       // 'plugin',
       'typescript',
     ],
+
+    Customization: ['configuration', 'theme', 'register-atomic-props', 'register-color-props'],
 
     // 'Design System': [
     // 'design-system',

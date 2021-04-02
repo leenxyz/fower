@@ -10,9 +10,9 @@ export function shadowPropToStyle(key: string, propValue: any) {
   if (isValueProp(propValue)) return { boxShadow: propValue }
   const value = key.replace('shadow', '')
   const shadowSize = value.toLowerCase()
-  const shadow = styli.getTheme().shadow as any
+  const shadows: any = styli.getTheme().shadows
 
-  const shadowValue = shadow[shadowSize || 'base']
+  const shadowValue = shadows[shadowSize || 'base']
 
   if (!shadowValue) {
     console.error('can‘t find shadow size:', shadowValue)

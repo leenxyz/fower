@@ -33,10 +33,10 @@ export function digitPreprocessor(atom: Atom, styli: any): Atom {
 
   const [, key, value] = result
 
-  const { spacing } = styli.getTheme()
+  const { spacing: spacings } = styli.getTheme()
 
   atom.key = key
-  atom.propValue = isSpace ? spacing[value] : value
+  atom.propValue = isSpace ? spacings[value] : value
   atom.className = propKey
 
   return atom

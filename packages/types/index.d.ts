@@ -154,7 +154,8 @@ declare namespace StyliTypes {
       '2xl': string
     }
 
-    spacing: {
+    colors: Colors
+    spacings: {
       0: string | number
       1: string | number
       2: string | number
@@ -186,7 +187,7 @@ declare namespace StyliTypes {
       80: string | number
       96: string | number
     }
-    fontSize: {
+    fontSizes: {
       xs: string | number
       sm: string | number
       base: string | number
@@ -214,7 +215,7 @@ declare namespace StyliTypes {
       black: string | number
     }
 
-    lineHeight: {
+    lineHeights: {
       none: number | string
       tight: number | string
       snug: number | string
@@ -230,7 +231,7 @@ declare namespace StyliTypes {
       wider: number | string
       widest: number | string
     }
-    borderRadius: {
+    radii: {
       none: number | string
       sm: number | string
       base: number | string
@@ -241,7 +242,7 @@ declare namespace StyliTypes {
       '3xl': number | string
       full: number | string
     }
-    shadow: {
+    shadows: {
       // xs: string
       sm: string
       base: string
@@ -253,8 +254,6 @@ declare namespace StyliTypes {
       outline: string
       none: string
     }
-
-    colors: Colors
   }
 
   interface Colors {

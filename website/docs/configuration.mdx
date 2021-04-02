@@ -1,0 +1,111 @@
+---
+id: configuration
+title: Configuration
+---
+
+## Structure
+
+Styli provides default config for different platform, the config is a plain JavaScript object, the structure of config is like this:
+
+```js
+const config = {
+  unit: 'px',
+  prefix: '',
+  important: false,
+  theme: {
+    // theme config
+  },
+  plugins: [
+    // plugin config
+  ],
+}
+```
+
+Built-in default config:
+
+- For Web: [@styli/preset-web](https://github.com/forsigner/styli/blob/master/packages/preset-web/src/index.ts)
+- For Web rem: [@styli/preset-web-rem](https://github.com/forsigner/styli/blob/master/packages/preset-web-rem/src/index.ts)
+- For React Native: [@styli/preset-react-native](https://github.com/forsigner/styli/blob/master/packages/preset-react-native/src/index.ts)
+- For Taro: [@styli/preset-taro](https://github.com/forsigner/styli/blob/master/packages/preset-taro/src/index.ts)
+
+### `unit`
+
+The `unit` for the style like width, height, padding, margin... The default value of `unit` option is `px`, you can use `rem`, `em`, `vh`, etc.
+
+### `prefix`
+
+The prefix for the generated css class, default is empty string.
+
+### `important`
+
+if `important` option is true, every css rule will attach **!important** postfix. Default value is false.
+
+### `theme`
+
+The theme option is where you define your design system like
+color palette, spacing, fonts, border radius, breakpoints.
+
+```js
+const config = {
+  theme: {
+    breakpoints: {
+      //
+    },
+    colors: {
+      //
+    },
+    spacing: {
+      //
+    },
+    fontSize: {
+      //
+    },
+    // other theme config...
+  },
+}
+```
+
+Learn more about the theme in the [theme section](/docs/theme).
+
+## Read Config
+
+Styli config is a plain JavaScript object, you can read it from `@styli/core`.
+
+```js
+import { config } from '@styli/core'
+
+console.log('config:', config)
+console.log('config.inline:', config.inline)
+console.log('config.theme:', config.theme)
+```
+
+## Custom Config
+
+You can update Styli config use `configure()` Api from `@styli/core`.
+
+```js
+import { configure } from '@styli/core'
+
+configure({
+  unit: 'rem',
+})
+```
+
+By default, user config will deepmerge to default config. you can change `configure strategy` by second param, form example, use **replace** strategy to replace the whole default config:
+
+```js
+import { configure } from '@styli/core'
+
+configure(
+  {
+    unit: 'rem',
+  },
+  'replace',
+)
+```
+
+Supported strategy:
+
+- `deepmerge`, default strategy, it will deepmerge to default config.
+- `merge`, it will merge to default config, equal to `Object.assign`.
+- `replace`, it will replace current config.

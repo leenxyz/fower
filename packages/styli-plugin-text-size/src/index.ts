@@ -10,9 +10,9 @@ export function isMatch(key: string) {
 
 export function textSizePropToStyle(prop: string, propValue: any) {
   if (isPreset(prop)) {
-    const fontSize = styli.getTheme().fontSize as any
+    const fontSizes: any = styli.getTheme().fontSizes
     const key = prop.replace(/^text/, '').toLowerCase()
-    return { fontSize: fontSize[key] }
+    return { fontSize: fontSizes[key] }
   }
 
   return { fontSize: propValue }
