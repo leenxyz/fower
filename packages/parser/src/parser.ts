@@ -36,6 +36,10 @@ export class Parser {
     return !!this.atoms.find((i) => !!i.meta.breakpoint)
   }
 
+  get plugins(): any[] {
+    return this.styli.config.plugins
+  }
+
   constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
     this.traverseProps(props)
   }
@@ -107,13 +111,51 @@ export class Parser {
   }
 
   /**
+   * to mutate atom attribute, and add atom to this.atoms
+   * @param atom
+   */
+  mutateAtom(atom: Atom): void {
+    const cachedAtom = atomCache.get(atom.id)
+    if (cachedAtom) {
+      this.addAtom(cachedAtom)
+      throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
+    }
+
+    atom = atomPreprocessor(atom, this as any, this.styli)
+
+    // if handled, push to this.atoms and skip it
+    if (atom?.handled) {
+      this.addAtom(atom)
+      throw new Error('atom is handled, add to this.atoms derectly ,no need to mutate')
+    }
+
+    for (const plugin of this.plugins) {
+      if (!plugin.isMatch?.(atom.key)) continue
+
+      if (plugin.beforeAtomStyleCreate) {
+        atom = plugin.beforeAtomStyleCreate(atom, this as any)
+      }
+
+      if (plugin.handleAtom) {
+        atom = plugin.handleAtom(atom, this as any)
+      }
+
+      atom.className = this.getAtomClassName(atom)
+      atom.handled = true
+
+      // this.addAtom(atom)
+
+      break // break from this plugin
+    }
+  }
+
+  /**
    * traverse Props to init atoms
    */
   private traverseProps(props: any): void {
     if (isEmptyObj(props)) return
 
     const { excludedProps = [] } = props
-    const { plugins = [] } = this.styli.config
 
     // traverse Props
     for (let [propKey, propValue] of Object.entries(props)) {
@@ -124,92 +166,58 @@ export class Parser {
 
       if (!this.isValidProp(propKey, propValue)) continue
 
-      let atom = new Atom({ propKey, propValue })
-
-      const cachedAtom = atomCache.get(atom.id)
-      if (cachedAtom) {
-        this.addAtom(cachedAtom)
-        continue
-      }
-
+      // parse css prop
       if (propKey === 'css') {
-        // parse css prop
         this.parseCSSProp(propValue)
         continue
       }
 
-      atom = atomPreprocessor(atom, this as any, this.styli)
+      let atom = new Atom({ propKey, propValue })
 
-      // if handled, push to this.atoms and skip it
-      if (atom?.handled) {
+      try {
+        this.mutateAtom(atom)
         this.addAtom(atom)
+      } catch (error) {
         continue
-      }
-
-      for (const plugin of plugins) {
-        if (!plugin.isMatch?.(atom.key)) continue
-
-        if (plugin.beforeAtomStyleCreate) {
-          atom = plugin.beforeAtomStyleCreate(atom, this as any)
-        }
-
-        if (plugin.handleAtom) {
-          atom = plugin.handleAtom(atom, this as any)
-        }
-
-        atom.className = this.getAtomClassName(atom)
-        atom.handled = true
-
-        this.addAtom(atom)
-
-        break // break from this plugin
       }
     }
 
-    for (const plugin of plugins) {
+    for (const plugin of this.plugins) {
       if (plugin.afterAtomStyleCreate) {
         plugin.afterAtomStyleCreate(this)
       }
     }
   }
 
-  /**
-   *  parse CSS prop
-   * @param propValue 
-   * @example 
-   * ```jsx
-      <Box
-        css={{
-          backgroundColor: 'bisque',
-          padding: '20px',
-          ':hover': {
-            backgroundColor: 'yellow',
-          },
-          '.child': {
-            color: 'white',
-          },
-        }}
-      >
-        SubTitle
-        <Box className="child">Child</Box>
-      </Box>
-   * ```
-   */
   private parseCSSProp(propValue: any) {
     const parsed = parse(propValue)
+
     const prefixClassName = objectToClassName(propValue)
 
     for (const { selector, selectorType, style } of parsed) {
+      const [propKey, propValue] = Object.entries(style)[0]
+      const atom = new Atom({ propKey, propValue })
+
       const isVoid = selectorType === 'void'
-      const atom = new Atom({ propKey: 'css' })
 
       if (selectorType === 'pseudo') atom.meta.pseudo = selector
       if (selectorType === 'child') atom.meta.childSelector = selector
 
-      atom.style = style
-      atom.className = isVoid ? objectToClassName(style) : prefixClassName
+      try {
+        this.mutateAtom(atom)
+      } catch (error) {
+        continue
+      }
 
-      atom.id = objectToClassName({ style })
+      if (!atom.style) {
+        atom.style = style
+      }
+
+      if (!atom.className) {
+        atom.className = isVoid ? objectToClassName(style) : prefixClassName
+      }
+
+      // atom.id = objectToClassName({ style })
       atom.handled = true
 
       this.addAtom(atom)
@@ -309,7 +317,7 @@ export class Parser {
     /** ignore atomic prop */
     const parsedProps = entries.reduce<any>((result, [key, value]) => {
       const find = atoms.find((atom) => {
-        return [atom.propKey, atom.key, atom.id].includes(key)
+        return [atom.propKey, atom.key, atom.id, 'css'].includes(key)
       })
       if (!find) result[key] = value
       return result

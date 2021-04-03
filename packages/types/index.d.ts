@@ -23,7 +23,7 @@ declare namespace StyliTypes {
 
   type PropValue = boolean | number | string
 
-  interface StyliCSSProperties extends AtomicProps, Omit<CSSProperties, keyof AtomicProps> {}
+  interface StyliCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
 
   type PseudosObject = { [P in CSS.Pseudos]?: StyliCSSProperties }
 
@@ -31,9 +31,17 @@ declare namespace StyliTypes {
     | (StyliCSSProperties & PseudosObject)
     | {
         [K in keyof T]?: T[K] extends object
-          ? CSSObject<T[K]> & AtomicProps
+          ? CSSObject<T[K]>
           : StyliCSSProperties | number | string | boolean
       }
+
+  // type CSSObject<T = StyliCSSProperties> =
+  //   | (StyliCSSProperties & PseudosObject)
+  //   | {
+  //       [K in keyof T]?: T[K] extends object
+  //         ? CSSObject<T[K]> & AtomicProps
+  //         : StyliCSSProperties | number | string | boolean
+  //     }
 
   interface AtomicProps {
     /**

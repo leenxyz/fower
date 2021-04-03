@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { jsKeyToCssKey, objectToClassName } from '@styli/utils'
+import { objectToClassName } from '@styli/utils'
 
 type CSSProperties = CSS.Properties<number | string>
 type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
@@ -44,7 +44,7 @@ export function flatten(cssObj: CSSObject): FlattenItem[] {
 
     /** primitive value */
     if (!Array.isArray(flattenResult)) {
-      return [...result, [{ [jsKeyToCssKey(key)]: flattenResult }]]
+      return [...result, [{ [key]: flattenResult }]]
     }
 
     return flattenResult.reduce<FlattenItem[]>((r, cur) => {

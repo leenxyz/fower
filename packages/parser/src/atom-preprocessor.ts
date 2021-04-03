@@ -27,8 +27,8 @@ const pseudoKeys = [
 ]
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
-export function atomPreprocessor(initialAtom: Atom, parser: Parser, styli: any): Atom {
-  let atom = { ...initialAtom }
+export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
+  // let atom = { ...atom }
   const { plugins = [] } = styli.config
   const { propKey, propValue } = atom
   const { breakpoints, modes } = styli.getTheme()

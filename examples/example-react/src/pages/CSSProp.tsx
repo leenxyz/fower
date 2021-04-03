@@ -3,23 +3,22 @@ import { Box, Text } from '@styli/react';
 export default () => {
   return (
     <Box
-      text4XL
+      // text4XL
       css={{
-        // p: 1,
-        // p: true,
-        // display: 'flex',
-        // p0: true,
-        backdropFilter: 'inherit',
-        backgroundColor: '#edf2f7',
-        ':hover': {
-          backgroundColor: '#feebc8',
-        },
+        // text5XL: true,
+        // py10: true,
+        // backgroundColor: '#ccc',
+        // ':hover': {
+        //   backgroundColor: '#feebc8',
+        //   color: 'red',
+        // },
+
         '.title': {
           fontWeight: 'bold',
         },
-        span: {
-          color: 'deeppink',
-        },
+        // span: {
+        //   color: 'deeppink',
+        // },
       }}
     >
       <div className="title">Nested demo</div>
