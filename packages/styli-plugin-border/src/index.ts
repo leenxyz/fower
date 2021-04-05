@@ -15,9 +15,8 @@ function isMatch(key: string) {
 
 function toStyle(key: string, propValue: any) {
   if (key === 'border') {
-    return {
-      borderWidth: typeof propValue === 'boolean' ? 1 : propValue,
-    }
+    if (typeof propValue === 'boolean') return { borderWidth: 1 }
+    return { border: propValue }
   }
 
   const colors = styli.getColors() as any

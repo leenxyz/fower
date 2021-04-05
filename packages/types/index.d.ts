@@ -113,6 +113,7 @@ declare namespace StyliTypes {
     /** use inline style or not */
     inline?: boolean
     important?: boolean
+    pseudos?: string[]
     theme: Theme
     plugins: StyliPlugin[]
     transformUnit(data: string | number): string

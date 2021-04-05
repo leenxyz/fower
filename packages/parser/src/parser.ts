@@ -209,16 +209,17 @@ export class Parser {
         continue
       }
 
+      // not match atomic props rule
       if (!atom.style) {
         atom.style = style
-      }
 
-      if (!atom.className) {
+        // TODO: need refactor
+        atom.id = objectToClassName({ style })
+
         atom.className = isVoid ? objectToClassName(style) : prefixClassName
-      }
 
-      // atom.id = objectToClassName({ style })
-      atom.handled = true
+        atom.handled = true
+      }
 
       this.addAtom(atom)
     }
@@ -277,6 +278,8 @@ export class Parser {
     this.atoms = this.atoms.sort((a, b) => {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
+
+    // console.log('this.atoms', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''

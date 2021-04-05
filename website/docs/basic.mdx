@@ -72,8 +72,6 @@ The simplest way to use Styli is to set some Atomic Props directly on the Styli 
 
 The Atomic Props above `text2XL`, `fontBold`, `green500`, no need to declare a value for them, we call it the "**Key as Value**" pattern, which makes the UI code more concise and improves the development experience. Personally I believe that the JSX inline style itself is already very good. It has strong types and is convenient for dynamic styles. The biggest disadvantage is cumbersome and visually disturbing. No one likes ugly boilerplate code like `style={{}}`. Styli solves these problems. With Styli, every character is meaningful, there are no unnecessary characters such as equal signs, curly braces, and quotation marks, and the structure of JSX is kept clean.
 
-> The `f` in `text2XL` is the abbreviation of fontSize. For more conciseness and development efficiency, we will simplify the high-frequency Atomic Props such as `margin`, `padding`, `width`, `heigth`, `fontSize`, `color` to one character.
-
 ## Use attr value
 
 In most cases, we recommend write the style with the "**Key as Value**" pattern. In some scenarios, we need to set the attribute value to write the style:
@@ -83,7 +81,7 @@ function Demo() {
   const a = 5
   const b = 5
   return (
-    <Text f={30} p={a + b} bg="#bee3f8" fontBold>
+    <Text text={30} p={a + b} bg="#bee3f8" fontBold>
       Hi, Styli
     </Text>
   )

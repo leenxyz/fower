@@ -7,6 +7,10 @@ export function isBgKey(key: string) {
   return /^bg?$/.test(key)
 }
 
+export function isBgColorKey(key: string) {
+  return /^bg.+$/i.test(key)
+}
+
 export function isBgRepeatKey(key: string) {
   return /^backgroundRepeat$/i.test(key)
 }
@@ -24,5 +28,7 @@ export function isBgPosKey(key: string) {
 }
 
 export function isMatch(key: string) {
-  return [isBgKey, isBgRepeatKey, isBgImgKey, isBgSizeKey, isBgPosKey].some((cb) => cb(key))
+  return [isBgKey, isBgColorKey, isBgRepeatKey, isBgImgKey, isBgSizeKey, isBgPosKey].some((cb) =>
+    cb(key),
+  )
 }

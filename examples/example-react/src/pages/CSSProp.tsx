@@ -2,28 +2,25 @@ import { Box, Text } from '@styli/react';
 
 export default () => {
   return (
-    <Box
-      // text4XL
-      css={{
-        // text5XL: true,
-        // py10: true,
-        // backgroundColor: '#ccc',
-        // ':hover': {
-        //   backgroundColor: '#feebc8',
-        //   color: 'red',
-        // },
-
-        '.title': {
-          fontWeight: 'bold',
-        },
-        // span: {
-        //   color: 'deeppink',
-        // },
-      }}
-    >
-      <div className="title">Nested demo</div>
-      <span>Hi, Styli!</span>
-    </Box>
+    <div>
+      <Box
+        // text4XL
+        css={{
+          ':hover': {
+            backgroundColor: '#feebc8',
+          },
+        }}
+      >
+        <span>Hi, Styli!</span>
+      </Box>
+      <Box
+        css={{
+          backgroundColor: '#feebc8',
+        }}
+      >
+        Use Atomic Props in CSS Props
+      </Box>
+    </div>
   );
   return (
     <Box>

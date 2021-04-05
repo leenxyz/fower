@@ -5,26 +5,7 @@ import { digitPreprocessor } from './digit-preprocessor'
 
 const invalidProps = ['excludedProps', 'styliName']
 const connector = '--'
-const pseudoKeys = [
-  'active',
-  'checked',
-  'disabled',
-  'enabled',
-  'default',
-  'empty',
-  'focus',
-  'focus-within',
-  'invalid',
-  'hover',
-  'link',
-  'visited',
-  'first-child',
-  'last-child',
-  'after',
-  'before',
-  'placeholder',
-  'selection',
-]
+const pseudoKeys: string[] = []
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
 export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
