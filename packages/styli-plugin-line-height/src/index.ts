@@ -6,12 +6,12 @@ export function isTextLineHeightKey(key: string) {
   return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
-export function textLineHeightPropToStyle(prop: string, propValue: any): any {
+export function textLineHeightPropToStyle(key: string, propValue: any): any {
   if (isValueProp(propValue)) {
     return { lineHeight: propValue }
   }
 
-  const [, value = ''] = prop.match(/leading-?(\w+)?/) || []
+  const [, value = ''] = key.match(/leading-?(\w+)?/) || []
 
   const leadings: any = styli.getTheme().lineHeights
   const { inline } = styli.config
@@ -25,16 +25,14 @@ export function textLineHeightPropToStyle(prop: string, propValue: any): any {
     return { lineHeight: 20 }
   }
 
-  return {
-    lineHeight: value,
-  }
+  return { lineHeight: value }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch: isTextLineHeightKey,
     handleAtom(atom) {
-      atom.style = textLineHeightPropToStyle(atom.propKey, atom.propValue)
+      atom.style = textLineHeightPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

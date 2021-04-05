@@ -18,7 +18,11 @@ class StyleSheet {
 
     // this.$style.innerHTML = this.$style.innerHTML + rules.join('\n')
     for (const rule of rules) {
-      this.$style.sheet?.insertRule(rule)
+      try {
+        this.$style.sheet?.insertRule(rule)
+      } catch (error) {
+        console.warn(error)
+      }
     }
   }
 }

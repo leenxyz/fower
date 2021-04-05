@@ -2,19 +2,19 @@ import { StyliPlugin } from '@styli/types'
 import { isValueProp } from '@styli/utils'
 
 export function isTextAlign(key: string) {
-  return /^text([Ll]eft|[Cc]enter|[Rr]ight|[Jj]ustify|[Aa]lign)$/.test(key)
+  return /^text(Left|Center|Right|Justify|Align)$/i.test(key)
 }
 
-export function textAlignPropToStyle(prop: string, propValue: any) {
+export function toStyle(key: string, propValue: any) {
   if (isValueProp(propValue)) return { textAlign: propValue }
-  return { textAlign: prop.replace('text', '').toLowerCase() }
+  return { textAlign: key.replace(/^text/i, '').toLowerCase() }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch: isTextAlign,
     handleAtom(atom) {
-      atom.style = textAlignPropToStyle(atom.propKey, atom.propValue)
+      atom.style = toStyle(atom.key, atom.propValue)
       return atom
     },
   }

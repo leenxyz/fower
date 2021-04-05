@@ -4,17 +4,17 @@ export function isOverFlowKey(key: string) {
   return /^overflow[XY]?$/i.test(key)
 }
 
-export function overFlowPropToStyle(prop: string, propValue: any): any {
-  if (prop === 'overflow') return { [prop]: propValue }
-  const key = prop.replace(/[a-z]$/, (last) => last.toUpperCase())
-  return { [key]: propValue }
+export function overFlowPropToStyle(key: string, propValue: any): any {
+  if (key === 'overflow') return { [key]: propValue }
+  const styleKey = key.replace(/[a-z]$/, (last) => last.toUpperCase())
+  return { [styleKey]: propValue }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch: isOverFlowKey,
     handleAtom(atom) {
-      atom.style = overFlowPropToStyle(atom.propKey, atom.propValue)
+      atom.style = overFlowPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

@@ -27,7 +27,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = gridPropToStyle(atom.propKey, atom.propValue)
+      atom.style = gridPropToStyle(atom.key, atom.propValue)
       return atom
     },
   }

@@ -13,7 +13,7 @@ export default (config?: EllipsisPlugin): StyliPlugin => {
       return /^ellipsis(\d+)?(-.+)?$/.test(key)
     },
     handleAtom(atom) {
-      const [, line, width] = atom.propKey.match(/^ellipsis(\d+)?-?(.+)?$/) || []
+      const [, line, width] = atom.key.match(/^ellipsis(\d+)?-?(.+)?$/) || []
 
       const lineNum = Number(line || defaultLineNum)
       const maxWidth = isValueProp(atom.propValue) ? atom.propValue : width || defaultMaxWidth

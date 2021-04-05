@@ -4,13 +4,11 @@ export default () => {
   return (
     <Box
       as="button"
-      // bgRed300
-      bgRed500--hover
-      // blue300--hover
-      // red800
-      // p4
-      // rounded-10
-      // border="none"
+      // cursorNotAllowed--disabled
+      bgGray200
+      w-300
+      textCenter--disabled
+      disabled
     >
       Hover me
     </Box>

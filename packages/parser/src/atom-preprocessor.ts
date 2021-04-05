@@ -1,21 +1,21 @@
-import { Parser } from './parser'
 import { Atom } from '@styli/atom'
+import { Parser } from './parser'
 import { isBooleanFalse } from '@styli/utils'
 import { digitPreprocessor } from './digit-preprocessor'
 
 const invalidProps = ['excludedProps', 'styliName']
 const connector = '--'
-const pseudoKeys: string[] = []
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
 export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   // let atom = { ...atom }
-  const { plugins = [] } = styli.config
+  const { plugins = [], pseudos = [] } = styli.config
   const { propKey, propValue } = atom
   const { breakpoints, modes } = styli.getTheme()
 
   const breakpointKeys = Object.keys(breakpoints)
   const modeKeys: string[] = modes || []
+  const pseudoKeys: string[] = pseudos
 
   const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
   const regModeStr = `${connector}(${modeKeys.join('|')})$`

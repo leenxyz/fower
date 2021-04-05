@@ -1,5 +1,5 @@
 import { Box, injectGlobalStyle } from '@styli/react';
-import { setTheme, styli } from '@styli/core';
+import { configure, setTheme, styli } from '@styli/core';
 import { useState } from 'react';
 import { styled } from '@styli/styled';
 
@@ -22,6 +22,10 @@ const Button = styled('button');
 //   },
 
 // });
+
+configure({
+  pseudos: ['hover'],
+});
 
 setTheme({
   colors: {

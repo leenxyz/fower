@@ -11,7 +11,7 @@ export function isMatch(key: string) {
   return /^text(-.+)?$/.test(key) || isPreset(key)
 }
 
-export function textSizePropToStyle(key: string, propValue: any) {
+export function toStyle(key: string, propValue: any) {
   if (isPreset(key)) {
     const fontSizes: any = styli.getTheme().fontSizes
     const fontSizeKey = key.replace(/^text/, '').toLowerCase()
@@ -25,7 +25,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = textSizePropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.propValue)
       return atom
     },
   }

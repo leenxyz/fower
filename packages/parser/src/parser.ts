@@ -176,7 +176,7 @@ export class Parser {
 
       try {
         this.mutateAtom(atom)
-        this.addAtom(atom)
+        if (atom.handled) this.addAtom(atom)
       } catch (error) {
         continue
       }
@@ -279,7 +279,7 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
-    // console.log('this.atoms', this.atoms)
+    console.log('this.atoms', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''
@@ -319,12 +319,11 @@ export class Parser {
 
     /** ignore atomic prop */
     const parsedProps = entries.reduce<any>((result, [key, value]) => {
-      const find = atoms.find((atom) => {
-        return [atom.propKey, atom.key, atom.id, 'css'].includes(key)
-      })
+      const find = atoms.find((atom) => [atom.propKey, atom.key, atom.id, 'css'].includes(key))
       if (!find) result[key] = value
       return result
     }, {})
+
     return parsedProps
   }
 

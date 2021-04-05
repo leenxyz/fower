@@ -1,7 +1,7 @@
 import { StyliPlugin } from '@styli/types'
 import { isValueProp } from '@styli/utils'
 
-export function isOutLineKey(key: string) {
+export function isMatch(key: string) {
   return key === 'outline' || isOutLineNone(key) || isOutLineOffset(key)
 }
 
@@ -10,17 +10,14 @@ function isOutLineNone(key: string) {
 }
 
 function isOutLineOffset(key: string) {
-  return /^outlineOffset(-.+)?$/i.test(key)
+  return /^outlineOffset$/i.test(key)
 }
 
-export function outLinePropToStyle(propKey: string, propValue: any): any {
-  if (isOutLineNone(propKey)) return { outline: 'none' }
+export function outLinePropToStyle(key: string, propValue: any): any {
+  if (isOutLineNone(key)) return { outline: 'none' }
 
-  if (isOutLineOffset(propKey)) {
-    const [, , offsetValue] = propKey.match(/^outlineOffset(-(.+))?$/i) || []
-    return {
-      outlineOffset: isValueProp(propValue) ? propValue : offsetValue || 1,
-    }
+  if (isOutLineOffset(key)) {
+    return { outlineOffset: propValue }
   }
 
   return { outline: isValueProp(propValue) ? propValue : 'none' }
@@ -28,9 +25,9 @@ export function outLinePropToStyle(propKey: string, propValue: any): any {
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isOutLineKey,
+    isMatch,
     handleAtom(atom) {
-      atom.style = outLinePropToStyle(atom.propKey, atom.propValue)
+      atom.style = outLinePropToStyle(atom.key, atom.propValue)
       return atom
     },
   }
