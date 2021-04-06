@@ -24,8 +24,8 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      const { key, propValue } = atom
-      atom.style = paddingMaps[key].reduce<any>((r, cur) => ({ ...r, [cur]: propValue }), {})
+      const { key, value } = atom
+      atom.style = paddingMaps[key].reduce<any>((r, cur) => ({ ...r, [cur]: value }), {})
       return atom
     },
   }

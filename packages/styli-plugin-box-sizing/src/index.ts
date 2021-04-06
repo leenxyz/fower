@@ -7,16 +7,16 @@ function isMatch(key: string) {
   return keys.includes(key)
 }
 
-function boxSizingPropToStyle(propKey: string, propValue: any): any {
-  if (propKey === 'boxSizing') return { [propKey]: propValue }
-  return { boxSizing: kebab(propKey) }
+function toStyle(key: string, value: any): any {
+  if (key === 'boxSizing') return { [key]: value }
+  return { boxSizing: kebab(key) }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = boxSizingPropToStyle(atom.propKey, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

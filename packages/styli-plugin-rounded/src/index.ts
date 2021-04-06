@@ -23,19 +23,19 @@ export function isMatch(key: string) {
 /**
  * TODO: need improve
  * @param atomKey
- * @param propValue
+ * @param value
  * @returns
  */
-export function roundedPropToStyle(atomKey: string, propValue: any) {
+export function toStyle(atomKey: string, value: any) {
   let style: any = {}
   const radii: any = styli.getTheme().radii
   const radiiKeys = Object.keys(radii) || []
   const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 
   if (atomKey === 'rounded') {
-    const isBase = typeof propValue === 'boolean'
+    const isBase = typeof value === 'boolean'
     return {
-      borderRadius: isBase ? radii['base'] : propValue,
+      borderRadius: isBase ? radii['base'] : value,
     }
   }
 
@@ -58,7 +58,7 @@ export function roundedPropToStyle(atomKey: string, propValue: any) {
   }
 
   for (const p of roundedMaps[atomKey] || []) {
-    style[`border${p}Radius`] = propValue
+    style[`border${p}Radius`] = value
   }
   return style
 }
@@ -67,7 +67,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = roundedPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

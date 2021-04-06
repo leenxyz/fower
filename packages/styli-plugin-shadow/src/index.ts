@@ -6,10 +6,10 @@ export function isMatch(key: string) {
   return /^shadow/i.test(key)
 }
 
-export function shadowPropToStyle(key: string, propValue: any) {
-  if (isValueProp(propValue)) return { boxShadow: propValue }
-  const value = key.replace('shadow', '')
-  const shadowSize = value.toLowerCase()
+export function toStyle(key: string, value: any) {
+  if (isValueProp(value)) return { boxShadow: value }
+  const styleValue = key.replace('shadow', '')
+  const shadowSize = styleValue.toLowerCase()
   const shadows: any = styli.getTheme().shadows
 
   const shadowValue = shadows[shadowSize || 'base']
@@ -24,7 +24,7 @@ export default (): StyliPlugin => {
   return {
     isMatch: isMatch,
     handleAtom(atom) {
-      atom.style = shadowPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

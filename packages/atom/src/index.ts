@@ -58,12 +58,17 @@ export class Atom {
   constructor(options = {} as Options) {
     this.propKey = options.propKey ?? ''
     this.propValue = options.propValue
+
     this.key = options.key || this.propKey
+    this.value = options.propValue || this.propValue
+
     this.style = options.style
     this.className = options.className ?? ''
+
     this.handled = options.handled ?? false
     this.inserted = false
     this.isValid = true
+
     this.meta = {}
 
     const { propKey, propValue } = this
@@ -94,14 +99,24 @@ export class Atom {
   key: string
 
   /**
+   * atom value, get it from PropValue or propKey
+   * @example
+   * <Box toCenter></Box> -> true
+   * <Box m={4}></Box> -> 4
+   * <Box m-4></Box> -> 4
+   * <Box m4></Box> -> 16
+   */
+  value: string = ''
+
+  /**
    * original propKey, 原始的propkey
    * @example
    * <Box red200></Box> propKey is red200
    * <Box red200--hover></Box> propKey is red200--hover
    */
-  propKey: 'css' | 'debug' | ({} & string)
+  readonly propKey: 'css' | 'debug' | ({} & string)
 
-  propValue: any
+  readonly propValue: any
 
   style: CSS.Properties<number | string>
 

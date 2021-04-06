@@ -1,20 +1,20 @@
 import { StyliPlugin } from '@styli/types'
 
-export function isOverFlowKey(key: string) {
+export function isMatch(key: string) {
   return /^overflow[XY]?$/i.test(key)
 }
 
-export function overFlowPropToStyle(key: string, propValue: any): any {
-  if (key === 'overflow') return { [key]: propValue }
+export function toStyle(key: string, value: any): any {
+  if (key === 'overflow') return { [key]: value }
   const styleKey = key.replace(/[a-z]$/, (last) => last.toUpperCase())
-  return { [styleKey]: propValue }
+  return { [styleKey]: value }
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isOverFlowKey,
+    isMatch,
     handleAtom(atom) {
-      atom.style = overFlowPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

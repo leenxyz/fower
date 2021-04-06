@@ -8,20 +8,20 @@ export function isMatch(key: string) {
   )
 }
 
-export function positionPropToStyle(prop: string, propValue: any): any {
-  if (prop === 'position') return { position: propValue }
+export function toStyle(prop: string, value: any): any {
+  if (prop === 'position') return { position: value }
 
   /** @example absolute, relative  */
   if (positionKeys.includes(prop)) return { position: prop }
 
-  return { [prop]: propValue }
+  return { [prop]: value }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = positionPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

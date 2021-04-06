@@ -8,7 +8,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = { zIndex: atom.propValue }
+      atom.style = { zIndex: atom.value as any }
       return atom
     },
   }

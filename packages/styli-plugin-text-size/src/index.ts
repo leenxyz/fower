@@ -11,21 +11,21 @@ export function isMatch(key: string) {
   return /^text(-.+)?$/.test(key) || isPreset(key)
 }
 
-export function toStyle(key: string, propValue: any) {
+export function toStyle(key: string, value: any) {
   if (isPreset(key)) {
     const fontSizes: any = styli.getTheme().fontSizes
     const fontSizeKey = key.replace(/^text/, '').toLowerCase()
     return { fontSize: fontSizes[fontSizeKey] }
   }
 
-  return { fontSize: propValue }
+  return { fontSize: value }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

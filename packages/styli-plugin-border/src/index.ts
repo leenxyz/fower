@@ -13,10 +13,10 @@ function isMatch(key: string) {
   return key.startsWith('border')
 }
 
-function toStyle(key: string, propValue: any) {
+function toStyle(key: string, value: any) {
   if (key === 'border') {
-    if (typeof propValue === 'boolean') return { borderWidth: 1 }
-    return { border: propValue }
+    if (typeof value === 'boolean') return { borderWidth: 1 }
+    return { border: value }
   }
 
   const colors = styli.getColors() as any
@@ -32,7 +32,7 @@ function toStyle(key: string, propValue: any) {
     const position = postfix.replace(/-\d+$/, '')
     const borderPosition = positionMaps[position.toUpperCase()] ?? ''
     const cssKey = `border${borderPosition}Width`
-    return { [cssKey]: propValue }
+    return { [cssKey]: value }
   }
 
   /** @example borderGray20,borderRed20--O20,borderBlue--T20 */
@@ -42,7 +42,7 @@ function toStyle(key: string, propValue: any) {
   }
 
   return {
-    [key]: colors[propValue] || propValue,
+    [key]: colors[value] || value,
   }
 }
 
@@ -50,7 +50,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

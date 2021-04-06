@@ -1,21 +1,21 @@
 import { StyliPlugin } from '@styli/types'
 import { kebab } from '@styli/utils'
 
-export function isCursorKey(key: string) {
+export function isMatch(key: string) {
   return /^cursor[a-z]*?$/i.test(key)
 }
 
-export function cursorPropToStyle(key: string, propValue: any): any {
-  if (key === 'cursor') return { cursor: propValue }
-  const value = key.replace('cursor', '')
-  return { cursor: kebab(value) }
+export function toStyle(key: string, value: any): any {
+  if (key === 'cursor') return { cursor: value }
+  const styleValue = key.replace('cursor', '')
+  return { cursor: kebab(styleValue) }
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isCursorKey,
+    isMatch,
     handleAtom(atom) {
-      atom.style = cursorPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

@@ -5,11 +5,11 @@ export function isDisplayKey(key: string) {
   return /^(hidden|inline|inlineBlock|inlineFlex|block|grid|table)$|^display$/gi.test(key)
 }
 
-export function displayPropToStyle(key: string, propValue: any): any {
+export function toStyle(key: string, value: any): any {
   if (key === 'hidden') return { display: 'none' }
 
   /** display */
-  if (key === 'display') return { display: propValue }
+  if (key === 'display') return { display: value }
 
   return { display: kebab(key) }
 }
@@ -18,7 +18,7 @@ export default (): StyliPlugin => {
   return {
     isMatch: isDisplayKey,
     handleAtom(atom) {
-      atom.style = displayPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

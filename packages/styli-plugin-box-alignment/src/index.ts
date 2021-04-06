@@ -6,15 +6,15 @@ function isMatch(key: string) {
   return alignmentsRegex.test(key)
 }
 
-function flexPropToStyle(key: string, propValue: any) {
-  return { [key]: propValue }
+function flexPropToStyle(key: string, value: any) {
+  return { [key]: value }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = flexPropToStyle(atom.key, atom.propValue)
+      atom.style = flexPropToStyle(atom.key, atom.value)
       return atom
     },
   }

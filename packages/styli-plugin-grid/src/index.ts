@@ -5,18 +5,18 @@ function isMatch(key: string) {
   return /^(row|column)?Gap(-.+)?$|^gridTemplateColumns(-.+)?$/i.test(key)
 }
 
-function gridPropToStyle(propKey: string, propValue: any): any {
+function toStyle(propKey: string, value: any): any {
   const style: any = {}
 
   if (propKey.startsWith('gridTemplateColumns')) {
-    const [, value] = propKey.split('-')
-    let columnsValue: number = value ? value : propValue
+    const [, styleValue] = propKey.split('-')
+    let columnsValue: number = styleValue || value
     style.gridTemplateColumns = `repeat(${columnsValue}, minmax(0px, 1fr))`
   }
 
   if (/^(row|column)?Gap(-.+)?$/i.test(propKey)) {
     const [key, value] = propKey.split('-')
-    const gapValue = value ? value : propValue
+    const gapValue = value ? value : value
     style[downFirst(key)] = gapValue
   }
 
@@ -27,7 +27,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = gridPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

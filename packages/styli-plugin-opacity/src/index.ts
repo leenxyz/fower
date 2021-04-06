@@ -8,7 +8,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = { opacity: Number(atom.propValue) / 100 }
+      atom.style = { opacity: Number(atom.value) / 100 }
       return atom
     },
   }

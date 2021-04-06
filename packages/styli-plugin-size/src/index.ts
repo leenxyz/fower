@@ -19,9 +19,9 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      const { key, propValue } = atom
+      const { key, value } = atom
       atom.style = sizeMaps[key.toLowerCase()].reduce<any>(
-        (style, cur) => ({ ...style, [cur]: propValue }),
+        (style, cur) => ({ ...style, [cur]: value }),
         {},
       )
       return atom

@@ -15,15 +15,15 @@ export function isMatch(key: string) {
   return isFlexProps(key) || flexReg.test(key) || /^flexDirection$/i.test(key)
 }
 
-export function flexItemPropToStyle(key: string, propValue: any) {
+export function toStyle(key: string, value: any) {
   const style: any = {}
 
   if (isFlexProps(key)) {
-    style[key] = propValue
+    style[key] = value
   }
 
   if (/^flexDirection$/.test(key)) {
-    style[key] = propValue
+    style[key] = value
   }
 
   if (flexReg.test(key)) {
@@ -39,13 +39,12 @@ export default (): StyliPlugin => {
     isMatch,
     handleAtom(atom) {
       // specail key: flex={true}
-      if (atom.propKey === 'flex' && typeof atom.propValue === 'boolean') {
+      if (atom.propKey === 'flex' && typeof atom.value === 'boolean') {
         atom.key = 'flex'
-        atom.propKey = 'flex'
         atom.className = 'flex'
         atom.style = { display: 'flex' }
       } else {
-        atom.style = flexItemPropToStyle(atom.key, atom.propValue)
+        atom.style = toStyle(atom.key, atom.value)
       }
 
       return atom

@@ -2,37 +2,26 @@ import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 import { downFirst, isValueProp } from '@styli/utils'
 
-export function isTextLineHeightKey(key: string) {
+export function isMatch(key: string) {
   return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
-export function textLineHeightPropToStyle(key: string, propValue: any): any {
-  if (isValueProp(propValue)) {
-    return { lineHeight: propValue }
-  }
+export function toStyle(value: any): any {
+  if (isValueProp(value)) return { lineHeight: value }
 
-  const [, value = ''] = key.match(/leading-?(\w+)?/) || []
+  const lineHeights: any = styli.getTheme().lineHeights
+  const presetValue = lineHeights[downFirst(value)]
 
-  const leadings: any = styli.getTheme().lineHeights
-  const { inline } = styli.config
-
-  if (leadings[downFirst(value)]) {
-    if (!inline) {
-      return { lineHeight: leadings[downFirst(value)] }
-    }
-
-    // TODO: for rn
-    return { lineHeight: 20 }
-  }
+  if (presetValue) return { lineHeight: presetValue }
 
   return { lineHeight: value }
 }
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isTextLineHeightKey,
+    isMatch,
     handleAtom(atom) {
-      atom.style = textLineHeightPropToStyle(atom.key, atom.propValue)
+      atom.style = toStyle(atom.value)
       return atom
     },
   }

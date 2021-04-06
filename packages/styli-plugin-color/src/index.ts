@@ -13,9 +13,9 @@ export default (): StyliPlugin => {
   return {
     isMatch: isColorKey,
     handleAtom(atom) {
-      const { key, propValue } = atom
+      const { key, value } = atom
       atom.style = {
-        color: key === 'color' ? propValue : key,
+        color: key === 'color' ? value : key,
       }
       return atom
     },

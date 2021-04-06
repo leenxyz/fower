@@ -7,12 +7,10 @@ export default (): StyliPlugin => {
       return caseKeys.includes(key)
     },
     handleAtom(atom) {
-      const { propKey } = atom
+      const { key } = atom
+      const value: any = key === 'normalcase' ? 'none' : key
 
-      const value: any = propKey === 'normalcase' ? 'none' : propKey
-
-      const key = 'textTransform'
-      atom.style = { [key]: value }
+      atom.style = { textTransform: value }
 
       return atom
     },

@@ -16,7 +16,7 @@ export default (config?: EllipsisPlugin): StyliPlugin => {
       const [, line, width] = atom.key.match(/^ellipsis(\d+)?-?(.+)?$/) || []
 
       const lineNum = Number(line || defaultLineNum)
-      const maxWidth = isValueProp(atom.propValue) ? atom.propValue : width || defaultMaxWidth
+      const maxWidth = isValueProp(atom.value) ? atom.value : width || defaultMaxWidth
 
       if (lineNum === 1) {
         atom.style = {
