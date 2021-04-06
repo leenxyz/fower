@@ -14,9 +14,6 @@ export default () => {
           <Box as="input" outlineNone defaultValue="outlineNone" />
         </Box>
         <Box toCenter square-200>
-          <Box as="input" outlineOffset-10 defaultValue="outlineOffset-10" />
-        </Box>
-        <Box toCenter square-200>
           <Box
             as="input"
             outline="8px ridge rgba(170, 50, 220, .6)"

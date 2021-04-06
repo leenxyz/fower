@@ -1,0 +1,43 @@
+---
+id: design-system-shadows
+sidebar_label: Shadows
+title: Shadows
+---
+
+Styli provides a set of preset Shadows values.
+
+```jsx
+const config = {
+  theme: {
+    shadows: {
+      sm: '0 1px 3px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0,0,0,0.01)',
+      base: '0 2px 4px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
+      md: '0 4px 8px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
+      lg: '0 8px 16px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0,0,0,0.02)',
+      xl: '0 14px 24px rgba(0, 0, 0, 0.16), 0 0 2px rgba(0,0,0,0.02)',
+      '2xl': '0 24px 48px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0,0,0,0.02)',
+      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+      none: 'none',
+    },
+  },
+}
+```
+
+## Customize Shadows
+
+You can customize Shadows with `setTheme`:
+
+```jsx
+setTheme({
+  shadows: {
+    '3xl': '0 32px 64px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0,0,0,0.02)',
+  },
+})
+```
+
+Then you can use it as `shadow3XL`:
+
+```jsx live
+<Box bgYellow200 m10 square20 shadow3XL></Box>
+```

@@ -14,4 +14,22 @@ sidebar_label: Responsive
 
 Styli 的每个原子属性都支持响应式，而不是只是某个容器支持响应式，这可以让你更轻松地实现复杂的响应式界面。
 
-## 用法
+## Postfix
+
+| Breakpoint postfix | Minimum width | CSS                                |
+| ------------------ | ------------- | ---------------------------------- |
+| sm                 | 640px         | @media (min-width: 640px) { ... }  |
+| md                 | 768px         | @media (min-width: 768px) { ... }  |
+| lg                 | 1024px        | @media (min-width: 1024px) { ... } |
+| xl                 | 1280px        | @media (min-width: 1280px) { ... } |
+| 2xl                | 1536px        | @media (min-width: 1536px) { ... } |
+
+## Usage
+
+Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
+
+```jsx live
+<Box textSM textLG--sm text4XL--md text6XL--lg>
+  Lorem ipsum dolor sit amet
+</Box>
+```

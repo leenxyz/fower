@@ -1,0 +1,88 @@
+---
+id: design-system-colors
+sidebar_label: Colors
+title: Colors
+---
+
+import { Colors } from '@site/src/components/Colors'
+
+## Text Color
+
+Set text color use `{colorName}` in theme.
+
+```jsx live
+<Text text2XL green500 fontBold>
+  Hello
+</Text>
+```
+
+## Background Color
+
+Set background color use `bg{colorName}` in theme.
+
+```jsx live
+<Box bgOrange300 orange700 toCenter square-100 textXL>
+  Hello
+</Box>
+```
+
+## Border Color
+
+Set border color use `border{colorName}` in theme.
+
+```jsx live
+<Box toEvenly>
+  <Box toCenter p4 border-2 borderPurple500>
+    borderPurple500
+  </Box>
+  <Box toCenter p4 border-2 borderTeal500>
+    borderTeal500
+  </Box>
+  <Box toCenter p4 border-2 borderCyan500>
+    borderCyan500
+  </Box>
+  <Box toCenter p4 border-2 borderAmber500>
+    borderAmber500
+  </Box>
+</Box>
+```
+
+## Customize theme color
+
+You can customize theme color with `setTheme`:
+
+```jsx
+setTheme({
+  colors: {
+    brandLight: '#e0f2fe',
+    brandLighter: '#bae6fd',
+    brandLightest: '#7dd3fc',
+    brandPrimary: '#38bdf8',
+    brandDark: '#0ea5e9',
+    brandDarker: '#0284c7',
+    brandDarkest: '#0369a1',
+  },
+})
+```
+
+Then you can use it with text color, background color, border color:
+
+```jsx live
+<Box toEvenly>
+  <Box toCenter p4 brandPrimary>
+    Text color
+  </Box>
+  <Box toCenter p4 bgBrandLighter brandDarkest>
+    Background color
+  </Box>
+  <Box toCenter p4 border-2 borderBrandDark>
+    Border color
+  </Box>
+</Box>
+```
+
+## Color palettes
+
+Styli preset colors，borrow from tailwindcss color.
+
+<Colors />

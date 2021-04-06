@@ -4,32 +4,38 @@ sidebar_label: Pseudo classes
 title: 伪类
 ---
 
-Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
+Each Atomic Props of Styli supports CSS pseudo-classes. The format of the Atomic Props that enable Pseudo-classes style is: `{prop}--{pseudo}`, for example: `bgRed400--hover`, `bgYellow500--active`, `opacity-70--disabled`, `w-20--visited`, etc.
 
 ## Hover
 
+Use `--hover` postfix to apply hover style.
+
 ```jsx live
-<Button bgRed300 bgRed400--hover red800 p4 rounded-10 border="none">
+<Button bgRed300 bgRed400--hover red800 p4 rounded-10>
   Hover me
 </Button>
 ```
 
 ## Active
 
+Use `--active` postfix to apply active style.
+
 ```jsx live
-<Button bgYellow300 bgYellow500--active yellow800 p4 rounded-10 border="none">
+<Button bgYellow300 bgYellow500--active yellow800 p4 rounded-10>
   Click Me
 </Button>
 ```
 
 ## Disabled
 
+Use `--disabled` postfix to apply disabled style.
+
 ```jsx live
 <Box toCenter>
-  <Button bgRed300 red800 p4 rounded-10 border="none" mr-20>
+  <Button bgRed300 red800 p4 rounded-10 mr-20>
     Normal
   </Button>
-  <Button disabled bgRed300 opacity-70--disabled red800 p4 rounded-10 border="none">
+  <Button disabled bgRed300 opacity-70--disabled red800 p4 rounded-10>
     Disabled
   </Button>
 </Box>
@@ -37,11 +43,16 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ## Focus
 
+Use `--focus` postfix to apply focus style.
+
 ```jsx live
 <Input bgGray200 outlineNone bgWhite--focus p2 border borderRed400--focus />
 ```
 
 ## Child
+
+Use `--first-child` postfix to apply first-child style.
+Use `--last-child` postfix to apply last-child style.
 
 ```jsx live
 <Box>
@@ -53,7 +64,7 @@ Styli 的每个原子属性(Atomic Props) 都支持 CSS 伪类。
 
 ## 支持的伪类
 
-Styli 支持下面所有伪类：
+By default, Styli supports these pseudo classes:
 
 - active
 - checked
@@ -74,6 +85,16 @@ Styli 支持下面所有伪类：
 - placeholder
 - selection
 
-## 关于体积
+If you want more pseudo classes, you can use `configure` to add it:
+
+```jsx
+import { configure } from '@styli/core'
+
+configure({
+  pseudos: ['focus-visible', 'blank'], // will merge to built-in pseudos
+})
+```
+
+## 关于文件大小
 
 Styli 每个原子属性(Atomic Props) 都支持 CSS 伪类，并且支持了 18 常用的伪类。你可能会有疑问，这会不会导致 Styli 包的代码体积爆炸，答案是不会。传统的的 CSS 方案，如果要让每个 CSS 类支持伪类，需要大量的 CSS 代码，因为 CSS 不具备编程性，它只能通过枚举的方式堆积代码。得益于 JS 的灵活性，Styli 只需几十行代码即可让所以原子属性支持伪类。

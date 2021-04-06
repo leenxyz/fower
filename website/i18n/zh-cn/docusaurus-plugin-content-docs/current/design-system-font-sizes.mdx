@@ -1,0 +1,49 @@
+---
+id: design-system-font-sizes
+sidebar_label: Font sizes
+title: Font sizes
+---
+
+Styli provides a set of preset Font sizes values.
+
+```jsx
+const config = {
+  theme: {
+    fontSizes: {
+      xs: 12,
+      sm: 14,
+      base: 16,
+      lg: 18,
+      xl: 20,
+      '2xl': 24,
+      '3xl': 30,
+      '4xl': 36,
+      '5xl': 48,
+      '6xl': 60,
+      '7xl': 72,
+      '8xl': 96,
+      '9xl': 128,
+    },
+  },
+}
+```
+
+## Customize Font size
+
+You can customize Font size with `setTheme`:
+
+```jsx
+setTheme({
+  fontSizes: {
+    body: 14,
+  },
+})
+```
+
+Then you can use it as `textBody`:
+
+```jsx live
+<Box textBody red500>
+  Lorem ipsum dolor sit amet
+</Box>
+```

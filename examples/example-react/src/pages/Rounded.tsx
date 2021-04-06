@@ -1,7 +1,6 @@
 import { Box } from '@styli/react';
 
 export default () => {
-  return <Box square20 bgOrange400 rounded={10}></Box>;
   return (
     <Box toCenter h-100vh spaceX10>
       <Box square20 bgOrange400 rounded></Box>

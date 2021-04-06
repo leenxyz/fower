@@ -29,7 +29,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
 
   /** invalid prop */
   if (invalidProps.includes(propKey) || isBooleanFalse(propValue)) {
-    return { ...atom, isValid: false }
+    return { ...atom, isValid: false, handled: true }
   }
 
   /** handle value like: red500--T40, #666--O30 */

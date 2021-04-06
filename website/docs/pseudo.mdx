@@ -18,6 +18,8 @@ Use `--hover` postfix to apply hover style.
 
 ## Active
 
+Use `--active` postfix to apply active style.
+
 ```jsx live
 <Button bgYellow300 bgYellow500--active yellow800 p4 rounded-10>
   Click Me
@@ -25,6 +27,8 @@ Use `--hover` postfix to apply hover style.
 ```
 
 ## Disabled
+
+Use `--disabled` postfix to apply disabled style.
 
 ```jsx live
 <Box toCenter>
@@ -39,11 +43,16 @@ Use `--hover` postfix to apply hover style.
 
 ## Focus
 
+Use `--focus` postfix to apply focus style.
+
 ```jsx live
 <Input bgGray200 outlineNone bgWhite--focus p2 border borderRed400--focus />
 ```
 
 ## Child
+
+Use `--first-child` postfix to apply first-child style.
+Use `--last-child` postfix to apply last-child style.
 
 ```jsx live
 <Box>
@@ -53,9 +62,9 @@ Use `--hover` postfix to apply hover style.
 </Box>
 ```
 
-## 支持的伪类
+## Supported pseudo classes
 
-Styli 支持下面所有伪类：
+By default, Styli supports these pseudo classes:
 
 - active
 - checked
@@ -75,6 +84,16 @@ Styli 支持下面所有伪类：
 - before
 - placeholder
 - selection
+
+If you want more pseudo classes, you can use `configure` to add it:
+
+```jsx
+import { configure } from '@styli/core'
+
+configure({
+  pseudos: ['focus-visible', 'blank'], // will merge to built-in pseudos
+})
+```
 
 ## About file size
 

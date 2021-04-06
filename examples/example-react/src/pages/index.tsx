@@ -2,8 +2,44 @@ import { Box, injectGlobalStyle } from '@styli/react';
 import { configure, setTheme, styli } from '@styli/core';
 import { useState } from 'react';
 import { styled } from '@styli/styled';
+import { Link } from 'umi';
 
 const Button = styled('button');
+
+const pages = [
+  'background',
+  'CSSProp',
+  'Flex',
+  'LayoutEngine',
+  'Opacity',
+  'Position',
+  'Shadow',
+  'TextSize',
+  'popper',
+  'Border',
+  'Color',
+  'FlexBox',
+  'Leading',
+  'OutLine',
+  'Pseudo',
+  'Size',
+  'Width',
+  'Box',
+  'Cursor',
+  'FontWeight',
+  'Margin',
+  'Overflow',
+  'Responsive',
+  'Space',
+  'ZIndex',
+  'BoxAlignment',
+  'Display',
+  'Grid',
+  'Nested',
+  'Padding',
+  'Rounded',
+  'TextAlignment',
+];
 
 // injectGlobalStyle({
 //   '*': {},
@@ -95,22 +131,11 @@ declare module '@styli/types' {
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
-    <Box textSM textLG--sm text2XL--md text4XL--lg>
-      Lorem ipsum dolor sit amet
-    </Box>
-  );
-  return (
     <div>
-      <Box
-        // brandDarker
-        green300--i--hover
-        toCenter
-        gray500--dark
-        // bgBrandPrimray
-        border
-        borderBrandPrimary
-      >
-        test TExt
+      <Box green300--i--hover toCenter gray500--dark spaceX2>
+        {pages.map((i) => (
+          <Link to={'/' + i}>{i}</Link>
+        ))}
       </Box>
       <Box
         as="button"
@@ -126,10 +151,6 @@ export default function IndexPage() {
         切换 {colorMode}
       </Box>
 
-      {/* <Box red500 bgAmber100 bgRed100--hover p-10 p-40--sm p-60--md p6--hover>
-        gogo
-      </Box> */}
-
       <Box as="h2" spaceX4 row debugChildren>
         <Box>BB</Box>
         <Box>BB</Box>
@@ -137,46 +158,6 @@ export default function IndexPage() {
         <Box>BB</Box>
         <Box>BB</Box>
       </Box>
-
-      {/* <Box as="h2" red500 p4 color="colorHello">
-          gogo
-        </Box> */}
-      {/* <Box
-        as="h2"
-        rounded3XL
-        // roundedSM--hover
-        pt1
-        pb1
-        m10
-        gray400--hover
-        blue400--dark
-        css={{
-          backgroundColor: 'bisque',
-          // padding: 20,
-          padding: '20px',
-          ':hover': {
-            backgroundColor: 'yellow',
-          },
-          '.child': {
-            color: 'white',
-            ':hover': {
-              color: '#ddd',
-            },
-            '.two': {
-              color: 'red',
-              ':hover': {
-                color: '#999',
-              },
-            },
-          },
-        }}
-      >
-        SubTitle
-        <Box pt1 pb1 m10 className="child">
-          Child
-          <Box className="two">two</Box>
-        </Box>
-      </Box> */}
     </div>
   );
 }
