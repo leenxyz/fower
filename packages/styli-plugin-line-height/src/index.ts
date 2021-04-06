@@ -6,11 +6,12 @@ export function isMatch(key: string) {
   return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
 }
 
-export function toStyle(value: any): any {
+export function toStyle(key: string, value: any): any {
   if (isValueProp(value)) return { lineHeight: value }
 
   const lineHeights: any = styli.getTheme().lineHeights
-  const presetValue = lineHeights[downFirst(value)]
+  const type = key.replace(/^leading/, '')
+  const presetValue = lineHeights[downFirst(type)]
 
   if (presetValue) return { lineHeight: presetValue }
 
@@ -21,7 +22,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = toStyle(atom.value)
+      atom.style = toStyle(atom.key, atom.value)
       return atom
     },
   }

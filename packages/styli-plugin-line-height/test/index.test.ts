@@ -20,16 +20,30 @@ describe('styli-plugin-line-height', () => {
   })
 
   it('handleAtom', () => {
-    const atom1 = { propKey: 'leading', propValue: 10 } as Atom
-    const newAtom1 = { propKey: 'leading', propValue: 10, style: { lineHeight: 10 } }
-    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
-
-    const atom2 = { propKey: 'leading-20', propValue: true } as Atom
-    const newAtom2 = { propKey: 'leading-20', propValue: true, style: { lineHeight: '20' } }
-    expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
-
-    const atom3 = { propKey: 'leadingNone', propValue: true } as Atom
-    const newAtom3 = { propKey: 'leadingNone', propValue: true, style: { lineHeight: 1 } }
+    const atom3 = new Atom({
+      propKey: 'leadingNone',
+      propValue: true,
+    })
+    const newAtom3 = new Atom({
+      propKey: 'leadingNone',
+      propValue: true,
+      style: {
+        lineHeight: 1,
+      },
+    })
     expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
+  })
+
+  it('handleAtom with leading={value}', () => {
+    const atom1 = new Atom({
+      propKey: 'leading',
+      propValue: 10,
+    })
+    const newAtom1 = new Atom({
+      propKey: 'leading',
+      propValue: 10,
+      style: { lineHeight: 10 },
+    })
+    expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
   })
 })

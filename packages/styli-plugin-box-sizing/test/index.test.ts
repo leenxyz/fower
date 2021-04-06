@@ -15,49 +15,49 @@ describe('styli-plugin-box-sizing', () => {
   describe('handleAtom', () => {
     // <View boxSizing="border-box"></View>
     it('boxSizing', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'boxSizing',
         propValue: 'border-box',
         style: {},
-      } as Atom
+      })
 
-      const newAtom = {
+      const newAtom = new Atom({
         propKey: 'boxSizing',
         propValue: 'border-box',
         style: { boxSizing: 'border-box' },
-      }
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View borderBox></View>
     it('borderBox', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'borderBox',
         propValue: true,
         style: {},
-      } as Atom
+      })
 
-      const newAtom = {
+      const newAtom = new Atom({
         propKey: 'borderBox',
         propValue: true,
         style: { boxSizing: 'border-box' },
-      }
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
 
     // <View contentBox></View>
     it('contentBox', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'contentBox',
         propValue: true,
         style: {},
-      } as Atom
+      })
 
-      const newAtom = {
+      const newAtom = new Atom({
         propKey: 'contentBox',
         propValue: true,
         style: { boxSizing: 'content-box' },
-      }
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
   })

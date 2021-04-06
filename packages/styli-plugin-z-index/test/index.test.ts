@@ -14,16 +14,26 @@ describe('styli-plugin-z-index', () => {
   })
 
   it('handleAtom', () => {
-    const atom1 = { propKey: 'zIndex', propValue: '10' } as Atom
-    const newAtom1 = { propKey: 'zIndex', propValue: '10', style: { zIndex: '10' } }
+    const atom1 = new Atom({
+      propKey: 'zIndex',
+      propValue: '10',
+    })
+    const newAtom1 = new Atom({
+      propKey: 'zIndex',
+      propValue: '10',
+      style: { zIndex: '10' },
+    })
     expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom4 = { propKey: 'zIndex', propValue: '-1' } as Atom
-    const newAtom4 = {
+    const atom4 = new Atom({
+      propKey: 'zIndex',
+      propValue: '-1',
+    })
+    const newAtom4 = new Atom({
       propKey: 'zIndex',
       propValue: '-1',
       style: { zIndex: '-1' },
-    }
+    })
     expect(handleAtom!(atom4, parser)).toMatchObject(newAtom4)
   })
 })

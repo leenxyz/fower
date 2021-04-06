@@ -17,8 +17,11 @@ describe('styli-plugin-ellipsis', () => {
   })
 
   it('handleAtom', () => {
-    const atom1 = { propKey: 'ellipsis', propValue: true } as Atom
-    const newAtom1 = {
+    const atom1 = new Atom({
+      propKey: 'ellipsis',
+      propValue: true,
+    })
+    const newAtom1 = new Atom({
       propKey: 'ellipsis',
       propValue: true,
       style: {
@@ -27,11 +30,14 @@ describe('styli-plugin-ellipsis', () => {
         overflow: 'hidden',
         whiteSpace: 'nowrap',
       },
-    }
+    })
     expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'ellipsis1', propValue: true } as Atom
-    const newAtom2 = {
+    const atom2 = new Atom({
+      propKey: 'ellipsis1',
+      propValue: true,
+    })
+    const newAtom2 = new Atom({
       propKey: 'ellipsis1',
       propValue: true,
       style: {
@@ -40,11 +46,11 @@ describe('styli-plugin-ellipsis', () => {
         overflow: 'hidden',
         whiteSpace: 'nowrap',
       },
-    }
+    })
     expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
-    const atom3 = { propKey: 'ellipsis-300', propValue: true } as Atom
-    const newAtom3 = {
+    const atom3 = new Atom({ propKey: 'ellipsis-300', propValue: true })
+    const newAtom3 = new Atom({
       propKey: 'ellipsis-300',
       propValue: true,
       style: {
@@ -53,11 +59,11 @@ describe('styli-plugin-ellipsis', () => {
         overflow: 'hidden',
         whiteSpace: 'nowrap',
       },
-    }
+    })
     expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
 
-    const atom4 = { propKey: 'ellipsis2', propValue: true } as Atom
-    const newAtom4 = {
+    const atom4 = new Atom({ propKey: 'ellipsis2', propValue: true })
+    const newAtom4 = new Atom({
       propKey: 'ellipsis2',
       propValue: true,
       style: {
@@ -67,11 +73,11 @@ describe('styli-plugin-ellipsis', () => {
         overflow: 'hidden',
         WebkitLineClamp: 2,
       },
-    }
+    })
     expect(handleAtom!(atom4, parser)).toMatchObject(newAtom4)
 
-    const atom5 = { propKey: 'ellipsis6-500', propValue: true } as Atom
-    const newAtom5 = {
+    const atom5 = new Atom({ propKey: 'ellipsis6-500', propValue: true })
+    const newAtom5 = new Atom({
       propKey: 'ellipsis6-500',
       propValue: true,
       style: {
@@ -81,7 +87,7 @@ describe('styli-plugin-ellipsis', () => {
         overflow: 'hidden',
         WebkitLineClamp: 6,
       },
-    }
+    })
     expect(handleAtom!(atom5, parser)).toMatchObject(newAtom5)
   })
 })

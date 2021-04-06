@@ -12,7 +12,6 @@ describe('styli-plugin-outline', () => {
     expect(isMatch!('outlinenone')).toEqual(true)
     expect(isMatch!('outlineOffset')).toEqual(true)
     expect(isMatch!('outlineoffset')).toEqual(true)
-    expect(isMatch!('outlineoffset-10')).toEqual(true)
   })
 
   it('handleAtom', () => {
@@ -43,20 +42,6 @@ describe('styli-plugin-outline', () => {
       key: 'outlineNone',
     })
     expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
-
-    const atom3 = new Atom({
-      propKey: 'outlineOffset-2px',
-      propValue: true,
-      key: 'outlineOffset-2px',
-      style: {},
-    })
-    const newAtom3 = new Atom({
-      propKey: 'outlineOffset-2px',
-      propValue: true,
-      style: { outlineOffset: '2px' },
-      key: 'outlineOffset-2px',
-    })
-    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
 
     const atom4 = new Atom({
       propKey: 'outlineOffset',

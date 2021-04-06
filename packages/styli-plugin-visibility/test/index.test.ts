@@ -13,17 +13,17 @@ describe('styli-plugin-visibility', () => {
   describe('handleAtom', () => {
     // <View boxSizing="border-box"></View>
     it('visibility', () => {
-      const atom = {
+      const atom = new Atom({
         propKey: 'visibility',
         propValue: 'hidden',
         style: {},
-      } as Atom
+      })
 
-      const newAtom = {
+      const newAtom = new Atom({
         propKey: 'visibility',
         propValue: 'hidden',
         style: { visibility: 'hidden' },
-      }
+      })
       expect(handleAtom!(atom, parser)).toMatchObject(newAtom)
     })
   })

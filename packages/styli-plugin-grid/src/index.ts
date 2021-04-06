@@ -5,19 +5,15 @@ function isMatch(key: string) {
   return /^(row|column)?Gap(-.+)?$|^gridTemplateColumns(-.+)?$/i.test(key)
 }
 
-function toStyle(propKey: string, value: any): any {
+function toStyle(key: string, value: any): any {
   const style: any = {}
 
-  if (propKey.startsWith('gridTemplateColumns')) {
-    const [, styleValue] = propKey.split('-')
-    let columnsValue: number = styleValue || value
-    style.gridTemplateColumns = `repeat(${columnsValue}, minmax(0px, 1fr))`
+  if (key.startsWith('gridTemplateColumns')) {
+    style.gridTemplateColumns = `repeat(${value}, minmax(0px, 1fr))`
   }
 
-  if (/^(row|column)?Gap(-.+)?$/i.test(propKey)) {
-    const [key, value] = propKey.split('-')
-    const gapValue = value ? value : value
-    style[downFirst(key)] = gapValue
+  if (/^(row|column)?Gap(-.+)?$/i.test(key)) {
+    style[downFirst(key)] = value
   }
 
   return style

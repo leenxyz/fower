@@ -13,8 +13,16 @@ describe('styli-plugin-cursor', () => {
   })
 
   it('handleAtom', () => {
-    const atom1 = { propKey: 'cursor', propValue: 'pointer', key: 'cursor' } as Atom
-    const newAtom1 = { propKey: 'cursor', propValue: 'pointer', style: { cursor: 'pointer' } }
+    const atom1 = new Atom({
+      propKey: 'cursor',
+      propValue: 'pointer',
+      key: 'cursor',
+    })
+    const newAtom1 = new Atom({
+      propKey: 'cursor',
+      propValue: 'pointer',
+      style: { cursor: 'pointer' },
+    })
     expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
     const atom2 = new Atom({
@@ -28,8 +36,15 @@ describe('styli-plugin-cursor', () => {
     })
     expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
 
-    const atom3 = { propKey: 'cursornone', propValue: true } as Atom
-    const newAtom3 = { propKey: 'cursornone', propValue: true, style: { cursor: 'none' } }
+    const atom3 = new Atom({
+      propKey: 'cursornone',
+      propValue: true,
+    })
+    const newAtom3 = new Atom({
+      propKey: 'cursornone',
+      propValue: true,
+      style: { cursor: 'none' },
+    })
     expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

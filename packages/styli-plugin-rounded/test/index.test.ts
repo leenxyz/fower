@@ -16,7 +16,6 @@ describe('styli-plugin-rouned', () => {
     const atom1 = new Atom({
       propKey: 'rounded',
       propValue: 10,
-      key: 'rounded',
       style: {},
     })
     const newAtom1 = new Atom({

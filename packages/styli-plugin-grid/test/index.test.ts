@@ -15,26 +15,22 @@ describe('styli-plugin-grid', () => {
   })
 
   it('handleAtom', () => {
-    const atom1 = { propKey: 'gridTemplateColumns', propValue: 1 } as Atom
-    const newAtom1 = {
+    const atom1 = new Atom({ propKey: 'gridTemplateColumns', propValue: 1 })
+    const newAtom1 = new Atom({
       propKey: 'gridTemplateColumns',
       propValue: 1,
       style: {
         gridTemplateColumns: 'repeat(1, minmax(0px, 1fr))',
       },
-    }
+    })
     expect(handleAtom!(atom1, parser)).toMatchObject(newAtom1)
 
-    const atom2 = { propKey: 'rowGap', propValue: 1 } as Atom
-    const newAtom2 = { propKey: 'rowGap', propValue: 1, style: { rowGap: 1 } }
+    const atom2 = new Atom({ propKey: 'rowGap', propValue: 1 })
+    const newAtom2 = new Atom({
+      propKey: 'rowGap',
+      propValue: 1,
+      style: { rowGap: 1 },
+    })
     expect(handleAtom!(atom2, parser)).toMatchObject(newAtom2)
-
-    const atom3 = { propKey: 'rowGap-1', propValue: true } as Atom
-    const newAtom3 = {
-      propKey: 'rowGap-1',
-      propValue: true,
-      style: { rowGap: '1' },
-    }
-    expect(handleAtom!(atom3, parser)).toMatchObject(newAtom3)
   })
 })

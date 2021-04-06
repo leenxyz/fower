@@ -2,16 +2,6 @@ import { Box } from '@styli/react';
 
 export default function Demo() {
   return (
-    <Box leading-20px mb-20>
-      <Box gray600 textSM mb-4>
-        leadingNone
-      </Box>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia
-      temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium
-      modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.
-    </Box>
-  );
-  return (
     <Box textBase borderGray200-1 p-20>
       <Box leading-20px mb-20>
         <Box gray600 textSM mb-4>
