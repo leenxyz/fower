@@ -29,11 +29,6 @@ describe('styli-utils', () => {
     expect(isNumber('12.3')).toEqual(true)
   })
 
-  it('isValueProp', () => {
-    expect(isValueProp('aBc')).toEqual(true)
-    expect(isValueProp(true)).toEqual(false)
-  })
-
   it('isEmptyObj', () => {
     expect(isEmptyObj({})).toEqual(true)
     expect(isEmptyObj(null)).toEqual(true)

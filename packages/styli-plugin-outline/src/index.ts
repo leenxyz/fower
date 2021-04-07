@@ -1,5 +1,5 @@
+import { Atom } from '@styli/atom'
 import { StyliPlugin } from '@styli/types'
-import { isValueProp } from '@styli/utils'
 
 export function isMatch(key: string) {
   return key === 'outline' || isOutLineNone(key) || isOutLineOffset(key)
@@ -13,18 +13,18 @@ function isOutLineOffset(key: string) {
   return /^outlineOffset$/i.test(key)
 }
 
-export function toStyle(key: string, value: any): any {
+export function toStyle({ key, value, isValueProp }: Atom): any {
   if (isOutLineNone(key)) return { outline: 'none' }
   if (isOutLineOffset(key)) return { outlineOffset: value }
 
-  return { outline: isValueProp(value) ? value : 'none' }
+  return { outline: isValueProp ? value : 'none' }
 }
 
 export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.value)
+      atom.style = toStyle(atom)
       return atom
     },
   }

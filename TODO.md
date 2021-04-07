@@ -35,26 +35,8 @@ function Demo() {
 }
 ```
 
-- createAtomicProps()
-
-```jsx
-createAtomicProps({
-  display(value) {
-    return {
-      display: value,
-    }
-  },
-})
-```
-
-- `setTheme` Api
-
-```js
-setTheme({
-  colors: {
-    primay100: '#eaa349',
-  },
-})
-```
-
-- Docs for API
+- 可读性和可维护性
+- 样式顺序如何保证，比如 red400,blue400 到底是什么颜色?
+- themeability
+- type css var
+- 可访问性

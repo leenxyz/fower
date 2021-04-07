@@ -27,15 +27,6 @@ export function isBooleanFalse(value: any) {
 }
 
 /**
- * string or number prop
- * @param value
- * @returns
- */
-export function isValueProp(value: any) {
-  return typeof value === 'string' || typeof value == 'number'
-}
-
-/**
  * number type string or number
  * @param value
  * @returns

@@ -79,6 +79,15 @@ export class Atom {
     this.id = options.id || id
   }
 
+  /**
+   * string or number prop
+   * @readonly
+   * @memberof Atom
+   */
+  get isValueProp() {
+    return typeof this.propValue === 'string' || typeof this.propValue == 'number'
+  }
+
   meta: Meta
 
   /**
