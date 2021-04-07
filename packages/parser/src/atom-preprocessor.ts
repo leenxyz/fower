@@ -8,7 +8,6 @@ const connector = '--'
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
 export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
-  // let atom = { ...atom }
   const { plugins = [], pseudos = [] } = styli.config
 
   const { propKey, propValue } = atom
@@ -48,9 +47,11 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   const isImportant = regImportant.test(propKey)
   const isColorPostfix = regColorPostfix.test(propKey)
 
+  const { spacings } = styli.getTheme() || {}
+
   if (!isMode && !isPseudo && !isResponsive && !isImportant && !isColorPostfix) {
     // handle spacing directly
-    return digitPreprocessor(atom, styli)
+    return digitPreprocessor(atom, spacings)
   }
 
   const result = propKey.split(connector)
@@ -81,10 +82,10 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   }
 
   // check is theme space key, if yes, preprocess it
-  atom = digitPreprocessor(atom, styli)
+  atom = digitPreprocessor(atom, spacings)
 
   /** handle style */
-  const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))
+  const plugin = plugins.find((i: any) => i.isMatch!(atom.key))
   if (plugin) {
     atom = plugin.handleAtom!({ ...atom, key: atom.key }, parser)
     atom.style = atom.style

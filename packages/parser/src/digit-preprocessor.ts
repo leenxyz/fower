@@ -4,7 +4,7 @@ import { Atom } from '@styli/atom'
  * @example p2,mx4,left10,spaceX4...
  * @example p-20,opacity-80
  */
-const digitReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zindex|leading|fontWeight|flex|rowGap|columnGap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)-?-?\d+[a-z]*?$/i
+export const digitReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zindex|leading|fontWeight|flex|rowGap|columnGap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)-?-?\d+[a-z]*?$/i
 
 /**
  * TODO: need test
@@ -12,9 +12,7 @@ const digitReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|sq
  * @param styli
  * @returns
  */
-export function digitPreprocessor(atom: Atom, styli: any): Atom {
-  const { propKey } = atom
-
+export function digitPreprocessor(atom: Atom, spacings: any): Atom {
   if (!digitReg.test(atom.key)) return atom
 
   // is theme space key
@@ -30,14 +28,11 @@ export function digitPreprocessor(atom: Atom, styli: any): Atom {
   const keyStr = atom.key.toString()
   const result = keyStr.match(/^([a-z]+)(\d+)$/i) || keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i)
 
-  if (!result) return atom
-
-  const [, newKey, newPropValue] = result
-  const { spacings } = styli.getTheme()
+  const [, newKey, newPropValue] = result!
 
   atom.key = newKey
   atom.value = isSpace ? spacings[newPropValue] : newPropValue
-  atom.className = propKey
+  // atom.className = propKey
 
   return atom
 }

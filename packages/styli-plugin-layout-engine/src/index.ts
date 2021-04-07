@@ -60,7 +60,7 @@ export function isMatch(key: string) {
  * @param props
  * @returns
  */
-export function alignmentPropToStyle(key: string, props: any) {
+export function toStyle(key: string, props: any) {
   if (key === 'direction') return
   const direction = getFlexDirection(props)
   const style: any = {}
@@ -112,7 +112,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom, parser) {
-      atom.style = alignmentPropToStyle(atom.key, parser.props)
+      atom.style = toStyle(atom.key, parser.props)
 
       if ([row, column].includes(atom.propKey)) {
         atom.isValid = false
