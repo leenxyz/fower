@@ -89,6 +89,18 @@ export class Atom {
     return typeof this.propValue === 'string' || typeof this.propValue == 'number'
   }
 
+  /**
+   * get style key hash
+   * @readonly
+   * @memberof Atom
+   * @example
+   * { color: "#999"} -> color
+   * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop
+   */
+  get styleKeysHash() {
+    return Object.keys(this.style).join('-')
+  }
+
   meta: Meta
 
   /**

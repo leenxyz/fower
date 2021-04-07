@@ -251,7 +251,27 @@ export class Parser {
    * get component classNames
    */
   getClassNames(extraClassName: string = ''): string[] {
-    const classNames = this.atoms.map((i) => i.className)
+    /**
+     * handle override style
+     * @example
+     * <Box class="red200 blue200"></Box> will get <div class="blue200"></div>
+     * <Box class="px2 px4"></Box> will get <div class="px4"></div>
+     */
+    let classNames: string[] = []
+    this.atoms.reduce<Atom[]>((result, cur) => {
+      const index = result.findIndex((i) => i.styleKeysHash === cur.styleKeysHash)
+
+      if (index === -1) {
+        classNames.push(cur.className)
+        result = [...result, cur]
+      } else {
+        result.splice(index, 1, cur)
+        classNames.splice(index, 1, cur.className)
+      }
+
+      return result
+    }, [])
+
     if (extraClassName) classNames.push(extraClassName)
     if (this.hasResponsive) classNames.unshift(this.uniqueClassName)
     return classNames

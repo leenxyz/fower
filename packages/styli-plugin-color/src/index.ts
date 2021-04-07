@@ -1,7 +1,7 @@
 import { styli } from '@styli/core'
 import { StyliPlugin } from '@styli/types'
 
-export function isColorKey(key: string) {
+export function isMatch(key: string) {
   if (key === 'color') return true
 
   // color in theme
@@ -11,7 +11,7 @@ export function isColorKey(key: string) {
 
 export default (): StyliPlugin => {
   return {
-    isMatch: isColorKey,
+    isMatch,
     handleAtom(atom) {
       const { key, value } = atom
       atom.style = {
