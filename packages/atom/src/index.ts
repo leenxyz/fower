@@ -55,17 +55,17 @@ interface Meta {
 }
 
 export class Atom {
-  constructor(options = {} as Options) {
-    this.propKey = options.propKey ?? ''
+  constructor(options: Options) {
+    this.propKey = options.propKey
     this.propValue = options.propValue
 
     this.key = options.key || this.propKey
     this.value = options.propValue || this.propValue
 
     this.style = options.style
-    this.className = options.className ?? ''
+    this.className = options.className || ''
 
-    this.handled = options.handled ?? false
+    this.handled = options.handled || false
     this.inserted = false
     this.isValid = true
 
@@ -101,12 +101,22 @@ export class Atom {
     return Object.keys(this.style || {}).join('-')
   }
 
-  meta: Meta
+  /**
+   * original propKey, 原始的propkey
+   * @example
+   * <Box red200></Box> propKey is red200
+   * <Box red200--hover></Box> propKey is red200--hover
+   */
+  readonly propKey: 'css' | 'debug' | ({} & string)
 
   /**
-   * unique id for cache
+   * original propValue
+   * @example
+   * <Box red200></Box>  -> true
+   * <Box p={10}></Box>  -> 10
+   * <Box color="red"></Box>  -> red
    */
-  id: string = ''
+  readonly propValue: any
 
   /**
    * get the primitive atomic key, exclude value or posfix
@@ -130,15 +140,12 @@ export class Atom {
    */
   value: string = ''
 
-  /**
-   * original propKey, 原始的propkey
-   * @example
-   * <Box red200></Box> propKey is red200
-   * <Box red200--hover></Box> propKey is red200--hover
-   */
-  readonly propKey: 'css' | 'debug' | ({} & string)
+  meta: Meta
 
-  readonly propValue: any
+  /**
+   * unique id for cache
+   */
+  id: string = ''
 
   style: CSS.Properties<number | string>
 
