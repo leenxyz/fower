@@ -115,7 +115,7 @@ declare namespace StyliTypes {
     pseudos?: string[]
     theme: Theme
     plugins: StyliPlugin[]
-    transformUnit(data: string | number): string
+    transformUnit?: (data: string | number) => string
   }
 
   interface Props {

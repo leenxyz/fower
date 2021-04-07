@@ -1,10 +1,17 @@
 import { Box } from '@styli/react';
-import { configure, setTheme, styli, injectGlobalStyle } from '@styli/core';
+import {
+  createStyle,
+  configure,
+  setTheme,
+  styli,
+  injectGlobalStyle,
+} from '@styli/core';
 import { useState } from 'react';
 import { styled } from '@styli/styled';
 import { Link } from 'umi';
 
 const Button = styled('button');
+console.log('createStyle:', createStyle('p1 m-4'));
 
 const pages = [
   'background',
@@ -59,6 +66,7 @@ injectGlobalStyle({
 });
 
 configure({
+  inline: true,
   pseudos: ['hover'],
 });
 

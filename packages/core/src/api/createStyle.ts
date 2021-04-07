@@ -4,7 +4,7 @@ import { Parser } from '@styli/parser'
 import { styli } from '../styli'
 
 export function createStyle(...args: (string | CSSProperties)[]): CSSProperties {
-  return args.reduce((result, cur) => {
+  return args.reduce<any>((result, cur) => {
     if (typeof cur === 'string') {
       const props = modifierToProps(cur)
       const parser = new Parser(props, styli.getTheme(), styli)
@@ -12,5 +12,5 @@ export function createStyle(...args: (string | CSSProperties)[]): CSSProperties 
       return { ...result, ...style }
     }
     return { ...result, ...cur }
-  }, {} as any)
+  }, {})
 }

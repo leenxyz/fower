@@ -1,4 +1,4 @@
-import { deepmerge, downFirst } from '@styli/utils'
+import { deepmerge } from '@styli/utils'
 import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
 import { PartialDeep } from 'type-fest'
 import { SetThemeParams } from './types'
@@ -9,11 +9,13 @@ class Styli {
   config = {
     unit: 'px',
     inline: false,
+    prefix: '',
+    pseudos: [],
+    theme: {
+      breakpoints: {},
+      modes: [] as string[],
+    } as Theme,
     plugins: [],
-    theme: {} as Theme,
-    transformUnit: (value: string | number) => {
-      return '' + value + this.config.unit
-    },
   } as Configuration
 
   // user config
@@ -39,19 +41,6 @@ class Styli {
     return this.getTheme().colors
   }
 
-  /**
-   * #444--D30 -> ['#444', 'D30']
-   * @param value
-   * @returns
-   */
-  extractColor = (value: string, colors?: any): [string, string] => {
-    colors = colors ? colors : this.getColors()
-    const [prefix, postfix] = (value || '').split('-') || []
-    const colorName = downFirst(prefix)
-    const color = colors[colorName] || prefix
-    return [color, postfix]
-  }
-
   use = (...plugins: StyliPlugin[]) => {
     this.config.plugins.push(...plugins)
   }
@@ -59,7 +48,7 @@ class Styli {
   registerAtomicProps = (
     matcher: string | RegExp,
     handleAtomOrStyleObject: StyliPlugin['handleAtom'] | CSSObject,
-  ) => {
+  ): StyliPlugin => {
     const plugin: StyliPlugin = {
       isMatch(key: string) {
         if (typeof matcher === 'string') return key === matcher
@@ -75,6 +64,7 @@ class Styli {
             },
     }
     this.use(plugin)
+    return plugin
   }
 }
 

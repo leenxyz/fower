@@ -4,6 +4,11 @@ import { styleSheet } from '@styli/sheet'
 
 type Input = Record<string, CSSProperties>
 
+/**
+ * create keyframe style
+ * @param input
+ * @returns
+ */
 export function keyframes(input: Input): string {
   const content = Object.entries(input).reduce<string>((result, [key, value]) => {
     const str = Object.entries(value).reduce<string>((r, [k, v]) => {

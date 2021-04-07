@@ -176,6 +176,7 @@ export class Parser {
 
       try {
         this.mutateAtom(atom)
+
         if (atom.handled) this.addAtom(atom)
       } catch (error) {
         continue
@@ -281,10 +282,16 @@ export class Parser {
    * get style object
    */
   toStyles() {
-    return this.atoms.reduce((result, atom) => {
+    return this.atoms.reduce<any>((result, atom) => {
       if (!atom.isValid) return result // not style type
-      return { ...result, ...atom.style }
-    }, {} as any)
+      const style = Object.entries(atom.style).reduce<any>((c, [key, value]) => {
+        return {
+          ...c,
+          [key]: this.formatCssValue(jsKeyToCssKey(key), value),
+        }
+      }, {})
+      return { ...result, ...style }
+    }, {})
   }
 
   /**
