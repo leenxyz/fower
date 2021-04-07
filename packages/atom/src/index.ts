@@ -72,8 +72,9 @@ export class Atom {
     this.meta = {}
 
     const { propKey, propValue } = this
+
     const id =
-      typeof propValue === 'boolean'
+      typeof propValue === 'boolean' && propValue === true
         ? propKey
         : `${propKey}-${String(propValue).replace(/\s/g, '-')}`
     this.id = options.id || id
@@ -84,7 +85,7 @@ export class Atom {
    * @readonly
    * @memberof Atom
    */
-  get isValueProp() {
+  get isValueProp(): boolean {
     return typeof this.propValue === 'string' || typeof this.propValue == 'number'
   }
 

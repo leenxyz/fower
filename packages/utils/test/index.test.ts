@@ -3,7 +3,6 @@ import {
   downFirst,
   kebab,
   isNumber,
-  isValueProp,
   isEmptyObj,
   isPercentNumber,
   jsKeyToCssKey,

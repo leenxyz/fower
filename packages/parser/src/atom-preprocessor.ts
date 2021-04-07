@@ -29,7 +29,9 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
 
   /** invalid prop */
   if (invalidProps.includes(propKey) || isBooleanFalse(propValue)) {
-    return { ...atom, isValid: false, handled: true }
+    atom.isValid = false
+    atom.handled = true
+    return atom
   }
 
   /** handle value like: red500--T40, #666--O30 */
@@ -78,7 +80,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   }
 
   // check is theme space key, if yes, preprocess it
-  atom = digitPreprocessor({ ...atom, key: atom.key }, styli)
+  atom = digitPreprocessor(atom, styli)
 
   /** handle style */
   const plugin = plugins.find((i: any) => i.isMatch?.(atom.key))
