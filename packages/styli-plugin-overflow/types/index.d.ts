@@ -35,5 +35,29 @@ declare module '@styli/types' {
      * ```
      */
     overflowY?: CSS.Property.OverflowY | boolean
+
+    overflowAuto?: boolean
+
+    overflowHidden?: boolean
+
+    overflowVisible?: boolean
+
+    overflowScroll?: boolean
+
+    overflowXAuto?: boolean
+
+    overflowYAuto?: boolean
+
+    overflowXHidden?: boolean
+
+    overflowYHidden?: boolean
+
+    overflowXVisible?: boolean
+
+    overflowYVisible?: boolean
+
+    overflowXScroll?: boolean
+
+    overflowYScroll?: boolean
   }
 }
