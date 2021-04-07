@@ -1,6 +1,6 @@
 {
   "name": "styli-transform",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -22,9 +22,9 @@
     "@babel/parser": "^7.12.11",
     "@babel/traverse": "^7.12.10",
     "@babel/types": "^7.12.11",
-    "@styli/core": "^1.4.0",
-    "@styli/parser": "^1.4.0",
-    "@styli/types": "^1.4.0",
-    "@styli/utils": "^1.4.0"
+    "@styli/core": "^1.5.0",
+    "@styli/parser": "^1.5.0",
+    "@styli/types": "^1.5.0",
+    "@styli/utils": "^1.5.0"
   }
 }
