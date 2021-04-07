@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { objectToClassName } from '@styli/utils'
+import { objectToClassName, jsKeyToCssKey } from '@styli/utils'
 
 type CSSProperties = CSS.Properties<number | string>
 type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }
@@ -80,13 +80,14 @@ export function parse(cssObj: CSSObject): ParsedItem[] {
 function toRuleContent(style: Dict) {
   let str = ''
   for (const [key, value] of Object.entries(style)) {
-    str += `${key}: ${value}`
+    str += `${jsKeyToCssKey(key)}: ${value}`
   }
   return str
 }
 
 /**
  *  to rules can insertRule
+ *  TODO: need improve
  * @param cssObj
  * @param className
  * @returns

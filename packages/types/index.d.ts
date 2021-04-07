@@ -1,5 +1,4 @@
 import * as CSS from 'csstype'
-import { CSSProperties } from 'react'
 import { Atom } from '@styli/atom'
 import { Parser } from '@styli/parser'
 

@@ -1,5 +1,5 @@
-import { Box, injectGlobalStyle } from '@styli/react';
-import { configure, setTheme, styli } from '@styli/core';
+import { Box } from '@styli/react';
+import { configure, setTheme, styli, injectGlobalStyle } from '@styli/core';
 import { useState } from 'react';
 import { styled } from '@styli/styled';
 import { Link } from 'umi';
@@ -41,23 +41,22 @@ const pages = [
   'TextAlignment',
 ];
 
-// injectGlobalStyle({
-//   '*': {},
-//   body: {
-//     margin: '0',
-//     backgroundColor: 'red',
-//     ':hover': {
-//       backgroundColor: 'green',
-//     },
-//   },
-//   div: {
-//     backgroundColor: 'yellow',
-//     ':hover': {
-//       backgroundColor: 'blue',
-//     },
-//   },
-
-// });
+injectGlobalStyle({
+  '*': {},
+  // body: {
+  //   margin: '0',
+  //   backgroundColor: 'red',
+  //   ':hover': {
+  //     backgroundColor: 'green',
+  //   },
+  // },
+  div: {
+    // backgroundColor: 'yellow',
+    ':hover': {
+      // backgroundColor: 'blue',
+    },
+  },
+});
 
 configure({
   pseudos: ['hover'],
@@ -134,7 +133,9 @@ export default function IndexPage() {
     <div>
       <Box green300--i--hover toCenter gray500--dark spaceX2>
         {pages.map((i) => (
-          <Link to={'/' + i}>{i}</Link>
+          <Link key={i} to={'/' + i}>
+            {i}
+          </Link>
         ))}
       </Box>
       <Box

@@ -98,7 +98,7 @@ export class Atom {
    * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop
    */
   get styleKeysHash() {
-    return Object.keys(this.style).join('-')
+    return Object.keys(this.style || {}).join('-')
   }
 
   meta: Meta

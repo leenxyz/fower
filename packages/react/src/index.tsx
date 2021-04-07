@@ -1,10 +1,8 @@
-import { styli } from '@styli/core'
+import { styli, injectGlobalStyle } from '@styli/core'
 import { styled } from '@styli/styled'
 import presetWeb from '@styli/preset-web'
-import { injectGlobalStyle } from './injectGlobalStyle'
 
 export { jsx } from './jsx'
-export { injectGlobalStyle } from './injectGlobalStyle'
 export { Box, BoxComponent } from './Box'
 
 export const View = styled('div')
