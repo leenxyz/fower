@@ -1,4 +1,3 @@
-import { styli } from '@styli/core'
 import { Parser } from '@styli/parser'
 
 function isArray(data: string) {
@@ -29,7 +28,7 @@ export default {
     })
 
     /** get parser */
-    const parser = new Parser(props, styli.getTheme(), styli)
+    const parser = new Parser(props)
 
     /** insert css to style element */
     parser.insertRule()

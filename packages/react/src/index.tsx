@@ -1,4 +1,4 @@
-import { styli, injectGlobalStyle } from '@styli/core'
+import { configure, injectGlobalStyle } from '@styli/core'
 import { styled } from '@styli/styled'
 import presetWeb from '@styli/preset-web'
 
@@ -22,4 +22,4 @@ injectGlobalStyle({
   },
 })
 
-styli.configure(presetWeb)
+configure(presetWeb)

@@ -1,10 +1,9 @@
 import { presetWeb } from '@styli/preset-web'
-import { styli } from '../../src/styli'
-
-import { css } from '../../src/api'
+import { store } from '@styli/store'
+import { css } from './css'
 
 afterEach(() => {
-  styli.configure(presetWeb)
+  store.configure(presetWeb)
 })
 
 test('css()', () => {

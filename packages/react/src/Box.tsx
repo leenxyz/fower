@@ -1,9 +1,7 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { styli } from '@styli/core'
-import { Parser } from '@styli/parser'
+import { store } from '@styli/store'
 import { AtomicProps, As } from '@styli/types'
-
-const { getTheme } = styli
+import { Parser } from '@styli/parser'
 
 export interface BoxComponent<T extends As, P = any> {
   <AsType extends As = 'div'>(
@@ -21,11 +19,10 @@ export interface BoxComponent<T extends As, P = any> {
 
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const { as = 'div', ...rest } = props as any
-  const theme = getTheme()
-  const parser = new Parser(rest, theme, styli)
+  const parser = new Parser(rest)
   const parsedProps: any = parser.getParsedProps()
 
-  const { inline } = styli.config
+  const { inline } = store.config
 
   if (inline) {
     if (Array.isArray(rest.style)) {

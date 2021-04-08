@@ -2,12 +2,13 @@ import generate from '@babel/generator'
 import traverse from '@babel/traverse'
 import { parse } from '@babel/parser'
 import { Parser } from '@styli/parser'
+import { store } from '@styli/store'
 import { createProps } from './createProps'
 import { removeParsedProp } from './removeParsedProp'
 import { toCss } from './toCss'
 import { toStyle } from './toStyle'
 
-export function transform(source: string, styli: any) {
+export function transform(source: string) {
   // generate ast
   const ast: any = parse(source, {
     allowImportExportEverywhere: true,
@@ -23,9 +24,9 @@ export function transform(source: string, styli: any) {
 
       const { props } = createProps(attrs)
 
-      const parser: any = new Parser(props, styli.getTheme(), styli)
+      const parser: any = new Parser(props)
 
-      if (styli.config.inline) {
+      if (store.config.inline) {
         toStyle(path, parser, attrs)
       } else {
         // inject className

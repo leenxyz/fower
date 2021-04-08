@@ -1,12 +1,10 @@
 import { createElement, ElementType, forwardRef, ComponentProps } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { upFirst } from '@styli/utils'
 import { AtomicProps } from '@styli/types'
 import { getCssParsedProps, getInLineParsedProps } from './util'
 import { StyledComponent, InjectedProps, Args } from './types'
-
-const theme = styli.getTheme()
 
 /**
  * style any Component
@@ -37,10 +35,8 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
   }
 
   const StyledComponent = forwardRef((props: any = {}, ref) => {
-    const { inline } = styli.config
-    const parsedProps = inline
-      ? getInLineParsedProps(props, theme, args)
-      : getCssParsedProps(props, theme, args)
+    const { inline } = store.config
+    const parsedProps = inline ? getInLineParsedProps(props, args) : getCssParsedProps(props, args)
     return createElement(component, { ref, ...parsedProps })
   })
 

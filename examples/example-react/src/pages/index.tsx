@@ -1,17 +1,17 @@
+import { Link } from 'umi';
 import { Box } from '@styli/react';
 import {
   createStyle,
   configure,
   setTheme,
-  styli,
+  registerAtomicProps,
   injectGlobalStyle,
 } from '@styli/core';
 import { useState } from 'react';
 import { styled } from '@styli/styled';
-import { Link } from 'umi';
+import { store } from '@styli/store';
 
 const Button = styled('button');
-console.log('createStyle:', createStyle('p1 m-4'));
 
 const pages = [
   'background',
@@ -66,7 +66,7 @@ injectGlobalStyle({
 });
 
 configure({
-  inline: true,
+  // inline: true,
   pseudos: ['hover'],
 });
 
@@ -90,7 +90,7 @@ setTheme({
   },
 });
 
-styli.registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
+registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
   const size = atom.propKey.replace('heading', '').toLowerCase();
   switch (size) {
     case 'sm':
@@ -108,7 +108,7 @@ styli.registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
   return atom;
 });
 
-styli.registerAtomicProps('textBody', {
+registerAtomicProps('textBody', {
   fontSize: 20,
 });
 

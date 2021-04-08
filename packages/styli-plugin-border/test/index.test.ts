@@ -1,8 +1,8 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import plugin from '../src'
 
 describe('styli-plugin-border', () => {
-  styli.configure({
+  configure({
     theme: {
       colors: {
         red200: 'blue',

@@ -1,9 +1,9 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-shadow', () => {
-  styli.configure({
+  configure({
     theme: {
       shadow: {
         xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',

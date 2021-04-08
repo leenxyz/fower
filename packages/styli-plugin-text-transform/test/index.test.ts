@@ -1,9 +1,9 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-text-transform', () => {
-  styli.configure({ unit: 'px' })
+  configure({ unit: 'px' })
 
   const { isMatch, handleAtom } = plugin()
   const parser = {} as any

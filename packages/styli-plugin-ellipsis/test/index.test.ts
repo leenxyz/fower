@@ -1,10 +1,10 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { Parser } from '@styli/parser'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-ellipsis', () => {
-  styli.configure({ unit: 'px' })
+  configure({ unit: 'px' })
 
   const { isMatch, handleAtom } = plugin()
   const parser = {} as Parser

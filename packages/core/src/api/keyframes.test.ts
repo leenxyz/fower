@@ -1,4 +1,4 @@
-import { keyframes } from '../../src/api'
+import { keyframes } from '.'
 
 test('keyframes()', () => {
   const name = keyframes({

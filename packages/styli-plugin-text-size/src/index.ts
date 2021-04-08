@@ -1,8 +1,8 @@
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 
 function isPreset(key: string) {
-  const { fontSizes = {} } = styli.getTheme()
+  const { fontSizes = {} } = store.getTheme()
   const keys = Object.keys(fontSizes) || []
   if (!keys.length) return false
   const reg = new RegExp(`^text(${keys.join('|')})$`, 'i')
@@ -14,7 +14,7 @@ export function isMatch(key: string) {
 
 export function toStyle(key: string, value: any) {
   if (isPreset(key)) {
-    const fontSizes: any = styli.getTheme().fontSizes || {}
+    const fontSizes: any = store.getTheme().fontSizes || {}
     const fontSizeKey = key.replace(/^text/, '').toLowerCase()
     return { fontSize: fontSizes[fontSizeKey] }
   }

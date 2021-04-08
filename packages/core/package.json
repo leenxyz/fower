@@ -22,11 +22,11 @@
   "module": "dist/core.esm.js",
   "dependencies": {
     "@styli/atom": "^1.5.0",
+    "@styli/store": "^1.5.0",
     "@styli/css-object-processor": "^1.5.0",
     "@styli/parser": "^1.5.0",
     "@styli/sheet": "^1.5.0",
     "@styli/types": "^1.5.0",
-    "@styli/utils": "^1.5.0",
-    "type-fest": "^1.0.1"
+    "@styli/utils": "^1.5.0"
   }
 }

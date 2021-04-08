@@ -1,10 +1,9 @@
 import { presetWeb } from '@styli/preset-web'
-import { styli } from '../../src/styli'
-
-import { injectGlobalStyle } from '../../src/api'
+import { store } from '@styli/store'
+import { injectGlobalStyle } from './injectGlobalStyle'
 
 beforeAll(() => {
-  styli.configure(presetWeb)
+  store.configure(presetWeb)
 })
 
 test('injectGlobalStyle()', () => {

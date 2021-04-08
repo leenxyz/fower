@@ -1,8 +1,7 @@
-import { styli } from './styli'
-export * from './api'
-export { styli } from './styli'
+import { store } from '@styli/store'
 
-const { config, configure, setTheme, getTheme, registerAtomicProps } = styli
-const { theme } = config
+export * from './api'
+
+const { config, theme, configure, setTheme, getTheme, registerAtomicProps } = store
 
 export { config, configure, theme, setTheme, getTheme, registerAtomicProps }

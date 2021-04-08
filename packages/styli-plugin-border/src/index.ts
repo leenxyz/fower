@@ -1,4 +1,4 @@
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
@@ -19,7 +19,7 @@ function toStyle(key: string, value: any) {
     return { borderWidth: value }
   }
 
-  const colors = styli.getColors() as any
+  const colors: any = store.theme.colors
   const postfix = key.replace(/^border/, '') || ''
 
   /** @example borderSolid,borderDashed */

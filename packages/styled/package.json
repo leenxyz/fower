@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@styli/core": "^1.5.0",
+    "@styli/store": "^1.5.0",
     "@styli/types": "^1.5.0",
     "@styli/utils": "^1.5.0",
     "hoist-non-react-statics": "^3.3.2"

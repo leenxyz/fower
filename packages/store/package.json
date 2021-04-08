@@ -1,16 +1,9 @@
 {
-  "name": "styli-plugin-rounded",
+  "name": "@styli/store",
   "version": "1.5.0",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "types/index.d.ts",
-  "files": [
-    "dist",
-    "types"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
+  "typings": "dist/index.d.ts",
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
@@ -19,12 +12,15 @@
     "test:cov": "tsdx test --coverage",
     "lint": "tsdx lint"
   },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "author": "forsigner",
-  "module": "dist/styli-plugin-rounded.esm.js",
+  "module": "dist/store.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.5.0",
-    "@styli/core": "^1.5.0",
-    "@styli/store": "^1.5.0",
     "@styli/types": "^1.5.0",
     "@styli/utils": "^1.5.0"
   }

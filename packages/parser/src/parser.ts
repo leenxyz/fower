@@ -1,4 +1,5 @@
 import { Atom } from '@styli/atom'
+import { store } from '@styli/store'
 import { formatColor } from '@styli/color-helper'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
@@ -23,6 +24,10 @@ const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className']
  * An Abstract tool to handle atomic props
  */
 export class Parser {
+  constructor(readonly props: any = {}) {
+    this.traverseProps(props)
+  }
+
   /**
    * atom parsed from props
    */
@@ -37,11 +42,7 @@ export class Parser {
   }
 
   get plugins(): any[] {
-    return this.styli.config.plugins
-  }
-
-  constructor(readonly props: any = {}, readonly theme: any, readonly styli: any) {
-    this.traverseProps(props)
+    return store.config.plugins
   }
 
   formatCssValue(key: string, value: any) {
@@ -63,10 +64,14 @@ export class Parser {
       return (numValue * 100).toFixed(6) + '%'
     }
 
-    const { config } = this.styli
+    const { config } = store
 
-    if (config.unit !== 'none' && config.transformUnit) {
-      return config.transformUnit(numValue)
+    if (config.unit !== 'none') {
+      if (config.transformUnit) {
+        return config.transformUnit(numValue)
+      } else {
+        return value + store.config.unit
+      }
     }
 
     return numValue
@@ -77,7 +82,7 @@ export class Parser {
     return Object.entries(style).reduce<string>((r, [key, value]) => {
       const cssKey = jsKeyToCssKey(key)
       const posfix = important ? '!important' : ''
-      const colors = this.styli.getColors()
+      const colors: any = store.theme.colors
       if (colorPostfix) {
         value = formatColor(colors[value] || value, colorPostfix)
       } else {
@@ -121,7 +126,7 @@ export class Parser {
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
 
-    atom = atomPreprocessor(atom, this as any, this.styli)
+    atom = atomPreprocessor(atom, this as any)
 
     // if handled, push to this.atoms and skip it
     if (atom?.handled) {
@@ -152,7 +157,7 @@ export class Parser {
   /**
    * traverse Props to init atoms
    */
-  private traverseProps(props: any): void {
+  traverseProps(props: any): void {
     if (isEmptyObj(props)) return
 
     const { excludedProps = [] } = props
@@ -240,7 +245,7 @@ export class Parser {
     if (className) return className
 
     /** global className prefix */
-    const configPrefix = this.styli.config.prefix
+    const configPrefix = store.config.prefix
     const prefix = configPrefix ? configPrefix + '-' : ''
     let value = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
     const isValidClassName = /^[a-zA-Z0-9-]+$/.test(value)
@@ -305,8 +310,6 @@ export class Parser {
     this.atoms = this.atoms.sort((a, b) => {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
-
-    // console.log('this.atoms', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''

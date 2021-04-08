@@ -1,11 +1,9 @@
 import { deepmerge } from '@styli/utils'
 import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
-import { PartialDeep } from 'type-fest'
-import { SetThemeParams } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
 
-class Styli {
+class Store {
   config = {
     unit: 'px',
     inline: false,
@@ -18,8 +16,12 @@ class Styli {
     plugins: [],
   } as Configuration
 
+  get theme() {
+    return this.config.theme
+  }
+
   // user config
-  configure = (config: PartialDeep<Configuration>, strategy: Strategy = 'deepmerge') => {
+  configure = (config: any, strategy: Strategy = 'deepmerge') => {
     if (strategy === 'replace') {
       this.config = config as Configuration
     } else if (strategy === 'merge') {
@@ -33,12 +35,8 @@ class Styli {
     return this.config.theme
   }
 
-  setTheme = (partialThemeConfig: PartialDeep<SetThemeParams>) => {
+  setTheme = (partialThemeConfig: any) => {
     this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
-  }
-
-  getColors = () => {
-    return this.getTheme().colors
   }
 
   use = (...plugins: StyliPlugin[]) => {
@@ -68,4 +66,4 @@ class Styli {
   }
 }
 
-export const styli = new Styli()
+export const store = new Store()

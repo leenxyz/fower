@@ -1,4 +1,4 @@
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 
 const Top = 'Top'
@@ -28,7 +28,7 @@ export function isMatch(key: string) {
  */
 export function toStyle(atomKey: string, value: any) {
   let style: any = {}
-  const radii: any = styli.getTheme().radii || {}
+  const radii: any = store.getTheme().radii || {}
   const radiiKeys = Object.keys(radii) || []
   const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 

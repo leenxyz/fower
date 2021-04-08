@@ -1,10 +1,10 @@
 import { Atom } from '@styli/atom'
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { presetWeb } from '@styli/preset-web'
 import { atomPreprocessor } from './atom-preprocessor'
 
 beforeAll(() => {
-  styli.configure(presetWeb)
+  configure(presetWeb)
 })
 
 test.only('atomPreprocessor', () => {
@@ -12,6 +12,6 @@ test.only('atomPreprocessor', () => {
     propKey: 'p10--hover',
     propValue: true,
   })
-  const newAtom = atomPreprocessor(atom, {} as any, styli)
+  const newAtom = atomPreprocessor(atom, {} as any)
   expect(newAtom.handled).toBeTruthy()
 })

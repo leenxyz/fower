@@ -1,9 +1,9 @@
 import RN from 'react-native'
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { styled } from '@styli/styled'
 import { presetReactNative } from '@styli/preset-react-native'
 
-styli.configure(presetReactNative)
+configure(presetReactNative)
 
 export const ActivityIndicator = styled(RN.ActivityIndicator)
 export const Button = styled(RN.Button)

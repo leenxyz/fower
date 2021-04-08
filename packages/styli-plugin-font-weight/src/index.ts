@@ -1,4 +1,4 @@
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
@@ -13,7 +13,7 @@ export default (): StyliPlugin => {
     isMatch,
     handleAtom(atom) {
       const { key = '', value } = atom
-      const weights: any = styli.getTheme().fontWeights
+      const weights: any = store.getTheme().fontWeights
       const posfix = key.replace(/^font/i, '')
       const styleValue = /^weight$/i.test(posfix) ? value : weights[downFirst(posfix)]
       atom.style = { fontWeight: styleValue }

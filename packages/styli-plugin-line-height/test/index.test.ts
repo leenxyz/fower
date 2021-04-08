@@ -1,9 +1,9 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
 describe('styli-plugin-line-height', () => {
-  styli.configure({
+  configure({
     theme: {
       lineHeights: { none: 1 },
     },

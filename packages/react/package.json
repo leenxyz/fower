@@ -20,6 +20,7 @@
   "module": "dist/react.esm.js",
   "dependencies": {
     "@styli/core": "^1.5.0",
+    "@styli/store": "^1.5.0",
     "@styli/css-object-processor": "^1.5.0",
     "@styli/parser": "^1.5.0",
     "@styli/preset-web": "^1.5.0",

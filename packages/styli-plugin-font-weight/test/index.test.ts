@@ -1,9 +1,9 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { Atom } from '@styli/atom'
 import plugin from '../src'
 
-describe('styli-plugin-font-weight', () => {
-  styli.configure({
+describe('s-plugin-font-weight', () => {
+  configure({
     theme: {
       fontWeights: {
         medium: 500,

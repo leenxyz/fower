@@ -28,7 +28,9 @@ export function digitPreprocessor(atom: Atom, spacings: any): Atom {
   const keyStr = atom.key.toString()
   const result = keyStr.match(/^([a-z]+)(\d+)$/i) || keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i)
 
-  const [, newKey, newPropValue] = result!
+  if (!result) return atom
+
+  const [, newKey, newPropValue] = result
 
   atom.key = newKey
   atom.value = isSpace ? spacings[newPropValue] : newPropValue

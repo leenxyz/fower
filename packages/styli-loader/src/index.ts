@@ -1,4 +1,4 @@
-import { styli } from '@styli/core'
+import { configure } from '@styli/core'
 import { transform } from 'styli-transform'
 import { getOptions } from 'loader-utils'
 import { Preset } from '@styli/types'
@@ -16,13 +16,13 @@ export default function (source: string, map: any, meta: any) {
   const options: unknown = getOptions(webpackEnv)
   const { styliConfig = {}, output = 'styli.css' } = (options || {}) as LoaderOption
 
-  styli.configure(styliConfig)
+  configure(styliConfig)
 
   // 申明异步 loader
   const callback = webpackEnv.async()
 
   // 修改源码，抽离 css
-  let { code, css } = transform(source, styli)
+  let { code, css } = transform(source)
 
   if (css) {
     cssStr += css

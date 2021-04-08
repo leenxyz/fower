@@ -1,5 +1,5 @@
 import { Atom } from '@styli/atom'
-import { styli } from '@styli/core'
+import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 
 export function isMatch(key: string) {
@@ -10,7 +10,7 @@ export function toStyle({ key, value, isValueProp }: Atom) {
   if (isValueProp) return { boxShadow: value }
   const styleValue = key.replace('shadow', '')
   const shadowSize = styleValue.toLowerCase()
-  const shadows: any = styli.getTheme().shadows
+  const shadows: any = store.getTheme().shadows
   const shadowValue = shadows[shadowSize || 'base']
 
   if (!shadowValue) {

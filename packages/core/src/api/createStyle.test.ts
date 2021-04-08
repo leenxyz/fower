@@ -1,10 +1,10 @@
 import { presetWeb } from '@styli/preset-web'
-import { styli } from '../../src/styli'
+import { store } from '@styli/store'
 
-import { createStyle } from '../../src/api'
+import { createStyle } from '.'
 
 beforeAll(() => {
-  styli.configure(presetWeb)
+  store.configure(presetWeb)
 })
 
 test('createStyle()', () => {

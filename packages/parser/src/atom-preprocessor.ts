@@ -1,4 +1,5 @@
 import { Atom } from '@styli/atom'
+import { store } from '@styli/store'
 import { Parser } from './parser'
 import { isBooleanFalse } from '@styli/utils'
 import { digitPreprocessor } from './digit-preprocessor'
@@ -7,11 +8,11 @@ const invalidProps = ['excludedProps', 'styliName']
 const connector = '--'
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
-export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
-  const { plugins = [], pseudos = [] } = styli.config
+export function atomPreprocessor(atom: Atom, parser: Parser): Atom {
+  const { plugins = [], pseudos = [] } = store.config
 
   const { propKey, propValue } = atom
-  const { breakpoints, modes } = styli.getTheme()
+  const { breakpoints, modes } = store.getTheme()
 
   const breakpointKeys = Object.keys(breakpoints)
   const modeKeys: string[] = modes || []
@@ -47,7 +48,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   const isImportant = regImportant.test(propKey)
   const isColorPostfix = regColorPostfix.test(propKey)
 
-  const { spacings } = styli.getTheme() || {}
+  const { spacings } = store.getTheme() || {}
 
   if (!isMode && !isPseudo && !isResponsive && !isImportant && !isColorPostfix) {
     // handle spacing directly
@@ -70,7 +71,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
 
   if (isResponsive) {
     const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
-    atom.meta.breakpoint = breakpoints[breakpointType]
+    atom.meta.breakpoint = (breakpoints as any)[breakpointType]
   }
 
   if (isImportant) {
@@ -87,7 +88,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser, styli: any): Atom {
   /** handle style */
   const plugin = plugins.find((i: any) => i.isMatch!(atom.key))
   if (plugin) {
-    atom = plugin.handleAtom!({ ...atom, key: atom.key }, parser)
+    atom = plugin.handleAtom!(atom, parser as any) // TODO: handle any
     atom.style = atom.style
   }
 
