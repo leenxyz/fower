@@ -39,7 +39,7 @@ test('atom get styleKeysHash() with valid style', () => {
     propKey: 'p-10',
   })
   atom.style = { color: '#999' }
-  expect(atom.styleKeysHash).toEqual('color')
+  expect(atom.styleKeysHash).toEqual('color' + JSON.stringify(atom.meta))
 })
 
 test('atom get styleKeysHash() empty style', () => {
@@ -47,5 +47,5 @@ test('atom get styleKeysHash() empty style', () => {
     propKey: 'p-10',
   })
   atom.style = undefined as any
-  expect(atom.styleKeysHash).toEqual('')
+  expect(atom.styleKeysHash).toEqual('' + JSON.stringify(atom.meta))
 })

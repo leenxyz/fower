@@ -24,7 +24,7 @@ export default () => {
       </Box>
 
       <Box textXL bgRed500--T20 bgRed500--D20--hover>
-        BgRed50--D20--hover
+        BgRed500--D20--hover
       </Box>
 
       <Box textXL bgRed500--T30 bgRed500--D30--hover={false}>

@@ -34,7 +34,6 @@ export function digitPreprocessor(atom: Atom, spacings: any): Atom {
 
   atom.key = newKey
   atom.value = isSpace ? spacings[newPropValue] : newPropValue
-  // atom.className = propKey
 
   return atom
 }

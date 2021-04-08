@@ -1,10 +1,9 @@
 import isBrowser from 'is-in-browser'
 import hash from 'string-hash'
-import deepmerge from 'deepmerge'
 
 type Dict = Record<string, any>
 
-export { isBrowser, hash, deepmerge }
+export { isBrowser, hash }
 
 export const isDev = process.env.NODE_ENV !== 'production'
 
@@ -35,6 +34,11 @@ export function isNumber(value: any) {
   return /^-?[0-9.]+$/.test(value)
 }
 
+/**
+ * value like: 100p, 80p, or negative value -50p
+ * @param value
+ * @returns
+ */
 export function isPercentNumber(value: string) {
   return /^-?\d+p$/.test(value)
 }

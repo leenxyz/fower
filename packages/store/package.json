@@ -22,6 +22,6 @@
   "module": "dist/store.esm.js",
   "dependencies": {
     "@styli/types": "^1.5.0",
-    "@styli/utils": "^1.5.0"
+    "deepmerge": "^4.2.2"
   }
 }

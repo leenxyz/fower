@@ -19,21 +19,17 @@ declare module '@styli/types' {
     bg?: StyliColor | boolean
 
     /**
-     * Set backgroundPosition
-     *
-     * same with bgPos
+     * Set backgroundImage
      *
      * @example
      * ```tsx
-     * <View backgroundPosition="top left"></View>
+     * <View backgroundImage="url('http...')"></View>
      * ```
      */
     backgroundImage?: CSS.Property.BackgroundImage | boolean
 
     /**
      * Set backgroundPosition
-     *
-     * same with bgPos
      *
      * @example
      * ```tsx
@@ -45,8 +41,6 @@ declare module '@styli/types' {
     /**
      * Set backgroundSize
      *
-     * same with bgSize
-     *
      * @example
      * ```tsx
      * <View backgroundSize="100% 100%"></View>
@@ -56,8 +50,6 @@ declare module '@styli/types' {
 
     /**
      * Set backgroundRepeat
-     *
-     * same with bgRepeat
      *
      * @example
      * ```tsx

@@ -1,6 +1,5 @@
 import { Atom } from '@styli/atom'
 import { store } from '@styli/store'
-import { Parser } from './parser'
 import { isBooleanFalse } from '@styli/utils'
 import { digitPreprocessor } from './digit-preprocessor'
 
@@ -8,8 +7,8 @@ const invalidProps = ['excludedProps', 'styliName']
 const connector = '--'
 const specialPseudos = ['after', 'before', 'placeholder', 'selection']
 
-export function atomPreprocessor(atom: Atom, parser: Parser): Atom {
-  const { plugins = [], pseudos = [] } = store.config
+export function atomPreprocessor(atom: Atom): Atom {
+  const { pseudos = [] } = store.config
 
   const { propKey, propValue } = atom
   const { breakpoints, modes } = store.getTheme()
@@ -19,7 +18,7 @@ export function atomPreprocessor(atom: Atom, parser: Parser): Atom {
   const pseudoKeys: string[] = pseudos
 
   const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
-  const regModeStr = `${connector}(${modeKeys.join('|')})$`
+  const regModeStr = `${connector}(${modeKeys.join('|')})`
   const regPseudoStr = `${connector}(${pseudoKeys.join('|')})`
 
   const regMode = new RegExp(regModeStr)
@@ -84,17 +83,6 @@ export function atomPreprocessor(atom: Atom, parser: Parser): Atom {
 
   // check is theme space key, if yes, preprocess it
   atom = digitPreprocessor(atom, spacings)
-
-  /** handle style */
-  const plugin = plugins.find((i: any) => i.isMatch!(atom.key))
-  if (plugin) {
-    atom = plugin.handleAtom!(atom, parser as any) // TODO: handle any
-    atom.style = atom.style
-  }
-
-  // atom.key = key
-  atom.className = propKey
-  atom.handled = true
 
   return atom
 }

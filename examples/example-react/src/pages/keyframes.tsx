@@ -20,7 +20,6 @@ const hash = keyframes({
     transform: 'translate3d(0,-4px,0)',
   },
 });
-console.log('hash:', hash);
 
 export default () => {
   return (

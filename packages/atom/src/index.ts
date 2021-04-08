@@ -94,11 +94,11 @@ export class Atom {
    * @readonly
    * @memberof Atom
    * @example
-   * { color: "#999"} -> color
-   * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop
+   * { color: "#999"} -> color + hashed meta
+   * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop  + hashed meta
    */
   get styleKeysHash() {
-    return Object.keys(this.style || {}).join('-')
+    return Object.keys(this.style || {}).join('-') + JSON.stringify(this.meta)
   }
 
   /**

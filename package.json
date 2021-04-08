@@ -22,24 +22,6 @@
     "publish": "lerna publish --force-publish=*",
     "format": "prettier --write ."
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/",
-      "/.history/"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "eslintConfig": {
     "extends": "tie-app"
   },
@@ -54,23 +36,21 @@
   },
   "homepage": "https://github.com/forsigner/styli#readme",
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@types/jest": "^26.0.15",
-    "@types/prettier": "^2.1.5",
-    "@types/react": "^16.9.56",
-    "@types/react-dom": "^16.9.9",
+    "@types/jest": "^26.0.22",
+    "@types/prettier": "^2.2.3",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "coveralls": "^3.1.0",
     "eslint-config-tie-app": "0.0.5",
-    "husky": "^4.3.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
-    "lerna": "^3.22.1",
-    "prettier": "^2.1.2",
+    "lerna": "^4.0.0",
+    "prettier": "^2.2.1",
     "react": "17.x",
     "react-dom": "17.x",
-    "ts-jest": "^26.4.3",
+    "ts-jest": "^26.5.4",
     "tsdx": "^0.14.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2"
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
   }
 }

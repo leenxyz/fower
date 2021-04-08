@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext",
+      "ES2020"
+    ],
+    "target": "ESNext",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,

@@ -45,14 +45,21 @@ export class Parser {
     return store.config.plugins
   }
 
+  /**
+   * Get final css value
+   * @param key css key, eg: font-szie, padding-top
+   * @param value css value
+   * @returns
+   */
   formatCssValue(key: string, value: any) {
     // no need unit
     if (!isUnitProp(key)) return value
 
     let numValue = value
-    // w-80p => width: 80%
-    if (isPercentNumber('' + value)) {
-      return ('' + value).replace('p', '%')
+
+    // 80p -> 80%, 50p-> -50%
+    if (isPercentNumber(String(value))) {
+      return String(value).replace('p', '%')
     }
 
     if (!isNumber(value)) return value
@@ -61,7 +68,7 @@ export class Parser {
 
     // if num is between 0 and 1, convert it to percent number.
     if (numValue < 1 && numValue > 0) {
-      return (numValue * 100).toFixed(6) + '%'
+      return numValue * 100 + '%'
     }
 
     const { config } = store
@@ -77,11 +84,20 @@ export class Parser {
     return numValue
   }
 
-  cssObjToStr(style: Dict, meta: Atom['meta']) {
+  /**
+   * convert style object to string
+   * @param style
+   * @param meta
+   * @example
+   * { width: 10 } -> "width: 10px;"
+   * { paddingTop: 10, paddingBottom: 10 } -> "padding-top: 10px;padding-bottom: 10px;"
+   * @returns
+   */
+  styleToString(style: Dict, meta: Atom['meta']) {
     const { important, colorPostfix } = meta
     return Object.entries(style).reduce<string>((r, [key, value]) => {
       const cssKey = jsKeyToCssKey(key)
-      const posfix = important ? '!important' : ''
+      const posfix = important ? ' !important' : ''
       const colors: any = store.theme.colors
       if (colorPostfix) {
         value = formatColor(colors[value] || value, colorPostfix)
@@ -100,7 +116,7 @@ export class Parser {
   }
 
   /**
-   * prop that can to handle
+   * prop that can to handle, only primitive value type is valid
    * @param propKey
    * @param propValue
    * @returns
@@ -126,7 +142,7 @@ export class Parser {
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
 
-    atom = atomPreprocessor(atom, this as any)
+    atom = atomPreprocessor(atom)
 
     // if handled, push to this.atoms and skip it
     if (atom?.handled) {
@@ -147,8 +163,6 @@ export class Parser {
 
       atom.className = this.getAtomClassName(atom)
       atom.handled = true
-
-      // this.addAtom(atom)
 
       break // break from this plugin
     }
@@ -231,7 +245,7 @@ export class Parser {
     }
   }
 
-  private makeResponsiveStyle(breakpoint: string, rule: string) {
+  makeResponsiveStyle(breakpoint: string, rule: string) {
     return `@media (min-width: ${breakpoint}) {${rule}}`
   }
 
@@ -311,6 +325,8 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
+    // console.log('this.atoms:', this.atoms)
+
     for (const atom of this.atoms) {
       let rule: string = ''
       const { className, isValid, style = {} } = atom
@@ -332,7 +348,7 @@ export class Parser {
       if (pseudo) selector = selector + pseudo
       if (mode) selector = `.${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
-      rule = `${selector} { ${this.cssObjToStr(style, atom.meta)} }`
+      rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)

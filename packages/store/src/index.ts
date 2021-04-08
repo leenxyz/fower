@@ -1,4 +1,4 @@
-import { deepmerge } from '@styli/utils'
+import deepmerge from 'deepmerge'
 import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'

@@ -2,11 +2,6 @@ import { Box, View } from '@styli/react';
 
 export default () => {
   return (
-    <Box text4XL red500 p4>
-      Red500
-    </Box>
-  );
-  return (
     <Box>
       <Box text3XL fontBold>
         Color

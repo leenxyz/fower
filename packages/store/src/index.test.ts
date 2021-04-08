@@ -37,6 +37,10 @@ describe('configure', () => {
   })
 })
 
+test('get theme()', () => {
+  expect(store.theme).toMatchObject(store.config.theme)
+})
+
 test('getTheme', () => {
   expect(store.getTheme()).toMatchObject({ colors: { gray30: '#333' } })
   expect(store.getTheme().colors).toMatchObject({ gray30: '#333' })
