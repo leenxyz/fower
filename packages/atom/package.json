@@ -19,5 +19,8 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/atom.esm.js"
+  "module": "dist/atom.esm.js",
+  "dependencies": {
+    "string-hash": "^1.1.3"
+  }
 }

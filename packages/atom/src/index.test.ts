@@ -35,17 +35,29 @@ test('atom.id with <Box p={10}></Box>', () => {
 })
 
 test('atom get styleKeysHash() with valid style', () => {
-  const atom = new Atom({
-    propKey: 'p-10',
-  })
+  const atom = new Atom({ propKey: 'p-10' })
   atom.style = { color: '#999' }
   expect(atom.styleKeysHash).toEqual('color' + JSON.stringify(atom.meta))
 })
 
 test('atom get styleKeysHash() empty style', () => {
-  const atom = new Atom({
-    propKey: 'p-10',
-  })
+  const atom = new Atom({ propKey: 'p-10' })
   atom.style = undefined as any
   expect(atom.styleKeysHash).toEqual('' + JSON.stringify(atom.meta))
+})
+
+test('createClassName() <Box p-10></Box>', () => {
+  const atom = new Atom({ propKey: 'p-10' })
+  expect(atom.createClassName()).toEqual(atom.id)
+  expect(atom.createClassName('css-')).toEqual('css-' + atom.id)
+})
+
+test('createClassName() <Box p="100%"></Box>', () => {
+  const atom = new Atom({ propKey: 'p', propValue: '100%' })
+  expect(atom.createClassName()).toEqual('p-100p')
+})
+
+test('createClassName() invalid className', () => {
+  const atom = new Atom({ propKey: 'p', propValue: '10$.20' })
+  expect(atom.createClassName()).toMatch(/^css-/)
 })

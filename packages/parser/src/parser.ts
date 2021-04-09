@@ -1,17 +1,15 @@
-import { Atom } from '@styli/atom'
+import { Atom, Options } from '@styli/atom'
 import { store } from '@styli/store'
 import { formatColor } from '@styli/color-helper'
 import { styleSheet } from '@styli/sheet'
 import { parse } from '@styli/css-object-processor'
 import {
   isEmptyObj,
-  hash,
   objectToClassName,
   jsKeyToCssKey,
   isPercentNumber,
   isNumber,
 } from '@styli/utils'
-import { atomPreprocessor } from './atom-preprocessor'
 import { atomCache } from './cache'
 import { isUnitProp } from './is-unit-prop'
 
@@ -142,10 +140,10 @@ export class Parser {
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
 
-    atom = atomPreprocessor(atom)
+    atom = atom.preprocessAtom(store.config)
 
     // if handled, push to this.atoms and skip it
-    if (atom?.handled) {
+    if (atom.handled) {
       this.addAtom(atom)
       throw new Error('atom is handled, add to this.atoms derectly ,no need to mutate')
     }
@@ -158,10 +156,11 @@ export class Parser {
       }
 
       if (plugin.handleAtom) {
-        atom = plugin.handleAtom(atom, this as any)
+        atom = plugin.handleAtom?.(atom, this as any)
       }
 
-      atom.className = this.getAtomClassName(atom)
+      atom.createClassName(store.config.prefix)
+
       atom.handled = true
 
       break // break from this plugin
@@ -216,12 +215,20 @@ export class Parser {
 
     for (const { selector, selectorType, style } of parsed) {
       const [propKey, propValue] = Object.entries(style)[0]
-      const atom = new Atom({ propKey, propValue })
+
+      let option: Options = { propKey, propValue, meta: {} }
+
+      if (selectorType === 'pseudo' && option.meta) {
+        option.meta.pseudo = selector
+      }
+
+      if (selectorType === 'child' && option.meta) {
+        option.meta.childSelector = selector
+      }
+
+      const atom = new Atom(option)
 
       const isVoid = selectorType === 'void'
-
-      if (selectorType === 'pseudo') atom.meta.pseudo = selector
-      if (selectorType === 'child') atom.meta.childSelector = selector
 
       try {
         this.mutateAtom(atom)
@@ -247,24 +254,6 @@ export class Parser {
 
   makeResponsiveStyle(breakpoint: string, rule: string) {
     return `@media (min-width: ${breakpoint}) {${rule}}`
-  }
-
-  /**
-   * create ClassName for Atom
-   * @param atom
-   */
-  private getAtomClassName(atom: Atom) {
-    const { id, className } = atom
-
-    if (className) return className
-
-    /** global className prefix */
-    const configPrefix = store.config.prefix
-    const prefix = configPrefix ? configPrefix + '-' : ''
-    let value = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
-    const isValidClassName = /^[a-zA-Z0-9-]+$/.test(value)
-    value = isValidClassName ? value : `css-${hash(value)}`
-    return `${prefix}${value}`
   }
 
   /**
@@ -317,7 +306,7 @@ export class Parser {
    * get rules for parser.insertRule
    * @returns
    */
-  toCssRules(): string[] {
+  toRules(): string[] {
     const rules: string[] = []
 
     // sort responsive style
@@ -374,7 +363,7 @@ export class Parser {
   }
 
   insertRule() {
-    const rules = this.toCssRules()
+    const rules = this.toRules()
     styleSheet.insertStyles(rules)
   }
 }

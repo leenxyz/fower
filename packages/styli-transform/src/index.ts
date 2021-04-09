@@ -31,7 +31,7 @@ export function transform(source: string) {
       } else {
         // inject className
         toCss(path, parser, attrs)
-        css += parser.toCssRules().join('')
+        css += parser.toRules().join('')
       }
 
       removeParsedProp(path, parser, props)

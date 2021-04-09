@@ -1,61 +1,19 @@
+import hash from 'string-hash'
 import * as CSS from 'csstype'
-import { Options } from './types'
+import { Options, Meta } from './types'
 
-interface Meta {
-  /**
-   * color mode
-   * @exmple
-   * mode: 'dark'
-   */
-  mode?: string
+const invalidProps = ['excludedProps', 'styliName']
 
-  /**
-   * @exmple
-   * breakpoint: '640px'
-   */
-  breakpoint?: string
+export { Options, Meta }
 
-  /**
-   * @exmple
-   * pseudo: ':hover'
-   */
-  pseudo?: string
-
-  /**
-   * child selector for atom.className
-   * @exmple
-   * childSelector: '.child'
-   */
-  childSelector?: string
-
-  /**
-   * is !important style
-   */
-  important?: boolean
-
-  /**
-   * color postfix for opacify,transparent,darken,lighten
-   * @example
-   * gray200--O20 -> O20
-   * gray200--T20 -> T20
-   * #666--D40 -> D40
-   * #999--L40 -> L40
-   */
-  colorPostfix?: string
-
-  /**
-   * color name or value
-   * @example
-   * gray200--O20 -> gray200
-   * gray200--T20 -> gray200
-   * #666--D40 -> #666
-   * #999--L40 -> #999
-   */
-  color?: string
-}
+/**
+ * @example p2,mx4,left10,spaceX4...
+ * @example p-20,opacity-80
+ */
+export const digitReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zindex|leading|fontWeight|flex|rowGap|columnGap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)-?-?\d+[a-z]*?$/i
 
 export class Atom {
-  constructor(options: Options) {
+  constructor(private readonly options: Options) {
     this.propKey = options.propKey
     this.propValue = options.propValue
 
@@ -65,19 +23,19 @@ export class Atom {
     this.style = options.style
     this.className = options.className || ''
 
-    this.handled = options.handled || false
-    this.inserted = false
-    this.isValid = true
+    this.handled = this.getInitialHandled()
+    this.isValid = this.getIsValid()
 
-    this.meta = {}
+    this.inserted = false
+
+    this.meta = options.meta || {}
 
     const { propKey, propValue } = this
 
-    const id =
+    this.id =
       typeof propValue === 'boolean' && propValue === true
         ? propKey
         : `${propKey}-${String(propValue).replace(/\s/g, '-')}`
-    this.id = options.id || id
   }
 
   /**
@@ -99,6 +57,14 @@ export class Atom {
    */
   get styleKeysHash() {
     return Object.keys(this.style || {}).join('-') + JSON.stringify(this.meta)
+  }
+
+  get isFalsePropValue() {
+    return typeof this.propValue === 'boolean' && !this.propValue
+  }
+
+  get isTruePropValue() {
+    return typeof this.propValue === 'boolean' && this.propValue
   }
 
   /**
@@ -166,4 +132,137 @@ export class Atom {
 
   /** if not valid, do not generate style */
   isValid: boolean
+
+  createClassName(prefix = '') {
+    let value = this.id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+
+    const isValid = /^[a-zA-Z0-9-]+$/.test(value)
+    value = isValid ? value : `css-${hash(value)}`
+    const className = `${prefix}${value}`
+
+    // set to atom.className
+    this.className = className
+
+    return className
+  }
+
+  /**
+   *
+   * @param config styli config
+   * @returns
+   */
+  preprocessAtom(config: any) {
+    return this.postfixPreprocessor(config)
+  }
+
+  postfixPreprocessor(config: any) {
+    const connector = '--'
+    const specialPseudos = ['after', 'before', 'placeholder', 'selection']
+    const { pseudos = [], theme } = config
+    const { breakpoints, modes, spacings } = theme || {}
+
+    const { propKey, propValue } = this
+
+    const breakpointKeys = Object.keys(breakpoints)
+    const modeKeys: string[] = modes || []
+    const pseudoKeys: string[] = pseudos
+
+    const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
+    const regModeStr = `${connector}(${modeKeys.join('|')})`
+    const regPseudoStr = `${connector}(${pseudoKeys.join('|')})`
+
+    const regMode = new RegExp(regModeStr)
+    const regPseudo = new RegExp(regPseudoStr)
+    const regResponsive = new RegExp(regResponsiveStr)
+    const regImportant = /--i/i
+    const regColorPostfix = /--[told](\d{1,2}|100)($|--)/i
+
+    /** handle value like: red500--T40, #666--O30 */
+    if (regColorPostfix.test(propValue)) {
+      const [colorName, postfix] = propValue.split('--')
+      this.value = colorName
+      this.meta.colorPostfix = postfix
+    }
+
+    const isMode = regMode.test(propKey)
+    const isPseudo = regPseudo.test(propKey)
+    const isResponsive = regResponsive.test(propKey)
+    const isImportant = regImportant.test(propKey)
+    const isColorPostfix = regColorPostfix.test(propKey)
+
+    const hasPostfix = isMode || isPseudo || isResponsive || isImportant || isColorPostfix
+
+    if (!hasPostfix) return this.digitPreprocessor(spacings)
+
+    const result = propKey.split(connector)
+
+    this.key = result[0] // key that already removed postfix
+
+    if (isMode) {
+      this.meta.mode = result.find((i) => modeKeys.includes(i))
+    }
+
+    if (isPseudo) {
+      const pseudo = result.find((i) => pseudoKeys.includes(i)) as string
+      const pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
+      this.meta.pseudo = pseudoPrefix + pseudo
+    }
+
+    if (isResponsive) {
+      const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
+      this.meta.breakpoint = (breakpoints as any)[breakpointType]
+    }
+
+    if (isImportant) {
+      this.meta.important = !!result.find((i) => i === 'i')
+    }
+
+    if (isColorPostfix) {
+      this.meta.colorPostfix = result.find((i) => regColorPostfix.test(`--${i}`))
+    }
+
+    // check is theme space key, if yes, preprocess it
+    this.digitPreprocessor(spacings)
+
+    return this
+  }
+
+  digitPreprocessor(spacings: any) {
+    if (!digitReg.test(this.key)) return this
+
+    // is theme space key
+    const isSpace = /^([a-z]+)(\d+)$/i.test(this.key)
+
+    /**
+     *  match props link: m4,mx2,mt9, spaceX4...
+     *  to m4 -> [ key: m, value: 4 ]
+     *  to m-20 -> [ key: m, value: 20 ]
+     *  to m-20px -> [ key: m, value: '20px' ]
+     */
+
+    const keyStr = this.key.toString()
+    const result = keyStr.match(/^([a-z]+)(\d+)$/i) || keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i)
+
+    if (!result) return this
+
+    const [, newKey, newPropValue] = result
+
+    this.key = newKey
+    this.value = isSpace ? spacings[newPropValue] : newPropValue
+
+    return this
+  }
+
+  private getInitialHandled() {
+    if (this.options.handled) return this.options.handled
+    if (this.isFalsePropValue) return true
+    if (invalidProps.includes(this.propKey)) return true
+    return false
+  }
+
+  private getIsValid() {
+    if (this.isFalsePropValue) return false
+    if (invalidProps.includes(this.propKey)) return false
+    return true
+  }
 }

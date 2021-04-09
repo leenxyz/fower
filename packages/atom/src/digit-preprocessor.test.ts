@@ -1,5 +1,4 @@
-import { Atom } from '@styli/atom'
-import { digitPreprocessor, digitReg } from './digit-preprocessor'
+import { Atom, digitReg } from '@styli/atom'
 
 let spacings: any
 
@@ -14,7 +13,7 @@ test('process <Box p-10 />', () => {
     propKey: 'p-10',
     propValue: true,
   })
-  const newAtom = digitPreprocessor(atom, spacings)
+  const newAtom = atom.digitPreprocessor(spacings)
   expect(newAtom.key).toEqual('p')
   expect(newAtom.value).toEqual('10')
 })
@@ -24,7 +23,7 @@ test('process <Box m-10rem />, with unit', () => {
     propKey: 'm-10rem',
     propValue: true,
   })
-  const newAtom = digitPreprocessor(atom, spacings)
+  const newAtom = atom.digitPreprocessor(spacings)
   expect(newAtom.key).toEqual('m')
   expect(newAtom.value).toEqual('10rem')
 })
@@ -34,7 +33,7 @@ test('process <Box p1 /> with spacings', () => {
     propKey: 'p1',
     propValue: true,
   })
-  const newAtom = digitPreprocessor(atom, spacings)
+  const newAtom = atom.digitPreprocessor(spacings)
   expect(newAtom.key).toEqual('p')
   expect(newAtom.value).toEqual(4)
 })
@@ -44,7 +43,7 @@ test('propKey is not matched', () => {
     propKey: 'textMD',
     propValue: true,
   })
-  const newAtom = digitPreprocessor(atom, spacings)
+  const newAtom = atom.digitPreprocessor(spacings)
   expect(newAtom.key).toEqual(atom.propKey)
 })
 

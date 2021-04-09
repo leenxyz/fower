@@ -1,11 +1,20 @@
 import { Box } from '@styli/react';
 import { configure } from '@styli/core';
+import { Atom } from '@styli/atom';
 import { presetWebRem } from '@styli/preset-web-rem';
 
 // configure(presetWebRem);
 // configure(presetWebRem, 'replace');
+const atom = new Atom({ propKey: 'p-10', propValue: true });
+
+console.log('atom:', atom);
 
 export default () => {
+  return (
+    <Box text-30 red400--hover styliName="xx">
+      40 Lorem ipsum dolor sit amet
+    </Box>
+  );
   return (
     <Box>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>

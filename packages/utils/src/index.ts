@@ -21,10 +21,6 @@ export function kebab(value: string) {
   })
 }
 
-export function isBooleanFalse(value: any) {
-  return typeof value === 'boolean' && value === false
-}
-
 /**
  * number type string or number
  * @param value
