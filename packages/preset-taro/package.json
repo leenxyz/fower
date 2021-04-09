@@ -16,7 +16,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
-    "test:cov": "tsdx test --coverage",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
     "lint": "tsdx lint"
   },
   "author": "forsigner",

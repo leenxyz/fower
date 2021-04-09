@@ -7,9 +7,9 @@
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
-    "test:cov": "tsdx test --coverage",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
     "lint": "tsdx lint"
   },
   "files": [

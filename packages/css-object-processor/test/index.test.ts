@@ -82,7 +82,6 @@ describe('css object processor', () => {
     }
 
     const rules = toRules(cssObject)
-    console.log('rules:', rules)
 
     expect(Array.isArray(rules)).toEqual(true)
   })
