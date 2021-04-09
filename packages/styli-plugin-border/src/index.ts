@@ -1,3 +1,4 @@
+import { Atom } from '@styli/atom'
 import { store } from '@styli/store'
 import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
@@ -13,14 +14,14 @@ function isMatch(key: string) {
   return key.startsWith('border')
 }
 
-function toStyle(key: string, value: any) {
+function toStyle({ key, value }: Atom) {
   if (key === 'border') {
     if (typeof value === 'boolean') return { borderWidth: 1 }
     return { borderWidth: value }
   }
 
   const colors: any = store.theme.colors
-  const postfix = key.replace(/^border/, '') || ''
+  const postfix = key.replace(/^border/, '')
 
   /** @example borderSolid,borderDashed */
   if (/^(Solid|Dashed|Dotted|Double|None)$/i.test(postfix)) {
@@ -30,7 +31,7 @@ function toStyle(key: string, value: any) {
   /** @example border-0,border-1,border-2,borderT-2,borderB-2, borderT, borderR={2} */
   if (/^border[trbl]?$/i.test(key)) {
     const position = postfix.replace(/-\d+$/, '')
-    const borderPosition = positionMaps[position.toUpperCase()] ?? ''
+    const borderPosition = positionMaps[position.toUpperCase()] || ''
     const cssKey = `border${borderPosition}Width`
     return { [cssKey]: value }
   }
@@ -50,7 +51,7 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.value)
+      atom.style = toStyle(atom)
       return atom
     },
   }

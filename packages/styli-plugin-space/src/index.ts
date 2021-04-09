@@ -1,7 +1,7 @@
 import { StyliPlugin } from '@styli/types'
 
 export function isMatch(key: string) {
-  return /^space[xy]?(-[\da-z]+)?$/i.test(key)
+  return /^space[xy]?$/i.test(key)
 }
 
 const spaceMap: Record<string, string[]> = {

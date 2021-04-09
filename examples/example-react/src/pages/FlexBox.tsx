@@ -72,21 +72,21 @@ export default () => {
 
       <Box spaceY4>
         <Box as="h2">Align Content</Box>
-        <Box flexWrap="wrap" bgAmber100 w-350 h-280 alignContent="flex-start">
+        <Box
+          flex
+          flexWrap="wrap"
+          bgAmber100
+          w-350
+          h-280
+          alignContent="flex-start"
+        >
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
         </Box>
-        <Box flexWrap="wrap" bgAmber100 w-350 h-320 alignContent="center">
-          <Box m2 bgAmber400 square-100></Box>
-          <Box m2 bgAmber400 square-100></Box>
-          <Box m2 bgAmber400 square-100></Box>
-          <Box m2 bgAmber400 square-100></Box>
-          <Box m2 bgAmber400 square-100></Box>
-        </Box>
-        <Box flexWrap="wrap" bgAmber100 w-350 h-320 alignContent="flex-end">
+        <Box flex flexWrap="wrap" bgAmber100 w-350 h-320 alignContent="center">
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
@@ -94,6 +94,21 @@ export default () => {
           <Box m2 bgAmber400 square-100></Box>
         </Box>
         <Box
+          flex
+          flexWrap="wrap"
+          bgAmber100
+          w-350
+          h-320
+          alignContent="flex-end"
+        >
+          <Box m2 bgAmber400 square-100></Box>
+          <Box m2 bgAmber400 square-100></Box>
+          <Box m2 bgAmber400 square-100></Box>
+          <Box m2 bgAmber400 square-100></Box>
+          <Box m2 bgAmber400 square-100></Box>
+        </Box>
+        <Box
+          flex
           flexWrap="wrap"
           bgAmber100
           w-350
@@ -106,14 +121,28 @@ export default () => {
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
         </Box>
-        <Box flexWrap="wrap" bgAmber100 w-350 h-320 alignContent="space-evenly">
+        <Box
+          flex
+          flexWrap="wrap"
+          bgAmber100
+          w-350
+          h-320
+          alignContent="space-evenly"
+        >
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
         </Box>
-        <Box flexWrap="wrap" bgAmber100 w-350 h-320 alignContent="space-around">
+        <Box
+          flex
+          flexWrap="wrap"
+          bgAmber100
+          w-350
+          h-320
+          alignContent="space-around"
+        >
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>
           <Box m2 bgAmber400 square-100></Box>

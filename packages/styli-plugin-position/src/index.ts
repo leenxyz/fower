@@ -3,9 +3,7 @@ import { StyliPlugin } from '@styli/types'
 export const positionKeys = ['static', 'fixed', 'absolute', 'relative', 'sticky']
 
 export function isMatch(key: string) {
-  return (
-    /^(top|right|bottom|left)(-.+)?$/i.test(key) || positionKeys.includes(key) || key === 'position'
-  )
+  return /^(top|right|bottom|left)$/i.test(key) || positionKeys.includes(key) || key === 'position'
 }
 
 export function toStyle(prop: string, value: any): any {

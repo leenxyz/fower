@@ -10,7 +10,7 @@ export { Options, Meta }
  * @example p2,mx4,left10,spaceX4...
  * @example p-20,opacity-80
  */
-export const digitReg = /^([mp][xytrbl]?|space[xy]?|space|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zindex|leading|fontWeight|flex|rowGap|columnGap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)-?-?\d+[a-z]*?$/i
+export const digitReg = /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)-?-?\d+[a-z]*?$/i
 
 export class Atom {
   constructor(private readonly options: Options) {

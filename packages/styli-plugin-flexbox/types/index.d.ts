@@ -75,7 +75,7 @@ declare module '@styli/types' {
      * <View order="1"></View> // order: 1;
      * ```
      */
-    order?: PropValue
+    order?: CSS.Property.Order
 
     /**
      * Set flex-basis, Defaults to auto

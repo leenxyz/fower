@@ -8,10 +8,9 @@ export function isMatch(key: string) {
 export function toStyle({ key, value, isValueProp }: Atom): any {
   if (isValueProp) return { [key]: value }
 
-  let result = key.match(/^(overflow[XY]?)(Auto|Hidden|Visible|Scroll)?$/i) || []
-  let [, styleKey, styleValue] = result
+  let result = key.match(/^(overflow[XY]?)(Auto|Hidden|Visible|Scroll)?$/i)
+  let [, styleKey, styleValue] = result!
 
-  if (!styleKey || !styleValue) return {}
   styleKey = styleKey.replace(/[xy]$/i, (i) => i.toUpperCase())
   styleValue = styleValue.toLowerCase()
 

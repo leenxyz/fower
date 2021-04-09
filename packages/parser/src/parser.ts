@@ -43,6 +43,10 @@ export class Parser {
     return store.config.plugins
   }
 
+  get config(): any {
+    return store.config
+  }
+
   /**
    * Get final css value
    * @param key css key, eg: font-szie, padding-top
@@ -269,6 +273,8 @@ export class Parser {
     let classNames: string[] = []
     this.atoms.reduce<Atom[]>((result, cur) => {
       const index = result.findIndex((i) => i.styleKeysHash === cur.styleKeysHash)
+
+      if (!cur.isValid) return result
 
       if (index === -1) {
         classNames.push(cur.className)

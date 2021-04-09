@@ -12,7 +12,7 @@ export const sizeMaps: Record<string, string[]> = {
 }
 
 export function isMatch(key: string) {
-  return /^([wh]|square|circle|min[hw]|max[hw])(-[\dA-Z-a-z]+)?$/i.test(key)
+  return /^([wh]|square|circle|min[hw]|max[hw])$/i.test(key)
 }
 
 export default (): StyliPlugin => {

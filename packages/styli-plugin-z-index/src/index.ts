@@ -1,7 +1,7 @@
 import { StyliPlugin } from '@styli/types'
 
 export function isMatch(key: string) {
-  return /^zIndex(--?\d+)?$/.test(key)
+  return /^zIndex$/i.test(key)
 }
 
 export default (): StyliPlugin => {

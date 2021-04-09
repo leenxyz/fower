@@ -13,11 +13,11 @@ function isOutLineOffset(key: string) {
   return /^outlineOffset$/i.test(key)
 }
 
-export function toStyle({ key, value, isValueProp }: Atom): any {
+export function toStyle({ key, value }: Atom): any {
   if (isOutLineNone(key)) return { outline: 'none' }
   if (isOutLineOffset(key)) return { outlineOffset: value }
 
-  return { outline: isValueProp ? value : 'none' }
+  return { outline: value }
 }
 
 export default (): StyliPlugin => {

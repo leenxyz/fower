@@ -1,5 +1,5 @@
 import { StyliPlugin } from '@styli/types'
-import { deepmerge } from '@styli/utils'
+import deepmerge from 'deepmerge'
 import { store } from '.'
 
 const config = {

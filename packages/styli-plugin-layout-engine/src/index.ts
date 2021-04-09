@@ -42,7 +42,7 @@ const layoutToolkits = [
   toStretch,
 ]
 
-function getFlexDirection(props: any): string {
+export function getFlexDirection(props: any): string {
   if (props.row) return 'row'
   if (props.column) return 'column'
   if (props.flexDirection) return props.flexDirection
@@ -112,11 +112,13 @@ export default (): StyliPlugin => {
   return {
     isMatch,
     handleAtom(atom, parser) {
-      atom.style = toStyle(atom.key, parser.props)
-
       if ([row, column].includes(atom.propKey)) {
         atom.isValid = false
+        atom.handled = true
+        return atom
       }
+
+      atom.style = toStyle(atom.key, parser.props)
 
       return atom
     },
@@ -129,26 +131,20 @@ export default (): StyliPlugin => {
       if (!matched) return
 
       const direction = getFlexDirection(parser.props)
-
-      const prefix = 'flexDirection-'
-
-      const directionKey = prefix + direction
+      const directionKey = 'flexDirection-' + direction
       const directionAtom = atomCache.get(directionKey)
 
       if (directionAtom) {
         parser.addAtom(directionAtom)
       } else {
-        parser.addAtom(
-          new Atom({
-            id: directionKey,
-            key: directionKey,
-            propKey: directionKey,
-            propValue: true,
-            handled: true,
-            className: prefix + direction,
-            style: { flexDirection: direction as any },
-          }),
-        )
+        const atom = new Atom({
+          propKey: directionKey,
+          propValue: true,
+          handled: true,
+          style: { flexDirection: direction },
+        })
+        atom.createClassName(parser.config.prefix)
+        parser.addAtom(atom)
       }
 
       const flexKey = 'flex'
@@ -156,17 +152,14 @@ export default (): StyliPlugin => {
       if (flexAtom) {
         parser.addAtom(flexAtom)
       } else {
-        parser.addAtom(
-          new Atom({
-            id: flexKey,
-            key: flexKey,
-            propKey: flexKey,
-            propValue: true,
-            handled: true,
-            className: 'flex',
-            style: { display: 'flex' },
-          }),
-        )
+        const atom = new Atom({
+          propKey: flexKey,
+          propValue: true,
+          handled: true,
+          style: { display: 'flex' },
+        })
+        atom.createClassName(parser.config.prefix)
+        parser.addAtom(atom)
       }
     },
   }

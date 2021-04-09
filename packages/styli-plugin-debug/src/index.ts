@@ -1,5 +1,7 @@
 import { StyliPlugin } from '@styli/types'
 
+export const borderValue = '1px solid gold'
+
 export default (): StyliPlugin => {
   return {
     isMatch(key) {
@@ -12,7 +14,7 @@ export default (): StyliPlugin => {
         atom.meta.childSelector = '*'
       }
 
-      atom.style = { border: '1px solid gold' }
+      atom.style = { border: borderValue }
 
       return atom
     },

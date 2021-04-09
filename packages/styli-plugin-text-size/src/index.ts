@@ -9,7 +9,7 @@ function isPreset(key: string) {
   return reg.test(key)
 }
 export function isMatch(key: string) {
-  return /^text(-.+)?$/.test(key) || isPreset(key)
+  return /^text$/.test(key) || isPreset(key)
 }
 
 export function toStyle(key: string, value: any) {

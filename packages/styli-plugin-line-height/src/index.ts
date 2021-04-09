@@ -4,7 +4,7 @@ import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
 export function isMatch(key: string) {
-  return /^leading(None|Tight|Snug|Normal|Relaxed|Loose|-.+)?$/i.test(key)
+  return /^leading(None|Tight|Snug|Normal|Relaxed|Loose)?$/i.test(key)
 }
 
 export function toStyle({ key, value, isValueProp }: Atom): any {
@@ -16,7 +16,7 @@ export function toStyle({ key, value, isValueProp }: Atom): any {
 
   if (presetValue) return { lineHeight: presetValue }
 
-  return { lineHeight: value }
+  return {} // no style
 }
 
 export default (): StyliPlugin => {

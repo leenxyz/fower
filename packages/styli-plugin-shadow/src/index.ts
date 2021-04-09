@@ -12,10 +12,6 @@ export function toStyle({ key, value, isValueProp }: Atom) {
   const shadowSize = styleValue.toLowerCase()
   const shadows: any = store.getTheme().shadows
   const shadowValue = shadows[shadowSize || 'base']
-
-  if (!shadowValue) {
-    console.error('can‘t find shadow size:', shadowValue)
-  }
   return { boxShadow: shadowValue }
 }
 

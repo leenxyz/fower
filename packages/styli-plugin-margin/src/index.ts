@@ -17,7 +17,7 @@ export const marginMaps: Record<string, string[]> = {
 }
 
 export function isMatch(key: string) {
-  return /^m[ltrbxy]?(--?[\da-z]+)?$/i.test(key)
+  return /^m[ltrbxy]?$/i.test(key)
 }
 
 export default (): StyliPlugin => {

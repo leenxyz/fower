@@ -9,35 +9,35 @@ import {
 } from '../src'
 
 describe('styli-utils', () => {
-  it('upFirst', () => {
+  test('upFirst', () => {
     expect(upFirst('abc')).toEqual('Abc')
   })
 
-  it('downFirst', () => {
+  test('downFirst', () => {
     expect(downFirst('Abc')).toEqual('abc')
   })
 
-  it.only('kebab', () => {
+  test('kebab', () => {
     expect(kebab('aBc')).toEqual('a-bc')
     expect(kebab('spaceX-1')).toEqual('space-x-1')
     expect(kebab('p0')).toEqual('p0')
   })
 
-  it('isNumber', () => {
+  test('isNumber', () => {
     expect(isNumber('123')).toEqual(true)
     expect(isNumber('12.3')).toEqual(true)
   })
 
-  it('isEmptyObj', () => {
+  test('isEmptyObj', () => {
     expect(isEmptyObj({})).toEqual(true)
     expect(isEmptyObj(null)).toEqual(true)
   })
 
-  it('isPercentNumber', () => {
+  test('isPercentNumber', () => {
     expect(isPercentNumber('10p')).toEqual(true)
   })
 
-  it('jsKeyToCssKey', () => {
+  test('jsKeyToCssKey', () => {
     expect(jsKeyToCssKey('WebkitLineClamp')).toEqual('-webkit-line-clamp')
     expect(jsKeyToCssKey('lineHeight')).toEqual('line-height')
   })

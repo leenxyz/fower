@@ -2,7 +2,7 @@ import { StyliPlugin } from '@styli/types'
 import { downFirst } from '@styli/utils'
 
 function isMatch(key: string) {
-  return /^(row|column)?Gap(-.+)?$|^gridTemplateColumns(-.+)?$/i.test(key)
+  return /^(row|column)?Gap$|^gridTemplateColumns$/i.test(key)
 }
 
 function toStyle(key: string, value: any): any {

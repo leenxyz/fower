@@ -1,7 +1,7 @@
 import { StyliPlugin } from '@styli/types'
 
 export function isMatch(key: string) {
-  return /^opacity(-\d+)?$/.test(key)
+  return /^opacity$/.test(key)
 }
 
 export default (): StyliPlugin => {

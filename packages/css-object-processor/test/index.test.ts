@@ -2,7 +2,7 @@ import { CSSObject } from '@styli/types'
 import { toRules, parse, flatten } from '../src'
 
 describe('css object processor', () => {
-  it('flatten empty cssObject', () => {
+  test('flatten empty cssObject', () => {
     const cssObject: CSSObject = {}
     const result = flatten(cssObject)
 
@@ -10,7 +10,7 @@ describe('css object processor', () => {
     expect(result.length).toEqual(0)
   })
 
-  it('flatten no nested  cssObject', () => {
+  test('flatten no nested  cssObject', () => {
     const cssObject: CSSObject = {
       padding: 1,
       margin: '10px',
@@ -22,7 +22,7 @@ describe('css object processor', () => {
     expect(result[0][0]).toMatchObject({ padding: 1 })
   })
 
-  it('flatten nested cssObject', () => {
+  test('flatten nested cssObject', () => {
     const cssObject: CSSObject = {
       '.title': {
         padding: 1,
@@ -41,7 +41,7 @@ describe('css object processor', () => {
     expect(result.length).toEqual(6)
   })
 
-  it.only('parse', () => {
+  test('parse', () => {
     const cssObject: CSSObject = {
       '.title': {
         padding: 1,
@@ -65,7 +65,7 @@ describe('css object processor', () => {
     })
   })
 
-  it('toRules', () => {
+  test('toRules', () => {
     const cssObject: CSSObject = {
       '.title': {
         padding: 1,
