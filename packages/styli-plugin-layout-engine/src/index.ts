@@ -13,7 +13,6 @@ const toBottom = 'toBottom'
 const toBetween = 'toBetween'
 const toAround = 'toAround'
 const toEvenly = 'toEvenly'
-const toStretch = 'toStretch'
 
 const toCenter = 'toCenter'
 const toCenterX = 'toCenterX'
@@ -39,7 +38,6 @@ const layoutToolkits = [
   toBetween,
   toAround,
   toEvenly,
-  toStretch,
 ]
 
 export function getFlexDirection(props: any): string {
@@ -73,14 +71,14 @@ export function toStyle(key: string, props: any) {
       styleKey = 'justifyContent'
     }
 
-    if ([toTop, toBottom, toCenterY, toStretch].includes(key)) {
+    if ([toTop, toBottom, toCenterY].includes(key)) {
       styleKey = 'alignItems'
     }
   } else {
     if ([toTop, toBottom, toCenterY, toBetween, toAround, toEvenly].includes(key)) {
       styleKey = 'justifyContent'
     }
-    if ([toLeft, toRight, toCenterX, toStretch].includes(key)) {
+    if ([toLeft, toRight, toCenterX].includes(key)) {
       styleKey = 'alignItems'
     }
   }
@@ -97,8 +95,6 @@ export function toStyle(key: string, props: any) {
   } else if (key === toAround) {
     style[styleKey] = spaceAround
   } else if (key === toEvenly) {
-    style[styleKey] = spaceEvenly
-  } else if (key === toStretch) {
     style[styleKey] = spaceEvenly
   } else if (key === toCenter) {
     style.justifyContent = center

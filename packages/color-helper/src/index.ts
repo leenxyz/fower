@@ -22,23 +22,14 @@ export function transparentize(color: string, amount: number = 0) {
   return opacityFn(color, -amount)
 }
 
-function getColorParm(value: string, postFix?: string) {
+function getColorParam(value: string, postFix: string) {
   let color = value
-  let type = 't'
+  let type = ''
   let amount = ''
 
-  if (postFix) {
-    const result = postFix.match(/^([TOLD])?(\d{0,3})?$/i) || []
-    type = result[1]
-    amount = result[2]
-  }
-
-  if (value.includes('-')) {
-    const result = value.match(/^(.+)-([TOLD])?(\d{0,3})?$/i) || []
-    color = result[1]
-    type = result[2]
-    amount = result[3]
-  }
+  const result = postFix.match(/^([TOLD])?(\d{0,3})?$/i) || []
+  type = result[1]
+  amount = result[2]
 
   return { color, type, amount: Number(amount) }
 }
@@ -50,12 +41,13 @@ function getColorParm(value: string, postFix?: string) {
  * ```
  */
 export function formatColor(value: string, postFix: string): string {
-  // #000, #00000
-  const canFormat = /^#([A-F0-9]{3}){1,2}$/i.test(value)
+  // TODO: need improve
+  const canFormat = /^rgba?\(.*\)|^#([A-F0-9]{3}){1,2}$/i.test(value)
 
   if (!canFormat) return value
 
-  const { color, type, amount } = getColorParm(value, postFix)
+  const param = getColorParam(value, postFix)
+  const { color, type, amount } = param
 
   if (/^t$/i.test(type)) return transparentize(color, amount)
   if (/^o$/i.test(type)) return opacify(color, amount)

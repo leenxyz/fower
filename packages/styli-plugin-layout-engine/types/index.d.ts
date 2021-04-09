@@ -163,7 +163,5 @@ declare module '@styli/types' {
      * ```
      */
     toEvenly?: boolean
-
-    toStretch?: boolean
   }
 }
