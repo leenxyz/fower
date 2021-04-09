@@ -12,7 +12,6 @@ const parser = new Parser({})
 
 test('isMatch', () => {
   expect(isMatch!('leading')).toEqual(true)
-  expect(isMatch!('leading-10')).toEqual(true)
   expect(isMatch!('leadingNone')).toEqual(true)
   expect(isMatch!('leadingTight')).toEqual(true)
 })

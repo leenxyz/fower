@@ -6,10 +6,10 @@ const parser = {} as any
 
 test('isMatch', () => {
   expect(isMatch!('w')).toEqual(true)
-  expect(isMatch!('square-20')).toEqual(true)
-  expect(isMatch!('circle-8rem')).toEqual(true)
-  expect(isMatch!('maxH-8')).toEqual(true)
-  expect(isMatch!('square-8px')).toEqual(true)
+  expect(isMatch!('square')).toEqual(true)
+  expect(isMatch!('circle')).toEqual(true)
+  expect(isMatch!('maxH')).toEqual(true)
+  expect(isMatch!('square')).toEqual(true)
 })
 
 test('w={8}', () => {

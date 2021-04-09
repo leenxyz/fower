@@ -13,9 +13,6 @@ beforeAll(() => {
 
 test('isMatch', () => {
   expect(isMatch!('text')).toEqual(true)
-  expect(isMatch!('text-10')).toEqual(true)
-  expect(isMatch!('text-10rem')).toEqual(true)
-  expect(isMatch!('text-10rem')).toEqual(true)
   expect(isMatch!('textSM')).toEqual(true)
 })
 

@@ -6,11 +6,10 @@ const { isMatch, handleAtom } = plugin()
 const parser = {} as Parser
 
 test('isMatch', () => {
+  expect(isMatch!('gap')).toEqual(true)
   expect(isMatch!('rowGap')).toEqual(true)
   expect(isMatch!('columnGap')).toEqual(true)
-  expect(isMatch!('columnGap-10px')).toEqual(true)
   expect(isMatch!('gridTemplateColumns')).toEqual(true)
-  expect(isMatch!('gridTemplateColumns-10px')).toEqual(true)
 })
 
 test('rowGap={8}', () => {

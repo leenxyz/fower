@@ -12,7 +12,7 @@ const parser = new Parser({})
 test('isMatch', () => {
   expect(isMatch!('border')).toEqual(true)
   expect(isMatch!('borderT')).toEqual(true)
-  expect(isMatch!('borderT-1')).toEqual(true)
+  expect(isMatch!('borderTR')).toEqual(true)
   expect(isMatch!('borderRed400')).toEqual(true)
 })
 

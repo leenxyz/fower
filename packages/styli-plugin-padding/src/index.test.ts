@@ -8,8 +8,6 @@ test('isMatch', () => {
   expect(isMatch!('p')).toEqual(true)
   expect(isMatch!('pl')).toEqual(true)
   expect(isMatch!('py')).toEqual(true)
-  expect(isMatch!('px-10')).toEqual(true)
-  expect(isMatch!('px-10rem')).toEqual(true)
 })
 
 test('p={8}', () => {

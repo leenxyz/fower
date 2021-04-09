@@ -6,9 +6,8 @@ const parser = {} as any
 
 test('isMatch', () => {
   expect(isMatch!('top')).toEqual(true)
-  expect(isMatch!('bottom-10')).toEqual(true)
-  expect(isMatch!('bottom--10')).toEqual(true)
-  expect(isMatch!('left-10rem')).toEqual(true)
+  expect(isMatch!('bottom')).toEqual(true)
+  expect(isMatch!('left')).toEqual(true)
   expect(isMatch!('fixed')).toEqual(true)
   expect(isMatch!('absolute')).toEqual(true)
 })

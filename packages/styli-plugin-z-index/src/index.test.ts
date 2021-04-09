@@ -11,8 +11,6 @@ const { isMatch, handleAtom } = plugin()
 const parser = {} as any
 test('isMatch', () => {
   expect(isMatch!('zIndex')).toEqual(true)
-  expect(isMatch!('zIndex-10')).toEqual(true)
-  expect(isMatch!('zIndex--1')).toEqual(true)
 })
 
 test('zIndex={10}', () => {

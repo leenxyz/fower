@@ -7,7 +7,6 @@ const parser = {} as any
 
 test('isMatch', () => {
   expect(isMatch!('opacity')).toEqual(true)
-  expect(isMatch!('opacity-20')).toEqual(true)
 })
 
 test('opacity={60}', () => {

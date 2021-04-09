@@ -15,8 +15,7 @@ beforeAll(() => {
 test('isMatch', () => {
   expect(isMatch!('space')).toEqual(true)
   expect(isMatch!('spaceX')).toEqual(true)
-  expect(isMatch!('spaceX-10')).toEqual(true)
-  expect(isMatch!('spaceY-20')).toEqual(true)
+  expect(isMatch!('spaceY')).toEqual(true)
 })
 
 test('space', () => {

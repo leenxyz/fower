@@ -7,8 +7,6 @@ test('isMatch', () => {
   expect(isMatch!('m')).toEqual(true)
   expect(isMatch!('ml')).toEqual(true)
   expect(isMatch!('my')).toEqual(true)
-  expect(isMatch!('mx-10')).toEqual(true)
-  expect(isMatch!('mx-10rem')).toEqual(true)
 })
 
 test('m={8}', () => {
