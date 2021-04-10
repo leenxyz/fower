@@ -1,7 +1,7 @@
-import { Atom } from '@styli/atom'
 import { configure } from '@styli/core'
 import { store } from '@styli/store'
 import { presetWeb } from '@styli/preset-web'
+import { Atom } from '../src'
 
 beforeAll(() => {
   configure(presetWeb)

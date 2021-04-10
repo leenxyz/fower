@@ -1,4 +1,4 @@
-import { Atom } from './index'
+import { Atom } from '../src'
 
 test('new Atom()', () => {
   const atom = new Atom({

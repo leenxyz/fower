@@ -1,4 +1,4 @@
-import { Atom, digitReg } from '@styli/atom'
+import { Atom, digitReg } from '../src'
 
 let spacings: any
 
