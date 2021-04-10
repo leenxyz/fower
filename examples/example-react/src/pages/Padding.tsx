@@ -8,7 +8,10 @@ export default () => {
       </Box>
 
       <Box debug debugChildren>
-        <Box p-44px inlineBlock>
+        <Box p1 inlineBlock>
+          p1
+        </Box>
+        <Box p4 inlineBlock>
           p4
         </Box>
         <Box pt4 inlineBlock>

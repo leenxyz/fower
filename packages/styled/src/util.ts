@@ -8,11 +8,11 @@ export function getInLineParsedProps(props: any, args: Args) {
   const parsedProps = parser.getParsedProps()
 
   if (Array.isArray(props.style)) {
-    parsedProps.style = [createStyle(...args), parser.toStyles(), props.style]
+    parsedProps.style = [createStyle(...args), parser.toStyle(), props.style]
   } else {
     parsedProps.style = {
       ...createStyle(...args),
-      ...parser.toStyles(),
+      ...parser.toStyle(),
       ...props.style,
     }
   }

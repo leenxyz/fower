@@ -39,12 +39,12 @@ export class Parser {
     return !!this.atoms.find((i) => !!i.meta.breakpoint)
   }
 
-  get plugins(): any[] {
-    return store.config.plugins
-  }
-
   get config(): any {
     return store.config
+  }
+
+  get plugins(): any[] {
+    return store.config.plugins
   }
 
   /**
@@ -212,7 +212,7 @@ export class Parser {
     }
   }
 
-  private parseCSSProp(propValue: any) {
+  parseCSSProp(propValue: any) {
     const parsed = parse(propValue)
 
     const prefixClassName = objectToClassName(propValue)
@@ -295,7 +295,7 @@ export class Parser {
   /**
    * get style object
    */
-  toStyles() {
+  toStyle() {
     return this.atoms.reduce<any>((result, atom) => {
       if (!atom.isValid) return result // not style type
       const style = Object.entries(atom.style).reduce<any>((c, [key, value]) => {

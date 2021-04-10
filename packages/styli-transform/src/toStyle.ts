@@ -1,7 +1,7 @@
 import * as t from '@babel/types'
 
 export function toStyle(path: any, parser: any, attrs: any) {
-  const style: any = parser.toStyles()
+  const style: any = parser.toStyle()
 
   const propExpression = t.objectExpression(
     Object.entries(style).map(([key, value]: any) =>

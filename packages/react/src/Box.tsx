@@ -26,10 +26,10 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
 
   if (inline) {
     if (Array.isArray(rest.style)) {
-      parsedProps.style = [parser.toStyles(), rest.style]
+      parsedProps.style = [parser.toStyle(), rest.style]
     } else {
       parsedProps.style = {
-        ...parser.toStyles(),
+        ...parser.toStyle(),
         ...rest.style,
       }
     }

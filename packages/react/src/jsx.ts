@@ -21,9 +21,9 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
 
   if (inline) {
     if (Array.isArray(props.style)) {
-      parsedProps.style = [parser.toStyles(), props.style]
+      parsedProps.style = [parser.toStyle(), props.style]
     } else {
-      parsedProps.style = { ...parser.toStyles(), ...props.style }
+      parsedProps.style = { ...parser.toStyle(), ...props.style }
     }
   } else {
     const { className = '' } = props || {}
