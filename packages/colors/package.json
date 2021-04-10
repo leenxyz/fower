@@ -1,6 +1,6 @@
 {
   "name": "@styli/colors",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,6 +22,6 @@
   "author": "forsigner",
   "module": "dist/colors.esm.js",
   "dependencies": {
-    "@styli/types": "^1.5.0"
+    "@styli/types": "^1.6.0"
   }
 }

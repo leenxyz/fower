@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-text-transform",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-text-transform.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.5.0",
-    "@styli/types": "^1.5.0",
-    "@styli/utils": "^1.5.0"
+    "@styli/atom": "^1.6.0",
+    "@styli/types": "^1.6.0",
+    "@styli/utils": "^1.6.0"
   }
 }

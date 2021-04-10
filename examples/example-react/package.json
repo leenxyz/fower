@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-react",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "scripts": {
     "start": "umi dev",
     "postinstall": "umi generate tmp",
@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
-    "@styli/preset-web-rem": "^1.5.0",
-    "@styli/react": "^1.5.0",
-    "@styli/store": "^1.5.0",
+    "@styli/preset-web-rem": "^1.6.0",
+    "@styli/react": "^1.6.0",
+    "@styli/store": "^1.6.0",
     "@umijs/preset-react": "1.x",
     "umi": "^3.3.9"
   },
