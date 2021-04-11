@@ -14,6 +14,10 @@ import { atomCache } from './cache'
 import { isUnitProp } from './is-unit-prop'
 
 type Dict = Record<string, any>
+interface Props {
+  className?: string
+  [key: string]: any
+}
 
 //  high-frequency used props in react
 const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className']
@@ -22,7 +26,7 @@ const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className']
  * An Abstract tool to handle atomic props
  */
 export class Parser {
-  constructor(readonly props: any = {}) {
+  constructor(readonly props = {} as Props) {
     this.traverseProps(props)
   }
 
@@ -45,6 +49,54 @@ export class Parser {
 
   get plugins(): any[] {
     return store.config.plugins
+  }
+
+  /**
+   * traverse Props to init atoms
+   */
+  traverseProps(props: Props): void {
+    if (isEmptyObj(props)) return
+
+    const { excludedProps = [] } = props
+    const entries = Object.entries<any>(props)
+
+    if (props.className) {
+      for (const item of props.className.split(/\s+/)) {
+        entries.push([item, true])
+      }
+    }
+
+    // traverse Props
+    for (let [propKey, propValue] of entries) {
+      // the prop should be excluded by user setting
+      if (excludedProps.includes(propKey)) continue
+
+      if (reactProps.includes(propKey)) continue
+
+      if (!this.isValidProp(propKey, propValue)) continue
+
+      // parse css prop
+      if (propKey === 'css') {
+        this.parseCSSProp(propValue)
+        continue
+      }
+
+      let atom = new Atom({ propKey, propValue })
+
+      try {
+        this.mutateAtom(atom)
+
+        if (atom.handled) this.addAtom(atom)
+      } catch (error) {
+        continue
+      }
+    }
+
+    for (const plugin of this.plugins) {
+      if (plugin.afterAtomStyleCreate) {
+        plugin.afterAtomStyleCreate(this)
+      }
+    }
   }
 
   /**
@@ -171,47 +223,6 @@ export class Parser {
     }
   }
 
-  /**
-   * traverse Props to init atoms
-   */
-  traverseProps(props: any): void {
-    if (isEmptyObj(props)) return
-
-    const { excludedProps = [] } = props
-
-    // traverse Props
-    for (let [propKey, propValue] of Object.entries(props)) {
-      // the prop should be excluded by user setting
-      if (excludedProps.includes(propKey)) continue
-
-      if (reactProps.includes(propKey)) continue
-
-      if (!this.isValidProp(propKey, propValue)) continue
-
-      // parse css prop
-      if (propKey === 'css') {
-        this.parseCSSProp(propValue)
-        continue
-      }
-
-      let atom = new Atom({ propKey, propValue })
-
-      try {
-        this.mutateAtom(atom)
-
-        if (atom.handled) this.addAtom(atom)
-      } catch (error) {
-        continue
-      }
-    }
-
-    for (const plugin of this.plugins) {
-      if (plugin.afterAtomStyleCreate) {
-        plugin.afterAtomStyleCreate(this)
-      }
-    }
-  }
-
   parseCSSProp(propValue: any) {
     const parsed = parse(propValue)
 
@@ -263,7 +274,7 @@ export class Parser {
   /**
    * get component classNames
    */
-  getClassNames(extraClassName: string = ''): string[] {
+  getClassNames(): string[] {
     /**
      * handle override style
      * @example
@@ -271,6 +282,7 @@ export class Parser {
      * <Box class="px2 px4"></Box> will get <div class="px4"></div>
      */
     let classNames: string[] = []
+
     this.atoms.reduce<Atom[]>((result, cur) => {
       const index = result.findIndex((i) => i.styleKeysHash === cur.styleKeysHash)
 
@@ -287,7 +299,11 @@ export class Parser {
       return result
     }, [])
 
-    if (extraClassName) classNames.push(extraClassName)
+    const { className = '' } = this.props
+    const filteredClassNames = className.split(/\s+/).filter((i) => !classNames.includes(i) && !!i)
+
+    classNames = classNames.concat(filteredClassNames)
+
     if (this.hasResponsive) classNames.unshift(this.uniqueClassName)
     return classNames
   }

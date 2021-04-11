@@ -34,11 +34,10 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
       }
     }
   } else {
-    const { className = '' } = rest || {}
     parser.insertRule()
-    const finalClassName = parser.getClassNames(className).join(' ')
+    const finalClassName = parser.getClassNames().join(' ')
 
-    if (finalClassName) parsedProps.className = finalClassName
+    parsedProps.className = finalClassName
   }
   return createElement(as, { ref, ...parsedProps })
 }) as any

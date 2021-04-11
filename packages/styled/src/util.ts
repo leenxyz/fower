@@ -25,16 +25,10 @@ export function getCssParsedProps(props: any, args: Args) {
   const parser = new Parser(props)
   const parsedProps = parser.getParsedProps()
 
-  const { className = '' } = props || {}
+  const finalClassName = [css(...(args as any)), ...parser.getClassNames()].join(' ').trim()
 
-  const finalClassName = [css(...(args as any)), ...parser.getClassNames(), className]
-    .join(' ')
-    .trim()
-
-  if (finalClassName) {
-    parsedProps.className = finalClassName
-    parser.insertRule()
-  }
+  parsedProps.className = finalClassName
+  parser.insertRule()
 
   return parsedProps
 }

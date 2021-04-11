@@ -141,19 +141,13 @@ test('mutateAtom(), atom should match a plugin', () => {
 })
 
 describe('getClassNames()', () => {
-  test('no extraClassName', () => {
+  test('normal', () => {
     const parser = new Parser({ p1: true, m1: true })
     const classNames = parser.getClassNames()
     expect(classNames).toMatchObject(['p1', 'm1'])
   })
 
-  test('with extraClassName', () => {
-    const parser = new Parser({ p1: true, m1: true })
-    const classNames = parser.getClassNames('extra')
-    expect(classNames).toMatchObject(['p1', 'm1', 'extra'])
-  })
-
-  test('with override style', () => {
+  test.only('with override style', () => {
     const parser = new Parser({ p1: true, p2: true, m1: true, m2: true })
     const classNames = parser.getClassNames()
     expect(classNames).toMatchObject(['p2', 'm2'])
