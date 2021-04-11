@@ -14,6 +14,7 @@ module.exports = {
       'css-prop',
       'pseudo',
       'responsive',
+      'theme-mode',
       'dynamic-style',
       'programmable',
       'reuse',

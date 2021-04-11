@@ -34,6 +34,11 @@ registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
 })
 
 setTheme({
+  modes: [
+    'red', // red mode
+    'blue', // red mode
+    'large', // large text mode
+  ],
   spacings: {
     100: 400,
   },

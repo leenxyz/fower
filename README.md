@@ -11,7 +11,6 @@ An Atomic CSS in JS library for rapid UI development.
 ## Quick Start
 
 - [Use with React](https://styli.js.org/docs/use-with-react)
-- [Use with Vue](https://styli.js.org/docs/use-with-vue)
 - [Use with React Native](https://styli.js.org/docs/use-with-rn)
 
 ## Documentation

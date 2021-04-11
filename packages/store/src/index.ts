@@ -20,6 +20,10 @@ class Store {
     return this.config.theme
   }
 
+  getConfig = () => {
+    return this.config
+  }
+
   // user config
   configure = (config: any, strategy: Strategy = 'deepmerge') => {
     if (strategy === 'replace') {
