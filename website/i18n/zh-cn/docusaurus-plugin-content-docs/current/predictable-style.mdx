@@ -1,0 +1,90 @@
+---
+id: predictable-style
+title: Predictable style
+---
+
+One of most cool feature of Styli is the predictable style. In traditional CSS, it's not predictable to override style.
+
+## Traditional CSS
+
+For example, if you have some css rule like below:
+
+```css
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+```
+
+If we set `className="red blue"` to a text, it will be color `blue `.
+
+```jsx live
+<Text className="red blue">Styli</Text>
+```
+
+If we reverse it to `className="blue red"` to a text, it will be color `blue `, too.
+
+```jsx live
+<Text className="red blue">Styli</Text>
+```
+
+The color of text is not depended by the order of classNames, it's not predictable.
+
+## In Styli
+
+In Styli, the style is predictable. The style is depended by the order of Atomic props.
+
+If we set props to `red400 green400`, the color of text is `green400`:
+
+```jsx live
+<Text red400 green400>
+  Styli
+</Text>
+```
+
+If we set props to `green400 red400`, the color of text is `red400`:
+
+```jsx live
+<Text green400 red400>
+  Styli
+</Text>
+```
+
+If we set props to `green400 red400 blue400`, the color of text is `blue400`:
+
+```jsx live
+<Text green400 red400 blue400>
+  Styli
+</Text>
+```
+
+## Useful use case
+
+When we build a reusable component, it's very useful. We can override component style elegantly.
+
+```jsx live
+function App() {
+  const MyButton = (props) => {
+    return <Box as="button" bgAmber500 p2 white {...props} />
+  }
+
+  const Button = styled(MyButton)
+
+  return (
+    <Box>
+      <Button>default</Button>
+      <Button bgGreen500 p3>
+        bgGreen500
+      </Button>
+      <Button bgPurple500 p4>
+        bgPurple500
+      </Button>
+      <Button bgPink500 p5>
+        bgPink500
+      </Button>
+    </Box>
+  )
+}
+```

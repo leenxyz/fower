@@ -15,6 +15,8 @@ module.exports = {
       'pseudo',
       'responsive',
       'theme-mode',
+      'predictable-style',
+      'color-helper',
       'dynamic-style',
       'programmable',
       'reuse',
