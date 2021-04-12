@@ -329,6 +329,7 @@ export class Parser {
    * @returns
    */
   toRules(): string[] {
+    const { modePrefix = '' } = this.config.theme
     const rules: string[] = []
 
     // sort responsive style
@@ -357,7 +358,7 @@ export class Parser {
 
       let selector = `${uniqueSelector}.${className}`
       if (pseudo) selector = selector + pseudo
-      if (mode) selector = `.${mode} ${selector}`
+      if (mode) selector = `.${modePrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)

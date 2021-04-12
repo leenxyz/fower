@@ -3,6 +3,7 @@ import { colors } from '@styli/colors'
 
 export const theme: Theme = {
   modes: ['dark'],
+  modePrefix: '',
   breakpoints: {
     sm: '640px',
     md: '768px',

@@ -1,6 +1,15 @@
 import { Box } from '@styli/react';
-import { Atom } from '@styli/atom';
+import { setTheme } from '@styli/core';
 import { useState } from 'react';
+
+setTheme({
+  // modePrefix: 'tw-',
+  modes: [
+    'red', // red mode
+    'blue', // red mode
+    'large', // large text mode
+  ],
+});
 
 export default () => {
   const [mode, setMode] = useState('Light');

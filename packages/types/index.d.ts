@@ -157,7 +157,7 @@ declare namespace StyliTypes {
 
   interface Theme {
     modes?: string[] // eg: modes: ['dark', 'yellow']
-    modeClassNamePrefix?: string // eg: styli-
+    modePrefix?: string // eg: styli-
     breakpoints: {
       sm: string
       md: string
