@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: false,
+  parallel: false,
   chainWebpack(config) {
     config.module
       .rule('vue')

@@ -1,9 +1,22 @@
-import { configure } from '@styli/core'
+import { configure, injectGlobalStyle } from '@styli/core'
 import presetWeb from '@styli/preset-web'
 import _Vue, { PluginFunction } from 'vue'
 import vcss from '@/v-css'
 
-const isVue2 = false
+const isVue2 = (_Vue?.version || '').startsWith('2')
+
+injectGlobalStyle({
+  '*': {
+    border: '0 solid #ccc',
+    boxSizing: 'border-box',
+  },
+  '*::before': {
+    boxSizing: 'border-box',
+  },
+  '*::after': {
+    boxSizing: 'border-box',
+  },
+})
 
 configure(presetWeb)
 

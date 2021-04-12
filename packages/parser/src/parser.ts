@@ -328,7 +328,7 @@ export class Parser {
    * get rules for parser.insertRule
    * @returns
    */
-  toRules(): string[] {
+  toRules(enableInserted = false): string[] {
     const { modePrefix = '' } = this.config.theme
     const rules: string[] = []
 
@@ -349,7 +349,9 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      if (atom.inserted) continue
+      if (!enableInserted) {
+        if (atom.inserted) continue
+      }
 
       atom.inserted = true
 

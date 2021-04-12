@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="red400 textSM bgBlue200">Hello, Vue</h1>
-    <!-- <div h-200 textXS debugChildren toRight>
-      <div square-100></div>
-      <div square-100></div>
-      <div square-100></div>
-    </div> -->
+    <h1 v-css class="textSM p1 red200 border-4">Hello, Vue</h1>
+    <div h-200 textXS toEvenly>
+      <div bgGreen100 square-90 border class="red300">AAx</div>
+      <div m4 toCenter square-100 bgOrange200>b</div>
+      <div class="border red100" bgBlue400>cdd</div>
+    </div>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ export default {
     console.log('......')
   },
   data() {
+    console.log('render.x...')
     return {
       color: 'red',
     }
@@ -30,12 +31,3 @@ export default {
   },
 }
 </script>
-
-<style>
-h1 {
-  font-style: italic;
-}
-.red {
-  color: red;
-}
-</style>

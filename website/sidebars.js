@@ -4,7 +4,7 @@ module.exports = {
       'about',
       'installation',
       'use-with-react',
-      // 'use-with-vue',
+      'use-with-vue',
       'use-with-rn',
       'use-with-taro',
       'use-with-vanilla',

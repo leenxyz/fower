@@ -4,6 +4,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
+    "dist": "vue-cli-service build",
     "build": "echo 'build'",
     "test": "echo 'build:test'"
   },

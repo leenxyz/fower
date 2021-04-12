@@ -10,8 +10,8 @@ import { Parser } from '@styli/parser'
  * @param children  element children
  */
 export function jsx(element: string, props: any = {}, ...children: any[]) {
-  // Do'not handle third-party Component
-  if (typeof element !== 'string') {
+  // Do'not handle third-party Component and empty props
+  if (typeof element !== 'string' || !props || !Object.keys(props).length) {
     return createElement.apply(null, arguments as any)
   }
 
@@ -26,9 +26,8 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
       parsedProps.style = { ...parser.toStyle(), ...props.style }
     }
   } else {
-    const { className = '' } = props || {}
     parser.insertRule()
-    const finalClassName = parser.getClassNames(className).join(' ').trim()
+    const finalClassName = parser.getClassNames().join(' ').trim()
     if (finalClassName) parsedProps.className = finalClassName
   }
 

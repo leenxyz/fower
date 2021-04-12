@@ -24,9 +24,7 @@
     "@styli/parser": "^1.6.0",
     "@styli/preset-web": "^1.6.0",
     "@styli/styled": "^1.6.0",
-    "@styli/types": "^1.6.0",
-    "@vue/composition-api": "1.0.0-rc.6",
-    "vue-demi": "^0.7.4"
+    "@styli/types": "^1.6.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",

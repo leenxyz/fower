@@ -1,22 +1,12 @@
 import { Parser } from '@styli/parser'
 
-function isArray(data: string) {
-  return /^\[(\w+,)*\w+\]$/.test(data)
-}
-
 function handler(el: HTMLElement, bind: any) {
   const props: any = {}
 
   /** handle children */
   for (const { name, value } of Object.values(el.attributes)) {
-    if (name) {
-      if (isArray(value)) {
-        const [, arrayStr] = value.match(/^\[((\w+,)*\w+)\]$/) || []
-        props[name] = arrayStr.split(',')
-        continue
-      }
-      props[name] = !value ? true : value
-    }
+    if (!name) continue
+    props[name] = !value ? true : value
   }
 
   el.classList.forEach((i) => {
