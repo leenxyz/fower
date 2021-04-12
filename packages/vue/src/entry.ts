@@ -1,7 +1,9 @@
 import { configure } from '@styli/core'
 import presetWeb from '@styli/preset-web'
 import _Vue, { PluginFunction } from 'vue'
-import vStyli from '@/v-css'
+import vcss from '@/v-css'
+
+const isVue2 = false
 
 configure(presetWeb)
 
@@ -11,12 +13,18 @@ interface InstallFunction extends PluginFunction<any> {
   installed?: boolean
 }
 
-// install function executed by Vue.use()
-const install: InstallFunction = function installStyli(Vue: typeof _Vue) {
-  if (install.installed) return
-  install.installed = true
+const install: InstallFunction = function installStyli(app: typeof _Vue) {
+  // if (install.installed) return
+  // install.installed = true
+  const opt: any = {}
 
-  Vue.directive(vStyli.name, { bind: vStyli.bind })
+  if (isVue2) {
+    opt.bind = vcss.bind
+  } else {
+    opt.mounted = vcss.mounted
+  }
+
+  app.directive(vcss.name, opt)
 }
 
 // Create module definition for Vue.use()
@@ -27,6 +35,7 @@ const plugin = {
 // To auto-install on non-es builds, when vue is found
 // eslint-disable-next-line no-redeclare
 /* global window, global */
+
 if ('false' === process.env.ES_BUILD) {
   let GlobalVue = null
   if (typeof window !== 'undefined') {
