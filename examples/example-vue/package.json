@@ -8,12 +8,12 @@
     "test": "echo 'build:test'"
   },
   "dependencies": {
-    "@styli/vue": "^0.25.0",
+    "@styli/vue": "^1.6.0",
     "core-js": "^3.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@styli/vue-template-compiler": "^0.25.0",
+    "@styli/vue-template-compiler": "^1.6.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"

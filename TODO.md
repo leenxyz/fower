@@ -1,35 +1,10 @@
 # TODO List
 
-- Global Styles
-
-```js
-injectGlobalStyle({
-  body: {
-    margin: '0',
-  },
-})
-```
-
-- keyframes api
-
-```jsx
-const fadeIn = keyframes({
-  '0%': { opacity: '0' },
-  '100%': { opacity: '1' },
-})
-
-function Demo() {
-  return (
-    <Box
-      css={{
-        animationName: fadeIn,
-      }}
-    >
-      something
-    </Box>
-  )
-}
-```
+- group pseduo
+- group posfix
+- $text,$border,$bg,$sm,$dark,$hover
+- better support for vue
+- better support vanilla js
 
 - 可读性和可维护性
 - themeability
