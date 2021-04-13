@@ -23,7 +23,16 @@
   --ifm-scrollbar-track-background-color: transparent;
 
   --ifm-toc-border-color: #f3f3f3;
+
+  --ifm-menu-link-padding-vertical: 0.6rem;
+  --doc-sidebar-width: 240px !important;
+
+  --ifm-menu-color-background-hover: transparent;
+
+  --ifm-menu-color-background-active: rgba(37, 194, 169, 0.1);
+
 }
+
 
 body {
   font-size: 16px !important;
@@ -133,4 +142,155 @@ table td {
 
 .blue {
   color: blue;
+}
+
+.home .container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+.home .row .col {
+  padding-left: 0;
+}
+
+.row .col {
+  padding-right: 0;
+}
+
+.tabs__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tabs__item:hover {
+  background-color: transparent;
+}
+
+.pagination-nav__link {
+  border: none;
+}
+
+.menu__list-item {
+  margin: 0;
+}
+
+
+.row .col.col--3 {
+  --ifm-col-width: 180px !important;
+}
+
+.doc-container .row {
+  justify-content: space-between;
+}
+
+:focus {
+  outline: none;
+}
+
+.menu__link:hover {
+  color: #25c2a0;
+}
+
+.demo-container pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.toBetween {
+  justify-content: space-between;
+}
+
+.flexDirection-row {
+  flex-direction: row;
+}
+
+.text-78 {
+  font-size: 78px;
+}
+
+.leadingNone {
+  line-height: 1;
+}
+
+.fontExtrabold {
+  font-weight: 800;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+}
+
+.bgOrange100 {
+  background-color: rgb(255, 237, 213);
+}
+
+.p6 {
+  padding: 24px;
+}
+
+.roundedTLG {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.toCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-48 {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.toCenterY {
+  align-items: center;
+}
+
+.p3 {
+  padding: 12px;
+}
+
+.w-240 {
+  width: 240px;
+}
+
+.bgWhite {
+  background-color: rgb(255, 255, 255);
+}
+
+.roundedXL {
+  border-radius: 12px;
+}
+
+.shadowMD {
+  box-shadow: rgb(0 0 0 / 12%) 0px 4px 8px, rgb(0 0 0 / 2%) 0px 0px 2px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.textXL {
+  font-size: 20px;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.home-demo pre {
+  padding: 0;
+}
+
+.gray800 {
+  color: rgb(39, 39, 42);
 }

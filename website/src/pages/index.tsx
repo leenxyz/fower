@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import Playground from '@theme/Playground'
-import Link from '@docusaurus/Link'
+import DLink from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
@@ -12,6 +12,10 @@ import { Box } from '@styli/react'
 import theme from 'prism-react-renderer/themes/duotoneDark'
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import { HomeDemo } from '../components/HomeDemo'
+import { styled } from '@styli/styled'
+
+const Link = styled(DLink)
 
 const code1 = `
   <Box toCenter bgGray100 p4>
@@ -163,36 +167,62 @@ function Home() {
   return (
     <Layout title={tagline} description={tagline}>
       <div className={styles.container}>
-        <div className={styles.slogan}>
-          An <span className={styles.red}>Atomic CSS</span>{' '}
-          <span className={styles.green}>in JS</span> library for rapid UI development
-        </div>
-        <div className={styles.side}>
-          <Translate id="home.subtitle" description="The homepage welcome message">
-            Get Started
-          </Translate>
-        </div>
+        <Box className="toBetween flexDirection-row">
+          <Box>
+            <Box className="leadingNone fontExtrabold textLeft" style={{ fontSize: 78 }}>
+              An <span className={styles.red}>Atomic CSS</span>{' '}
+              <span className={styles.green}>in JS</span> library for rapid UI development
+            </Box>
+            <Box text2XL textLeft py2>
+              <Translate id="home.subtitle" description="The homepage welcome message">
+                Get Started
+              </Translate>
+            </Box>
 
-        <div className={styles.wrapLink}>
-          <Link
-            className={clsx('button button--primary button--lg', styles.getStarted)}
-            to={useBaseUrl('docs/installation')}
-          >
-            <Translate id="home.getStated" description="The homepage welcome message">
-              Get Started
-            </Translate>
-          </Link>
-          <iframe
-            className={styles.indexCtasGitHubButton}
-            src="https://ghbtns.com/github-btn.html?user=forsigner&amp;repo=styli&amp;type=star&amp;count=true&amp;size=large"
-            width={160}
-            height={30}
-            title="GitHub Stars"
-          />
-        </div>
+            <Box className={styles.wrapLink} spaceX2>
+              <Link
+                className={clsx('button button--lg', styles.getStarted)}
+                to={useBaseUrl('docs/use-with-react')}
+                roundedFull
+                bg="#61dafb"
+                bg--hover="#61dafb--D4"
+                color="#61dafb"
+                bgBlack
+                bgTrueGray800
+                py3
+                borderNone
+              >
+                Start with React
+              </Link>
+              <Link
+                className={clsx('button  button--lg', styles.getStarted)}
+                to={useBaseUrl('docs/use-with-vue')}
+                bg="#4fc08d"
+                bg--hover="#4fc08d--D4"
+                color="#4fc08d"
+                roundedFull
+                bgTrueGray800
+                py3
+                borderNone
+              >
+                Start with Vue
+              </Link>
+              <iframe
+                className={styles.indexCtasGitHubButton}
+                src="https://ghbtns.com/github-btn.html?user=forsigner&amp;repo=styli&amp;type=star&amp;count=true&amp;size=large"
+                width={160}
+                height={30}
+                title="GitHub Stars"
+              />
+            </Box>
+          </Box>
+          <Box className="demo-container">
+            <HomeDemo></HomeDemo>
+          </Box>
+        </Box>
       </div>
 
-      <main>
+      <main className="home">
         {features && features.length > 0 && (
           <div className={styles.item}>
             <div className="container">

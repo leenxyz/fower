@@ -215,10 +215,13 @@ function DocSidebar({
     >
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
       <div
-        className={clsx('menu', 'menu--responsive', 'thin-scrollbar', styles.menu, {
+        className={clsx('menu', 'menu--responsive', styles.menu, {
           'menu--show': showResponsiveSidebar,
           [styles.menuWithAnnouncementBar]: !isAnnouncementBarClosed && scrollY === 0,
         })}
+        style={{
+          paddingLeft: 0,
+        }}
       >
         <button
           aria-label={

@@ -13,6 +13,7 @@ import Footer from '@theme/Footer'
 import LayoutProviders from '@theme/LayoutProviders'
 import LayoutHead from '@theme/LayoutHead'
 import { Helmet } from 'react-helmet'
+import { Box } from '@styli/react'
 
 import type { Props } from '@theme/Layout'
 
@@ -40,7 +41,17 @@ function Layout(props: Props): JSX.Element {
 
       <AnnouncementBar />
       <Navbar />
-      <div className={clsx('main-wrapper', wrapperClassName)}>{children}</div>
+      <Box
+        w-1360--md
+        className={clsx('main-wrapper', wrapperClassName)}
+        style={{
+          // maxWidth: '1360px',
+          // width: '1360px',
+          margin: '0 auto',
+        }}
+      >
+        {children}
+      </Box>
 
       {!noFooter && <Footer />}
     </LayoutProviders>

@@ -16,41 +16,31 @@
 }
 
 .container {
-  /* max-width: 1120px; */
-  max-width: 1000px;
+  max-width: 1360px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   margin: 0 auto 40px;
-  padding: 60px 0;
+  padding: 60px 0 !important;
 }
 
-.slogan {
-  padding: 50px 0;
-  font-size: 80px;
-  font-weight: 800;
-  line-height: 1.2;
-}
 
 .red {
-  color: #fc8181;
+  /* color: #fc8181; */
+  color: #25c2a0;
 }
 
 .green {
   /* color: var(--ifm-color-primary); */
-  color: #25c2a0;
+  color: #61dafb;
 }
 
-.side {
-  font-size: 18px;
-}
 
 .wrapLink {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 20px;
 }
 
@@ -59,7 +49,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   margin-bottom: 40px;
 }
 

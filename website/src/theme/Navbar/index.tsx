@@ -88,7 +88,13 @@ function Navbar(): JSX.Element {
       })}
       style={navStyle}
     >
-      <div className="navbar__inner">
+      <div
+        className="navbar__inner"
+        style={{
+          maxWidth: '1360px',
+          margin: '0 auto',
+        }}
+      >
         <div className="navbar__items">
           {items != null && items.length !== 0 && (
             <button
