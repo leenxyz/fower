@@ -3,15 +3,27 @@ id: min-width
 title: Min Width
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Use `minW-{value}` Atomic Props to control the min width of an element.
 
 | Atomic Props                | CSS Properties      |
 | --------------------------- | ------------------- |
 | minW-{value} / minW={value} | min-width: {value}; |
 
-## Fixed Max-Width
+## Fixed Min-Width
 
 Use `minW-{size}` Atomic Props to control the width of an element.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box white>
@@ -33,7 +45,32 @@ Use `minW-{size}` Atomic Props to control the width of an element.
 </Box>
 ```
 
-## Fluid Max-Width
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div white>
+  <div minW-100 bgRed400 inlineBlock p2>minW-100</div>
+  <div minW-10rem bgYellow400 inlineBlock p2>minW-10rem</div>
+  <div minW="100" bgGreen400 inlineBlock p2>minW="100"</div>
+  <div minW="400px" bgBlue400 inlineBlock p2>minW="400px"</div>
+  <div minW="80%" bgPurple400 inlineBlock p2>minW="80%"</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Fluid Min-Width
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box white textCenter spaceY2>
@@ -74,3 +111,33 @@ Use `minW-{size}` Atomic Props to control the width of an element.
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div white textCenter spaceY2>
+  <div toLeft>
+    <div minW="1/2" bgOrange400 py-10>minW="1/2"</div>
+    <div minW="1/2" bgRed400 py-10>minW="1/2"</div>
+  </div>
+
+  <div toLeft>
+    <div minW="1/3" bgOrange400 py-10>minW="1/3"</div>
+    <div minW="2/3" bgRed400 py-10>minW="2/3"</div>
+  </div>
+
+  <div toLeft>
+    <div minW="1/4" bgOrange400 py-10>minW="1/4"</div>
+    <div minW="3/4" bgRed400 py-10>minW="3/4"</div>
+  </div>
+
+  <div toLeft>
+    <div minW="0.5" bgOrange400 py-10>minW="0.5"</div>
+    <div minW="0.5" bgRed400 py-10>minW="0.5"</div>
+  </div>
+</div>
+```
+
+</TabItem>
+</Tabs>

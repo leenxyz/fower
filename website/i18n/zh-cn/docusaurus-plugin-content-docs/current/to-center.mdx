@@ -3,6 +3,9 @@ id: to-center
 title: To Center
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 让子元素全部向中心对齐。
 
 | Atomic Props | Effect                                 |
@@ -13,6 +16,15 @@ title: To Center
 
 ### toCenter with row
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toCenter bgGray100 square-200>
   <Box square-60 bgAmber400 rounded-8></Box>
@@ -20,7 +32,29 @@ title: To Center
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenter bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ### toCenter with column
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box column toCenter bgGray100 square-200>
@@ -28,3 +62,16 @@ title: To Center
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div column toCenter bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

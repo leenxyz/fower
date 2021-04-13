@@ -3,6 +3,9 @@ id: font-weight
 title: Font Weight
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props                            | CSS Properties        |
 | --------------------------------------- | --------------------- |
 | fontHairline                            | font-weight: 100;     |
@@ -21,6 +24,15 @@ There are two ways to control the font weight, one is to use a preset value, and
 
 ### Use preset value
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box text3XL>
   <Box fontHairline>Lorem ipsum dolor sit amet</Box>
@@ -34,7 +46,35 @@ There are two ways to control the font weight, one is to use a preset value, and
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div text3XL>
+  <div fontHairline>Lorem ipsum dolor sit amet</div>
+  <div fontThin>Lorem ipsum dolor sit amet</div>
+  <div fontLight>Lorem ipsum dolor sit amet</div>
+  <div fontNormal>Lorem ipsum dolor sit amet</div>
+  <div fontMedium>Lorem ipsum dolor sit amet</div>
+  <div fontSemibold>Lorem ipsum dolor sit amet</div>
+  <div fontBold>Lorem ipsum dolor sit amet</div>
+  <div fontExtrabold>Lorem ipsum dolor sit amet</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ### Use precise value
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box text2XL>
@@ -43,3 +83,17 @@ There are two ways to control the font weight, one is to use a preset value, and
   <Box fontWeight={600}>Lorem ipsum dolor sit amet</Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div text2XL>
+  <div fontWeight-100>Lorem ipsum dolor sit amet</div>
+  <div fontWeight-400>Lorem ipsum dolor sit amet</div>
+  <div fontWeight="600">Lorem ipsum dolor sit amet</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

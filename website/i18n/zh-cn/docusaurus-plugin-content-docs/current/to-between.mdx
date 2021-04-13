@@ -3,6 +3,8 @@ id: to-between
 title: To Between
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 import { LayoutEngine9 } from '@site/src/components/LayoutEngine'
 
 Atomic Props to make children elements space between.
@@ -11,9 +13,18 @@ Atomic Props to make children elements space between.
 | ------------ | ------------------------------------ |
 | toBetween    | Make children elements space between |
 
-## 用法
+## Usage
 
 Use `toBetween` to make children elements space between.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toBetween bgGray100 square-200>
@@ -22,7 +33,20 @@ Use `toBetween` to make children elements space between.
 </Box>
 ```
 
-## 组合使用
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toBetween bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Compose
 
 `toBetween` can compose with `toTop`、`toCenterY`、`toBottom`、`ttoLeft`、`toCenterX`、`toRight`:
 

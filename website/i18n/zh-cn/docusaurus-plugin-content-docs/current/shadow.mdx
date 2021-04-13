@@ -3,6 +3,11 @@ id: shadow
 title: Shadow
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Use `shadow{SIZE}` Atomic Props controll element's shadow.
+
 | Atomic Props   | CSS Properties      |
 | -------------- | ------------------- |
 | shadowSM       | box-shadow: {SM}    |
@@ -13,11 +18,16 @@ title: Shadow
 | shadow2XL      | box-shadow: {2XL}   |
 | shadow={value} | box-shadow: {value} |
 
-Styli 内置了阴影管理。
+## Usage
 
-使用 `shadow{SIZE}` 格式的 Props 可以控制元素的 shadow。
-
-## 用法
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 p-20 toCenterX toBetween>
@@ -42,7 +52,33 @@ Styli 内置了阴影管理。
 </Box>
 ```
 
-## 默认阴影
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgGray100 p-20 toCenterX toBetween>
+  <div toCenter square-60 bgWhite shadowSM>SM</div>
+  <div toCenter square-80 bgWhite bgWhite shadow>Base</div>
+  <div toCenter square-80 bgWhite shadowMD>MD</div>
+  <div toCenter square-90 bgWhite shadowLG>LG</div>
+  <div toCenter square-100 bgWhite shadowXL>XL</div>
+  <div toCenter square-110 bgWhite shadow2XL>2XL</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Default shadow
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 p-20 toCenter>
@@ -52,19 +88,14 @@ Styli 内置了阴影管理。
 </Box>
 ```
 
-## 使用伪类
+</TabItem>
+<TabItem value="Vue">
 
-你可以使用 styli 支持的所有伪类，这里以 hover 和 active 举例。
-
-> Styli 支持的伪类：[查看](/docs/pseudo)
-
-```jsx live
-<Box bgGray100 p-20 row>
-  <Box toCenter square-100 bgWhite shadowSM shadowXL--hover mr-20>
-    hover
-  </Box>
-  <Box toCenter square-100 bgWhite shadowMD shadowXL--active>
-    active
-  </Box>
-</Box>
+```html
+<div bgGray100 p-20 toCenter>
+  <div toCenter square-100 bgWhite shadow>default</div>
+</div>
 ```
+
+</TabItem>
+</Tabs>

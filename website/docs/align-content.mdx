@@ -3,6 +3,9 @@ id: align-content
 title: Align Content
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling how rows are positioned in multi-row flex and grid containers.
 
 | Atomic Props         | CSS Properties          |
@@ -12,6 +15,15 @@ Atomic props for controlling how rows are positioned in multi-row flex and grid 
 ## Start
 
 Use `alignContent="flex-start"` to pack rows in a container against the start of the cross axis.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-280 row alignContent="flex-start">
@@ -23,9 +35,34 @@ Use `alignContent="flex-start"` to pack rows in a container against the start of
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-280 row alignContent="flex-start">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Center
 
 Use `alignContent="center"` to pack rows in a container in the center of the cross axis.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-320 row alignContent="center">
@@ -37,9 +74,34 @@ Use `alignContent="center"` to pack rows in a container in the center of the cro
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-320 row alignContent="center">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## End
 
 Use `alignContent="flex-end"` to pack rows in a container against the end of the cross axis.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-320 row alignContent="flex-end">
@@ -51,9 +113,34 @@ Use `alignContent="flex-end"` to pack rows in a container against the end of the
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-320 row alignContent="flex-end">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space between
 
 Use `alignContent="space-between"` to distribute rows in a container such that there is an equal amount of space between each line.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-320 row alignContent="space-between">
@@ -65,9 +152,34 @@ Use `alignContent="space-between"` to distribute rows in a container such that t
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-320 row alignContent="space-between">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space around
 
 Use `alignContent="space-around"` to distribute rows in a container such that there is an equal amount of space around each line.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-320 row alignContent="space-evenly">
@@ -79,9 +191,34 @@ Use `alignContent="space-around"` to distribute rows in a container such that th
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-320 row alignContent="space-evenly">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space evenly
 
 Use `alignContent="space-evenly"` to distribute rows in a container such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using content-around.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgAmber100 w-350 h-320 row alignContent="space-around">
@@ -92,3 +229,19 @@ Use `alignContent="space-evenly"` to distribute rows in a container such that th
   <Box m2 bgAmber400 square-100></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgAmber100 w-350 h-320 row alignContent="space-around">
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+  <div m2 bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

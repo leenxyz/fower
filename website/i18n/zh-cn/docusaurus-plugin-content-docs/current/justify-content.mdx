@@ -3,6 +3,9 @@ id: justify-content
 title: Justify Content
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling how flex and grid items are positioned along a container's main axis.
 
 | Atomic Props           | CSS Properties            |
@@ -13,6 +16,15 @@ Atomic props for controlling how flex and grid items are positioned along a cont
 
 Use `justifyContent="flex-start"` to justify items against the start of the container's main axis.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box row spaceX4 justifyContent="flex-start">
   <Box bgAmber400 square-100></Box>
@@ -21,9 +33,32 @@ Use `justifyContent="flex-start"` to justify items against the start of the cont
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="flex-start">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Center
 
 Use `justifyContent="center"` to justify items along the center of the container's main axis.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 justifyContent="center">
@@ -33,9 +68,32 @@ Use `justifyContent="center"` to justify items along the center of the container
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="center">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## End
 
 Use `justifyContent="flex-end"` to justify items against the end of the container's main axis.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 justifyContent="flex-end">
@@ -45,9 +103,32 @@ Use `justifyContent="flex-end"` to justify items against the end of the containe
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="flex-end">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space between
 
 Use `justifyContent="space-between"` to justify items along the container's main axis such that there is an equal amount of space between each item.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 justifyContent="space-between">
@@ -57,9 +138,32 @@ Use `justifyContent="space-between"` to justify items along the container's main
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="space-between">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space around
 
 Use `justifyContent="space-around"` to justify items along the container's main axis such that there is an equal amount of space on each side of each item.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 justifyContent="space-around">
@@ -69,9 +173,32 @@ Use `justifyContent="space-around"` to justify items along the container's main 
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="space-around">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Space evenly
 
 Use `justifyContent="space-evenly"` to justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `justifyContent="space-around"`.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 justifyContent="space-evenly">
@@ -80,3 +207,17 @@ Use `justifyContent="space-evenly"` to justify items along the container's main 
   <Box bgAmber400 square-100></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 justifyContent="space-evenly">
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+  <div bgAmber400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

@@ -3,6 +3,9 @@ id: z-index
 title: zIndex
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling the stack order of an element.
 
 | Atomic Props                    | CSS Properties   |
@@ -11,7 +14,16 @@ Atomic props for controlling the stack order of an element.
 
 ## Usage
 
-```tsx live
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
+```jsx live
 function Demo() {
   const Item = styled('div', 'white toCenter shadow bgAmber400 circle-80 absolute')
   return (
@@ -27,3 +39,17 @@ function Demo() {
   )
 }
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div white relative h-160 bgAmber100 p6>
+  <div zIndex-20>20</div>
+  <div left-80 zIndex-10> 10 </div>
+  <div left-140 zIndex-0> 0 </div>
+</Box>
+```
+
+</TabItem>
+</Tabs>

@@ -3,15 +3,27 @@ id: to-center
 title: To Center
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic Props to make children elements align to center.
 
-| Atomic Props | Effect                                |
-| ------------ | ------------------------------------- |
+| Atomic Props | Effect                                 |
+| ------------ | -------------------------------------- |
 | toCenter     | Make children elements align to center |
 
 ## Usage
 
 ### toCenter with row
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toCenter bgGray100 square-200>
@@ -20,7 +32,29 @@ Atomic Props to make children elements align to center.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenter bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ### toCenter with column
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box column toCenter bgGray100 square-200>
@@ -28,3 +62,16 @@ Atomic Props to make children elements align to center.
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div column toCenter bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

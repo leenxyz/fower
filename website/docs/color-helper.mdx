@@ -3,6 +3,9 @@ id: color-helper
 title: Color helper
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Another cool feature of Styli is the color helper. you can handle color some postfix.
 
 all color helper postfix:
@@ -16,6 +19,15 @@ all color helper postfix:
 
 Use `--D{0-100}` postfix to darken a color.
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly toCenterY>
   <Box red300>normal</Box>
@@ -28,9 +40,36 @@ Use `--D{0-100}` postfix to darken a color.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly toCenterY>
+  <div red300>normal</div>
+  <div red300--D40>darken</div>
+  <div color="#fff--D40">darken</div>
+  <div bgRed300 square-84></div>
+  <div bgRed300--D40 square-84></div>
+  <div border borderRed300 square-84></div>
+  <div border borderRed300--D40 square-84></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Lighten
 
 Use `--L{0-100}` to lighten a color.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly toCenterY>
@@ -44,9 +83,36 @@ Use `--L{0-100}` to lighten a color.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly toCenterY>
+  <div red500>normal</div>
+  <div red500--L40>lighten</div>
+  <div color="#000--L40">lighten</div>
+  <div bgRed300 square-84></div>
+  <div bgRed300--L20 square-84></div>
+  <div border borderRed300 square-84></div>
+  <div border borderRed300--L20 square-84></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Transparentize
 
 Use `--T{0-100}` to transparentize a color.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -60,9 +126,36 @@ Use `--T{0-100}` to transparentize a color.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div red500>normal</div>
+  <div red500--T40>transparentize</div>
+  <div color="#000--T40">transparentize</div>
+  <div bgRed500 square-84></div>
+  <div bgRed500--T40 square-84></div>
+  <div border borderRed300 square-84></div>
+  <div border borderRed300--T40 square-84></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Opacify
 
 Use `--O{0-100}` to opacify a color.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -75,9 +168,35 @@ Use `--O{0-100}` to opacify a color.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div color="rgba(0,0,0,0.4)">0.4</div>
+  <div color="rgba(0,0,0,0.4)--O40">Opacify to 0.6</div>
+  <div bg="rgba(0,0,0,0.4)" square-84></div>
+  <div bg="rgba(0,0,0,0.4)--O40" square-84></div>
+  <div border borderColor="rgba(0,0,0,0.4)" square-84></div>
+  <div border borderColor="rgba(0,0,0,0.4)--O40" square-84></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Use with pseudo
 
 The color helper postfix can use with pseudo postfix, Let's build a beautiful Button Component:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```js live
 <Box
@@ -94,3 +213,15 @@ The color helper postfix can use with pseudo postfix, Let's build a beautiful Bu
   Button
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<button bgOrange400 bgOrange400--D10--hover white rounded py3 px5 outlineNone cursorPointer>
+  Button
+</button>
+```
+
+</TabItem>
+</Tabs>

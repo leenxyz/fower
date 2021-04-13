@@ -3,6 +3,9 @@ id: to-evenly
 title: To Evenly
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 import { LayoutEngine10 } from '@site/src/components/LayoutEngine'
 
 Atomic Props to make children elements evenly.
@@ -11,9 +14,18 @@ Atomic Props to make children elements evenly.
 | ------------ | ----------------------------- |
 | toEvenly     | Make children elements evenly |
 
-## 用法
+## Usage
 
 Use `toEvenly` to make children elements evenly.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly bgGray100 square-200>
@@ -22,7 +34,20 @@ Use `toEvenly` to make children elements evenly.
 </Box>
 ```
 
-## 组合使用
+</TabItem>
+<TabItem value="Vue">
+
+```jsx live
+<div toEvenly bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Compose
 
 `toEvenly` can compose with `toTop`、`toCenterY`、`toBottom`、`ttoLeft`、`toCenterX`、`toRight`:
 

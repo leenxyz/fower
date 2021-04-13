@@ -3,6 +3,9 @@ id: to-right
 title: To Right
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic Props to make children elements align to right.
 
 import { LayoutEngine4 } from '@site/src/components/LayoutEngine'
@@ -11,9 +14,18 @@ import { LayoutEngine4 } from '@site/src/components/LayoutEngine'
 | ------------ | ------------------------------------- |
 | toRight      | Make children elements align to right |
 
-## 用法
+## Usage
 
 Use `toTop` to make children elements align to right.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toRight bgGray100 square-200>
@@ -22,7 +34,20 @@ Use `toTop` to make children elements align to right.
 </Box>
 ```
 
-## 组合使用
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toRight bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Compose
 
 `toRight` can compose with `toTop`、`toCenterY`、`toBottom`、`toBetween`、`toEvenly`、`toAround`:
 

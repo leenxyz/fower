@@ -3,6 +3,9 @@ id: square
 title: Square
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Use `square-{value}` props to create a square element
 
 | Atomic Props                    | CSS Properties                   |
@@ -10,6 +13,15 @@ Use `square-{value}` props to create a square element
 | square-{value} / square={value} | width: {value}; height: {value}; |
 
 ## Usage
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toLeft white>
@@ -27,3 +39,18 @@ Use `square-{value}` props to create a square element
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toLeft white>
+  <div square-50 bgYellow400 toCenter>square-50</div>
+  <div square-5rem bgGreen400 toCenter>square-5rem</div>
+  <div square="100" bgBlue400 toCenter>square="100"</div>
+  <div square="150px" bgPurple400 toCenter>square="150px"</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

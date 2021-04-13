@@ -3,6 +3,9 @@ id: min-height
 title: Min Height
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Use `minH-{value}` props to controll element min height.
 
 | Atomic Props                | CSS Properties       |
@@ -10,6 +13,15 @@ Use `minH-{value}` props to controll element min height.
 | minH-{value} / minH={value} | min-height: {value}; |
 
 ## Usage
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toCenter white h-100 bgGray100>
@@ -30,3 +42,19 @@ Use `minH-{value}` props to controll element min height.
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenter white h-100 bgGray100>
+  <div minH-50 bgRed400 p2>minH-50</div>
+  <div minH-5rem bgYellow400 p2>minH-5rem</div>
+  <div minH="50" bgGreen400 p2>minH="50"</div>
+  <div minH="100px" bgBlue400 p2>minH="100px"</div>
+  <div minH="80%" bgPurple400 p2>minH="80%"</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

@@ -5,6 +5,9 @@ title: Basic
 
 import { UtilityFirstStyli } from '@site/src/components/UtilityFirstStyli'
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## Understanding Atomic props
 
 For decades, we consider the principle of "separation of Concerns" as the best practice. But with the advent of the componentization era, we should rethink what best practices are.
@@ -12,6 +15,15 @@ For decades, we consider the principle of "separation of Concerns" as the best p
 Styli does not advocate "separation of Concerns", Styli use **Atomic Props** to write style. when we use Styli, there no CSS code, no CSS classnames, no CSS files.
 
 Code snippet using Styli:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 p6>
@@ -26,6 +38,24 @@ Code snippet using Styli:
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgGray100 p6>
+  <div toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
+    <img circle-48 src="/img/jobs.jpg" />
+    <div ml-10>
+      <div textXL fontBold>Steve Jobs</div>
+      <div gray800>Co-founder of Apple Inc.</div>
+    </div>
+  </div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 At first glance, You may be very resistant to abbreviations like `toCenterY p-20 w-300 bgWhite rounded-10`. It’s a bit simple and rude, but I promise, it will make you happy later.
 
@@ -50,11 +80,30 @@ At first glance, You may be very resistant to abbreviations like `toCenterY p-20
 
 In order to give you a deeper understanding of the usage of Styli, let's review the basic usage:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Text text2XL fontBold green500>
   Hi, Styli
 </Text>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span text2XL fontBold green500> Hi, Styli </span>
+```
+
+</TabItem>
+</Tabs>
 
 The simplest way to use Styli is to set some Atomic Props directly on the Styli component. The Atomic Props `text2XL`, `fontBold`, `green500` will produce the following style:
 

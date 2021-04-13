@@ -4,6 +4,9 @@ sidebar_label: Font sizes
 title: Font sizes
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Styli provides a set of preset Font sizes values.
 
 ```jsx
@@ -42,8 +45,27 @@ setTheme({
 
 Then you can use it as `textBody`:
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box textBody red500>
   Lorem ipsum dolor sit amet
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textBody red500>Lorem ipsum dolor sit amet</div>
+```
+
+</TabItem>
+</Tabs>

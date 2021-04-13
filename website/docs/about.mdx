@@ -3,6 +3,9 @@ id: about
 title: About
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 We had to admit it, writing CSS is painful.
 
 In my experience of UI development, most people feel painful for writing CSS. Most Front-end developers find it boring to write CSS, and most Back-end developers find it difficult to master CSS.
@@ -17,6 +20,15 @@ In Styli, we write styles directly in Markup through "Atomic props". The "Atomic
 
 Let's take a look at how to use Styli with a **Live DEMO**:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 // import { Box } from '@styli/react'
 <Box toCenterY p-10 w-260 rounded-10 shadow>
@@ -29,6 +41,22 @@ Let's take a look at how to use Styli with a **Live DEMO**:
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterY p-10 w-260 rounded-10 shadow>
+  <img circle-48 src="/img/jobs.jpg" />
+  <div ml-10>
+    <div textXL fontBold>Steve Jobs</div>
+    <span gray800>Co-founder of Apple Inc.</span>
+  </div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## Feature
 

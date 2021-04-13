@@ -3,6 +3,8 @@ id: to-center-y
 title: To CenterY
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 import { LayoutEngine8 } from '@site/src/components/LayoutEngine'
 
 Atomic Props to make children elements align to center vertical.
@@ -11,9 +13,18 @@ Atomic Props to make children elements align to center vertical.
 | ------------ | ----------------------------------------------- |
 | toCenterY    | Make children elements align to center vertical |
 
-## Usage
+## 用法
 
 Center vertical quickly with `toCenterY` prop:
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toCenterY bgGray100 square-200>
@@ -22,7 +33,20 @@ Center vertical quickly with `toCenterY` prop:
 </Box>
 ```
 
-## Compose
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterY bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## 组合使用
 
 `toCenterY` can compose with `toLeft`、`toCenterX`、`toRight`、`toBetween`、`toEvenly`、`toAround`:
 

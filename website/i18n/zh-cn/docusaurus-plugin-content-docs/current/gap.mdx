@@ -3,15 +3,25 @@ id: gap
 title: Gap
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props      | CSS Properties       |
 | ----------------- | -------------------- |
 | gap-{value}       | gap: {value};        |
 | rowGap-{value}    | row-gap: {value};    |
 | columnGap-{value} | column-gap: {value}; |
 
-## Usage
-
 ## Gap
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box grid gridTemplateColumns-2 gap-20 white fontBold textXL>
@@ -30,7 +40,31 @@ title: Gap
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div grid gridTemplateColumns-2 gap-20 white fontBold textXL>
+  <div py1 rounded-4 toCenter bgTeal400>1</div>
+  <div py1 rounded-4 toCenter bgTeal400>2</div>
+  <div py1 rounded-4 toCenter bgTeal400>3</div>
+  <div py1 rounded-4 toCenter bgTeal400>4</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Row Gap and Column Gap
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box grid gridTemplateColumns-2 rowGap-10 columnGap-20 white fontBold textXL>
@@ -48,3 +82,18 @@ title: Gap
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div grid gridTemplateColumns-2 rowGap-10 columnGap-20 white fontBold textXL>
+  <div py1 rounded-4 toCenter bgTeal400>1</div>
+  <div py1 rounded-4 toCenter bgTeal400>2</div>
+  <div py1 rounded-4 toCenter bgTeal400>3</div>
+  <div py1 rounded-4 toCenter bgTeal400>4</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

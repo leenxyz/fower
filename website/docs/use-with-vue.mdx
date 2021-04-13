@@ -52,7 +52,7 @@ npm i @styli/vue-template-compiler
 
 ```js title="vue.config.js"
 module.exports = {
-  lintOnSave: false,
+  parallel: false,
   chainWebpack(config) {
     config.module
       .rule('vue')
@@ -67,10 +67,12 @@ module.exports = {
 
 Then you don't need to write the `v-css` directive, but write Atomic Props directly in HTML:
 
+Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
+
 ```jsx
 <template>
   <div toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <imgcircle-48 src="/img/jobs.jpg" />
+    <img circle-48 src="/img/jobs.jpg" />
     <div ml-10>
       <div textXL fontBold>
         Steve Jobs

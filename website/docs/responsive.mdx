@@ -3,6 +3,9 @@ id: responsive
 title: Responsive
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 ## About Responsive
 
 Many CSS frameworks will claim to be Mobile-first and responsive. For example, two very famous CSS frameworks, Bootstrap and Bulma, describe themselves like this:
@@ -29,8 +32,27 @@ Each Atomic Props of Styli supports responsiveness, not just a container that su
 
 Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box textSM textLG--sm text4XL--md text6XL--lg>
   Lorem ipsum dolor sit amet
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textSM textLG--sm text4XL--md text6XL--lg>Lorem ipsum dolor sit amet</div>
+```
+
+</TabItem>
+</Tabs>

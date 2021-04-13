@@ -4,6 +4,9 @@ sidebar_label: Spacings
 title: Spacings
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 一个应用，元素的间距应该是有规律的，不应该是随意杂乱的，一致的间距可以提高 UI 的设计质量，让用户感受到产品的专业性。
 Styli 默认的布局的间距已 4px 为基本单位，所有间距为 4px 的倍数，建议所有的组件和文字排版都使用这些有规律的间距。
 
@@ -56,6 +59,15 @@ How to use the spacing?
 
 example1:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly>
   <Box as="img" src="/img/logo.png" circle8 />
@@ -65,9 +77,33 @@ example1:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div as="img" src="/img/logo.png" circle8 />
+  <div as="img" src="/img/logo.png" circle12 />
+  <div as="img" src="/img/logo.png" circle16 />
+  <div as="img" src="/img/logo.png" circle20 />
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 Use `circle{8}`, not `circle-{8}`, `circle{8}` is a value designed with constraints. `circle-{8}` is a freestyle value.
 
 example2:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toCenterX>
@@ -76,6 +112,20 @@ example2:
   <Box square-100 bgGreen400></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterX>
+  <div square-100 bgRed400 mr2></div>
+  <div square-100 bgYellow400 mr2></div>
+  <div square-100 bgGreen400></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 The `mr2` in the above example, it is the preset spacing in the design system, which is equivalent to `margin-right: 8px`.
 
@@ -99,6 +149,15 @@ Spacing can be used in these Atomic Props:
 
 In some cases, the spacing of the design system cannot meet your UI needs. This is a more flexible way you can use: **precise values**. Any value can be set through the middle bar `-`, such as the following `square-100`, `mr-20`, will produce styles `width: 100px; height: 100px`, `margin-right: 20px`:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toCenterX>
   <Box square-100 bgRed400 mr-20></Box>
@@ -106,6 +165,20 @@ In some cases, the spacing of the design system cannot meet your UI needs. This 
   <Box square-100 bgGreen400></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterX>
+  <div square-100 bgRed400 mr-20></div>
+  <div square-100 bgYellow400 mr-20></div>
+  <div square-100 bgGreen400></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 In most cases, it is recommended to use regular spacing in the project, which will make your UI more design and rhythmic.
 
@@ -123,6 +196,25 @@ setTheme({
 
 Then you can use it as `m100`, `p100`, `w100`, `circle100`, `top100`, etc.
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box bgGreen400 circle100></Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgGreen400 circle100></div>
+```
+
+</TabItem>
+</Tabs>

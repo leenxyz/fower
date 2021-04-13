@@ -3,6 +3,9 @@ id: rounded
 title: Border Radius
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling the border radius of an element.
 
 | Atomic Props                              | CSS Properties                                                               |
@@ -22,6 +25,15 @@ Atomic props for controlling the border radius of an element.
 
 Use `rounded-{size}` to set rounded corner of an element.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly>
   <Box square-100 bgYellow200 rounded-6></Box>
@@ -31,9 +43,33 @@ Use `rounded-{size}` to set rounded corner of an element.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div square-100 bgYellow200 rounded-6></div>
+  <div square-100 bgRed200 rounded-10px></div>
+  <div square-100 bgGreen200 rounded="20"></div>
+  <div square-100 bgBlue200 rounded="50px"></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## One sides corners
 
 Use `rounded{T|R|B|L}-{size}` to set one side corner of an element.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -44,9 +80,33 @@ Use `rounded{T|R|B|L}-{size}` to set one side corner of an element.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div square-100 bgYellow200 roundedT-20></div>
+  <div square-100 bgRed200 roundedR-20></div>
+  <div square-100 bgGreen200 roundedB-20></div>
+  <div square-100 bgBlue200 roundedL-20></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Single cornner
 
 Use `rounded{TL|TR|BL|BR}-{size}` to single corner of an element.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -57,9 +117,33 @@ Use `rounded{TL|TR|BL|BR}-{size}` to single corner of an element.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div square-100 bgYellow200 roundedTL-20></div>
+  <div square-100 bgRed200 roundedTR-20></div>
+  <div square-100 bgGreen200 roundedBL-20></div>
+  <div square-100 bgBlue200 roundedBR-20></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## roundedFull
 
 Use the `roundedFull` props to create pills and circles.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -67,3 +151,16 @@ Use the `roundedFull` props to create pills and circles.
   <Box square-100 bgYellow200 roundedFull></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div w-200 h-100 bgYellow200 roundedFull></div>
+  <div square-100 bgYellow200 roundedFull></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

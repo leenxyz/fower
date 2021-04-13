@@ -3,6 +3,9 @@ id: flex-wrap
 title: Flex Wrap
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling how flex items wrap.
 
 | Atomic Props     | CSS Properties     |
@@ -13,6 +16,15 @@ Atomic props for controlling how flex items wrap.
 
 Use `flexWrap="wrap"` props to allow flex items to wrap.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box spaceX3 row flexWrap="wrap">
   <Box bgAmber400 m2 p4 w-300></Box>
@@ -21,9 +33,32 @@ Use `flexWrap="wrap"` props to allow flex items to wrap.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div spaceX3 row flexWrap="wrap">
+  <div bgAmber400 m2 p4 w-300></div>
+  <div bgAmber500 m2 p4 w-300></div>
+  <div bgAmber400 m2 p4 w-300></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## No Wrap
 
 Use `flexWrap="nowrap"` props to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box spaceX3 row flexWrap="nowrap">
@@ -32,3 +67,17 @@ Use `flexWrap="nowrap"` props to prevent flex items from wrapping, causing infle
   <Box bgAmber400 m2 p4 w-300></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div spaceX3 row flexWrap="nowrap">
+  <div bgAmber400 m2 p4 w-300></div>
+  <div bgAmber500 m2 p4 w-300></div>
+  <div bgAmber400 m2 p4 w-300></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

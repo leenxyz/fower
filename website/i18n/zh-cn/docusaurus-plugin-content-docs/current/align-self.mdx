@@ -3,6 +3,9 @@ id: align-self
 title: Align Self
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling how an individual flex or grid item is positioned along its container's cross axis.
 
 | Atomic Props      | CSS Properties       |
@@ -13,6 +16,15 @@ Atomic props for controlling how an individual flex or grid item is positioned a
 
 Use `alignSelf="flex-start"` to align an item to the start of the container's cross axis, despite the container's `align-items` value.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box row spaceX4 alignItems="stretch">
   <Box bgAmber400 w-100 py6></Box>
@@ -21,9 +33,32 @@ Use `alignSelf="flex-start"` to align an item to the start of the container's cr
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 alignItems="stretch">
+  <div bgAmber400 w-100 py6></div>
+  <div bgBlue400 w-100 py4 alignSelf="flex-start"></div>
+  <div bgAmber400 w-100 py8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Center
 
 Use `alignSelf="center"` to align an item along the center of the container's cross axis, despite the container's `align-items` value.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="stretch">
@@ -33,9 +68,32 @@ Use `alignSelf="center"` to align an item along the center of the container's cr
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 alignItems="stretch">
+  <div bgAmber400 w-100 py6></div>
+  <div bgBlue400 w-100 py4 alignSelf="center"></div>
+  <div bgAmber400 w-100 py8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## End
 
 Use `alignSelf="flex-end"` to align an item to the end of the container's cross axis, despite the container's `align-items` value.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="stretch">
@@ -45,9 +103,32 @@ Use `alignSelf="flex-end"` to align an item to the end of the container's cross 
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 alignItems="stretch">
+  <div bgAmber400 w-100 py6></div>
+  <div bgBlue400 w-100 py4 alignSelf="flex-end"></div>
+  <div bgAmber400 w-100 py8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Auto
 
 Use alignSelf="auto" to align an item based on the value of the container's `align-items` property.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="stretch">
@@ -57,9 +138,32 @@ Use alignSelf="auto" to align an item based on the value of the container's `ali
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 alignItems="stretch">
+  <div bgAmber400 w-100 py6></div>
+  <div bgBlue400 w-100 py4 alignSelf="auto"></div>
+  <div bgAmber400 w-100 py8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Stretch
 
 Use `alignSelf="stretch"` to stretch an item to fill the container's cross axis, despite the container's `align-items` value.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 h-80 alignItems="center">
@@ -68,3 +172,17 @@ Use `alignSelf="stretch"` to stretch an item to fill the container's cross axis,
   <Box bgAmber400 w-100 py4></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX4 h-80 alignItems="center">
+  <div bgAmber400 w-100 py4></div>
+  <div bgBlue400 w-100 py4 alignSelf="stretch"></div>
+  <div bgAmber400 w-100 py4></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

@@ -3,9 +3,21 @@ id: opacity
 title: Opacity
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props                      | CSS Properties   |
 | --------------------------------- | ---------------- |
 | opacity-{value} / opacity={value} | opacity: {value} |
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row toEvenly bgGreen50 p6 white>
@@ -26,3 +38,19 @@ title: Opacity
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row toEvenly bgGreen50 p6 white>
+  <div toCenter square-100 bgGreen500 opacity-20>opacity-20</div>
+  <div toCenter square-100 bgGreen500 opacity-40>opacity-40</div>
+  <div toCenter square-100 bgGreen500 opacity-60>opacity-60</div>
+  <div toCenter square-100 bgGreen500 opacity="80">opacity-80</div>
+  <div toCenter square-100 bgGreen500 opacity-100>opacity-100</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

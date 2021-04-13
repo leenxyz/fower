@@ -3,6 +3,9 @@ id: predictable-style
 title: Predictable style
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 One of most cool feature of Styli is the predictable style. In traditional CSS, it's not predictable to override style.
 
 ## Traditional CSS
@@ -20,15 +23,53 @@ For example, if you have some css rule like below:
 
 If we set `className="red blue"` to a text, it will be color `blue `.
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Text className="red blue">Styli</Text>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span className="red blue">Styli</span>
+```
+
+</TabItem>
+</Tabs>
 
 If we reverse it to `className="blue red"` to a text, it will be color `blue `, too.
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Text className="red blue">Styli</Text>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<Text className="red blue">Styli</Text>
+```
+
+</TabItem>
+</Tabs>
 
 The color of text is not depended by the order of classNames, it's not predictable.
 
@@ -38,13 +79,41 @@ In Styli, the style is predictable. The style is depended by the order of Atomic
 
 If we set props to `red400 green400`, the color of text is `green400`:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Text red400 green400>
   Styli
 </Text>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span red400 green400> Styli </span>
+```
+
+</TabItem>
+</Tabs>
+
 If we set props to `green400 red400`, the color of text is `red400`:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Text green400 red400>
@@ -52,13 +121,42 @@ If we set props to `green400 red400`, the color of text is `red400`:
 </Text>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span green400 red400> Styli </span>
+```
+
+</TabItem>
+</Tabs>
+
 If we set props to `green400 red400 blue400`, the color of text is `blue400`:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Text green400 red400 blue400>
   Styli
 </Text>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span green400 red400 blue400> Styli </span>
+```
+
+</TabItem>
+</Tabs>
 
 ## Useful use case
 

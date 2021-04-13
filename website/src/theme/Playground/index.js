@@ -56,12 +56,13 @@ export default function Playground({ children, transformCode, ...props }) {
     },
   } = useDocusaurusContext()
   const prismTheme = usePrismTheme()
+  const code = isClient ? children.replace(/\n$/, '') : ''
 
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
         key={isClient}
-        code={isClient ? children.replace(/\n$/, '') : ''}
+        code={code}
         transformCode={transformCode || ((code) => `${code};`)}
         theme={prismTheme}
         {...props}
@@ -69,7 +70,7 @@ export default function Playground({ children, transformCode, ...props }) {
         {playgroundPosition === 'top' ? (
           <>
             <ResultWithHeader />
-            <EditorWithHeader />
+            <EditorWithHeader code={code} />
           </>
         ) : (
           <>

@@ -3,6 +3,9 @@ id: text-transform
 title: Text Transform
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props | CSS Properties              |
 | ------------ | --------------------------- |
 | uppercase    | text-transform: uppercase;  |
@@ -14,6 +17,15 @@ title: Text Transform
 
 Use `normalcase`, `uppercase`, `lowercase`, `capitalize` to control the Text Transform.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box textXL>
   <Box uppercase>Lorem ipsum dolor sit amet</Box>
@@ -22,3 +34,18 @@ Use `normalcase`, `uppercase`, `lowercase`, `capitalize` to control the Text Tra
   <Box normalcase>Lorem ipsum dolor sit amet</Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL>
+  <div uppercase>Lorem ipsum dolor sit amet</div>
+  <div lowercase>Lorem ipsum dolor sit amet</div>
+  <div capitalize>Lorem ipsum dolor sit amet</div>
+  <div normalcase>Lorem ipsum dolor sit amet</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

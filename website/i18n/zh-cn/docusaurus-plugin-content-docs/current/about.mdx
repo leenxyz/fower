@@ -20,9 +20,19 @@ _在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样�
 
 首先看看使用 Styli 时，我们的代码是怎样写的？
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
+// import { Box } from '@styli/react'
 <Box toCenterY p-10 w-260 rounded-10 shadow>
-  <Image circle-48 src="/img/jobs.jpg" />
+  <Box as="img" circle-48 src="/img/jobs.jpg" />
   <Box ml-10>
     <Box textXL fontBold>
       Steve Jobs
@@ -31,6 +41,22 @@ _在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样�
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterY p-10 w-260 rounded-10 shadow>
+  <img circle-48 src="/img/jobs.jpg" />
+  <div ml-10>
+    <div textXL fontBold>Steve Jobs</div>
+    <span gray800>Co-founder of Apple Inc.</span>
+  </div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## 特性
 

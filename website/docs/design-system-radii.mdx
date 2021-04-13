@@ -4,6 +4,9 @@ sidebar_label: Border radius
 title: Border radius
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Styli provides a set of preset border radius values.
 
 ```jsx
@@ -38,6 +41,25 @@ setTheme({
 
 Then you can use it as `rounded4XL`:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box bgGreen400 square32 rounded4XL></Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<html bgGreen400 square32 rounded4XL></html>
+```
+
+</TabItem>
+</Tabs>

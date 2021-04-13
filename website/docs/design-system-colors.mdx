@@ -4,11 +4,22 @@ sidebar_label: Colors
 title: Colors
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 import { Colors } from '@site/src/components/Colors'
 
 ## Text Color
 
 Set text color use `{colorName}` in theme.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Text text2XL green500 fontBold>
@@ -16,9 +27,28 @@ Set text color use `{colorName}` in theme.
 </Text>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<span text2XL green500 fontBold> Hello </span>
+```
+
+</TabItem>
+</Tabs>
+
 ## Background Color
 
 Set background color use `bg{colorName}` in theme.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box bgOrange300 orange700 toCenter square-100 textXL>
@@ -26,9 +56,28 @@ Set background color use `bg{colorName}` in theme.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgOrange300 orange700 toCenter square-100 textXL>Hello</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Border Color
 
 Set border color use `border{colorName}` in theme.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -46,6 +95,21 @@ Set border color use `border{colorName}` in theme.
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div toCenter p4 border-2 borderPurple500>borderPurple500</div>
+  <div toCenter p4 border-2 borderTeal500>borderTeal500</div>
+  <div toCenter p4 border-2 borderCyan500>borderCyan500</div>
+  <div toCenter p4 border-2 borderAmber500>borderAmber500</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## Customize theme color
 
@@ -67,6 +131,15 @@ setTheme({
 
 Then you can use it with text color, background color, border color:
 
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly>
   <Box toCenter p4 brandPrimary>
@@ -80,6 +153,20 @@ Then you can use it with text color, background color, border color:
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div toCenter p4 brandPrimary>Text color</div>
+  <div toCenter p4 bgBrandLighter brandDarkest>Background color</div>
+  <div toCenter p4 border-2 borderBrandDark>Border color</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## Color palettes
 

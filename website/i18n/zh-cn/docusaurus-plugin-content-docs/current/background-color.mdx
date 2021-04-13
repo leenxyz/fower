@@ -3,6 +3,9 @@ id: background-color
 title: Background Color
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling the background color of an element.
 
 | Atomic Props  | CSS Properties             |
@@ -14,6 +17,15 @@ Atomic props for controlling the background color of an element.
 
 Use `bg{colorName}` props to control the background color of an element.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly>
   <Box rounded-8 square-100 bgGreen400></Box>
@@ -22,9 +34,32 @@ Use `bg{colorName}` props to control the background color of an element.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div rounded-8 square-100 bgGreen400></div>
+  <div rounded-8 square-100 bgBlue400></div>
+  <div rounded-8 square-100 bgPurple400></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Custom color
 
 Set any background color using `bg={value}` props.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -33,3 +68,17 @@ Set any background color using `bg={value}` props.
   <Box rounded-8 square-100 bg="indigo"></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div rounded-8 square-100 bg="#ed8936"></div>
+  <div rounded-8 square-100 bg="rgba(44,200, 400)"></div>
+  <div rounded-8 square-100 bg="indigo"></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

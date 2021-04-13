@@ -3,6 +3,9 @@ id: border-color
 title: Border Color
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling the style of an element's borders.
 
 | Atomic Props      | CSS Properties         |
@@ -12,6 +15,15 @@ Atomic props for controlling the style of an element's borders.
 ## Usage
 
 Use `border{colorName}` props to control an element's border color.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -30,9 +42,33 @@ Use `border{colorName}` props to control an element's border color.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div toCenter p4 border-2 borderPurple500>borderPurple500</div>
+  <div toCenter p4 border-2 borderTeal500>borderTeal500</div>
+  <div toCenter p4 border-2 borderCyan500>borderCyan500</div>
+  <div toCenter p4 border-2 borderAmber500>borderAmber500</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Border opacity
 
-Use `-T{0-100}` postfix to control an element's border color opacity.
+Use `--T{0-100}` postfix to control an element's border color opacity.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -43,10 +79,25 @@ Use `-T{0-100}` postfix to control an element's border color opacity.
     borderTeal500--T60
   </Box>
   <Box toCenter p4 border-2 borderCyan500--T60>
-    borderCyan500
+    borderCyan500--T60
   </Box>
   <Box toCenter p4 border-2 borderAmber500--T80>
     borderAmber500--T80
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <div toCenter p4 border-2 borderPurple500--T20>borderPurple500--T40</div>
+  <div toCenter p4 border-2 borderTeal500--T40>borderTeal500--T60</div>
+  <div toCenter p4 border-2 borderCyan500--T60>borderCyan500--T60</div>
+  <div toCenter p4 border-2 borderAmber500--T80>borderAmber500--T80</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

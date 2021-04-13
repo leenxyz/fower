@@ -3,6 +3,9 @@ id: flex
 title: Flex
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props | CSS Properties  |
 | ------------ | --------------- |
 | flexAuto     | flex: 1 1 auto; |
@@ -14,6 +17,15 @@ title: Flex
 
 Use `flexInitial` props to allow a flex item to shrink but not grow, taking into account its initial size.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box row spaceX3 flexInitial>
   <Box bgAmber400 p10>
@@ -24,6 +36,28 @@ Use `flexInitial` props to allow a flex item to shrink but not grow, taking into
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX3 flexInitial>
+  <div bgAmber400 p10>Short</div>
+  <div bgAmber400 p10>Medium length</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX3 flexInitial>
@@ -40,9 +74,35 @@ Use `flexInitial` props to allow a flex item to shrink but not grow, taking into
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX3 flexInitial>
+  <div bgAmber400 p4>Short</div>
+  <div bgAmber400 p4>Medium length</div>
+  <div bgAmber400 p4>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ad labore ipsam, aut rem quo
+    repellat esse tempore id, quidem
+  </div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Flex None
 
 Use `flexNone` props to prevent a flex item from growing or shrinking.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX3 flexInitial>
@@ -58,9 +118,32 @@ Use `flexNone` props to prevent a flex item from growing or shrinking.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX3 flexInitial>
+  <div bgAmber400 p4 flex="1">Item that can grow or shrink if needed</div>
+  <div bgAmber500 p4 flexNone>Item that cannot grow or shrink</div>
+  <div bgAmber400 p4 flex="1">Item that can grow or shrink if needed</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Any Value
 
 Use `flex={value}` to set any flex value.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row spaceX3 row>
@@ -69,3 +152,17 @@ Use `flex={value}` to set any flex value.
   <Box bgAmber400 p4 flex={1}></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row spaceX3 row>
+  <div bgAmber400 p4 flex="1"></div>
+  <div bgAmber500 p4 flex="2"></div>
+  <div bgAmber400 p4 flex="1"></div>
+</div>
+```
+
+</TabItem>
+</Tabs>

@@ -55,7 +55,7 @@ npm i @styli/vue-template-compiler
 
 ```js title="vue.config.js"
 module.exports = {
-  lintOnSave: false,
+  parallel: false,
   chainWebpack(config) {
     config.module
       .rule('vue')
@@ -70,10 +70,12 @@ module.exports = {
 
 然后你就不需要再写 `v-css` 指令，而是直接在 html 中写原子属性：
 
+Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
+
 ```jsx
 <template>
   <div toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <imgcircle-48 src="/img/jobs.jpg" />
+    <img circle-48 src="/img/jobs.jpg" />
     <div ml-10>
       <div textXL fontBold>
         Steve Jobs

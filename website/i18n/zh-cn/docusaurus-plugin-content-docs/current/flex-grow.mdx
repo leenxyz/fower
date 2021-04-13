@@ -3,6 +3,9 @@ id: flex-grow
 title: Flex Grow
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic Props for controlling how flex items grow.
 
 | Atomic Props     | CSS Properties      |
@@ -12,6 +15,15 @@ Atomic Props for controlling how flex items grow.
 ## Grow
 
 Use `flexGrow={1}` props to allow a flex item to grow to fill any available space.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box spaceX3 row>
@@ -27,9 +39,32 @@ Use `flexGrow={1}` props to allow a flex item to grow to fill any available spac
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div spaceX3 row>
+  <div bgAmber400 p4>Normal</div>
+  <div bgAmber500 p4 flexGrow="1">Grow</div>
+  <div bgAmber400 p4>Normal</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Don't grow
 
 Use `flexGrow={0}` to prevent a flex item from growing.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box spaceX3 row>
@@ -44,3 +79,17 @@ Use `flexGrow={0}` to prevent a flex item from growing.
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div spaceX3 row>
+  <div bgAmber400 p4 flexGrow="1">Grow</div>
+  <div bgAmber500 p4 flexGrow="0">Not Grow</div>
+  <div bgAmber400 p4 flexGrow="1">Grow</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

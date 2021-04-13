@@ -3,6 +3,8 @@ id: to-center-x
 title: To CenterX
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 import { LayoutEngine7 } from '@site/src/components/LayoutEngine'
 
 Atomic Props to make children elements align to center horizontal.
@@ -15,12 +17,34 @@ Atomic Props to make children elements align to center horizontal.
 
 Center horizontal quickly with `toCenterX` prop:
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toCenterX bgGray100 square-200>
   <Box square-60 bgAmber400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterX bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## Compose
 

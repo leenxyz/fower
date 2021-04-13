@@ -3,6 +3,9 @@ id: text-alignment
 title: Text Alignment
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic Props for controlling the alignment of text.
 
 | Atomic Props      | CSS Properties       |
@@ -17,6 +20,15 @@ Atomic Props for controlling the alignment of text.
 
 Use `textLeft`, `textCenter`, `textRight`, `textJustify` to control the alignment of the text.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box textXL>
   <Box textLeft>Lorem ipsum dolor sit amet</Box>
@@ -25,6 +37,21 @@ Use `textLeft`, `textCenter`, `textRight`, `textJustify` to control the alignmen
   <Box textJustify>Lorem ipsum dolor sit amet</Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL>
+  <div textLeft>Lorem ipsum dolor sit amet</div>
+  <div textCenter>Lorem ipsum dolor sit amet</div>
+  <div textRight>Lorem ipsum dolor sit amet</div>
+  <div textJustify>Lorem ipsum dolor sit amet</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## textAlign Prop
 

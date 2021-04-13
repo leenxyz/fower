@@ -4,11 +4,23 @@ sidebar_label: Pseudo-classes
 title: Pseudo-classes
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Each Atomic Props of Styli supports CSS pseudo-classes. The format of the Atomic Props that enable Pseudo-classes style is: `{prop}--{pseudo}`, for example: `bgRed400--hover`, `bgYellow500--active`, `opacity-70--disabled`, `w-20--visited`, etc.
 
 ## Hover
 
 Use `--hover` postfix to apply hover style.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Button bgRed300 bgRed400--hover red800 p4 rounded-10>
@@ -16,9 +28,28 @@ Use `--hover` postfix to apply hover style.
 </Button>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<button bgRed300 bgRed400--hover red800 p4 rounded-10>Hover me</button>
+```
+
+</TabItem>
+</Tabs>
+
 ## Active
 
 Use `--active` postfix to apply active style.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Button bgYellow300 bgYellow500--active yellow800 p4 rounded-10>
@@ -26,9 +57,28 @@ Use `--active` postfix to apply active style.
 </Button>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<button bgYellow300 bgYellow500--active yellow800 p4 rounded-10>Click Me</button>
+```
+
+</TabItem>
+</Tabs>
+
 ## Disabled
 
 Use `--disabled` postfix to apply disabled style.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toCenter>
@@ -41,18 +91,59 @@ Use `--disabled` postfix to apply disabled style.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenter>
+  <button bgRed300 red800 p4 rounded-10 mr-20>Normal</button>
+  <button disabled bgRed300 opacity-70--disabled red800 p4 rounded-10>Disabled</button>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Focus
 
 Use `--focus` postfix to apply focus style.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Input bgGray200 outlineNone bgWhite--focus p2 border borderRed400--focus />
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<input bgGray200 outlineNone bgWhite--focus p2 border borderRed400--focus />
+```
+
+</TabItem>
+</Tabs>
+
 ## Child
 
 Use `--first-child` postfix to apply first-child style.
 Use `--last-child` postfix to apply last-child style.
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+  ]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box>
@@ -61,6 +152,20 @@ Use `--last-child` postfix to apply last-child style.
   <Box green400--last-child>Three</Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div>
+  <div red400--first-child>One</div>
+  <div>Two</div>
+  <div green400--last-child>Three</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
 
 ## Supported pseudo classes
 

@@ -3,12 +3,24 @@ id: text-color
 title: Text Color
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 | Atomic Props  | CSS Properties        |
 | ------------- | --------------------- |
 | {colorName}   | color: {named color}; |
 | color={value} | color: {value};       |
 
-## Use color in preset
+## Use color in design system
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box textXL toEvenly>
@@ -18,9 +30,32 @@ title: Text Color
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL toEvenly>
+  <span gray600>gray600</span>
+  <span red500>red500</span>
+  <span green400>green400</span>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 call preset color：[Color palette](/docs/design-system-colors#color-palettes)
 
 ## Use `color` props
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box textXL toEvenly>
@@ -30,9 +65,32 @@ call preset color：[Color palette](/docs/design-system-colors#color-palettes)
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL toEvenly>
+  <span color="orange400">orange400</span>
+  <span color="deeppink">deeppink</span>
+  <span color="#4fd1c5">#4fd1c5</span>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Color opacity
 
 transparentize color:
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row toEvenly>
@@ -45,7 +103,33 @@ transparentize color:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```jsx live
+<div row toEvenly>
+  <div orange500>orange500</div>
+  <div orange500--T40>orange500--T40</div>
+  <div color="red500">red500</div>
+  <div color="red500--T40">red500--T40</div>
+  <div color="#4fd1c5">#4fd1c5</div>
+  <div color="#4fd1c5--T40">#4fd1c5-T40</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## opacify color
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row toEvenly>
@@ -56,7 +140,31 @@ transparentize color:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row toEvenly>
+  <div color="rgba(0,0,0,0.2)">rgba(0,0,0,0.2)</div>
+  <div color="rgba(0,0,0,0.2)--O40">rgba(0,0,0,0.2)--O40</div>
+  <div color="rgba(0,0,0,0.2)--O60">rgba(0,0,0,0.2)--O60</div>
+  <div color="rgba(0,0,0,0.2)--O80">rgba(0,0,0,0.2)--O80</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## lighten color
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row toEvenly>
@@ -69,7 +177,33 @@ transparentize color:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row toEvenly>
+  <div orange500>orange500</div>
+  <div orange500--L40>orange500--L40</div>
+  <div color="red500">red500</div>
+  <div color="red500--L40">red500--L40</div>
+  <div color="#4fd1c5">#4fd1c5</div>
+  <div color="#4fd1c5--L40">#4fd1c5--L40</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## darken color
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box row toEvenly>
@@ -82,7 +216,33 @@ transparentize color:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div row toEvenly>
+  <div orange500>orange500</div>
+  <div orange500--D30>orange500--D30</div>
+  <div color="red500">red500</div>
+  <div color="red500--D30">red500--D30</div>
+  <div color="#4fd1c5">#4fd1c5</div>
+  <div color="#4fd1c5--D30">#4fd1c5--D30</div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Hover
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box textXL row toEvenly>
@@ -95,7 +255,29 @@ transparentize color:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL row toEvenly>
+  <span green400 red400--hover> Hello </span>
+  <span color="#4fd1c5" color--hover="purple"> Hello </span>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 hover with transparentize, lighten, darken:
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box textXL row toEvenly>
@@ -111,8 +293,41 @@ hover with transparentize, lighten, darken:
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div textXL row toEvenly>
+  <span green400 green400--T60--hover> Hello </span>
+  <span green400 green400--L30--hover> Hello </span>
+  <span green400 green400--D30--hover> Hello </span>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Focus
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box as="input" defaultValue="Focus me" outlineNone border p2 green400 red400--focus />
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<input defaultValue="Focus me" outlineNone border p2 green400 red400--focus />
+```
+
+</TabItem>
+</Tabs>

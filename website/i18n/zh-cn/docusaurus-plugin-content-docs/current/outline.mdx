@@ -3,6 +3,9 @@ id: outline
 title: Outline
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 Atomic props for controlling the stack order of an element.
 
 | Atomic Props    | CSS Properties    |
@@ -14,6 +17,15 @@ Atomic props for controlling the stack order of an element.
 
 Use `outlineNone` props to remove outline of an element.
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box toEvenly>
   <Input p2 bgGray200 placeholder="default input" />
@@ -21,9 +33,31 @@ Use `outlineNone` props to remove outline of an element.
 </Box>
 ```
 
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <input p2 bgGray200 placeholder="default input" />
+  <input p2 outlineNone bgGray200 placeholder="none outline" />
+</div>
+```
+
+</TabItem>
+</Tabs>
+
 ## Set Outline
 
 Use `outline` props to set outline for an element.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -31,3 +65,16 @@ Use `outline` props to set outline for an element.
   <Input p2 bgGray200 outline--focus="2px dotted red" placeholder="outline on focus" />
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toEvenly>
+  <input p2 bgGray200 placeholder="default input" />
+  <input p2 bgGray200 outline--focus="2px dotted red" placeholder="outline on focus" />
+</div>
+```
+
+</TabItem>
+</Tabs>

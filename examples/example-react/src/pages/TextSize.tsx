@@ -2,8 +2,6 @@ import { Box } from '@styli/react';
 import { configure } from '@styli/core';
 import { Atom } from '@styli/atom';
 import { presetWebRem } from '@styli/preset-web-rem';
-import CheckboxDemo from '@/bone-ui/examples/CheckboxDemo';
-import { Checkbox, CheckboxGroup } from '@/bone-ui/checkbox';
 import { useState } from 'react';
 
 // configure(presetWebRem);
@@ -14,18 +12,6 @@ export default () => {
   const [value, setValue] = useState(['green']);
   return (
     <Box>
-      <CheckboxGroup
-        // defaultValue={['green']}
-        value={value}
-        onChange={(e: any) => {
-          console.log('e group:', e);
-          setValue(e);
-        }}
-      >
-        <Checkbox value="red">Red</Checkbox>
-        <Checkbox value="green">Green</Checkbox>
-        <Checkbox value="blue">Blue</Checkbox>
-      </CheckboxGroup>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
       <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>

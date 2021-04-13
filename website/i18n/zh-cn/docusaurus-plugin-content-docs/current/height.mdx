@@ -11,22 +11,31 @@ title: Height
 
 ## Usage
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
-<Box toLeft white h-100 bgGray100>
-  <Box h-50 bgRed400 p2>
-    h-50
-  </Box>
-  <Box h-5rem bgYellow400 p2>
-    h-5rem
-  </Box>
-  <Box h={50} bgGreen400 p2>
-    h={'{50}'}
-  </Box>
-  <Box h="100px" bgBlue400 p2>
-    h="100px"
-  </Box>
-  <Box h="80%" bgPurple400 p2>
-    h="80%"
+<Box bgGray200 white square-200>
+  <Box maxH-100 h-200 bgRed400 toCenter>
+    maxH-100
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgGray200 white square-200>
+  <div maxH-100 h-200 bgRed400 toCenter>maxH-100</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

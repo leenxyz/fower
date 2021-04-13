@@ -3,6 +3,9 @@ id: max-height
 title: Max Height
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 使用 maxH-{value} 格式的 Props 可以控制元素的最大高度。
 
 | Atomic Props                | CSS Properties       |
@@ -11,6 +14,15 @@ title: Max Height
 
 ## Usage
 
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
 ```jsx live
 <Box bgGray200 white square-200>
   <Box maxH-100 h-200 bgRed400 toCenter>
@@ -18,3 +30,15 @@ title: Max Height
   </Box>
 </Box>
 ```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgGray200 white square-200>
+  <div maxH-100 h-200 bgRed400 toCenter>maxH-100</div>
+</div>
+```
+
+</TabItem>
+</Tabs>

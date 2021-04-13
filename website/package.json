@@ -45,8 +45,5 @@
     "react-dom": "17.x",
     "react-helmet": "^6.1.0",
     "simplebar-react": "^2.3.0"
-  },
-  "devDependencies": {
-    "@styli/babel-preset-styli": "^1.6.0"
   }
 }
