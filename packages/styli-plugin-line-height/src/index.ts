@@ -16,7 +16,7 @@ export function toStyle({ key, value, isValueProp }: Atom): any {
 
   if (presetValue) return { lineHeight: presetValue }
 
-  return {} // no style
+  return { lineHeight: value }
 }
 
 export default (): StyliPlugin => {
