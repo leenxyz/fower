@@ -1,6 +1,6 @@
 {
   "name": "@styli/store",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/store.esm.js",
   "dependencies": {
-    "@styli/types": "^1.6.0",
+    "@styli/types": "^1.7.0",
     "deepmerge": "^4.2.2"
   }
 }

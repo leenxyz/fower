@@ -1,6 +1,6 @@
 {
   "name": "@styli/website",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -35,7 +35,7 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.72",
     "@docusaurus/theme-live-codeblock": "2.0.0-alpha.72",
     "@mdx-js/react": "^1.6.21",
-    "@styli/react": "^1.6.0",
+    "@styli/react": "^1.7.0",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react-helmet": "^6.1.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",

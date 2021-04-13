@@ -1,6 +1,6 @@
 {
   "name": "styli-loader",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -18,9 +18,9 @@
   "author": "forsigner",
   "module": "dist/styli-loader.esm.js",
   "devDependencies": {
-    "@styli/core": "^1.6.0",
+    "@styli/core": "^1.7.0",
     "@types/loader-utils": "^2.0.1",
     "loader-utils": "^2.0.0",
-    "styli-transform": "^1.6.0"
+    "styli-transform": "^1.7.0"
   }
 }

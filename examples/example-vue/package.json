@@ -1,6 +1,6 @@
 {
   "name": "@styli/example-vue",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
@@ -9,12 +9,12 @@
     "test": "echo 'build:test'"
   },
   "dependencies": {
-    "@styli/vue": "^1.6.0",
+    "@styli/vue": "^1.7.0",
     "core-js": "^3.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@styli/vue-template-compiler": "^1.6.0",
+    "@styli/vue-template-compiler": "^1.7.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
