@@ -1,8 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
 
-  <p v-css>See <code>README.md</code> for more information.</p>
-  <p v-css class="bgRed200 blue300">
+  <p>See <code>README.md</code> for more information.</p>
+  <p class="bgRed200 blue300">
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +

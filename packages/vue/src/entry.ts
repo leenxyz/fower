@@ -1,9 +1,10 @@
 import { configure, injectGlobalStyle } from '@styli/core'
+import { store } from '@styli/store'
 import presetWeb from '@styli/preset-web'
 import _Vue, { PluginFunction } from 'vue'
 import vcss from '@/v-css'
 
-const isVue2 = (_Vue?.version || '').startsWith('2')
+const isVue2 = (_Vue.version || '').startsWith('2')
 
 injectGlobalStyle({
   '*': {
@@ -22,13 +23,10 @@ configure(presetWeb)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-interface InstallFunction extends PluginFunction<any> {
-  installed?: boolean
-}
 
-const install: InstallFunction = function installStyli(app: typeof _Vue) {
-  // if (install.installed) return
-  // install.installed = true
+const install: PluginFunction<any> = function installStyli(app: typeof _Vue) {
+  if ((store.config as any).vuePluginInstalled) return
+  ;(store.config as any).vuePluginInstalled = true
   const opt: any = {}
 
   if (isVue2) {

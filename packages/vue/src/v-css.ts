@@ -2,6 +2,8 @@ import { Parser } from '@styli/parser'
 
 function handler(el: HTMLElement, bind: any) {
   const props: any = {}
+  const { className } = el
+  if (className) props.className = className
 
   /** handle children */
   for (const { name, value } of Object.values(el.attributes)) {
@@ -18,6 +20,8 @@ function handler(el: HTMLElement, bind: any) {
   value.split(/\s+/).forEach((i: any) => {
     if (i) props[i] = true
   })
+
+  if (!Object.keys(props).length) return
 
   /** get parser */
   const parser = new Parser(props)
@@ -36,7 +40,7 @@ function handler(el: HTMLElement, bind: any) {
   /** set className to el */
   const classList = parser.getClassNames()
 
-  el?.classList.add(...classList)
+  el.classList.add(...classList)
 }
 
 export default {

@@ -11,9 +11,11 @@ const isProd = process.env.NODE_ENV === 'production'
 
 function getParser(attrs) {
   const props = {}
-  const classNames = attrs.class || ''
+  const className = attrs.class || ''
 
-  const classArr = classNames.split(/\s+/)
+  const classArr = className.split(/\s+/)
+
+  if (className) props.className = className
 
   classArr.forEach((item) => {
     if (item) props[item] = true
@@ -35,6 +37,16 @@ module.exports = require('vue-template-compiler')
 module.exports.parseComponent = (content, opts) => {
   const sfc = parseComponent(content, opts)
 
+  // auto inject styli vue plugin
+  const code = `
+  import __Vue from 'vue'
+  import VueStyli from '@styli/vue'
+  __Vue.use(VueStyli)
+    `
+  if (sfc.script) {
+    sfc.script.content = code + sfc.script.content
+  }
+
   if (sfc.template) {
     sfc.template.content = posthtml([
       (tree) => {
@@ -45,9 +57,10 @@ module.exports.parseComponent = (content, opts) => {
               node.attrs['v-css'] = true
               return node
             }
-            if (isProd) return node
 
             node.attrs['v-css'] = true
+
+            if (isProd) return node
 
             const parser = getParser(node.attrs)
             const rule = parser.toRules(true).join(' ')
