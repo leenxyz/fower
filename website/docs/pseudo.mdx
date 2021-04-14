@@ -190,12 +190,12 @@ By default, Styli supports these pseudo classes:
 - placeholder
 - selection
 
-If you want more pseudo classes, you can use `configure` to add it:
+If you want more pseudo classes, you can use `setConfig` to add it:
 
 ```jsx
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 
-configure({
+setConfig({
   pseudos: ['focus-visible', 'blank'], // will merge to built-in pseudos
 })
 ```

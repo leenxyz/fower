@@ -1,4 +1,4 @@
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { store } from '@styli/store'
 import { Atom } from '@styli/atom'
 import { presetWeb } from '@styli/preset-web'
@@ -6,7 +6,7 @@ import { Parser } from './parser'
 import { atomCache } from './cache'
 
 beforeAll(() => {
-  configure(presetWeb)
+  setConfig(presetWeb)
 })
 
 beforeEach(() => {
@@ -50,14 +50,14 @@ test('formatCssValue()', () => {
   expect(parser.formatCssValue('width', '10')).toBe('10px')
   expect(parser.formatCssValue('width', 10)).toBe('10px')
 
-  // configure({
+  // setConfig({
   //   transformUnit(value: any) {
   //     return value + 'rem'
   //   },
   // })
   // expect(parser.formatCssValue('width', 10)).toBe('10rem')
 
-  // configure({
+  // setConfig({
   //   unit: 'none',
   // })
   // expect(parser.formatCssValue('width', 10)).toBe(10)

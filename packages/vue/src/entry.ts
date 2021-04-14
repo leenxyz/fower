@@ -1,4 +1,4 @@
-import { configure, injectGlobalStyle } from '@styli/core'
+import { setConfig, injectGlobalStyle } from '@styli/core'
 import { store } from '@styli/store'
 import presetWeb from '@styli/preset-web'
 import _Vue, { PluginFunction } from 'vue'
@@ -19,7 +19,7 @@ injectGlobalStyle({
   },
 })
 
-configure(presetWeb)
+setConfig(presetWeb)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

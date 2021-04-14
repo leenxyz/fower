@@ -1,11 +1,11 @@
 import { Box } from '@styli/react';
-import { configure } from '@styli/core';
+import { setConfig } from '@styli/core';
 import { Atom } from '@styli/atom';
 import { presetWebRem } from '@styli/preset-web-rem';
 import { useState } from 'react';
 
-// configure(presetWebRem);
-// configure(presetWebRem, 'replace');
+// setConfig(presetWebRem);
+// setConfig(presetWebRem, 'replace');
 const atom = new Atom({ propKey: 'p-10', propValue: true });
 
 export default () => {

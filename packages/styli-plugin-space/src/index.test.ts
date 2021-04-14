@@ -1,5 +1,5 @@
 import { Atom } from '@styli/atom'
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { Parser } from '@styli/parser'
 import { presetWeb } from '@styli/preset-web'
 import plugin from '.'
@@ -9,7 +9,7 @@ const { isMatch, handleAtom } = plugin()
 const parser = new Parser({})
 
 beforeAll(() => {
-  configure(presetWeb)
+  setConfig(presetWeb)
 })
 
 test('isMatch', () => {

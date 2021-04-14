@@ -3,7 +3,7 @@ import { store } from '@styli/store'
 import { injectGlobalStyle } from './injectGlobalStyle'
 
 beforeAll(() => {
-  store.configure(presetWeb)
+  store.setConfig(presetWeb)
 })
 
 test('injectGlobalStyle()', () => {

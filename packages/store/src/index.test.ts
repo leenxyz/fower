@@ -13,26 +13,26 @@ const config = {
 }
 
 beforeEach(() => {
-  store.configure(config)
+  store.setConfig(config)
 })
 
-describe('configure', () => {
-  store.configure(config, 'replace')
+describe('setConfig', () => {
+  store.setConfig(config, 'replace')
 
-  test('configure() with default strategy', () => {
-    store.configure({ inline: false })
+  test('setConfig() with default strategy', () => {
+    store.setConfig({ inline: false })
     expect(JSON.stringify(store.config)).toEqual(
       JSON.stringify(deepmerge(config, { inline: false })),
     )
   })
 
-  test('configure() with merge strategy', () => {
-    store.configure({ inline: false }, 'merge')
+  test('setConfig() with merge strategy', () => {
+    store.setConfig({ inline: false }, 'merge')
     expect(JSON.stringify(store.config)).toEqual(JSON.stringify({ ...config, inline: false }))
   })
 
-  test('configure() with replace strategy', () => {
-    store.configure({ inline: true }, 'replace')
+  test('setConfig() with replace strategy', () => {
+    store.setConfig({ inline: true }, 'replace')
     expect(store.config).toMatchObject({ inline: true })
   })
 })

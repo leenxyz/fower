@@ -2,10 +2,10 @@ const { parseComponent } = require('vue-template-compiler')
 const posthtml = require('posthtml')
 const { css } = require('@styli/core')
 const { Parser } = require('@styli/parser')
-const { configure } = require('@styli/core')
+const { setConfig } = require('@styli/core')
 const { presetWeb } = require('@styli/preset-web')
 
-configure(presetWeb)
+setConfig(presetWeb)
 
 const isProd = process.env.NODE_ENV === 'production'
 

@@ -1,5 +1,6 @@
 import deepmerge from 'deepmerge'
 import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
+import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
 
@@ -25,7 +26,7 @@ class Store {
   }
 
   // user config
-  configure = (config: any, strategy: Strategy = 'deepmerge') => {
+  setConfig = (config: PartialConfig, strategy: Strategy = 'deepmerge') => {
     if (strategy === 'replace') {
       this.config = config as Configuration
     } else if (strategy === 'merge') {
@@ -39,7 +40,7 @@ class Store {
     return this.config.theme
   }
 
-  setTheme = (partialThemeConfig: any) => {
+  setTheme = (partialThemeConfig: PartialThemeConfig) => {
     this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
   }
 

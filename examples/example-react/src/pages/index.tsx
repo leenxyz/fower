@@ -2,7 +2,7 @@ import { Link } from 'umi';
 import { Box } from '@styli/react';
 import {
   createStyle,
-  configure,
+  setConfig,
   setTheme,
   registerAtomicProps,
   injectGlobalStyle,
@@ -65,7 +65,7 @@ injectGlobalStyle({
   },
 });
 
-configure({
+setConfig({
   // inline: true,
   pseudos: ['hover'],
 });

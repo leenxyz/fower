@@ -3,7 +3,7 @@ import { store } from '@styli/store'
 import { css } from './css'
 
 afterEach(() => {
-  store.configure(presetWeb)
+  store.setConfig(presetWeb)
 })
 
 test('css()', () => {

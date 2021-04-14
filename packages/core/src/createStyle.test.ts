@@ -4,7 +4,7 @@ import { store } from '@styli/store'
 import { createStyle } from '.'
 
 beforeAll(() => {
-  store.configure(presetWeb)
+  store.setConfig(presetWeb)
 })
 
 test('createStyle()', () => {

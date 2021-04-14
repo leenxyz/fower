@@ -1,8 +1,8 @@
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { Atom } from '@styli/atom'
 import plugin from '.'
 
-configure({ unit: 'px' })
+setConfig({ unit: 'px' })
 
 const { isMatch, handleAtom } = plugin()
 const parser = {} as any

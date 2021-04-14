@@ -1,11 +1,11 @@
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { store } from '@styli/store'
 import { Parser } from '@styli/parser'
 import { presetWeb } from '@styli/preset-web'
 import { Atom } from '@styli/atom'
 import plugin from '.'
 
-configure(presetWeb)
+setConfig(presetWeb)
 
 const { isMatch, handleAtom } = plugin()
 const parser = new Parser({})

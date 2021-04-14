@@ -81,12 +81,12 @@ console.log('config.theme:', config.theme)
 
 ## Custom Config
 
-You can update Styli config use `configure()` Api from `@styli/core`.
+You can update Styli config use `setConfig()` Api from `@styli/core`.
 
 ```js
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 
-configure({
+setConfig({
   unit: 'rem',
 })
 ```
@@ -94,9 +94,9 @@ configure({
 By default, user config will deepmerge to default config. you can change `configure strategy` by second param, form example, use **replace** strategy to replace the whole default config:
 
 ```js
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 
-configure(
+setConfig(
   {
     unit: 'rem',
   },

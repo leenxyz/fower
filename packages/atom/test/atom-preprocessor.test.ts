@@ -1,10 +1,10 @@
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { store } from '@styli/store'
 import { presetWeb } from '@styli/preset-web'
 import { Atom } from '../src'
 
 beforeAll(() => {
-  configure(presetWeb)
+  setConfig(presetWeb)
 })
 
 test('meta of normal prop is empty', () => {

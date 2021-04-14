@@ -1,4 +1,4 @@
-import { configure } from '@styli/core'
+import { setConfig } from '@styli/core'
 import { transform } from 'styli-transform'
 import { getOptions } from 'loader-utils'
 import { Preset } from '@styli/types'
@@ -16,7 +16,7 @@ export default function (source: string, map: any, meta: any) {
   const options: unknown = getOptions(webpackEnv)
   const { styliConfig = {}, output = 'styli.css' } = (options || {}) as LoaderOption
 
-  configure(styliConfig)
+  setConfig(styliConfig)
 
   // 申明异步 loader
   const callback = webpackEnv.async()
