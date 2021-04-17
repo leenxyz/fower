@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/forsigner/styli/tree/master/packages/styli-intellisense"
+    "url": "https://github.com/forsigner/styli/tree/master/styli-intellisense"
   },
   "publisher": "forsigner",
   "categories": [],
