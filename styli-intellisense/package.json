@@ -1,0 +1,59 @@
+{
+  "name": "styli-intellisense",
+  "version": "0.1.5",
+  "private": true,
+  "displayName": "Styli IntelliSense",
+  "description": "Intelligent Styli tooling for VS Code",
+  "author": "Forsigner <forsigner@gmail.com>",
+  "icon": "media/logo.png",
+  "preview": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forsigner/styli/tree/master/packages/styli-intellisense"
+  },
+  "publisher": "forsigner",
+  "categories": [],
+  "keywords": [
+    "styli",
+    "intellisense",
+    "autocomplete"
+  ],
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "activationEvents": [
+    "onLanguage:vue"
+  ],
+  "main": "./client/out/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run webpack",
+    "webpack": "npm run clean && webpack --mode production --config ./client/webpack.config.js && webpack --mode production --config ./server/webpack.config.js",
+    "webpack:dev": "npm run clean && webpack --mode none --config ./client/webpack.config.js && webpack --mode none --config ./server/webpack.config.js",
+    "compile": "tsc -b",
+    "compile:client": "tsc -b ./client/tsconfig.json",
+    "compile:server": "tsc -b ./server/tsconfig.json",
+    "watch": "tsc -b -w",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "lint": "npm run lint:client && npm run lint:server",
+    "lint:client": "eslint --config ./client/.eslintrc.json ./client/src/*.ts",
+    "lint:server": "eslint --config ./server/.eslintrc.json ./server/src/*.ts",
+    "clean": "rimraf client/out && rimraf server/out",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "merge-options": "^2.0.0",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^5.4.5",
+    "typescript": "^4.2.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@styli/preset-web": "^1.7.0"
+  }
+}

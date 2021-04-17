@@ -7,7 +7,9 @@
     "packages": [
       "packages/*",
       "examples/*",
+      "styli-intellisense",
       "website"
+
     ],
     "nohoist": [
       "**/html-minifier-terser",

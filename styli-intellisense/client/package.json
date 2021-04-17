@@ -1,0 +1,14 @@
+{
+  "name": "styli-intellisense-client",
+  "description": "styli-intellisense-client",
+  "author": "forsigner",
+  "license": "MIT",
+  "version": "0.1.5",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^7.0.0"
+  },
+  "devDependencies": {}
+}
