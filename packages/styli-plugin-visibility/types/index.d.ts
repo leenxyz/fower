@@ -17,7 +17,7 @@ declare module '@styli/types' {
     visibility?: CSS.Property.Visibility | boolean
 
     /**
-     * Set visibility
+     * Set visibility visible
      *
      * @example
      * ```tsx
@@ -27,7 +27,7 @@ declare module '@styli/types' {
     visible?: boolean
 
     /**
-     * Set visibility
+     * Set visibility hidden
      *
      * @example
      * ```tsx

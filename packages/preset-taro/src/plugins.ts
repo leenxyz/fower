@@ -21,6 +21,7 @@ import fontWeight from 'styli-plugin-font-weight'
 import zIndex from 'styli-plugin-z-index'
 import outline from 'styli-plugin-outline'
 import ellipsis from 'styli-plugin-ellipsis'
+import visibility from 'styli-plugin-visibility'
 
 export const plugins = [
   background(),
@@ -46,4 +47,5 @@ export const plugins = [
   zIndex(),
   outline(),
   ellipsis(),
+  visibility(),
 ]

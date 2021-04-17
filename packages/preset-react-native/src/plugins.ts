@@ -17,6 +17,7 @@ import textAlign from 'styli-plugin-text-align'
 import textSize from 'styli-plugin-text-size'
 import fontWeight from 'styli-plugin-font-weight'
 import zIndex from 'styli-plugin-z-index'
+import visibility from 'styli-plugin-visibility'
 
 export const plugins = [
   background(),
@@ -38,4 +39,5 @@ export const plugins = [
   textSize(),
   fontWeight(),
   zIndex(),
+  visibility(),
 ]

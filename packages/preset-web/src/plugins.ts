@@ -25,6 +25,7 @@ import cursor from 'styli-plugin-cursor'
 import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
 import space from 'styli-plugin-space'
+import visibility from 'styli-plugin-visibility'
 
 export const plugins = [
   debug(),
@@ -54,4 +55,5 @@ export const plugins = [
   outline(),
   ellipsis(),
   space(),
+  visibility(),
 ]
