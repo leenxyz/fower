@@ -22,6 +22,8 @@ declare namespace StyliTypes {
 
   type PropValue = boolean | number | string
 
+  type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
+
   interface StyliCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
 
   type PseudosObject = { [P in CSS.Pseudos]?: StyliCSSProperties }
@@ -99,6 +101,33 @@ declare namespace StyliTypes {
      * ```
      */
     css?: CSSObject
+
+    _sm?: GroupedAtomicProps
+    _md?: GroupedAtomicProps
+    _lg?: GroupedAtomicProps
+    _xl?: GroupedAtomicProps
+    _2xl?: GroupedAtomicProps
+
+    _dark?: GroupedAtomicProps
+
+    _active?: GroupedAtomicProps
+    _checked?: GroupedAtomicProps
+    _disabled?: GroupedAtomicProps
+    _enabled?: GroupedAtomicProps
+    _default?: GroupedAtomicProps
+    _empty?: GroupedAtomicProps
+    _focus?: GroupedAtomicProps
+    _focusWithin?: GroupedAtomicProps
+    _invalid?: GroupedAtomicProps
+    _hover?: GroupedAtomicProps
+    _link?: GroupedAtomicProps
+    _visited?: GroupedAtomicProps
+    _firstChild?: GroupedAtomicProps
+    _lastChild?: GroupedAtomicProps
+    _after?: GroupedAtomicProps
+    _before?: GroupedAtomicProps
+    _placeholder?: GroupedAtomicProps
+    _selection?: GroupedAtomicProps
   }
 
   interface Configuration {
@@ -116,7 +145,7 @@ declare namespace StyliTypes {
   interface Props {
     style?: any
     className?: string
-    css?: any
+    css?: CSSObject
 
     /**
      * props not convert to atomic props

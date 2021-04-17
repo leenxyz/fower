@@ -1,16 +1,16 @@
 import 'react'
-import { AtomicProps } from '@styli/types'
+import { AtomicProps, CSSObject } from '@styli/types'
 
 declare module 'react' {
   interface DOMAttributes<T> extends AtomicProps {
-    css?: any
+    css?: CSSObject
   }
 }
 
 declare global {
   namespace JSX {
     interface IntrinsicAttributes extends AtomicProps {
-      css?: any
+      css?: CSSObject
     }
   }
 }
