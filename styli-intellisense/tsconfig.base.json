@@ -1,10 +1,11 @@
 {
-	"compilerOptions": {
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"skipLibCheck": true,
-		"strict": true
-	}
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true
+  }
 }

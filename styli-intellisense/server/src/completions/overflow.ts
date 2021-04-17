@@ -27,7 +27,7 @@ export function getOverflow() {
         kind: 'markdown',
         value: `
 \`\`\`html
-<View ${key}="{value}"></View>
+<div ${key}="{value}"></div>
 \`\`\`
 	  `,
       },
@@ -43,8 +43,9 @@ export function getOverflow() {
         kind: 'markdown',
         value: `
 \`\`\`html
-<View ${key}></View>
+<div ${key}></div>
 \`\`\`
+
 \`\`\`css
 .${key} {
   ${kebab(k)}: ${v.toLowerCase()};

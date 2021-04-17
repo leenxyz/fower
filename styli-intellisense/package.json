@@ -1,6 +1,6 @@
 {
   "name": "styli-intellisense",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "displayName": "Styli IntelliSense",
   "description": "Intelligent Styli tooling for VS Code",

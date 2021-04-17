@@ -3,11 +3,12 @@
   "description": "styli-intellisense-client",
   "author": "forsigner",
   "license": "MIT",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "engines": {
     "vscode": "^1.55.0"
   },
   "dependencies": {
+    "@types/vscode": "^1.55.0",
     "vscode-languageclient": "^7.0.0"
   },
   "devDependencies": {}
