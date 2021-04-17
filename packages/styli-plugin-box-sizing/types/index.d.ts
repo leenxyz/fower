@@ -15,7 +15,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View boxSizing="content-box">Hello world</View>
+     * <Box boxSizing="content-box">Hello world</View>
      * ```
      */
     boxSizing: CSS.Property.BoxSizing | boolean
@@ -29,7 +29,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View contentBox>Hello world</View>
+     * <Box contentBox>Hello world</View>
      * ```
      */
     contentBox: boolean
@@ -43,7 +43,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderBox>Hello world</View>
+     * <Box borderBox>Hello world</View>
      * ```
      */
     borderBox: boolean

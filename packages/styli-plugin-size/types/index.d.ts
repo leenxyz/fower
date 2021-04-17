@@ -10,12 +10,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View w-10></View>
-     * <View w-1rem></View>
-     * <View w-10p></View>
-     * <View w={10}></View>
-     * <View w="10px 4px"></View>
-     * <View w={a + b}></View>
+     * <Box w-10></View>
+     * <Box w-1rem></View>
+     * <Box w-10p></View>
+     * <Box w={10}></View>
+     * <Box w="10px 4px"></View>
+     * <Box w={a + b}></View>
      * ```
      */
     w?: PropValue
@@ -143,12 +143,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View h-10></View>
-     * <View h-1rem></View>
-     * <View h-10p></View>
-     * <View h={10}></View>
-     * <View h="10px 4px"></View>
-     * <View h={a + b}></View>
+     * <Box h-10></View>
+     * <Box h-1rem></View>
+     * <Box h-10p></View>
+     * <Box h={10}></View>
+     * <Box h="10px 4px"></View>
+     * <Box h={a + b}></View>
      * ```
      */
     h?: PropValue
@@ -280,10 +280,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View square-10></View>
-     * <View square-1rem></View>
-     * <View square-10p></View>
-     * <View square={a + b}></View>
+     * <Box square-10></View>
+     * <Box square-1rem></View>
+     * <Box square-10p></View>
+     * <Box square={a + b}></View>
      * ```
      */
     square?: PropValue
@@ -415,10 +415,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View circle-10></View>
-     * <View circle-1rem></View>
-     * <View circle-10p></View>
-     * <View circle={a + b}></View>
+     * <Box circle-10></View>
+     * <Box circle-1rem></View>
+     * <Box circle-10p></View>
+     * <Box circle={a + b}></View>
      * ```
      */
     circle?: PropValue
@@ -548,12 +548,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View minW-10></View>
-     * <View minW-1rem></View>
-     * <View minW-10p></View>
-     * <View minW={10}></View>
-     * <View minW="10px 4px"></View>
-     * <View minW={a + b}></View>
+     * <Box minW-10></View>
+     * <Box minW-1rem></View>
+     * <Box minW-10p></View>
+     * <Box minW={10}></View>
+     * <Box minW="10px 4px"></View>
+     * <Box minW={a + b}></View>
      * ```
      */
     minW?: PropValue
@@ -683,12 +683,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View maxW-10></View>
-     * <View maxW-1rem></View>
-     * <View maxW-10p></View>
-     * <View maxW={10}></View>
-     * <View maxW="10px 4px"></View>
-     * <View maxW={a + b}></View>
+     * <Box maxW-10></View>
+     * <Box maxW-1rem></View>
+     * <Box maxW-10p></View>
+     * <Box maxW={10}></View>
+     * <Box maxW="10px 4px"></View>
+     * <Box maxW={a + b}></View>
      * ```
      */
     maxW?: PropValue
@@ -818,12 +818,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View minH-10></View>
-     * <View minH-1rem></View>
-     * <View minH-10p></View>
-     * <View minH={10}></View>
-     * <View minH="10px 4px"></View>
-     * <View minH={a + b}></View>
+     * <Box minH-10></View>
+     * <Box minH-1rem></View>
+     * <Box minH-10p></View>
+     * <Box minH={10}></View>
+     * <Box minH="10px 4px"></View>
+     * <Box minH={a + b}></View>
      * ```
      */
     minH?: PropValue
@@ -953,12 +953,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View maxH-10></View>
-     * <View maxH-1rem></View>
-     * <View maxH-10p></View>
-     * <View maxH={10}></View>
-     * <View maxH="10px 4px"></View>
-     * <View maxH={a + b}></View>
+     * <Box maxH-10></View>
+     * <Box maxH-1rem></View>
+     * <Box maxH-10p></View>
+     * <Box maxH={10}></View>
+     * <Box maxH="10px 4px"></View>
+     * <Box maxH={a + b}></View>
      * ```
      */
     maxH?: PropValue

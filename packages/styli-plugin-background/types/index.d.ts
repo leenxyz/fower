@@ -11,9 +11,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View bg="#112233"></View>
-     * <View bg="red"></View>
-     * <View bg="red500"></View>
+     * <Box bg="#112233"></View>
+     * <Box bg="red"></View>
+     * <Box bg="red500"></View>
      * ```
      */
     bg?: StyliColor | boolean
@@ -23,7 +23,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View backgroundImage="url('http...')"></View>
+     * <Box backgroundImage="url('http...')"></View>
      * ```
      */
     backgroundImage?: CSS.Property.BackgroundImage | boolean
@@ -33,7 +33,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View backgroundPosition="top left"></View>
+     * <Box backgroundPosition="top left"></View>
      * ```
      */
     backgroundPosition?: CSS.Property.BackgroundPosition | boolean
@@ -43,7 +43,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View backgroundSize="100% 100%"></View>
+     * <Box backgroundSize="100% 100%"></View>
      * ```
      */
     backgroundSize?: string | boolean
@@ -53,7 +53,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View backgroundRepeat="no-repeat"></View>
+     * <Box backgroundRepeat="no-repeat"></View>
      * ```
      */
     backgroundRepeat?: CSS.Property.BackgroundRepeat | boolean

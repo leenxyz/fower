@@ -10,7 +10,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontWeight="bold"></View>
+     * <Box fontWeight="bold"></View>
      * ```
      */
     fontWeight?: PropValue
@@ -22,7 +22,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontHairline></View>
+     * <Box fontHairline></View>
      * ```
      */
     fontHairline?: boolean
@@ -34,7 +34,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontThin></View>
+     * <Box fontThin></View>
      * ```
      */
     fontThin?: boolean
@@ -46,7 +46,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontLight></View>
+     * <Box fontLight></View>
      * ```
      */
     fontLight?: boolean
@@ -58,7 +58,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontNormal></View>
+     * <Box fontNormal></View>
      * ```
      */
     fontNormal?: boolean
@@ -70,7 +70,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontMedium></View>
+     * <Box fontMedium></View>
      * ```
      */
     fontMedium?: boolean
@@ -82,7 +82,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontSemibold></View>
+     * <Box fontSemibold></View>
      * ```
      */
     fontSemibold?: boolean
@@ -94,7 +94,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontBold></View>
+     * <Box fontBold></View>
      * ```
      */
     fontBold?: boolean
@@ -106,7 +106,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View fontExtrabold></View>
+     * <Box fontExtrabold></View>
      * ```
      */
     fontExtrabold?: boolean

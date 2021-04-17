@@ -12,8 +12,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadow></View>
-     * <View shadow="0 0 0 1px rgba(0, 0, 0, 0.05)"></View>
+     * <Box shadow></View>
+     * <Box shadow="0 0 0 1px rgba(0, 0, 0, 0.05)"></View>
      * ```
      */
     shadow?: PropValue
@@ -25,7 +25,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowSM></View>
+     * <Box shadowSM></View>
      * ```
      */
     shadowSM?: PropValue
@@ -37,7 +37,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowMD></View>
+     * <Box shadowMD></View>
      * ```
      */
     shadowMD?: PropValue
@@ -49,7 +49,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowLG></View>
+     * <Box shadowLG></View>
      * ```
      */
     shadowLG?: PropValue
@@ -61,7 +61,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowXL></View>
+     * <Box shadowXL></View>
      * ```
      */
     shadowXL?: PropValue
@@ -73,7 +73,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadow2XL></View>
+     * <Box shadow2XL></View>
      * ```
      */
     shadow2XL?: PropValue
@@ -85,7 +85,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowInner></View>
+     * <Box shadowInner></View>
      * ```
      */
     shadowInner?: PropValue
@@ -97,7 +97,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowOutline></View>
+     * <Box shadowOutline></View>
      * ```
      */
     shadowOutline?: PropValue
@@ -109,7 +109,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View shadowNone></View>
+     * <Box shadowNone></View>
      * ```
      */
     shadowNone?: PropValue

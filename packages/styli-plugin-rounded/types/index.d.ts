@@ -10,10 +10,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View rounded-10></View>
-     * <View rounded-10rem></View>
-     * <View rounded-100p></View>
-     * <View rounded="10"></View>
+     * <Box rounded-10></View>
+     * <Box rounded-10rem></View>
+     * <Box rounded-100p></View>
+     * <Box rounded="10"></View>
      * ```
      */
     rounded?: PropValue
@@ -25,7 +25,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedFull></View>
+     * <Box roundedFull></View>
      * ```
      */
     roundedFull?: boolean
@@ -45,9 +45,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedT-10></View>
-     * <View roundedT-10rem></View>
-     * <View roundedT="10"></View>
+     * <Box roundedT-10></View>
+     * <Box roundedT-10rem></View>
+     * <Box roundedT="10"></View>
      * ```
      */
     roundedT?: PropValue
@@ -67,9 +67,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedR-10></View>
-     * <View roundedR-10p></View>
-     * <View roundedR="10"></View>
+     * <Box roundedR-10></View>
+     * <Box roundedR-10p></View>
+     * <Box roundedR="10"></View>
      * ```
      */
     roundedR?: PropValue
@@ -89,9 +89,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedB-10></View>
-     * <View roundedB-10p></View>
-     * <View roundedB="10"></View>
+     * <Box roundedB-10></View>
+     * <Box roundedB-10p></View>
+     * <Box roundedB="10"></View>
      * ```
      */
     roundedB?: PropValue
@@ -111,9 +111,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedL-10></View>
-     * <View roundedL-10p></View>
-     * <View roundedL="10"></View>
+     * <Box roundedL-10></View>
+     * <Box roundedL-10p></View>
+     * <Box roundedL="10"></View>
      * ```
      */
     roundedL?: PropValue
@@ -133,9 +133,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedTL-10></View>
-     * <View roundedTL-10p></View>
-     * <View roundedTL="10"></View>
+     * <Box roundedTL-10></View>
+     * <Box roundedTL-10p></View>
+     * <Box roundedTL="10"></View>
      * ```
      */
     roundedTL?: PropValue
@@ -155,9 +155,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedTR-10></View>
-     * <View roundedTR-10p></View>
-     * <View roundedTR="10"></View>
+     * <Box roundedTR-10></View>
+     * <Box roundedTR-10p></View>
+     * <Box roundedTR="10"></View>
      * ```
      */
     roundedTR?: PropValue
@@ -177,9 +177,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedBL-10></View>
-     * <View roundedBL-10p></View>
-     * <View roundedBL="10"></View>
+     * <Box roundedBL-10></View>
+     * <Box roundedBL-10p></View>
+     * <Box roundedBL="10"></View>
      * ```
      */
     roundedBL?: PropValue
@@ -198,9 +198,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View roundedBR-10></View>
-     * <View roundedBR-10p></View>
-     * <View roundedBR="10"></View>
+     * <Box roundedBR-10></View>
+     * <Box roundedBR-10p></View>
+     * <Box roundedBR="10"></View>
      * ```
      */
     roundedBR?: PropValue

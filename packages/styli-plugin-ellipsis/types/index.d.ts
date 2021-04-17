@@ -12,10 +12,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis></View>
-     * <View ellipsisquare-200></View>
-     * <View ellipsisquare-200px></View>
-     * <View ellipsis="200rem></View>
+     * <Box ellipsis></View>
+     * <Box ellipsisquare-200></View>
+     * <Box ellipsisquare-200px></View>
+     * <Box ellipsis="200rem></View>
      * ```
      */
     ellipsis?: PropValue
@@ -27,10 +27,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis1></View>
-     * <View ellipsis1-200></View>
-     * <View ellipsis1-200px></View>
-     * <View ellipsis1="200rem"></View>
+     * <Box ellipsis1></View>
+     * <Box ellipsis1-200></View>
+     * <Box ellipsis1-200px></View>
+     * <Box ellipsis1="200rem"></View>
      * ```
      */
     ellipsis1?: PropValue
@@ -43,10 +43,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis2></View>
-     * <View ellipsis2-200></View>
-     * <View ellipsis2-200px></View>
-     * <View ellipsis2="200rem"></View>
+     * <Box ellipsis2></View>
+     * <Box ellipsis2-200></View>
+     * <Box ellipsis2-200px></View>
+     * <Box ellipsis2="200rem"></View>
      * ```
      */
     ellipsis2?: PropValue
@@ -59,10 +59,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis3></View>
-     * <View ellipsis3-200></View>
-     * <View ellipsis3-200px></View>
-     * <View ellipsis3="200rem"></View>
+     * <Box ellipsis3></View>
+     * <Box ellipsis3-200></View>
+     * <Box ellipsis3-200px></View>
+     * <Box ellipsis3="200rem"></View>
      * ```
      */
     ellipsis3?: PropValue
@@ -75,10 +75,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis4></View>
-     * <View ellipsis4-200></View>
-     * <View ellipsis4-200px></View>
-     * <View ellipsis4="200rem"></View>
+     * <Box ellipsis4></View>
+     * <Box ellipsis4-200></View>
+     * <Box ellipsis4-200px></View>
+     * <Box ellipsis4="200rem"></View>
      * ```
      */
     ellipsis4?: PropValue
@@ -91,10 +91,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View ellipsis5></View>
-     * <View ellipsis5-200></View>
-     * <View ellipsis5-200px></View>
-     * <View ellipsis5="200rem"></View>
+     * <Box ellipsis5></View>
+     * <Box ellipsis5-200></View>
+     * <Box ellipsis5-200px></View>
+     * <Box ellipsis5="200rem"></View>
      * ```
      */
     ellipsis5?: PropValue

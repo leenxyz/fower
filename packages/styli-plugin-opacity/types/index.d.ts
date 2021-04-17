@@ -12,10 +12,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View opacity></View>
-     * <View opacity-20></View>
-     * <View opacity="20"></View>
-     * <View opacity={20}></View>
+     * <Box opacity></View>
+     * <Box opacity-20></View>
+     * <Box opacity="20"></View>
+     * <Box opacity={20}></View>
      * ```
      */
     opacity?: PropValue

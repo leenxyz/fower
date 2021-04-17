@@ -11,9 +11,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View border-10></View>
-     * <View border={10}></View>
-     * <View border="10"></View>
+     * <Box border-10></View>
+     * <Box border={10}></View>
+     * <Box border="10"></View>
      * ```
      */
     border?: boolean | string | number
@@ -23,8 +23,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderT-10></View>
-     * <View borderT={10}></View>
+     * <Box borderT-10></View>
+     * <Box borderT={10}></View>
      * ```
      */
     borderT?: boolean | number | string
@@ -34,8 +34,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderR-10></View>
-     * <View borderR={10}></View>
+     * <Box borderR-10></View>
+     * <Box borderR={10}></View>
      * ```
      */
     borderR?: boolean | number | string
@@ -45,8 +45,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderB-10></View>
-     * <View borderB={10}></View>
+     * <Box borderB-10></View>
+     * <Box borderB={10}></View>
      * ```
      */
     borderB?: boolean | number | string
@@ -56,8 +56,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderL-10></View>
-     * <View borderL={10}></View>
+     * <Box borderL-10></View>
+     * <Box borderL={10}></View>
      * ```
      */
     borderL?: boolean | number | string
@@ -67,7 +67,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderStyle="none"></View>
+     * <Box borderStyle="none"></View>
      * ```
      */
     borderStyle?: CSS.Property.BorderStyle | boolean
@@ -79,7 +79,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderSolid></View>
+     * <Box borderSolid></View>
      * ```
      */
     borderSolid?: boolean
@@ -91,7 +91,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderDashed></View>
+     * <Box borderDashed></View>
      * ```
      */
     borderDashed?: boolean
@@ -103,7 +103,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderDotted></View>
+     * <Box borderDotted></View>
      * ```
      */
     borderDotted?: boolean
@@ -115,7 +115,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderDouble></View>
+     * <Box borderDouble></View>
      * ```
      */
     borderDouble?: boolean
@@ -127,7 +127,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderNone></View>
+     * <Box borderNone></View>
      * ```
      */
     borderNone?: boolean
@@ -137,7 +137,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View borderColor="gray20"></View>
+     * <Box borderColor="gray20"></View>
      * ```
      */
     borderColor?: StyliColor | boolean

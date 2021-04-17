@@ -19,7 +19,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View row></View>
+     * <Box row></View>
      * ```
      */
     row?: boolean
@@ -38,7 +38,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <View column></View>
+     * <Box column></View>
      * ```
      */
     column?: boolean
@@ -54,7 +54,7 @@ declare module '@styli/types' {
      * ```
      * @example
      * ```tsx
-     * <View toCenter></View>
+     * <Box toCenter></View>
      * ```
      */
     toCenter?: boolean
@@ -65,7 +65,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toCenterX></View>
+     * <Box toCenterX></View>
      * ```
      */
     toCenterX?: boolean
@@ -76,7 +76,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toCenterY></View>
+     * <Box toCenterY></View>
      * ```
      */
     toCenterY?: boolean
@@ -88,8 +88,8 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toLeft></View>
-     * <View toLeft toBottom></View>
+     * <Box toLeft></View>
+     * <Box toLeft toBottom></View>
      * ```
      */
     toLeft?: boolean
@@ -101,8 +101,8 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toRight></View>
-     * <View toRight toBottom></View>
+     * <Box toRight></View>
+     * <Box toRight toBottom></View>
      * ```
      */
     toRight?: boolean
@@ -114,7 +114,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toTop></View>
+     * <Box toTop></View>
      * ```
      */
     toTop?: boolean
@@ -126,7 +126,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toBottom></View>
+     * <Box toBottom></View>
      * ```
      */
     toBottom?: boolean
@@ -137,7 +137,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toBetween></View>
+     * <Box toBetween></View>
      * ```
      */
     toBetween?: boolean
@@ -148,7 +148,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toAround></View>
+     * <Box toAround></View>
      * ```
      */
     toAround?: boolean
@@ -159,7 +159,7 @@ declare module '@styli/types' {
      * @example
      *
      * ```tsx
-     * <View toEvenly></View>
+     * <Box toEvenly></View>
      * ```
      */
     toEvenly?: boolean

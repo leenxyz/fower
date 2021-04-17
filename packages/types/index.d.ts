@@ -55,7 +55,7 @@ declare namespace StyliTypes {
      * }
      *
      * const Test: FC<TestProp> = ({ toCenter, className }) => {
-     *    return <View className={className}>{toCenter}</View>
+     *    return <Box className={className}>{toCenter}</Box>
      * }
      *
      * const StyledTest = styled(Test)
@@ -83,7 +83,7 @@ declare namespace StyliTypes {
      *
      * @example
      * ```tsx
-     * <View css={
+     * <Box css={
      *  {
      *     transition: 'all 0.3s',
      *     '::after': {
@@ -100,7 +100,7 @@ declare namespace StyliTypes {
      *        },
      *     }
      *  }
-     * }></View>
+     * }></Box>
      * ```
      */
     css?: CSSObject
