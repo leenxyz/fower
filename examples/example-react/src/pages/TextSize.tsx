@@ -12,6 +12,7 @@ export default () => {
   const [value, setValue] = useState(['green']);
   return (
     <Box>
+      <div></div>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
       <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>

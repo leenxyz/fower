@@ -1,6 +1,7 @@
 {
   "name": "@styli/example-react",
   "version": "1.7.0",
+  "private": true,
   "scripts": {
     "start": "umi dev",
     "postinstall": "umi generate tmp",

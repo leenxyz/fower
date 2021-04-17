@@ -8,8 +8,6 @@ declare module '@styli/types' {
     /**
      * Set textTransform to none
      *
-     * normalcase is `text-transform: none`
-     *
      * @example
      * ```tsx
      * <Box normalcase></Box>
@@ -19,8 +17,6 @@ declare module '@styli/types' {
 
     /**
      * Set textTransform to uppercase
-     *
-     * uppercase is `text-transform: uppercase`
      *
      * @example
      * ```tsx
@@ -32,8 +28,6 @@ declare module '@styli/types' {
     /**
      * Set textTransform to lowercase
      *
-     * lowercase is `text-transform: lowercase`
-     *
      * @example
      * ```tsx
      * <Box lowercase></Box>
@@ -43,8 +37,6 @@ declare module '@styli/types' {
 
     /**
      * Set textTransform to capitalize
-     *
-     * capitalize is `text-transform: capitalize`
      *
      * @example
      * ```tsx

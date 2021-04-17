@@ -1,6 +1,7 @@
 {
   "name": "@styli/example-vue",
   "version": "1.7.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",

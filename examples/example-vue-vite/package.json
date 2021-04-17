@@ -1,6 +1,7 @@
 {
   "name": "example-vue-vite",
   "version": "1.7.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "echo 'build'",
