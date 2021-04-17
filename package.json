@@ -7,7 +7,6 @@
     "packages": [
       "packages/*",
       "examples/*",
-      "styli-intellisense",
       "website"
 
     ],

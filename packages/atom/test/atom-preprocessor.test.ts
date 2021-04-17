@@ -21,13 +21,6 @@ test('false prop', () => {
   expect(atom.isValid).toBeFalsy()
 })
 
-test('invalid prop', () => {
-  const atom = new Atom({ propKey: 'styliName', propValue: 'foo' })
-  atom.postfixPreprocessor(store.config)
-  expect(atom.handled).toBeTruthy()
-  expect(atom.isValid).toBeFalsy()
-})
-
 test('if pseudo, meta.pseudo should be truthy', () => {
   const atom = new Atom({
     propKey: 'toCenter--hover',

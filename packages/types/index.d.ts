@@ -70,11 +70,6 @@ declare namespace StyliTypes {
     excludedProps?: string[]
 
     /**
-     * This Atomic Prop can improve code readability and semantically.
-     */
-    styliName?: string
-
-    /**
      * CSS
      *
      * Like style prop, but you can do more.

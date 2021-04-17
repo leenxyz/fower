@@ -2,7 +2,7 @@ import hash from 'string-hash'
 import * as CSS from 'csstype'
 import { Options, Meta } from './types'
 
-const invalidProps = ['excludedProps', 'styliName']
+const invalidProps = ['excludedProps']
 
 export { Options, Meta }
 
