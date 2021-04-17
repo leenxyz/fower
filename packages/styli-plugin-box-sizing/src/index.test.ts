@@ -7,8 +7,8 @@ const parser = {} as Parser
 
 test('isMatch', () => {
   expect(isMatch!('boxSizing')).toEqual(true)
-  expect(isMatch!('borderBox')).toEqual(true)
-  expect(isMatch!('contentBox')).toEqual(true)
+  expect(isMatch!('boxBorder')).toEqual(true)
+  expect(isMatch!('boxContent')).toEqual(true)
 })
 
 test('boxSizing="borderBox"', () => {
@@ -22,10 +22,10 @@ test('boxSizing="borderBox"', () => {
   expect(atom.style.boxSizing).toEqual('border-box')
 })
 
-test('contentBox={true}', () => {
+test('boxContent={true}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'contentBox',
+      propKey: 'boxContent',
       propValue: true,
     }),
     parser,
@@ -33,10 +33,10 @@ test('contentBox={true}', () => {
   expect(atom.style.boxSizing).toEqual('content-box')
 })
 
-test('borderBox={true}', () => {
+test('boxBorder={true}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'borderBox',
+      propKey: 'boxBorder',
       propValue: true,
     }),
     parser,

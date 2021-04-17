@@ -42,5 +42,5 @@ test('invisible', () => {
     }),
     parser,
   )
-  expect(atom.style.visibility).toEqual('invisible')
+  expect(atom.style.visibility).toEqual('hidden')
 })
