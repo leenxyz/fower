@@ -11,10 +11,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box flexDirection="row"></View>
-     * <Box flexDirection="row-reverse"></View>
-     * <Box flexDirection="column"></View>
-     * <Box flexDirection="column-reverse"></View>
+     * <Box flexDirection="row"></Box>
+     * <Box flexDirection="row-reverse"></Box>
+     * <Box flexDirection="column"></Box>
+     * <Box flexDirection="column-reverse"></Box>
      * ```
      */
     flexDirection?: CSS.Property.FlexDirection
@@ -26,12 +26,12 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex
      * @example
      * ```tsx
-     * <Box flex></View> //  display: flex;
-     * <Box flex={1}></View> // flex: 1 1 0%;
-     * <Box flex={1}></View> // flex: 1 1 0%;
-     * <Box flexAuto></View> // flex: 1 1 auto;
-     * <Box flexInitial></View> // flex: 0 1 auto;
-     * <Box flexNone></View> // flex: none;
+     * <Box flex></Box> //  display: flex;
+     * <Box flex={1}></Box> // flex: 1 1 0%;
+     * <Box flex={1}></Box> // flex: 1 1 0%;
+     * <Box flexAuto></Box> // flex: 1 1 auto;
+     * <Box flexInitial></Box> // flex: 0 1 auto;
+     * <Box flexNone></Box> // flex: none;
      * ```
      */
     flex?: CSS.Property.Flex | boolean
@@ -41,7 +41,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box flexAuto></View> // flex: 1 1 auto;
+     * <Box flexAuto></Box> // flex: 1 1 auto;
      * ```
      */
     flexAuto?: boolean
@@ -51,7 +51,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box flexInitial></View> // flex: 0 1 auto;
+     * <Box flexInitial></Box> // flex: 0 1 auto;
      * ```
      */
     flexInitial?: boolean
@@ -61,7 +61,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box flexNone></View> // flex: none;
+     * <Box flexNone></Box> // flex: none;
      * ```
      */
     flexNone?: boolean
@@ -71,8 +71,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box order-1></View> // order: 1;
-     * <Box order="1"></View> // order: 1;
+     * <Box order-1></Box> // order: 1;
+     * <Box order="1"></Box> // order: 1;
      * ```
      */
     order?: CSS.Property.Order
@@ -82,7 +82,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
      * @example
      * ```tsx
-     * <Box flexWrap="wrap"></View>
+     * <Box flexWrap="wrap"></Box>
      * ```
      */
     flexWrap?: CSS.Property.FlexWrap | boolean
@@ -92,7 +92,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
      * @example
      * ```tsx
-     * <Box flexGrow={1}></View>
+     * <Box flexGrow={1}></Box>
      * ```
      */
     flexGrow?: CSS.Property.FlexGrow | boolean
@@ -102,7 +102,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
      * @example
      * ```tsx
-     * <Box flexShrink={2}></View>
+     * <Box flexShrink={2}></Box>
      * ```
      */
     flexShrink?: CSS.Property.FlexShrink | boolean
@@ -112,7 +112,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
      * @example
      * ```tsx
-     * <Box flexBasis="10px"></View>
+     * <Box flexBasis="10px"></Box>
      * ```
      */
     flexBasis?: CSS.Property.FlexBasis | boolean

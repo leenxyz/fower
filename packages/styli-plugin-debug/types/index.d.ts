@@ -14,7 +14,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box debug></View>
+     * <Box debug></Box>
      * ```
      */
     debug?: boolean
@@ -28,7 +28,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box debugChildren></View>
+     * <Box debugChildren></Box>
      * ```
      */
     debugChildren?: boolean

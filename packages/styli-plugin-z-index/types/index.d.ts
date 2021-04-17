@@ -10,9 +10,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box zIndex-10></View>
-     * <Box zIndex--10></View>
-     * <Box zIndex={10}></View>
+     * <Box zIndex-10></Box>
+     * <Box zIndex--10></Box>
+     * <Box zIndex={10}></Box>
      * ```
      */
     zIndex?: PropValue

@@ -11,7 +11,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box visibility="hidden">Hello world</View>
+     * <Box visibility="hidden">Hello world</Box>
      * ```
      */
     visibility?: CSS.Property.Visibility | boolean
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box visible>Hello world</View>
+     * <Box visible>Hello world</Box>
      * ```
      */
     visible?: boolean
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box invisible>Hello world</View>
+     * <Box invisible>Hello world</Box>
      * ```
      */
     invisible?: boolean

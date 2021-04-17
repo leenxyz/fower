@@ -12,7 +12,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box normalcase></View>
+     * <Box normalcase></Box>
      * ```
      */
     normalcase?: boolean
@@ -24,7 +24,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box uppercase></View>
+     * <Box uppercase></Box>
      * ```
      */
     uppercase?: boolean
@@ -36,7 +36,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box lowercase></View>
+     * <Box lowercase></Box>
      * ```
      */
     lowercase?: boolean
@@ -48,7 +48,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box capitalize></View>
+     * <Box capitalize></Box>
      * ```
      */
     capitalize?: boolean

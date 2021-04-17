@@ -11,7 +11,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
      * @example
      * ```tsx
-     * <Box justifyContent="flex-start"></View>
+     * <Box justifyContent="flex-start"></Box>
      * ```
      */
     justifyContent?: CSS.Property.JustifyContent | false
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items
      * @example
      * ```tsx
-     * <Box justifyItems="start"></View>
+     * <Box justifyItems="start"></Box>
      * ```
      */
     justifyItems?: CSS.Property.JustifyItems | false
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
      * @example
      * ```tsx
-     * <Box justifySelf="start"></View>
+     * <Box justifySelf="start"></Box>
      * ```
      */
     justifySelf?: CSS.Property.JustifySelf | false
@@ -41,7 +41,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
      * @example
      * ```tsx
-     * <Box alignItems="stretch"></View>
+     * <Box alignItems="stretch"></Box>
      * ```
      */
     alignItems?: CSS.Property.AlignItems | false
@@ -52,7 +52,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
      * @example
      * ```tsx
-     * <Box alignContent="flex-start"></View>
+     * <Box alignContent="flex-start"></Box>
      * ```
      */
     alignContent?: CSS.Property.AlignContent | false
@@ -62,7 +62,7 @@ declare module '@styli/types' {
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
      * @example
      * ```tsx
-     * <Box alignSelf="auto"></View>
+     * <Box alignSelf="auto"></Box>
      * ```
      */
     alignSelf?: CSS.Property.AlignSelf | false

@@ -11,7 +11,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box textAlign="center"></View>
+     * <Box textAlign="center"></Box>
      * ```
      */
     textAlign?: CSS.Property.TextAlign 
@@ -23,7 +23,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box textLeft></View>
+     * <Box textLeft></Box>
      * ```
      */
     textLeft?: boolean
@@ -35,7 +35,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box textCenter></View>
+     * <Box textCenter></Box>
      * ```
      */
     textCenter?: boolean
@@ -47,7 +47,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box textRight></View>
+     * <Box textRight></Box>
      * ```
      */
     textRight?: boolean
@@ -59,7 +59,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box textJustify></View>
+     * <Box textJustify></Box>
      * ```
      */
     textJustify?: boolean

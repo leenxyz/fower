@@ -10,12 +10,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box p-10></View>
-     * <Box p-1rem></View>
-     * <Box p-10p></View>
-     * <Box p={10}></View>
-     * <Box p="10px 4px"></View>
-     * <Box p={a + b}></View>
+     * <Box p-10></Box>
+     * <Box p-1rem></Box>
+     * <Box p-10p></Box>
+     * <Box p={10}></Box>
+     * <Box p="10px 4px"></Box>
+     * <Box p={a + b}></Box>
      * ```
      */
     p?: PropValue
@@ -149,10 +149,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box px-10></View>
-     * <Box px-1rem></View>
-     * <Box px-10p></View>
-     * <Box px={a + b}></View>
+     * <Box px-10></Box>
+     * <Box px-1rem></Box>
+     * <Box px-10p></Box>
+     * <Box px={a + b}></Box>
      * ```
      */
     px?: PropValue
@@ -284,10 +284,10 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box py-10></View>
-     * <Box py-1rem></View>
-     * <Box py-10p></View>
-     * <Box py={a + b}></View>
+     * <Box py-10></Box>
+     * <Box py-1rem></Box>
+     * <Box py-10p></Box>
+     * <Box py={a + b}></Box>
      * ```
      */
     py?: PropValue
@@ -417,12 +417,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box pt-10></View>
-     * <Box pt-1rem></View>
-     * <Box pt-10p></View>
-     * <Box pt={10}></View>
-     * <Box pt="10px 4px"></View>
-     * <Box pt={a + b}></View>
+     * <Box pt-10></Box>
+     * <Box pt-1rem></Box>
+     * <Box pt-10p></Box>
+     * <Box pt={10}></Box>
+     * <Box pt="10px 4px"></Box>
+     * <Box pt={a + b}></Box>
      * ```
      */
     pt?: PropValue
@@ -552,12 +552,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box pb-10></View>
-     * <Box pb-1rem></View>
-     * <Box pb-10p></View>
-     * <Box pb={10}></View>
-     * <Box pb="10px 4px"></View>
-     * <Box pb={a + b}></View>
+     * <Box pb-10></Box>
+     * <Box pb-1rem></Box>
+     * <Box pb-10p></Box>
+     * <Box pb={10}></Box>
+     * <Box pb="10px 4px"></Box>
+     * <Box pb={a + b}></Box>
      * ```
      */
     pb?: PropValue
@@ -687,12 +687,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box pr-10></View>
-     * <Box pr-1rem></View>
-     * <Box pr-10p></View>
-     * <Box pr={10}></View>
-     * <Box pr="10px 4px"></View>
-     * <Box pr={a + b}></View>
+     * <Box pr-10></Box>
+     * <Box pr-1rem></Box>
+     * <Box pr-10p></Box>
+     * <Box pr={10}></Box>
+     * <Box pr="10px 4px"></Box>
+     * <Box pr={a + b}></Box>
      * ```
      */
     pr?: PropValue
@@ -822,12 +822,12 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box pl-10></View>
-     * <Box pl-1rem></View>
-     * <Box pl-10p></View>
-     * <Box pl={10}></View>
-     * <Box pl="10px 4px"></View>
-     * <Box pl={a + b}></View>
+     * <Box pl-10></Box>
+     * <Box pl-1rem></Box>
+     * <Box pl-10p></Box>
+     * <Box pl={10}></Box>
+     * <Box pl="10px 4px"></Box>
+     * <Box pl={a + b}></Box>
      * ```
      */
     pl?: PropValue

@@ -12,8 +12,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box space-1rem></View>
-     * <Box space="1rem"></View>
+     * <Box space-1rem></Box>
+     * <Box space="1rem"></Box>
      * ```
      */
     space?: PropValue
@@ -144,8 +144,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box spaceX-1rem></View>
-     * <Box spaceX="1rem"></View>
+     * <Box spaceX-1rem></Box>
+     * <Box spaceX="1rem"></Box>
      * ```
      */
     spaceX?: PropValue
@@ -277,8 +277,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box spaceY-1rem></View>
-     * <Box spaceY="1rem"></View>
+     * <Box spaceY-1rem></Box>
+     * <Box spaceY="1rem"></Box>
      * ```
      */
     spaceY?: PropValue

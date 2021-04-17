@@ -11,9 +11,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box display="block"></View>
-     * <Box display="flex"></View>
-     * <Box display="inline-block"></View>
+     * <Box display="block"></Box>
+     * <Box display="flex"></Box>
+     * <Box display="inline-block"></Box>
      * ```
      */
     display?: CSS.Property.Display
@@ -23,7 +23,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box inline></View>
+     * <Box inline></Box>
      * ```
      */
     inline?: boolean
@@ -33,7 +33,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box inlineBlock></View>
+     * <Box inlineBlock></Box>
      * ```
      */
     inlineBlock?: boolean
@@ -43,7 +43,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box inlineFlex></View>
+     * <Box inlineFlex></Box>
      * ```
      */
     inlineFlex?: boolean
@@ -53,7 +53,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box block></View>
+     * <Box block></Box>
      * ```
      */
     block?: boolean
@@ -63,7 +63,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box grid></View>
+     * <Box grid></Box>
      * ```
      */
     grid?: boolean
@@ -73,7 +73,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box hidden></View>
+     * <Box hidden></Box>
      * ```
      */
     hidden?: boolean
@@ -83,7 +83,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box table></View>
+     * <Box table></Box>
      * ```
      */
     table?: boolean

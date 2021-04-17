@@ -11,7 +11,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursor="pointer"></View>
+     * <Box cursor="pointer"></Box>
      * ```
      */
     cursor?: CSS.Property.Cursor | boolean
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorAlias></View>
+     * <Box cursorAlias></Box>
      * ```
      */
     cursorAlias?: boolean
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorAllScroll></View>
+     * <Box cursorAllScroll></Box>
      * ```
      */
     cursorAllScroll?: boolean
@@ -41,7 +41,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorAuto></View>
+     * <Box cursorAuto></Box>
      * ```
      */
     cursorAuto?: boolean
@@ -51,7 +51,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorCell></View>
+     * <Box cursorCell></Box>
      * ```
      */
     cursorCell?: boolean
@@ -61,7 +61,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorColResize></View>
+     * <Box cursorColResize></Box>
      * ```
      */
     cursorColResize?: boolean
@@ -71,7 +71,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorContextMenu></View>
+     * <Box cursorContextMenu></Box>
      * ```
      */
     cursorContextMenu?: boolean
@@ -81,7 +81,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorCopy></View>
+     * <Box cursorCopy></Box>
      * ```
      */
     cursorCopy?: boolean
@@ -91,7 +91,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorCrosshair></View>
+     * <Box cursorCrosshair></Box>
      * ```
      */
     cursorCrosshair?: boolean
@@ -101,7 +101,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorDefault></View>
+     * <Box cursorDefault></Box>
      * ```
      */
     cursorDefault?: boolean
@@ -111,7 +111,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorEResize></View>
+     * <Box cursorEResize></Box>
      * ```
      */
     cursorEResize?: boolean
@@ -121,7 +121,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorEwResize></View>
+     * <Box cursorEwResize></Box>
      * ```
      */
     cursorEwResize?: boolean
@@ -131,7 +131,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorGrab></View>
+     * <Box cursorGrab></Box>
      * ```
      */
     cursorGrab?: boolean
@@ -141,7 +141,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorGrabbing></View>
+     * <Box cursorGrabbing></Box>
      * ```
      */
     cursorGrabbing?: boolean
@@ -151,7 +151,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorHelp></View>
+     * <Box cursorHelp></Box>
      * ```
      */
     cursorHelp?: boolean
@@ -161,7 +161,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorMove></View>
+     * <Box cursorMove></Box>
      * ```
      */
     cursorMove?: boolean
@@ -171,7 +171,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNResize></View>
+     * <Box cursorNResize></Box>
      * ```
      */
     cursorNResize?: boolean
@@ -181,7 +181,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNeResize></View>
+     * <Box cursorNeResize></Box>
      * ```
      */
     cursorNeResize?: boolean
@@ -191,7 +191,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNeswResize></View>
+     * <Box cursorNeswResize></Box>
      * ```
      */
     cursorNeswResize?: boolean
@@ -201,7 +201,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNoDrop></View>
+     * <Box cursorNoDrop></Box>
      * ```
      */
     cursorNoDrop?: boolean
@@ -211,7 +211,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNone></View>
+     * <Box cursorNone></Box>
      * ```
      */
     cursorNone?: boolean
@@ -221,7 +221,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNotAllowed></View>
+     * <Box cursorNotAllowed></Box>
      * ```
      */
     cursorNotAllowed?: boolean
@@ -231,7 +231,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNsResize></View>
+     * <Box cursorNsResize></Box>
      * ```
      */
     cursorNsResize?: boolean
@@ -241,7 +241,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNwResize></View>
+     * <Box cursorNwResize></Box>
      * ```
      */
     cursorNwResize?: boolean
@@ -251,7 +251,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorNwseResize></View>
+     * <Box cursorNwseResize></Box>
      * ```
      */
     cursorNwseResize?: boolean
@@ -261,7 +261,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorPointer></View>
+     * <Box cursorPointer></Box>
      * ```
      */
     cursorPointer?: boolean
@@ -271,7 +271,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorProgress></View>
+     * <Box cursorProgress></Box>
      * ```
      */
     cursorProgress?: boolean
@@ -281,7 +281,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorRowResize></View>
+     * <Box cursorRowResize></Box>
      * ```
      */
     cursorRowResize?: boolean
@@ -291,7 +291,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorSResize></View>
+     * <Box cursorSResize></Box>
      * ```
      */
     cursorSResize?: boolean
@@ -301,7 +301,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorSeResize></View>
+     * <Box cursorSeResize></Box>
      * ```
      */
     cursorSeResize?: boolean
@@ -311,7 +311,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorSwResize></View>
+     * <Box cursorSwResize></Box>
      * ```
      */
     cursorSwResize?: boolean
@@ -321,7 +321,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorText></View>
+     * <Box cursorText></Box>
      * ```
      */
     cursorText?: boolean
@@ -331,7 +331,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorVerticalText></View>
+     * <Box cursorVerticalText></Box>
      * ```
      */
     cursorVerticalText?: boolean
@@ -341,7 +341,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorWResize></View>
+     * <Box cursorWResize></Box>
      * ```
      */
     cursorWResize?: boolean
@@ -351,7 +351,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorWait></View>
+     * <Box cursorWait></Box>
      * ```
      */
     cursorWait?: boolean
@@ -361,7 +361,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorZoomIn></View>
+     * <Box cursorZoomIn></Box>
      * ```
      */
     cursorZoomIn?: boolean
@@ -371,7 +371,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box cursorZoomOut></View>
+     * <Box cursorZoomOut></Box>
      * ```
      */
     cursorZoomOut?: boolean

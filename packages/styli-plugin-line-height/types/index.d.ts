@@ -10,8 +10,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leading-10></View>
-     * <Box leading="10px"></View>
+     * <Box leading-10></Box>
+     * <Box leading="10px"></Box>
      * ```
      */
     leading?: PropValue
@@ -23,7 +23,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingNone></View>
+     * <Box leadingNone></Box>
      * ```
      */
     leadingNone?: boolean
@@ -35,7 +35,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingTight></View>
+     * <Box leadingTight></Box>
      * ```
      */
     leadingTight?: boolean
@@ -47,7 +47,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingSnug></View>
+     * <Box leadingSnug></Box>
      * ```
      */
     leadingSnug?: boolean
@@ -59,7 +59,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingNormal></View>
+     * <Box leadingNormal></Box>
      * ```
      */
     leadingNormal?: boolean
@@ -71,7 +71,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingRelaxed></View>
+     * <Box leadingRelaxed></Box>
      * ```
      */
     leadingRelaxed?: boolean
@@ -83,7 +83,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box leadingLoose></View>
+     * <Box leadingLoose></Box>
      * ```
      */
     leadingLoose?: boolean

@@ -11,7 +11,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box overflow="hidden"></View>
+     * <Box overflow="hidden"></Box>
      * ```
      */
     overflow?: CSS.Property.Overflow | boolean
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box overflowX="hidden"></View>
+     * <Box overflowX="hidden"></Box>
      * ```
      */
     overflowX?: CSS.Property.OverflowX | boolean
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box overflowY="hidden"></View>
+     * <Box overflowY="hidden"></Box>
      * ```
      */
     overflowY?: CSS.Property.OverflowY | boolean

@@ -10,8 +10,8 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box outline></View>
-     * <Box outline="dashed red;"></View>
+     * <Box outline></Box>
+     * <Box outline="dashed red;"></Box>
      * ```
      */
     outline?: PropValue
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box outlineNone></View>
+     * <Box outlineNone></Box>
      * ```
      */
     outlineNone?: boolean
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box outlineOffset="0.2em"></View>
+     * <Box outlineOffset="0.2em"></Box>
      * ```
      */
     outlineOffset?: PropValue

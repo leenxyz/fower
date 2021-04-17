@@ -11,7 +11,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box position="absolute"></View>
+     * <Box position="absolute"></Box>
      * ```
      */
     position?: CSS.Property.Position 
@@ -21,7 +21,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box static></View>
+     * <Box static></Box>
      * ```
      */
     static?: boolean
@@ -31,7 +31,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box fixed></View>
+     * <Box fixed></Box>
      * ```
      */
     fixed?: boolean
@@ -41,7 +41,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box absolute></View>
+     * <Box absolute></Box>
      * ```
      */
     absolute?: boolean
@@ -51,7 +51,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box relative></View>
+     * <Box relative></Box>
      * ```
      */
     relative?: boolean
@@ -61,7 +61,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box sticky></View>
+     * <Box sticky></Box>
      * ```
      */
     sticky?: boolean
@@ -73,9 +73,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box top-0></View>
-     * <Box top-10px></View>
-     * <Box top--10rem></View>
+     * <Box top-0></Box>
+     * <Box top-10px></Box>
+     * <Box top--10rem></Box>
      * ```
      */
     top?: boolean | number | string
@@ -118,9 +118,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box right-0></View>
-     * <Box right-10px></View>
-     * <Box right--10rem></View>
+     * <Box right-0></Box>
+     * <Box right-10px></Box>
+     * <Box right--10rem></Box>
      * ```
      */
     right?: boolean | number | string
@@ -163,9 +163,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box bottom-0></View>
-     * <Box bottom-10px></View>
-     * <Box bottom--10rem></View>
+     * <Box bottom-0></Box>
+     * <Box bottom-10px></Box>
+     * <Box bottom--10rem></Box>
      * ```
      */
     bottom?: boolean | number | string
@@ -208,9 +208,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box left-0></View>
-     * <Box left-10px></View>
-     * <Box left--10rem></View>
+     * <Box left-0></Box>
+     * <Box left-10px></Box>
+     * <Box left--10rem></Box>
      * ```
      */
     left?: boolean | number | string
