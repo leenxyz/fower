@@ -1,18 +1,8 @@
 import { Box } from '@styli/react';
-import { setConfig } from '@styli/core';
-import { Atom } from '@styli/atom';
-import { presetWebRem } from '@styli/preset-web-rem';
-import { useState } from 'react';
-
-// setConfig(presetWebRem);
-// setConfig(presetWebRem, 'replace');
-const atom = new Atom({ propKey: 'p-10', propValue: true });
 
 export default () => {
-  const [value, setValue] = useState(['green']);
   return (
     <Box>
-      <div></div>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
       <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>

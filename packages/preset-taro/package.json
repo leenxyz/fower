@@ -27,6 +27,7 @@
     "styli-plugin-background": "^1.7.0",
     "styli-plugin-border": "^1.7.0",
     "styli-plugin-box-alignment": "^1.7.0",
+    "styli-plugin-box-sizing":"^1.7.0",
     "styli-plugin-color": "^1.7.0",
     "styli-plugin-cursor": "^1.7.0",
     "styli-plugin-debug": "^1.7.0",
@@ -50,6 +51,7 @@
     "styli-plugin-text-align": "^1.7.0",
     "styli-plugin-text-size": "^1.7.0",
     "styli-plugin-text-transform": "^1.7.0",
+    "styli-plugin-visibility": "^1.7.0",
     "styli-plugin-z-index": "^1.7.0"
   }
 }

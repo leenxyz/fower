@@ -10,8 +10,6 @@ declare module '@styli/types' {
      *
      * Styli will auto add border to self element.
      *
-     * debug is `.autoClassName{ border: 1px solid gold }`
-     *
      * @example
      * ```tsx
      * <Box debug></Box>
@@ -22,9 +20,7 @@ declare module '@styli/types' {
     /**
      * debugChildren
      *
-     * Styli will auto add border to self and children elements
-     *
-     * debugChildren is `.autoClassName{ border: 1px solid gold, '*': { border: 1px solid gold } }`
+     * Styli will auto add border to children elements
      *
      * @example
      * ```tsx

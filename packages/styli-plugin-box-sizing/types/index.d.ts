@@ -21,7 +21,7 @@ declare module '@styli/types' {
     boxSizing: CSS.Property.BoxSizing | boolean
 
     /**
-     * Set boxSizing to contentBox
+     * Set boxSizing to content-box
      *
      * ```css
      * { boxSizing: 'content-box' }
@@ -29,13 +29,13 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box contentBox>Hello world</Box>
+     * <Box boxContent>Hello world</Box>
      * ```
      */
-    contentBox: boolean
+    boxContent: boolean
 
     /**
-     * Set boxSizing to borderBox
+     * Set boxSizing to border-box
      *
      * ```css
      * { boxSizing: 'border-box' }
@@ -43,9 +43,9 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box borderBox>Hello world</Box>
+     * <Box boxBorder>Hello world</Box>
      * ```
      */
-    borderBox: boolean
+    boxBorder: boolean
   }
 }

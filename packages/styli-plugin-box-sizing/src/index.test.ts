@@ -32,3 +32,14 @@ test('contentBox={true}', () => {
   )
   expect(atom.style.boxSizing).toEqual('content-box')
 })
+
+test('borderBox={true}', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'borderBox',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.boxSizing).toEqual('border-box')
+})

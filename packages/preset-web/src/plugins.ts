@@ -26,6 +26,7 @@ import ellipsis from 'styli-plugin-ellipsis'
 import debug from 'styli-plugin-debug'
 import space from 'styli-plugin-space'
 import visibility from 'styli-plugin-visibility'
+import boxSizing from 'styli-plugin-box-sizing'
 
 export const plugins = [
   debug(),
@@ -56,4 +57,5 @@ export const plugins = [
   ellipsis(),
   space(),
   visibility(),
+  boxSizing(),
 ]

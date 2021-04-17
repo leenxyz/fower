@@ -26,7 +26,7 @@ declare module '@styli/types' {
      *
      * @example
      * ```tsx
-     * <Box color="#FFF"></Box>
+     * <Box color="#fff"></Box>
      * <Box color="red500--T20"></Box> // transparentize color 变更透明
      * <Box color="red500--O20"></Box> // opacify color 变不透明
      * <Box color="red500--L20"></Box> // lighten color 变亮

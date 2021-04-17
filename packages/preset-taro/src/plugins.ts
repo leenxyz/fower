@@ -22,6 +22,7 @@ import zIndex from 'styli-plugin-z-index'
 import outline from 'styli-plugin-outline'
 import ellipsis from 'styli-plugin-ellipsis'
 import visibility from 'styli-plugin-visibility'
+import boxSizing from 'styli-plugin-box-sizing'
 
 export const plugins = [
   background(),
@@ -48,4 +49,5 @@ export const plugins = [
   outline(),
   ellipsis(),
   visibility(),
+  boxSizing(),
 ]
