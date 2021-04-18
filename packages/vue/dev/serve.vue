@@ -1,8 +1,8 @@
 <script lang="ts">
 import Vue from 'vue'
-import styli from '@/entry'
+import fower from '@/entry'
 
-Vue.use(styli)
+Vue.use(fower)
 
 export default Vue.extend({
   name: 'ServeDev',

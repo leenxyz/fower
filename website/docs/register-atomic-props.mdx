@@ -12,7 +12,7 @@ You can register your own Atomic Props with `registerAtomicProps`.
 ## Basic Usage
 
 ```js
-import { registerAtomicProps } from '@styli/core'
+import { registerAtomicProps } from '@fower/core'
 
 registerAtomicProps('textHeading', {
   fontSize: 28,
@@ -38,7 +38,7 @@ now you can use it:
 ## Advanced
 
 ```js
-import { registerAtomicProps } from '@styli/core'
+import { registerAtomicProps } from '@fower/core'
 
 registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
   const size = atom.propKey.replace('heading', '').toLowerCase()

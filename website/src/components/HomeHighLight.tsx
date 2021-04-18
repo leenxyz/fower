@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 // import theme from 'prism-react-renderer/themes/dracula'
 // import theme from 'prism-react-renderer/themes/vsDark'
 import theme from 'prism-react-renderer/themes/palenight'
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 
 export const HomeHighLight = ({ code, lang = 'jsx' }) => {
   return (

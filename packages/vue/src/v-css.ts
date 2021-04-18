@@ -1,4 +1,4 @@
-import { Parser } from '@styli/parser'
+import { Parser } from '@fower/parser'
 
 function handler(el: HTMLElement, bind: any) {
   const props: any = {}

@@ -1,4 +1,4 @@
-import { StyliPlugin } from '@styli/types'
+import { FowerPlugin } from '@fower/types'
 import deepmerge from 'deepmerge'
 import { store } from '.'
 
@@ -58,7 +58,7 @@ test('setTheme', () => {
 })
 
 test('use()', () => {
-  const plugin: StyliPlugin = {
+  const plugin: FowerPlugin = {
     isMatch(key: string) {
       return key === 'test'
     },

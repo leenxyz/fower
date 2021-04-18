@@ -6,7 +6,7 @@ module.exports = {
       .rule('vue')
       .use('vue-loader')
       .tap((options) => {
-        options.compiler = require('@styli/vue-template-compiler')
+        options.compiler = require('@fower/vue-template-compiler')
         return options
       })
   },

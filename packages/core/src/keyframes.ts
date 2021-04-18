@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react'
-import { hash, jsKeyToCssKey } from '@styli/utils'
-import { styleSheet } from '@styli/sheet'
+import { hash, jsKeyToCssKey } from '@fower/utils'
+import { styleSheet } from '@fower/sheet'
 
 type Input = Record<string, CSSProperties>
 

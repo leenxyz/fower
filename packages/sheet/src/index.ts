@@ -1,4 +1,4 @@
-import { isBrowser } from '@styli/utils'
+import { isBrowser } from '@fower/utils'
 
 class StyleSheet {
   private $style!: HTMLStyleElement
@@ -6,7 +6,7 @@ class StyleSheet {
   private createStyleElement(): HTMLStyleElement {
     const $style = document.createElement('style')
 
-    $style.dataset.styli = 'styli'
+    $style.dataset.fower = 'fower'
     document.head.append($style)
     this.$style = $style
     return $style

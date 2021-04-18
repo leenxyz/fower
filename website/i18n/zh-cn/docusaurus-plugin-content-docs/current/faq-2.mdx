@@ -6,13 +6,13 @@ title: 关于原子属性 (Atomic Props)
 
 ## 什么是原子属性？
 
-受到 [Atomic CSS](https://acss.io/) 和 [Tailwindcss](https://tailwindcss.com/)的启发，Styli 使用原子属性（Atomic props）来编写样式。那什么事实原子属性呢？我想你肯定见过 CSS 原子类，它们长成这样的： `.p-2`、`.m-10`、`.bgBlack`、`flex`... 原子属性和 CSS 很相似，只不过它不是写下 className 中，而是直接写在 Markup 中。
+受到 [Atomic CSS](https://acss.io/) 和 [Tailwindcss](https://tailwindcss.com/)的启发，Fower 使用原子属性（Atomic props）来编写样式。那什么事实原子属性呢？我想你肯定见过 CSS 原子类，它们长成这样的： `.p-2`、`.m-10`、`.bgBlack`、`flex`... 原子属性和 CSS 很相似，只不过它不是写下 className 中，而是直接写在 Markup 中。
 
 原子属性可以写在 HTML 中：
 
 ```jsx
 <div bgRed300 text3XL>
-  Styli
+  Fower
 </div>
 ```
 
@@ -20,7 +20,7 @@ title: 关于原子属性 (Atomic Props)
 
 ```jsx live
 <Text bgRed300 text3XL>
-  Styli
+  Fower
 </Text>
 ```
 
@@ -32,7 +32,7 @@ title: 关于原子属性 (Atomic Props)
 
 我们以 padding 为例，它的 CSS 原子类可以有 `.p-1`、`.p-2`、`p-4`、`p-5`... 它是枚举，是有限的，有多少个原子类，相应地就需重复写多少份 CSS 代码。况且通常还需支持 `pt`、`pr`、`pb`、`pl`、`px`、`py`，这时 CSS 代码需要翻几倍。如果原子类要支持 `hover:p-10`、`focus:p-10`、`active:p-10`、`visited:p-10`等伪类，CSS 又要翻几倍。如果还要支持原子级的响应式样式，类似 `sm:p-10`、`md:p-10`、`lg:p-10`、、`xl:p-10`，CSS 代码又需要翻几倍。由于 CSS 原子类是静态的，它的 CSS 代码很容易膨胀，一个 padding 的原子类，就需要上千行代码。
 
-如果使用 Styli，padding 的原子属性`p-${size}`、`pt-${size}`、`pr-${size}`、`pb-${size}`、`pl-${size}` 中 {size}，可以无限制取值。由于 JS 非常灵活，实际上实现 padding 的原子属性，代码量是非常少的。
+如果使用 Fower，padding 的原子属性`p-${size}`、`pt-${size}`、`pr-${size}`、`pb-${size}`、`pl-${size}` 中 {size}，可以无限制取值。由于 JS 非常灵活，实际上实现 padding 的原子属性，代码量是非常少的。
 
 ## 和内联样式有什么不同？
 
@@ -44,7 +44,7 @@ title: 关于原子属性 (Atomic Props)
 
 - **局部样式**
 
-  传统的 CSS 类是全局的，很容易出现样式互相影响的问题，特别多人合作开发的时候。Styli 使用原子属性编写样式，样子属性最终生成唯一的原子类名，样式只作用当前的 HTML 元素(markup)。
+  传统的 CSS 类是全局的，很容易出现样式互相影响的问题，特别多人合作开发的时候。Fower 使用原子属性编写样式，样子属性最终生成唯一的原子类名，样式只作用当前的 HTML 元素(markup)。
 
 - **子集化**
 

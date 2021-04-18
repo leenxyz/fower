@@ -1,4 +1,4 @@
-import { Box } from '@styli/react';
+import { Box } from '@fower/react';
 
 export default () => {
   return (

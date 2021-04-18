@@ -1,4 +1,4 @@
-import { store } from '@styli/store'
+import { store } from '@fower/store'
 export * from './css'
 export * from './createStyle'
 export * from './keyframes'

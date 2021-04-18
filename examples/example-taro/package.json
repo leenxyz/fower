@@ -1,8 +1,8 @@
 {
-  "name": "@styli/example-taro",
-  "version": "1.9.0",
+  "name": "@fower/example-taro",
+  "version": "1.0.0",
   "private": true,
-  "description": "@styli/taro demo",
+  "description": "@fower/taro demo",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -38,7 +38,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@styli/taro": "^1.9.0",
+    "@fower/taro": "^1.0.0",
     "@tarojs/components": "3.1.0-beta.4",
     "@tarojs/react": "3.1.0-beta.4",
     "@tarojs/runtime": "3.1.0-beta.4",

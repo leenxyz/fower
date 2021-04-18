@@ -3,12 +3,12 @@ id: use-with-react
 title: Use with react
 ---
 
-Styli is great fit for React-like framework or library, Let's get started with [React](https://reactjs.org/).
+Fower is great fit for React-like framework or library, Let's get started with [React](https://reactjs.org/).
 
 ## Installation
 
 ```bash
-npm i @styli/react
+npm i @fower/react
 ```
 
 ## Usage with Box component
@@ -16,7 +16,7 @@ npm i @styli/react
 Now we're going to build a user profile card ui with `Box` component:
 
 ```tsx
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 ```
 
 ```jsx live
@@ -33,7 +33,7 @@ import { Box } from '@styli/react'
 </Box>
 ```
 
-As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Styli, I call it "Atomic props".
+As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Fower, I call it "Atomic props".
 
 Compared with inline style, "Atomic props" has many advantages:
 
@@ -47,15 +47,15 @@ Atomic Props can also be used directly in html elements. In other words, you can
 
 ```jsx
 <div p6 textXL bgRed200>
-  Use styli in HTML tag
+  Use fower in HTML tag
 </div>
 ```
 
-To use Atomic Props in html elements, you should add a babel preset `@styli/babel-preset-styli` to the project by configuring babel.
+To use Atomic Props in html elements, you should add a babel preset `@fower/babel-preset-fower` to the project by configuring babel.
 
 ```json title=".babelrc"
 {
-  "presets": ["@styli/babel-preset-styli"]
+  "presets": ["@fower/babel-preset-fower"]
 }
 ```
 
@@ -67,7 +67,7 @@ import React from 'react'
 export default () => {
   return (
     <div p6 textXL bgRed200>
-      Use styli with Babel Preset
+      Use fower with Babel Preset
     </div>
   )
 }
@@ -76,7 +76,7 @@ export default () => {
 Note that if you want to get TypeScript type hints, you need to extend the attribute types of HTML by creating a new `d.ts` file in the project root directory, you can name it `index.d.ts`, the code is as follows:
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@styli/types';
+import { AtomicProps } from '@fower/types';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}
@@ -88,4 +88,4 @@ declare module 'react' {
 
 ## Example source code
 
-You can view the example souce code in github: [examples/use-with-react](https://github.com/forsigner/styli/tree/master/examples/example-react)
+You can view the example souce code in github: [examples/use-with-react](https://github.com/forsigner/fower/tree/master/examples/example-react)

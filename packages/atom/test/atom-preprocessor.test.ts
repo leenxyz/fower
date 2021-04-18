@@ -1,6 +1,6 @@
-import { setConfig } from '@styli/core'
-import { store } from '@styli/store'
-import { presetWeb } from '@styli/preset-web'
+import { setConfig } from '@fower/core'
+import { store } from '@fower/store'
+import { presetWeb } from '@fower/preset-web'
 import { Atom } from '../src'
 
 beforeAll(() => {

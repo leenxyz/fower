@@ -1,7 +1,7 @@
-import { setConfig } from '@styli/core'
-import { store } from '@styli/store'
-import { Atom } from '@styli/atom'
-import { presetWeb } from '@styli/preset-web'
+import { setConfig } from '@fower/core'
+import { store } from '@fower/store'
+import { Atom } from '@fower/atom'
+import { presetWeb } from '@fower/preset-web'
 import { Parser } from './parser'
 import { atomCache } from './cache'
 

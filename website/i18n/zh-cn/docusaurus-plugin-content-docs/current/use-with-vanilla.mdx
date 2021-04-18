@@ -4,19 +4,19 @@ sidebar_label: Use with Vanilla
 title: 在原生JS中使用
 ---
 
-如果你不使用 React 等 Web 框架，你也可以安装 `@styli/core`，用最原始的 Api 使用 Styli。
+如果你不使用 React 等 Web 框架，你也可以安装 `@fower/core`，用最原始的 Api 使用 Fower。
 
 ```bash
-$ npm i @styli/core @styli/preset-web
+$ npm i @fower/core @fower/preset-web
 ```
 
 基本使用：
 
 ```jsx
-import { styli, css } from '@styli/core'
-import preset from '@styli/preset-web'
+import { fower, css } from '@fower/core'
+import preset from '@fower/preset-web'
 
-styli.setConfig(preset)
+fower.setConfig(preset)
 
 const className = css('p-20 mx-10 borderGray text4XL')
 
@@ -28,7 +28,7 @@ $app.className = className
 你也可以增加额外的自定义样式：
 
 ```jsx
-import { css } from '@styli/core'
+import { css } from '@fower/core'
 
 const className = css('p-20 mx-10 borderGray text4XL', {
   display: 'inline-block',

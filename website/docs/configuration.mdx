@@ -5,7 +5,7 @@ title: Configuration
 
 ## Structure
 
-Styli provides default config for different platform, the config is a plain JavaScript object, the structure of config is like this:
+Fower provides default config for different platform, the config is a plain JavaScript object, the structure of config is like this:
 
 ```js
 const config = {
@@ -23,10 +23,10 @@ const config = {
 
 Built-in default config:
 
-- For Web: [@styli/preset-web](https://github.com/forsigner/styli/blob/master/packages/preset-web/src/index.ts)
-- For Web rem: [@styli/preset-web-rem](https://github.com/forsigner/styli/blob/master/packages/preset-web-rem/src/index.ts)
-- For React Native: [@styli/preset-react-native](https://github.com/forsigner/styli/blob/master/packages/preset-react-native/src/index.ts)
-- For Taro: [@styli/preset-taro](https://github.com/forsigner/styli/blob/master/packages/preset-taro/src/index.ts)
+- For Web: [@fower/preset-web](https://github.com/forsigner/fower/blob/master/packages/preset-web/src/index.ts)
+- For Web rem: [@fower/preset-web-rem](https://github.com/forsigner/fower/blob/master/packages/preset-web-rem/src/index.ts)
+- For React Native: [@fower/preset-react-native](https://github.com/forsigner/fower/blob/master/packages/preset-react-native/src/index.ts)
+- For Taro: [@fower/preset-taro](https://github.com/forsigner/fower/blob/master/packages/preset-taro/src/index.ts)
 
 ### `unit`
 
@@ -69,10 +69,10 @@ Learn more about the theme in the [theme section](/docs/theme).
 
 ## Read Config
 
-Styli config is a plain JavaScript object, you can read it from `@styli/core`.
+Fower config is a plain JavaScript object, you can read it from `@fower/core`.
 
 ```js
-import { config } from '@styli/core'
+import { config } from '@fower/core'
 
 console.log('config:', config)
 console.log('config.inline:', config.inline)
@@ -81,10 +81,10 @@ console.log('config.theme:', config.theme)
 
 ## Custom Config
 
-You can update Styli config use `setConfig()` Api from `@styli/core`.
+You can update Fower config use `setConfig()` Api from `@fower/core`.
 
 ```js
-import { setConfig } from '@styli/core'
+import { setConfig } from '@fower/core'
 
 setConfig({
   unit: 'rem',
@@ -94,7 +94,7 @@ setConfig({
 By default, user config will deepmerge to default config. you can change `configure strategy` by second param, form example, use **replace** strategy to replace the whole default config:
 
 ```js
-import { setConfig } from '@styli/core'
+import { setConfig } from '@fower/core'
 
 setConfig(
   {

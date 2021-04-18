@@ -31,8 +31,8 @@
 
   --ifm-menu-color-background-active: rgba(37, 194, 169, 0.1);
 
-}
 
+}
 
 body {
   font-size: 16px !important;
@@ -79,9 +79,6 @@ table {
   border-bottom: 1px solid rgb(235, 235, 235);
 }
 
-.react-toggle {
-  display: none !important;
-}
 
 .row {
   flex-wrap: wrap;

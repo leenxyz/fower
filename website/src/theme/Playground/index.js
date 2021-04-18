@@ -11,7 +11,7 @@ import clsx from 'clsx'
 import Translate from '@docusaurus/Translate'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import usePrismTheme from '@theme/hooks/usePrismTheme'
-import { Box, Text } from '@styli/react'
+import { Box, Text } from '@fower/react'
 import styles from './styles.module.css'
 
 function Header({ translateId, description, text }) {

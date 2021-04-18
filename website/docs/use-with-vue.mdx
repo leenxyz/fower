@@ -6,18 +6,18 @@ title: Use with Vue
 ## Installation
 
 ```bash
-npm i @styli/vue
+npm i @fower/vue
 ```
 
 ## Basic usage
 
-First, you need to register Styli's Vue plugin:
+First, you need to register Fower's Vue plugin:
 
 ```jsx
 import Vue from 'vue'
-import styliVue from '@styli/vue'
+import fowerVue from '@fower/vue'
 
-Vue.use(styliVue)
+Vue.use(fowerVue)
 ```
 
 Then, add the `v-css` directive to the element, and then add Atomic Prop to create the style:
@@ -38,7 +38,7 @@ Then, add the `v-css` directive to the element, and then add Atomic Prop to crea
 </template>
 ```
 
-[![Edit styli-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styli-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
 
 ## Advanced usage
 
@@ -47,7 +47,7 @@ In the above usage, when we add Atomic Props to HTML elements, we also need to a
 How to use it? You can modify the vue-loader configuration in the webpack configuration to get it. For example, if you are using Vue CLI, modify `vue.config.js`.
 
 ```bash
-npm i @styli/vue-template-compiler
+npm i @fower/vue-template-compiler
 ```
 
 ```js title="vue.config.js"
@@ -58,7 +58,7 @@ module.exports = {
       .rule('vue')
       .use('vue-loader')
       .tap((options) => {
-        options.compiler = require('@styli/vue-template-compiler')
+        options.compiler = require('@fower/vue-template-compiler')
         return options
       })
   },
@@ -85,4 +85,4 @@ Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
 
 ## Example source code
 
-You can view the example souce code in github: [example-vue](https://github.com/forsigner/styli/tree/master/examples/example-vue)
+You can view the example souce code in github: [example-vue](https://github.com/forsigner/fower/tree/master/examples/example-vue)

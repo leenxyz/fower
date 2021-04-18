@@ -1,15 +1,15 @@
-import { Atom, Options } from '@styli/atom'
-import { store } from '@styli/store'
-import { formatColor } from '@styli/color-helper'
-import { styleSheet } from '@styli/sheet'
-import { parse } from '@styli/css-object-processor'
+import { Atom, Options } from '@fower/atom'
+import { store } from '@fower/store'
+import { formatColor } from '@fower/color-helper'
+import { styleSheet } from '@fower/sheet'
+import { parse } from '@fower/css-object-processor'
 import {
   isEmptyObj,
   objectToClassName,
   jsKeyToCssKey,
   isPercentNumber,
   isNumber,
-} from '@styli/utils'
+} from '@fower/utils'
 import { atomCache } from './cache'
 import { isUnitProp } from './is-unit-prop'
 

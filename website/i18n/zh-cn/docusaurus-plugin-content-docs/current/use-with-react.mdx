@@ -4,12 +4,12 @@ sidebar_label: Use with react
 title: 在 react 中使用
 ---
 
-[React](https://zh-hans.reactjs.org/) 是一个用于构建用户界面的 JavaScript 库，Styli 非常适合在 React 中使用。
+[React](https://zh-hans.reactjs.org/) 是一个用于构建用户界面的 JavaScript 库，Fower 非常适合在 React 中使用。
 
 ## 安装
 
 ```bash
-npm i @styli/react -S
+npm i @fower/react -S
 ```
 
 ## 使用组件库组件
@@ -17,7 +17,7 @@ npm i @styli/react -S
 使用组件库组件可以做到真正的**开箱即用**，无需任何配置
 
 ```tsx
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 ```
 
 使用组件，实现一个用户信息卡片界面。
@@ -36,19 +36,19 @@ import { Box } from '@styli/react'
 
 ## 使用 HTML 元素
 
-Styli 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。也就是到说，你直接可以在 html 标签中添加原子属性，代码类似下面：
+Fower 的原子属性(Atomic Props)也可以直接在 JSX html tag 中使用。也就是到说，你直接可以在 html 标签中添加原子属性，代码类似下面：
 
 ```jsx
 <div p6 textXL bgRed200>
-  Use styli in HTML tag
+  Use fower in HTML tag
 </div>
 ```
 
-要在 html 标签中使用原子属性，可以通过配置 babel，为项目添加 babel preset: `@styli/babel-preset-styli`。
+要在 html 标签中使用原子属性，可以通过配置 babel，为项目添加 babel preset: `@fower/babel-preset-fower`。
 
 ```json title=".babelrc"
 {
-  "presets": ["@styli/babel-preset-styli"]
+  "presets": ["@fower/babel-preset-fower"]
 }
 ```
 
@@ -60,7 +60,7 @@ import React from 'react'
 export default () => {
   return (
     <div p6 textXL bgRed200>
-      Use styli with Babel Preset
+      Use fower with Babel Preset
     </div>
   )
 }
@@ -69,7 +69,7 @@ export default () => {
 注意，如果你想获得 TypeScript 类型提示，你需要扩展 HTML 的属性类型，方法是在项目根目录新建一个 `d.ts` 类型文件，名字可以为 `index.d.ts`，内容如下：
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@styli/react';
+import { AtomicProps } from '@fower/react';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}
@@ -79,4 +79,4 @@ declare module 'react' {
 
 ## 实例源码
 
-你可以查看 React 中使用的源码：[examples-react](https://github.com/forsigner/styli/tree/master/examples/example-react)
+你可以查看 React 中使用的源码：[examples-react](https://github.com/forsigner/fower/tree/master/examples/example-react)

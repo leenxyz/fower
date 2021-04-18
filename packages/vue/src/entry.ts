@@ -1,6 +1,6 @@
-import { setConfig, injectGlobalStyle } from '@styli/core'
-import { store } from '@styli/store'
-import presetWeb from '@styli/preset-web'
+import { setConfig, injectGlobalStyle } from '@fower/core'
+import { store } from '@fower/store'
+import presetWeb from '@fower/preset-web'
 import _Vue, { PluginFunction } from 'vue'
 import vcss from '@/v-css'
 
@@ -24,7 +24,7 @@ setConfig(presetWeb)
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 
-const install: PluginFunction<any> = function installStyli(app: typeof _Vue) {
+const install: PluginFunction<any> = function installFower(app: typeof _Vue) {
   if ((store.config as any).vuePluginInstalled) return
   ;(store.config as any).vuePluginInstalled = true
   const opt: any = {}

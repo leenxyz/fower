@@ -1,6 +1,6 @@
-import { CSSObject, Props } from '@styli/types'
-import { modifierToProps } from '@styli/utils'
-import { Parser } from '@styli/parser'
+import { CSSObject, Props } from '@fower/types'
+import { modifierToProps } from '@fower/utils'
+import { Parser } from '@fower/parser'
 
 export function css(...args: (string | CSSObject)[]) {
   if (!args.length) return ''

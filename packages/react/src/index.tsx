@@ -1,6 +1,6 @@
-import { setConfig, injectGlobalStyle } from '@styli/core'
-import { styled } from '@styli/styled'
-import presetWeb from '@styli/preset-web'
+import { setConfig, injectGlobalStyle } from '@fower/core'
+import { styled } from '@fower/styled'
+import presetWeb from '@fower/preset-web'
 
 export { jsx } from './jsx'
 export { Box, BoxComponent } from './Box'

@@ -1,21 +1,6 @@
-import { Box, View } from '@styli/react';
+import { Box, View } from '@fower/react';
 
 export default () => {
-  return (
-    <Box
-      as="button"
-      bgOrange400
-      bgOrange400--D15--hover
-      white
-      rounded
-      py2
-      px4
-      outlineNone
-      cursorPointer
-    >
-      Button
-    </Box>
-  );
   return (
     <Box>
       <Box text3XL fontBold>

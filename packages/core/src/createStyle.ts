@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react'
-import { modifierToProps } from '@styli/utils'
-import { Parser } from '@styli/parser'
+import { modifierToProps } from '@fower/utils'
+import { Parser } from '@fower/parser'
 
 export function createStyle(...args: (string | CSSProperties)[]): CSSProperties {
   return args.reduce<any>((result, cur) => {

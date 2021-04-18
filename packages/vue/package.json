@@ -1,15 +1,15 @@
 {
-  "name": "@styli/vue",
-  "version": "1.9.0",
+  "name": "@fower/vue",
+  "version": "1.0.0",
   "description": "",
-  "main": "dist/styli.ssr.js",
-  "browser": "dist/styli.esm.js",
-  "module": "dist/styli.esm.js",
-  "unpkg": "dist/styli.min.js",
-  "types": "styli.d.ts",
+  "main": "dist/fower.ssr.js",
+  "browser": "dist/fower.esm.js",
+  "module": "dist/fower.esm.js",
+  "unpkg": "dist/fower.min.js",
+  "types": "fower.d.ts",
   "files": [
     "dist/*",
-    "styli.d.ts",
+    "fower.d.ts",
     "src/**/*.vue"
   ],
   "scripts": {
@@ -20,11 +20,11 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@styli/core": "^1.9.0",
-    "@styli/parser": "^1.9.0",
-    "@styli/preset-web": "^1.9.0",
-    "@styli/styled": "^1.9.0",
-    "@styli/types": "^1.9.0"
+    "@fower/core": "^1.0.0",
+    "@fower/parser": "^1.0.0",
+    "@fower/preset-web": "^1.0.0",
+    "@fower/styled": "^1.0.0",
+    "@fower/types": "^1.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",

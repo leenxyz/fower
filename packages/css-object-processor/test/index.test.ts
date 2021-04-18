@@ -1,4 +1,4 @@
-import { CSSObject } from '@styli/types'
+import { CSSObject } from '@fower/types'
 import { toRules, parse, flatten } from '../src'
 
 describe('css object processor', () => {

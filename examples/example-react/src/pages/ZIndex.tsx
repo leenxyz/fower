@@ -1,5 +1,5 @@
-import { Box } from '@styli/react';
-import { styled } from '@styli/styled';
+import { Box } from '@fower/react';
+import { styled } from '@fower/styled';
 
 export default function Demo() {
   const Item = styled(

@@ -9,18 +9,18 @@ title: 在 Vue 中使用
 ## 安装
 
 ```bash
-npm i @styli/vue -S
+npm i @fower/vue -S
 ```
 
 ## 使用
 
-首先，你需要注册 Styli 的 Vue 插件:
+首先，你需要注册 Fower 的 Vue 插件:
 
 ```jsx
 import Vue from 'vue'
-import vueStyli from '@styli/vue'
+import vueFower from '@fower/vue'
 
-Vue.use(vueStyli)
+Vue.use(vueFower)
 ```
 
 然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
@@ -41,7 +41,7 @@ Vue.use(vueStyli)
 </template>
 ```
 
-[![Edit styli-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/styli-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
 
 ## 进阶使用
 
@@ -50,7 +50,7 @@ Vue.use(vueStyli)
 怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`。
 
 ```bash
-npm i @styli/vue-template-compiler
+npm i @fower/vue-template-compiler
 ```
 
 ```js title="vue.config.js"
@@ -61,7 +61,7 @@ module.exports = {
       .rule('vue')
       .use('vue-loader')
       .tap((options) => {
-        options.compiler = require('@styli/vue-template-compiler')
+        options.compiler = require('@fower/vue-template-compiler')
         return options
       })
   },
@@ -88,4 +88,4 @@ Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
 
 ## 例子源码
 
-你可以查看 Vue Exmaple 的源码：[example-vue](https://github.com/forsigner/styli/tree/master/packages/example-vue)
+你可以查看 Vue Exmaple 的源码：[example-vue](https://github.com/forsigner/fower/tree/master/packages/example-vue)

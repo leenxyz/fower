@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from '@styli/taro'
+import { View, Text } from '@fower/taro'
 import './index.scss'
 
 export default class Index extends Component {

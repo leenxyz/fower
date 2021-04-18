@@ -40,7 +40,7 @@ module.exports = {
     ],
 
     'Layout Toolkit': [
-      'styli-layout-introduction',
+      'fower-layout-introduction',
       'to-center',
       'to-center-x',
       'to-center-y',

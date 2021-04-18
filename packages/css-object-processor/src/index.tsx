@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { objectToClassName, jsKeyToCssKey } from '@styli/utils'
+import { objectToClassName, jsKeyToCssKey } from '@fower/utils'
 
 type CSSProperties = CSS.Properties<number | string>
 type PseudosObject = { [P in CSS.Pseudos]?: CSSProperties }

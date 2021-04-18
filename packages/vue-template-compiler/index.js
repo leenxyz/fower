@@ -1,9 +1,9 @@
 const { parseComponent } = require('vue-template-compiler')
 const posthtml = require('posthtml')
-const { css } = require('@styli/core')
-const { Parser } = require('@styli/parser')
-const { setConfig } = require('@styli/core')
-const { presetWeb } = require('@styli/preset-web')
+const { css } = require('@fower/core')
+const { Parser } = require('@fower/parser')
+const { setConfig } = require('@fower/core')
+const { presetWeb } = require('@fower/preset-web')
 
 setConfig(presetWeb)
 
@@ -38,11 +38,11 @@ module.exports = require('vue-template-compiler')
 module.exports.parseComponent = (content, opts) => {
   const sfc = parseComponent(content, opts)
 
-  // auto inject styli vue plugin
+  // auto inject fower vue plugin
   const code = `
   import __Vue from 'vue'
-  import VueStyli from '@styli/vue'
-  __Vue.use(VueStyli)
+  import VueFower from '@fower/vue'
+  __Vue.use(VueFower)
     `
   if (sfc.script) {
     sfc.script.content = code + sfc.script.content

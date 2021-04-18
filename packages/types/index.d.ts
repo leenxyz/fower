@@ -1,14 +1,14 @@
 import * as CSS from 'csstype'
-import { Atom } from '@styli/atom'
-import { Parser } from '@styli/parser'
+import { Atom } from '@fower/atom'
+import { Parser } from '@fower/parser'
 import { Color } from 'vscode'
 
 // tslint:disable-next-line:export-just-namespace
-export = StyliTypes
-export as namespace StyliTypes
+export = FowerTypes
+export as namespace FowerTypes
 
-declare namespace StyliTypes {
-  type StyliColor = CSS.Property.Color | keyof Colors
+declare namespace FowerTypes {
+  type FowerColor = CSS.Property.Color | keyof Colors
 
   type As = React.ElementType
 
@@ -17,7 +17,7 @@ declare namespace StyliTypes {
     as?: As
   }
 
-  type StyliHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
+  type FowerHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { as?: As }
 
   type Preset = Partial<Configuration>
 
@@ -25,33 +25,33 @@ declare namespace StyliTypes {
 
   type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 
-  interface StyliCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
+  interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
 
-  type PseudosObject = { [P in CSS.Pseudos]?: StyliCSSProperties }
+  type PseudosObject = { [P in CSS.Pseudos]?: FowerCSSProperties }
 
   type CSSObject<T = any> =
-    | (StyliCSSProperties & PseudosObject)
+    | (FowerCSSProperties & PseudosObject)
     | {
         [K in keyof T]?: T[K] extends object
           ? CSSObject<T[K]>
-          : StyliCSSProperties | number | string | boolean
+          : FowerCSSProperties | number | string | boolean
       }
 
-  // type CSSObject<T = StyliCSSProperties> =
-  //   | (StyliCSSProperties & PseudosObject)
+  // type CSSObject<T = FowerCSSProperties> =
+  //   | (FowerCSSProperties & PseudosObject)
   //   | {
   //       [K in keyof T]?: T[K] extends object
   //         ? CSSObject<T[K]> & AtomicProps
-  //         : StyliCSSProperties | number | string | boolean
+  //         : FowerCSSProperties | number | string | boolean
   //     }
 
   interface AtomicProps {
     /**
-     * if Atomic Prop is conflict with others, you can use this ignore Styli Atomic Prop, And it will be pass to inner component.
+     * if Atomic Prop is conflict with others, you can use this ignore Fower Atomic Prop, And it will be pass to inner component.
      *
      * ```tsx
      * import React, { FC } from 'react'
-     * import { styled } from '@styli/styled'
+     * import { styled } from '@fower/styled'
      *
      * interface TestProps {
      *   toCenter: string
@@ -63,7 +63,7 @@ declare namespace StyliTypes {
      *
      * const StyledTest = styled(Test)
      *
-     * // toCenter prop will be handled by Styli. And convert it to className prop.
+     * // toCenter prop will be handled by Fower. And convert it to className prop.
      * <StyledTest toCenter />
      *
      * // toCenter prop will be handled by Test Component.
@@ -77,7 +77,7 @@ declare namespace StyliTypes {
      *
      * Like style prop, but you can do more.
      *
-     * Styli will auto add a className to element and parse css prop`s value to a css string, then add it to style element.
+     * Fower will auto add a className to element and parse css prop`s value to a css string, then add it to style element.
      *
      * @example
      * ```tsx
@@ -139,7 +139,7 @@ declare namespace StyliTypes {
     important?: boolean
     pseudos?: string[]
     theme: Theme
-    plugins: StyliPlugin[]
+    plugins: FowerPlugin[]
     transformUnit?: (data: string | number) => string
   }
 
@@ -155,7 +155,7 @@ declare namespace StyliTypes {
     [key: string]: any
   }
 
-  interface StyliPlugin {
+  interface FowerPlugin {
     isMatch?(key: string): boolean
 
     /**
@@ -182,7 +182,7 @@ declare namespace StyliTypes {
 
   interface Theme {
     modes?: string[] // eg: modes: ['dark', 'yellow']
-    modePrefix?: string // eg: styli-
+    modePrefix?: string // eg: fower-
     breakpoints: {
       sm: string
       md: string

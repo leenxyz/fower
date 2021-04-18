@@ -1,7 +1,7 @@
 ---
 id: about
 sidebar_label: About
-title: 关于Styli
+title: 关于Fower
 ---
 
 承认吧，写 CSS 是一件痛苦的事情。
@@ -10,15 +10,15 @@ title: 关于Styli
 
 CSS，甚至不能称之为一门编程语言，但它却庞大而复杂，有及其多的样式属性，而且新特性还在不多增加中。回想你学习并精通 CSS 的过程，除了要学习基本 padding、margin、color 等基础知识，你还要熟悉选择器 (熟悉全部高级选择器够你搞一阵了)，CSS3 各种新特性 (从基本的阴影渐变到各种动画)，用于布局控制的 flexbox 和 grid 等，新的 CSS 变量，还有旧时的浮动等黑科技...CSS 发展了 20 多年了，里面既有精华也有糟粕，要熟悉 CSS 的全貌，是一件非常费时的事情。最重要的是，对于大部分人，要完成界面的开发，只需使用 CSS 中的很小一部分样式属性。
 
-**Styli 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不再痛苦。**
+**Fower 是一个让你高效开发 UI 的样式工具库，目标是让你写 CSS 不再痛苦。**
 
-_在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式，Styli 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。_
+_在 Fower 中，我们通过 ”原子属性“ 直接在 Markup 中编写样式，Fower 的提供的 ”原子属性“ 并不会支持所有 CSS 特性，它只是 CSS 的一个子集，只包含一些我们认为是 CSS 精华的部分(the good parts)，通过这些原子属性，你可完成界面开发的大部分工作。_
 
-**Styli 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。**
+**Fower 是框架无关 (framework-agnostic)的，支持 React、Vue、Angular、React Native、Taro 多个主流框架。**
 
 ## 最简单例子
 
-首先看看使用 Styli 时，我们的代码是怎样写的？
+首先看看使用 Fower 时，我们的代码是怎样写的？
 
 <Tabs
   defaultValue="React"
@@ -30,7 +30,7 @@ _在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样�
 <TabItem value="React">
 
 ```jsx live
-// import { Box } from '@styli/react'
+// import { Box } from '@fower/react'
 <Box toCenterY p-10 w-260 rounded-10 shadow>
   <Box as="img" circle-48 src="/img/jobs.jpg" />
   <Box ml-10>
@@ -62,19 +62,19 @@ _在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样�
 
 - **Atomic Props**
 
-  Styli 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我们应该重新思考什么是最佳实践。
+  Fower 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我们应该重新思考什么是最佳实践。
 
 - **Framework-agnostic，框架无关**
 
-  这是我们研发 Styli 重要动机(Motivation)之一，我们团队的产品同时需要支持 Web、App、小程序等平台，我们没找到可以跨框架的样式解决方案，为了团队能在不同框进行 UI 开发中使用统一的写法，我们创建了 Styli。
+  这是我们研发 Fower 重要动机(Motivation)之一，我们团队的产品同时需要支持 Web、App、小程序等平台，我们没找到可以跨框架的样式解决方案，为了团队能在不同框进行 UI 开发中使用统一的写法，我们创建了 Fower。
 
 - **Type Safe，类型安全**
 
-  我们团队是 TypeScript 的深度使用者，夸张是到了离开 Type Safe 就不会写代码的地步。Styli 是完全类型安全的，特别是配合 JSX，开发体验会非常棒，类型提供很好的智能提示和文档，且不需借助特定的编辑器插件实现智能提示。
+  我们团队是 TypeScript 的深度使用者，夸张是到了离开 Type Safe 就不会写代码的地步。Fower 是完全类型安全的，特别是配合 JSX，开发体验会非常棒，类型提供很好的智能提示和文档，且不需借助特定的编辑器插件实现智能提示。
 
 - **Less Code，更少的代码**
 
-  使用 Styli，同样的 UI，你可以使用更少的代码实现，特别是在 JSX 中，布尔类型的 props 值是可以省略的，让 Styli 实现了 "key as value" 的模式，让样式代码量大大减少。
+  使用 Fower，同样的 UI，你可以使用更少的代码实现，特别是在 JSX 中，布尔类型的 props 值是可以省略的，让 Fower 实现了 "key as value" 的模式，让样式代码量大大减少。
 
 - **Less CSS, More JS**
 
@@ -82,35 +82,35 @@ _在 Styli 中，我们通过 ”原子属性“ 直接在 Markup 中编写样�
 
 - **Programmable**
 
-  Styli 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Styli 能更加优雅的处理。
+  Fower 是一种 CSS in JS 解决方案，当你在构建 UI 时，本质上你是在写 JS，而不是在写 CSS，JS 比 CSS 更灵活，特别实在状态和样式结合的场景，Fower 能更加优雅的处理。
 
 ## 对比
 
 - CSS Framework
 
-  例如 Bootstrap、Bulma、Foundation、Semantic UI、PureCSS、Materialize 这些，我称之为传统 CSS 框架吧，通常这些框架用于快速开发 Web 应用，在 JQuery 时代比较流行。缺点也很明显，如果你的界面有非常多的定制设计，用起来往往会越来越痛苦。Styli 跟 CSS Framework 不会同一类东西。
+  例如 Bootstrap、Bulma、Foundation、Semantic UI、PureCSS、Materialize 这些，我称之为传统 CSS 框架吧，通常这些框架用于快速开发 Web 应用，在 JQuery 时代比较流行。缺点也很明显，如果你的界面有非常多的定制设计，用起来往往会越来越痛苦。Fower 跟 CSS Framework 不会同一类东西。
 
 - UI Framework
 
-  例如 Ant-design、Material-UI、Vuetify、React-Bootstrap 这些，这些 UI Framework 是伴随着组件化时代发展起来的，往往和一些前端框架 (React, Vue, Angular) 关联。同样，Styli 跟 CSS Framework 不会同一类东西。
+  例如 Ant-design、Material-UI、Vuetify、React-Bootstrap 这些，这些 UI Framework 是伴随着组件化时代发展起来的，往往和一些前端框架 (React, Vue, Angular) 关联。同样，Fower 跟 CSS Framework 不会同一类东西。
 
 - BEM/SMACSS/OOCSS 等
 
-  一些编写 CSS 的方法论，懂的人自然懂。我们通常称他们为传统的 CSS，他们在“结构和样式分离”原则里做文章，这也是 Styli 和他们最大的不同，Styli 不主张 “结构和样式分离”。
+  一些编写 CSS 的方法论，懂的人自然懂。我们通常称他们为传统的 CSS，他们在“结构和样式分离”原则里做文章，这也是 Fower 和他们最大的不同，Fower 不主张 “结构和样式分离”。
 
 - CSS in JS
 
-  CSS in JS 是 React 社区发展起来的，它是什么？简单的说就是用 JS 去写 CSS。流行的解决方案有 Styled Components，Emotion，JSS，Radium 等。Styli 也是 CSS in JS 方案的一种，有什么不同呢？不同是 Styli 使用 ”Atomic props“ 方式编写，理念类似 ”Atomic CSS“。
+  CSS in JS 是 React 社区发展起来的，它是什么？简单的说就是用 JS 去写 CSS。流行的解决方案有 Styled Components，Emotion，JSS，Radium 等。Fower 也是 CSS in JS 方案的一种，有什么不同呢？不同是 Fower 使用 ”Atomic props“ 方式编写，理念类似 ”Atomic CSS“。
 
 - Atomic CSS、Tailwindcss、Tachyons
 
-  使用原子类的 CSS，这也是一种非传统的 CSS 方案，也是个人非常认同的一种理念，Styli 也使用了这一理念。但不同的是，它们是写 CSS，而 Styli 是在写 JS/TS。
+  使用原子类的 CSS，这也是一种非传统的 CSS 方案，也是个人非常认同的一种理念，Fower 也使用了这一理念。但不同的是，它们是写 CSS，而 Fower 是在写 JS/TS。
 
-  实际上，你可以把 Styli 理解为 "Atomic CSS" + "CSS in JS"，我称之为 "Atomic Props"。
+  实际上，你可以把 Fower 理解为 "Atomic CSS" + "CSS in JS"，我称之为 "Atomic Props"。
 
 ## 灵感
 
-Styli 的灵感借鉴了这些类库：
+Fower 的灵感借鉴了这些类库：
 
 - [tailwindcss](https://tailwindcss.com/)
 - [radium](https://github.com/FormidableLabs/radium)

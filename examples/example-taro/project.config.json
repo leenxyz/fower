@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
   "projectname": "example-taro",
-  "description": "@styli/taro demo",
+  "description": "@fower/taro demo",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

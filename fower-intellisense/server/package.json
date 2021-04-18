@@ -1,0 +1,17 @@
+{
+  "name": "fower-intellisense-server",
+  "description": "fower-intellisense-server",
+  "version": "0.1.6",
+  "author": "forsigner",
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "@fower/colors": "^1.0.0",
+    "vscode-languageserver": "^7.0.0",
+    "vscode-languageserver-textdocument": "^1.0.1",
+    "vscode-uri": "^3.0.2"
+  },
+  "scripts": {}
+}

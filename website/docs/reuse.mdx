@@ -5,11 +5,11 @@ title: Reuse
 
 When a component uses a lot of Atomic Props, and this style will be used by multiple components, it is recommended to create a custom component.
 
-## Wrap Styli Component
+## Wrap Fower Component
 
 ```jsx
 import React from 'react'
-import { Button } from '@styli/react'
+import { Button } from '@fower/react'
 
 export const MyButton = (props) => {
   return <Button {...props} p-10 textLG bgYello400 white rounded-8 />
@@ -20,7 +20,7 @@ export const MyButton = (props) => {
 
 ```jsx
 import React from 'react'
-import { Button } from '@styli/react'
+import { Button } from '@fower/react'
 
 export const MyButton = styled('button', 'p-10 textLG bgYello400 rounded-8', {
   textShadow: '1px 0 5px #FC0',
@@ -30,7 +30,7 @@ export const MyButton = styled('button', 'p-10 textLG bgYello400 rounded-8', {
 ## Styled thirdparty Component
 
 ```jsx
-import { styled } from '@styli/styled'
+import { styled } from '@fower/styled'
 import { Button } from 'antd'
 
 const StyledButton = styled(Button)

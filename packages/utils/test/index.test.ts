@@ -8,7 +8,7 @@ import {
   jsKeyToCssKey,
 } from '../src'
 
-describe('styli-utils', () => {
+describe('fower-utils', () => {
   test('upFirst', () => {
     expect(upFirst('abc')).toEqual('Abc')
   })

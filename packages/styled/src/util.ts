@@ -1,5 +1,5 @@
-import { createStyle, css } from '@styli/core'
-import { Parser } from '@styli/parser'
+import { createStyle, css } from '@fower/core'
+import { Parser } from '@fower/parser'
 import { Args } from './types'
 
 // handle inline style

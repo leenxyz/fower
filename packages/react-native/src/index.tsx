@@ -1,7 +1,7 @@
 import RN from 'react-native'
-import { setConfig } from '@styli/core'
-import { styled } from '@styli/styled'
-import { presetReactNative } from '@styli/preset-react-native'
+import { setConfig } from '@fower/core'
+import { styled } from '@fower/styled'
+import { presetReactNative } from '@fower/preset-react-native'
 
 setConfig(presetReactNative)
 

@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState, useCallback, useEffect, useRef } from 'react'
+import React, { useState, useCallback, useEffect, useRef, memo } from 'react'
 import clsx from 'clsx'
 import { useThemeConfig, isSamePath } from '@docusaurus/theme-common'
 import useUserPreferencesContext from '@theme/hooks/useUserPreferencesContext'
@@ -40,6 +40,29 @@ const isActiveSidebarItem = (item, activePath) => {
     return item.items.some((subItem) => isActiveSidebarItem(subItem, activePath))
   }
   return false
+}
+
+// Optimize sidebar at each "level"
+// TODO this item should probably not receive the "activePath" props
+// TODO this triggers whole sidebar re-renders on navigation
+const DocSidebarItems = memo(function DocSidebarItems({ items, ...props }: any): JSX.Element {
+  return items.map((item, index) => (
+    <DocSidebarItem
+      key={index} // sidebar is static, the index does not change
+      item={item}
+      {...props}
+    />
+  ))
+})
+
+function DocSidebarItem(props): JSX.Element {
+  switch (props.item.type) {
+    case 'category':
+      return <DocSidebarItemCategory {...props} />
+    case 'link':
+    default:
+      return <DocSidebarItemLink {...props} />
+  }
 }
 
 function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ...props }) {
@@ -94,7 +117,6 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
         'menu__list-item--collapsed': collapsed,
       })}
       style={{ marginBottom: 10 }}
-      key={label}
     >
       <a
         className={clsx('menu__link', {
@@ -106,7 +128,6 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
         href={collapsible ? '#!' : undefined}
         {...props}
         style={{
-          color: '#000',
           fontWeight: 'bold',
           fontSize: 18,
         }}
@@ -127,16 +148,13 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
           }
         }}
       >
-        {items.map((childItem) => (
-          <DocSidebarItem
-            tabIndex={collapsed ? '-1' : '0'}
-            key={childItem.label}
-            item={childItem}
-            onItemClick={onItemClick}
-            collapsible={collapsible}
-            activePath={activePath}
-          />
-        ))}
+        <DocSidebarItems
+          items={items}
+          tabIndex={collapsed ? '-1' : '0'}
+          onItemClick={onItemClick}
+          collapsible={collapsible}
+          activePath={activePath}
+        />
       </ul>
     </li>
   )
@@ -172,14 +190,101 @@ function DocSidebarItemLink({
   )
 }
 
-function DocSidebarItem(props) {
-  switch (props.item.type) {
-    case 'category':
-      return <DocSidebarItemCategory {...props} />
-    case 'link':
-    default:
-      return <DocSidebarItemLink {...props} />
+function useShowAnnouncementBar() {
+  const { isAnnouncementBarClosed } = useUserPreferencesContext()
+  const [showAnnouncementBar, setShowAnnouncementBar] = useState(!isAnnouncementBarClosed)
+  useScrollPosition(({ scrollY }) => {
+    if (!isAnnouncementBarClosed) {
+      setShowAnnouncementBar(scrollY === 0)
+    }
+  })
+  return showAnnouncementBar
+}
+
+function useResponsiveSidebar() {
+  const [showResponsiveSidebar, setShowResponsiveSidebar] = useState(false)
+  useLockBodyScroll(showResponsiveSidebar)
+
+  const windowSize = useWindowSize()
+  useEffect(() => {
+    if (windowSize === windowSizes.desktop) {
+      setShowResponsiveSidebar(false)
+    }
+  }, [windowSize])
+
+  const closeResponsiveSidebar = useCallback(
+    (e) => {
+      e.target.blur()
+      setShowResponsiveSidebar(false)
+    },
+    [setShowResponsiveSidebar],
+  )
+
+  const toggleResponsiveSidebar = useCallback(() => {
+    setShowResponsiveSidebar((value) => !value)
+  }, [setShowResponsiveSidebar])
+
+  return {
+    showResponsiveSidebar,
+    closeResponsiveSidebar,
+    toggleResponsiveSidebar,
   }
+}
+
+function HideableSidebarButton({ onClick }) {
+  return (
+    <button
+      type="button"
+      title={translate({
+        id: 'theme.docs.sidebar.collapseButtonTitle',
+        message: 'Collapse sidebar',
+        description: 'The title attribute for collapse button of doc sidebar',
+      })}
+      aria-label={translate({
+        id: 'theme.docs.sidebar.collapseButtonAriaLabel',
+        message: 'Collapse sidebar',
+        description: 'The title attribute for collapse button of doc sidebar',
+      })}
+      className={clsx('button button--secondary button--outline', styles.collapseSidebarButton)}
+      onClick={onClick}
+    >
+      <IconArrow className={styles.collapseSidebarButtonIcon} />
+    </button>
+  )
+}
+
+function ResponsiveSidebarButton({ responsiveSidebarOpened, onClick }) {
+  return (
+    <button
+      aria-label={
+        responsiveSidebarOpened
+          ? translate({
+              id: 'theme.docs.sidebar.responsiveCloseButtonLabel',
+              message: 'Close menu',
+              description: 'The ARIA label for close button of mobile doc sidebar',
+            })
+          : translate({
+              id: 'theme.docs.sidebar.responsiveOpenButtonLabel',
+              message: 'Open menu',
+              description: 'The ARIA label for open button of mobile doc sidebar',
+            })
+      }
+      aria-haspopup="true"
+      className="button button--secondary button--sm menu__button"
+      type="button"
+      onClick={onClick}
+    >
+      {responsiveSidebarOpened ? (
+        <span className={clsx(styles.sidebarMenuIcon, styles.sidebarMenuCloseIcon)}>&times;</span>
+      ) : (
+        <IconMenu
+          className={styles.sidebarMenuIcon}
+          height={MOBILE_TOGGLE_SIZE}
+          width={MOBILE_TOGGLE_SIZE}
+        />
+      )}
+    </button>
+  )
 }
 
 function DocSidebar({
@@ -189,22 +294,18 @@ function DocSidebar({
   onCollapse,
   isHidden,
 }: Props): JSX.Element | null {
-  const [showResponsiveSidebar, setShowResponsiveSidebar] = useState(false)
+  const showAnnouncementBar = useShowAnnouncementBar()
   const {
     navbar: { hideOnScroll },
     hideableSidebar,
   } = useThemeConfig()
   const { isAnnouncementBarClosed } = useUserPreferencesContext()
-  const { scrollY } = useScrollPosition()
 
-  useLockBodyScroll(showResponsiveSidebar)
-  const windowSize = useWindowSize()
-
-  useEffect(() => {
-    if (windowSize === windowSizes.desktop) {
-      setShowResponsiveSidebar(false)
-    }
-  }, [windowSize])
+  const {
+    showResponsiveSidebar,
+    closeResponsiveSidebar,
+    toggleResponsiveSidebar,
+  } = useResponsiveSidebar()
 
   return (
     <div
@@ -217,79 +318,26 @@ function DocSidebar({
       <div
         className={clsx('menu', 'menu--responsive', styles.menu, {
           'menu--show': showResponsiveSidebar,
-          [styles.menuWithAnnouncementBar]: !isAnnouncementBarClosed && scrollY === 0,
+          [styles.menuWithAnnouncementBar]: !isAnnouncementBarClosed && showAnnouncementBar,
         })}
         style={{
           paddingLeft: 0,
         }}
       >
-        <button
-          aria-label={
-            showResponsiveSidebar
-              ? translate({
-                  id: 'theme.docs.sidebar.responsiveCloseButtonLabel',
-                  message: 'Close menu',
-                  description: 'The ARIA label for close button of mobile doc sidebar',
-                })
-              : translate({
-                  id: 'theme.docs.sidebar.responsiveOpenButtonLabel',
-                  message: 'Open menu',
-                  description: 'The ARIA label for open button of mobile doc sidebar',
-                })
-          }
-          aria-haspopup="true"
-          className="button button--secondary button--sm menu__button"
-          type="button"
-          onClick={() => {
-            setShowResponsiveSidebar(!showResponsiveSidebar)
-          }}
-        >
-          {showResponsiveSidebar ? (
-            <span className={clsx(styles.sidebarMenuIcon, styles.sidebarMenuCloseIcon)}>
-              &times;
-            </span>
-          ) : (
-            <IconMenu
-              className={styles.sidebarMenuIcon}
-              height={MOBILE_TOGGLE_SIZE}
-              width={MOBILE_TOGGLE_SIZE}
-            />
-          )}
-        </button>
+        <ResponsiveSidebarButton
+          responsiveSidebarOpened={showResponsiveSidebar}
+          onClick={toggleResponsiveSidebar}
+        />
         <ul className="menu__list">
-          {sidebar.map((item) => (
-            <DocSidebarItem
-              key={item.label}
-              item={item}
-              onItemClick={(e) => {
-                e.target.blur()
-                setShowResponsiveSidebar(false)
-              }}
-              collapsible={sidebarCollapsible}
-              activePath={path}
-            />
-          ))}
+          <DocSidebarItems
+            items={sidebar}
+            onItemClick={closeResponsiveSidebar}
+            collapsible={sidebarCollapsible}
+            activePath={path}
+          />
         </ul>
       </div>
-      {hideableSidebar && (
-        <button
-          type="button"
-          title={translate({
-            id: 'theme.docs.sidebar.collapseButtonTitle',
-            message: 'Collapse sidebar',
-            description: 'The title attribute for collapse button of doc sidebar',
-          })}
-          aria-label={translate({
-            id: 'theme.docs.sidebar.collapseButtonAriaLabel',
-            message: 'Collapse sidebar',
-            description: 'The title attribute for collapse button of doc sidebar',
-          })}
-          className={clsx('button button--secondary button--outline', styles.collapseSidebarButton)}
-          onClick={onCollapse}
-        >
-          <IconArrow className={styles.collapseSidebarButtonIcon} />
-        </button>
-      )}
+      {hideableSidebar && <HideableSidebarButton onClick={onCollapse} />}
     </div>
   )
 }

@@ -89,7 +89,7 @@
 
   html[data-theme='dark'] .collapseSidebarButton:hover,
   html[data-theme='dark'] .collapseSidebarButton:focus {
-    background-color: var(--ifm-color-emphasisquare-200);
+    background-color: var(--ifm-color-emphasis-200);
   }
 }
 

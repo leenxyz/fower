@@ -1,5 +1,5 @@
-import { Theme } from '@styli/types'
-import { colors } from '@styli/colors'
+import { Theme } from '@fower/types'
+import { colors } from '@fower/colors'
 
 export const theme: Partial<Theme> = {
   colors,

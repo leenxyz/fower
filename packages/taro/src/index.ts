@@ -1,7 +1,7 @@
-import { setConfig } from '@styli/core'
-import { styled } from '@styli/styled'
+import { setConfig } from '@fower/core'
+import { styled } from '@fower/styled'
 import * as TaroComponent from '@tarojs/components'
-import { presetTaro } from '@styli/preset-taro'
+import { presetTaro } from '@fower/preset-taro'
 
 setConfig(presetTaro)
 

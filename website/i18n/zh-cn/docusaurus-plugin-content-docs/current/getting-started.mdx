@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 import { GettingStarted } from '@site/src/components/GettingStarted'
 
-Styli 是开箱即用的，不需要需要任何 webpack 配置，下面我们看看如何在不同框架使用 Styli。
+Fower 是开箱即用的，不需要需要任何 webpack 配置，下面我们看看如何在不同框架使用 Fower。
 
 ## 安装
 
@@ -22,14 +22,14 @@ Styli 是开箱即用的，不需要需要任何 webpack 配置，下面我们�
   <TabItem value="react">
 
 ```bash
-npm i @styli/core @styli/react
+npm i @fower/core @fower/react
 ```
 
   </TabItem>
   <TabItem value="vue">
 
 ```js
-npm i @styli/core @styli/vue
+npm i @fower/core @fower/vue
 ```
 
   </TabItem>
@@ -37,7 +37,7 @@ npm i @styli/core @styli/vue
   <TabItem value="react-native">
 
 ```js
-npm i @styli/core @styli/react-native
+npm i @fower/core @fower/react-native
 ```
 
   </TabItem>
@@ -45,7 +45,7 @@ npm i @styli/core @styli/react-native
 
 ## 使用
 
-Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提供的 `Box` 组件，你可以快速实现复杂界面。
+Fower 是跨框架的，下面我们看看在 React 的用法，使用 Fower 提供的 `Box` 组件，你可以快速实现复杂界面。
 
 <GettingStarted />
 
@@ -61,7 +61,7 @@ Styli 是跨框架的，下面我们看看在 React 的用法，使用 Styli 提
 
 ```jsx
 import React from 'react'
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 
 export default () => {
   return (
@@ -91,7 +91,7 @@ wip...
 
 ```jsx
 import React from 'react'
-import { View, Text, Image } from '@styli/react-native'
+import { View, Text, Image } from '@fower/react-native'
 
 export default () => {
   return (
@@ -111,4 +111,4 @@ export default () => {
   </TabItem>
 </Tabs>
 
-Styli 巧妙地利用了 JSX 的 boolean(true) 类型 props 可以省略值的特性，实现了 "Key as Value" 模式，让 Styli 在是构建界面时更加简洁，同时由于使用了 tsx，我们得到了强类型的 "CSS in JS"。
+Fower 巧妙地利用了 JSX 的 boolean(true) 类型 props 可以省略值的特性，实现了 "Key as Value" 模式，让 Fower 在是构建界面时更加简洁，同时由于使用了 tsx，我们得到了强类型的 "CSS in JS"。

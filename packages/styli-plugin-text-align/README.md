@@ -1,1 +1,0 @@
-# styli-plugin-text-align

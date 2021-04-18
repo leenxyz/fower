@@ -22,7 +22,7 @@
     "typeRoots": [
       "node_modules/@types",
       "global.d.ts",
-      "styli.d.ts"
+      "fower.d.ts"
     ]
   },
   "exclude": [

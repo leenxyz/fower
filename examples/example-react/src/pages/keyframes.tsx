@@ -1,5 +1,5 @@
-import { Box } from '@styli/react';
-import { keyframes } from '@styli/core';
+import { Box } from '@fower/react';
+import { keyframes } from '@fower/core';
 import { useState } from 'react';
 
 const hash = keyframes({

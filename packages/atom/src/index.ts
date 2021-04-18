@@ -148,7 +148,7 @@ export class Atom {
 
   /**
    *
-   * @param config styli config
+   * @param config fower config
    * @returns
    */
   preprocessAtom(config: any) {

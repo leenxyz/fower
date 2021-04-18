@@ -1,33 +1,33 @@
-/// <reference types="@styli/types" />
-/// <reference types="styli-plugin-background" />
-/// <reference types="styli-plugin-border" />
-/// <reference types="styli-plugin-box-alignment" />
-/// <reference types="styli-plugin-color" />
-/// <reference types="styli-plugin-display" />
-/// <reference types="styli-plugin-flexbox" />
-/// <reference types="styli-plugin-layout-engine" />
-/// <reference types="styli-plugin-line-height" />
-/// <reference types="styli-plugin-margin" />
-/// <reference types="styli-plugin-opacity" />
-/// <reference types="styli-plugin-overflow" />
-/// <reference types="styli-plugin-padding" />
-/// <reference types="styli-plugin-position" />
-/// <reference types="styli-plugin-rounded" />
-/// <reference types="styli-plugin-shadow" />
-/// <reference types="styli-plugin-size" />
-/// <reference types="styli-plugin-text-align" />
-/// <reference types="styli-plugin-text-size" />
-/// <reference types="styli-plugin-text-transform" />
-/// <reference types="styli-plugin-font-weight" />
-/// <reference types="styli-plugin-z-index" />
-/// <reference types="styli-plugin-outline" />
-/// <reference types="styli-plugin-ellipsis" />
+/// <reference types="@fower/types" />
+/// <reference types="fower-plugin-background" />
+/// <reference types="fower-plugin-border" />
+/// <reference types="fower-plugin-box-alignment" />
+/// <reference types="fower-plugin-color" />
+/// <reference types="fower-plugin-display" />
+/// <reference types="fower-plugin-flexbox" />
+/// <reference types="fower-plugin-layout-engine" />
+/// <reference types="fower-plugin-line-height" />
+/// <reference types="fower-plugin-margin" />
+/// <reference types="fower-plugin-opacity" />
+/// <reference types="fower-plugin-overflow" />
+/// <reference types="fower-plugin-padding" />
+/// <reference types="fower-plugin-position" />
+/// <reference types="fower-plugin-rounded" />
+/// <reference types="fower-plugin-shadow" />
+/// <reference types="fower-plugin-size" />
+/// <reference types="fower-plugin-text-align" />
+/// <reference types="fower-plugin-text-size" />
+/// <reference types="fower-plugin-text-transform" />
+/// <reference types="fower-plugin-font-weight" />
+/// <reference types="fower-plugin-z-index" />
+/// <reference types="fower-plugin-outline" />
+/// <reference types="fower-plugin-ellipsis" />
 
-import { Preset } from '@styli/types'
+import { Preset } from '@fower/types'
 export declare const presetReactNative: Preset
 export default presetReactNative
 
-export declare const plugins: import('@styli/types').StyliPlugin[]
+export declare const plugins: import('@fower/types').FowerPlugin[]
 
-import { Theme } from '@styli/types'
+import { Theme } from '@fower/types'
 export declare const theme: Partial<Theme>

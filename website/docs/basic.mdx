@@ -3,7 +3,7 @@ id: basic
 title: Basic
 ---
 
-import { UtilityFirstStyli } from '@site/src/components/UtilityFirstStyli'
+import { UtilityFirstFower } from '@site/src/components/UtilityFirstFower'
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
@@ -12,9 +12,9 @@ import TabItem from '@theme/TabItem'
 
 For decades, we consider the principle of "separation of Concerns" as the best practice. But with the advent of the componentization era, we should rethink what best practices are.
 
-Styli does not advocate "separation of Concerns", Styli use **Atomic Props** to write style. when we use Styli, there no CSS code, no CSS classnames, no CSS files.
+Fower does not advocate "separation of Concerns", Fower use **Atomic Props** to write style. when we use Fower, there no CSS code, no CSS classnames, no CSS files.
 
-Code snippet using Styli:
+Code snippet using Fower:
 
 <Tabs
   defaultValue="React"
@@ -61,9 +61,9 @@ At first glance, You may be very resistant to abbreviations like `toCenterY p-20
 
 ## Advantages of Atomc props
 
-- **Less code**, Using Styli, you can develop UI with less code, especially in JSX, the boolean prop value of can be omitted, that we call it the **"key as value"** pattern, it can reduce a lot of style code.
+- **Less code**, Using Fower, you can develop UI with less code, especially in JSX, the boolean prop value of can be omitted, that we call it the **"key as value"** pattern, it can reduce a lot of style code.
 
-- **No need to waste time naming**, naming CSS classes is very annoying and a waste of energy. Everyone has different naming habits. Many scenes are difficult to describe with a semantic name. Styli does not waste time to do it. These things are replaced by declarative creation of styles by adding attributes.
+- **No need to waste time naming**, naming CSS classes is very annoying and a waste of energy. Everyone has different naming habits. Many scenes are difficult to describe with a semantic name. Fower does not waste time to do it. These things are replaced by declarative creation of styles by adding attributes.
 
 - **More cohesive**, with the traditional way, you create a style for an element, you need to create a middleman (CSS class name), and then copy the class name to the CSS file to start writing the style. In this process, You have to repeat these operations:
 
@@ -72,13 +72,13 @@ At first glance, You may be very resistant to abbreviations like `toCenterY p-20
   - copying the class name to the CSS file
   - starting to write the CSS code
 
-  At the same time, you have to jump around frequently between the template structure and style files. Styli does not have these problems, when you need to write a style, just set the atom Props directly.
+  At the same time, you have to jump around frequently between the template structure and style files. Fower does not have these problems, when you need to write a style, just set the atom Props directly.
 
-- **CSS stops bloating**, using traditional solutions, as the project grows, CSS will gradually expand, and the final CSS size will become larger and more difficult to maintain. With Styli, the style code will hardly expand.
+- **CSS stops bloating**, using traditional solutions, as the project grows, CSS will gradually expand, and the final CSS size will become larger and more difficult to maintain. With Fower, the style code will hardly expand.
 
 ## Basic usage
 
-In order to give you a deeper understanding of the usage of Styli, let's review the basic usage:
+In order to give you a deeper understanding of the usage of Fower, let's review the basic usage:
 
 <Tabs
   defaultValue="React"
@@ -91,7 +91,7 @@ In order to give you a deeper understanding of the usage of Styli, let's review 
 
 ```jsx live
 <Text text2XL fontBold green500>
-  Hi, Styli
+  Hi, Fower
 </Text>
 ```
 
@@ -99,13 +99,13 @@ In order to give you a deeper understanding of the usage of Styli, let's review 
 <TabItem value="Vue">
 
 ```html
-<span text2XL fontBold green500> Hi, Styli </span>
+<span text2XL fontBold green500> Hi, Fower </span>
 ```
 
 </TabItem>
 </Tabs>
 
-The simplest way to use Styli is to set some Atomic Props directly on the Styli component. The Atomic Props `text2XL`, `fontBold`, `green500` will produce the following style:
+The simplest way to use Fower is to set some Atomic Props directly on the Fower component. The Atomic Props `text2XL`, `fontBold`, `green500` will produce the following style:
 
 ```jsx live
 <span
@@ -115,11 +115,11 @@ The simplest way to use Styli is to set some Atomic Props directly on the Styli 
     color: '#48bb78',
   }}
 >
-  Hi, Styli
+  Hi, Fower
 </span>
 ```
 
-The Atomic Props above `text2XL`, `fontBold`, `green500`, no need to declare a value for them, we call it the "**Key as Value**" pattern, which makes the UI code more concise and improves the development experience. Personally I believe that the JSX inline style itself is already very good. It has strong types and is convenient for dynamic styles. The biggest disadvantage is cumbersome and visually disturbing. No one likes ugly boilerplate code like `style={{}}`. Styli solves these problems. With Styli, every character is meaningful, there are no unnecessary characters such as equal signs, curly braces, and quotation marks, and the structure of JSX is kept clean.
+The Atomic Props above `text2XL`, `fontBold`, `green500`, no need to declare a value for them, we call it the "**Key as Value**" pattern, which makes the UI code more concise and improves the development experience. Personally I believe that the JSX inline style itself is already very good. It has strong types and is convenient for dynamic styles. The biggest disadvantage is cumbersome and visually disturbing. No one likes ugly boilerplate code like `style={{}}`. Fower solves these problems. With Fower, every character is meaningful, there are no unnecessary characters such as equal signs, curly braces, and quotation marks, and the structure of JSX is kept clean.
 
 ## Use attr value
 
@@ -131,7 +131,7 @@ function Demo() {
   const b = 5
   return (
     <Text text={30} p={a + b} bg="#bee3f8" fontBold>
-      Hi, Styli
+      Hi, Fower
     </Text>
   )
 }

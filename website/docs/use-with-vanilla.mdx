@@ -3,19 +3,19 @@ id: use-with-vanilla
 title: Use with Vanilla
 ---
 
-If you don't use React and other web frameworks, you can also install `@styli/core` and use Styli with the most primitive APIs.
+If you don't use React and other web frameworks, you can also install `@fower/core` and use Fower with the most primitive APIs.
 
 ```bash
-$ npm i @styli/core @styli/preset-web
+$ npm i @fower/core @fower/preset-web
 ```
 
 ## Basic Usage
 
 ```jsx
-import { styli, css } from '@styli/core'
-import preset from '@styli/preset-web'
+import { fower, css } from '@fower/core'
+import preset from '@fower/preset-web'
 
-styli.setConfig(preset)
+fower.setConfig(preset)
 
 const className = css('p-20 mx-10 borderGray text4XL')
 
@@ -27,7 +27,7 @@ $app.className = className
 ## With custom style
 
 ```jsx
-import { css } from '@styli/core'
+import { css } from '@fower/core'
 
 const className = css('p-20 mx-10 borderGray text4XL', {
   display: 'inline-block',

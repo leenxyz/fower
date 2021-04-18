@@ -7,7 +7,7 @@ title: Pseudo-classes
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-Each Atomic Props of Styli supports CSS pseudo-classes. The format of the Atomic Props that enable Pseudo-classes style is: `{prop}--{pseudo}`, for example: `bgRed400--hover`, `bgYellow500--active`, `opacity-70--disabled`, `w-20--visited`, etc.
+Each Atomic Props of Fower supports CSS pseudo-classes. The format of the Atomic Props that enable Pseudo-classes style is: `{prop}--{pseudo}`, for example: `bgRed400--hover`, `bgYellow500--active`, `opacity-70--disabled`, `w-20--visited`, etc.
 
 ## Hover
 
@@ -169,7 +169,7 @@ Use `--last-child` postfix to apply last-child style.
 
 ## Supported pseudo classes
 
-By default, Styli supports these pseudo classes:
+By default, Fower supports these pseudo classes:
 
 - active
 - checked
@@ -193,7 +193,7 @@ By default, Styli supports these pseudo classes:
 If you want more pseudo classes, you can use `setConfig` to add it:
 
 ```jsx
-import { setConfig } from '@styli/core'
+import { setConfig } from '@fower/core'
 
 setConfig({
   pseudos: ['focus-visible', 'blank'], // will merge to built-in pseudos
@@ -202,8 +202,8 @@ setConfig({
 
 ## About file size
 
-Each Atomic Props in Styli supports CSS pseudo-classes and 18 commonly used pseudo-classes. You may have questions about whether this will cause the code size of the Styli package to explode. The answer is no.
+Each Atomic Props in Fower supports CSS pseudo-classes and 18 commonly used pseudo-classes. You may have questions about whether this will cause the code size of the Fower package to explode. The answer is no.
 
 In traditional CSS, if each CSS class supports Pseudo-classes, a large amount of CSS code is required, because CSS is not programmable, and it can only accumulate code through enumeration.
 
-Thanks to the flexibility of JS, Styli only needs dozens of lines of code to make all Atomic Props support Pseudo-classes.
+Thanks to the flexibility of JS, Fower only needs dozens of lines of code to make all Atomic Props support Pseudo-classes.

@@ -1,5 +1,5 @@
 {
-  "name": "styli",
+  "name": "fower",
   "version": "0.0.0",
   "private": true,
   "description": "A style library for rapid UI development.",
@@ -28,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forsigner/styli.git"
+    "url": "git+https://github.com/forsigner/fower.git"
   },
   "author": "@forsigner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/forsigner/styli/issues"
+    "url": "https://github.com/forsigner/fower/issues"
   },
-  "homepage": "https://github.com/forsigner/styli#readme",
+  "homepage": "https://github.com/forsigner/fower#readme",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/prettier": "^2.2.3",

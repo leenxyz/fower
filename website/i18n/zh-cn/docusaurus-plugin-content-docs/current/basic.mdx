@@ -3,16 +3,16 @@ id: basic
 title: Basic
 ---
 
-import { UtilityFirstStyli } from '@site/src/components/UtilityFirstStyli'
+import { UtilityFirstFower } from '@site/src/components/UtilityFirstFower'
 
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 ## 理解原子属性 (Atomic props)
 
-Styli 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我们应该重新思考什么是最佳实践。
+Fower 使用**Atomic Props**让样式原子化。 数十年来，前端开发的最佳实践是将 HTML，CSS 和 JS 分离，但是随着组件化时代的到来，我们应该重新思考什么是最佳实践。
 
-Styli 不提倡“关注点分离”，Styli 使用“原子性道具”来编写样式。 当我们使用 Styli 时，没有 CSS 代码，没有 CSS 类名，没有 CSS 文件。
+Fower 不提倡“关注点分离”，Fower 使用“原子性道具”来编写样式。 当我们使用 Fower 时，没有 CSS 代码，没有 CSS 类名，没有 CSS 文件。
 
 <Tabs
   defaultValue="React"
@@ -59,17 +59,17 @@ Styli 不提倡“关注点分离”，Styli 使用“原子性道具”来编�
 
 ## Atomc props 的优点
 
-- **更少的代码**，这能直接感观到，上面传统语义化方式的代码行数 40，字符个数为 847，Styli 方式代码行数 9，字符个数为 232，代码量相差巨大，更少的代码带来更高的开发效率，实际上，使用 Styli，每一个字符都是有意义的，没有任何冗余的字符和符号。
+- **更少的代码**，这能直接感观到，上面传统语义化方式的代码行数 40，字符个数为 847，Fower 方式代码行数 9，字符个数为 232，代码量相差巨大，更少的代码带来更高的开发效率，实际上，使用 Fower，每一个字符都是有意义的，没有任何冗余的字符和符号。
 
-- **不用在浪费时间取名字**，给 CSS 类取名非常烦人且浪费精力，每个人取名习惯不一样，很多场景也很难用一个语义化的名字来描述，Styli 不浪费时间做这些事，取而代之的是通过添加属性声明式的创建样式。
+- **不用在浪费时间取名字**，给 CSS 类取名非常烦人且浪费精力，每个人取名习惯不一样，很多场景也很难用一个语义化的名字来描述，Fower 不浪费时间做这些事，取而代之的是通过添加属性声明式的创建样式。
 
-- **结构和样式变得内聚**，传统的方式，你给一个元素创建样式，你需要先创建一个中间人(CSS class name)，然后复制类名到 CSS 文件中开始写样式，这个过程你要经历 "想名字->模板中编写类名->复制类名到 CSS 文件->开始写 CSS 代码" 这样的烦人链路，同时还要在结构和样式两处文件频繁跳来跳去，修改样式也是一样，这极大影响了开发效率和开发心情。Styli 没有这些问题，你要设置样式，直接设置原子 Props 即可。
+- **结构和样式变得内聚**，传统的方式，你给一个元素创建样式，你需要先创建一个中间人(CSS class name)，然后复制类名到 CSS 文件中开始写样式，这个过程你要经历 "想名字->模板中编写类名->复制类名到 CSS 文件->开始写 CSS 代码" 这样的烦人链路，同时还要在结构和样式两处文件频繁跳来跳去，修改样式也是一样，这极大影响了开发效率和开发心情。Fower 没有这些问题，你要设置样式，直接设置原子 Props 即可。
 
-- **CSS 停止膨胀**，使用传统的方式，随着项目增大，CSS 会逐渐膨胀，最终应用体积变得越来越大，越来越难维护，使用 Styli，样式代码几乎不会膨胀。
+- **CSS 停止膨胀**，使用传统的方式，随着项目增大，CSS 会逐渐膨胀，最终应用体积变得越来越大，越来越难维护，使用 Fower，样式代码几乎不会膨胀。
 
 ## 基本用法
 
-为了让您更深入地了解 Styli 的用法，让我们回顾一下基本用法：
+为了让您更深入地了解 Fower 的用法，让我们回顾一下基本用法：
 
 <Tabs
   defaultValue="React"
@@ -82,7 +82,7 @@ Styli 不提倡“关注点分离”，Styli 使用“原子性道具”来编�
 
 ```jsx live
 <Text text2XL fontBold green500>
-  Hi, Styli
+  Hi, Fower
 </Text>
 ```
 
@@ -90,13 +90,13 @@ Styli 不提倡“关注点分离”，Styli 使用“原子性道具”来编�
 <TabItem value="Vue">
 
 ```html
-<span text2XL fontBold green500> Hi, Styli </span>
+<span text2XL fontBold green500> Hi, Fower </span>
 ```
 
 </TabItem>
 </Tabs>
 
-Styli 最简单的用法是直接在 Styli 组件设置一些原子属性，上面 `text2XL fontBold green50` 会生产下面的样式：
+Fower 最简单的用法是直接在 Fower 组件设置一些原子属性，上面 `text2XL fontBold green50` 会生产下面的样式：
 
 ```jsx live
 <span
@@ -106,11 +106,11 @@ Styli 最简单的用法是直接在 Styli 组件设置一些原子属性，上�
     color: '#48bb78',
   }}
 >
-  Hi, Styli
+  Hi, Fower
 </span>
 ```
 
-上面的 Props `text2XL fontBold green50` 不需要声明 value，我们称之为 "**Key as Value**" 模式，这让 UI 代码更简洁，提高了开发体验。个人认为，JSX 内联样式本身已经很不错，有强类型，方便做动态样式，最大缺点是繁琐啰嗦和视觉上的干扰，没人喜欢 `style={{}}` 这样丑陋的样板代码，而 Styli 解决了这些问题，使用 Styli，每个字符都是有意义的，没有多余的等号、花括号、引号等无用的字符，保持了 JSX 结构的简洁。
+上面的 Props `text2XL fontBold green50` 不需要声明 value，我们称之为 "**Key as Value**" 模式，这让 UI 代码更简洁，提高了开发体验。个人认为，JSX 内联样式本身已经很不错，有强类型，方便做动态样式，最大缺点是繁琐啰嗦和视觉上的干扰，没人喜欢 `style={{}}` 这样丑陋的样板代码，而 Fower 解决了这些问题，使用 Fower，每个字符都是有意义的，没有多余的等号、花括号、引号等无用的字符，保持了 JSX 结构的简洁。
 
 ## 使用属性值
 
@@ -122,7 +122,7 @@ function Demo() {
   const b = 5
   return (
     <Text text={30} p={a + b} bg="#bee3f8" fontBold>
-      Hi, Styli
+      Hi, Fower
     </Text>
   )
 }

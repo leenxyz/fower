@@ -3,13 +3,13 @@ id: createStyle
 title: createStyle
 ---
 
-可以使用 `createStyle` 函数创建样式，然后把样式使用在非 Styli 组件上。
+可以使用 `createStyle` 函数创建样式，然后把样式使用在非 Fower 组件上。
 
 使用 modifiers:
 
 ```jsx
 import React from 'react'
-import { createStyle } from '@styli/core'
+import { createStyle } from '@fower/core'
 
 const cardStyle = createStyle('p-20 square-400 bgRed')
 
@@ -22,7 +22,7 @@ export default () => {
 
 ```jsx
 import React from 'react'
-import { createStyle } from '@styli/core'
+import { createStyle } from '@fower/core'
 
 const cardStyle = createStyle('p-20 square-400 bgRed', {
   background: '#fff',

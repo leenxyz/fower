@@ -1,5 +1,5 @@
-import { Box } from '@styli/react';
-import { Atom } from '@styli/atom';
+import { Box } from '@fower/react';
+import { Atom } from '@fower/atom';
 
 export default () => {
   return (

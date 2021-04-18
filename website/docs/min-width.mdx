@@ -6,6 +6,26 @@ title: Min Width
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
+```jsx
+<Box white>
+  <Box minW-100 bgRed400 inlineBlock p2>
+    minW-100
+  </Box>
+  <Box minW-10rem bgYellow400 inlineBlock p2>
+    minW-10rem
+  </Box>
+  <Box minW={100} bgGreen400 inlineBlock p2>
+    minW={'{100}'}
+  </Box>
+  <Box minW="400px" bgBlue400 inlineBlock p2>
+    minW="400px"
+  </Box>
+  <Box minW="80%" bgPurple400 inlineBlock p2>
+    minW="80%"
+  </Box>
+</Box>
+```
+
 Use `minW-{value}` Atomic Props to control the min width of an element.
 
 | Atomic Props                | CSS Properties      |

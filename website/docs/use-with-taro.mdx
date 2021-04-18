@@ -3,12 +3,12 @@ id: use-with-taro
 title: Use with Taro
 ---
 
-[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) is a React-like framework，Using Styli in Taro is very similar to using it in React.
+[Taro](https://taro-docs.jd.com/taro/docs/README/index.html) is a React-like framework，Using Fower in Taro is very similar to using it in React.
 
 ## Installation
 
 ```bash
-npm i @styli/taro
+npm i @fower/taro
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ Now we're going to build a user profile card ui with `View`,`Image`,`Text`.
 </View>
 ```
 
-As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Styli, I call it "Atomic props".
+As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Fower, I call it "Atomic props".
 
 Compared with inline style, "Atomic props" has many advantages:
 
@@ -35,12 +35,12 @@ Compared with inline style, "Atomic props" has many advantages:
 
 - **Style reuse**, using inline styles, it is easy to quickly expand the code, using "Atomic props", the code size will not expand too much as the project grows.
 
-## @styli/taro
+## @fower/taro
 
-The source code of `@styli/taro` is very simple:
+The source code of `@fower/taro` is very simple:
 
-```jsx title="@styli/taro Source code"
-import { styled } from '@styli/styled'
+```jsx title="@fower/taro Source code"
+import { styled } from '@fower/styled'
 import Taro from '@tarojs/components'
 
 export const View = styled(Taro.View)

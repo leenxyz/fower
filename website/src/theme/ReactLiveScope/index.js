@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react'
-import { createStyle, setTheme } from '@styli/core'
-import { styled } from '@styli/styled'
-import { Text, View, Box, Image } from '@styli/react'
+import { createStyle, setTheme } from '@fower/core'
+import { styled } from '@fower/styled'
+import { Text, View, Box, Image } from '@fower/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled('button')
 const Input = styled('input')
 
-import { registerAtomicProps } from '@styli/core'
+import { registerAtomicProps } from '@fower/core'
 
 registerAtomicProps('textHeading', {
   fontSize: 28,

@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge'
-import { StyliPlugin, Configuration, Theme, CSSObject } from '@styli/types'
+import { FowerPlugin, Configuration, Theme, CSSObject } from '@fower/types'
 import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
@@ -44,15 +44,15 @@ class Store {
     this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
   }
 
-  use = (...plugins: StyliPlugin[]) => {
+  use = (...plugins: FowerPlugin[]) => {
     this.config.plugins.push(...plugins)
   }
 
   registerAtomicProps = (
     matcher: string | RegExp,
-    handleAtomOrStyleObject: StyliPlugin['handleAtom'] | CSSObject,
-  ): StyliPlugin => {
-    const plugin: StyliPlugin = {
+    handleAtomOrStyleObject: FowerPlugin['handleAtom'] | CSSObject,
+  ): FowerPlugin => {
+    const plugin: FowerPlugin = {
       isMatch(key: string) {
         if (typeof matcher === 'string') return key === matcher
         if (matcher instanceof RegExp) return matcher.test(key)

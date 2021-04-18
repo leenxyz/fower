@@ -1,4 +1,4 @@
-import { Box, Text } from '@styli/react';
+import { Box, Text } from '@fower/react';
 
 export default () => {
   return (
@@ -11,7 +11,7 @@ export default () => {
           },
         }}
       >
-        <span>Hi, Styli!</span>
+        <span>Hi, Fower!</span>
       </Box>
       <Box
         css={{
@@ -34,7 +34,7 @@ export default () => {
           textDecoration: 'underline',
         }}
       >
-        Hi, Styli!
+        Hi, Fower!
       </Text>
 
       <Box
@@ -53,7 +53,7 @@ export default () => {
         }}
       >
         <div className="title">Nested demo</div>
-        <span>Hi, Styli!</span>
+        <span>Hi, Fower!</span>
       </Box>
     </Box>
   );

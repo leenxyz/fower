@@ -1,15 +1,15 @@
 import { Link } from 'umi';
-import { Box } from '@styli/react';
+import { Box } from '@fower/react';
 import {
   createStyle,
   setConfig,
   setTheme,
   registerAtomicProps,
   injectGlobalStyle,
-} from '@styli/core';
+} from '@fower/core';
 import { useState } from 'react';
-import { styled } from '@styli/styled';
-import { store } from '@styli/store';
+import { styled } from '@fower/styled';
+import { store } from '@fower/store';
 
 const Button = styled('button');
 
@@ -112,7 +112,7 @@ registerAtomicProps('textBody', {
   fontSize: 20,
 });
 
-declare module '@styli/types' {
+declare module '@fower/types' {
   export interface AtomicProps {
     textBody?: boolean;
     info?: boolean;

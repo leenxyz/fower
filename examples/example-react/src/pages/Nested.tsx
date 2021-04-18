@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@styli/styled';
+import { styled } from '@fower/styled';
 
 export const View = styled('div');
 export const Text = styled('span');

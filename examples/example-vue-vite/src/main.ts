@@ -1,9 +1,9 @@
 import Vue, { createApp } from 'vue'
-import VueStyli from '@styli/vue'
+import VueFower from '@fower/vue'
 import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(VueStyli as any)
+app.use(VueFower as any)
 
 app.mount('#app')

@@ -40,17 +40,17 @@ const config = {
       chain.merge({
         module: {
           rule: {
-            styliLoader: {
+            fowerLoader: {
               test: /\.tsx$/,
               use: [
                 {
-                  loader: 'styli-loader',
+                  loader: 'fower-loader',
                   options: {
-                    styliConfig: {
-                      ...require('@styli/core').styli.config,
+                    fowerConfig: {
+                      ...require('@fower/core').fower.config,
                       inline: false,
                     },
-                    output: 'styli.wxss',
+                    output: 'fower.wxss',
                   },
                 },
               ],

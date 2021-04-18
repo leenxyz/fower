@@ -8,12 +8,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 import Translate from '@docusaurus/Translate'
 import { CodeHighLight } from '../components/HighLight'
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 import theme from 'prism-react-renderer/themes/duotoneDark'
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { HomeDemo } from '../components/HomeDemo'
-import { styled } from '@styli/styled'
+import { styled } from '@fower/styled'
 
 const Link = styled(DLink)
 
@@ -61,7 +61,7 @@ const features = [
     title: 'Less CSS, More JS',
     description: (
       <Translate id="home.feature5.desc" description="The homepage welcome message">
-        Styli is a CSS-in-JS solution, Most of the time you are writing JavaScript.
+        Fower is a CSS-in-JS solution, Most of the time you are writing JavaScript.
       </Translate>
     ),
   },
@@ -99,8 +99,8 @@ const previews = [
     ),
     subject: 'Layout toolkit',
     description:
-      'Styli provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
-    link: '/docs/styli-layout-introduction',
+      'Fower provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
+    link: '/docs/fower-layout-introduction',
     tags: ['type-safe', 'effective'],
     code: `
 <Box toCenter bgGray100 p4>
@@ -117,7 +117,7 @@ const previews = [
     ),
     subject: 'Design system',
     description:
-      'Styli provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
+      'Fower provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
     code: `
 <Box toCenter bgGray100 p4>
   <Box square-60 bgAmber400 rounded-8></Box>
@@ -209,7 +209,7 @@ function Home() {
               </Link>
               <iframe
                 className={styles.indexCtasGitHubButton}
-                src="https://ghbtns.com/github-btn.html?user=forsigner&amp;repo=styli&amp;type=star&amp;count=true&amp;size=large"
+                src="https://ghbtns.com/github-btn.html?user=forsigner&amp;repo=fower&amp;type=star&amp;count=true&amp;size=large"
                 width={160}
                 height={30}
                 title="GitHub Stars"

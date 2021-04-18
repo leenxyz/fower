@@ -21,7 +21,7 @@
   },
   "link.item.label.Stack Overflow": {
     "message": "Stack Overflow",
-    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/styli"
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/fower"
   },
   "link.item.label.Discord": {
     "message": "Discord",
@@ -53,6 +53,6 @@
   },
   "link.item.label.Github": {
     "message": "Github",
-    "description": "The label of footer link with label=Github linking to https://github.com/forsigner/styli"
+    "description": "The label of footer link with label=Github linking to https://github.com/forsigner/fower"
   }
 }

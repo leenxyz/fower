@@ -1,5 +1,5 @@
-import { presetWeb } from '@styli/preset-web'
-import { store } from '@styli/store'
+import { presetWeb } from '@fower/preset-web'
+import { store } from '@fower/store'
 
 import { createStyle } from '.'
 

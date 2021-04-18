@@ -6,19 +6,19 @@ title: About
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-We had to admit it, writing CSS is painful.
+Let's face it, writing CSS is painful.
 
 In my experience of UI development, most people feel painful for writing CSS. Most Front-end developers find it boring to write CSS, and most Back-end developers find it difficult to master CSS.
 
 CSS, which can't even be called a programming language, but it is huge and complex, with so many style attributes, and new features are still not being added.
 
-Styli is a style library that allows you to develop UI efficiently, and let you write CSS without pain.
+Fower is a style library that allows you to develop UI efficiently, and let you write CSS without pain.
 
-In Styli, we write styles directly in Markup through "Atomic props". The "Atomic props" provided by Styli does not support all CSS features. It is only a subset of CSS and only contains some of what we consider to be the essence of CSS The good parts, through these atomic properties, you can complete most of the work of UI development.
+In Fower, we write styles directly in Markup through "Atomic props". The "Atomic props" provided by Fower does not support all CSS features. It is only a subset of CSS and only contains some of what we consider to be the essence of CSS The good parts, through these atomic properties, you can complete most of the work of UI development.
 
 ## A quick example
 
-Let's take a look at how to use Styli with a **Live DEMO**:
+Let's take a look at how to use Fower with a **Live DEMO**:
 
 <Tabs
   defaultValue="React"
@@ -30,7 +30,7 @@ Let's take a look at how to use Styli with a **Live DEMO**:
 <TabItem value="React">
 
 ```jsx live
-// import { Box } from '@styli/react'
+// import { Box } from '@fower/react'
 <Box toCenterY p-10 w-260 rounded-10 shadow>
   <Box as="img" circle-48 src="/img/jobs.jpg" />
   <Box ml-10>
@@ -62,22 +62,22 @@ Let's take a look at how to use Styli with a **Live DEMO**:
 
 - **Atomic Props**
 
-  Styli uses **Atomic Props** to write the style. For decades, separating HTML, CSS and JS is the best practice in Front-end development , but with the advent of the componentization era, we should rethink what best practices are.
+  Fower uses **Atomic Props** to write the style. For decades, separating HTML, CSS and JS is the best practice in Front-end development , but with the advent of the componentization era, we should rethink what best practices are.
 
 - **Framework-agnostic**
 
-  Framework-agnostic is one of important motivations for the creating of Styli. Styli supports Web, React Native, and Mini Program. With Styli, you can write style with the same way in Web, React Native, and Mini Program.
+  Framework-agnostic is one of important motivations for the creating of Fower. Fower supports Web, React Native, and Mini Program. With Fower, you can write style with the same way in Web, React Native, and Mini Program.
 
 - **High Performance**
   Atomic props design also enables super fast rendering. Rendered declarations get cached and can therefore be reused immediately. Additionally, there are several performance benefits by rendering styles with JavaScript. First of all, CSS is only generated and attached as it is needed. Also, it uses single class selectors which are among the fastest CSS selectors available.
 
 - **Type Safe**
 
-  Our team is a deep user of TypeScript. Styli is completely type-safe, especially with JSX, the development experience will be great, the type provides very good IntelliSense and documents, and no need to rely on specific editor plugin to achieve IntelliSense.
+  Our team is a deep user of TypeScript. Fower is completely type-safe, especially with JSX, the development experience will be great, the type provides very good IntelliSense and documents, and no need to rely on specific editor plugin to achieve IntelliSense.
 
 - **Less Code**
 
-  Using Styli, you can develop UI with less code, especially in JSX, the boolean prop value of can be omitted, that we call it the **"key as value"** pattern, it can reduce a lot of style code.
+  Using Fower, you can develop UI with less code, especially in JSX, the boolean prop value of can be omitted, that we call it the **"key as value"** pattern, it can reduce a lot of style code.
 
 - **Less CSS, More JS**
 
@@ -85,31 +85,31 @@ Let's take a look at how to use Styli with a **Live DEMO**:
 
 - **Programmable**
 
-  Styli is a solution of CSS in JS. When you are building the user interface, you are essentially writing JS, not CSS. It's more flexible than CSS. Especially in dynamic scenes, Styli can handle it more elegantly.
+  Fower is a solution of CSS in JS. When you are building the user interface, you are essentially writing JS, not CSS. It's more flexible than CSS. Especially in dynamic scenes, Fower can handle it more elegantly.
 
 ## Comparison
 
 - **CSS Framework**
 
-  For example, Bootstrap, Bulma, Foundation, Semantic UI, PureCSS, Materialize these, I call it traditional CSS frameworks, usually these frameworks are used for rapid development of Web applications, more popular in the JQuery era. The disadvantages are also obvious. If your interface has a lot of custom designs, it will be painful to use. Styli is not a traditional CSS framework.
+  For example, Bootstrap, Bulma, Foundation, Semantic UI, PureCSS, Materialize these, I call it traditional CSS frameworks, usually these frameworks are used for rapid development of Web applications, more popular in the JQuery era. The disadvantages are also obvious. If your interface has a lot of custom designs, it will be painful to use. Fower is not a traditional CSS framework.
 
 - **UI Framework**
 
-  For example, Ant-design, Material-UI, Vuetify, React-Bootstrap, these UI Frameworks are created with the component era, and are often binded with some Front-end frameworks (React, Vue, Angular). Similarly, Styli is not an UI framework.
+  For example, Ant-design, Material-UI, Vuetify, React-Bootstrap, these UI Frameworks are created with the component era, and are often binded with some Front-end frameworks (React, Vue, Angular). Similarly, Fower is not an UI framework.
 
 - **BEM/SMACSS/OOCSS 等**
 
-  Some methodology for writing CSS, I think you should know it. They make a fuss on the principle of "separation of Concerns". This is the biggest difference between Styli and them. Styli does not advocate "separation of Concerns"
+  Some methodology for writing CSS, I think you should know it. They make a fuss on the principle of "separation of Concerns". This is the biggest difference between Fower and them. Fower does not advocate "separation of Concerns"
 
 - **CSS in JS**
 
-  CSS in JS was developed by the React community. What is it? Long story shor, it is to use JS to write CSS. Popular solutions include Styled Components, Emotion, JSS, Radium, etc. Styli also is a solution of CSS in JS what's the difference? The difference is that Styli uses the "Atomic props" method to write style, the concept is similar to "Atomic CSS".
+  CSS in JS was developed by the React community. What is it? Long story shor, it is to use JS to write CSS. Popular solutions include Styled Components, Emotion, JSS, Radium, etc. Fower also is a solution of CSS in JS what's the difference? The difference is that Fower uses the "Atomic props" method to write style, the concept is similar to "Atomic CSS".
 
 - **Atomic CSS、Tailwindcss、Tachyons**
 
-  The atomic CSS is a non-traditional CSS solution, And I like it very much. Styli also uses this concept. But the difference is that they are writing CSS, while Styli is writing JS.
+  The atomic CSS is a non-traditional CSS solution, And I like it very much. Fower also uses this concept. But the difference is that they are writing CSS, while Fower is writing JS.
 
-  In fact, you can understand Styli as "Atomic CSS" + "CSS in JS", which I call "Atomic Props".
+  In fact, you can understand Fower as "Atomic CSS" + "CSS in JS", which I call "Atomic Props".
 
 ## Inspiration
 

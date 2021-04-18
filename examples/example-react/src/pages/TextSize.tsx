@@ -1,5 +1,5 @@
-import { Box } from '@styli/react';
-import { setTheme } from '@styli/core';
+import { Box } from '@fower/react';
+import { setTheme } from '@fower/core';
 
 setTheme({
   colors: {

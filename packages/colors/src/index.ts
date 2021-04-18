@@ -1,4 +1,4 @@
-import { Colors } from '@styli/types'
+import { Colors } from '@fower/types'
 
 export const colors: Colors = {
   transparent: 'transparent',

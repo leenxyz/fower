@@ -13,7 +13,7 @@ import Footer from '@theme/Footer'
 import LayoutProviders from '@theme/LayoutProviders'
 import LayoutHead from '@theme/LayoutHead'
 import { Helmet } from 'react-helmet'
-import { Box } from '@styli/react'
+import { Box } from '@fower/react'
 
 import type { Props } from '@theme/Layout'
 

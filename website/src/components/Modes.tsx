@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box } from '@styli/react'
-import { setTheme } from '@styli/core'
-import { store } from '@styli/store'
+import { Box } from '@fower/react'
+import { setTheme } from '@fower/core'
+import { store } from '@fower/store'
 import { useState } from 'react'
 
 setTheme({

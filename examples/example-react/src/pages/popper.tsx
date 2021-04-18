@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { usePopper } from 'react-popper';
-import { Box } from '@styli/react';
+import { Box } from '@fower/react';
 
 export default () => {
   const [referenceElement, setReferenceElement] = useState(null);

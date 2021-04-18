@@ -1,8 +1,8 @@
 import { createElement, ElementType, forwardRef, ComponentProps } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { store } from '@styli/store'
-import { upFirst } from '@styli/utils'
-import { AtomicProps } from '@styli/types'
+import { store } from '@fower/store'
+import { upFirst } from '@fower/utils'
+import { AtomicProps } from '@fower/types'
 import { getCssParsedProps, getInLineParsedProps } from './util'
 import { StyledComponent, InjectedProps, Args } from './types'
 

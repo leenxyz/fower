@@ -3,15 +3,15 @@
 const path = require('path')
 
 module.exports = {
-  title: 'Styli',
+  title: 'Fower',
   tagline: 'An Atomic CSS in JS library for rapid UI development',
-  url: 'https://styli.js.org',
+  url: 'https://fower.js.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'forsigner', // Usually your GitHub org/user name.
-  projectName: 'styli', // Usually your repo name.
+  projectName: 'fower', // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh-cn'],
@@ -28,7 +28,7 @@ module.exports = {
   themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
+      theme: require('./theme'),
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
 
@@ -80,7 +80,7 @@ module.exports = {
     },
 
     navbar: {
-      title: 'Styli',
+      title: 'Fower',
       logo: {
         alt: 'Logo',
         src: '/img/logo.png',
@@ -122,7 +122,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/forsigner/styli',
+          href: 'https://github.com/forsigner/fower',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -140,13 +140,13 @@ module.exports = {
 
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/forsigner/styli/edit/master/website/',
+          editUrl: 'https://github.com/forsigner/fower/edit/master/website/',
           remarkPlugins: [require('./src/plugins/remark-npm2yarn')],
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/forsigner/styli/edit/master/website/blog/',
+          editUrl: 'https://github.com/forsigner/fower/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -1,6 +1,6 @@
 {
-  "name": "@styli/parser",
-  "version": "1.9.0",
+  "name": "@fower/parser",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,10 +21,10 @@
   "author": "forsigner",
   "module": "dist/parser.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.9.0",
-    "@styli/css-object-processor": "^1.9.0",
-    "@styli/sheet": "^1.9.0",
-    "@styli/store": "^1.9.0",
-    "@styli/utils": "^1.9.0"
+    "@fower/atom": "^1.0.0",
+    "@fower/css-object-processor": "^1.0.0",
+    "@fower/sheet": "^1.0.0",
+    "@fower/store": "^1.0.0",
+    "@fower/utils": "^1.0.0"
   }
 }

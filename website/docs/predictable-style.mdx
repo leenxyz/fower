@@ -6,7 +6,7 @@ title: Predictable style
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-One of most cool feature of Styli is the predictable style. In traditional CSS, it's not predictable to override style.
+One of most cool feature of Fower is the predictable style. In traditional CSS, it's not predictable to override style.
 
 ## Traditional CSS
 
@@ -33,14 +33,14 @@ If we set `className="red blue"` to a text, it will be color `blue `.
 <TabItem value="React">
 
 ```jsx live
-<Text className="red blue">Styli</Text>
+<Text className="red blue">Fower</Text>
 ```
 
 </TabItem>
 <TabItem value="Vue">
 
 ```html
-<span className="red blue">Styli</span>
+<span className="red blue">Fower</span>
 ```
 
 </TabItem>
@@ -58,14 +58,14 @@ If we reverse it to `className="blue red"` to a text, it will be color `blue `, 
 <TabItem value="React">
 
 ```jsx live
-<Text className="red blue">Styli</Text>
+<Text className="red blue">Fower</Text>
 ```
 
 </TabItem>
 <TabItem value="Vue">
 
 ```html
-<Text className="red blue">Styli</Text>
+<Text className="red blue">Fower</Text>
 ```
 
 </TabItem>
@@ -73,9 +73,9 @@ If we reverse it to `className="blue red"` to a text, it will be color `blue `, 
 
 The color of text is not depended by the order of classNames, it's not predictable.
 
-## In Styli
+## In Fower
 
-In Styli, the style is predictable. The style is depended by the order of Atomic props.
+In Fower, the style is predictable. The style is depended by the order of Atomic props.
 
 If we set props to `red400 green400`, the color of text is `green400`:
 
@@ -90,7 +90,7 @@ If we set props to `red400 green400`, the color of text is `green400`:
 
 ```jsx live
 <Text red400 green400>
-  Styli
+  Fower
 </Text>
 ```
 
@@ -98,7 +98,7 @@ If we set props to `red400 green400`, the color of text is `green400`:
 <TabItem value="Vue">
 
 ```html
-<span red400 green400> Styli </span>
+<span red400 green400> Fower </span>
 ```
 
 </TabItem>
@@ -117,7 +117,7 @@ If we set props to `green400 red400`, the color of text is `red400`:
 
 ```jsx live
 <Text green400 red400>
-  Styli
+  Fower
 </Text>
 ```
 
@@ -125,7 +125,7 @@ If we set props to `green400 red400`, the color of text is `red400`:
 <TabItem value="Vue">
 
 ```html
-<span green400 red400> Styli </span>
+<span green400 red400> Fower </span>
 ```
 
 </TabItem>
@@ -144,7 +144,7 @@ If we set props to `green400 red400 blue400`, the color of text is `blue400`:
 
 ```jsx live
 <Text green400 red400 blue400>
-  Styli
+  Fower
 </Text>
 ```
 
@@ -152,7 +152,7 @@ If we set props to `green400 red400 blue400`, the color of text is `blue400`:
 <TabItem value="Vue">
 
 ```html
-<span green400 red400 blue400> Styli </span>
+<span green400 red400 blue400> Fower </span>
 ```
 
 </TabItem>
