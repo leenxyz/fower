@@ -15,7 +15,8 @@ function getParser(attrs) {
 
   const classArr = className.split(/\s+/)
 
-  if (className) props.className = className
+  // TODO: should handle svg
+  if (className && typeof className === 'string') props.className = className
 
   classArr.forEach((item) => {
     if (item) props[item] = true

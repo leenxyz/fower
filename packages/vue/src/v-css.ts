@@ -3,7 +3,11 @@ import { Parser } from '@styli/parser'
 function handler(el: HTMLElement, bind: any) {
   const props: any = {}
   const { className } = el
-  if (className) props.className = className
+
+  // TODO: should handle svg
+  if (className && typeof className === 'string') {
+    props.className = className
+  }
 
   /** handle children */
   for (const { name, value } of Object.values(el.attributes)) {
