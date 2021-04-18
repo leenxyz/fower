@@ -1,8 +1,25 @@
 import { Box } from '@styli/react';
+import { setTheme } from '@styli/core';
+
+setTheme({
+  colors: {
+    brand100: '#fa0',
+    modes: {
+      dark: {
+        brand100: '#dd0',
+      },
+    },
+  },
+});
 
 export default () => {
   return (
-    <Box>
+    <Box text2XL brand100>
+      40 Lorem ipsum dolor sit amet
+    </Box>
+  );
+  return (
+    <Box _hover={['p1', 'p4']}>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>
       <Box text={40}>40 Lorem ipsum dolor sit amet</Box>
       <Box text={'20px'}>40 Lorem ipsum dolor sit amet</Box>

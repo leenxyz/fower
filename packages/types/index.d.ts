@@ -1,6 +1,7 @@
 import * as CSS from 'csstype'
 import { Atom } from '@styli/atom'
 import { Parser } from '@styli/parser'
+import { Color } from 'vscode'
 
 // tslint:disable-next-line:export-just-namespace
 export = StyliTypes
@@ -293,6 +294,8 @@ declare namespace StyliTypes {
   }
 
   interface Colors {
+    modes?: Record<string, Omit<Colors, 'modes'> | { [key: string]: any }>
+
     transparent: string
     black: string
     white: string

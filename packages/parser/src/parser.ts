@@ -166,6 +166,29 @@ export class Parser {
     // if not cached, let's cache it
     if (!atomCache.get(atom.id)) atomCache.set(atom.id, atom)
 
+    const { modes = {} } = this.config.theme.colors
+    const entries = Object.entries<any>(modes)
+
+    /** for color mode */
+    for (const [mode, colors] of entries) {
+      if (!atom.style) continue
+      const [styleKey, styleValue] = Object.entries(atom.style)[0]
+      const colorValue = colors[styleValue]
+      if (colorValue) {
+        const postfix = '--' + mode
+
+        // TODO: improve clone
+        const modeAtom: Atom = JSON.parse(JSON.stringify(atom))
+
+        modeAtom.className = atom.className + postfix
+        modeAtom.key = atom.key + postfix
+        modeAtom.id = atom.id + postfix
+        modeAtom.meta = { mode, ...atom.meta }
+        modeAtom.style[styleKey as 'color'] = colorValue
+
+        this.atoms.push(modeAtom)
+      }
+    }
     this.atoms.push(atom)
   }
 
