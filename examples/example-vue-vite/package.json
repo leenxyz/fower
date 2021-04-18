@@ -1,6 +1,6 @@
 {
   "name": "example-vue-vite",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -8,7 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@styli/vue": "^1.8.0",
+    "@styli/vue": "^1.9.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {

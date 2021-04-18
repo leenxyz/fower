@@ -1,6 +1,6 @@
 {
   "name": "@styli/styled",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,10 +24,10 @@
     "@types/hoist-non-react-statics": "^3.3.1"
   },
   "dependencies": {
-    "@styli/core": "^1.8.0",
-    "@styli/store": "^1.8.0",
-    "@styli/types": "^1.8.0",
-    "@styli/utils": "^1.8.0",
+    "@styli/core": "^1.9.0",
+    "@styli/store": "^1.9.0",
+    "@styli/types": "^1.9.0",
+    "@styli/utils": "^1.9.0",
     "hoist-non-react-statics": "^3.3.2"
   }
 }

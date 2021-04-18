@@ -1,6 +1,6 @@
 {
   "name": "styli-plugin-font-weight",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/styli-plugin-font-weight.esm.js",
   "dependencies": {
-    "@styli/atom": "^1.8.0",
-    "@styli/core": "^1.8.0",
-    "@styli/store": "^1.8.0",
-    "@styli/types": "^1.8.0",
-    "@styli/utils": "^1.8.0"
+    "@styli/atom": "^1.9.0",
+    "@styli/core": "^1.9.0",
+    "@styli/store": "^1.9.0",
+    "@styli/types": "^1.9.0",
+    "@styli/utils": "^1.9.0"
   }
 }
