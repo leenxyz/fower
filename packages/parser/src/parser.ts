@@ -57,6 +57,12 @@ export class Parser {
   traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
+    const { pseudos = [], theme } = this.config
+    const { breakpoints, modes } = theme || {}
+    const breakpointKeys = Object.keys(breakpoints)
+    const modeKeys: string[] = modes || []
+    const pseudoKeys: string[] = pseudos
+
     const { excludedProps = [] } = props
     const entries = Object.entries<any>(props)
 
@@ -77,8 +83,29 @@ export class Parser {
 
       // parse css prop
       if (propKey === 'css') {
-        this.parseCSSProp(propValue)
+        this.parseCSSObject(propValue)
         continue
+      }
+
+      /** handle _hover, _sm, _dark... */
+      if (propKey.startsWith('_')) {
+        const postfix = propKey.replace(/^_/, '')
+        const obj = Array.isArray(propValue)
+          ? propValue.reduce<any>((r, cur) => ({ ...r, [cur]: true }), {})
+          : propValue
+
+        if (modeKeys.includes(postfix)) {
+          this.parseCSSObject(obj, { mode: postfix })
+          continue
+        }
+        if (breakpointKeys.includes(postfix)) {
+          this.parseCSSObject(obj, { breakpoint: breakpoints[postfix] })
+          continue
+        }
+        if (pseudoKeys.includes(postfix)) {
+          this.parseCSSObject(obj, { pseudo: ':' + postfix })
+          continue
+        }
       }
 
       let atom = new Atom({ propKey, propValue })
@@ -202,6 +229,9 @@ export class Parser {
     const validTypes = ['string', 'boolean', 'number', 'undefined']
     if (propKey === 'css') return true
 
+    // for _hover,_sm,_dark...
+    if (propKey.startsWith('_')) return true
+
     const type = typeof propValue
     if (validTypes.includes(type)) return true
 
@@ -246,7 +276,7 @@ export class Parser {
     }
   }
 
-  parseCSSProp(propValue: any) {
+  parseCSSObject(propValue: any, meta = {}) {
     const parsed = parse(propValue)
 
     const prefixClassName = objectToClassName(propValue)
@@ -254,7 +284,7 @@ export class Parser {
     for (const { selector, selectorType, style } of parsed) {
       const [propKey, propValue] = Object.entries(style)[0]
 
-      let option: Options = { propKey, propValue, meta: {} }
+      let option: Options = { propKey, propValue, meta }
 
       if (selectorType === 'pseudo' && option.meta) {
         option.meta.pseudo = selector
