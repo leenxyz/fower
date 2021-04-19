@@ -1,6 +1,6 @@
 {
   "name": "fower-loader",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -18,9 +18,9 @@
   "author": "forsigner",
   "module": "dist/fower-loader.esm.js",
   "devDependencies": {
-    "@fower/core": "^1.0.0",
+    "@fower/core": "^0.1.0",
     "@types/loader-utils": "^2.0.1",
     "loader-utils": "^2.0.0",
-    "fower-transform": "^1.0.0"
+    "fower-transform": "^0.1.0"
   }
 }

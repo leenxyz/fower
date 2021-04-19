@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-debug",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-debug.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.0.0",
-    "@fower/core": "^1.0.0",
-    "@fower/parser": "^1.0.0",
-    "@fower/types": "^1.0.0",
-    "@fower/utils": "^1.0.0"
+    "@fower/atom": "^0.1.0",
+    "@fower/core": "^0.1.0",
+    "@fower/parser": "^0.1.0",
+    "@fower/types": "^0.1.0",
+    "@fower/utils": "^0.1.0"
   }
 }
