@@ -71,7 +71,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/styli.esm.js',
+      file: 'dist/fower.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -105,9 +105,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/styli.ssr.js',
+      file: 'dist/fower.ssr.js',
       format: 'cjs',
-      name: 'Styli',
+      name: 'Fower',
       exports: 'named',
       globals,
     },
@@ -134,9 +134,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/styli.min.js',
+      file: 'dist/fower.min.js',
       format: 'iife',
-      name: 'Styli',
+      name: 'Fower',
       exports: 'named',
       globals,
     },
