@@ -1,6 +1,6 @@
 {
   "name": "fower-intellisense",
-  "version": "0.1.6",
+  "version": "0.1.0",
   "private": true,
   "displayName": "Fower IntelliSense",
   "description": "Intelligent Fower tooling for VS Code",
@@ -54,6 +54,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@fower/preset-web": "^1.7.0"
+    "@fower/preset-web": "1.0.0-alpha.0"
   }
 }

@@ -3,7 +3,7 @@
   "description": "fower-intellisense-client",
   "author": "forsigner",
   "license": "MIT",
-  "version": "0.1.6",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.55.0"
   },
