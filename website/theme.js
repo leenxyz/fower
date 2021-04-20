@@ -80,7 +80,8 @@ module.exports = {
     {
       types: ['selector'],
       style: {
-        color: 'rgb(215, 186, 125)',
+        // color: 'rgb(215, 186, 125)',
+        color: rgb(0, 0, 159);
       },
     },
     {

@@ -1,0 +1,280 @@
+---
+slug: fower-v1-released
+title: Fower v1.0
+author: forsigner
+# author_title: Front End Engineer @ Facebook
+author_url: https://github.com/forsigner
+author_image_url: https://avatars.githubusercontent.com/u/2668081?v=4
+tags: [React, Vue, Fower]
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+After half a year's efforts, today we're finally releasing Fower v1.0.
+
+## What is Fower?
+
+Fower is a styling tool library that allows you to efficiently develop UI. The goal is to make it easier for you to write CSS. The core features of Fower are Atomic, Type Safe, and CSS in JS. It pays great attention to the development experience, allowing you to build user interface quickly and happily.
+
+## The Story
+
+A year ago, our team was developing Web, React native, and Mini Program projects at the same time. In these three types of projects, we used different styling tool:
+
+- In the Web project, we use styed-component to write style;
+- In the React native project, we use the `StyleSheet.create` that comes with React native;
+- In the Mini Program project, We use Sass to write css;
+
+The three style solutions are written in different way, which makes us particularly painful when writing styles:
+
+- The development experience is poor. When developing the same user interface, we need to write three types of css code, and need to constantly switch habits and thinking.
+- The tool chain is too broad and too complicated,，Styled-component、Sass、StyleSheet.create...
+- Development efficiency is low, and there are too many duplicate codes.
+- CSS has many inherent shortcomings and poor maintainability.
+
+Later，We discovered [Tailwindcss](https://tailwindcss.com/), A utility-first CSS framework. We started to use Tailwindcss in the web project. After some time, we found that the development experience is very good, the development efficiency is very high, especially suitable for our projects that require a highly customized interface. Unfortunately, Tailwindcss cannot be used directly in non-web projects such as React native.
+
+The members of our team like the style of Tailwindcss, so we create [Fower](https://github.com/forsigner/fower), it allows us to unify the way we write styles for all projects.
+
+Similar to Tailwindcss, we also use the concept of utility-first, but Fower is a bit different. Fower uses Atomic Props to write styles. The code is as follows:
+
+<Tabs
+  defaultValue="React"
+  values={[
+    { label: 'React', value: 'React', },
+    { label: 'Vue', value: 'Vue', },
+    { label: 'React Native', value: 'rn', },
+    { label: 'Taro', value: 'taro', },
+  ]
+}>
+<TabItem value="React">
+
+```jsx live
+// import { Box } from '@fower/react'
+<Box toCenterY p-10 w-260 rounded-10 shadow>
+  <Box as="img" circle-48 src="/img/jobs.jpg" />
+  <Box ml-10>
+    <Box textXL fontBold>
+      Steve Jobs
+    </Box>
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </Box>
+</Box>
+```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div toCenterY p-10 w-260 rounded-10 shadow>
+  <img circle-48 src="/img/jobs.jpg" />
+  <div ml-10>
+    <div textXL fontBold>Steve Jobs</div>
+    <span gray800>Co-founder of Apple Inc.</span>
+  </div>
+</div>
+```
+
+</TabItem>
+
+<TabItem value="rn">
+
+```jsx
+import React from 'react'
+import { View, Text, Image } from '@fower/react-native'
+
+const ProfileCard = () => (
+  <View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+    <Image circle-48 source={{ uri: '/img/jobs.jpg' }} />
+    <View ml-10>
+      <View textXL fontBold>
+        Steve Jobs
+      </View>
+      <Text gray800>Co-founder of Apple Inc.</Text>
+    </View>
+  </View>
+)
+```
+
+</TabItem>
+
+<TabItem value="taro">
+
+```jsx
+import React from 'react'
+import { View, Text, Image } from '@fower/taro'
+
+const ProfileCard = () => (
+  <View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+    <Image circle-48 src="/img/jobs.jpg" />
+    <View ml-10>
+      <View textXL fontBold>
+        Steve Jobs
+      </View>
+      <Text gray800>Co-founder of Apple Inc.</Text>
+    </View>
+  </View>
+)
+```
+
+</TabItem>
+</Tabs>
+
+## Core concept
+
+Fower is opinionated and we created it based on the following concepts:
+
+- **utility-first**, it allows us to write styles more quickly. Unlike other "utility-first" CSS frameworks, Fower uses "Atomic style prop" to write styles.
+
+- **Type safe**, Our team is a heavy user of TypeScript. The intellisense brought by Type safe make us hardly read the documents, and we do not rely on any editor plugin when writing code to get accurate auto-completion.
+
+- **Framework-agnostic**, This is one of the main reasons we created Fower. Fower allows you to write styles in React, Vue, and React Native in a consistent way.
+
+- **CSS in JS**, We hate to write CSS in a separate CSS file. Pure CSS has many shortcomings, such as: unable to access JS variables; easy to produce style conflicts; easy to generate dead code... We like to use JS (CSS in JS) to write styles, which is more Suitable in the age component. In fact, Fower is not just CSS in JS, we also call it CSS in HTML.
+
+## Some Cool feature
+
+Fower has many features, such as atomic classes, responsiveness, pseudo-classes, themes, design systems, CSS in JS..., I think these are the basic feature of Fower, not special feature.
+
+Fower has a few cool features:
+
+### 1. Layout Toolkit
+
+If I were to choose a favorite feature in Fower, it would undoubtedly be the [Layout Toolkitd](https://fower.vercel.app/docs/fower-layout-introduction).
+
+Fower provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.
+
+Compared with the traditional flex layout, the layout of Fower is more abstract and streamlined. The layout of Fower is abstracted as `toCenter`, `toCenterX`, `toCenterY`, `toLeft`, `toTop`, `toRight`, `toBottom`, `toBetween` , `toEvenly`, `toAround` ten kinds of atomic alignment, you can forget the concept of main axis and cross axis in traditional flex layout when you use them, you only need to have a sense of direction.
+
+Use as below:
+
+```html
+<div toCenter bgGray100 square-200>
+  <div square-60 bgAmber400 rounded-8></div>
+  <div square-80 bgBlue400 rounded-8></div>
+</div>
+```
+
+For more detailed usage, please see the document: [Layout Toolkitd](https://fower.vercel.app/docs/fower-layout-introduction)。
+
+### 2. Predictable style
+
+Another cool feature of Fower is the predictable style. In traditional CSS, it's not predictable to override style.
+
+For example, if you have some css rule like below:
+
+```css
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+```
+
+And some html with css class "red blue" and "blue red":
+
+```html
+<div>
+  <span className="red blue">Fower</span>
+  <span className="blue red">Fower</span>
+</div>
+```
+
+Can you judge the color of the text? It's hard to be sure, if we don't see the above CSS code, you can't directly judge the color of the text, you can only find out through debugging with developer tools.
+
+In Flower, you can easily judge the color of the following text:
+
+```jsx live
+<Box>
+  <Text red400 blue400>
+    text will be color blue400
+  </Text>
+  <Text blue400 red400>
+    text will be color red400
+  </Text>
+</Box>
+```
+
+When we build a reusable component, it's very useful. We can override component style elegantly.
+
+For more detailed usage, please see the document: [Predictable style](https://fower.vercel.app/docs/predictable-style)。
+
+### 3. Color helper
+
+Another cool feature of Fower is the color helper. you can handle color with some postfix.
+
+Use `--D{0-100}` postfix to darken a color.
+
+```jsx live
+<Box toEvenly toCenterY>
+  <Box red300>normal</Box>
+  <Box red300--D40>darken</Box>
+  <Box color="#fff--D40">darken</Box>
+  <Box bgRed300 square-84></Box>
+  <Box bgRed300--D40 square-84></Box>
+  <Box border borderRed300 square-84></Box>
+  <Box border borderRed300--D40 square-84></Box>
+</Box>
+```
+
+Use `--L{0-100}` to lighten a color.
+
+```jsx live
+<Box toEvenly>
+  <Box red500>normal</Box>
+  <Box red500--T40>transparentize</Box>
+  <Box color="#000--T40">transparentize</Box>
+  <Box bgRed500 square-84></Box>
+  <Box bgRed500--T40 square-84></Box>
+  <Box border borderRed300 square-84></Box>
+  <Box border borderRed300--T40 square-84></Box>
+</Box>
+```
+
+Use `--T{0-100}` to transparentize a color.
+
+```jsx live
+<Box toEvenly>
+  <Box red500>normal</Box>
+  <Box red500--T40>transparentize</Box>
+  <Box color="#000--T40">transparentize</Box>
+  <Box bgRed500 square-84></Box>
+  <Box bgRed500--T40 square-84></Box>
+  <Box border borderRed300 square-84></Box>
+  <Box border borderRed300--T40 square-84></Box>
+</Box>
+```
+
+Use `--O{0-100}` to opacify a color.
+
+```jsx live
+<Box toEvenly>
+  <Box color="rgba(0,0,0,0.4)">0.4</Box>
+  <Box color="rgba(0,0,0,0.4)--O40">Opacify to 0.6</Box>
+  <Box bg="rgba(0,0,0,0.4)" square-84></Box>
+  <Box bg="rgba(0,0,0,0.4)--O40" square-84></Box>
+  <Box border borderColor="rgba(0,0,0,0.4)" square-84></Box>
+  <Box border borderColor="rgba(0,0,0,0.4)--O40" square-84></Box>
+</Box>
+```
+
+For more detailed usage, please see the document: [Color helper](https://fower.vercel.app/docs/color-helper)。
+
+### 4. Composition Postfix
+
+Fower proveders some postfix to handle style, like: `--hover`, `--focus`, `--sm`, `--dark`, `--T{amount}`...
+
+Another cool feature of Fower is Composition Postfix. You can combine some postfix, and The order is arbitrary:
+
+```jsx live
+<Box square-84 bgOrange300 bgOrange400--D10--hover--sm></Box>
+```
+
+The below code is equal above:
+
+```jsx live
+<Box square-84 bgOrange300 bgOrange400--hover--sm--D10></Box>
+```
+
+In the end, Fower is a opinionated style tool, if you like it, you can give it a star in github: [Fower](https://github.com/forsigner/fower).

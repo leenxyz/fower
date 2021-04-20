@@ -13,6 +13,17 @@ setTheme({
 });
 
 export default () => {
+  // TODO: bug
+  return (
+    <Box toCenter>
+      <Box square-84 bgOrange300 bgOrange400--D10--hover--sm--i>
+        A
+      </Box>
+      <Box square-84 bgOrange300 bgOrange400--D10--hover--i--sm>
+        B
+      </Box>
+    </Box>
+  );
   return (
     <Box
       text2XL
