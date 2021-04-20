@@ -4,54 +4,31 @@ sidebar_label: Use with Vue
 title: 在 Vue 中使用
 ---
 
-[Vue](https://cn.vuejs.org/) 是一个渐进式 JavaScript 框架。
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+在 Vue.js 中使用 Fower 非常简单。
 
 ## 安装
 
-```bash
-npm i @fower/vue -S
-```
-
-## 使用
-
-首先，你需要注册 Fower 的 Vue 插件:
-
-```jsx
-import Vue from 'vue'
-import vueFower from '@fower/vue'
-
-Vue.use(vueFower)
-```
-
-然后，给元素加上 `v-css` 指令，然后再添加原子属性即可实现样式:
-
-```jsx
-<template>
-  <div v-css toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <img v-css circle-48 src="/img/jobs.jpg" />
-    <div v-css ml-10>
-      <div v-css textXL fontBold>
-        Steve Jobs
-      </div>
-      <span v-css gray800>
-        Co-founder of Apple Inc.
-      </span>
-    </div>
-  </div>
-</template>
-```
-
-[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
-
-## 进阶使用
-
-在上面的用法中，我们给 html 元素添加原子属性时，同时我们要增加一个 `v-css`指令，特别繁琐。我们能否不添加 `v-css` 指令呢？答案是可以的。
-
-怎么使用呢？你可以在 webpack 配置中修改 vue-loader 配置达到这样的效果。比如你使用的是 Vue CLI，那修改 `vue.config.js`。
+首先，安装 fower 相关的类库：
 
 ```bash
-npm i @fower/vue-template-compiler
+npm i @fower/vue @fower/vue-template-compiler
 ```
+
+## 配置 `vue-loader`
+
+然后，配置 `vue-loader`，把配置项的 `compiler` 配置为 `require('@fower/vue-template-compiler')`。假设你使用 `vue-cli` 或者 `nuxt` 构建 Vue 项目。配置如下：
+
+<Tabs
+  defaultValue="vue-cli"
+  values={[
+    { label: 'Vue CLI', value: 'vue-cli', },
+    { label: 'Nuxt', value: 'nuxt', },
+  ]
+}>
+<TabItem value="vue-cli">
 
 ```js title="vue.config.js"
 module.exports = {
@@ -68,23 +45,63 @@ module.exports = {
 }
 ```
 
-然后你就不需要再写 `v-css` 指令，而是直接在 html 中写原子属性：
+注意，使用 vue-cli 时，最好在 `vue.config.js` 增加配置 `parallel: false`。
 
-Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
+</TabItem>
+<TabItem value="nuxt">
 
-```jsx
+```js title="nuxt.config.js"
+export default {
+  build: {
+    loaders: {
+      vue: {
+        compiler: require('@fower/vue-template-compiler'),
+      },
+    },
+  },
+}
+```
+
+</TabItem>
+</Tabs>
+
+## 使用
+
+现在，你就可以直接在 HTML 中直接使用原子属性编写样式了：
+
+```html
 <template>
   <div toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <img circle-48 src="/img/jobs.jpg" />
+    <img circle-48 src="/img/vue-logo.png" />
     <div ml-10>
-      <div textXL fontBold>
-        Steve Jobs
-      </div>
-      <span gray800>Co-founder of Apple Inc.</span>
+      <div textXL fontBold>Evan You</div>
+      <span gray800>Creator of Vue.js.</span>
     </div>
   </div>
 </template>
 ```
+
+[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
+
+当然，如果你接受不了原子属性这种写法，你也可以使用 css 类名：
+
+```jsx
+<template>
+  <div class="toCenterY p-10 w-260 bgWhite rounded-10 shadow">
+    <img src="/img/vue-logo.png" class="circle-48" />
+    <div class="ml-10">
+      <div class="textXL fontBold">Evan You</div>
+      <span class="gray800">Creator of Vue.js.</span>
+    </div>
+  </div>
+</template>
+```
+
+## 只能提示
+
+为了更好的开发体验，我们提供了相应的 VS Code 插件：[Fower IntelliSense](https://code.visualstudio.com/docs/editor/intellisense). 安装完插件后，你就可以在编辑器中享受智能提示了。
+
+![fower-intellisense](/img/fower-intellisense.png)
 
 ## 例子源码
 

@@ -147,7 +147,7 @@ describe('getClassNames()', () => {
     expect(classNames).toMatchObject(['p1', 'm1'])
   })
 
-  test.only('with override style', () => {
+  test('with override style', () => {
     const parser = new Parser({ p1: true, p2: true, m1: true, m2: true })
     const classNames = parser.getClassNames()
     expect(classNames).toMatchObject(['p2', 'm2'])

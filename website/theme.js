@@ -44,6 +44,13 @@ module.exports = {
         color: '#00a4db',
       },
     },
+
+    {
+      types: ['attr-value', 'tag'],
+      style: {
+        color: 'rgb(78, 201, 176)',
+      },
+    },
     {
       types: [
         'entity',
@@ -80,7 +87,7 @@ module.exports = {
       // Fix tag color
       types: ['tag'],
       style: {
-        color: 'rgb(78, 201, 176)',
+        color: '#2973b7',
         // color: "#e3116c"
       },
     },
@@ -90,6 +97,14 @@ module.exports = {
       languages: ['markup'],
       style: {
         color: 'rgb(86, 156, 214)',
+      },
+    },
+    {
+      // Fix tag color for HTML
+      types: ['string'],
+      languages: ['markup', 'js', 'jsx'],
+      style: {
+        color: 'rgb(78, 201, 176)',
       },
     },
     {

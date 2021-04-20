@@ -3,52 +3,31 @@ id: use-with-vue
 title: Use with Vue
 ---
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Fower can be easily used with [Vue.js](https://vuejs.org/) .
+
 ## Installation
 
-```bash
-npm i @fower/vue
-```
-
-## Basic usage
-
-First, you need to register Fower's Vue plugin:
-
-```jsx
-import Vue from 'vue'
-import fowerVue from '@fower/vue'
-
-Vue.use(fowerVue)
-```
-
-Then, add the `v-css` directive to the element, and then add Atomic Prop to create the style:
-
-```jsx
-<template>
-  <div v-css toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <img v-css circle-48 src="/img/jobs.jpg" />
-    <div v-css ml-10>
-      <div v-css textXL fontBold>
-        Steve Jobs
-      </div>
-      <span v-css gray800>
-        Co-founder of Apple Inc.
-      </span>
-    </div>
-  </div>
-</template>
-```
-
-[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
-
-## Advanced usage
-
-In the above usage, when we add Atomic Props to HTML elements, we also need to add a `v-css` directive, which is particularly cumbersome. Can we not add the `v-css` directive? The answer is yes.
-
-How to use it? You can modify the vue-loader configuration in the webpack configuration to get it. For example, if you are using Vue CLI, modify `vue.config.js`.
+First, install fower bindings for vue.
 
 ```bash
-npm i @fower/vue-template-compiler
+npm i @fower/vue @fower/vue-template-compiler
 ```
+
+## Config `vue-loader`
+
+Then, configure `vue-loader` compiler option to `require('@fower/vue-template-compiler')`. We assume you are using `vue-cli` or `nuxt` to build Vue App:
+
+<Tabs
+  defaultValue="vue-cli"
+  values={[
+    { label: 'Vue CLI', value: 'vue-cli', },
+    { label: 'Nuxt', value: 'nuxt', },
+  ]
+}>
+<TabItem value="vue-cli">
 
 ```js title="vue.config.js"
 module.exports = {
@@ -65,23 +44,63 @@ module.exports = {
 }
 ```
 
-Then you don't need to write the `v-css` directive, but write Atomic Props directly in HTML:
-
 Note: use with vue-cli, you should set `parallel: false` in `vue.config.js`.
 
-```jsx
+</TabItem>
+<TabItem value="nuxt">
+
+```js title="nuxt.config.js"
+export default {
+  build: {
+    loaders: {
+      vue: {
+        compiler: require('@fower/vue-template-compiler'),
+      },
+    },
+  },
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Enjoy it
+
+Now, you can write Atomic Props directly in HTML:
+
+```html
 <template>
   <div toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <img circle-48 src="/img/jobs.jpg" />
+    <img circle-48 src="/img/vue-logo.png" />
     <div ml-10>
-      <div textXL fontBold>
-        Steve Jobs
-      </div>
-      <span gray800>Co-founder of Apple Inc.</span>
+      <div textXL fontBold>Evan You</div>
+      <span gray800>Creator of Vue.js.</span>
     </div>
   </div>
 </template>
 ```
+
+[![Edit fower-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fower-vue-8o5dd?fontsize=14&hidenavigation=1&theme=dark)
+
+If you don't like Atomic Props, you can use atomic css class instead:
+
+```jsx
+<template>
+  <div class="toCenterY p-10 w-260 bgWhite rounded-10 shadow">
+    <img src="/img/vue-logo.png" class="circle-48" />
+    <div class="ml-10">
+      <div class="textXL fontBold">Evan You</div>
+      <span class="gray800">Creator of Vue.js.</span>
+    </div>
+  </div>
+</template>
+```
+
+## IntelliSense
+
+To get IntelliSense in VS Code, just to install VS Code plugin: [Fower IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).
+
+![fower-intellisense](/img/fower-intellisense.png)
 
 ## Example source code
 

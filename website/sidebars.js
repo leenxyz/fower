@@ -1,8 +1,10 @@
 module.exports = {
   someSidebar: {
-    'Getting Started': [
+    Introduction: [
       'about',
-      'installation',
+      // 'installation',
+    ],
+    'Getting Started': [
       'use-with-react',
       'use-with-vue',
       'use-with-rn',
