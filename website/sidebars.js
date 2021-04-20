@@ -1,9 +1,6 @@
 module.exports = {
   someSidebar: {
-    Introduction: [
-      'about',
-      // 'installation',
-    ],
+    Introduction: ['about', 'comparison'],
     'Getting Started': [
       'use-with-react',
       'use-with-vue',

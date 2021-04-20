@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = {
   title: 'Fower',
   tagline: 'An Atomic CSS in JS library for rapid UI development',
-  url: 'https://fower.js.org',
+  url: 'https://fower.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -117,6 +117,13 @@ module.exports = {
         //   label: 'Taro',
         //   position: 'left',
         // },
+
+        {
+          to: 'blog',
+          activeBasePath: 'blog',
+          label: 'Blog',
+          position: 'right',
+        },
         {
           type: 'localeDropdown',
           position: 'right',

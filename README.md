@@ -10,12 +10,12 @@ An Atomic CSS in JS library for rapid UI development.
 
 ## Quick Start
 
-- [Use with React](https://fower.js.org/docs/use-with-react)
-- [Use with React Native](https://fower.js.org/docs/use-with-rn)
+- [Use with React](https://fower.vercel.app/docs/use-with-react)
+- [Use with React Native](https://fower.vercel.app/docs/use-with-rn)
 
 ## Documentation
 
-Documentation website: [fower.js.org](https://fower.js.org/) | [English](https://fower.js.org/) | [中文](https://fower.js.org/zh-cn/)
+Documentation website: [fower.vercel.app](https://fower.vercel.app/) | [English](https://fower.vercel.app/) | [中文](https://fower.vercel.app/zh-cn/)
 
 ## Development
 
@@ -24,4 +24,3 @@ Documentation website: [fower.js.org](https://fower.js.org/) | [English](https:/
 ## License
 
 [MIT License](https://github.com/forsigner/fower/blob/master/LICENSE)
-
