@@ -170,8 +170,7 @@ function Home() {
         <Box className="toBetween flexDirection-row">
           <Box>
             <Box className="leadingNone fontExtrabold textLeft" style={{ fontSize: 78 }}>
-              An <span className={styles.red}>Atomic CSS</span>{' '}
-              <span className={styles.green}>in JS</span> library for rapid UI development
+              An utility-first CSS in JS library for rapid UI development
             </Box>
             <Box text2XL textLeft py2>
               <Translate id="home.subtitle" description="The homepage welcome message">
