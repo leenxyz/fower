@@ -3,4 +3,37 @@ id: types
 title: '@fower/types'
 ---
 
-wip
+## Installation
+
+```bash npm2yarn
+npm install @fower/types
+```
+
+## Usage
+
+When you customize an atomic props using `addAtom` or `composeAtom`,
+you should extend AtomicProps types to get editor IntelliSense:
+
+```ts
+declare module '@fower/types' {
+  export interface AtomicProps {
+    textBody?: boolean
+
+    brandLight?: boolean
+    brandLighter?: boolean
+    brandLightest?: boolean
+
+    brandPrimary?: boolean
+
+    brandDark?: boolean
+    brandDarker?: boolean
+    brandDarkest?: boolean
+
+    bgBrandPrimary?: boolean
+
+    borderBrandPrimary?: boolean
+
+    formInput?: boolean
+  }
+}
+```

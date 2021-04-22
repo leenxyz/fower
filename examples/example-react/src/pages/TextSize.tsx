@@ -1,5 +1,14 @@
 import { Box } from '@fower/react';
-import { setTheme, composeAtom } from '@fower/core';
+import { setTheme, composeAtom, createStyle } from '@fower/core';
+import { styled } from '@fower/styled';
+
+console.log(
+  '------createStyle:',
+  createStyle('bgAmber300', 'rounded', {
+    p10: true,
+    textShadow: '1px 2px 2px #ccc',
+  }),
+);
 
 setTheme({
   colors: {
@@ -22,7 +31,16 @@ composeAtom('formInput', {
   py2: true,
 });
 
+const MyText = styled('span', 'border', 'p-1', 'rounded', {
+  display: 'flex',
+});
+
 export default () => {
+  return (
+    <MyText text3XL fontBold green400>
+      Hello world
+    </MyText>
+  );
   return (
     <Box
       rounded3XL

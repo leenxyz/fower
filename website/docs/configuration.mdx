@@ -72,7 +72,9 @@ Learn more about the theme in the [theme section](/docs/theme).
 Fower config is a plain JavaScript object, you can read it from `@fower/core`.
 
 ```js
-import { config } from '@fower/core'
+import { getConfig } from '@fower/core'
+
+const config = getConfig()
 
 console.log('config:', config)
 console.log('config.inline:', config.inline)

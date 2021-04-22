@@ -140,7 +140,10 @@ function DocSidebarItemCategory({ item, onItemClick, collapsible, activePath, ..
         style={{
           height: menuListHeight,
           marginLeft: 0,
+          marginTop: 0,
+          marginBottom: 0,
           fontSize: 15,
+          // fontWeight: 'normal'
         }}
         onTransitionEnd={() => {
           if (!collapsed) {

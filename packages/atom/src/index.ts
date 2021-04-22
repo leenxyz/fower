@@ -50,7 +50,7 @@ export class Atom {
 
   /**
    * get style keys string
-   * @readonly
+   * @readonlyReactElement
    * @memberof Atom
    * @example
    * { color: "#999"} -> color

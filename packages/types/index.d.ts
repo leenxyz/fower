@@ -1,7 +1,6 @@
 import * as CSS from 'csstype'
 import { Atom } from '@fower/atom'
 import { Parser } from '@fower/parser'
-import { Color } from 'vscode'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
@@ -45,7 +44,36 @@ declare namespace FowerTypes {
   //         : FowerCSSProperties | number | string | boolean
   //     }
 
-  interface AtomicProps {
+  interface PostfixAtomicProps {
+    _sm?: GroupedAtomicProps
+    _md?: GroupedAtomicProps
+    _lg?: GroupedAtomicProps
+    _xl?: GroupedAtomicProps
+    _2xl?: GroupedAtomicProps
+
+    _dark?: GroupedAtomicProps
+
+    _active?: GroupedAtomicProps
+    _checked?: GroupedAtomicProps
+    _disabled?: GroupedAtomicProps
+    _enabled?: GroupedAtomicProps
+    _default?: GroupedAtomicProps
+    _empty?: GroupedAtomicProps
+    _focus?: GroupedAtomicProps
+    _focusWithin?: GroupedAtomicProps
+    _invalid?: GroupedAtomicProps
+    _hover?: GroupedAtomicProps
+    _link?: GroupedAtomicProps
+    _visited?: GroupedAtomicProps
+    _firstChild?: GroupedAtomicProps
+    _lastChild?: GroupedAtomicProps
+    _after?: GroupedAtomicProps
+    _before?: GroupedAtomicProps
+    _placeholder?: GroupedAtomicProps
+    _selection?: GroupedAtomicProps
+  }
+
+  interface AtomicProps extends PostfixAtomicProps {
     /**
      * if Atomic Prop is conflict with others, you can use this ignore Fower Atomic Prop, And it will be pass to inner component.
      *
@@ -102,33 +130,6 @@ declare namespace FowerTypes {
      * ```
      */
     css?: CSSObject
-
-    _sm?: GroupedAtomicProps
-    _md?: GroupedAtomicProps
-    _lg?: GroupedAtomicProps
-    _xl?: GroupedAtomicProps
-    _2xl?: GroupedAtomicProps
-
-    _dark?: GroupedAtomicProps
-
-    _active?: GroupedAtomicProps
-    _checked?: GroupedAtomicProps
-    _disabled?: GroupedAtomicProps
-    _enabled?: GroupedAtomicProps
-    _default?: GroupedAtomicProps
-    _empty?: GroupedAtomicProps
-    _focus?: GroupedAtomicProps
-    _focusWithin?: GroupedAtomicProps
-    _invalid?: GroupedAtomicProps
-    _hover?: GroupedAtomicProps
-    _link?: GroupedAtomicProps
-    _visited?: GroupedAtomicProps
-    _firstChild?: GroupedAtomicProps
-    _lastChild?: GroupedAtomicProps
-    _after?: GroupedAtomicProps
-    _before?: GroupedAtomicProps
-    _placeholder?: GroupedAtomicProps
-    _selection?: GroupedAtomicProps
   }
 
   interface Configuration {

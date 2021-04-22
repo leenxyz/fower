@@ -1,8 +1,7 @@
 import { Box } from '@fower/react';
 import { keyframes } from '@fower/core';
-import { useState } from 'react';
 
-const hash = keyframes({
+const bounce = keyframes({
   'from, 20%, 53%, 80%, to': {
     transform: 'translate3d(0,0,0)',
     padding: 10,
@@ -27,7 +26,7 @@ export default () => {
       <Box
         text-30
         css={{
-          animation: `${hash} 1s ease infinite`,
+          animation: `${bounce} 1s ease infinite`,
         }}
       >
         40 Lorem ipsum dolor sit amet

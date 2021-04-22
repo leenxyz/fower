@@ -54,10 +54,6 @@ export function jsKeyToCssKey(key: string): string {
   return /^[A-Z].+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }
 
-export function modifierToProps(modifier: string) {
-  return modifier.split(/[\s\t\n]+/).reduce((result, cur) => ({ ...result, [cur]: true }), {})
-}
-
 export function objectToClassName(style: Dict, prefix = 'css-') {
   const hashed = hash(JSON.stringify(style))
   return prefix + hashed

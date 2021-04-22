@@ -7,6 +7,6 @@ afterEach(() => {
 })
 
 test('css()', () => {
-  const name = css('p-1 m-100')
+  const name = css('p-1', 'm-100')
   expect(typeof name).toBe('string')
 })
