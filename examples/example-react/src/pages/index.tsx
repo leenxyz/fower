@@ -4,7 +4,7 @@ import {
   createStyle,
   setConfig,
   setTheme,
-  registerAtomicProps,
+  addAtom,
   injectGlobalStyle,
 } from '@fower/core';
 import { useState } from 'react';
@@ -90,7 +90,7 @@ setTheme({
   },
 });
 
-registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
+addAtom(/heading(sm|md|lg)/i, (atom) => {
   const size = atom.propKey.replace('heading', '').toLowerCase();
   switch (size) {
     case 'sm':
@@ -108,7 +108,7 @@ registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
   return atom;
 });
 
-registerAtomicProps('textBody', {
+addAtom('textBody', {
   fontSize: 20,
 });
 

@@ -20,7 +20,7 @@ module.exports = {
       'programmable',
       'reuse',
       'configuration',
-      'register-atomic-props',
+      'add-atom',
       // 'plugin',
       'typescript',
     ],

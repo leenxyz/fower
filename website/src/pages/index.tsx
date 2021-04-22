@@ -169,7 +169,7 @@ function Home() {
       <div className={styles.container}>
         <Box className="toBetween flexDirection-row">
           <Box>
-            <Box className="leadingNone fontExtrabold textLeft" style={{ fontSize: 78 }}>
+            <Box className="leadingNone fontExtrabold textLeft" style={{ fontSize: 68 }}>
               An utility-first CSS in JS library for rapid UI development
             </Box>
             <Box text2XL textLeft py2>

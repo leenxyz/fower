@@ -4,6 +4,6 @@ export * from './createStyle'
 export * from './keyframes'
 export * from './injectGlobalStyle'
 
-const { setConfig, setTheme, getTheme, registerAtomicProps } = store
+const { setConfig, setTheme, getTheme, addAtom } = store
 
-export { setConfig, setTheme, getTheme, registerAtomicProps }
+export { setConfig, setTheme, getTheme, addAtom }

@@ -48,7 +48,7 @@ class Store {
     this.config.plugins.push(...plugins)
   }
 
-  registerAtomicProps = (
+  addAtom = (
     matcher: string | RegExp,
     handleAtomOrStyleObject: FowerPlugin['handleAtom'] | CSSObject,
   ): FowerPlugin => {

@@ -70,9 +70,9 @@ test('use()', () => {
   expect(store.config.plugins).toMatchObject([plugin])
 })
 
-describe('registerAtomicProps()', () => {
+describe('addAtom()', () => {
   test('with string matcher', () => {
-    const { isMatch } = store.registerAtomicProps('textBody', {
+    const { isMatch } = store.addAtom('textBody', {
       fontSize: 30,
     })
 
@@ -83,7 +83,7 @@ describe('registerAtomicProps()', () => {
   })
 
   test('with regex matcher', () => {
-    const { isMatch } = store.registerAtomicProps(/textBody/, {
+    const { isMatch } = store.addAtom(/textBody/, {
       fontSize: 30,
     })
 

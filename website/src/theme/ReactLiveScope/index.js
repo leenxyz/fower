@@ -7,15 +7,15 @@ const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled('button')
 const Input = styled('input')
 
-import { registerAtomicProps } from '@fower/core'
+import { addAtom } from '@fower/core'
 
-registerAtomicProps('textHeading', {
+addAtom('textHeading', {
   fontSize: 28,
   fontWeight: 600,
   lineHeight: 1.5,
 })
 
-registerAtomicProps(/heading(sm|md|lg)/i, (atom) => {
+addAtom(/heading(sm|md|lg)/i, (atom) => {
   const size = atom.propKey.replace('heading', '').toLowerCase()
   switch (size) {
     case 'sm':
