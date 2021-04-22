@@ -1,15 +1,21 @@
-import { CSSObject, Props } from '@fower/types'
-import { modifierToProps } from '@fower/utils'
+import { AtomicProps, PostfixAtomicProps, FowerCSSProperties } from '@fower/types'
 import { Parser } from '@fower/parser'
 
-export function css(...args: (string | CSSObject)[]) {
+export function css(
+  ...args: (
+    | keyof Omit<AtomicProps, keyof PostfixAtomicProps>
+    | ({} & string)
+    | FowerCSSProperties
+  )[]
+): string {
   if (!args.length) return ''
 
-  const props = args.reduce(
-    (result: Props, cur: any) =>
-      Object.assign(result, typeof cur === 'string' ? modifierToProps(cur) : { css: cur }),
-    {} as Props,
-  )
+  const props = args.reduce<any>((result, cur) => {
+    if (typeof cur === 'string') return { ...result, [cur]: true }
+
+    // not string, is object
+    return { ...result, css: cur }
+  }, {})
 
   const parser = new Parser(props)
   parser.insertRule()
