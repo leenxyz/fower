@@ -24,23 +24,8 @@ composeAtom('formInput', {
 
 export default () => {
   return (
-    <Box toCenter p10>
-      <Box as="input" formInput placeholder="your email"></Box>
-    </Box>
-  );
-  // TODO: bug
-  return (
-    <Box toCenter>
-      <Box square-84 bgOrange300 bgOrange400--D10--hover--sm--i>
-        A
-      </Box>
-      <Box square-84 bgOrange300 bgOrange400--D10--hover--i--sm>
-        B
-      </Box>
-    </Box>
-  );
-  return (
     <Box
+      rounded3XL
       text2XL
       _hover={['bgAmber300', 'border']}
       _md={['bgTeal400', 'text5XL']}

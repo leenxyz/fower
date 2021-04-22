@@ -406,7 +406,7 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
-    // console.log('this.atoms:', this.atoms)
+    console.log('this.atoms:', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''
@@ -425,7 +425,13 @@ export class Parser {
       atom.inserted = true
 
       const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
-      const uniqueSelector = this.hasResponsive ? '.' + this.uniqueClassName : ''
+
+      // TODO: need refactor
+      const shouldUseUniqueClassName = !!this.atoms.find(
+        (i) => i.styleKeys === atom.styleKeys && (atom.meta.breakpoint || i.meta.breakpoint),
+      )
+      const uniqueSelector =
+        shouldUseUniqueClassName || atom.meta.breakpoint ? '.' + this.uniqueClassName : ''
 
       let selector = `${uniqueSelector}.${className}`
       if (pseudo) selector = selector + pseudo

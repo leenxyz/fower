@@ -49,6 +49,18 @@ export class Atom {
   }
 
   /**
+   * get style keys string
+   * @readonly
+   * @memberof Atom
+   * @example
+   * { color: "#999"} -> color
+   * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop
+   */
+  get styleKeys() {
+    return Object.keys(this.style || {}).join('-')
+  }
+
+  /**
    * get style key hash
    * @readonly
    * @memberof Atom
