@@ -20,7 +20,7 @@ interface Props {
 }
 
 //  high-frequency used props in react
-const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className']
+const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className', 'placeholder']
 
 /**
  * An Abstract tool to handle atomic props
@@ -106,6 +106,18 @@ export class Parser {
           this.parseCSSObject(obj, { pseudo: ':' + postfix })
           continue
         }
+      }
+
+      const composition = store.compositions.get(propKey)
+      if (composition) {
+        this.parseCSSObject(composition, {})
+
+        const atom = new Atom({ propKey, propValue })
+        atom.handled = true
+        atom.style = {}
+        atom.createClassName(store.config.prefix)
+        this.addAtom(atom)
+        continue
       }
 
       let atom = new Atom({ propKey, propValue })
@@ -199,7 +211,9 @@ export class Parser {
     /** for color mode */
     for (const [mode, colors] of entries) {
       if (!atom.style) continue
-      const [styleKey, styleValue] = Object.entries(atom.style)[0]
+      const entries = Object.entries(atom.style)
+      if (!entries.length) continue
+      const [styleKey, styleValue] = entries[0]
       const colorValue = colors[styleValue]
       if (colorValue) {
         const postfix = '--' + mode
@@ -282,7 +296,9 @@ export class Parser {
     const prefixClassName = objectToClassName(propValue)
 
     for (const { selector, selectorType, style } of parsed) {
-      const [propKey, propValue] = Object.entries(style)[0]
+      const entries = Object.entries(style)
+      if (!entries.length) continue
+      const [propKey, propValue] = entries[0]
 
       let option: Options = { propKey, propValue, meta }
 

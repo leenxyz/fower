@@ -17,6 +17,9 @@ class Store {
     plugins: [],
   } as Configuration
 
+  // composed atomic props
+  compositions = new Map<string, any>()
+
   get theme() {
     return this.config.theme
   }
@@ -68,6 +71,14 @@ class Store {
     }
     this.use(plugin)
     return plugin
+  }
+
+  composeAtom = (atomName: string, cssObject: CSSObject) => {
+    if (this.compositions.get(atomName)) {
+      console.warn(atomName, 'is existed')
+    } else {
+      this.compositions.set(atomName, cssObject)
+    }
   }
 }
 

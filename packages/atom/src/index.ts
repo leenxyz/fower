@@ -28,7 +28,8 @@ export class Atom {
 
     this.inserted = false
 
-    this.meta = options.meta || {}
+    // shallow clone it
+    this.meta = { ...options.meta } || {}
 
     const { propKey, propValue } = this
 

@@ -1,5 +1,5 @@
 import { Box } from '@fower/react';
-import { setTheme } from '@fower/core';
+import { setTheme, composeAtom } from '@fower/core';
 
 setTheme({
   colors: {
@@ -12,7 +12,22 @@ setTheme({
   },
 });
 
+composeAtom('formInput', {
+  'border-2': true,
+  borderGray200: true,
+  'borderAmber400--focus': true,
+  rounded: true,
+  outlineNone: true,
+  px4: true,
+  py2: true,
+});
+
 export default () => {
+  return (
+    <Box toCenter p10>
+      <Box as="input" formInput placeholder="your email"></Box>
+    </Box>
+  );
   // TODO: bug
   return (
     <Box toCenter>
