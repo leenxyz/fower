@@ -406,8 +406,6 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
-    // console.log('this.atoms:', this.atoms)
-
     for (const atom of this.atoms) {
       let rule: string = ''
       const { className, isValid, style = {} } = atom

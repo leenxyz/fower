@@ -40,10 +40,22 @@ const layoutToolkits = [
   toEvenly,
 ]
 
-export function getFlexDirection(props: any): string {
-  if (props.row) return 'row'
-  if (props.column) return 'column'
+// TODO: should refactor
+export function getFlexDirection(props: any = {}): string {
   if (props.flexDirection) return props.flexDirection
+  const directions = ['row', 'column']
+  const find = Object.keys(props)
+    .reverse()
+    .find((i) => directions.includes(i))
+
+  if (find) return find
+
+  const { className = '' } = props
+  const arr: string[] = className.split(/\s+/)
+
+  const findDirection = arr.find((i) => ['flexDirection-column', 'flexDirection-row'].includes(i))
+
+  if (findDirection) return findDirection.replace('flexDirection-', '')
   return 'row'
 }
 
