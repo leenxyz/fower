@@ -3,6 +3,19 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box>
+      <Box h-240 textXS debugChildren toRight column>
+        <Box square-100>AAA</Box>
+        <Box square-100>BBB</Box>
+      </Box>
+
+      <Box h-240 textXS debugChildren toRight row>
+        <Box square-100>AAA</Box>
+        <Box square-100>BBB</Box>
+      </Box>
+    </Box>
+  );
+  return (
+    <Box>
       <Box>row toLeft</Box>
       <Box h-240 textXS debugChildren row toLeft>
         <Box square-100>AAA</Box>

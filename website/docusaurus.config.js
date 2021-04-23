@@ -87,7 +87,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/installation',
+          to: 'docs/about',
           // activeBasePath: 'docs',
           activeBasePath: 'docs/introduction',
           label: 'Docs',
