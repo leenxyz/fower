@@ -4,7 +4,7 @@ import flexItem from 'fower-plugin-box-alignment'
 import color from 'fower-plugin-color'
 import display from 'fower-plugin-display'
 import flexBox from 'fower-plugin-flexbox'
-import layoutEngine from 'fower-plugin-layout-engine'
+import layout from 'fower-plugin-layout'
 import lineHeight from 'fower-plugin-line-height'
 import margin from 'fower-plugin-margin'
 import opacity from 'fower-plugin-opacity'
@@ -26,7 +26,7 @@ export const plugins = [
   display(),
   flexBox(),
   flexItem(),
-  layoutEngine(),
+  layout(),
   lineHeight(),
   margin(),
   opacity(),

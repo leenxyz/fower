@@ -38,7 +38,7 @@ const Type: FC<{ type?: string }> = ({ children, type = 'row' }) => {
 
 const Container = styled(ContainerComponent)
 
-export const LayoutEngine1 = () => {
+export const Layout1 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -129,7 +129,7 @@ export const LayoutEngine1 = () => {
   )
 }
 
-export const LayoutEngine2 = () => {
+export const Layout2 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -220,7 +220,7 @@ export const LayoutEngine2 = () => {
   )
 }
 
-export const LayoutEngine3 = () => {
+export const Layout3 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -303,7 +303,7 @@ export const LayoutEngine3 = () => {
   )
 }
 
-export const LayoutEngine4 = () => {
+export const Layout4 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -386,7 +386,7 @@ export const LayoutEngine4 = () => {
   )
 }
 
-export const LayoutEngine5 = () => {
+export const Layout5 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -469,7 +469,7 @@ export const LayoutEngine5 = () => {
   )
 }
 
-export const LayoutEngine6 = () => {
+export const Layout6 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -552,7 +552,7 @@ export const LayoutEngine6 = () => {
   )
 }
 
-export const LayoutEngine7 = () => {
+export const Layout7 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -635,7 +635,7 @@ export const LayoutEngine7 = () => {
   )
 }
 
-export const LayoutEngine8 = () => {
+export const Layout8 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -718,7 +718,7 @@ export const LayoutEngine8 = () => {
   )
 }
 
-export const LayoutEngine9 = () => {
+export const Layout9 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -777,7 +777,7 @@ export const LayoutEngine9 = () => {
   )
 }
 
-export const LayoutEngine10 = () => {
+export const Layout10 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>
@@ -836,7 +836,7 @@ export const LayoutEngine10 = () => {
   )
 }
 
-export const LayoutEngine11 = () => {
+export const Layout11 = () => {
   return (
     <Box bgGray100 p4 toCenter column mb2>
       <Box bgYellow300 inlineBlock p3 mb4 rounded-8 fontBold>

@@ -36,7 +36,7 @@
     "fower-plugin-flexbox": "^1.1.0",
     "fower-plugin-font-weight": "^1.1.0",
     "fower-plugin-grid": "^1.1.0",
-    "fower-plugin-layout-engine": "^1.1.0",
+    "fower-plugin-layout": "^1.1.0",
     "fower-plugin-line-height": "^1.1.0",
     "fower-plugin-margin": "^1.1.0",
     "fower-plugin-opacity": "^1.1.0",
