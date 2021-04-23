@@ -257,7 +257,16 @@ export class Parser {
    * @param atom
    */
   mutateAtom(atom: Atom): void {
+    for (const plugin of this.plugins) {
+      if (!plugin.isMatch?.(atom.key)) continue
+
+      if (plugin.beforeHandleAtom) {
+        atom = plugin.beforeHandleAtom(atom, this as any)
+      }
+    }
+
     const cachedAtom = atomCache.get(atom.id)
+
     if (cachedAtom) {
       this.addAtom(cachedAtom)
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
@@ -274,8 +283,8 @@ export class Parser {
     for (const plugin of this.plugins) {
       if (!plugin.isMatch?.(atom.key)) continue
 
-      if (plugin.beforeAtomStyleCreate) {
-        atom = plugin.beforeAtomStyleCreate(atom, this as any)
+      if (plugin.beforeHandleAtom) {
+        atom = plugin.beforeHandleAtom(atom, this as any)
       }
 
       if (plugin.handleAtom) {
@@ -405,6 +414,8 @@ export class Parser {
     this.atoms = this.atoms.sort((a, b) => {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
+
+    // console.log('this.atoms:', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''

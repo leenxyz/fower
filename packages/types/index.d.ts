@@ -160,12 +160,12 @@ declare namespace FowerTypes {
     isMatch?(key: string): boolean
 
     /**
-     * before atom style creating
-     * to modify some atom attr before creating
+     * before handle atom
+     * to modify some atom attr before handle
      * @param atom
      * @param parser
      */
-    beforeAtomStyleCreate?(atom: Atom, parser: Parser): Atom
+    beforeHandleAtom?(atom: Atom, parser: Parser): Atom
 
     /**
      * on atom style creating

@@ -119,6 +119,15 @@ export function toStyle(key: string, props: any) {
 export default (): FowerPlugin => {
   return {
     isMatch,
+    beforeHandleAtom(atom, parser) {
+      const direction = getFlexDirection(parser.props)
+      // TODO:
+      if (atom.id.startsWith('row-') || atom.id.startsWith('column-')) {
+        return atom
+      }
+      atom.id = `${direction}-${atom.id}`
+      return atom
+    },
     handleAtom(atom, parser) {
       if ([row, column].includes(atom.propKey)) {
         atom.isValid = false
@@ -126,9 +135,7 @@ export default (): FowerPlugin => {
         return atom
       }
 
-      const direction = getFlexDirection(parser.props)
       atom.style = toStyle(atom.key, parser.props)
-      atom.id = `${direction}-${atom.id}`
 
       return atom
     },
