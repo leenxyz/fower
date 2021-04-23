@@ -114,7 +114,9 @@ export default (): FowerPlugin => {
         return atom
       }
 
+      const direction = getFlexDirection(parser.props)
       atom.style = toStyle(atom.key, parser.props)
+      atom.id = `${direction}-${atom.id}`
 
       return atom
     },
