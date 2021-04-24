@@ -390,16 +390,18 @@ export class Parser {
    * get style object
    */
   toStyle() {
-    return this.atoms.reduce<any>((result, atom) => {
+    const style = this.atoms.reduce<any>((result, atom) => {
       if (!atom.isValid) return result // not style type
+
+      const colors: any = store.theme.colors
+
       const style = Object.entries(atom.style).reduce<any>((c, [key, value]) => {
-        return {
-          ...c,
-          [key]: this.formatCssValue(jsKeyToCssKey(key), value),
-        }
+        const cssValue = this.formatCssValue(jsKeyToCssKey(key), colors[value] || value)
+        return { ...c, [key]: cssValue }
       }, {})
       return { ...result, ...style }
     }, {})
+    return style
   }
 
   /**

@@ -1,9 +1,11 @@
-import isBrowser from 'is-in-browser'
 import hash from 'string-hash'
 
 type Dict = Record<string, any>
 
-export { isBrowser, hash }
+export { hash }
+
+export const isBrowser =
+  typeof window === 'object' && typeof document === 'object' && document.nodeType === 9
 
 export function upFirst(s: string = '') {
   return s.replace(/^[a-z]/, (g) => g.toUpperCase())

@@ -15,9 +15,9 @@ import rounded from 'fower-plugin-rounded'
 import size from 'fower-plugin-size'
 import textAlign from 'fower-plugin-text-align'
 import textSize from 'fower-plugin-text-size'
+import textTransform from 'fower-plugin-text-transform'
 import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
-import visibility from 'fower-plugin-visibility'
 
 export const plugins = [
   background(),
@@ -37,7 +37,7 @@ export const plugins = [
   size(),
   textAlign(),
   textSize(),
+  textTransform(),
   fontWeight(),
   zIndex(),
-  visibility(),
 ]
