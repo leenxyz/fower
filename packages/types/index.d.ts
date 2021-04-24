@@ -1,12 +1,34 @@
 import * as CSS from 'csstype'
 import { Atom } from '@fower/atom'
-import { Parser } from '@fower/parser'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
 export as namespace FowerTypes
 
 declare namespace FowerTypes {
+  interface ParserInterface {
+    atoms: Atom[]
+
+    props: any
+
+    config: FowerTypes.Configuration
+
+    uniqueClassName: string
+
+    hasResponsive: boolean
+
+    addAtom(atom: Atom): void
+
+    getClassNames(): string[]
+
+    toStyle(): any
+
+    toRules(enableInserted?: boolean): string[]
+
+    getParsedProps(): any
+    insertRule(): any
+  }
+
   type FowerColor = CSS.Property.Color | keyof Colors
 
   type As = React.ElementType
@@ -165,20 +187,20 @@ declare namespace FowerTypes {
      * @param atom
      * @param parser
      */
-    beforeHandleAtom?(atom: Atom, parser: Parser): Atom
+    beforeHandleAtom?(atom: Atom, parser: ParserInterface): Atom
 
     /**
      * on atom style creating
      * @param atom
      * @param parser
      */
-    handleAtom?(atom: Atom, parser: Parser): Atom
+    handleAtom?(atom: Atom, parser: ParserInterface): Atom
 
     /**
      * after atom style created
      * @param parser
      */
-    afterAtomStyleCreate?(parser: Parser): void
+    afterAtomStyleCreate?(parser: ParserInterface): void
   }
 
   interface Theme {
