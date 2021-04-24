@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "engines": {
     "node": ">=10"
@@ -27,7 +28,6 @@
     "@fower/types": "^1.2.0"
   },
   "devDependencies": {
-    "@types/react-native": "^0.63.46",
-    "react-native": "^0.63.4"
+    "@types/react-native": "^0.64.4"
   }
 }

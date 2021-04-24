@@ -8,10 +8,7 @@ beforeAll(() => {
 })
 
 test('createStyle()', () => {
-  const style = createStyle('p-1', 'm-100', {
-    backgroundColor: 'red',
-  })
+  const style = createStyle('p-1', 'm-100')
   expect(style.padding).toEqual('1px')
   expect(style.margin).toEqual('100px')
-  expect(style.backgroundColor).toEqual('red')
 })
