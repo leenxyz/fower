@@ -66,7 +66,7 @@ export class Parser {
     const { excludedProps = [] } = props
     const entries = Object.entries<any>(props)
 
-    if (props.className) {
+    if (props?.className) {
       for (const item of props.className.split(/\s+/)) {
         entries.push([item, true])
       }

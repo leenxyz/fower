@@ -11,10 +11,12 @@ export function css(
   if (!args.length) return ''
 
   const props = args.reduce<any>((result, cur) => {
-    if (typeof cur === 'string') return { ...result, [cur]: true }
-
-    // not string, is object
-    return { ...result, css: cur }
+    if (typeof cur === 'string') {
+      if (cur !== 'className') return { ...result, [cur]: true }
+    } else {
+      // not string, is object
+      return { ...result, css: cur }
+    }
   }, {})
 
   const parser = new Parser(props)
