@@ -8,7 +8,6 @@
       "packages/*",
       "examples/*",
       "website"
-
     ],
     "nohoist": [
       "**/html-minifier-terser",
@@ -21,7 +20,8 @@
     "test": "lerna run --parallel --stream test",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "publish": "lerna publish --force-publish=*",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "tie-app"
