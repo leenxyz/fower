@@ -31,6 +31,10 @@
   "eslintConfig": {
     "extends": "tie-app"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": "yarn coveralls",
+    "*.{js,css,md}": "prettier --write"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/forsigner/fower.git"
@@ -51,6 +55,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lerna": "^4.0.0",
+    "lint-staged": ">=10",
     "prettier": "^2.2.1",
     "react": "17.x",
     "react-dom": "17.x",
