@@ -1,5 +1,5 @@
 {
-  "name": "@fower/example-svelte-rollup",
+  "name": "example-svelte-rollup",
   "version": "1.3.0",
   "private": true,
   "scripts": {

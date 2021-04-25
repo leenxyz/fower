@@ -11,6 +11,9 @@
     ],
     "nohoist": [
       "**/html-minifier-terser",
+      "**/svelte",
+      "**/sapper",
+      "**/@sapper",
       "*/@docusaurus/*"
     ]
   },
