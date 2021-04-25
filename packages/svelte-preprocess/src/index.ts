@@ -6,6 +6,8 @@ import { presetWeb } from '@fower/preset-web'
 
 setConfig(presetWeb)
 
+const fowerPlacehoder = '__$$Fower_placehover$$__'
+
 function getProps(attrs: NodeAttributes) {
   const props: any = {}
   const className = attrs.class || ''
@@ -22,29 +24,47 @@ function getProps(attrs: NodeAttributes) {
   Object.entries(attrs).forEach((item) => {
     const key = item[0]
     const value = item[1]
-    if (key === 'class') return
+    if (['class', 'this'].includes(key)) return
+    if (/\{|\}/.test(key)) return
     props[key] = value === '' ? true : value
   })
 
   return props
 }
 
+/** TODO: need refactor */
 export function fowerSveltePreprocess(): PreprocessorGroup {
   return {
     script: async () => {
       return null as any
     },
-    markup: async ({ content }) => {
+    markup: async ({ filename, content }) => {
       let propList: any[] = []
+
+      if (filename.endsWith('@sapper/internal/App.svelte')) return { code: content }
 
       const processor: any = posthtml([
         (tree) => {
           tree.walk((node) => {
-            if (!node || !node.tag || !node.attrs) return node
+            if (!node?.tag || !node.attrs || !Object.keys(node.attrs).length) return node
             if (['script', 'style'].includes(node.tag)) return node
 
             const props = getProps(node.attrs)
             propList.push(props)
+            const attrs = node.attrs
+
+            const newAttrs: NodeAttributes = {}
+
+            // hack
+            Object.entries(attrs).forEach(([key, value]) => {
+              if (/^\{.+\}$/ && value === '') {
+                newAttrs[key] = fowerPlacehoder
+              } else {
+                newAttrs[key] = value
+              }
+            })
+
+            node.attrs = newAttrs
 
             const parser = new Parser(props)
 
@@ -60,7 +80,7 @@ export function fowerSveltePreprocess(): PreprocessorGroup {
         },
       ])
 
-      const html = processor.process(content, {
+      let code: string = processor.process(content, {
         sync: true,
         recognizeSelfClosing: true,
       }).html
@@ -74,8 +94,6 @@ export function fowerSveltePreprocess(): PreprocessorGroup {
         })
         .join(';')
 
-      let code = ''
-
       const fowerCode = `
           import { setConfig, css } from '@fower/core'
           import { presetWeb } from '@fower/preset-web'
@@ -84,13 +102,13 @@ export function fowerSveltePreprocess(): PreprocessorGroup {
           ${cssFns}
       `
 
-      if (html.includes('<script>')) {
-        code = html.replace('<script>', `<script> \n ${fowerCode}`)
+      if (code.includes('<script>')) {
+        code = code.replace('<script>', `<script> \n ${fowerCode}\n`)
       } else {
-        code = html + `<script>\n ${fowerCode} \n</script>`
+        code = code + `<script>\n ${fowerCode} \n</script>`
       }
 
-      return { code }
+      return { code: code.replace(`="${fowerPlacehoder}"`, '') }
     },
   }
 }
