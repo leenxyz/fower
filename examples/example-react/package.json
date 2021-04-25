@@ -9,17 +9,6 @@
     "build": "echo 'build'",
     "test": "echo 'build:test'"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
-  },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "@chakra-ui/react": "1.5.0",
@@ -37,8 +26,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@umijs/test": "^3.3.9",
-    "lint-staged": "^10.0.7",
-    "prettier": "^2.2.0",
+    "prettier": "^2.2.1",
     "react": "17.x",
     "react-dom": "17.x",
     "react-popper": "^2.2.4",

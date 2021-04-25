@@ -14,7 +14,7 @@
       "**/svelte",
       "**/sapper",
       "**/@sapper",
-      "**/example-react-native-expo/**",
+      "**/example-react-native-expo/*",
       "**/ExampleReactNative/**",
       "*/@docusaurus/*"
     ]
@@ -33,7 +33,12 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": "yarn coveralls",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -55,7 +60,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lerna": "^4.0.0",
-    "lint-staged": ">=10",
+    "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "react": "17.x",
     "react-dom": "17.x",
