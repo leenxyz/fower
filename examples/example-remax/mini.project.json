@@ -11,8 +11,8 @@
     "node_modules/**",
     "babel.config.js",
     "package-lock.json",
-    "project.config.json",
     "package.json",
+    "project.config.json",
     "remax.config.js",
     "app.json"
   ],

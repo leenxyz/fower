@@ -5,7 +5,7 @@
 
 <Nested />
 <main>
-  <h1 bgGreen200 p6 toCenter>Hello xfooo {name}!</h1>
+  <h1 bgOrange300 p6 toCenter>Hello xfooo {name}!</h1>
   <div debug column toRight>
     <div>AA</div>
     <div>BshhhsjB</div>

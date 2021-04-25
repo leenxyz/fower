@@ -1,4 +1,4 @@
-# Remax One
+# Remax One With TypeScript
 
 使用 Remax 开发跨平台小程序。
 
