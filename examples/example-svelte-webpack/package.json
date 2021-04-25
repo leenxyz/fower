@@ -1,7 +1,7 @@
 {
   "name": "example-svelte-webpack",
   "description": "example-svelte-webpack",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "scripts": {
     "dev": "sapper dev",
@@ -10,15 +10,15 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
-    "@fower/svelte-preprocess": "^1.3.0",
+    "@fower/svelte-preprocess": "^1.4.0",
     "compression": "^1.7.1",
     "polka": "0.5.2",
     "sirv": "^1.0.0"
   },
   "devDependencies": {
+    "file-loader": "^6.0.0",
     "sapper": "^0.28.0",
     "svelte": "^3.17.3",
-    "file-loader": "^6.0.0",
     "svelte-loader": "^3.0.0",
     "webpack": "^4.46.0",
     "webpack-modules": "^1.0.0"
