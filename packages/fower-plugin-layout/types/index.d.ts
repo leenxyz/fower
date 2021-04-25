@@ -163,5 +163,19 @@ declare module '@fower/types' {
      * ```
      */
     toEvenly?: boolean
+
+    selfAuto?: boolean
+
+    selfTop?: boolean
+
+    selfRight?: boolean
+
+    selfBottom?: boolean
+
+    selfLeft?: boolean
+
+    selfCenter?: boolean
+
+    selfStretch?: boolean
   }
 }

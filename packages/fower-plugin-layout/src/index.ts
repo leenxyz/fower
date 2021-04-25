@@ -18,6 +18,14 @@ const toCenter = 'toCenter'
 const toCenterX = 'toCenterX'
 const toCenterY = 'toCenterY'
 
+const selfTop = 'selfTop'
+const selfRight = 'selfRight'
+const selfBottom = 'selfBottom'
+const selfLeft = 'selfLeft'
+const selfCenter = 'selfCenter'
+const selfStretch = 'selfCenter'
+const selfAuto = 'selfAuto'
+
 const flexStart = 'flex-start'
 const flexEnd = 'flex-end'
 const spaceBetween = 'space-between'
@@ -38,6 +46,13 @@ const layoutToolkits = [
   toBetween,
   toAround,
   toEvenly,
+
+  selfTop,
+  selfRight,
+  selfBottom,
+  selfLeft,
+  selfCenter,
+  selfStretch,
 ]
 
 // TODO: should refactor
@@ -95,7 +110,7 @@ export function toStyle(key: string, props: any) {
     }
   }
 
-  /** 设置样式 */
+  /** 设置container样式 */
   if ([toTop, toLeft].includes(key)) {
     style[styleKey] = flexStart
   } else if ([toBottom, toRight].includes(key)) {
@@ -111,6 +126,17 @@ export function toStyle(key: string, props: any) {
   } else if (key === toCenter) {
     style.justifyContent = center
     style.alignItems = center
+  }
+
+  /** 设置 self align样式 */
+  if ([selfTop, selfLeft].includes(key)) {
+    style.alignSelf = flexStart
+  } else if ([selfBottom, selfRight].includes(key)) {
+    style.alignSelf = flexEnd
+  } else if (key === selfCenter) {
+    style.alignSelf = center
+  } else if (key === selfAuto) {
+    style.alignSelf = 'auto'
   }
 
   return style
