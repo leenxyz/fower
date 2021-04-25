@@ -1,0 +1,112 @@
+---
+id: use-with-svelte
+title: Use with Svelte
+---
+
+## Installation
+
+```bash npm2yarn
+npm install @fower/svelte-preprocess
+```
+
+## Config svelte-preprocess
+
+Then, configure svelte-preprocess, we assume you are using `rollup` or `webpack` to build Svelte App:
+
+<Tabs
+  defaultValue="rollup"
+  values={[
+    { label: 'Rollup', value: 'rollup', },
+    { label: 'Webpack', value: 'webpack', },
+  ]
+}>
+<TabItem value="rollup">
+
+```js title="rollup.config.js"
+import { fowerSveltePreprocess } from '@fower/svelte-preprocess'
+
+export default {
+  plugins: [
+    svelte({
+      compilerOptions: {
+        // enable run-time checks when not in production
+        dev: !production,
+      },
+
+      preprocess: fowerSveltePreprocess(),
+    }),
+  ],
+}
+```
+
+</TabItem>
+<TabItem value="webpack">
+
+```js title="webpack.config"
+module.exports = {
+  client: {
+    module: {
+      rules: [
+        {
+          test: /\.(svelte|html)$/,
+          use: {
+            loader: 'svelte-loader',
+            options: {
+              compilerOptions: {
+                dev,
+                hydratable: true,
+              },
+              preprocess: fowerSveltePreprocess(),
+            },
+          },
+        },
+        fileLoaderRule,
+      ],
+    },
+  },
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Enjoy it
+
+Now, you can write Atomic Props directly in Markup:
+
+```html
+<div toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+  <img circle-48 src="/img/jobs.jpg" />
+  <div ml-10>
+    <div textXL fontBold>Steve Jobs</div>
+    <span gray800>Co-founder of Apple Inc.</span>
+  </div>
+</div>
+```
+
+If you don't like Atomic Props, you can use atomic css class instead:
+
+```jsx
+<template>
+  <div class="toCenterY p-10 w-260 bgWhite rounded-10 shadow">
+    <img src="/img/jobs.jpg" class="circle-48" />
+    <div class="ml-10">
+      <div class="textXL fontBold">Steve Jobs</div>
+      <span class="gray800">Co-founder of Apple Inc.</span>
+    </div>
+  </div>
+</template>
+```
+
+## IntelliSense
+
+To get IntelliSense in VS Code, just to install VS Code plugin: [Fower IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).
+
+![fower-intellisense](/img/fower-intellisense.png)
+
+## Example source code
+
+You can view the example souce code in github:
+
+- [example-svelte-rollup](https://github.com/forsigner/fower/tree/master/examples/example-svelte-rollup)
+- [example-svelte-webpack](https://github.com/forsigner/fower/tree/master/examples/example-svelte-webpack)

@@ -105,6 +105,12 @@ module.exports = {
           label: 'Vue',
           position: 'left',
         },
+        {
+          to: 'docs/use-with-svelte',
+          activeBasePath: 'docs/use-with-svelte',
+          label: 'Svelte',
+          position: 'left',
+        },
         // {
         //   to: 'docs/use-with-rn',
         //   activeBasePath: 'docs/use-with-rn',

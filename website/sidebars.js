@@ -4,8 +4,10 @@ module.exports = {
     'Getting Started': [
       'use-with-react',
       'use-with-vue',
+      'use-with-svelte',
       'use-with-rn',
       'use-with-taro',
+      'use-with-remax',
       'use-with-vanilla',
     ],
     Guides: [

@@ -1,0 +1,38 @@
+---
+id: use-with-remax
+title: Use with Remax
+---
+
+## Installation
+
+```bash npm2yarn
+npm install @fower/remax
+```
+
+## Usage
+
+Now we're going to build a user profile card ui with `View`,`Image`,`Text`.
+
+```jsx
+import { View, Text, Image } from '@fower/remax'
+```
+
+```jsx live
+<View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+  <Image circle-48 src="/img/jobs.jpg" />
+  <View ml-10>
+    <View textXL fontBold>
+      Steve Jobs
+    </View>
+    <Text gray800>Co-founder of Apple Inc.</Text>
+  </View>
+</View>
+```
+
+As you can see, we can build a more complex interface with few code. At first glance, you might say: "Isn't this a disguised inline style?" This is indeed similar to the inline style. They both write the style on JSX, but maybe this is the only similarity of them. The way to writing styles of Fower, I call it "Atomic props".
+
+Compared with inline style, "Atomic props" has many advantages:
+
+- **Less Code**, inline styles has a larger amount of code, which can easily make JSX messy, but "Atomic props" retains the simplicity of JSX and is more readable.
+
+- **Style reuse**, using inline styles, it is easy to quickly expand the code, using "Atomic props", the code size will not expand too much as the project grows.
