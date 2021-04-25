@@ -1,0 +1,29 @@
+{
+  "name": "@fower/remax",
+  "version": "1.3.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests"
+  },
+  "author": "forsigner",
+  "module": "dist/remax.esm.js",
+  "dependencies": {
+    "@fower/core": "^1.3.0",
+    "@fower/preset-remax": "^1.3.0",
+    "@fower/styled": "^1.3.0"
+  },
+  "devDependencies": {
+    "remax": "^2.13.1"
+  }
+}
