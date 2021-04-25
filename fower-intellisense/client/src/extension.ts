@@ -39,7 +39,13 @@ export function activate(context: ExtensionContext) {
   const clientOptions: LanguageClientOptions = {
     // Register the server for plain text documents
     // documentSelector: [{ scheme: 'file', language: 'plaintext' }],
-    documentSelector: [{ scheme: 'file', language: 'vue' }],
+    documentSelector: [
+      { scheme: 'file', language: 'vue' },
+      {
+        scheme: 'file',
+        language: 'svelte',
+      },
+    ],
     middleware: {
       provideCompletionItem: async (document, position, context, token, next) => {
         return await next(document, position, context, token)

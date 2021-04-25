@@ -1,6 +1,6 @@
 {
   "name": "fower-intellisense",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "displayName": "Fower IntelliSense",
   "description": "Intelligent Fower tooling for VS Code",
@@ -23,7 +23,8 @@
     "vscode": "^1.55.0"
   },
   "activationEvents": [
-    "onLanguage:vue"
+    "onLanguage:vue",
+    "onLanguage:svelte"
   ],
   "main": "./client/out/extension",
   "scripts": {

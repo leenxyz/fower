@@ -15,6 +15,20 @@ const keys = [
   'toBetween',
   'toAround',
   'toEvenly',
+
+  'selfAuto',
+
+  'selfTop',
+
+  'selfRight',
+
+  'selfBottom',
+
+  'selfLeft',
+
+  'selfCenter',
+
+  'selfStretch',
 ]
 
 export function getLayout() {
