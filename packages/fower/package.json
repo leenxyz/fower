@@ -1,0 +1,26 @@
+{
+  "name": "fower",
+  "version": "1.4.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "forsigner",
+  "module": "dist/fower.esm.js",
+  "dependencies": {
+    "@fower/core": "^1.4.0"
+  }
+}
