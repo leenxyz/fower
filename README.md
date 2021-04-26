@@ -12,6 +12,7 @@ An utility-first CSS in JS library for rapid UI development.
 
 - [Use with React](https://fower.vercel.app/docs/use-with-react)
 - [Use with Vue](https://fower.vercel.app/docs/use-with-vue)
+- [Use with Svelte](https://fower.vercel.app/docs/use-with-svelte)
 - [Use with React Native](https://fower.vercel.app/docs/use-with-rn)
 
 ## Documentation

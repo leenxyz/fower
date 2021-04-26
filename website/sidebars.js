@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Introduction: ['about', 'comparison'],
+    Introduction: ['about', 'comparison', 'differences-with-tailwindcss'],
     'Getting Started': [
       'use-with-react',
       'use-with-vue',
