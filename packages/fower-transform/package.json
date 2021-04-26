@@ -1,6 +1,6 @@
 {
   "name": "fower-transform",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -22,10 +22,10 @@
     "@babel/parser": "^7.12.11",
     "@babel/traverse": "^7.12.10",
     "@babel/types": "^7.12.11",
-    "@fower/core": "^1.4.0",
-    "@fower/parser": "^1.4.0",
-    "@fower/store": "^1.4.0",
-    "@fower/types": "^1.4.0",
-    "@fower/utils": "^1.4.0"
+    "@fower/core": "^1.5.0",
+    "@fower/parser": "^1.5.0",
+    "@fower/store": "^1.5.0",
+    "@fower/types": "^1.5.0",
+    "@fower/utils": "^1.5.0"
   }
 }
