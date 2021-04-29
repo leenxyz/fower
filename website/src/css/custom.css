@@ -175,7 +175,7 @@ table td {
 }
 
 
-.row .col.col--3 {
+.row .col.col--3.toc {
   --ifm-col-width: 180px !important;
 }
 

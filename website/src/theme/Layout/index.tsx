@@ -31,7 +31,7 @@ function Layout(props: Props): JSX.Element {
         var _hmt = _hmt || []
         ;(function () {
           var hm = document.createElement('script')
-          hm.src = 'https://hm.baidu.com/hm.js?bc7597713547ac9d7bf332e56bb854df'
+          hm.src = "https://hm.baidu.com/hm.js?ad5205df993dc46e352a6c13c9dbb254";
           var s = document.getElementsByTagName('script')[0]
           s.parentNode.insertBefore(hm, s)
         })()
