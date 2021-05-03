@@ -224,14 +224,14 @@ Use `--D{0-100}` postfix to darken a color.
 Use `--L{0-100}` to lighten a color.
 
 ```jsx live
-<Box toEvenly>
+<Box toEvenly toCenterY>
   <Box red500>normal</Box>
-  <Box red500--T40>transparentize</Box>
-  <Box color="#000--T40">transparentize</Box>
-  <Box bgRed500 square-84></Box>
-  <Box bgRed500--T40 square-84></Box>
+  <Box red500--L40>lighten</Box>
+  <Box color="#000--L40">lighten</Box>
+  <Box bgRed300 square-84></Box>
+  <Box bgRed300--L20 square-84></Box>
   <Box border borderRed300 square-84></Box>
-  <Box border borderRed300--T40 square-84></Box>
+  <Box border borderRed300--L20 square-84></Box>
 </Box>
 ```
 
