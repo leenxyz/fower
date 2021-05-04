@@ -39,7 +39,8 @@ module.exports = {
       playgroundPosition: 'top',
     },
     algolia: {
-      apiKey: '68b76fc3428450c3eca0f5632239c6fc',
+      // apiKey: '68b76fc3428450c3eca0f5632239c6fc',
+      apiKey: '5c75ee25a3984e48c52bd2a0e36a7988',
       indexName: 'fower',
 
       // Optional: see doc section below
