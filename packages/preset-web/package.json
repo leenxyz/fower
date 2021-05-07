@@ -51,6 +51,7 @@
     "fower-plugin-space": "^1.7.0",
     "fower-plugin-text-align": "^1.7.0",
     "fower-plugin-text-decoration": "^1.7.0",
+    "fower-plugin-text-overflow": "^1.7.0",
     "fower-plugin-text-size": "^1.7.0",
     "fower-plugin-text-transform": "^1.7.0",
     "fower-plugin-visibility": "^1.7.0",

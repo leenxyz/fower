@@ -17,6 +17,7 @@ import shadow from 'fower-plugin-shadow'
 import size from 'fower-plugin-size'
 import textAlign from 'fower-plugin-text-align'
 import textDecoration from 'fower-plugin-text-decoration'
+import textOverflow from 'fower-plugin-text-overflow'
 import textSize from 'fower-plugin-text-size'
 import textTransform from 'fower-plugin-text-transform'
 import fontWeight from 'fower-plugin-font-weight'
@@ -46,6 +47,7 @@ export const plugins = [
   size(),
   textAlign(),
   textDecoration(),
+  textOverflow(),
   textSize(),
   textTransform(),
   fontWeight(),

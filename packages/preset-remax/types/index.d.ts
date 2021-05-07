@@ -16,6 +16,7 @@
 /// <reference types="fower-plugin-shadow" />
 /// <reference types="fower-plugin-size" />
 /// <reference types="fower-plugin-text-align" />
+/// <reference types="fower-plugin-text-overflow" />
 /// <reference types="fower-plugin-text-size" />
 /// <reference types="fower-plugin-text-transform" />
 /// <reference types="fower-plugin-font-weight" />
