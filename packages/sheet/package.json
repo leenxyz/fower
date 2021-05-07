@@ -1,6 +1,6 @@
 {
   "name": "@fower/sheet",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,6 +21,6 @@
   "author": "forsigner",
   "module": "dist/sheet.esm.js",
   "dependencies": {
-    "@fower/utils": "^1.7.0"
+    "@fower/utils": "^1.8.0"
   }
 }
