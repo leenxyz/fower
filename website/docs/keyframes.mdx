@@ -1,7 +1,16 @@
-import { Box } from '@fower/react';
-import { keyframes } from '@fower/core';
+---
+id: keyframes
+title: Keyframes
+---
 
-export default () => {
+You can define animations using the `keyframes` api from `@fower/core`, and use it in css animation:
+
+```jsx
+import { keyframes } from '@fower/core'
+```
+
+```jsx live
+function Demo() {
   const bounce = keyframes({
     'from, 20%, 53%, 80%, to': {
       transform: 'translate3d(0,0,0)',
@@ -19,7 +28,8 @@ export default () => {
     '90%': {
       transform: 'translate3d(0,-4px,0)',
     },
-  });
+  })
+
   return (
     <Box toCenter>
       <Box
@@ -28,8 +38,9 @@ export default () => {
           animation: `${bounce} 1s ease infinite`,
         }}
       >
-        40 Lorem ipsum dolor sit amet
+        Lorem ipsum dolor sit amet
       </Box>
     </Box>
-  );
-};
+  )
+}
+```

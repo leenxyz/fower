@@ -96,6 +96,7 @@ const ReactLiveScope = {
   Button,
   Input,
   createStyle,
+  keyframes,
   styled,
   Text,
   Box,

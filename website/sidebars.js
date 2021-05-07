@@ -18,6 +18,7 @@ module.exports = {
       'theme-mode',
       'predictable-style',
       'color-helper',
+      'keyframes',
       'dynamic-style',
       'programmable',
       'reuse',
