@@ -16,6 +16,7 @@ import rounded from 'fower-plugin-rounded'
 import shadow from 'fower-plugin-shadow'
 import size from 'fower-plugin-size'
 import textAlign from 'fower-plugin-text-align'
+import textDecoration from 'fower-plugin-text-decoration'
 import textSize from 'fower-plugin-text-size'
 import textTransform from 'fower-plugin-text-transform'
 import fontWeight from 'fower-plugin-font-weight'
@@ -48,6 +49,7 @@ export const plugins = [
   shadow(),
   size(),
   textAlign(),
+  textDecoration(),
   textSize(),
   textTransform(),
   fontWeight(),
