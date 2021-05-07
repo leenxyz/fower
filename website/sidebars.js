@@ -72,6 +72,7 @@ module.exports = {
       'text-color',
       'line-height',
       'text-alignment',
+      'text-decoration',
       'text-transform',
       // 'ellipsis',
     ],
