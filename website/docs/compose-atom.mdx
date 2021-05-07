@@ -1,0 +1,32 @@
+---
+id: comopse-atom
+title: comopseAtom
+sidebar: comopseAtom
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+Similar to `addAtom`, You can create your own Atomic Props with `composeAtom`, the difference is that `composeAtom` will not create a new Atomic Props, it just composes existed Atomic Porps.
+
+## Usage
+
+```js
+import { composeAtom } from '@fower/core'
+
+composeAtom('formInput', {
+  'border-2': true,
+  borderGray200: true,
+  'borderAmber400--focus': true,
+  rounded: true,
+  outlineNone: true,
+  px4: true,
+  py2: true,
+})
+```
+
+now you can use it:
+
+```jsx live
+<Box as="input" formInput />
+```

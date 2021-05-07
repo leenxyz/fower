@@ -24,6 +24,7 @@ module.exports = {
       'reuse',
       'configuration',
       'add-atom',
+      'compose-atom',
       // 'plugin',
       'typescript',
     ],
