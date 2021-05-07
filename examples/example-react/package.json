@@ -16,6 +16,7 @@
     "@emotion/styled": "11.3.0",
     "@fower/preset-web-rem": "^1.5.0",
     "@fower/react": "^1.5.0",
+    "@fower/types": "^1.5.0",
     "@fower/store": "^1.5.0",
     "@umijs/preset-react": "1.x",
     "framer-motion": "4.1.3",
