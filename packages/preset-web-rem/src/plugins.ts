@@ -7,6 +7,7 @@ import flexBox from 'fower-plugin-flexbox'
 import grid from 'fower-plugin-grid'
 import layout from 'fower-plugin-layout'
 import lineHeight from 'fower-plugin-line-height'
+import list from 'fower-plugin-list'
 import margin from 'fower-plugin-margin'
 import opacity from 'fower-plugin-opacity'
 import overflow from 'fower-plugin-overflow'
@@ -40,6 +41,7 @@ export const plugins = [
   flexItem(),
   layout(),
   lineHeight(),
+  list(),
   margin(),
   opacity(),
   overflow(),

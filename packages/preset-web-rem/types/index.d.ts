@@ -6,6 +6,7 @@
 /// <reference types="fower-plugin-flexbox" />
 /// <reference types="fower-plugin-layout" />
 /// <reference types="fower-plugin-line-height" />
+/// <reference types="fower-plugin-list" />
 /// <reference types="fower-plugin-margin" />
 /// <reference types="fower-plugin-opacity" />
 /// <reference types="fower-plugin-overflow" />

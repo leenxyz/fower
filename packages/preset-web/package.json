@@ -38,6 +38,7 @@
     "fower-plugin-grid": "^1.6.0",
     "fower-plugin-layout": "^1.6.0",
     "fower-plugin-line-height": "^1.6.0",
+    "fower-plugin-list": "^1.6.0",
     "fower-plugin-margin": "^1.6.0",
     "fower-plugin-opacity": "^1.6.0",
     "fower-plugin-outline": "^1.6.0",
