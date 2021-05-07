@@ -179,7 +179,7 @@ declare namespace FowerTypes {
   }
 
   interface FowerPlugin {
-    isMatch?(key: string): boolean
+    isMatch(key: string): boolean
 
     /**
      * before handle atom
