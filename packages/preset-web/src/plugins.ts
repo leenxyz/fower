@@ -22,15 +22,11 @@ import textTransform from 'fower-plugin-text-transform'
 import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
 import outline from 'fower-plugin-outline'
-import cursor from 'fower-plugin-cursor'
 import ellipsis from 'fower-plugin-ellipsis'
-import debug from 'fower-plugin-debug'
-import space from 'fower-plugin-space'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 
 export const plugins = [
-  debug(),
   background(),
   border(),
   color(),
@@ -54,10 +50,8 @@ export const plugins = [
   textTransform(),
   fontWeight(),
   zIndex(),
-  cursor(),
   outline(),
   ellipsis(),
-  space(),
   visibility(),
   boxSizing(),
 ]

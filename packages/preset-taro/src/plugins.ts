@@ -4,6 +4,7 @@ import flexItem from 'fower-plugin-box-alignment'
 import color from 'fower-plugin-color'
 import display from 'fower-plugin-display'
 import flexBox from 'fower-plugin-flexbox'
+import grid from 'fower-plugin-grid'
 import layout from 'fower-plugin-layout'
 import lineHeight from 'fower-plugin-line-height'
 import margin from 'fower-plugin-margin'
@@ -15,6 +16,7 @@ import rounded from 'fower-plugin-rounded'
 import shadow from 'fower-plugin-shadow'
 import size from 'fower-plugin-size'
 import textAlign from 'fower-plugin-text-align'
+import textDecoration from 'fower-plugin-text-decoration'
 import textSize from 'fower-plugin-text-size'
 import textTransform from 'fower-plugin-text-transform'
 import fontWeight from 'fower-plugin-font-weight'
@@ -30,6 +32,7 @@ export const plugins = [
   color(),
   display(),
   flexBox(),
+  grid(),
   flexItem(),
   layout(),
   lineHeight(),
@@ -42,6 +45,7 @@ export const plugins = [
   shadow(),
   size(),
   textAlign(),
+  textDecoration(),
   textSize(),
   textTransform(),
   fontWeight(),

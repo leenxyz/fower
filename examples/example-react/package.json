@@ -17,7 +17,6 @@
     "@fower/preset-web-rem": "^1.6.0",
     "@fower/react": "^1.6.0",
     "@fower/store": "^1.6.0",
-    "@fower/types": "^1.6.0",
     "@umijs/preset-react": "1.x",
     "framer-motion": "4.1.3",
     "umi": "^3.3.9"
