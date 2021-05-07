@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-taro",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "description": "@fower/taro demo",
   "templateInfo": {
@@ -38,7 +38,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@fower/taro": "^1.5.0",
+    "@fower/taro": "^1.6.0",
     "@tarojs/components": "3.1.0-beta.4",
     "@tarojs/react": "3.1.0-beta.4",
     "@tarojs/runtime": "3.1.0-beta.4",
