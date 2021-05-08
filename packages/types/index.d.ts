@@ -328,6 +328,18 @@ declare namespace FowerTypes {
     black: string
     white: string
 
+    brand: string
+    brand50: string
+    brand100: string
+    brand200: string
+    brand300: string
+    brand400: string
+    brand500: string
+    brand600: string
+    brand700: string
+    brand800: string
+    brand900: string
+
     rose50: string // '#fff1f2'
     rose100: string // '#ffe4e6'
     rose200: string // '#fecdd3'

@@ -11,6 +11,24 @@ export default () => {
         Background
       </Box>
 
+      <Box pXL toCenter>
+        <Box rounded white py2 px4 bgBrand bgBrand--D10--hover cursorPointer>
+          bgBrand
+        </Box>
+      </Box>
+
+      <Box textXL bgBrand bgBrand100--hover white>
+        bgBrand
+      </Box>
+
+      <Box textXL bgBrand100>
+        bgBrand100
+      </Box>
+
+      <Box textXL bgBrand200>
+        bgBrand200
+      </Box>
+
       <Box textXL bgLime400>
         bgLime400
       </Box>

@@ -146,6 +146,18 @@ declare module '@fower/types' {
 
     borderWhite?: boolean
 
+    borderBrand?: boolean
+    borderBrand50?: boolean
+    borderBrand100?: boolean
+    borderBrand200?: boolean
+    borderBrand300?: boolean
+    borderBrand400?: boolean
+    borderBrand500?: boolean
+    borderBrand600?: boolean
+    borderBrand700?: boolean
+    borderBrand800?: boolean
+    borderBrand900?: boolean
+
     borderRose50?: boolean // '#fff1f2'
     borderRose100?: boolean // '#ffe4e6'
     borderRose200?: boolean // '#fecdd3'

@@ -5,6 +5,18 @@ export const colors: Colors = {
   white: '#ffffff',
   black: '#000',
 
+  brand: '#0ea5e9',
+  brand50: '#f0f9ff',
+  brand100: '#e0f2fe',
+  brand200: '#bae6fd',
+  brand300: '#7dd3fc',
+  brand400: '#38bdf8',
+  brand500: '#0ea5e9',
+  brand600: '#0284c7',
+  brand700: '#0369a1',
+  brand800: '#075985',
+  brand900: '#0c4a6e',
+
   rose50: '#fff1f2',
   rose100: '#ffe4e6',
   rose200: '#fecdd3',

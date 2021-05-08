@@ -62,6 +62,18 @@ declare module '@fower/types' {
     bgBlack?: boolean
     bgWhite?: boolean
 
+    bgBrand?: boolean
+    bgBrand50?: boolean
+    bgBrand100?: boolean
+    bgBrand200?: boolean
+    bgBrand300?: boolean
+    bgBrand400?: boolean
+    bgBrand500?: boolean
+    bgBrand600?: boolean
+    bgBrand700?: boolean
+    bgBrand800?: boolean
+    bgBrand900?: boolean
+
     bgRose50?: boolean // '#fff1f2'
     bgRose100?: boolean // '#ffe4e6'
     bgRose200?: boolean // '#fecdd3'

@@ -35,6 +35,18 @@ declare module '@fower/types' {
      */
     color?: FowerColor | boolean
 
+    brand?: boolean
+    brand50?: boolean
+    brand100?: boolean
+    brand200?: boolean
+    brand300?: boolean
+    brand400?: boolean
+    brand500?: boolean
+    brand600?: boolean
+    brand700?: boolean
+    brand800?: boolean
+    brand900?: boolean
+
     rose50?: boolean // '#fff1f2'
     rose100?: boolean // '#ffe4e6'
     rose200?: boolean // '#fecdd3'
