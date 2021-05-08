@@ -216,6 +216,11 @@ declare namespace FowerTypes {
 
     colors: Colors
     spacings: {
+      xs: string | number
+      sm: string | number
+      md: string | number
+      lg: string | number
+      xl: string | number
       0: string | number
       1: string | number
       2: string | number
