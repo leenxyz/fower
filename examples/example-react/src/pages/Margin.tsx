@@ -8,6 +8,14 @@ export default () => {
       </Box>
 
       <Box debug debugChildren>
+        <Box mSM inlineBlock>
+          mSM
+        </Box>
+
+        <Box mMD inlineBlock>
+          mMD
+        </Box>
+
         <Box inlineBlock>
           <Box m4 inlineBlock>
             m4
