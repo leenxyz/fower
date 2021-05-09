@@ -16,6 +16,7 @@ import size from 'fower-plugin-size'
 import textAlign from 'fower-plugin-text-align'
 import textSize from 'fower-plugin-text-size'
 import textTransform from 'fower-plugin-text-transform'
+import fontFamily from 'fower-plugin-font-family'
 import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
 
@@ -38,6 +39,7 @@ export const plugins = [
   textAlign(),
   textSize(),
   textTransform(),
+  fontFamily(),
   fontWeight(),
   zIndex(),
 ]

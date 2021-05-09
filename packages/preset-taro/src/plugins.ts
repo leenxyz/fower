@@ -20,6 +20,7 @@ import textDecoration from 'fower-plugin-text-decoration'
 import textOverflow from 'fower-plugin-text-overflow'
 import textSize from 'fower-plugin-text-size'
 import textTransform from 'fower-plugin-text-transform'
+import fontFamily from 'fower-plugin-font-family'
 import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
 import outline from 'fower-plugin-outline'
@@ -50,6 +51,7 @@ export const plugins = [
   textOverflow(),
   textSize(),
   textTransform(),
+  fontFamily(),
   fontWeight(),
   zIndex(),
   outline(),

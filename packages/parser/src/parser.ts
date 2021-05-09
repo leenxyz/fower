@@ -467,7 +467,7 @@ export class Parser {
       }
     }
 
-    console.log('this.atoms-----:', this.atoms)
+    // console.log('this.atoms-----:', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''

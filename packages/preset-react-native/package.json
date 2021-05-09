@@ -33,6 +33,7 @@
     "fower-plugin-display": "^1.9.0",
     "fower-plugin-ellipsis": "^1.9.0",
     "fower-plugin-flexbox": "^1.9.0",
+    "fower-plugin-font-family": "^1.9.0",
     "fower-plugin-font-weight": "^1.9.0",
     "fower-plugin-grid": "^1.9.0",
     "fower-plugin-layout": "^1.9.0",
