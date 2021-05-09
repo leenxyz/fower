@@ -423,13 +423,9 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
-    const map: any = {
+    const colorMap: any = {
       white: 'black',
       black: 'white',
-      bgWhite: 'bgBlack',
-      bgBlack: 'bgWhite',
-      borderWhite: 'borderBlack',
-      borderBlack: 'borderWhite',
       '50': '900',
       '100': '800',
       '200': '700',
@@ -443,28 +439,43 @@ export class Parser {
     }
 
     const colorKeys = ['color', 'backgroundColor', 'borderColor']
+    const darkAtoms: Atom[] = []
 
-    /** TODO: hack for auto dark mode */
+    /** TODO: hack for auto dark mode, need to refactor */
     for (const atom of this.atoms) {
       if (colorKeys.includes(atom.type) && !atom.meta.mode) {
         const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
         if (find) continue
 
-        const [, color, num] = atom.key.match(/^([a-z]+)(\d+)$/i) || []
+        const entries = Object.entries(atom.style)
+        if (!entries?.length) continue
+        const [, colorValue] = entries[0]
 
-        let darkKey: string = map[atom.propKey] ? map[atom.key] : color + map[num]
+        let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
+        if (['white', 'black'].includes(colorValue)) mapKey = colorValue
+        colorMap
 
-        const styleValue = darkKey.replace(/^(bg|(border)?color)/i, '').toLowerCase()
+        let str = JSON.stringify(atom).replaceAll(mapKey, colorMap[mapKey])
+
+        if (mapKey === 'white') str = str.replaceAll('White', 'Black')
+        if (mapKey === 'black') str = str.replaceAll('Black', 'White')
+
+        const cloned: Atom = JSON.parse(str)
+
         const darkAtom = new Atom({
-          propKey: darkKey + '--dark',
-          propValue: true,
-          key: darkKey,
-          meta: { ...atom.meta, mode: 'dark' },
-          style: { [atom.type]: styleValue },
+          ...cloned,
+          className: '',
+          propKey: cloned.propKey + '--dark',
+          meta: { ...cloned.meta, mode: 'dark' },
         })
         darkAtom.createClassName(this.config.prefix)
-        this.addAtom(darkAtom)
+
+        darkAtoms.push(darkAtom)
       }
+    }
+
+    for (const darkAtom of darkAtoms) {
+      this.addAtom(darkAtom)
     }
 
     // console.log('this.atoms-----:', this.atoms)
