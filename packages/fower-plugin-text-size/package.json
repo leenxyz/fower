@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-text-size",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-text-size.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.10.0",
-    "@fower/core": "^1.10.0",
-    "@fower/store": "^1.10.0",
-    "@fower/types": "^1.10.0",
-    "@fower/utils": "^1.10.0"
+    "@fower/atom": "^1.11.0",
+    "@fower/core": "^1.11.0",
+    "@fower/store": "^1.11.0",
+    "@fower/types": "^1.11.0",
+    "@fower/utils": "^1.11.0"
   }
 }
