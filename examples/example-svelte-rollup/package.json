@@ -1,6 +1,6 @@
 {
   "name": "example-svelte-rollup",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "private": true,
   "scripts": {
     "build": "rollup -c",
@@ -18,10 +18,10 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@fower/core": "^1.8.0",
-    "@fower/parser": "^1.8.0",
-    "@fower/preset-web": "^1.8.0",
-    "@fower/svelte-preprocess": "^1.8.0",
+    "@fower/core": "^1.9.0",
+    "@fower/parser": "^1.9.0",
+    "@fower/preset-web": "^1.9.0",
+    "@fower/svelte-preprocess": "^1.9.0",
     "posthtml": "^0.15.2",
     "sirv-cli": "^1.0.0"
   }
