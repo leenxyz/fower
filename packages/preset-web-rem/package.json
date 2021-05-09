@@ -35,6 +35,7 @@
     "fower-plugin-ellipsis": "^1.10.0",
     "fower-plugin-flexbox": "^1.10.0",
     "fower-plugin-font-family": "^1.10.0",
+    "fower-plugin-font-style": "^1.10.0",
     "fower-plugin-font-weight": "^1.10.0",
     "fower-plugin-grid": "^1.10.0",
     "fower-plugin-layout": "^1.10.0",
