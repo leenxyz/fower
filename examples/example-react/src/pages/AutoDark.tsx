@@ -16,32 +16,6 @@ export default () => {
     'bg--hover': `green300`,
   };
   return (
-    <Box
-      as="button"
-      onClick={toggleMode}
-      // p3
-      // cursorPointer
-      // outlineNone
-      {...p}
-      // bg="gray300--hover"
-      // white
-      // bgBlack
-      // bgRed200
-      // white
-      // border
-      black
-      bgWhite
-      // black--dark
-
-      // bgGreen200--hover
-      // bgGreen600--dark--hover
-      // bg--hover
-      // bgGreen300--dark
-    >
-      Toggle {mode}
-    </Box>
-  );
-  return (
     <Box h-400 roundedLG bgGray200 p4>
       <Box red600>40 Lorem ipsum dolor sit amet</Box>
       <Box column toCenter spaceY3 gray800 textCenter>
