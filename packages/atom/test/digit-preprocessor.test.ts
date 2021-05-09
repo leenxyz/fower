@@ -40,7 +40,7 @@ test('process <Box p1 /> with spacings', () => {
 
 test('propKey is not matched', () => {
   const atom = new Atom({
-    propKey: 'textMD',
+    propKey: 'textFoo',
     propValue: true,
   })
   const newAtom = atom.digitPreprocessor(spacings)

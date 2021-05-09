@@ -192,6 +192,7 @@ export class Parser {
       const cssKey = jsKeyToCssKey(key)
       const posfix = important ? ' !important' : ''
       const colors: any = store.theme.colors
+
       if (colorPostfix) {
         value = formatColor(colors[value] || value, colorPostfix)
       } else {
@@ -203,7 +204,9 @@ export class Parser {
 
   addAtom(atom: Atom) {
     // if not cached, let's cache it
-    if (!atomCache.get(atom.id)) atomCache.set(atom.id, atom)
+    if (!atomCache.get(atom.id)) {
+      atomCache.set(atom.id, atom)
+    }
 
     const { modes = {} } = this.config.theme.colors
     const entries = Object.entries<any>(modes)
@@ -362,7 +365,9 @@ export class Parser {
     let classNames: string[] = []
 
     this.atoms.reduce<Atom[]>((result, cur) => {
-      const index = result.findIndex((i) => i.styleKeysHash === cur.styleKeysHash)
+      const index = result.findIndex((i) => {
+        return i.styleKeysHash === cur.styleKeysHash
+      })
 
       if (!cur.isValid) return result
 
@@ -383,6 +388,7 @@ export class Parser {
     classNames = classNames.concat(filteredClassNames)
 
     if (this.hasResponsive) classNames.unshift(this.uniqueClassName)
+
     return classNames
   }
 
@@ -417,7 +423,51 @@ export class Parser {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
 
-    // console.log('this.atoms:', this.atoms)
+    const map: any = {
+      white: 'black',
+      black: 'white',
+      bgWhite: 'bgBlack',
+      bgBlack: 'bgWhite',
+      borderWhite: 'borderBlack',
+      borderBlack: 'borderWhite',
+      '50': '900',
+      '100': '800',
+      '200': '700',
+      '300': '600',
+      '400': '500',
+      '500': '400',
+      '600': '300',
+      '700': '200',
+      '800': '100',
+      '900': '50',
+    }
+
+    const colorKeys = ['color', 'backgroundColor', 'borderColor']
+
+    /** TODO: hack for auto dark mode */
+    for (const atom of this.atoms) {
+      if (colorKeys.includes(atom.type) && !atom.meta.mode) {
+        const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
+        if (find) continue
+
+        const [, color, num] = atom.key.match(/^([a-z]+)(\d+)$/i) || []
+
+        let darkKey: string = map[atom.propKey] ? map[atom.key] : color + map[num]
+
+        const styleValue = darkKey.replace(/^(bg|(border)?color)/i, '').toLowerCase()
+        const darkAtom = new Atom({
+          propKey: darkKey + '--dark',
+          propValue: true,
+          key: darkKey,
+          meta: { ...atom.meta, mode: 'dark' },
+          style: { [atom.type]: styleValue },
+        })
+        darkAtom.createClassName(this.config.prefix)
+        this.addAtom(darkAtom)
+      }
+    }
+
+    console.log('this.atoms-----:', this.atoms)
 
     for (const atom of this.atoms) {
       let rule: string = ''

@@ -1,5 +1,5 @@
 import { Box } from '@fower/react';
-import { setTheme, config, getTheme, theme } from '@fower/core';
+import { setTheme, getTheme } from '@fower/core';
 import { store } from '@fower/store';
 import { useState } from 'react';
 

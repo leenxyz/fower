@@ -129,6 +129,8 @@ export class Atom {
 
   style: CSS.Properties<number | string>
 
+  type: 'color' | 'backgroundColor' | 'borderColor' | 'padding' | 'margin' | ({} & string) = ''
+
   /**
    * className of this atom
    */

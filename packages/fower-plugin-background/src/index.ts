@@ -44,6 +44,9 @@ export default (): FowerPlugin => {
     isMatch,
     handleAtom(atom) {
       atom.style = toStyle(atom.key, atom.value)
+      if (isBg(atom.key) || isBgColor(atom.key)) {
+        atom.type = 'backgroundColor'
+      }
       return atom
     },
   }

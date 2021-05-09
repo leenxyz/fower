@@ -17,6 +17,7 @@ export default (): FowerPlugin => {
       atom.style = {
         color: key === 'color' ? value : key,
       }
+      atom.type = 'color'
       return atom
     },
   }
