@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build",
+    "build": "echo",
+    "build:prod": "sapper build",
     "export": "sapper export",
     "start": "node __sapper__/build"
   },

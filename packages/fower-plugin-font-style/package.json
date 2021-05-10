@@ -22,6 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-font-style.esm.js",
   "dependencies": {
-    "@fower/types": "^1.11.0"
+    "@fower/atom": "^1.11.0",
+    "@fower/core": "^1.11.0",
+    "@fower/store": "^1.11.0",
+    "@fower/types": "^1.11.0",
+    "@fower/utils": "^1.11.0"
   }
 }

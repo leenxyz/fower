@@ -3,7 +3,8 @@
   "version": "1.11.0",
   "private": true,
   "scripts": {
-    "build": "rollup -c",
+    "build": "echo",
+    "build:prod": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear"
   },

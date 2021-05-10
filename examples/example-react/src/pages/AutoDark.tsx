@@ -20,6 +20,7 @@ export default () => {
     <Box
       as="button"
       onClick={toggleMode}
+      fontBold
       // p3
       // cursorPointer
       // outlineNone
