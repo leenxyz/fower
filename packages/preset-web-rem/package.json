@@ -24,6 +24,7 @@
   "dependencies": {
     "@fower/colors": "^1.11.1",
     "@fower/types": "^1.11.1",
+    "fower-plugin-appearance": "^1.11.1",
     "fower-plugin-background": "^1.11.1",
     "fower-plugin-border": "^1.11.1",
     "fower-plugin-box-alignment": "^1.11.1",

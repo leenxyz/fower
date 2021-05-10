@@ -1,3 +1,4 @@
+import appearance from 'fower-plugin-appearance'
 import background from 'fower-plugin-background'
 import border from 'fower-plugin-border'
 import flexItem from 'fower-plugin-box-alignment'
@@ -35,6 +36,7 @@ import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 
 export const plugins = [
+  appearance(),
   debug(),
   background(),
   border(),
