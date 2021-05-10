@@ -166,6 +166,7 @@ export class Parser {
 
         const entries = Object.entries(atom.style)
         if (!entries?.length) continue
+
         const [, colorValue] = entries[0]
 
         let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
@@ -187,7 +188,13 @@ export class Parser {
         })
         darkAtom.createClassName(this.config.prefix)
 
-        darkAtoms.push(darkAtom)
+        const cachedAtom = atomCache.get(darkAtom.id)
+
+        if (cachedAtom) {
+          darkAtoms.push(cachedAtom)
+        } else {
+          darkAtoms.push(darkAtom)
+        }
       }
     }
 

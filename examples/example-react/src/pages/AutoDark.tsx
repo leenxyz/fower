@@ -16,8 +16,25 @@ export default () => {
   const p = {
     'bg--hover': `green300`,
   };
-
-  return <Button onClick={toggleMode}>GOOGO {mode}</Button>;
+  return (
+    <Box
+      as="button"
+      onClick={toggleMode}
+      // p3
+      // cursorPointer
+      // outlineNone
+      // white
+      // bgBlack
+      // bgGreen200--hover
+      // // bgGreen600--dark--hover
+      // // bg--hover
+      // bgGreen300--dark
+    >
+      Toggle {mode}
+      <Box white>FOo</Box>
+      <Box white>VBar</Box>
+    </Box>
+  );
 
   return (
     <Box h-400 roundedLG bgGray200 p4>
