@@ -11,7 +11,7 @@ export { Options, Meta }
  * @example p-20,opacity-80
  * @example pMD,mSM,mtXL
  */
-export const digitReg = /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|xs|sm|md|lg|xl)$/i
+export const digitReg = /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|xs|sm|md|lg|xl|-auto)$/i
 
 export class Atom {
   constructor(private readonly options: Options) {
@@ -260,7 +260,8 @@ export class Atom {
     const result =
       keyStr.match(/^([a-z]+)(\d+)$/i) ||
       keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i) ||
-      keyStr.match(/^([a-z]+)(xs|sm|md|lg|xl)$/i)
+      keyStr.match(/^([a-z]+)(xs|sm|md|lg|xl)$/i) ||
+      keyStr.match(/^([a-z]+)-(auto)$/i)
 
     if (!result) return this
 

@@ -16,6 +16,10 @@ export default () => {
           mMD
         </Box>
 
+        <Box m-auto inlineBlock>
+          auto
+        </Box>
+
         <Box inlineBlock>
           <Box m4 inlineBlock>
             m4
