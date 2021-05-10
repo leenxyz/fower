@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-react",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "private": true,
   "scripts": {
     "start": "umi dev",
@@ -14,9 +14,9 @@
     "@chakra-ui/react": "1.5.0",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.3.0",
-    "@fower/preset-web-rem": "^1.11.0",
-    "@fower/react": "^1.11.0",
-    "@fower/store": "^1.11.0",
+    "@fower/preset-web-rem": "^1.11.1",
+    "@fower/react": "^1.11.1",
+    "@fower/store": "^1.11.1",
     "@umijs/preset-react": "1.x",
     "framer-motion": "4.1.3",
     "umi": "^3.3.9"
