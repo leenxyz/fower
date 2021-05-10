@@ -19,7 +19,7 @@ const Link = styled(DLink)
 
 const code1 = `
   <Box toCenter bgGray100 p4>
-    <Box square-60 bgAmber400 rounded-8></Box>
+    <Box square-60 bgOrange400 rounded-8></Box>
     <Box square-80 bgBlue400 rounded-8></Box>
   </Box>
 `
@@ -104,7 +104,7 @@ const previews = [
     tags: ['type-safe', 'effective'],
     code: `
 <Box toCenter bgGray100 p4>
-  <Box square-60 bgAmber400 rounded-8></Box>
+  <Box square-60 bgOrange400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
       `,
@@ -120,7 +120,7 @@ const previews = [
       'Fower provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
     code: `
 <Box toCenter bgGray100 p4>
-  <Box square-60 bgAmber400 rounded-8></Box>
+  <Box square-60 bgOrange400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
       `,

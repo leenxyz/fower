@@ -66,8 +66,8 @@ export default () => {
         <Box toCenter p4 border-2 borderCyan500>
           borderCyan500
         </Box>
-        <Box toCenter p4 border-2 borderAmber500>
-          borderAmber500
+        <Box toCenter p4 border-2 borderOrange500>
+          borderOrange500
         </Box>
       </Box>
 
@@ -81,8 +81,8 @@ export default () => {
         <Box toCenter p4 border-2 borderCyan500--T60>
           borderCyan500--T60
         </Box>
-        <Box toCenter p4 border-2 borderAmber500--T80>
-          borderAmber500--T80
+        <Box toCenter p4 border-2 borderOrange500--T80>
+          borderOrange500--T80
         </Box>
       </Box>
     </Box>

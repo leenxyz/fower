@@ -4,7 +4,7 @@ import { styled } from '@fower/styled';
 
 console.log(
   '------createStyle:',
-  createStyle('bgAmber300', 'rounded', {
+  createStyle('bgOrange300', 'rounded', {
     p10: true,
     textShadow: '1px 2px 2px #ccc',
   }),
@@ -24,7 +24,7 @@ setTheme({
 composeAtom('formInput', {
   'border-2': true,
   borderGray200: true,
-  'borderAmber400--focus': true,
+  'borderOrange400--focus': true,
   rounded: true,
   outlineNone: true,
   px4: true,
@@ -45,7 +45,7 @@ export default () => {
     <Box
       rounded3XL
       text2XL
-      _hover={['bgAmber300', 'border']}
+      _hover={['bgOrange300', 'border']}
       _md={['bgTeal400', 'text5XL']}
     >
       40 Lorem ipsum dolor sit amet

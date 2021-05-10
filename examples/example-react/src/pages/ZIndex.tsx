@@ -4,10 +4,10 @@ import { styled } from '@fower/styled';
 export default function Demo() {
   const Item = styled(
     'div',
-    'white toCenter shadow bgAmber400 circle-80 absolute',
+    'white toCenter shadow bgOrange400 circle-80 absolute',
   );
   return (
-    <Box white relative h-160 bgAmber100 p6>
+    <Box white relative h-160 bgOrange100 p6>
       <Item zIndex-20>20</Item>
       <Item left-80 zIndex={10}>
         10

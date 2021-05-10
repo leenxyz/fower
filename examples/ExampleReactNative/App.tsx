@@ -33,7 +33,7 @@ const Section: React.FC<{
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Text bgAmber400 text3XL bgGreen100={isDarkMode}>
+      <Text bgOrange400 text3XL bgGreen100={isDarkMode}>
         {title}
       </Text>
       <Text

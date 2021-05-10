@@ -24,7 +24,6 @@ export default (): FowerPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
-      console.log('----atom:', atom)
       const { key, value } = atom
       atom.style = marginMaps[key].reduce<any>((r, cur) => ({ ...r, [cur]: value }), {})
       return atom

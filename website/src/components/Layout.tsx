@@ -15,7 +15,7 @@ const ContainerComponent: FC<Props> = ({ children, ...rest }) => {
 }
 
 const ItemA = () => {
-  return <Box square-40 bgAmber400 rounded-8></Box>
+  return <Box square-40 bgOrange400 rounded-8></Box>
 }
 
 const ItemB = () => {

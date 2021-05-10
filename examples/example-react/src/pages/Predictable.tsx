@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export default () => {
   const MyButton = (props) => {
-    return <Box as="button" bgAmber500 p2 white {...props} />;
+    return <Box as="button" bgOrange500 p2 white {...props} />;
   };
 
   const Button = styled(MyButton);

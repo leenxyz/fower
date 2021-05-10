@@ -23,7 +23,7 @@ export default () => {
     }
   }
   return (
-    <Box h-400 roundedLG bgGray800--dark bgAmber100 p4>
+    <Box h-400 roundedLG bgGray800--dark bgOrange100 p4>
       <Box _dark={['green200']} red200>
         40 Lorem ipsum dolor sit amet
       </Box>

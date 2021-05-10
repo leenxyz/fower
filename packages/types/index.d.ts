@@ -346,38 +346,27 @@ declare namespace FowerTypes {
     brand800: string
     brand900: string
 
-    rose50: string // '#fff1f2'
-    rose100: string // '#ffe4e6'
-    rose200: string // '#fecdd3'
-    rose300: string // '#fda4af'
-    rose400: string // '#fb7185'
-    rose500: string // '#f43f5e'
-    rose600: string // '#e11d48'
-    rose700: string // '#be123c'
-    rose800: string // '#9f1239'
-    rose900: string // '#881337'
+    pink50: string
+    pink100: string
+    pink200: string
+    pink300: string
+    pink400: string
+    pink500: string
+    pink600: string
+    pink700: string
+    pink800: string
+    pink900: string
 
-    pink50: string // '#fdf2f8'
-    pink100: string // '#fce7f3'
-    pink200: string // '#fbcfe8'
-    pink300: string // '#f9a8d4'
-    pink400: string // '#f472b6'
-    pink500: string // '#ec4899'
-    pink600: string // '#db2777'
-    pink700: string // '#be185d'
-    pink800: string // '#9d174d'
-    pink900: string // '#831843'
-
-    fuchsia50: string // '#fdf4ff'
-    fuchsia100: string // '#fae8ff'
-    fuchsia200: string // '#f5d0fe'
-    fuchsia300: string // '#f0abfc'
-    fuchsia400: string // '#e879f9'
-    fuchsia500: string // '#d946ef'
-    fuchsia600: string // '#c026d3'
-    fuchsia700: string // '#a21caf'
-    fuchsia800: string // '#86198f'
-    fuchsia900: string // '#701a75'
+    fuchsia50: string
+    fuchsia100: string
+    fuchsia200: string
+    fuchsia300: string
+    fuchsia400: string
+    fuchsia500: string
+    fuchsia600: string
+    fuchsia700: string
+    fuchsia800: string
+    fuchsia900: string
 
     purple50: string // '#faf5ff'
     purple100: string // '#f3e8ff'
@@ -423,17 +412,6 @@ declare namespace FowerTypes {
     blue800: string // '#1e40af'
     blue900: string // '#1e3a8a'
 
-    lightBlue50: string // '#f0f9ff'
-    lightBlue100: string // '#e0f2fe'
-    lightBlue200: string // '#bae6fd'
-    lightBlue300: string // '#7dd3fc'
-    lightBlue400: string // '#38bdf8'
-    lightBlue500: string // '#0ea5e9'
-    lightBlue600: string // '#0284c7'
-    lightBlue700: string // '#0369a1'
-    lightBlue800: string // '#075985'
-    lightBlue900: string // '#0c4a6e'
-
     cyan50: string // '#ecfeff'
     cyan100: string // '#cffafe'
     cyan200: string // '#a5f3fc'
@@ -455,17 +433,6 @@ declare namespace FowerTypes {
     teal700: string // '#0f766e'
     teal800: string // '#115e59'
     teal900: string // '#134e4a'
-
-    emerald50: string // '#ecfdf5'
-    emerald100: string // '#d1fae5'
-    emerald200: string // '#a7f3d0'
-    emerald300: string // '#6ee7b7'
-    emerald400: string // '#34d399'
-    emerald500: string // '#10b981'
-    emerald600: string // '#059669'
-    emerald700: string // '#047857'
-    emerald800: string // '#065f46'
-    emerald900: string // '#064e3b'
 
     green50: string // '#f0fdf4'
     green100: string // '#dcfce7'
@@ -500,17 +467,6 @@ declare namespace FowerTypes {
     yellow800: string // '#854d0e'
     yellow900: string // '#713f12'
 
-    amber50: string // '#fffbeb'
-    amber100: string // '#fef3c7'
-    amber200: string // '#fde68a'
-    amber300: string // '#fcd34d'
-    amber400: string // '#fbbf24'
-    amber500: string // '#f59e0b'
-    amber600: string // '#d97706'
-    amber700: string // '#b45309'
-    amber800: string // '#92400e'
-    amber900: string // '#78350f'
-
     orange50: string // '#fff7ed'
     orange100: string // '#ffedd5'
     orange200: string // '#fed7aa'
@@ -533,17 +489,6 @@ declare namespace FowerTypes {
     red800: string // '#991b1b'
     red900: string // '#7f1d1d'
 
-    warmGray50: string // '#fafaf9'
-    warmGray100: string // '#f5f5f4'
-    warmGray200: string // '#e7e5e4'
-    warmGray300: string // '#d6d3d1'
-    warmGray400: string // '#a8a29e'
-    warmGray500: string // '#78716c'
-    warmGray600: string // '#57534e'
-    warmGray700: string // '#44403c'
-    warmGray800: string // '#292524'
-    warmGray900: string // '#1c1917'
-
     trueGray50: string // '#fafafa'
     trueGray100: string // '#f5f5f5'
     trueGray200: string // '#e5e5e5'
@@ -565,27 +510,5 @@ declare namespace FowerTypes {
     gray700: string // '#3f3f46'
     gray800: string // '#27272a'
     gray900: string // '#18181b'
-
-    coolGray50: string // '#f9fafb'
-    coolGray100: string // '#f3f4f6'
-    coolGray200: string // '#e5e7eb'
-    coolGray300: string // '#d1d5db'
-    coolGray400: string // '#9ca3af'
-    coolGray500: string // '#6b7280'
-    coolGray600: string // '#4b5563'
-    coolGray700: string // '#374151'
-    coolGray800: string // '#1f2937'
-    coolGray900: string // '#111827'
-
-    blueGray50: string // '#f8fafc'
-    blueGray100: string // '#f1f5f9'
-    blueGray200: string // '#e2e8f0'
-    blueGray300: string // '#cbd5e1'
-    blueGray400: string // '#94a3b8'
-    blueGray500: string // '#64748b'
-    blueGray600: string // '#475569'
-    blueGray700: string // '#334155'
-    blueGray800: string // '#1e293b'
-    blueGray900: string // '#0f172a'
   }
 }
