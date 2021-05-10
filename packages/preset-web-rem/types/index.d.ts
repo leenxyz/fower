@@ -30,6 +30,7 @@
 /// <reference types="fower-plugin-debug" />
 /// <reference types="fower-plugin-space" />
 /// <reference types="fower-plugin-grid" />
+/// <reference types="fower-plugin-user-select" />
 /// <reference types="fower-plugin-visibility" />
 /// <reference types="@fower/types" />
 import { Preset, Theme } from '@fower/types'

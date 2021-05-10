@@ -30,6 +30,7 @@ import cursor from 'fower-plugin-cursor'
 import ellipsis from 'fower-plugin-ellipsis'
 import debug from 'fower-plugin-debug'
 import space from 'fower-plugin-space'
+import userSelect from 'fower-plugin-user-select'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 
@@ -66,6 +67,7 @@ export const plugins = [
   outline(),
   ellipsis(),
   space(),
+  userSelect(),
   visibility(),
   boxSizing(),
 ]

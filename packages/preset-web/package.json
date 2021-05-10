@@ -56,6 +56,7 @@
     "fower-plugin-text-overflow": "^1.11.1",
     "fower-plugin-text-size": "^1.11.1",
     "fower-plugin-text-transform": "^1.11.1",
+    "fower-plugin-user-select": "^1.11.1",
     "fower-plugin-visibility": "^1.11.1",
     "fower-plugin-z-index": "^1.11.1"
   }
