@@ -409,7 +409,13 @@ export class Parser {
         atom.handled = true
       }
 
-      this.addAtom(atom)
+      const cachedAtom = atomCache.get(atom.id)
+
+      if (cachedAtom) {
+        this.addAtom(cachedAtom)
+      } else {
+        this.addAtom(atom)
+      }
     }
   }
 

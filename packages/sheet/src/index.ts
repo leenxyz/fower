@@ -16,14 +16,13 @@ class StyleSheet {
     if (!isBrowser || !rules.length) return
     if (!this.$style) this.createStyleElement()
 
-    this.$style.innerHTML = this.$style.innerHTML + rules.join('\n')
-    // for (const rule of rules) {
-    //   try {
-    //     this.$style.sheet?.insertRule(rule)
-    //   } catch (error) {
-    //     console.warn(error)
-    //   }
-    // }
+    for (const rule of rules) {
+      try {
+        this.$style.sheet?.insertRule(rule)
+      } catch (error) {
+        console.warn(error)
+      }
+    }
   }
 }
 

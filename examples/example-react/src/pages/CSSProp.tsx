@@ -4,17 +4,16 @@ export default () => {
   return (
     <div>
       <Box
-        // text4XL
         css={{
-          ':hover': {
-            backgroundColor: '#feebc8',
-          },
+          userSelect: 'none',
+          backgroundColor: '#feebc8',
         }}
       >
-        <span>Hi, Fower!</span>
+        Use Atomic Props in CSS Props
       </Box>
       <Box
         css={{
+          userSelect: 'none',
           backgroundColor: '#feebc8',
         }}
       >
