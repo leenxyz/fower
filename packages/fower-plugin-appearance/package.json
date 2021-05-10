@@ -1,0 +1,30 @@
+{
+  "name": "fower-plugin-appearance",
+  "version": "1.11.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/fower-plugin-appearance.esm.js",
+  "dependencies": {
+    "@fower/atom": "^1.11.1",
+    "@fower/parser": "^1.11.1",
+    "@fower/types": "^1.11.1",
+    "@fower/utils": "^1.11.1"
+  }
+}
