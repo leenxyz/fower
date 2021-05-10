@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-font-family",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-font-family.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.11.1",
-    "@fower/core": "^1.11.1",
-    "@fower/store": "^1.11.1",
-    "@fower/types": "^1.11.1",
-    "@fower/utils": "^1.11.1"
+    "@fower/atom": "^1.12.0",
+    "@fower/core": "^1.12.0",
+    "@fower/store": "^1.12.0",
+    "@fower/types": "^1.12.0",
+    "@fower/utils": "^1.12.0"
   }
 }

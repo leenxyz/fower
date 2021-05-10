@@ -1,6 +1,6 @@
 {
   "name": "@fower/css-object-processor",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/css-object-processor.esm.js",
   "dependencies": {
-    "@fower/utils": "^1.11.1",
+    "@fower/utils": "^1.12.0",
     "csstype": "^3.0.7"
   }
 }
