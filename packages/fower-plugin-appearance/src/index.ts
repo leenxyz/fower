@@ -1,7 +1,7 @@
 import { FowerPlugin } from '@fower/types'
 
 export function isMatch(key: string) {
-  return /^appearancNone$/i.test(key)
+  return /^appearanceNone$/i.test(key)
 }
 
 export default (): FowerPlugin => {

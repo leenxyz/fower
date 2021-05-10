@@ -6,13 +6,13 @@ const { isMatch, handleAtom } = plugin()
 const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('appearancNone')).toEqual(true)
+  expect(isMatch!('appearanceNone')).toEqual(true)
 })
 
-test('appearancNone', () => {
+test('appearanceNone', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'appearancNone',
+      propKey: 'appearanceNone',
       propValue: true,
     }),
     parser,
