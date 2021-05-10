@@ -28,6 +28,7 @@ const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className', 'p
 export class Parser {
   constructor(readonly props = {} as Props) {
     this.traverseProps(props)
+    this.autoDarkMode()
   }
 
   /**
@@ -135,6 +136,63 @@ export class Parser {
       if (plugin.afterAtomStyleCreate) {
         plugin.afterAtomStyleCreate(this)
       }
+    }
+  }
+
+  autoDarkMode() {
+    const colorMap: any = {
+      white: 'black',
+      black: 'white',
+      '50': '900',
+      '100': '800',
+      '200': '700',
+      '300': '600',
+      '400': '500',
+      '500': '400',
+      '600': '300',
+      '700': '200',
+      '800': '100',
+      '900': '50',
+    }
+
+    const colorKeys = ['color', 'backgroundColor', 'borderColor']
+    const darkAtoms: Atom[] = []
+
+    /** TODO: hack for auto dark mode, need to refactor */
+    for (const atom of this.atoms) {
+      if (colorKeys.includes(atom.type) && !atom.meta.mode) {
+        const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
+        if (find) continue
+
+        const entries = Object.entries(atom.style)
+        if (!entries?.length) continue
+        const [, colorValue] = entries[0]
+
+        let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
+        if (['white', 'black'].includes(colorValue)) mapKey = colorValue
+        colorMap
+
+        let str = JSON.stringify(atom).replaceAll(mapKey, colorMap[mapKey])
+
+        if (mapKey === 'white') str = str.replaceAll('White', 'Black')
+        if (mapKey === 'black') str = str.replaceAll('Black', 'White')
+
+        const cloned: Atom = JSON.parse(str)
+
+        const darkAtom = new Atom({
+          ...cloned,
+          className: '',
+          propKey: cloned.propKey + '--dark',
+          meta: { ...cloned.meta, mode: 'dark' },
+        })
+        darkAtom.createClassName(this.config.prefix)
+
+        darkAtoms.push(darkAtom)
+      }
+    }
+
+    for (const darkAtom of darkAtoms) {
+      this.addAtom(darkAtom)
     }
   }
 
@@ -422,61 +480,6 @@ export class Parser {
     this.atoms = this.atoms.sort((a, b) => {
       return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
     })
-
-    const colorMap: any = {
-      white: 'black',
-      black: 'white',
-      '50': '900',
-      '100': '800',
-      '200': '700',
-      '300': '600',
-      '400': '500',
-      '500': '400',
-      '600': '300',
-      '700': '200',
-      '800': '100',
-      '900': '50',
-    }
-
-    const colorKeys = ['color', 'backgroundColor', 'borderColor']
-    const darkAtoms: Atom[] = []
-
-    /** TODO: hack for auto dark mode, need to refactor */
-    for (const atom of this.atoms) {
-      if (colorKeys.includes(atom.type) && !atom.meta.mode) {
-        const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
-        if (find) continue
-
-        const entries = Object.entries(atom.style)
-        if (!entries?.length) continue
-        const [, colorValue] = entries[0]
-
-        let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
-        if (['white', 'black'].includes(colorValue)) mapKey = colorValue
-        colorMap
-
-        let str = JSON.stringify(atom).replaceAll(mapKey, colorMap[mapKey])
-
-        if (mapKey === 'white') str = str.replaceAll('White', 'Black')
-        if (mapKey === 'black') str = str.replaceAll('Black', 'White')
-
-        const cloned: Atom = JSON.parse(str)
-
-        const darkAtom = new Atom({
-          ...cloned,
-          className: '',
-          propKey: cloned.propKey + '--dark',
-          meta: { ...cloned.meta, mode: 'dark' },
-        })
-        darkAtom.createClassName(this.config.prefix)
-
-        darkAtoms.push(darkAtom)
-      }
-    }
-
-    for (const darkAtom of darkAtoms) {
-      this.addAtom(darkAtom)
-    }
 
     // console.log('this.atoms-----:', this.atoms)
 

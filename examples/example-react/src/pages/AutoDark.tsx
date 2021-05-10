@@ -1,5 +1,6 @@
 import { Box } from '@fower/react';
 import { useState } from 'react';
+import { Button } from './Button';
 
 export default () => {
   const [mode, setMode] = useState('Light');
@@ -15,6 +16,9 @@ export default () => {
   const p = {
     'bg--hover': `green300`,
   };
+
+  return <Button onClick={toggleMode}>GOOGO {mode}</Button>;
+
   return (
     <Box h-400 roundedLG bgGray200 p4>
       <Box red600>40 Lorem ipsum dolor sit amet</Box>
