@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-line-height",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-line-height.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.12.0",
-    "@fower/core": "^1.12.0",
-    "@fower/store": "^1.12.0",
-    "@fower/types": "^1.12.0",
-    "@fower/utils": "^1.12.0"
+    "@fower/atom": "^1.12.1",
+    "@fower/core": "^1.12.1",
+    "@fower/store": "^1.12.1",
+    "@fower/types": "^1.12.1",
+    "@fower/utils": "^1.12.1"
   }
 }

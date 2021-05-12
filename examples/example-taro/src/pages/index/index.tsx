@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { View, Text } from '@fower/taro'
-import './index.scss'
+import './index.css'
 
 export default class Index extends Component {
   componentWillMount() {}
@@ -15,8 +15,13 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View p10 textCenter>
-        <Text>Hello world!</Text>
+      <View className="index">
+        <View h-100 border bgGreen200 text-16>
+          Hello world!
+        </View>
+        <View h-100px border bgRed200 text-16px>
+          Hello world!
+        </View>
       </View>
     )
   }

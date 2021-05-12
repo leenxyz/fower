@@ -1,12 +1,12 @@
 {
-  "name": "@fower/example-taro",
-  "version": "1.12.0",
+  "name": "example-taro",
+  "version": "1.0.0",
   "private": true,
-  "description": "@fower/taro demo",
+  "description": "example taro",
   "templateInfo": {
     "name": "default",
     "typescript": true,
-    "css": "sass"
+    "css": "none"
   },
   "scripts": {
     "build:weapp": "taro build --type weapp",
@@ -26,9 +26,7 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch",
-    "build": "echo 'build'",
-    "test": "echo 'build:test'"
+    "dev:quickapp": "npm run build:quickapp -- --watch"
   },
   "browserslist": [
     "last 3 versions",
@@ -38,28 +36,29 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@fower/taro": "^1.12.0",
-    "@tarojs/components": "3.1.0-beta.4",
-    "@tarojs/react": "3.1.0-beta.4",
-    "@tarojs/runtime": "3.1.0-beta.4",
-    "@tarojs/taro": "3.1.0-beta.4",
-    "react": "17.x",
-    "react-dom": "17.x"
+    "@fower/taro": "^1.12.1",
+    "@tarojs/components": "3.2.6",
+    "@tarojs/runtime": "3.2.6",
+    "@tarojs/taro": "3.2.6",
+    "@tarojs/react": "3.2.6",
+    "react-dom": "^17.0.0",
+    "react": "^17.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@tarojs/mini-runner": "3.1.0-beta.4",
-    "@tarojs/webpack-runner": "3.1.0-beta.4",
-    "@types/react": "^16.0.0",
     "@types/webpack-env": "^1.13.6",
-    "@typescript-eslint/eslint-plugin": "^2.x",
-    "@typescript-eslint/parser": "^2.x",
-    "babel-preset-taro": "3.1.0-beta.4",
+    "@types/react": "^17.0.2",
+    "@tarojs/mini-runner": "3.2.6",
+    "@babel/core": "^7.8.0",
+    "@tarojs/webpack-runner": "3.2.6",
+    "babel-preset-taro": "3.2.6",
+    "eslint-config-taro": "3.2.6",
     "eslint": "^6.8.0",
-    "eslint-config-taro": "3.1.0-beta.4",
-    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "stylelint": "9.3.0"
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "stylelint": "9.3.0",
+    "@typescript-eslint/parser": "^4.15.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "typescript": "^4.1.0"
   }
 }
