@@ -169,14 +169,16 @@ export class Parser {
 
         const [, colorValue] = entries[0]
 
+        if (!colorValue) continue
+
         let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
         if (['white', 'black'].includes(colorValue)) mapKey = colorValue
         colorMap
 
-        let str = JSON.stringify(atom).replaceAll(mapKey, colorMap[mapKey])
+        let str = JSON.stringify(atom).replace(new RegExp(`${mapKey}`, 'g'), colorMap[mapKey])
 
-        if (mapKey === 'white') str = str.replaceAll('White', 'Black')
-        if (mapKey === 'black') str = str.replaceAll('Black', 'White')
+        if (mapKey === 'white') str = str.replace(/White/g, 'Black')
+        if (mapKey === 'black') str = str.replace(/Black/g, 'White')
 
         const cloned: Atom = JSON.parse(str)
 
