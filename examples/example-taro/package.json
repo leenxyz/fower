@@ -1,6 +1,6 @@
 {
-  "name": "example-taro",
-  "version": "1.0.0",
+  "name": "@fower/example-taro",
+  "version": "1.12.1",
   "private": true,
   "description": "example taro",
   "templateInfo": {
