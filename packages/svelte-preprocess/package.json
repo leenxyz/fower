@@ -1,6 +1,6 @@
 {
   "name": "@fower/svelte-preprocess",
-  "version": "1.12.1",
+  "version": "1.12.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,9 +24,9 @@
     "svelte": "^3.37.0"
   },
   "dependencies": {
-    "@fower/core": "^1.12.1",
-    "@fower/parser": "^1.12.1",
-    "@fower/preset-web": "^1.12.1",
+    "@fower/core": "^1.12.3",
+    "@fower/parser": "^1.12.3",
+    "@fower/preset-web": "^1.12.3",
     "posthtml": "^0.15.2"
   }
 }

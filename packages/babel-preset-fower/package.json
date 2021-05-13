@@ -1,6 +1,6 @@
 {
   "name": "@fower/babel-preset-fower",
-  "version": "1.12.1",
+  "version": "1.12.3",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -20,9 +20,9 @@
   "module": "dist/babel-preset-fower.esm.js",
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.5",
-    "@fower/react": "^1.12.1",
-    "@fower/types": "^1.12.1",
-    "@fower/utils": "^1.12.1",
+    "@fower/react": "^1.12.3",
+    "@fower/types": "^1.12.3",
+    "@fower/utils": "^1.12.3",
     "babel-plugin-jsx-pragmatic": "^1.0.2"
   }
 }

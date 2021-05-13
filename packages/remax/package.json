@@ -1,6 +1,6 @@
 {
   "name": "@fower/remax",
-  "version": "1.12.1",
+  "version": "1.12.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,9 +19,9 @@
   "author": "forsigner",
   "module": "dist/remax.esm.js",
   "dependencies": {
-    "@fower/core": "^1.12.1",
-    "@fower/preset-remax": "^1.12.1",
-    "@fower/styled": "^1.12.1"
+    "@fower/core": "^1.12.3",
+    "@fower/preset-remax": "^1.12.3",
+    "@fower/styled": "^1.12.3"
   },
   "devDependencies": {
     "remax": "^2.13.1"

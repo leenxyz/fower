@@ -1,6 +1,6 @@
 {
     "name": "@fower/types",
-    "version": "1.12.1",
+    "version": "1.12.3",
     "license": "MIT",
     "main": "",
     "types": "index.d.ts",
@@ -9,7 +9,7 @@
         "test": "echo 'build:test'"
     },
     "dependencies": {
-        "@fower/atom": "^1.12.1",
+        "@fower/atom": "^1.12.3",
         "csstype": "^3.0.7"
     }
 }

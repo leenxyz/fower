@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-taro",
-  "version": "1.12.1",
+  "version": "1.12.3",
   "private": true,
   "description": "example taro",
   "templateInfo": {
@@ -36,29 +36,29 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@fower/taro": "^1.12.1",
+    "@fower/taro": "^1.12.3",
     "@tarojs/components": "3.2.6",
+    "@tarojs/react": "3.2.6",
     "@tarojs/runtime": "3.2.6",
     "@tarojs/taro": "3.2.6",
-    "@tarojs/react": "3.2.6",
-    "react-dom": "^17.0.0",
-    "react": "^17.0.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.6",
-    "@types/react": "^17.0.2",
-    "@tarojs/mini-runner": "3.2.6",
     "@babel/core": "^7.8.0",
+    "@tarojs/mini-runner": "3.2.6",
     "@tarojs/webpack-runner": "3.2.6",
+    "@types/react": "^17.0.2",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
     "babel-preset-taro": "3.2.6",
-    "eslint-config-taro": "3.2.6",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.8.2",
+    "eslint-config-taro": "3.2.6",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "stylelint": "9.3.0",
-    "@typescript-eslint/parser": "^4.15.1",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
     "typescript": "^4.1.0"
   }
 }

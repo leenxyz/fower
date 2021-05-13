@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-cursor",
-  "version": "1.12.1",
+  "version": "1.12.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-cursor.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.12.1",
-    "@fower/parser": "^1.12.1",
-    "@fower/types": "^1.12.1",
-    "@fower/utils": "^1.12.1"
+    "@fower/atom": "^1.12.3",
+    "@fower/parser": "^1.12.3",
+    "@fower/types": "^1.12.3",
+    "@fower/utils": "^1.12.3"
   }
 }
