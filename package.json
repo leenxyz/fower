@@ -16,7 +16,8 @@
       "**/@sapper",
       "**/example-react-native-expo/*",
       "**/ExampleReactNative/**",
-      "*/@docusaurus/*"
+      "*/@docusaurus/*",
+      "*/@tarojs/*"
     ]
   },
   "scripts": {
