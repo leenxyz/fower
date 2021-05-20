@@ -11,7 +11,7 @@
   },
   "author": "forsigner",
   "dependencies": {
-    "posthtml": "^0.13.4"
+    "posthtml": "^0.15.2"
   },
   "devDependencies": {
     "vue-template-compiler": "^2.6.12"

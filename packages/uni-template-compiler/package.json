@@ -11,7 +11,7 @@
   },
   "author": "doabit",
   "dependencies": {
-    "posthtml": "^0.13.4"
+    "posthtml": "^0.15.2"
   },
   "devDependencies": {
     "@dcloudio/uni-template-compiler": "^2.0.0-31920210514002"
