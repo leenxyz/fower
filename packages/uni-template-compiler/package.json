@@ -1,0 +1,19 @@
+{
+  "name": "@fower/uni-template-compiler",
+  "version": "1.12.3",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "doabit",
+  "dependencies": {
+    "posthtml": "^0.13.4"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-template-compiler": "^2.0.0-31920210514002"
+  }
+}
