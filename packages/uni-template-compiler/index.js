@@ -3,9 +3,9 @@ const posthtml = require('posthtml')
 const { css } = require('@fower/core')
 const { Parser } = require('@fower/parser')
 const { setConfig } = require('@fower/core')
-const { presetWeb } = require('@fower/preset-web')
+const { presetUniapp } = require('@fower/preset-uniapp')
 
-setConfig(presetWeb)
+setConfig(presetUniapp)
 
 const isProd = process.env.NODE_ENV === 'production'
 const isH5 = process.env.UNI_PLATFORM === 'h5'
