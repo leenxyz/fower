@@ -18,24 +18,6 @@ declare module '@fower/types' {
      */
     space?: PropValue
 
-    spaceXS?: boolean
-    spaceSM?: boolean
-    spaceMD?: boolean
-    spaceLG?: boolean
-    spaceXL?: boolean
-
-    spaceXXS?: boolean
-    spaceXSM?: boolean
-    spaceXMD?: boolean
-    spaceXLG?: boolean
-    spaceXXL?: boolean
-
-    spaceYXS?: boolean
-    spaceYSM?: boolean
-    spaceYMD?: boolean
-    spaceYLG?: boolean
-    spaceYXL?: boolean
-
     /**
      * Set children elements space.
      *

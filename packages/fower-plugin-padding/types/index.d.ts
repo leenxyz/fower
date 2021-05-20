@@ -20,42 +20,6 @@ declare module '@fower/types' {
      */
     p?: PropValue
 
-    pXS?: boolean
-    pSM?: boolean
-    pMD?: boolean
-    pLG?: boolean
-    pXL?: boolean
-
-    pxXS?: boolean
-    pxSM?: boolean
-    pxMD?: boolean
-    pxLG?: boolean
-    pxXL?: boolean
-
-    pyXS?: boolean
-    pySM?: boolean
-    pyMD?: boolean
-    pyLG?: boolean
-    pyXL?: boolean
-
-    ptXS?: boolean
-    ptSM?: boolean
-    ptMD?: boolean
-    ptLG?: boolean
-    ptXL?: boolean
-
-    prXS?: boolean
-    prSM?: boolean
-    prMD?: boolean
-    prLG?: boolean
-    prXL?: boolean
-
-    pbXS?: boolean
-    pbSM?: boolean
-    pbMD?: boolean
-    pbLG?: boolean
-    pbXL?: boolean
-
     /**
      * Set padding
      *

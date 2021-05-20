@@ -20,47 +20,6 @@ declare module '@fower/types' {
      */
     m?: PropValue
 
-    mXS?: boolean
-    mSM?: boolean
-    mMD?: boolean
-    mLG?: boolean
-    mXL?: boolean
-
-    mxXS?: boolean
-    mxSM?: boolean
-    mxMD?: boolean
-    mxLG?: boolean
-    mxXL?: boolean
-
-    myXS?: boolean
-    mySM?: boolean
-    myMD?: boolean
-    myLG?: boolean
-    myXL?: boolean
-
-    mtXS?: boolean
-    mtSM?: boolean
-    mtMD?: boolean
-    mtLG?: boolean
-    mtXL?: boolean
-
-    mrXS?: boolean
-    mrSM?: boolean
-    mrMD?: boolean
-    mrLG?: boolean
-    mrXL?: boolean
-
-    mbXS?: boolean
-    mbSM?: boolean
-    mbMD?: boolean
-    mbLG?: boolean
-    mbXL?: boolean
-
-    mlXS?: boolean
-    mlSM?: boolean
-    mlMD?: boolean
-    mlLG?: boolean
-    mlXL?: boolean
 
     /**
      * Set margin

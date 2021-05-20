@@ -12,12 +12,6 @@ export const theme: Theme = {
   },
   colors,
   spacings: {
-    xs: '0.5rem',
-    sm: '0.75rem',
-    md: '1rem',
-    lg: '1.25rem',
-    xl: '1.5rem',
-
     0: '0px',
     1: '0.25rem',
     2: '0.5rem',

@@ -46,17 +46,17 @@ declare namespace FowerTypes {
 
   type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 
-  interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
+  interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> { }
 
   type PseudosObject = { [P in CSS.Pseudos]?: FowerCSSProperties }
 
   type CSSObject<T = any> =
     | (FowerCSSProperties & PseudosObject)
     | {
-        [K in keyof T]?: T[K] extends object
-          ? CSSObject<T[K]>
-          : FowerCSSProperties | number | string | boolean
-      }
+      [K in keyof T]?: T[K] extends object
+      ? CSSObject<T[K]>
+      : FowerCSSProperties | number | string | boolean
+    }
 
   // type CSSObject<T = FowerCSSProperties> =
   //   | (FowerCSSProperties & PseudosObject)
@@ -216,11 +216,6 @@ declare namespace FowerTypes {
 
     colors: Colors
     spacings: {
-      xs: string | number
-      sm: string | number
-      md: string | number
-      lg: string | number
-      xl: string | number
       0: string | number
       1: string | number
       2: string | number
