@@ -1,6 +1,6 @@
 {
   "name": "examplereactnative",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@fower/react-native": "^1.12.3",
+    "@fower/react-native": "^1.13.0",
     "react": "17.0.1",
     "react-native": "0.64.0"
   },

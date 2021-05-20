@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-shadow",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-shadow.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.12.3",
-    "@fower/core": "^1.12.3",
-    "@fower/store": "^1.12.3",
-    "@fower/types": "^1.12.3",
-    "@fower/utils": "^1.12.3"
+    "@fower/atom": "^1.13.0",
+    "@fower/core": "^1.13.0",
+    "@fower/store": "^1.13.0",
+    "@fower/types": "^1.13.0",
+    "@fower/utils": "^1.13.0"
   }
 }
