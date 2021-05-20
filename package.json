@@ -17,6 +17,7 @@
       "**/@docusaurus/**",
       "**/@dcloudio/**",
       "**/@tarojs/**",
+      "**/@vue/cli-service",
       "**/example-react-native-expo/*",
       "**/ExampleReactNative/**"
     ]
