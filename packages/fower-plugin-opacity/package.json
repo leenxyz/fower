@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-opacity",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-opacity.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.12.3",
-    "@fower/types": "^1.12.3",
-    "@fower/utils": "^1.12.3"
+    "@fower/atom": "^1.13.0",
+    "@fower/types": "^1.13.0",
+    "@fower/utils": "^1.13.0"
   }
 }

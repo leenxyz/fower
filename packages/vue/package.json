@@ -1,6 +1,6 @@
 {
   "name": "@fower/vue",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "description": "",
   "main": "dist/fower.ssr.js",
   "browser": "dist/fower.esm.js",
@@ -20,11 +20,11 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@fower/core": "^1.12.3",
-    "@fower/parser": "^1.12.3",
-    "@fower/preset-web": "^1.12.3",
-    "@fower/styled": "^1.12.3",
-    "@fower/types": "^1.12.3"
+    "@fower/core": "^1.13.0",
+    "@fower/parser": "^1.13.0",
+    "@fower/preset-web": "^1.13.0",
+    "@fower/styled": "^1.13.0",
+    "@fower/types": "^1.13.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.5",

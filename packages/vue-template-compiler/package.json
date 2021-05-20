@@ -1,6 +1,6 @@
 {
   "name": "@fower/vue-template-compiler",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -11,7 +11,7 @@
   },
   "author": "forsigner",
   "dependencies": {
-    "posthtml": "^0.13.4"
+    "posthtml": "^0.15.2"
   },
   "devDependencies": {
     "vue-template-compiler": "^2.6.12"

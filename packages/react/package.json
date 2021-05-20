@@ -1,6 +1,6 @@
 {
   "name": "@fower/react",
-  "version": "1.12.3",
+  "version": "1.13.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,14 +19,14 @@
   "author": "forsigner",
   "module": "dist/react.esm.js",
   "dependencies": {
-    "@fower/core": "^1.12.3",
-    "@fower/css-object-processor": "^1.12.3",
-    "@fower/parser": "^1.12.3",
-    "@fower/preset-web": "^1.12.3",
-    "@fower/sheet": "^1.12.3",
-    "@fower/store": "^1.12.3",
-    "@fower/styled": "^1.12.3",
-    "@fower/types": "^1.12.3",
-    "@fower/utils": "^1.12.3"
+    "@fower/core": "^1.13.0",
+    "@fower/css-object-processor": "^1.13.0",
+    "@fower/parser": "^1.13.0",
+    "@fower/preset-web": "^1.13.0",
+    "@fower/sheet": "^1.13.0",
+    "@fower/store": "^1.13.0",
+    "@fower/styled": "^1.13.0",
+    "@fower/types": "^1.13.0",
+    "@fower/utils": "^1.13.0"
   }
 }
