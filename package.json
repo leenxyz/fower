@@ -11,14 +11,14 @@
     ],
     "nohoist": [
       "**/html-minifier-terser",
-      "**/svelte",
-      "**/sapper",
-      "**/@sapper",
+      "**/svelte/**",
+      "**/sapper/**",
+      "**/@sapper/**",
+      "**/@docusaurus/**",
+      "**/@dcloudio/**",
+      "**/@tarojs/**",
       "**/example-react-native-expo/*",
-      "**/ExampleReactNative/**",
-      "*/@docusaurus/*",
-      "*/@dcloudio/*",
-      "*/@tarojs/*"
+      "**/ExampleReactNative/**"
     ]
   },
   "scripts": {
