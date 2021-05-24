@@ -4,8 +4,8 @@ import { plugins } from './plugins'
 import { theme } from './theme'
 
 export const presetUniapp: Preset = {
+  pseudos: ['after', 'before'],
   unit: 'rpx',
-  inline: true,
   theme: theme as Theme,
   plugins,
 }
