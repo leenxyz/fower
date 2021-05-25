@@ -42,8 +42,8 @@ module.exports.parseComponent = (content, opts) => {
   // auto inject fower vue plugin
   const code = `
   import __Vue from 'vue'
-  import VueFower from '@fower/vue'
-  __Vue.use(VueFower)
+  import UniappFower from '@fower/uniapp'
+  __Vue.use(UniappFower)
     `
   if (sfc.script) {
     sfc.script.content = code + sfc.script.content

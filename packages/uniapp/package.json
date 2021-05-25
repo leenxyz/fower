@@ -1,0 +1,32 @@
+{
+  "name": "@fower/uniapp",
+  "version": "1.14.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/uniapp.esm.js",
+  "devDependencies": {
+    "vue": "^2.6.11"
+  },
+  "dependencies": {
+    "@fower/core": "^1.14.0",
+    "@fower/parser": "^1.14.0",
+    "@fower/preset-uniapp": "^1.14.0",
+    "posthtml": "^0.15.2"
+  }
+}
