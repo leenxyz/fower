@@ -1,6 +1,6 @@
 {
   "name": "@fower/colors",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,6 +22,6 @@
   "author": "forsigner",
   "module": "dist/colors.esm.js",
   "dependencies": {
-    "@fower/types": "^1.14.0"
+    "@fower/types": "^1.15.0"
   }
 }
