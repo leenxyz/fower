@@ -46,17 +46,17 @@ declare namespace FowerTypes {
 
   type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 
-  interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> { }
+  interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
 
   type PseudosObject = { [P in CSS.Pseudos]?: FowerCSSProperties }
 
   type CSSObject<T = any> =
     | (FowerCSSProperties & PseudosObject)
     | {
-      [K in keyof T]?: T[K] extends object
-      ? CSSObject<T[K]>
-      : FowerCSSProperties | number | string | boolean
-    }
+        [K in keyof T]?: T[K] extends object
+          ? CSSObject<T[K]>
+          : FowerCSSProperties | number | string | boolean
+      }
 
   // type CSSObject<T = FowerCSSProperties> =
   //   | (FowerCSSProperties & PseudosObject)
@@ -156,13 +156,33 @@ declare namespace FowerTypes {
 
   interface Configuration {
     unit: 'none' | 'px' | 'rem' | 'em' | 'vh' | 'rpx' | ({} & string)
+
+    /**
+     * prefix for all css classes
+     */
     prefix?: string
-    /** use inline style or not */
+
+    /**
+     *  use inline style or not
+     *  */
     inline?: boolean
+
+    /**
+     * make all rule important
+     */
     important?: boolean
+
+    /**
+     * enable auto dark mode
+     */
+    autoDarkMode?: boolean
+
     pseudos?: string[]
+
     theme: Theme
+
     plugins: FowerPlugin[]
+
     transformUnit?: (data: string | number) => string
   }
 

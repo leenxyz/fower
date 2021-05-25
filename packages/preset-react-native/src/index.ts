@@ -6,6 +6,7 @@ import { theme } from './theme'
 export const presetReactNative: Preset = {
   unit: 'none',
   inline: true,
+  autoDarkMode: false,
   theme: theme as Theme,
   plugins,
 }

@@ -28,7 +28,10 @@ const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className', 'p
 export class Parser {
   constructor(readonly props = {} as Props) {
     this.traverseProps(props)
-    this.autoDarkMode()
+
+    if (store.config.autoDarkMode) {
+      this.autoDarkMode()
+    }
   }
 
   /**

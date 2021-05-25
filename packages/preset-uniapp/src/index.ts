@@ -6,6 +6,7 @@ import { theme } from './theme'
 export const presetUniapp: Preset = {
   pseudos: ['after', 'before'],
   unit: 'rpx',
+  autoDarkMode: false,
   theme: theme as Theme,
   plugins,
 }

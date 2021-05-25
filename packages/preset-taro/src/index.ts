@@ -6,6 +6,7 @@ import { theme } from './theme'
 export const presetTaro: Preset = {
   unit: 'rpx',
   inline: true,
+  autoDarkMode: false,
   theme: theme as Theme,
   plugins,
 }

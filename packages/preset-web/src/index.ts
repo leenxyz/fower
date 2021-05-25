@@ -26,6 +26,7 @@ export const presetWeb: Preset = {
     'selection',
   ],
   important: false,
+  autoDarkMode: true,
   theme,
   plugins,
 }
