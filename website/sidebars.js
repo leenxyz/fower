@@ -7,6 +7,7 @@ module.exports = {
       'use-with-svelte',
       'use-with-rn',
       'use-with-taro',
+      'use-with-uniapp',
       'use-with-remax',
       'use-with-vanilla',
     ],

@@ -1,0 +1,73 @@
+---
+id: use-with-uniapp
+title: Use with uni-app
+---
+
+## Installation
+
+First, install fower bindings for uniapp.
+
+```bash npm2yarn
+npm install @fower/uniapp @fower/uni-template-compiler
+```
+
+## Config `vue-loader`
+
+Then, configure `vue-loader` compiler option to `require('@fower/uni-template-compiler')`. We assume you are using `vue-cli` to build Vue App:
+
+```js
+module.exports = {
+  parallel: false,
+  chainWebpack(config) {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .tap((options) => {
+        options.compiler = require('@fower/uni-template-compiler')
+        return options
+      })
+  },
+}
+```
+
+## Enjoy it
+
+Now, you can write Atomic Props directly in HTML:
+
+```jsx
+<template>
+  <view toCenterY p-10 w-260 bgWhite rounded-10 shadow>
+    <image circle-48 src="/img/vue-logo.png" />
+    <view ml-10>
+      <view textXL fontBold>
+        Evan You
+      </view>
+      <text gray800>Creator of Vue.js.</text>
+    </view>
+  </view>
+</template>
+```
+
+If you don't like Atomic Props, you can use atomic css class instead:
+
+```jsx
+<template>
+  <view class="toCenterY p-10 w-260 bgWhite rounded-10 shadow">
+    <image src="/img/vue-logo.png" class="circle-48" />
+    <view class="ml-10">
+      <view class="textXL fontBold">Evan You</view>
+      <text class="gray800">Creator of Vue.js.</text>
+    </view>
+  </view>
+</template>
+```
+
+## IntelliSense
+
+To get IntelliSense in VS Code, just to install VS Code plugin: [Fower IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).
+
+![fower-intellisense](/img/fower-intellisense.png)
+
+## Example source code
+
+You can view the example souce code in github: [example-uniapp](https://github.com/forsigner/fower/tree/master/examples/example-uniapp)
