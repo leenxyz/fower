@@ -11,7 +11,8 @@ export { Options, Meta }
  * @example p-20,opacity-80
  * @example pMD,mSM,mtXL
  */
-export const digitReg = /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|-auto)$/i
+export const digitReg =
+  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|-auto)$/i
 
 export class Atom {
   constructor(private readonly options: Options) {
@@ -249,7 +250,6 @@ export class Atom {
     // is theme space key
     const isSpace = /^([a-z]+)(\d+)$/i.test(this.key)
 
-
     /**
      *  match props link: m4,mx2,mt9, spaceX4...
      *  to m4 -> [ key: m, value: 4 ]
@@ -260,7 +260,7 @@ export class Atom {
     const keyStr = this.key.toString()
     const result =
       keyStr.match(/^([a-z]+)(\d+)$/i) ||
-      keyStr.match(/^([a-z]*)--?(\d+[a-z]*?)$/i) ||
+      keyStr.match(/^([a-z]*)-(-?\d+[a-z]*?)$/i) ||
       keyStr.match(/^([a-z]+)-(auto)$/i)
 
     if (!result) return this
