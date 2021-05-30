@@ -53,6 +53,8 @@
   },
   "homepage": "https://github.com/forsigner/fower#readme",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/jest": "^26.0.22",
     "@types/prettier": "^2.2.3",
     "@types/react": "^17.0.3",

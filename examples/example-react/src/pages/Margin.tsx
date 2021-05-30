@@ -6,16 +6,8 @@ export default () => {
       <Box text3XL fontBold>
         Margin
       </Box>
-
+      ;
       <Box debug debugChildren>
-        <Box mSM inlineBlock>
-          mSM
-        </Box>
-
-        <Box mMD inlineBlock>
-          mMD
-        </Box>
-
         <Box m-auto inlineBlock>
           auto
         </Box>
