@@ -5,26 +5,26 @@ import { atomCache } from '@fower/parser'
 const row = 'row'
 const column = 'column'
 
-const toTop = 'toTop'
-const toLeft = 'toLeft'
-const toRight = 'toRight'
-const toBottom = 'toBottom'
+const toTop = 'totop'
+const toLeft = 'toleft'
+const toRight = 'toright'
+const toBottom = 'tobottom'
 
-const toBetween = 'toBetween'
-const toAround = 'toAround'
-const toEvenly = 'toEvenly'
+const toBetween = 'tobetween'
+const toAround = 'toaround'
+const toEvenly = 'toevenly'
 
-const toCenter = 'toCenter'
-const toCenterX = 'toCenterX'
-const toCenterY = 'toCenterY'
+const toCenter = 'tocenter'
+const toCenterX = 'tocenterx'
+const toCenterY = 'tocentery'
 
-const selfTop = 'selfTop'
-const selfRight = 'selfRight'
-const selfBottom = 'selfBottom'
-const selfLeft = 'selfLeft'
-const selfCenter = 'selfCenter'
-const selfStretch = 'selfCenter'
-const selfAuto = 'selfAuto'
+const selfTop = 'selftop'
+const selfRight = 'selfright'
+const selfBottom = 'selfbottom'
+const selfLeft = 'selfleft'
+const selfCenter = 'selfcenter'
+const selfStretch = 'selfcenter'
+const selfAuto = 'selfauto'
 
 const flexStart = 'flex-start'
 const flexEnd = 'flex-end'
@@ -55,6 +55,8 @@ const layoutToolkits = [
   selfStretch,
 ]
 
+const layoutReg = new RegExp(`${layoutToolkits.join('|')}`, 'i')
+
 // TODO: should refactor
 export function getFlexDirection(props: any = {}): string {
   if (props.flexDirection) return props.flexDirection
@@ -75,7 +77,7 @@ export function getFlexDirection(props: any = {}): string {
 }
 
 export function isMatch(key: string) {
-  return [row, column].includes(key) || layoutToolkits.includes(key)
+  return [row, column].includes(key) || layoutReg.test(key)
 }
 
 /**
@@ -91,6 +93,8 @@ export function toStyle(key: string, props: any) {
   const style: any = {}
 
   let styleKey: 'justifyContent' | 'alignItems' = '' as any
+
+  key = key.toLowerCase()
 
   /** 根据 row 和 column 设置属性，这里比较复杂 */
   if (direction.startsWith('row')) {
