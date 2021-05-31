@@ -1,8 +1,10 @@
 import { setConfig, injectGlobalStyle } from '@fower/core'
 import { store } from '@fower/store'
 import presetWeb from '@fower/preset-web'
-import _Vue, { PluginFunction } from 'vue'
+import { PluginFunction } from 'vue'
 import vcss from '@/v-css'
+
+const _Vue = require('vue')
 
 const isVue2 = (_Vue.version || '').startsWith('2')
 
