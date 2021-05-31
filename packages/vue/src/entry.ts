@@ -6,7 +6,15 @@ import vcss from '@/v-css'
 
 const _Vue = require('vue')
 
-const isVue2 = (_Vue.version || '').startsWith('2')
+function isVue2() {
+  if (_Vue && _Vue.default) {
+    if ((_Vue.default.version || '').startsWith('2')) return true
+    return false
+  }
+
+  if ((_Vue.version || '').startsWith('2')) return true
+  return false
+}
 
 injectGlobalStyle({
   '*': {
@@ -31,7 +39,7 @@ const install: PluginFunction<any> = function installFower(app: typeof _Vue) {
   ;(store.config as any).vuePluginInstalled = true
   const opt: any = {}
 
-  if (isVue2) {
+  if (isVue2()) {
     opt.bind = vcss.bind
   } else {
     opt.mounted = vcss.mounted

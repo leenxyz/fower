@@ -16,10 +16,6 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <div v-css="'bgRed400 p-40 center text3XL'" circle-100 mb-10 p="10">haha</div>
-    <Div center textXL bgGreen500 p-30>
-      haha
-      <Span bgYellow400 p="30" white>My Text</Span>
-    </Div>
+    <div v-css="'bgRed400 p-40 toCenter text3XL'" circle-100 mb-10 p="10">foo</div>
   </div>
 </template>
