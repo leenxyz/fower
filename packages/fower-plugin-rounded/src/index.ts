@@ -39,13 +39,14 @@ export function toStyle(atomKey: string, value: any) {
     }
   }
 
-  //  roundedNone|roundedSM|roundedXL|roundedFull..
+  //  roundedNone|roundedSM|roundedXL|roundedFull...
   if (presetReg.test(atomKey)) {
     const [themeKey] = atomKey.match(presetReg) || []
 
-    if (themeKey && radii[themeKey.toLowerCase()]) {
+    const roundedValue = radii[themeKey.toLowerCase()]
+
+    if (themeKey && typeof roundedValue === 'number') {
       const key = atomKey.replace(themeKey, '')
-      const roundedValue = radii[themeKey.toLowerCase()]
       if (key === 'rounded') {
         return { borderRadius: roundedValue }
       } else {
