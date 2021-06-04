@@ -1,20 +1,18 @@
 import { Box } from '@fower/react';
-
-enum IMAGEs {
-  DEFAULT_AVATAR = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg',
-}
+import { Provider, Button } from 'reakit';
+import * as system from 'reakit-system-bootstrap';
 
 export default () => {
+  return (
+    <Provider unstable_system={system}>
+      <Button>Button</Button>
+    </Provider>
+  );
+
   return (
     <Box>
       <Box text3XL fontBold>
         Background
-      </Box>
-
-      <Box pXL toCenter>
-        <Box rounded white py2 px4 bgBrand bgBrand--D10--hover cursorPointer>
-          bgBrand
-        </Box>
       </Box>
 
       <Box textXL bgBrand bgBrand100--hover white>
@@ -75,3 +73,4 @@ export default () => {
     </Box>
   );
 };
+

@@ -9,9 +9,6 @@ import {
 } from '@fower/core';
 import { useState } from 'react';
 import { styled } from '@fower/styled';
-import { store } from '@fower/store';
-
-const Button = styled('button');
 
 const pages = [
   'background',
@@ -138,8 +135,8 @@ declare module '@fower/types' {
 export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
-    <div>
-      <Box green300--i--hover toCenter gray500--dark spaceX2>
+    <Box p10>
+      <Box green300--i--hover toCenter gray500--dark spaceX2 flexWrap="wrap">
         {pages.map((i) => (
           <Link key={i} to={'/' + i}>
             {i}
@@ -167,6 +164,6 @@ export default function IndexPage() {
         <Box>BB</Box>
         <Box>BB</Box>
       </Box>
-    </div>
+    </Box>
   );
 }

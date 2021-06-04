@@ -26,7 +26,7 @@ values={[
 <TabItem value="React">
 
 ```jsx live
-<Box bgOrange100 w-350 h-280 row alignContent="flex-start">
+<Box bgOrange100 w-350 h-280 row alignContent="flex-start" flexWrap="wrap">
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
@@ -39,7 +39,7 @@ values={[
 <TabItem value="Vue">
 
 ```html
-<div bgOrange100 w-350 h-280 row alignContent="flex-start">
+<div bgOrange100 w-350 h-280 row alignContent="flex-start" flexWrap="wrap">
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
@@ -65,7 +65,7 @@ values={[
 <TabItem value="React">
 
 ```jsx live
-<Box bgOrange100 w-350 h-320 row alignContent="center">
+<Box bgOrange100 w-350 h-320 row alignContent="center" flexWrap="wrap">
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
@@ -78,7 +78,7 @@ values={[
 <TabItem value="Vue">
 
 ```html
-<div bgOrange100 w-350 h-320 row alignContent="center">
+<div bgOrange100 w-350 h-320 row alignContent="center" flexWrap="wrap">
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
@@ -104,7 +104,7 @@ values={[
 <TabItem value="React">
 
 ```jsx live
-<Box bgOrange100 w-350 h-320 row alignContent="flex-end">
+<Box bgOrange100 w-350 h-320 row alignContent="flex-end" flexWrap="wrap">
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
@@ -117,7 +117,7 @@ values={[
 <TabItem value="Vue">
 
 ```html
-<div bgOrange100 w-350 h-320 row alignContent="flex-end">
+<div bgOrange100 w-350 h-320 row alignContent="flex-end" flexWrap="wrap">
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
@@ -143,7 +143,7 @@ values={[
 <TabItem value="React">
 
 ```jsx live
-<Box bgOrange100 w-350 h-320 row alignContent="space-between">
+<Box bgOrange100 w-350 h-320 row alignContent="space-between" flexWrap="wrap">
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
@@ -156,46 +156,7 @@ values={[
 <TabItem value="Vue">
 
 ```html
-<div bgOrange100 w-350 h-320 row alignContent="space-between">
-  <div m2 bgOrange400 square-100></div>
-  <div m2 bgOrange400 square-100></div>
-  <div m2 bgOrange400 square-100></div>
-  <div m2 bgOrange400 square-100></div>
-  <div m2 bgOrange400 square-100></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
-## Space around
-
-Use `alignContent="space-around"` to distribute rows in a container such that there is an equal amount of space around each line.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
-```jsx live
-<Box bgOrange100 w-350 h-320 row alignContent="space-evenly">
-  <Box m2 bgOrange400 square-100></Box>
-  <Box m2 bgOrange400 square-100></Box>
-  <Box m2 bgOrange400 square-100></Box>
-  <Box m2 bgOrange400 square-100></Box>
-  <Box m2 bgOrange400 square-100></Box>
-</Box>
-```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgOrange100 w-350 h-320 row alignContent="space-evenly">
+<div bgOrange100 w-350 h-320 row alignContent="space-between" flexWrap="wrap">
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
@@ -221,7 +182,7 @@ values={[
 <TabItem value="React">
 
 ```jsx live
-<Box bgOrange100 w-350 h-320 row alignContent="space-around">
+<Box bgOrange100 w-350 h-320 row alignContent="space-evenly" flexWrap="wrap">
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
   <Box m2 bgOrange400 square-100></Box>
@@ -234,7 +195,46 @@ values={[
 <TabItem value="Vue">
 
 ```html
-<div bgOrange100 w-350 h-320 row alignContent="space-around">
+<div bgOrange100 w-350 h-320 row alignContent="space-evenly" flexWrap="wrap">
+  <div m2 bgOrange400 square-100></div>
+  <div m2 bgOrange400 square-100></div>
+  <div m2 bgOrange400 square-100></div>
+  <div m2 bgOrange400 square-100></div>
+  <div m2 bgOrange400 square-100></div>
+</div>
+```
+
+</TabItem>
+</Tabs>
+
+## Space around
+
+Use `alignContent="space-around"` to distribute rows in a container such that there is an equal amount of space around each line.
+
+<Tabs
+defaultValue="React"
+values={[
+{ label: 'React', value: 'React', },
+{ label: 'Vue', value: 'Vue', },
+]
+}>
+<TabItem value="React">
+
+```jsx live
+<Box bgOrange100 w-350 h-320 row alignContent="space-around" flexWrap="wrap">
+  <Box m2 bgOrange400 square-100></Box>
+  <Box m2 bgOrange400 square-100></Box>
+  <Box m2 bgOrange400 square-100></Box>
+  <Box m2 bgOrange400 square-100></Box>
+  <Box m2 bgOrange400 square-100></Box>
+</Box>
+```
+
+</TabItem>
+<TabItem value="Vue">
+
+```html
+<div bgOrange100 w-350 h-320 row alignContent="space-around" flexWrap="wrap">
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
   <div m2 bgOrange400 square-100></div>
