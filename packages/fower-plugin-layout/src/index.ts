@@ -194,8 +194,13 @@ export default (): FowerPlugin => {
         parser.addAtom(atom)
       }
 
+      // if have display style, dont't create flex atom
+      const findDisplay = parser.atoms.find((i) => !!i?.style?.display)
+      if (findDisplay) return
+
       const flexKey = 'flex'
       const flexAtom = atomCache.get(flexKey)
+
       if (flexAtom) {
         parser.addAtom(flexAtom)
       } else {
