@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-size",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-size.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.16.0",
-    "@fower/core": "^1.16.0",
-    "@fower/types": "^1.16.0",
-    "@fower/utils": "^1.16.0"
+    "@fower/atom": "^1.17.0",
+    "@fower/core": "^1.17.0",
+    "@fower/types": "^1.17.0",
+    "@fower/utils": "^1.17.0"
   }
 }

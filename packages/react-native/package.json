@@ -1,6 +1,6 @@
 {
   "name": "@fower/react-native",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,10 +22,10 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@fower/core": "^1.16.0",
-    "@fower/preset-react-native": "^1.16.0",
-    "@fower/styled": "^1.16.0",
-    "@fower/types": "^1.16.0"
+    "@fower/core": "^1.17.0",
+    "@fower/preset-react-native": "^1.17.0",
+    "@fower/styled": "^1.17.0",
+    "@fower/types": "^1.17.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.64.4"
