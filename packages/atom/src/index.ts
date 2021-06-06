@@ -71,7 +71,8 @@ export class Atom {
    * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop  + hashed meta
    */
   get styleKeysHash() {
-    return Object.keys(this.style || {}).join('-') + JSON.stringify(this.meta)
+    const { colorPostfix, ...rest } = this.meta // omit colorPostfix
+    return Object.keys(this.style || {}).join('-') + JSON.stringify(rest)
   }
 
   get isFalsePropValue() {
