@@ -4,12 +4,6 @@ import * as system from 'reakit-system-bootstrap';
 
 export default () => {
   return (
-    <Provider unstable_system={system}>
-      <Button>Button</Button>
-    </Provider>
-  );
-
-  return (
     <Box>
       <Box text3XL fontBold>
         Background
@@ -73,4 +67,3 @@ export default () => {
     </Box>
   );
 };
-

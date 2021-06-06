@@ -16,6 +16,10 @@ class StyleSheet {
     if (!isBrowser || !rules.length) return
     if (!this.$style) this.createStyleElement()
 
+    // const str = rules.join('\n')
+    // this.$style.innerHTML = str
+    // return
+
     for (const rule of rules) {
       try {
         this.$style.sheet?.insertRule(rule)
