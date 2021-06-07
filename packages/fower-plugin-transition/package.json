@@ -1,5 +1,5 @@
 {
-  "name": "fower-plugin-z-index",
+  "name": "fower-plugin-transition",
   "version": "1.18.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,9 +20,10 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/fower-plugin-z-index.esm.js",
+  "module": "dist/fower-plugin-transition.esm.js",
   "dependencies": {
     "@fower/atom": "^1.18.0",
+    "@fower/parser": "^1.18.0",
     "@fower/types": "^1.18.0",
     "@fower/utils": "^1.18.0"
   }
