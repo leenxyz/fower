@@ -17,7 +17,7 @@ class StyleSheet {
     if (!this.$style) this.createStyleElement()
 
     // const str = rules.join('\n')
-    // this.$style.innerHTML = str
+    // this.$style.innerHTML += str
     // return
 
     for (const rule of rules) {

@@ -36,6 +36,7 @@ import transition from 'fower-plugin-transition'
 import userSelect from 'fower-plugin-user-select'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
+import placeholder from 'fower-plugin-placeholder'
 
 export const plugins = [
   appearance(),
@@ -76,4 +77,5 @@ export const plugins = [
   userSelect(),
   visibility(),
   boxSizing(),
+  placeholder(),
 ]

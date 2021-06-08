@@ -44,7 +44,6 @@ export default (): FowerPlugin => {
 
         ids.push(atom.id)
       }
-      console.log('values', values)
 
       if (!values.length) return
       const sortedValues = values.sort()
