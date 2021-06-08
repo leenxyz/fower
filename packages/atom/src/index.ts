@@ -9,10 +9,9 @@ export { Options, Meta }
 /**
  * @example p2,mx4,left10,spaceX4...
  * @example p-20,opacity-80
- * @example pMD,mSM,mtXL
  */
 export const digitReg =
-  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|-auto)$/i
+  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|-auto)$/i
 
 export class Atom {
   constructor(private readonly options: Options) {
