@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-placeholder",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,11 +22,11 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-placeholder.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.19.0",
-    "@fower/color-helper": "^1.19.0",
-    "@fower/core": "^1.19.0",
-    "@fower/store": "^1.19.0",
-    "@fower/types": "^1.19.0",
-    "@fower/utils": "^1.19.0"
+    "@fower/atom": "^1.20.0",
+    "@fower/color-helper": "^1.20.0",
+    "@fower/core": "^1.20.0",
+    "@fower/store": "^1.20.0",
+    "@fower/types": "^1.20.0",
+    "@fower/utils": "^1.20.0"
   }
 }
