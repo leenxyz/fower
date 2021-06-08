@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-display",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-display.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.18.0",
-    "@fower/parser": "^1.18.0",
-    "@fower/types": "^1.18.0",
-    "@fower/utils": "^1.18.0"
+    "@fower/atom": "^1.19.0",
+    "@fower/parser": "^1.19.0",
+    "@fower/types": "^1.19.0",
+    "@fower/utils": "^1.19.0"
   }
 }

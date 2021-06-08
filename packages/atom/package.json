@@ -1,6 +1,6 @@
 {
   "name": "@fower/atom",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
