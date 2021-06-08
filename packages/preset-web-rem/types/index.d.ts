@@ -31,6 +31,7 @@
 /// <reference types="fower-plugin-ellipsis" />
 /// <reference types="fower-plugin-debug" />
 /// <reference types="fower-plugin-space" />
+/// <reference types="fower-plugin-transform" />
 /// <reference types="fower-plugin-transition" />
 /// <reference types="fower-plugin-grid" />
 /// <reference types="fower-plugin-user-select" />

@@ -31,6 +31,7 @@ import cursor from 'fower-plugin-cursor'
 import ellipsis from 'fower-plugin-ellipsis'
 import debug from 'fower-plugin-debug'
 import space from 'fower-plugin-space'
+import transform from 'fower-plugin-transform'
 import transition from 'fower-plugin-transition'
 import userSelect from 'fower-plugin-user-select'
 import visibility from 'fower-plugin-visibility'
@@ -70,6 +71,7 @@ export const plugins = [
   outline(),
   ellipsis(),
   space(),
+  transform(),
   transition(),
   userSelect(),
   visibility(),

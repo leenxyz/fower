@@ -57,6 +57,7 @@
     "fower-plugin-text-overflow": "^1.18.0",
     "fower-plugin-text-size": "^1.18.0",
     "fower-plugin-text-transform": "^1.18.0",
+    "fower-plugin-transform": "^1.18.0",
     "fower-plugin-transition": "^1.18.0",
     "fower-plugin-user-select": "^1.18.0",
     "fower-plugin-visibility": "^1.18.0",
