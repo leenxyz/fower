@@ -6,23 +6,29 @@ export default () => {
       <Box text3XL fontBold>
         Size
       </Box>
-      <Box space-10 row w-350>
-        <Box bgBlue200 square-100>
+      <Box space-10 row w-350 flexWrap="wrap">
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
-        <Box bgBlue200 square-100>
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
-        <Box bgBlue200 square-100>
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
-        <Box bgBlue200 square-100>
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
-        <Box bgBlue200 square-100>
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
-        <Box bgBlue200 square-100>
+        <Box bgBlue200 square-100 flexShrink-0>
+          space-10
+        </Box>
+        <Box bgBlue200 square-100 flexShrink-0>
+          space-10
+        </Box>
+        <Box bgBlue200 square-100 flexShrink-0>
           space-10
         </Box>
       </Box>
