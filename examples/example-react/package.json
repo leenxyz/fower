@@ -15,6 +15,7 @@
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.3.0",
     "@fower/preset-web-rem": "^1.18.0",
+    "@fower/preset-web": "^1.18.0",
     "@fower/react": "^1.18.0",
     "@fower/store": "^1.18.0",
     "@umijs/preset-react": "1.x",
