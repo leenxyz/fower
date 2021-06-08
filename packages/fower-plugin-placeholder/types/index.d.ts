@@ -1,0 +1,200 @@
+import { FowerPlugin } from '@fower/types'
+
+declare const _default: () => FowerPlugin
+export default _default
+
+declare module '@fower/types' {
+  export interface AtomicProps {
+    placeholderBlack?: boolean
+
+    placeholderWhite?: boolean
+
+    placeholderBrand?: boolean
+    placeholderBrand50?: boolean
+    placeholderBrand100?: boolean
+    placeholderBrand200?: boolean
+    placeholderBrand300?: boolean
+    placeholderBrand400?: boolean
+    placeholderBrand500?: boolean
+    placeholderBrand600?: boolean
+    placeholderBrand700?: boolean
+    placeholderBrand800?: boolean
+    placeholderBrand900?: boolean
+
+    placeholderRose50?: boolean // '#fff1f2'
+    placeholderRose100?: boolean // '#ffe4e6'
+    placeholderRose200?: boolean // '#fecdd3'
+    placeholderRose300?: boolean // '#fda4af'
+    placeholderRose400?: boolean // '#fb7185'
+    placeholderRose500?: boolean // '#f43f5e'
+    placeholderRose600?: boolean // '#e11d48'
+    placeholderRose700?: boolean // '#be123c'
+    placeholderRose800?: boolean // '#9f1239'
+    placeholderRose900?: boolean // '#881337'
+
+    placeholderPink50?: boolean // '#fdf2f8'
+    placeholderPink100?: boolean // '#fce7f3'
+    placeholderPink200?: boolean // '#fbcfe8'
+    placeholderPink300?: boolean // '#f9a8d4'
+    placeholderPink400?: boolean // '#f472b6'
+    placeholderPink500?: boolean // '#ec4899'
+    placeholderPink600?: boolean // '#db2777'
+    placeholderPink700?: boolean // '#be185d'
+    placeholderPink800?: boolean // '#9d174d'
+    placeholderPink900?: boolean // '#831843'
+
+    placeholderFuchsia50?: boolean // '#fdf4ff'
+    placeholderFuchsia100?: boolean // '#fae8ff'
+    placeholderFuchsia200?: boolean // '#f5d0fe'
+    placeholderFuchsia300?: boolean // '#f0abfc'
+    placeholderFuchsia400?: boolean // '#e879f9'
+    placeholderFuchsia500?: boolean // '#d946ef'
+    placeholderFuchsia600?: boolean // '#c026d3'
+    placeholderFuchsia700?: boolean // '#a21caf'
+    placeholderFuchsia800?: boolean // '#86198f'
+    placeholderFuchsia900?: boolean // '#701a75'
+
+    placeholderPurple50?: boolean // '#faf5ff'
+    placeholderPurple100?: boolean // '#f3e8ff'
+    placeholderPurple200?: boolean // '#e9d5ff'
+    placeholderPurple300?: boolean // '#d8b4fe'
+    placeholderPurple400?: boolean // '#c084fc'
+    placeholderPurple500?: boolean // '#a855f7'
+    placeholderPurple600?: boolean // '#9333ea'
+    placeholderPurple700?: boolean // '#7e22ce'
+    placeholderPurple800?: boolean // '#6b21a8'
+    placeholderPurple900?: boolean // '#581c87'
+
+    placeholderViolet50?: boolean // '#f5f3ff'
+    placeholderViolet100?: boolean // '#ede9fe'
+    placeholderViolet200?: boolean // '#ddd6fe'
+    placeholderViolet300?: boolean // '#c4b5fd'
+    placeholderViolet400?: boolean // '#a78bfa'
+    placeholderViolet500?: boolean // '#8b5cf6'
+    placeholderViolet600?: boolean // '#7c3aed'
+    placeholderViolet700?: boolean // '#6d28d9'
+    placeholderViolet800?: boolean // '#5b21b6'
+    placeholderViolet900?: boolean // '#4c1d95'
+
+    placeholderIndigo50?: boolean // '#eef2ff'
+    placeholderIndigo100?: boolean // '#e0e7ff'
+    placeholderIndigo200?: boolean // '#c7d2fe'
+    placeholderIndigo300?: boolean // '#a5b4fc'
+    placeholderIndigo400?: boolean // '#818cf8'
+    placeholderIndigo500?: boolean // '#6366f1'
+    placeholderIndigo600?: boolean // '#4f46e5'
+    placeholderIndigo700?: boolean // '#4338ca'
+    placeholderIndigo800?: boolean // '#3730a3'
+    placeholderIndigo900?: boolean // '#312e81'
+
+    placeholderBlue50?: boolean // '#eff6ff'
+    placeholderBlue100?: boolean // '#dbeafe'
+    placeholderBlue200?: boolean // '#bfdbfe'
+    placeholderBlue300?: boolean // '#93c5fd'
+    placeholderBlue400?: boolean // '#60a5fa'
+    placeholderBlue500?: boolean // '#3b82f6'
+    placeholderBlue600?: boolean // '#2563eb'
+    placeholderBlue700?: boolean // '#1d4ed8'
+    placeholderBlue800?: boolean // '#1e40af'
+    placeholderBlue900?: boolean // '#1e3a8a'
+
+    placeholderCyan50?: boolean // '#ecfeff'
+    placeholderCyan100?: boolean // '#cffafe'
+    placeholderCyan200?: boolean // '#a5f3fc'
+    placeholderCyan300?: boolean // '#67e8f9'
+    placeholderCyan400?: boolean // '#22d3ee'
+    placeholderCyan500?: boolean // '#06b6d4'
+    placeholderCyan600?: boolean // '#0891b2'
+    placeholderCyan700?: boolean // '#0e7490'
+    placeholderCyan800?: boolean // '#155e75'
+    placeholderCyan900?: boolean // '#164e63'
+
+    placeholderTeal50?: boolean // '#f0fdfa'
+    placeholderTeal100?: boolean // '#ccfbf1'
+    placeholderTeal200?: boolean // '#99f6e4'
+    placeholderTeal300?: boolean // '#5eead4'
+    placeholderTeal400?: boolean // '#2dd4bf'
+    placeholderTeal500?: boolean // '#14b8a6'
+    placeholderTeal600?: boolean // '#0d9488'
+    placeholderTeal700?: boolean // '#0f766e'
+    placeholderTeal800?: boolean // '#115e59'
+    placeholderTeal900?: boolean // '#134e4a'
+
+    placeholderGreen50?: boolean // '#f0fdf4'
+    placeholderGreen100?: boolean // '#dcfce7'
+    placeholderGreen200?: boolean // '#bbf7d0'
+    placeholderGreen300?: boolean // '#86efac'
+    placeholderGreen400?: boolean // '#4ade80'
+    placeholderGreen500?: boolean // '#22c55e'
+    placeholderGreen600?: boolean // '#16a34a'
+    placeholderGreen700?: boolean // '#15803d'
+    placeholderGreen800?: boolean // '#166534'
+    placeholderGreen900?: boolean // '#14532d'
+
+    placeholderLime50?: boolean // '#f7fee7'
+    placeholderLime100?: boolean // '#ecfccb'
+    placeholderLime200?: boolean // '#d9f99d'
+    placeholderLime300?: boolean // '#bef264'
+    placeholderLime400?: boolean // '#a3e635'
+    placeholderLime500?: boolean // '#84cc16'
+    placeholderLime600?: boolean // '#65a30d'
+    placeholderLime700?: boolean // '#4d7c0f'
+    placeholderLime800?: boolean // '#3f6212'
+    placeholderLime900?: boolean // '#365314'
+
+    placeholderYellow50?: boolean // '#fefce8'
+    placeholderYellow100?: boolean // '#fef9c3'
+    placeholderYellow200?: boolean // '#fef08a'
+    placeholderYellow300?: boolean // '#fde047'
+    placeholderYellow400?: boolean // '#facc15'
+    placeholderYellow500?: boolean // '#eab308'
+    placeholderYellow600?: boolean // '#ca8a04'
+    placeholderYellow700?: boolean // '#a16207'
+    placeholderYellow800?: boolean // '#854d0e'
+    placeholderYellow900?: boolean // '#713f12'
+
+    placeholderOrange50?: boolean // '#fff7ed'
+    placeholderOrange100?: boolean // '#ffedd5'
+    placeholderOrange200?: boolean // '#fed7aa'
+    placeholderOrange300?: boolean // '#fdba74'
+    placeholderOrange400?: boolean // '#fb923c'
+    placeholderOrange500?: boolean // '#f97316'
+    placeholderOrange600?: boolean // '#ea580c'
+    placeholderOrange700?: boolean // '#c2410c'
+    placeholderOrange800?: boolean // '#9a3412'
+    placeholderOrange900?: boolean // '#7c2d12'
+
+    placeholderRed50?: boolean // '#fef2f2'
+    placeholderRed100?: boolean // '#fee2e2'
+    placeholderRed200?: boolean // '#fecaca'
+    placeholderRed300?: boolean // '#fca5a5'
+    placeholderRed400?: boolean // '#f87171'
+    placeholderRed500?: boolean // '#ef4444'
+    placeholderRed600?: boolean // '#dc2626'
+    placeholderRed700?: boolean // '#b91c1c'
+    placeholderRed800?: boolean // '#991b1b'
+    placeholderRed900?: boolean // '#7f1d1d'
+
+    placeholderTrueGray50?: boolean // '#fafafa'
+    placeholderTrueGray100?: boolean // '#f5f5f5'
+    placeholderTrueGray200?: boolean // '#e5e5e5'
+    placeholderTrueGray300?: boolean // '#d4d4d4'
+    placeholderTrueGray400?: boolean // '#a3a3a3'
+    placeholderTrueGray500?: boolean // '#737373'
+    placeholderTrueGray600?: boolean // '#525252'
+    placeholderTrueGray700?: boolean // '#404040'
+    placeholderTrueGray800?: boolean // '#262626'
+    placeholderTrueGray900?: boolean // '#171717'
+
+    placeholderGray50?: boolean // '#fafafa'
+    placeholderGray100?: boolean // '#f4f4f5'
+    placeholderGray200?: boolean // '#e4e4e7'
+    placeholderGray300?: boolean // '#d4d4d8'
+    placeholderGray400?: boolean // '#a1a1aa'
+    placeholderGray500?: boolean // '#71717a'
+    placeholderGray600?: boolean // '#52525b'
+    placeholderGray700?: boolean // '#3f3f46'
+    placeholderGray800?: boolean // '#27272a'
+    placeholderGray900?: boolean // '#18181b'
+  }
+}

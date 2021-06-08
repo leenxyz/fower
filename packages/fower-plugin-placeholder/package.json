@@ -1,0 +1,32 @@
+{
+  "name": "fower-plugin-placeholder",
+  "version": "1.19.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/fower-plugin-placeholder.esm.js",
+  "dependencies": {
+    "@fower/atom": "^1.19.0",
+    "@fower/color-helper": "^1.19.0",
+    "@fower/core": "^1.19.0",
+    "@fower/store": "^1.19.0",
+    "@fower/types": "^1.19.0",
+    "@fower/utils": "^1.19.0"
+  }
+}
