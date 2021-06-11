@@ -113,6 +113,7 @@ export class Parser {
       }
 
       const composition = store.compositions.get(propKey)
+
       if (composition) {
         this.parseCSSObject(composition, {})
 
@@ -318,6 +319,8 @@ export class Parser {
 
     // for _hover,_sm,_dark...
     if (propKey.startsWith('_')) return true
+
+    if (Array.isArray(propValue)) return true
 
     const type = typeof propValue
     if (validTypes.includes(type)) return true

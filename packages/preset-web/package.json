@@ -38,6 +38,7 @@
     "fower-plugin-font-family": "^1.20.0",
     "fower-plugin-font-style": "^1.20.0",
     "fower-plugin-font-weight": "^1.20.0",
+    "fower-plugin-gradient": "^1.20.0",
     "fower-plugin-grid": "^1.20.0",
     "fower-plugin-layout": "^1.20.0",
     "fower-plugin-line-height": "^1.20.0",
