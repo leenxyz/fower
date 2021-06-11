@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-list",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-list.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.20.0",
-    "@fower/types": "^1.20.0",
-    "@fower/utils": "^1.20.0"
+    "@fower/atom": "^1.21.0",
+    "@fower/types": "^1.21.0",
+    "@fower/utils": "^1.21.0"
   }
 }

@@ -4,7 +4,12 @@ import { styled } from '@fower/styled';
 export default function Demo() {
   const Item = styled(
     'div',
-    'white toCenter shadow bgOrange400 circle-80 absolute',
+    'white',
+    'toCenter',
+    'shadow',
+    'bgOrange400',
+    'circle-80',
+    'absolute',
   );
   return (
     <Box white relative h-160 bgOrange100 p6>

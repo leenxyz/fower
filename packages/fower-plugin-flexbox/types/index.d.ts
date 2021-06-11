@@ -87,6 +87,10 @@ declare module '@fower/types' {
      */
     flexWrap?: CSS.Property.FlexWrap | boolean
 
+    flexNowrap?: boolean
+
+    flexWrapReverse?: boolean
+
     /**
      * Set flex-grow, Defaults to 0
      * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow

@@ -37,6 +37,7 @@ import userSelect from 'fower-plugin-user-select'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 import placeholder from 'fower-plugin-placeholder'
+import gradient from 'fower-plugin-gradient'
 
 export const plugins = [
   appearance(),
@@ -78,4 +79,5 @@ export const plugins = [
   visibility(),
   boxSizing(),
   placeholder(),
+  gradient(),
 ]

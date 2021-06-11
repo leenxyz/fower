@@ -18,7 +18,7 @@ declare module '@fower/types' {
      * <Box boxSizing="content-box">Hello world</Box>
      * ```
      */
-    boxSizing: CSS.Property.BoxSizing | boolean
+    boxSizing?: CSS.Property.BoxSizing | boolean
 
     /**
      * Set boxSizing to content-box
@@ -32,7 +32,7 @@ declare module '@fower/types' {
      * <Box boxContent>Hello world</Box>
      * ```
      */
-    boxContent: boolean
+    boxContent?: boolean
 
     /**
      * Set boxSizing to border-box
@@ -46,6 +46,6 @@ declare module '@fower/types' {
      * <Box boxBorder>Hello world</Box>
      * ```
      */
-    boxBorder: boolean
+    boxBorder?: boolean
   }
 }

@@ -11,7 +11,7 @@ export { Options, Meta }
  * @example p-20,opacity-80
  */
 export const digitReg =
-  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded([tlrb]|t[lr]|b[lr])?)(-?-?\d+[a-z]*?|-auto)$/i
+  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?-?\d+[a-z]*?|-auto)$/i
 
 export class Atom {
   constructor(private readonly options: Options) {
@@ -34,10 +34,17 @@ export class Atom {
 
     const { propKey, propValue } = this
 
-    this.id =
-      typeof propValue === 'boolean' && propValue === true
-        ? propKey
-        : `${propKey}-${String(propValue).replace(/\s/g, '-')}`
+    let id: string
+    if (typeof propValue === 'boolean' && propValue === true) {
+      id = propKey
+    } else if (Array.isArray(propValue)) {
+      const valueStr = propValue.join('-')
+      id = `${propKey}-${valueStr}`
+    } else {
+      id = `${propKey}-${String(propValue).replace(/\s/g, '-')}`
+    }
+
+    this.id = id
   }
 
   /**

@@ -41,175 +41,181 @@ declare module '@fower/types' {
     /**
      * Set borderTopLeftRadius and borderTopRightRadius
      *
-     * roundedT-10 is `border-top-left-radius: 10px; border-top-right-radius: 10px;`
+     * roundedTop-10 is `border-top-left-radius: 10px; border-top-right-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedT-10></Box>
-     * <Box roundedT-10rem></Box>
-     * <Box roundedT="10"></Box>
+     * <Box roundedTop-10></Box>
+     * <Box roundedTop-10rem></Box>
+     * <Box roundedTop="10"></Box>
      * ```
      */
-    roundedT?: PropValue
+    roundedTop?: PropValue
 
-    roundedTNone?: boolean
-    roundedTSM?: boolean
-    roundedTMD?: boolean
-    roundedTLG?: boolean
-    roundedTXL?: boolean
-    roundedT2XL?: boolean
-    roundedT3XL?: boolean
+    roundedTopFull?: boolean
+    roundedTopNone?: boolean
+    roundedTopSM?: boolean
+    roundedTopMD?: boolean
+    roundedTopLG?: boolean
+    roundedTopXL?: boolean
+    roundedTop2XL?: boolean
+    roundedTop3XL?: boolean
 
     /**
      * Set borderTopRightRadius and borderBottomRightRadius
      *
-     * roundedR-10 is `border-top-right-radius: 10px; border-bottom-right-radius: 10px;`
+     * roundedRight-10 is `border-top-right-radius: 10px; border-bottom-right-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedR-10></Box>
-     * <Box roundedR-10p></Box>
-     * <Box roundedR="10"></Box>
+     * <Box roundedRight-10></Box>
+     * <Box roundedRight-10p></Box>
+     * <Box roundedRight="10"></Box>
      * ```
      */
-    roundedR?: PropValue
+    roundedRight?: PropValue
 
-    roundedRNone?: boolean
-    roundedRSM?: boolean
-    roundedRMD?: boolean
-    roundedRLG?: boolean
-    roundedRXL?: boolean
-    roundedR2XL?: boolean
-    roundedR3XL?: boolean
+    roundedRightFull?: boolean
+    roundedRightNone?: boolean
+    roundedRightSM?: boolean
+    roundedRightMD?: boolean
+    roundedRightLG?: boolean
+    roundedRightXL?: boolean
+    roundedRight2XL?: boolean
+    roundedRight3XL?: boolean
 
     /**
      * Set borderBottomLeftRadius and borderBottomRightRadius
      *
-     * roundedB-10 is `border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;`
+     * roundedBottom-10 is `border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedB-10></Box>
-     * <Box roundedB-10p></Box>
-     * <Box roundedB="10"></Box>
+     * <Box roundedBottom-10></Box>
+     * <Box roundedBottom-10p></Box>
+     * <Box roundedBottom="10"></Box>
      * ```
      */
-    roundedB?: PropValue
+    roundedBottom?: PropValue
 
-    roundedBNone?: boolean
-    roundedBSM?: boolean
-    roundedBMD?: boolean
-    roundedBLG?: boolean
-    roundedBXL?: boolean
-    roundedB2XL?: boolean
-    roundedB3XL?: boolean
+    roundedBottomFull?: boolean
+    roundedBottomNone?: boolean
+    roundedBottomSM?: boolean
+    roundedBottomMD?: boolean
+    roundedBottomLeftG?: boolean
+    roundedBottomXL?: boolean
+    roundedBottom2XL?: boolean
+    roundedBottom3XL?: boolean
 
     /**
      * Set borderTopLeftRadius and borderBottomLeftRadius
      *
-     * roundedB-10 is `border-top-left-radius: 10px; border-bottom-left-radius: 10px;`
+     * roundedBottom-10 is `border-top-left-radius: 10px; border-bottom-left-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedL-10></Box>
-     * <Box roundedL-10p></Box>
-     * <Box roundedL="10"></Box>
+     * <Box roundedLeft-10></Box>
+     * <Box roundedLeft-10p></Box>
+     * <Box roundedLeft="10"></Box>
      * ```
      */
-    roundedL?: PropValue
+    roundedLeft?: PropValue
 
-    roundedLNone?: boolean
-    roundedLSM?: boolean
-    roundedLMD?: boolean
-    roundedLLG?: boolean
-    roundedLXL?: boolean
-    roundedL2XL?: boolean
-    roundedL3XL?: boolean
+    roundedLeftFull?: boolean
+    roundedLeftNone?: boolean
+    roundedLeftSM?: boolean
+    roundedLeftMD?: boolean
+    roundedLeftLG?: boolean
+    roundedLeftXL?: boolean
+    roundedLeft2XL?: boolean
+    roundedLeft3XL?: boolean
 
     /**
      * Set borderTopLeftRadius
      *
-     * roundedTL-10 is `border-top-left-radius: 10px;`
+     * roundedTopL-10 is `border-top-left-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedTL-10></Box>
-     * <Box roundedTL-10p></Box>
-     * <Box roundedTL="10"></Box>
+     * <Box roundedTopLeft-10></Box>
+     * <Box roundedTopLeft-10p></Box>
+     * <Box roundedTopLeft="10"></Box>
      * ```
      */
-    roundedTL?: PropValue
+    roundedTopLeft?: PropValue
 
-    roundedTLNone?: boolean
-    roundedTLSM?: boolean
-    roundedTLMD?: boolean
-    roundedTLLG?: boolean
-    roundedTLXL?: boolean
-    roundedTL2XL?: boolean
-    roundedTL3XL?: boolean
+    roundedTopLeftFull?: boolean
+    roundedTopLeftNone?: boolean
+    roundedTopLeftSM?: boolean
+    roundedTopLeftMD?: boolean
+    roundedTopLeftLG?: boolean
+    roundedTopLeftXL?: boolean
+    roundedTopLeft2XL?: boolean
+    roundedTopLeft3XL?: boolean
 
     /**
      * Set borderTopRightRadius
      *
-     * roundedTR-10 is `border-top-right-radius: 10px;`
+     * roundedTopRight-10 is `border-top-right-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedTR-10></Box>
-     * <Box roundedTR-10p></Box>
-     * <Box roundedTR="10"></Box>
+     * <Box roundedTopRight-10></Box>
+     * <Box roundedTopRight-10p></Box>
+     * <Box roundedTopRight="10"></Box>
      * ```
      */
-    roundedTR?: PropValue
+    roundedTopRight?: PropValue
 
-    roundedTRNone?: boolean
-    roundedTRSM?: boolean
-    roundedTRMD?: boolean
-    roundedTRLG?: boolean
-    roundedTRXL?: boolean
-    roundedTR2XL?: boolean
-    roundedTR3XL?: boolean
+    roundedTopRightFull?: boolean
+    roundedTopRightNone?: boolean
+    roundedTopRightSM?: boolean
+    roundedTopRightMD?: boolean
+    roundedTopRightLG?: boolean
+    roundedTopRightXL?: boolean
+    roundedTopRight2XL?: boolean
+    roundedTopRight3XL?: boolean
 
     /**
      * Set borderBottomLeftRadius
      *
-     * roundedBL-10 is `border-bottom-left-radius: 10px;`
+     * roundedBottomLeft-10 is `border-bottom-left-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedBL-10></Box>
-     * <Box roundedBL-10p></Box>
-     * <Box roundedBL="10"></Box>
+     * <Box roundedBottomLeft-10></Box>
+     * <Box roundedBottomLeft-10p></Box>
+     * <Box roundedBottomLeft="10"></Box>
      * ```
      */
-    roundedBL?: PropValue
-    roundedBLNone?: boolean
-    roundedBLSM?: boolean
-    roundedBLMD?: boolean
-    roundedBLLG?: boolean
-    roundedBLXL?: boolean
-    roundedBL2XL?: boolean
-    roundedBL3XL?: boolean
+    roundedBottomLeft?: PropValue
+    roundedBottomLeftNone?: boolean
+    roundedBottomLeftSM?: boolean
+    roundedBottomLeftMD?: boolean
+    roundedBottomLeftLG?: boolean
+    roundedBottomLeftXL?: boolean
+    roundedBottomLeft2XL?: boolean
+    roundedBottomLeft3XL?: boolean
 
     /**
      * Set borderBottomRightRadius
      *
-     * roundedBR-10 is `border-bottom-right-radius: 10px;`
+     * roundedBottomRight-10 is `border-bottom-right-radius: 10px;`
      *
      * @example
      * ```tsx
-     * <Box roundedBR-10></Box>
-     * <Box roundedBR-10p></Box>
-     * <Box roundedBR="10"></Box>
+     * <Box roundedBottomRight-10></Box>
+     * <Box roundedBottomRight-10p></Box>
+     * <Box roundedBottomRight="10"></Box>
      * ```
      */
-    roundedBR?: PropValue
-    roundedBRNone?: boolean
-    roundedBRSM?: boolean
-    roundedBRMD?: boolean
-    roundedBRLG?: boolean
-    roundedBRXL?: boolean
-    roundedBR2XL?: boolean
-    roundedBR3XL?: boolean
+    roundedBottomRight?: PropValue
+    roundedBottomRightNone?: boolean
+    roundedBottomRightSM?: boolean
+    roundedBottomRightMD?: boolean
+    roundedBottomRightLG?: boolean
+    roundedBottomRightXL?: boolean
+    roundedBottomRight2XL?: boolean
+    roundedBottomRight3XL?: boolean
   }
 }

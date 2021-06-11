@@ -137,7 +137,7 @@ export default () => {
       </Box>
 
       <Box as="h2">No wrap</Box>
-      <Box spaceX3 row flexWrap="nowrap">
+      <Box spaceX3 row flexNowrap>
         <Box bgOrange400 m2 p4 w-300></Box>
         <Box bgOrange500 m2 p4 w-300></Box>
         <Box bgOrange400 m2 p4 w-300></Box>

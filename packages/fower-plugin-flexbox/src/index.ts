@@ -1,4 +1,6 @@
+import { Atom } from '@fower/atom'
 import { FowerPlugin } from '@fower/types'
+import { kebab } from '@fower/utils'
 
 export const flexMaps: Record<string, string> = {
   auto: '1 1 auto',
@@ -7,16 +9,24 @@ export const flexMaps: Record<string, string> = {
 }
 
 const flexReg = /^flex(Auto|Initial|None)$/i
+const wrapReg = /^flex(Wrap(Reverse)?|Nowrap)$/i
 const directionReg = /^flexDirection$/i
 
 const isFlexProps = (key: string) => /^order$|^flex(Grow|Shrink|Basis|Wrap)?$/i.test(key)
 
 export function isMatch(key: string) {
-  return isFlexProps(key) || flexReg.test(key) || directionReg.test(key)
+  return isFlexProps(key) || flexReg.test(key) || directionReg.test(key) || wrapReg.test(key)
 }
 
-export function toStyle(key: string, value: any) {
+export function toStyle(atom: Atom) {
+  const { key, value } = atom
   const style: any = {}
+
+  if (wrapReg.test(key) && atom.isTruePropValue) {
+    const posfix = key.replace(/^flex/, '')
+    style.flexWrap = kebab(posfix).toLowerCase()
+    return style
+  }
 
   if (isFlexProps(key)) {
     style[key] = value
@@ -42,7 +52,7 @@ export default (): FowerPlugin => {
       if (atom.propKey === 'flex' && atom.isTruePropValue) {
         atom.style = { display: 'flex' }
       } else {
-        atom.style = toStyle(atom.key, atom.value)
+        atom.style = toStyle(atom)
       }
 
       return atom
