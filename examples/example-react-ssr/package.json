@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:**",
+    "dev:build:server": "webpack --config webpack.config.js --watch",
+    "dev:start": "nodemon --watch build --exec node \"./bundle.js\""
+  },
+  "keywords": [],
+  "author": "Thomas Trainset",
+  "license": "ISC",
+  "dependencies": {
+    "@fower/parser": "^1.21.0",
+    "@fower/react": "^1.21.0",
+    "@fower/sheet": "^1.21.0",
+    "express": "4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+,    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "babel-loader": "^8.2.2",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-env": "^7.14.5"
+  }
+}

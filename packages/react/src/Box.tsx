@@ -41,3 +41,4 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   }
   return createElement(as, { ref, ...parsedProps })
 }) as any
+
