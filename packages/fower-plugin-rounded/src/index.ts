@@ -7,19 +7,20 @@ const Right = 'Right'
 const Bottom = 'Bottom'
 
 export const roundedMaps: Record<string, string[]> = {
-  roundedT: [Top + Left, Top + Right],
-  roundedR: [Top + Right, Bottom + Right],
-  roundedB: [Bottom + Left, Bottom + Right],
-  roundedL: [Top + Left, Bottom + Left],
-  roundedTL: [Top + Left],
-  roundedTR: [Top + Right],
-  roundedBL: [Bottom + Left],
-  roundedBR: [Bottom + Right],
+  roundedTop: [Top + Left, Top + Right],
+  roundedRight: [Top + Right, Bottom + Right],
+  roundedBottom: [Bottom + Left, Bottom + Right],
+  roundedLeft: [Top + Left, Bottom + Left],
+  roundedTopLeft: [Top + Left],
+  roundedTopRight: [Top + Right],
+  roundedBottomLeft: [Bottom + Left],
+  roundedBottomRight: [Bottom + Right],
 }
 
 export function isMatch(key: string) {
-  return /^rounded([tlrb]|t[lr]|b[lr])?/i.test(key)
+  return /^rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?/i.test(key)
 }
+
 /**
  * TODO: need improve
  * @param atomKey
