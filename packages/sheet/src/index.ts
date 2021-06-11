@@ -6,7 +6,7 @@ class StyleSheet {
   cssString = ''
 
   constructor() {
-    const fowerTag = document.querySelector('[data-fower]')
+    const fowerTag = globalThis.document?.querySelector('[data-fower]')
     if (fowerTag) {
       this.$style = fowerTag as HTMLStyleElement
     }
@@ -38,7 +38,7 @@ class StyleSheet {
 
     if (isBrowser) return this.insertStyleToHtml(rules)
 
-    this.cssString = this.cssString + ';' + rules.join(';')
+    this.cssString = this.cssString + ' ' + rules.join(' ')
   }
 }
 
