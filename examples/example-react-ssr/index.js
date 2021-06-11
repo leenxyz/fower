@@ -8,7 +8,7 @@ import { renderToString } from 'react-dom/server'
 const app = express()
 
 app.get('/', function (req, res) {
-  const content = renderToString(<Box red100>红色文字</Box>)
+  const content = renderToString(<Box red500>红色文字</Box>)
 
   res.send(`
     <html>
@@ -19,10 +19,9 @@ app.get('/', function (req, res) {
         <div id="root">${content}</div>
         <script>
           window.fower = {
-            atomCache = ${JSON.stringify([...atomCache])}
+            atomCache: ${JSON.stringify([...atomCache])}
           }
         </script>
-        <script src="/index.js"></script>
       </body>
     </html>
   `)
