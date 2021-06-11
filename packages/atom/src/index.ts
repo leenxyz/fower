@@ -34,10 +34,17 @@ export class Atom {
 
     const { propKey, propValue } = this
 
-    this.id =
-      typeof propValue === 'boolean' && propValue === true
-        ? propKey
-        : `${propKey}-${String(propValue).replace(/\s/g, '-')}`
+    let id: string
+    if (typeof propValue === 'boolean' && propValue === true) {
+      id = propKey
+    } else if (Array.isArray(propValue)) {
+      const valueStr = propValue.join('-')
+      id = `${propKey}-${valueStr}`
+    } else {
+      id = `${propKey}-${String(propValue).replace(/\s/g, '-')}`
+    }
+
+    this.id = id
   }
 
   /**
