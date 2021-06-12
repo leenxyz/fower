@@ -18,4 +18,4 @@ build/
 .umi
 out
 
-bundle.js
+public/
