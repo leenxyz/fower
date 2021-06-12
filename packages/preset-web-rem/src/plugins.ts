@@ -38,6 +38,7 @@ import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 import placeholder from 'fower-plugin-placeholder'
 import gradient from 'fower-plugin-gradient'
+import ring from 'fower-plugin-ring'
 
 export const plugins = [
   appearance(),
@@ -80,4 +81,5 @@ export const plugins = [
   boxSizing(),
   placeholder(),
   gradient(),
+  ring(),
 ]

@@ -1,9 +1,16 @@
 {
-  "name": "@fower/css-object-processor",
+  "name": "fower-plugin-ring",
   "version": "1.21.0",
   "license": "MIT",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
@@ -12,15 +19,13 @@
     "test:cov": "tsdx test --coverage --passWithNoTests",
     "lint": "tsdx lint"
   },
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
   "author": "forsigner",
-  "module": "dist/css-object-processor.esm.js",
+  "module": "dist/fower-plugin-ring.esm.js",
   "dependencies": {
+    "@fower/atom": "^1.21.0",
+    "@fower/color-helper": "^1.21.0",
+    "@fower/parser": "^1.21.0",
+    "@fower/types": "^1.21.0",
     "@fower/utils": "^1.21.0",
     "csstype": "^3.0.8"
   }

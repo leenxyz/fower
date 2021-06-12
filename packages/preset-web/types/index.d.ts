@@ -16,6 +16,7 @@
 /// <reference types="fower-plugin-overflow" />
 /// <reference types="fower-plugin-position" />
 /// <reference types="fower-plugin-padding" />
+/// <reference types="fower-plugin-ring" />
 /// <reference types="fower-plugin-rounded" />
 /// <reference types="fower-plugin-shadow" />
 /// <reference types="fower-plugin-size" />

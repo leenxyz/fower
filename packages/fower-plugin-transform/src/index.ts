@@ -13,8 +13,12 @@ export default (): FowerPlugin => {
     handleAtom(atom) {
       return atom
     },
-
     afterAtomStyleCreate(parser) {
+      if (!parser.atoms.length) return
+
+      const matched = parser.atoms.find((i) => isMatch(i.key))
+      if (!matched) return
+
       let values: string[] = []
       const ids: string[] = []
       for (const atom of parser.atoms) {

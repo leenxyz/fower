@@ -27,6 +27,6 @@
     "@fower/parser": "^1.21.0",
     "@fower/types": "^1.21.0",
     "@fower/utils": "^1.21.0",
-    "csstype": "^3.0.7"
+    "csstype": "^3.0.8"
   }
 }
