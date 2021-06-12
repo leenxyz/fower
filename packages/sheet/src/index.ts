@@ -1,32 +1,27 @@
 import { isBrowser } from '@fower/utils'
 
 class StyleSheet {
-  private $style!: HTMLStyleElement
+  private $style: HTMLStyleElement | null = globalThis.document?.querySelector('[data-fower]')
 
-  cssString = ''
-
-  constructor() {
-    const fowerTag = globalThis.document?.querySelector('[data-fower]')
-    if (fowerTag) {
-      this.$style = fowerTag as HTMLStyleElement
-    }
-  }
+  private cssString = ''
 
   private createStyleElement(): HTMLStyleElement {
     const $style = document.createElement('style')
 
     $style.dataset.fower = 'fower'
     document.head.append($style)
-    this.$style = $style
+
     return $style
   }
 
   insertStyleToHtml(rules: string[]) {
-    if (!this.$style) this.createStyleElement()
+    if (!this.$style) {
+      this.$style = this.createStyleElement()
+    }
 
     for (const rule of rules) {
       try {
-        this.$style.sheet?.insertRule(rule)
+        this.$style.sheet!.insertRule(rule)
       } catch (error) {
         console.warn(error)
       }
@@ -39,6 +34,10 @@ class StyleSheet {
     if (isBrowser) return this.insertStyleToHtml(rules)
 
     this.cssString = this.cssString + ' ' + rules.join(' ')
+  }
+
+  getStyle() {
+    return this.cssString
   }
 }
 
