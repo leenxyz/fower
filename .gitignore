@@ -17,3 +17,5 @@ package-lock.json
 build/
 .umi
 out
+
+bundle.js
