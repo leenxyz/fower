@@ -1,6 +1,6 @@
 {
   "name": "@fower/core",
-  "version": "1.21.0",
+  "version": "1.22.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,12 +21,12 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.21.0",
-    "@fower/css-object-processor": "^1.21.0",
-    "@fower/parser": "^1.21.0",
-    "@fower/sheet": "^1.21.0",
-    "@fower/store": "^1.21.0",
-    "@fower/types": "^1.21.0",
-    "@fower/utils": "^1.21.0"
+    "@fower/atom": "^1.22.0",
+    "@fower/css-object-processor": "^1.22.0",
+    "@fower/parser": "^1.22.0",
+    "@fower/sheet": "^1.22.0",
+    "@fower/store": "^1.22.0",
+    "@fower/types": "^1.22.0",
+    "@fower/utils": "^1.22.0"
   }
 }
