@@ -28,5 +28,6 @@
     "@fower/types": "^1.24.0",
     "@fower/utils": "^1.24.0",
     "csstype": "^3.0.8"
-  }
+  },
+  "gitHead": "d941869ac2031099734aa3bef6ee52112698b1ee"
 }
