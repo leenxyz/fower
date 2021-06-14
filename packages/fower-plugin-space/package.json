@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-space",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-space.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.24.0",
-    "@fower/core": "^1.24.0",
-    "@fower/parser": "^1.24.0",
-    "@fower/types": "^1.24.0",
-    "@fower/utils": "^1.24.0"
+    "@fower/atom": "^1.25.0",
+    "@fower/core": "^1.25.0",
+    "@fower/parser": "^1.25.0",
+    "@fower/types": "^1.25.0",
+    "@fower/utils": "^1.25.0"
   }
 }
