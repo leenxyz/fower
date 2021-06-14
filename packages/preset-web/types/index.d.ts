@@ -39,6 +39,7 @@
 /// <reference types="fower-plugin-user-select" />
 /// <reference types="fower-plugin-visibility" />
 /// <reference types="fower-plugin-placeholder" />
+/// <reference types="fower-plugin-svg" />
 /// <reference types="@fower/types" />
 import { Preset, Theme } from '@fower/types'
 
