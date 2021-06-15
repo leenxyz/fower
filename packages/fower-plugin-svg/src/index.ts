@@ -16,7 +16,10 @@ function toStyle(key: string, value: any): any {
   }
 
   if (key === 'stroke') {
-    return { strokeWidth: value }
+    if (/^\d+/.test(value)) {
+      return { strokeWidth: value }
+    }
+    return { stroke: value }
   }
 }
 
