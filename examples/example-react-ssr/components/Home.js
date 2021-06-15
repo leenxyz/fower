@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box } from '@fower/react'
 
 export const Home = () => {
+  const [theme, setTheme] = useState(false)
+
   return (
-    <Box square-500 bgBlue100>
+    <Box square-500 bgBlue100 bgRed100={theme}>
+      <Box onClick={() => setTheme(!theme)} toCenter py-20>
+        switch theme
+      </Box>
       <Box row borderB-1>
         <Box flex-4>name</Box>
         <Box flex-8>address</Box>
