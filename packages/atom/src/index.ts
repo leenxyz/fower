@@ -289,6 +289,7 @@ export class Atom {
 
   private getIsValid() {
     if (this.isFalsePropValue) return false
+    if (this.propValue === undefined || this.propValue === null) return false
     if (invalidProps.includes(this.propKey)) return false
     return true
   }
