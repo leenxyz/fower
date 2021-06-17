@@ -3,7 +3,7 @@ import { atomCache } from '@fower/parser'
 import { FowerPlugin } from '@fower/types'
 
 const timingReg = /^ease(linear|In|Out|InOut)/i
-const transitionReg = /^transition(None|All|Common|Colors|Opacity|Shadow|Transform)/i
+const transitionReg = /^transition(None|All|Common|Colors|Opacity|Shadow|Transform)?$/i
 
 const transitionMaps: any = {
   none: 'none',

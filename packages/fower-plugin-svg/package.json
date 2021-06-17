@@ -1,0 +1,32 @@
+{
+  "name": "fower-plugin-svg",
+  "version": "1.25.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
+    "test:cov": "tsdx test --coverage --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "author": "forsigner",
+  "module": "dist/fower-plugin-svg.esm.js",
+  "dependencies": {
+    "@fower/atom": "^1.25.0",
+    "@fower/core": "^1.25.0",
+    "@fower/parser": "^1.25.0",
+    "@fower/types": "^1.25.0",
+    "@fower/utils": "^1.25.0",
+    "csstype": "^3.0.8"
+  }
+}

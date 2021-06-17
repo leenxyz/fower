@@ -12,11 +12,6 @@ export default () => {
         transitionCommon
         bgRed600--hover
       ></Box>
-      <Box square20 bgOrange400 rounded-4></Box>
-      <Box square20 bgOrange400 rounded2XL></Box>
-      <Box square20 bgOrange400 roundedTXL></Box>
-      <Box square20 bgOrange400 roundedTL-20></Box>
-      <Box square20 bgOrange400 roundedTR2XL></Box>
     </Box>
   );
 };

@@ -16,6 +16,7 @@
 /// <reference types="fower-plugin-overflow" />
 /// <reference types="fower-plugin-position" />
 /// <reference types="fower-plugin-padding" />
+/// <reference types="fower-plugin-ring" />
 /// <reference types="fower-plugin-rounded" />
 /// <reference types="fower-plugin-shadow" />
 /// <reference types="fower-plugin-size" />
@@ -38,6 +39,7 @@
 /// <reference types="fower-plugin-user-select" />
 /// <reference types="fower-plugin-visibility" />
 /// <reference types="fower-plugin-placeholder" />
+/// <reference types="fower-plugin-svg" />
 /// <reference types="@fower/types" />
 import { Preset, Theme } from '@fower/types'
 
