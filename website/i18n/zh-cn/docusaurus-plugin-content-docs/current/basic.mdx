@@ -14,15 +14,6 @@ Fower 使用**Atomic Props**让样式原子化。 数十年来，前端开发的
 
 Fower 不提倡“关注点分离”，Fower 使用“原子性道具”来编写样式。 当我们使用 Fower 时，没有 CSS 代码，没有 CSS 类名，没有 CSS 文件。
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box bgGray100 p6>
   <Box toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
@@ -38,24 +29,6 @@ Fower 不提倡“关注点分离”，Fower 使用“原子性道具”来编�
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 p6>
-  <div toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
-    <img circle-48 src="/img/jobs.jpg" />
-    <div ml-10>
-      <div textXL fontBold>Steve Jobs</div>
-      <div gray800>Co-founder of Apple Inc.</div>
-    </div>
-  </div>
-</div>
-```
-
-</TabItem>
-</Tabs>
 
 初看 `toCenterY p-20 w-300 bgWhite rounded-10` 这类缩写，你可能很不习惯，有点简单粗暴，但我保证，它会让你爽。
 
@@ -73,30 +46,11 @@ Fower 不提倡“关注点分离”，Fower 使用“原子性道具”来编�
 
 为了让您更深入地了解 Fower 的用法，让我们回顾一下基本用法：
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Text text2XL fontBold green500>
   Hi, Fower
 </Text>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<span text2XL fontBold green500> Hi, Fower </span>
-```
-
-</TabItem>
-</Tabs>
 
 Fower 最简单的用法是直接在 Fower 组件设置一些原子属性，上面 `text2XL fontBold green50` 会生产下面的样式：
 

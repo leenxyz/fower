@@ -3,23 +3,11 @@ id: circle
 title: Circle
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 | Atomic Props                    | CSS Properties                                                    |
 | ------------------------------- | ----------------------------------------------------------------- |
 | circle-{value} / circle={value} | width: {value}; <br/>height: {value};<br/> border-radius: {value} |
 
 ### Usage
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toLeft>
@@ -37,18 +25,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toLeft>
-  <div circle-50 bgYellow200 toCenter>Hello</div>
-  <div circle-5rem bgGreen200 toCenter>Hello</div>
-  <div circle="100" bgBlue200 toCenter>Hello</div>
-  <div circle="150px" bgPurple200 toCenter>Hello</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

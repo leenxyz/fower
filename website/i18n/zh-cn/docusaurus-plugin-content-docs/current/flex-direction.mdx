@@ -3,9 +3,6 @@ id: flex-direction
 title: Flex Direction
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the direction of flex items.
 
 | Atomic Props          | CSS Properties          |
@@ -17,15 +14,6 @@ Atomic props for controlling the direction of flex items.
 ## row
 
 Use `row` props to position flex items horizontally.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box white spaceX3 row>
@@ -41,32 +29,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div white spaceX3 row>
-  <div bgOrange400 p10>A</div>
-  <div bgOrange400 p10>B</div>
-  <div bgOrange400 p10>C</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## column
 
 Use `column` props to position flex items vertically.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box white spaceY3 column>
@@ -82,32 +47,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div white spaceY3 column>
-  <div bgOrange400 p6>A</div>
-  <div bgOrange400 p6>B</div>
-  <div bgOrange400 p6>C</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## flexDirection
 
 Use `flexDirection={value}` to set items direction.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box white flex flexDirection="row-reverse">
@@ -122,17 +64,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div white flex flexDirection="row-reverse">
-  <div bgOrange400 p6 m3>A</div>
-  <div bgOrange400 p6 m3>B</div>
-  <div bgOrange400 p6 m3>C</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

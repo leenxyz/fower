@@ -3,24 +3,12 @@ id: fill
 title: Fill
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 | Atomic Props | CSS Properties     |
 | ------------ | ------------------ |
 | fillNone     | fill: none         |
 | fillCurrent  | fill: currentColor |
 
 ## Fill none
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceX3>
@@ -43,43 +31,7 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX3>
-  <svg fillNone red500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-  <svg fillNone teal500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Fill current
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceX3>
@@ -102,43 +54,7 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div>
-  <svg fillCurrent red500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-  <svg fillCurrent teal500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Fill with color
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceX3>
@@ -174,30 +90,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX3>
-  <svg fillNone red500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-  <svg fillNone teal500 square10 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-    />
-  </svg>
-</div>
-```
-
-</TabItem>
-</Tabs>

@@ -3,9 +3,6 @@ id: max-width
 title: Max Width
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Use `maxW-{value}` Atomic Props to control the max width of an element.
 
 | Atomic Props                | CSS Properties      |
@@ -14,15 +11,6 @@ Use `maxW-{value}` Atomic Props to control the max width of an element.
 
 ## Usage
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box bgGray200 white>
   <Box minW-100 w-200 bgRed400 toCenter>
@@ -30,15 +18,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray200 white>
-  <div minW-100 w-200 bgRed400 toCenter>minW-100</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

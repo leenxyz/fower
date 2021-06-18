@@ -4,9 +4,6 @@ sidebar_label: Breakpoints
 title: Breakpoints
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Fower comes with a predefined set of commonly used breakpoints.
 
 ```jsx
@@ -37,25 +34,6 @@ setTheme({
 
 Then you can use it like this:
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box bgGreen400 square12 square20--sm square32--md square48--3xl></Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGreen400 square12 square20--sm square32--md square48--3xl></div>
-```
-
-</TabItem>
-</Tabs>

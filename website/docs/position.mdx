@@ -3,9 +3,6 @@ id: position
 title: Position
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling how an element is positioned.
 
 | Atomic Props     | CSS Properties      |
@@ -21,15 +18,6 @@ Atomic props for controlling how an element is positioned.
 
 Use `static` props to set static position for an element.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box relative square-160 bgBlue100>
   <Box bgOrange400 square-100 static toCenter>
@@ -38,30 +26,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgBlue100>
-  <div bgOrange400 square-100 static toCenter>static</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Relative
 
 Use `relative` props to set relative position for an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 bgBlue100>
@@ -71,33 +38,11 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgBlue100>
-  relative
-  <div bgBlue400--T20 square-80 absolute bottom-0 toCenter>absolute</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
 
 ## Absolute
 
 Use `absolute` props to set absolute position for an element.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box relative square-160 bgBlue100>
   <Box bgBlue400--T20 square-80 absolute bottom-0 toCenter>
@@ -106,30 +51,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgBlue100>
-  <div bgBlue400--T20 square-80 absolute bottom-0 toCenter>absolute</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Fixed
 
 Use `fixed` props to set fixed position for an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toCenter bgGreen300 shadow rounded-8 square-80 fixed bottom-10 zIndex-10000>
@@ -137,28 +61,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toCenter bgWhite shadow rounded-8 square-80 fixed bottom-10>fixed</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Sticky
 
 Use `sticky` props to set sticky position for an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 overflow="auto" bgGray100 p4>
@@ -174,49 +79,12 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 overflow="auto" bgGray100 p4>
-  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-  <div toCenter bgYellow200 shadow rounded-8 square-80 sticky top-0>sticky</div>
-  <div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a
-    libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum
-    quae eum fugit earum.
-  </div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Position
 
 if the preset atomic props can not be satisfied，you can use `position` props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toCenter rounded-8 square-80 position={2 > 1 ? 'absolute' : 'relative'}>
   position
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toCenter rounded-8 square-80 position="absolute">position</div>
-```
-
-</TabItem>
-</Tabs>

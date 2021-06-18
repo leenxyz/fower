@@ -3,9 +3,6 @@ id: padding
 title: Padding
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Control the padding of an element using the `p{t|r|b|l|x|y}-{value}` Atomic Props.
 
 | Atomic Props            | CSS Properties                                 |
@@ -34,15 +31,6 @@ Control the padding on all sides of an element using the `p-{value}` Atomic Prop
 
 Control the padding on one side of an element using the `p{t|r|b|l}-{value}` Atomic Props.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box toCenter debugChildren>
   <Text pt-20>pt-20</Text>
@@ -52,33 +40,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toCenter debugChildren>
-  <span pt-20>pt-20</span>
-  <span pr-20>pr-20</span>
-  <span pb-20>pb-20</span>
-  <span pl-20>pl-20</span>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ### Horizontal padding
 
 Control the horizontal padding of an element using the `px-{value}` Atomic Props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Text px-20 bgRed300>
@@ -86,41 +50,12 @@ values={[
 </Text>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<span px-20 bgRed300> px-20 </span>
-```
-
-</TabItem>
-</Tabs>
-
 ### vertical padding
 
 Control the vertical padding of an element using the `py-{value}` Atomic Props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Text py-10 bgRed300>
   py-10
 </Text>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<span py-10 bgRed300> py-10 </span>
-```
-
-</TabItem>
-</Tabs>

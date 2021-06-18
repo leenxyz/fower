@@ -9,9 +9,6 @@ tags: [React, Vue, Fower]
 hide_table_of_contents: false
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 After half a year's efforts, today we're finally releasing Fower v1.0.
 
 ## What is Fower?
@@ -39,17 +36,6 @@ The members of our team like the style of Tailwindcss, so we create [Fower](http
 
 Similar to Tailwindcss, we also use the concept of utility-first, but Fower is a bit different. Fower uses Atomic Props to write styles. The code is as follows:
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-    { label: 'React Native', value: 'rn', },
-    { label: 'Taro', value: 'taro', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 // import { Box } from '@fower/react'
 <Box toCenterY p-10 w-260 rounded-10 shadow>
@@ -64,64 +50,6 @@ Similar to Tailwindcss, we also use the concept of utility-first, but Fower is a
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toCenterY p-10 w-260 rounded-10 shadow>
-  <img circle-48 src="/img/jobs.jpg" />
-  <div ml-10>
-    <div textXL fontBold>Steve Jobs</div>
-    <span gray800>Co-founder of Apple Inc.</span>
-  </div>
-</div>
-```
-
-</TabItem>
-
-<TabItem value="rn">
-
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@fower/react-native'
-
-const ProfileCard = () => (
-  <View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <Image circle-48 source={{ uri: '/img/jobs.jpg' }} />
-    <View ml-10>
-      <View textXL fontBold>
-        Steve Jobs
-      </View>
-      <Text gray800>Co-founder of Apple Inc.</Text>
-    </View>
-  </View>
-)
-```
-
-</TabItem>
-
-<TabItem value="taro">
-
-```jsx
-import React from 'react'
-import { View, Text, Image } from '@fower/taro'
-
-const ProfileCard = () => (
-  <View toCenterY p-10 w-260 bgWhite rounded-10 shadow>
-    <Image circle-48 src="/img/jobs.jpg" />
-    <View ml-10>
-      <View textXL fontBold>
-        Steve Jobs
-      </View>
-      <Text gray800>Co-founder of Apple Inc.</Text>
-    </View>
-  </View>
-)
-```
-
-</TabItem>
-</Tabs>
 
 ## Core concept
 

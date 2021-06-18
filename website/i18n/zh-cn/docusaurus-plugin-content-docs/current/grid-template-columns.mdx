@@ -3,23 +3,11 @@ id: grid-template-columns
 title: Grid Template Columns
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 | Atomic Props                | CSS Properties                                            |
 | --------------------------- | --------------------------------------------------------- |
 | gridTemplateColumns-{value} | grid-template-columns: repeat({value}, minmax(0px, 1fr)); |
 
 ## Usage
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box grid gridTemplateColumns-3 gap-20 white fontBold textXL>
@@ -52,23 +40,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div grid gridTemplateColumns-3 gap-20 white fontBold textXL>
-  <div py1 rounded-4 toCenter bgTeal400>1</div>
-  <div py1 rounded-4 toCenter bgTeal400>2</div>
-  <div py1 rounded-4 toCenter bgTeal400>3</div>
-  <div py1 rounded-4 toCenter bgTeal400>4</div>
-  <div py1 rounded-4 toCenter bgTeal400>5</div>
-  <div py1 rounded-4 toCenter bgTeal400>6</div>
-  <div py1 rounded-4 toCenter bgTeal400>7</div>
-  <div py1 rounded-4 toCenter bgTeal400>8</div>
-  <div py1 rounded-4 toCenter bgTeal400>9</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

@@ -4,9 +4,6 @@ title: 响应式样式
 sidebar_label: Responsive
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 很多 CSS 框架，都会声称自己是 Mobile-first，是响应式的。比如两个非常知名的 CSS 框架，Bootstrap、Bulma，是这样描述自己的:
 
 > Quickly design and customize responsive mobile-first sites with Bootstrap.
@@ -31,27 +28,8 @@ Fower 的每个原子属性都支持响应式，而不是只是某个容器支�
 
 Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box textSM textLG--sm text4XL--md text6XL--lg>
   Lorem ipsum dolor sit amet
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div textSM textLG--sm text4XL--md text6XL--lg>Lorem ipsum dolor sit amet</div>
-```
-
-</TabItem>
-</Tabs>

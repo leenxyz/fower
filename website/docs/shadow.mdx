@@ -3,9 +3,6 @@ id: shadow
 title: Shadow
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Use `shadow{SIZE}` Atomic Props controll element's shadow.
 
 | Atomic Props   | CSS Properties      |
@@ -19,15 +16,6 @@ Use `shadow{SIZE}` Atomic Props controll element's shadow.
 | shadow={value} | box-shadow: {value} |
 
 ## Usage
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 p-20 toCenterX toBetween>
@@ -52,33 +40,7 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 p-20 toCenterX toBetween>
-  <div toCenter square-60 bgWhite shadowSM>SM</div>
-  <div toCenter square-80 bgWhite bgWhite shadow>Base</div>
-  <div toCenter square-80 bgWhite shadowMD>MD</div>
-  <div toCenter square-90 bgWhite shadowLG>LG</div>
-  <div toCenter square-100 bgWhite shadowXL>XL</div>
-  <div toCenter square-110 bgWhite shadow2XL>2XL</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Default shadow
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 p-20 toCenter>
@@ -87,15 +49,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 p-20 toCenter>
-  <div toCenter square-100 bgWhite shadow>default</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

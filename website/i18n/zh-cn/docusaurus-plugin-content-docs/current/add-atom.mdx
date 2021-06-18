@@ -4,9 +4,6 @@ title: addAtom
 sidebar: addAtom
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 You can create your own Atomic Props with `addAtom`.
 
 ## Basic Usage
@@ -61,15 +58,6 @@ addAtom(/heading(sm|md|lg)/i, (atom) => {
 
 You register some Atomic Props matched with `/heading(sm|md|lg)/i`, now you can use them:
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box>
   <Box headingSM>Lorem ipsum dolor sit amet</Box>
@@ -77,17 +65,3 @@ You register some Atomic Props matched with `/heading(sm|md|lg)/i`, now you can 
   <Box headingLG>Lorem ipsum dolor sit amet</Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div>
-  <div headingSM>Lorem ipsum dolor sit amet</div>
-  <div headingMD>Lorem ipsum dolor sit amet</div>
-  <div headingLG>Lorem ipsum dolor sit amet</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

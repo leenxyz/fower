@@ -3,9 +3,6 @@ id: align-items
 title: Align Items
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling how flex and grid items are positioned along a container's cross axis.
 
 | Atomic Props        | CSS Properties        |
@@ -16,15 +13,6 @@ Atomic props for controlling how flex and grid items are positioned along a cont
 
 Use `alignItems="start"` to align items to the start of the container's cross axis.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box row spaceX4 alignItems="flex-start">
   <Box bgOrange400 w-100 py4></Box>
@@ -33,32 +21,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row spaceX4 alignItems="flex-start">
-  <div bgOrange400 w-100 py4></div>
-  <div bgOrange400 w-100 py8></div>
-  <div bgOrange400 w-100 py6></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Center
 
 Use `alignItems="center"` to align items along the center of the container's cross axis.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="center">
@@ -68,32 +33,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row spaceX4 alignItems="center">
-  <div bgOrange400 w-100 py4></div>
-  <div bgOrange400 w-100 py8></div>
-  <div bgOrange400 w-100 py6></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## End
 
 Use `alignItems="flex-end"` to align items to the end of the container's cross axis.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="flex-end">
@@ -103,32 +45,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row spaceX4 alignItems="flex-end">
-  <div bgOrange400 w-100 py4></div>
-  <div bgOrange400 w-100 py8></div>
-  <div bgOrange400 w-100 py6></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Baseline
 
 Use `alignItems="baseline"` to align items along the container's cross axis such that all of their baselines align.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="baseline">
@@ -138,32 +57,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row spaceX4 alignItems="baseline">
-  <div bgOrange400 w-100 py4></div>
-  <div bgOrange400 w-100 py8></div>
-  <div bgOrange400 w-100 py6></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Stretch
 
 Use `alignItems="stretch"` to stretch items to fill the container's cross axis.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box row spaceX4 alignItems="stretch">
@@ -172,17 +68,3 @@ values={[
   <Box bgOrange400 w-100 py6></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row spaceX4 alignItems="stretch">
-  <div bgOrange400 w-100 py4></div>
-  <div bgOrange400 w-100 py8></div>
-  <div bgOrange400 w-100 py6></div>
-</div>
-```
-
-</TabItem>
-</Tabs>

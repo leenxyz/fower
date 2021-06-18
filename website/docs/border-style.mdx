@@ -3,9 +3,6 @@ id: border-style
 title: Border Style
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the style of an element's borders.
 
 | Atomic Props | CSS Properties        |
@@ -19,15 +16,6 @@ Atomic props for controlling the style of an element's borders.
 ## Usage
 
 Use `border{style}` props to control an element's border style.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -48,19 +36,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toEvenly>
-  <div toCenter p4 bgOrange200 border-4 borderOrange500 borderSolid>borderSolid</div>
-  <div toCenter p4 bgOrange200 borderT-4 borderOrange500 borderDashed>borderDashed</div>
-  <div toCenter p4 bgOrange200 borderR-4 borderOrange500 borderDotted>borderDotted</div>
-  <div toCenter p4 bgOrange200 borderB-4 borderOrange500 borderDouble>borderDouble</div>
-  <div toCenter p4 bgOrange200 border-4 borderOrange500 borderNone>borderNone</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

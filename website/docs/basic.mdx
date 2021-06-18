@@ -16,15 +16,6 @@ Fower does not advocate "separation of Concerns", Fower use **Atomic Props** to 
 
 Code snippet using Fower:
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box bgGray100 p6>
   <Box toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
@@ -40,24 +31,6 @@ Code snippet using Fower:
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 p6>
-  <div toCenterY p-10 w-260 bgWhite rounded-10 shadowMD>
-    <img circle-48 src="/img/jobs.jpg" />
-    <div ml-10>
-      <div textXL fontBold>Steve Jobs</div>
-      <div gray800>Co-founder of Apple Inc.</div>
-    </div>
-  </div>
-</div>
-```
-
-</TabItem>
-</Tabs>
 
 At first glance, You may be very resistant to abbreviations like `toCenterY p-20 w-300 bgWhite rounded-10`. It’s a bit simple and rude, but I promise, it will make you happy later.
 
@@ -82,30 +55,11 @@ At first glance, You may be very resistant to abbreviations like `toCenterY p-20
 
 In order to give you a deeper understanding of the usage of Fower, let's review the basic usage:
 
-<Tabs
-  defaultValue="React"
-  values={[
-    { label: 'React', value: 'React', },
-    { label: 'Vue', value: 'Vue', },
-  ]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Text text2XL fontBold green500>
   Hi, Fower
 </Text>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<span text2XL fontBold green500> Hi, Fower </span>
-```
-
-</TabItem>
-</Tabs>
 
 The simplest way to use Fower is to set some Atomic Props directly on the Fower component. The Atomic Props `text2XL`, `fontBold`, `green500` will produce the following style:
 

@@ -3,9 +3,6 @@ id: space-between
 title: Space Between
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the space between child elements.
 
 | Atomic Props   | CSS Properties                                 |
@@ -17,15 +14,6 @@ Atomic props for controlling the space between child elements.
 
 Control the horizontal space between elements using the `spaceX-{value}` props.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box spaceX-10 row>
   <Box bgOrange400 rounded-8 square-100></Box>
@@ -34,32 +22,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX-10 row>
-  <div bgOrange400 rounded-8 square-100></div>
-  <div bgOrange400 rounded-8 square-100></div>
-  <div bgOrange400 rounded-8 square-100></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Add vertical space between children
 
 Control the vertical space between elements using the spaceY-{value} props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceY-10 column>
@@ -68,17 +33,3 @@ values={[
   <Box bgOrange400 rounded-8 h-60></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceY-10 column>
-  <div bgOrange400 rounded-8 h-60></div>
-  <div bgOrange400 rounded-8 h-60></div>
-  <div bgOrange400 rounded-8 h-60></div>
-</div>
-```
-
-</TabItem>
-</Tabs>

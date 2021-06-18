@@ -3,9 +3,6 @@ id: top-right-bottom-left
 title: Top / Right / Bottom / Left
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the placement of positioned elements.
 
 | Atomic Props                    | CSS Properties |
@@ -19,45 +16,15 @@ Atomic props for controlling the placement of positioned elements.
 
 Use `top` props to set an element's top position.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box relative square-160 bgOrange100>
   <Box bgOrange400 square-80 absolute top-20></Box>
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgOrange100>
-  <div bgOrange400 square-80 absolute top-20></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Right
 
 Use `right` props to set an element's right position.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 bgOrange100>
@@ -65,30 +32,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgOrange100>
-  <div bgOrange400 square-80 absolute right="20"></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Bottom
 
 Use `bottom` props to set an element's bottom position.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 bgOrange100>
@@ -96,30 +42,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgOrange100>
-  <div bgOrange400 square-80 absolute bottom="20%"></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Left
 
 Use `left` props to set an element's left position.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 bgOrange100>
@@ -127,45 +52,12 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgOrange100>
-  <div bgOrange400 square-80 absolute left-20></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Negative values
 
 Use `right--{value}` like props to set an element's Negative position.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box relative square-160 bgOrange100>
   <Box bgOrange400 square-80 absolute top-20 right--20></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div relative square-160 bgOrange100>
-  <div bgOrange400 square-80 absolute top-20 right--20></div>
-</div>
-```
-
-</TabItem>
-</Tabs>

@@ -3,9 +3,6 @@ id: fower-layout-introduction
 title: Introduction
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 import {
   Layout1,
   Layout2,
@@ -40,34 +37,12 @@ Fower Layout 基于 Flexbox ，与 Flexbox 相比，它具有以下优点：
 
 ## Live Demo
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box row toCenter bgGray100 square-200>
   <Box square-60 bgOrange400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div row toCenter bgGray100 square-200>
-  <div square-60 bgOrange400 rounded-8></div>
-  <div square-80 bgBlue400 rounded-8></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
 
 ## Layout base on row
 

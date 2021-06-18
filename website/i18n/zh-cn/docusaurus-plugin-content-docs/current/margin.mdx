@@ -3,9 +3,6 @@ id: margin
 title: Margin
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Control the margin of an element using the `m{t|r|b|l|x|y}-{value}` Atomic Props.
 
 | Atomic Props            | CSS Properties                               |
@@ -24,15 +21,6 @@ Control the margin of an element using the `m{t|r|b|l|x|y}-{value}` Atomic Props
 
 Control the margin on all sides of an element using the `m-{value}` Atomic Props.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box bgGray100 toLeft>
   <Box bgGreen200 square-100 m-0>
@@ -50,33 +38,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 toLeft>
-  <div bgGreen200 square-100 m-0>m-0</div>
-  <div bgGreen200 square-100 m="{20}">m={'{20}'}</div>
-  <div bgGreen200 square-100 m="40px">m="40px"</div>
-  <div bgGreen200 square-120 m="10px 20px">m="10px 20px"</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ### Margin of one side
 
 Control the margin on one side of an element using the `m{t|r|b|l}-{value}` Atomic Props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 toLeft>
@@ -95,33 +59,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 toLeft>
-  <div ml-10 bgGreen200 square-100>ml-10</div>
-  <div mt-10 bgTeal200 square-100>mt-10</div>
-  <div mr-10 bgRed200 square-100>mr-10</div>
-  <div mb-10 bgYellow200 square-100>mb-10</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ### Horizontal margin
 
 Control the horizontal margin of an element using the `mx-{value}` Atomic Props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 toLeft>
@@ -131,30 +71,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 toLeft>
-  <div mx-10 square-100 bgRed200>mx-10</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ### Vertical marign
 
 Control the vertical margin of an element using the `my-{value}` Atomic Props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box bgGray100 toLeft>
@@ -164,32 +83,11 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div bgGray100 toLeft>
-  <div my-10 square-100 bgRed200>my-10</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ### Negative margins
 
 Control the negative margin of an element using the `m{t|r|b|l|x|y}--{value}` Atomic Props.
 
 Of course, you can also use `ml={-10}` to set negative margin of an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box m-20 bgGray200 square-200>
@@ -201,16 +99,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div m-20 bgGray200 square-200>
-  <div ml--20 square-100 bgRed500--T60>ml--20</div>
-  <div mt="-1rem" square-100 bgOrange400--T60>mt="-1rem"</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

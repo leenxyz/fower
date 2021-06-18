@@ -3,9 +3,6 @@ id: flex-shrink
 title: Flex Shrink
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling how flex items shrink.
 
 | Atomic Props       | CSS Properties       |
@@ -15,15 +12,6 @@ Atomic props for controlling how flex items shrink.
 ## Shrink
 
 Use `flexShrink={1}` to allow a flex item to shrink if needed.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceX3 row>
@@ -35,32 +23,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX3 row>
-  <div bgOrange400 p4 w-100></div>
-  <div bgOrange500 p4 flexShrink="1" w-600>Shrink</div>
-  <div bgOrange400 p4 w-100></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Don't shrink
 
 Use `flexShrink={0}` to prevent a flex item from shrinking.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box spaceX3 row>
@@ -71,17 +36,3 @@ values={[
   <Box bgOrange400 p4 w-100></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX3 row>
-  <div bgOrange400 p4 w-100></div>
-  <div bgOrange500 p4 flexShrink="0" w-600>Not Shrink</div>
-  <Box bgOrange400 p4 w-100></Box>
-</div>
-```
-
-</TabItem>
-</Tabs>

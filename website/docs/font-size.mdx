@@ -3,9 +3,6 @@ id: font-size
 title: Font Size
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for control the font size of an element.
 
 | Atomic Props                | CSS Properties      |
@@ -29,15 +26,6 @@ Atomic props for control the font size of an element.
 
 Control the font size of an element using the text{size} props.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box>
   <Box textXS>Lorem ipsum dolor sit amet</Box>
@@ -55,62 +43,3 @@ values={[
   <Box text9XL>Lorem ipsum</Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div>
-  <div textXS>Lorem ipsum dolor sit amet</div>
-  <div textSM>Lorem ipsum dolor sit amet</div>
-  <div textBase>Lorem ipsum dolor sit amet</div>
-  <div textLG>Lorem ipsum dolor sit amet</div>
-  <div textXL>Lorem ipsum dolor sit amet</div>
-  <div text2XL>Lorem ipsum dolor sit amet</div>
-  <div text3XL>Lorem ipsum dolor sit amet</div>
-  <div text4XL>Lorem ipsum dolor sit amet</div>
-  <div text5XL>Lorem ipsum dolor sit</div>
-  <div text6XL>Lorem ipsum dolor sit</div>
-  <div text7XL>Lorem ipsum dolor sit</div>
-  <div text8XL>Lorem ipsum dolor</div>
-  <div text9XL>Lorem ipsum</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
-## Use any value
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
-```jsx live
-<Box>
-  <Box text-14>Lorem ipsum dolor sit amet</Box>
-  <Box text={20}>Lorem ipsum dolor sit amet</Box>
-  <Box text-2em>Lorem ipsum dolor sit amet</Box>
-  <Box text-3rem>Lorem ipsum dolor sit amet</Box>
-</Box>
-```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div>
-  <div text-14>Lorem ipsum dolor sit amet</div>
-  <div text="20">Lorem ipsum dolor sit amet</div>
-  <div text-2em>Lorem ipsum dolor sit amet</div>
-  <div text-3rem>Lorem ipsum dolor sit amet</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

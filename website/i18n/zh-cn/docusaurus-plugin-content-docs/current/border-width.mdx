@@ -3,9 +3,6 @@ id: border-width
 title: Border Width
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the style of an element's borders.
 
 | Atomic Props         | CSS Properties                |
@@ -16,15 +13,6 @@ Atomic props for controlling the style of an element's borders.
 ## All sides
 
 Use `border-{value} ` props to set the border width for all sides of an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -46,34 +34,9 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toEvenly>
-  <div toCenter p4 bgOrange200 border-0 borderOrange500>border-0</div>
-  <div toCenter p4 bgOrange200 border borderOrange500>border</div>
-  <div toCenter p4 bgOrange200 border-2 borderOrange500>border-2</div>
-  <div toCenter p4 bgOrange200 border-4 borderOrange500>border-4</div>
-  <div toCenter p4 bgOrange200 border-8 borderOrange500>border-8</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Single side
 
 Use `border{T|R|B|L}-{value} ` props to set the border width for one side of an element.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toEvenly>
@@ -91,18 +54,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toEvenly>
-  <div toCenter p4 bgOrange200 borderT-2 borderOrange500>borderT-2</div>
-  <div toCenter p4 bgOrange200 borderR-2 borderOrange500>borderR-2</div>
-  <div toCenter p4 bgOrange200 borderB-2 borderOrange500>borderB-2</div>
-  <div toCenter p4 bgOrange200 borderL-2 borderOrange500>borderL-2</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

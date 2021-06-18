@@ -3,9 +3,6 @@ id: height
 title: Height
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Use `h-{value}` props to controll element height.
 
 | Atomic Props          | CSS Properties   |
@@ -13,15 +10,6 @@ Use `h-{value}` props to controll element height.
 | h-{value} / h={value} | height: {value}; |
 
 ## Usage
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box toLeft white h-100 bgGray100>
@@ -42,19 +30,3 @@ values={[
   </Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toLeft white h-100 bgGray100>
-  <div h-50 bgRed400 p2>h-50</div>
-  <div h-5rem bgYellow400 p2>h-5rem</div>
-  <div h="50" bgGreen400 p2>h="50"</div>
-  <div h="100px" bgBlue400 p2>h="100px"</div>
-  <div h="80%" bgPurple400 p2>h="80%"</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

@@ -3,9 +3,6 @@ id: line-height
 title: Line Height
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 import { LineHeight } from '@site/src/components/LineHeight'
 
 | Atomic Props   | CSS Properties      |
@@ -25,15 +22,6 @@ Use preset value: `leadingNone`、`leadingTight`、`leadingSnug`、`leadingNorma
 
 <LineHeight />
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx
 <Box>
   <Box leadingNone>Lorem ipsum dolor sit amet...</Box>
@@ -45,33 +33,7 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div>
-  <div leadingNone>Lorem ipsum dolor sit amet...</div>
-  <div leadingTight>Lorem ipsum dolor sit amet...</div>
-  <div leadingSnug>Lorem ipsum dolor sit amet...</div>
-  <div leadingNormal>Lorem ipsum dolor sit amet...</div>
-  <div leadingRelaxed>Lorem ipsum dolor sit amet...</div>
-  <div leadingLoose>Lorem ipsum dolor sit amet...</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 Use precise value:
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box textXL>
@@ -80,17 +42,3 @@ values={[
   <Box leading="1.5em">Lorem ipsum dolor sit amet...</Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div textXL>
-  <div leading-20>Lorem ipsum dolor sit amet...</div>
-  <div leading-3em>Lorem ipsum dolor sit amet...</div>
-  <div leading="1.5em">Lorem ipsum dolor sit amet...</div>
-</div>
-```
-
-</TabItem>
-</Tabs>

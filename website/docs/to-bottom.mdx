@@ -3,8 +3,6 @@ id: to-bottom
 title: To Bottom
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
 import { Layout6 } from '@site/src/components/Layout'
 
 Atomic Props to make children elements align to bottom.
@@ -17,37 +15,9 @@ Atomic Props to make children elements align to bottom.
 
 Use `toBottom` to make children elements align to bottom.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box toBottom bgGray100 square-200>
   <Box square-60 bgOrange400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toBottom bgGray100 square-200>
-  <div square-60 bgOrange400 rounded-8></div>
-  <div square-80 bgBlue400 rounded-8></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
-## Compose
-
-`toBottom` can compose with `toLeft`、`toCenterX`、`toRight`、`toBetween`、`toEvenly`、`toAround`:
-
-<Layout6 />

@@ -3,9 +3,6 @@ id: cursor
 title: Cursor
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 Atomic props for controlling the cursor style when hovering over an element.
 
 | Atomic Props       | CSS Properties        |
@@ -52,15 +49,6 @@ Atomic props for controlling the cursor style when hovering over an element.
 
 Use `cursor{value}` props to set cursor style for an element.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box spaceX-10 row white>
   <Box toCenter bgOrange500 rounded-8 square-100 cursorNotAllowed>
@@ -75,45 +63,12 @@ values={[
 </Box>
 ```
 
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div spaceX-10 row white>
-  <div toCenter bgOrange500 rounded-8 square-100 cursorNotAllowed>NotAllowed</div>
-  <div toCenter bgOrange500 rounded-8 square-100 cursorPointer>Pointer</div>
-  <div toCenter bgOrange500 rounded-8 square-100 cursorGrab>Grab</div>
-</div>
-```
-
-</TabItem>
-</Tabs>
-
 ## Cursor
 
 if the preset atomic props can not be satisfied，you can use `cursor` props.
-
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
 
 ```jsx live
 <Box white toCenter bgOrange500 circle-100 cursor="pointer">
   cursor
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div white toCenter bgOrange500 circle-100 cursor="pointer">cursor</div>
-```
-
-</TabItem>
-</Tabs>

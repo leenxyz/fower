@@ -3,9 +3,6 @@ id: to-top
 title: To Top
 ---
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
 import { Layout5 } from '@site/src/components/Layout'
 
 Atomic Props to make children elements align to top.
@@ -18,34 +15,12 @@ Atomic Props to make children elements align to top.
 
 Use `toTop` to make children elements align to top.
 
-<Tabs
-defaultValue="React"
-values={[
-{ label: 'React', value: 'React', },
-{ label: 'Vue', value: 'Vue', },
-]
-}>
-<TabItem value="React">
-
 ```jsx live
 <Box toTop bgGray100 square-200>
   <Box square-60 bgOrange400 rounded-8></Box>
   <Box square-80 bgBlue400 rounded-8></Box>
 </Box>
 ```
-
-</TabItem>
-<TabItem value="Vue">
-
-```html
-<div toTop bgGray100 square-200>
-  <div square-60 bgOrange400 rounded-8></div>
-  <div square-80 bgBlue400 rounded-8></div>
-</div>
-```
-
-</TabItem>
-</Tabs>
 
 ## Compose
 
