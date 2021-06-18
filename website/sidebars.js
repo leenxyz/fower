@@ -113,6 +113,7 @@ module.exports = {
     Effect: ['shadow', 'opacity'],
 
     Interactivity: ['outline', 'cursor'],
+    Svg: ['fill', 'stroke', 'stroke-width'],
 
     // Api: ['styled', 'css', 'createStyle'],
     // Examples: ['example-avatar', 'example-media-object'],

@@ -4,12 +4,12 @@ export default () => {
   return (
     <Box toCenter h-100vh space3 flexWrap>
       <Box
-        square10
         as="svg"
         fillNone
         // fillCurrent
         // stroke="currentColor"
         gray800
+        square10
         stroke-1
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
