@@ -1,2 +1,2 @@
 export { Parser } from './parser'
-export { atomCache } from './cache'
+export { isUnitProp } from './is-unit-prop'

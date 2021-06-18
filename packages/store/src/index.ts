@@ -1,4 +1,5 @@
 import deepmerge from 'deepmerge'
+import { Atom } from '@fower/atom'
 import { FowerPlugin, Configuration, Theme, CSSObject } from '@fower/types'
 import { PartialThemeConfig, PartialConfig } from './types'
 
@@ -19,6 +20,21 @@ class Store {
 
   // composed atomic props
   compositions = new Map<string, any>()
+
+  serverCache: any = (globalThis as any).fower?.atomCache || []
+
+  atomCache = new Map<string, Atom>(
+    this.serverCache.map((cache: any) => {
+      const [key, value] = cache
+      const temp: any = new Atom({ propKey: 'css', propValue: {} })
+
+      for (const c in value) {
+        temp[c] = value[c]
+      }
+
+      return [key, temp]
+    }),
+  )
 
   get theme() {
     return this.config.theme

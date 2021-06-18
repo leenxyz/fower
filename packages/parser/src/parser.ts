@@ -10,7 +10,6 @@ import {
   isPercentNumber,
   isNumber,
 } from '@fower/utils'
-import { atomCache } from './cache'
 import { isUnitProp } from './is-unit-prop'
 
 type Dict = Record<string, any>
@@ -194,7 +193,7 @@ export class Parser {
         })
         darkAtom.createClassName(this.config.prefix)
 
-        const cachedAtom = atomCache.get(darkAtom.id)
+        const cachedAtom = store.atomCache.get(darkAtom.id)
 
         if (cachedAtom) {
           darkAtoms.push(cachedAtom)
@@ -275,8 +274,8 @@ export class Parser {
 
   addAtom(atom: Atom) {
     // if not cached, let's cache it
-    if (!atomCache.get(atom.id)) {
-      atomCache.set(atom.id, atom)
+    if (!store.atomCache.get(atom.id)) {
+      store.atomCache.set(atom.id, atom)
     }
 
     const { modes = {} } = this.config.theme.colors
@@ -341,7 +340,7 @@ export class Parser {
       }
     }
 
-    const cachedAtom = atomCache.get(atom.id)
+    const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
       this.addAtom(cachedAtom)
@@ -417,7 +416,7 @@ export class Parser {
         atom.handled = true
       }
 
-      const cachedAtom = atomCache.get(atom.id)
+      const cachedAtom = store.atomCache.get(atom.id)
 
       if (cachedAtom) {
         this.addAtom(cachedAtom)
