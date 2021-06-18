@@ -16,12 +16,12 @@
   "author": "Thomas Trainset",
   "license": "ISC",
   "dependencies": {
-    "@fower/parser": "^1.21.0",
-    "@fower/react": "^1.21.0",
-    "@fower/sheet": "^1.21.0",
+    "@fower/parser": "^1.25.0",
+    "@fower/react": "^1.25.0",
+    "@fower/sheet": "^1.25.0",
     "express": "4.17.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-router-config": "^5.1.1"
   },

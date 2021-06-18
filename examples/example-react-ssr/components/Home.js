@@ -9,7 +9,7 @@ export const Home = () => {
       <Box onClick={() => setTheme(!theme)} toCenter py-20>
         switch theme
       </Box>
-      <Box row borderB-1>
+      <Box row borderB-1 flex-4>
         <Box flex-4>name</Box>
         <Box flex-8>address</Box>
       </Box>
