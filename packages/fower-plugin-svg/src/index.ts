@@ -1,7 +1,19 @@
+import { store } from '@fower/store'
+import { downFirst } from '@fower/utils'
 import { FowerPlugin } from '@fower/types'
 
+function isFillColor(key = '') {
+  if (!key.startsWith('fill')) return false
+
+  const colors: any = store.theme.colors
+  const colorKey = downFirst(key.replace(/^fill/, ''))
+  if (colors[colorKey]) return true
+
+  return false
+}
+
 function isMatch(key: string) {
-  return /^stroke$|^(stroke|fill)?(Current|None)$/i.test(key)
+  return /^stroke$|^(stroke|fill)?(Current|None)$/i.test(key) || isFillColor(key)
 }
 
 function toStyle(key: string, value: any): any {
@@ -20,6 +32,11 @@ function toStyle(key: string, value: any): any {
       return { strokeWidth: value }
     }
     return { stroke: value }
+  }
+
+  if (isFillColor(key)) {
+    const colorKey = downFirst(key.replace(/^fill/, ''))
+    return { fill: colorKey }
   }
 }
 

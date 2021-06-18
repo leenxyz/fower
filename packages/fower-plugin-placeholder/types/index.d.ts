@@ -6,7 +6,6 @@ export default _default
 declare module '@fower/types' {
   export interface AtomicProps {
     placeholderBlack?: boolean
-
     placeholderWhite?: boolean
 
     placeholderBrand?: boolean
