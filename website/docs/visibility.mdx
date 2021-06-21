@@ -1,0 +1,27 @@
+---
+id: visibility
+title: Visibility
+---
+
+Atomic Props for controlling the visibility of an element.
+
+| Atomic Props | CSS Properties       |
+| ------------ | -------------------- |
+| visible      | visibility: visible; |
+| invisible    | visibility: hidden;  |
+
+## Usage
+
+```jsx live
+<Box toEvenly>
+  <Box visible toCenter bgGreen200 py4 w-100>
+    A
+  </Box>
+  <Box invisible toCenter bgGreen200 py4 w-100>
+    B
+  </Box>
+  <Box visible toCenter bgGreen200 py4 w-100>
+    C
+  </Box>
+</Box>
+```
