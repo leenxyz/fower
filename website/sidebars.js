@@ -70,9 +70,12 @@ module.exports = {
     ],
     Typography: [
       'font-size',
+      'font-style',
       'font-weight',
       'text-color',
       'line-height',
+      'list-type',
+      'placeholder-color',
       'text-alignment',
       'text-decoration',
       'text-transform',
@@ -81,11 +84,12 @@ module.exports = {
 
     Background: [
       'background-color',
+      'gradient',
       // 'background-repeat',
       // 'background-image',
     ],
 
-    Border: ['rounded', 'border-width', 'border-color', 'border-style'],
+    Border: ['rounded', 'border-width', 'border-color', 'border-style', 'ring'],
 
     Flexbox: [
       'flex-direction',
@@ -102,6 +106,7 @@ module.exports = {
     'Box Alignment': ['justify-content', 'align-items', 'align-content', 'align-self'],
 
     Layout: [
+      'box-sizing',
       'display',
       'position',
       'top-right-bottom-left',
@@ -112,7 +117,14 @@ module.exports = {
 
     Effect: ['shadow', 'opacity'],
 
-    Interactivity: ['outline', 'cursor'],
+    Transition: [
+      'transition-property',
+      'transition-duration',
+      'transition-timing-function',
+      'transition-delay',
+    ],
+
+    Interactivity: ['outline', 'cursor', 'appearance', 'user-select'],
     Svg: ['fill', 'stroke', 'stroke-width'],
 
     // Api: ['styled', 'css', 'createStyle'],

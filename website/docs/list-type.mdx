@@ -1,0 +1,36 @@
+---
+id: list-type
+title: List Type
+---
+
+Use `h-{value}` props to controll element height.
+
+| Atomic Props | CSS Properties            |
+| ------------ | ------------------------- |
+| listNone     | list-style-type: none;    |
+| listDisc     | list-style-type: disc;    |
+| listDecimal  | list-style-type: decimal; |
+
+## Usage
+
+```jsx live
+<Box>
+  <Box as="ul" listNone>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listDisc>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listDecimal>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+</Box>
+```

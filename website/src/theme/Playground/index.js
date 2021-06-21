@@ -39,7 +39,7 @@ function EditorWithHeader() {
   return (
     <Box relative>
       <LiveEditor className={styles.playgroundEditor} />
-      <Text textSM fontBold green400 absolute top-2 right-10>
+      <Text textXS fontBold green400 absolute bottom-2 right-8>
         LIVE DEMO
       </Text>
     </Box>

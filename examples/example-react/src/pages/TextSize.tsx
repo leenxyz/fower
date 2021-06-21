@@ -4,7 +4,7 @@ import { styled } from '@fower/styled';
 
 setTheme({
   colors: {
-    brand100: '#fa0',
+    // brand100: '#fa0',
     modes: {
       dark: {
         brand100: '#dd0',
@@ -13,10 +13,18 @@ setTheme({
   },
 });
 
+composeAtom('button', {
+  bgBrand: true,
+  rounded: true,
+  outlineNone: true,
+  white: true,
+  px8: true,
+  py3: true,
+  cursorPointer: true,
+});
+
 composeAtom('formInput', {
-  'border-2': true,
-  borderGray200: true,
-  'borderOrange400--focus': true,
+  border: true,
   rounded: true,
   outlineNone: true,
   px4: true,

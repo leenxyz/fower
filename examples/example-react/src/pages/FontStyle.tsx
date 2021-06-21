@@ -6,7 +6,7 @@ export default () => {
       <Box text-30 italic>
         Lorem ipsum dolor sit amet
       </Box>
-      <Box text={40} notItalic--i italic>
+      <Box text={40} italic notItalic>
         Lorem ipsum dolor sit amet
       </Box>
     </Box>

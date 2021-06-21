@@ -12,6 +12,10 @@ export default () => {
       <Box text-30 selectText>
         Lorem ipsum dolor sit amet
       </Box>
+
+      <Box text-30 selectAuto>
+        Lorem ipsum dolor sit amet
+      </Box>
     </Box>
   );
 };

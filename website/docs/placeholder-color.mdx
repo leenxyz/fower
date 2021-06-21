@@ -1,0 +1,21 @@
+---
+id: placeholder-color
+title: Placeholder Color
+---
+
+Atomic props for controlling the color of placeholder text.
+
+## Usage
+
+Use `bg{colorName}` props to control the color of placeholder text.
+
+```jsx live
+<Box column spaceY2 bgGray100 p4>
+  <Box as="input" placeholder="your email" placeholderGray500 p4 />
+  <Box as="input" placeholder="your email" placeholderGray500--L20 p4 />
+  <Box as="input" placeholder="your email" placeholderGray500--T60 p4 />
+  <Box as="input" placeholder="your email" placeholderGreen400 p4 />
+  <Box as="input" placeholder="your email" ring-2 placeholderTeal200 p4 />
+  <Box as="input" placeholder="your email" placeholderPink400--T60 p4 />
+</Box>
+```

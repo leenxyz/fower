@@ -2,10 +2,16 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box>
-      <Box text-30 appearanceNone>
-        Lorem ipsum dolor sit amet
+    <Box spaceX3>
+      <Box as="select" appearanceNone>
+        <option>red</option>
+        <option>green</option>
       </Box>
+
+      <select>
+        <option>red</option>
+        <option>green</option>
+      </select>
     </Box>
   );
 };

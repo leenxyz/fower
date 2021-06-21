@@ -1,0 +1,24 @@
+---
+id: box-sizing
+title: Box Sizing
+---
+
+Atomic props for controlling how an element is positioned.
+
+| Atomic Props | CSS Properties           |
+| ------------ | ------------------------ |
+| boxBorder    | box-sizing: border-box;  |
+| boxContent   | box-sizing: content-box; |
+
+## Usage
+
+```jsx live
+<Box toLeft spaceX3>
+  <Box boxBorder square-120 border-6 borderRed400 bgRed200 toCenter>
+    border box
+  </Box>
+  <Box boxContent square-120 border-6 borderRed400 bgRed200 toCenter>
+    content box
+  </Box>
+</Box>
+```

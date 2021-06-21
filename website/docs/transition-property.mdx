@@ -1,0 +1,46 @@
+---
+id: transition-property
+title: Transition Property
+---
+
+Atomic props for controlling which CSS properties transition.
+
+| Atomic Props                                                 | CSS Properties                                                                                                                     |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| transitionNone                                               | transition-property: none;                                                                                                         |
+| transitionAll                                                | transition-property: all;                                                                                                          |
+| transitionCommon                                             | transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; |
+| transitionColors                                             | transition-property: background-color, border-color, color, fill, stroke;                                                          |
+| transitionOpacity                                            | transition-property: opacity;                                                                                                      |
+| transitionShadow                                             | transition-property: box-shadow;                                                                                                   |
+| <span style={{paddingRight: 10}}>transitionTransform </span> | transition-property: transform;                                                                                                    |
+
+## Usage
+
+```jsx live
+<Button transitionCommon easeInOut duration-500 scale-110--hover translateY-10 bgBlue500--hover>
+  Button
+</Button>
+```
+
+## With Active
+
+```jsx live
+<Button transitionCommon easeInOut duration-200 scale-110--active translateY-10 bgBlue500--active>
+  Button
+</Button>
+```
+
+## Input example
+
+```jsx live
+<Input
+  transitionAll
+  borderBlue500--focus
+  ringBlue400-2--T60--focus
+  easeInOut
+  duration-200
+  w-200
+  w-400--focus
+/>
+```

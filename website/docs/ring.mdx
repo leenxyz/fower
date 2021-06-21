@@ -1,0 +1,37 @@
+---
+id: ring
+title: Ring
+---
+
+Atomic props for setting the color of outline.
+
+| Atomic Props        | CSS Properties                        |
+| ------------------- | ------------------------------------- |
+| ring{Color}-{width} | box-shadow: 0 0 0 ${width}px ${Color} |
+
+## Usage
+
+```jsx live
+<Box toEvenly p4>
+  <Input ringRed200-3 borderRed400 />
+  <Button ringBrand100-3>Button</Button>
+</Box>
+```
+
+## With Pseudo
+
+```jsx live
+<Box toEvenly p4>
+  <Input ringRed200-3--focus borderRed400 />
+  <Button ringBrand100-3--focus>Button</Button>
+</Box>
+```
+
+## With Color Helper
+
+```jsx live
+<Box toEvenly p4>
+  <Input ringRed400-3--T60 borderRed400 />
+  <Button ringBrand400-3--T60>Button</Button>
+</Box>
+```

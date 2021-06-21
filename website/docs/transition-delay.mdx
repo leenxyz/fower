@@ -1,0 +1,26 @@
+---
+id: transition-delay
+title: Transition Delay
+---
+
+Atomic props for setting the color of outline.
+
+| Atomic Props  | CSS Properties             |
+| ------------- | -------------------------- |
+| delay-{value} | transition-delay: {value}; |
+
+## Usage
+
+```jsx live
+<Box toEvenly p4>
+  <Button transitionCommon delay-150 duration-300 scale-120--hover translateY-10 bgBlue500--hover>
+    Delay 150
+  </Button>
+  <Button transitionCommon delay-300 duration-300 scale-120--hover translateY-10 bgBlue500--hover>
+    Delay 300
+  </Button>
+  <Button transitionCommon delay-600 duration-300 scale-120--hover translateY-10 bgBlue500--hover>
+    Delay 600
+  </Button>
+</Box>
+```

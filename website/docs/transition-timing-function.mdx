@@ -1,0 +1,32 @@
+---
+id: transition-timing-function
+title: Transition Timing Function
+---
+
+Atomic props for setting the color of outline.
+
+| Atomic Props | CSS Properties                                            |
+| ------------ | --------------------------------------------------------- |
+| easeLinear   | transition-timing-function: linear;                       |
+| easeIn       | transition-timing-function: cubic-bezier(0.4, 0, 1, 1);   |
+| easeOut      | transition-timing-function: cubic-bezier(0, 0, 0.2, 1);   |
+| easeInOut    | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); |
+
+## Usage
+
+```jsx live
+<Box toEvenly p4>
+  <Button easeLinear transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover>
+    easeLinear
+  </Button>
+  <Button easeIn transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover>
+    easeIn
+  </Button>
+  <Button easeOut transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover>
+    easeOut
+  </Button>
+  <Button easeInOut transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover>
+    easeInOut
+  </Button>
+</Box>
+```

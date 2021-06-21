@@ -1,0 +1,26 @@
+---
+id: transition-duration
+title: Transition Duration
+---
+
+Atomic props for setting the color of outline.
+
+| Atomic Props     | CSS Properties                  |
+| ---------------- | ------------------------------- |
+| duration-{value} | transition-duration: {value}ms; |
+
+## Usage
+
+```jsx live
+<Box toEvenly p4>
+  <Button transitionCommon duration-150 scale-120--hover translateY-10 bgBlue500--hover>
+    Duration 150
+  </Button>
+  <Button transitionCommon duration-300 scale-120--hover translateY-10 bgBlue500--hover>
+    Duration 300
+  </Button>
+  <Button transitionCommon duration-600 scale-120--hover translateY-10 bgBlue500--hover>
+    Duration 600
+  </Button>
+</Box>
+```
