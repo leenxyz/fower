@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { Atom } from '@fower/atom'
+import { Atom, Meta } from '@fower/atom'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
@@ -8,6 +8,8 @@ export as namespace FowerTypes
 declare namespace FowerTypes {
   interface ParserInterface {
     atoms: Atom[]
+
+    propList: PropItem[]
 
     props: any
 
@@ -186,6 +188,14 @@ declare namespace FowerTypes {
     transformUnit?: (data: string | number) => string
   }
 
+  interface PropItem {
+    propKey: string
+    propValue: any
+    key: string
+    value: any
+    meta: Meta
+  }
+
   interface Props {
     style?: any
     className?: string
@@ -200,6 +210,13 @@ declare namespace FowerTypes {
 
   interface FowerPlugin {
     isMatch(key: string): boolean
+
+    /**
+     * handle props before parse
+     * @param propItem
+     * @param parser
+     */
+    beforeParseProps?(propItem: PropItem, parser: ParserInterface): any
 
     /**
      * before handle atom

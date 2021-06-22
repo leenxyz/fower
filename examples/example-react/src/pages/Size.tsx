@@ -1,18 +1,8 @@
 import { Box } from '@fower/react';
-import { fower } from '@fower/core';
 
 export default () => {
   return (
-    <div>
-      <Box
-        text3XL
-        fontBold
-        css={{
-          border: 'none',
-        }}
-      >
-        Size
-      </Box>
+    <Box p4>
       <Box toEvenly textXS>
         <Box w9 h5 bgBlue200>
           w9 h5
@@ -20,11 +10,6 @@ export default () => {
         <Box w-100 h-50 bgBlue200>
           w-100 h-50
         </Box>
-        <Box
-          as="img"
-          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607882621244&di=bbc7c4f717b902e491cddf2d21cacaf5&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg"
-          square-100
-        ></Box>
         <Box square-50 bgBlue200>
           square-50
         </Box>
@@ -59,6 +44,6 @@ export default () => {
           minH-50
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 };

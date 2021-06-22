@@ -25,6 +25,7 @@
     "@fower/css-object-processor": "^1.25.0",
     "@fower/sheet": "^1.25.0",
     "@fower/store": "^1.25.0",
+    "@fower/types": "^1.25.0",
     "@fower/utils": "^1.25.0"
   }
 }
