@@ -26,7 +26,7 @@ export const presetWebRem: Preset = {
     'selection',
   ],
   important: false,
-  autoDarkMode: true,
+  autoDarkMode: false,
   plugins,
   theme,
   transformUnit: (value: string | number) => {
