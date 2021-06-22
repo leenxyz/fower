@@ -1,7 +1,8 @@
 {
-  "name": "server",
+  "name": "@fower/example-react-ssr",
   "version": "1.26.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:**",
