@@ -89,7 +89,6 @@ export default (): FowerPlugin => {
           meta,
           style: { transform: sortedValues.join(' ') },
         })
-        atom.createClassName(parser.config.prefix)
         parser.addAtom(atom)
       }
     },

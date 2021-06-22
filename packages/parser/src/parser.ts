@@ -119,7 +119,6 @@ export class Parser {
         const atom = new Atom({ propKey, propValue })
         atom.handled = true
         atom.style = {}
-        atom.createClassName(store.config.prefix)
         this.addAtom(atom)
         continue
       }
@@ -191,7 +190,6 @@ export class Parser {
           propKey: cloned.propKey + '--dark',
           meta: { ...cloned.meta, mode: 'dark' },
         })
-        darkAtom.createClassName(this.config.prefix)
 
         const cachedAtom = store.atomCache.get(darkAtom.id)
 
@@ -366,8 +364,6 @@ export class Parser {
         atom = plugin.handleAtom?.(atom, this as any)
       }
 
-      atom.createClassName(store.config.prefix)
-
       atom.handled = true
 
       break // break from this plugin
@@ -504,6 +500,8 @@ export class Parser {
     // console.log('this.atoms-----:', this.atoms)
 
     for (const atom of this.atoms) {
+      atom.createClassName(store.config.prefix) // only create atom className when toRules
+
       let rule: string = ''
       const { className, isValid, style = {} } = atom
 

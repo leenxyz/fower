@@ -74,7 +74,6 @@ export default (): FowerPlugin => {
             handled: true,
             style: { transitionDuration: `${200}ms` },
           })
-          atom.createClassName(parser.config.prefix)
           parser.addAtom(atom)
         }
       }
@@ -94,7 +93,6 @@ export default (): FowerPlugin => {
             handled: true,
             style: { transitionTimingFunction: easeMaps[timingId.toLowerCase()] },
           })
-          atom.createClassName(parser.config.prefix)
           parser.addAtom(atom)
         }
       }

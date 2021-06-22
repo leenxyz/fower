@@ -190,7 +190,6 @@ export default (): FowerPlugin => {
           handled: true,
           style: { flexDirection: direction },
         })
-        atom.createClassName(parser.config.prefix)
         parser.addAtom(atom)
       }
 
@@ -210,7 +209,6 @@ export default (): FowerPlugin => {
           handled: true,
           style: { display: 'flex' },
         })
-        atom.createClassName(parser.config.prefix)
         parser.addAtom(atom)
       }
     },
