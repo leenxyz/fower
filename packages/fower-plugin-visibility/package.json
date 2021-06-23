@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-visibility",
-  "version": "1.26.0",
+  "version": "1.27.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,11 +22,11 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-visibility.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.26.0",
-    "@fower/core": "^1.26.0",
-    "@fower/parser": "^1.26.0",
-    "@fower/types": "^1.26.0",
-    "@fower/utils": "^1.26.0",
+    "@fower/atom": "^1.27.0",
+    "@fower/core": "^1.27.0",
+    "@fower/parser": "^1.27.0",
+    "@fower/types": "^1.27.0",
+    "@fower/utils": "^1.27.0",
     "csstype": "^3.0.8"
   }
 }

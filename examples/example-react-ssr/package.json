@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-react-ssr",
-  "version": "1.26.0",
+  "version": "1.27.0",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -17,9 +17,9 @@
   "author": "Thomas Trainset",
   "license": "ISC",
   "dependencies": {
-    "@fower/parser": "^1.26.0",
-    "@fower/react": "^1.26.0",
-    "@fower/sheet": "^1.26.0",
+    "@fower/parser": "^1.27.0",
+    "@fower/react": "^1.27.0",
+    "@fower/sheet": "^1.27.0",
     "express": "4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
