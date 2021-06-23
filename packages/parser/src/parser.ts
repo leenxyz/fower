@@ -418,6 +418,8 @@ export class Parser {
       store.atomCache.set(atom.id, atom)
     }
 
+    atom.createClassName(store.config.prefix) // only create atom className when toRules
+
     const { modes = {} } = this.config.theme.colors
     const entries = Object.entries<any>(modes)
 
@@ -640,8 +642,6 @@ export class Parser {
     })
 
     for (const atom of this.atoms) {
-      atom.createClassName(store.config.prefix) // only create atom className when toRules
-
       let rule: string = ''
       const { className, isValid, style = {} } = atom
 
