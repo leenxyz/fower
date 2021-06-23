@@ -4,7 +4,17 @@ import { styled } from '@fower/styled'
 import { Text, View, Box, Image } from '@fower/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
-const Button = styled('button', 'bgBrand', 'rounded', 'outlineNone', 'white', 'px8', 'py3', 'cursorPointer', 'fontBold')
+const Button = styled(
+  'button',
+  'bgBrand',
+  'rounded',
+  'outlineNone',
+  'white',
+  'px8',
+  'py3',
+  'cursorPointer',
+  'fontBold',
+)
 const Input = styled('input', 'border', 'rounded', 'px4', 'py2')
 
 import { addAtom } from '@fower/core'

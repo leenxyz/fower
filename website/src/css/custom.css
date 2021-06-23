@@ -7,7 +7,6 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* --ifm-color-primary: #ff0060; */
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
@@ -15,7 +14,6 @@
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
-
   --ifm-code-font-size: 95%;
 
   --ifm-table-stripe-background: transparent;
@@ -30,8 +28,6 @@
   --ifm-menu-color-background-hover: transparent;
 
   --ifm-menu-color-background-active: rgba(37, 194, 169, 0.1);
-
-
 }
 
 body {
@@ -39,10 +35,14 @@ body {
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
+  background-color: rgba(0, 0, 0, 0.1);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -232,7 +232,7 @@ table td {
   padding: 24px;
 }
 
-.roundedTLG {
+.roundedTopLG {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }

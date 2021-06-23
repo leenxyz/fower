@@ -14,7 +14,7 @@ const code = `<div toCenterY p3 w-240 bgWhite roundedXL shadowMD>
 export function HomeDemo() {
   return (
     <div className="home-demo">
-      <Box className="bgOrange100 p6 roundedTLG toCenter flex">
+      <Box className="bgOrange100 p6 roundedTopLG toCenter flex">
         <Box className="toCenterY p3 w-240 bgWhite roundedXL shadowMD">
           <img className="circle-48" src="/img/logo.png" />
           <Box className="ml-10">

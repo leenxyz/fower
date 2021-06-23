@@ -5,7 +5,6 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "start:cn": "docusaurus start --locale zh-cn",
     "build": "echo",
     "build:prod": "docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -14,6 +13,27 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-beta.1",
+    "@docusaurus/preset-classic": "2.0.0-beta.1",
+    "@docusaurus/plugin-content-docs": "2.0.0-beta.1",
+    "@docusaurus/plugin-google-gtag": "2.0.0-beta.1",
+    "@docusaurus/plugin-sitemap": "2.0.0-beta.1",
+    "@docusaurus/theme-live-codeblock": "2.0.0-beta.1",
+    "@docusaurus/theme-search-algolia": "2.0.0-beta.1",
+    "@fower/react": "^1.26.0",
+    "@mdx-js/react": "^1.6.22",
+    "@svgr/webpack": "^5.5.0",
+    "clsx": "^1.1.1",
+    "npm-to-yarn": "^1.0.1",
+    "file-loader": "^6.2.0",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "url-loader": "^4.1.1",
+    "simplebar-react": "^2.3.4"
   },
   "browserslist": {
     "production": [
@@ -27,25 +47,12 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.73",
-    "@docusaurus/module-type-aliases": "2.0.0-alpha.73",
-    "@docusaurus/plugin-content-docs": "2.0.0-alpha.73",
-    "@docusaurus/plugin-google-gtag": "2.0.0-alpha.73",
-    "@docusaurus/plugin-sitemap": "2.0.0-alpha.73",
-    "@docusaurus/preset-classic": "2.0.0-alpha.73",
-    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.73",
-    "@docusaurus/theme-search-algolia": "2.0.0-alpha.73",
-    "@fower/react": "^1.26.0",
-    "@mdx-js/react": "^1.6.21",
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.1",
     "@tsconfig/docusaurus": "^1.0.2",
-    "@types/react-helmet": "^6.1.0",
-    "babel-plugin-jsx-pragmatic": "^1.0.2",
-    "clsx": "^1.1.1",
-    "npm-to-yarn": "^1.0.1",
-    "react": "17.x",
-    "react-dom": "17.x",
-    "react-helmet": "^6.1.0",
-    "simplebar-react": "^2.3.0"
+    "@types/react": "^17.0.11",
+    "@types/react-helmet": "^6.1.1",
+    "@types/react-router-dom": "^5.1.7",
+    "typescript": "^4.3.4"
   }
 }

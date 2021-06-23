@@ -1,28 +1,17 @@
 import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
-import Playground from '@theme/Playground'
-import DLink from '@docusaurus/Link'
+import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 import Translate from '@docusaurus/Translate'
-import { CodeHighLight } from '../components/HighLight'
 import { Box } from '@fower/react'
 import theme from 'prism-react-renderer/themes/duotoneDark'
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { HomeDemo } from '../components/HomeDemo'
-import { styled } from '@fower/styled'
-
-const Link = styled(DLink)
-
-const code1 = `
-  <Box toCenter bgGray100 p4>
-    <Box square-60 bgOrange400 rounded-8></Box>
-    <Box square-80 bgBlue400 rounded-8></Box>
-  </Box>
-`
+import { css } from '@fower/core'
 
 const features = [
   {
@@ -180,31 +169,14 @@ function Home() {
 
             <Box className={styles.wrapLink} spaceX2>
               <Link
-                className={clsx('button button--lg', styles.getStarted)}
-                to={useBaseUrl('docs/use-with-react')}
-                roundedFull
-                bg="#61dafb"
-                bg--hover="#61dafb--D4"
-                color="#61dafb"
-                bgBlack
-                bgTrueGray800
-                py3
-                borderNone
+                className={clsx(
+                  'button button--lg',
+                  styles.getStarted,
+                  css('roundedFull', 'bgBlack', 'bgTrueGray800', 'py3', 'borderNone'),
+                )}
+                to={useBaseUrl('docs/about')}
               >
-                Start with React
-              </Link>
-              <Link
-                className={clsx('button  button--lg', styles.getStarted)}
-                to={useBaseUrl('docs/use-with-vue')}
-                bg="#4fc08d"
-                bg--hover="#4fc08d--D4"
-                color="#4fc08d"
-                roundedFull
-                bgTrueGray800
-                py3
-                borderNone
-              >
-                Start with Vue
+                Get Started
               </Link>
               <iframe
                 className={styles.indexCtasGitHubButton}

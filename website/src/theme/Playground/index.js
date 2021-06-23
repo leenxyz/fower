@@ -11,22 +11,24 @@ import clsx from 'clsx'
 import Translate from '@docusaurus/Translate'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import usePrismTheme from '@theme/hooks/usePrismTheme'
-import { Box, Text } from '@fower/react'
 import styles from './styles.module.css'
+import { Box, Text } from '@fower/react'
 
-function Header({ translateId, description, text }) {
-  return (
-    <div className={clsx(styles.playgroundHeader)}>
-      <Translate id={translateId} description={description}>
-        {text}
-      </Translate>
-    </div>
-  )
+function Header({ children }) {
+  return <div className={clsx(styles.playgroundHeader)}>{children}</div>
 }
 
 function ResultWithHeader() {
   return (
     <>
+      <Header>
+        <Translate
+          id="theme.Playground.result"
+          description="The result label of the live codeblocks"
+        >
+          Result
+        </Translate>
+      </Header>
       <div className={styles.playgroundPreview}>
         <LivePreview />
         <LiveError />
@@ -56,13 +58,12 @@ export default function Playground({ children, transformCode, ...props }) {
     },
   } = useDocusaurusContext()
   const prismTheme = usePrismTheme()
-  const code = isClient ? children.replace(/\n$/, '') : ''
 
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
         key={isClient}
-        code={code}
+        code={isClient ? children.replace(/\n$/, '') : ''}
         transformCode={transformCode || ((code) => `${code};`)}
         theme={prismTheme}
         {...props}
@@ -70,7 +71,7 @@ export default function Playground({ children, transformCode, ...props }) {
         {playgroundPosition === 'top' ? (
           <>
             <ResultWithHeader />
-            <EditorWithHeader code={code} />
+            <EditorWithHeader />
           </>
         ) : (
           <>

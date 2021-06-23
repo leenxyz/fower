@@ -53,6 +53,11 @@
   margin-bottom: 40px;
 }
 
-/* .getStarted:hover {
-  background-color: #333 !important;
-} */
+.getStarted {
+  /* background-color: #61dafb; */
+  /* color: #61dafb; */
+}
+
+.getStarted:hover {
+  /* bg--hover="#61dafb--D4" */
+}

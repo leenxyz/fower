@@ -1,7 +1,7 @@
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-
-const path = require('path')
-
 module.exports = {
   title: 'Fower',
   tagline: 'An Atomic CSS in JS library for rapid UI development',
@@ -38,6 +38,7 @@ module.exports = {
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
+
     // algolia: {
     //   // apiKey: '68b76fc3428450c3eca0f5632239c6fc',
     //   apiKey: '5c75ee25a3984e48c52bd2a0e36a7988',
@@ -55,40 +56,6 @@ module.exports = {
     //   //... other Algolia params
     // },
 
-    colorMode: {
-      // "light" | "dark"
-      defaultMode: 'light',
-
-      // Hides the switch in the navbar
-      // Useful if you want to support a single color mode
-      disableSwitch: false,
-
-      // Should we use the prefers-color-scheme media-query,
-      // using user system preferences, instead of the hardcoded defaultMode
-      respectPrefersColorScheme: false,
-
-      // Dark/light switch icon options
-      switchConfig: {
-        // Icon for the switch while in dark mode
-        darkIcon: '🌙',
-
-        // CSS to apply to dark icon,
-        // React inline style object
-        // see https://reactjs.org/docs/dom-elements.html#style
-        darkIconStyle: {
-          marginLeft: '2px',
-        },
-
-        // Unicode icons such as '\u2600' will work
-        // Unicode with 5 chars require brackets: '\u{1F602}'
-        lightIcon: '\u{1F602}',
-
-        lightIconStyle: {
-          marginLeft: '1px',
-        },
-      },
-    },
-
     gtag: {
       trackingID: 'G-FSWFZVP0LN',
       // Optional fields.
@@ -103,60 +70,81 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/about',
-          // activeBasePath: 'docs',
-          activeBasePath: 'docs/introduction',
-          label: 'Docs',
+          type: 'doc',
+          docId: 'about',
           position: 'left',
+          label: 'Guide',
         },
         {
-          to: 'docs/use-with-react',
-          activeBasePath: 'docs/use-with-react',
-          label: 'React',
+          type: 'doc',
+          docId: 'fower-layout-introduction',
           position: 'left',
+          label: 'Atoms',
         },
         {
-          to: 'docs/use-with-vue',
-          activeBasePath: 'docs/use-with-vue',
-          label: 'Vue',
+          type: 'doc',
+          docId: 'packages/core',
           position: 'left',
+          label: 'API',
         },
-        {
-          to: 'docs/use-with-svelte',
-          activeBasePath: 'docs/use-with-svelte',
-          label: 'Svelte',
-          position: 'left',
-        },
-        // {
-        //   to: 'docs/use-with-rn',
-        //   activeBasePath: 'docs/use-with-rn',
-        //   label: 'React native',
-        //   position: 'left',
-        // },
-        // {
-        //   to: 'docs/use-with-taro',
-        //   activeBasePath: 'docs/use-with-taro',
-        //   label: 'Taro',
-        //   position: 'left',
-        // },
-
-        {
-          to: 'blog',
-          activeBasePath: 'blog',
-          label: 'Blog',
-          position: 'right',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
-        },
+        { to: '/blog', label: 'Blog', position: 'right' },
         {
           href: 'https://github.com/forsigner/fower',
-          position: 'right',
+          label: 'GitHub',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
+          position: 'right',
         },
       ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/docs/about',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/facebook/docusaurus',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
   },
   presets: [
@@ -164,9 +152,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: 'docs',
-          include: ['**/*.md', '**/*.mdx'], // Extensions to include.
-
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/forsigner/fower/edit/master/website/',
@@ -183,5 +168,4 @@ module.exports = {
       },
     ],
   ],
-  plugins: [],
 }
