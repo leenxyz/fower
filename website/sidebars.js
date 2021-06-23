@@ -45,14 +45,8 @@ module.exports = {
         'add-atom',
         'compose-atom',
         // 'plugin',
-        'ssr',
+        // 'ssr',
       ],
-    },
-
-    {
-      type: 'category',
-      label: 'Tooling',
-      items: ['typescript', 'intellisense'],
     },
 
     {
@@ -69,6 +63,15 @@ module.exports = {
         'design-system-font-weights',
         // 'design-system-letter-spacings',
         'design-system-line-heights',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Tooling',
+      items: [
+        'typescript',
+        //  'intellisense'
       ],
     },
 

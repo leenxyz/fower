@@ -6,6 +6,8 @@ import { PartialThemeConfig, PartialConfig } from './types'
 type Strategy = 'replace' | 'merge' | 'deepmerge'
 
 class Store {
+  index = 0
+
   config = {
     unit: 'px',
     inline: false,
