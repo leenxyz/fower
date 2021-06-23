@@ -19,13 +19,17 @@ class StyleSheet {
       this.$style = this.createStyleElement()
     }
 
-    for (const rule of rules) {
-      try {
-        this.$style.sheet!.insertRule(rule)
-      } catch (error) {
-        console.warn(error)
-      }
-    }
+    const str = rules.join('\n')
+    this.$style.innerHTML += str
+    return
+
+    // for (const rule of rules) {
+    //   try {
+    //     this.$style.sheet!.insertRule(rule)
+    //   } catch (error) {
+    //     console.warn(error)
+    //   }
+    // }
   }
 
   insertStyles(rules: string[] = []) {

@@ -1,5 +1,5 @@
 import { Atom } from '@fower/atom'
-import { store } from '@fower/store'
+import { atomCache } from '@fower/cache'
 import { FowerPlugin } from '@fower/types'
 
 const timingReg = /^ease(linear|In|Out|InOut)/i
@@ -63,7 +63,7 @@ export default (): FowerPlugin => {
       const hasDuration = parser.atoms.find((i) => i.key === 'duration')
       if (!hasDuration) {
         const durationId = 'duration-200'
-        const durationAtom = store.atomCache.get(durationId)
+        const durationAtom = atomCache.get(durationId)
 
         if (durationAtom) {
           parser.addAtom(durationAtom)
@@ -82,7 +82,7 @@ export default (): FowerPlugin => {
       const hasTiming = parser.atoms.find((i) => timingReg.test(i.key))
       if (!hasTiming) {
         const timingId = 'easeInOut'
-        const timingAtom = store.atomCache.get(timingId)
+        const timingAtom = atomCache.get(timingId)
 
         if (timingAtom) {
           parser.addAtom(timingAtom)

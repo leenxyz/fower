@@ -1,10 +1,9 @@
 import { setConfig } from '@fower/core'
 import { store } from '@fower/store'
+import { atomCache } from '@fower/cache'
 import { Atom } from '@fower/atom'
 import { presetWeb } from '@fower/preset-web'
 import { Parser } from './parser'
-
-const atomCache = store.atomCache
 
 beforeAll(() => {
   setConfig(presetWeb)

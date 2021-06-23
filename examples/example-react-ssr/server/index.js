@@ -2,7 +2,7 @@ import express from 'express'
 import React from 'react'
 import { styleSheet } from '@fower/sheet'
 import { Box } from '@fower/react'
-import { store } from '@fower/store'
+import { atomCache } from '@fower/cache'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
@@ -31,7 +31,7 @@ app.get('*', function (req, res) {
         <div id="root">${content}</div>
         <script>
           window.fower = {
-            atomCache: ${JSON.stringify([...store.atomCache])}
+            atomCache: ${JSON.stringify([...atomCache])}
           }
         </script>
         <script src="/index.js"></script>

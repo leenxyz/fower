@@ -1,5 +1,6 @@
 import { Atom, Options } from '@fower/atom'
 import { store } from '@fower/store'
+import { atomCache } from '@fower/cache'
 import { formatColor } from '@fower/color-helper'
 import { styleSheet } from '@fower/sheet'
 import { Props, PropItem } from '@fower/types'
@@ -59,6 +60,8 @@ export class Parser {
   get plugins(): any[] {
     return store.config.plugins
   }
+
+  getClassNameById = (id: string) => store.config.prefix + id
 
   /**
    * traverse Props to init atoms
@@ -192,12 +195,11 @@ export class Parser {
 
         const darkAtom = new Atom({
           ...cloned,
-          className: '',
           propKey: cloned.propKey + '--dark',
           meta: { ...cloned.meta, mode: 'dark' },
         })
 
-        const cachedAtom = store.atomCache.get(darkAtom.id)
+        const cachedAtom = atomCache.get(darkAtom.id)
 
         if (cachedAtom) {
           darkAtoms.push(cachedAtom)
@@ -278,11 +280,9 @@ export class Parser {
 
   addAtom(atom: Atom) {
     // if not cached, let's cache it
-    if (!store.atomCache.get(atom.id)) {
-      store.atomCache.set(atom.id, atom)
+    if (!atomCache.get(atom.id)) {
+      atomCache.set(atom.id, atom)
     }
-
-    atom.createClassName(store.config.prefix) // only create atom className when toRules
 
     const { modes = {} } = this.config.theme.colors
     const entries = Object.entries<any>(modes)
@@ -300,7 +300,6 @@ export class Parser {
         // TODO: improve clone
         const modeAtom: Atom = JSON.parse(JSON.stringify(atom))
 
-        modeAtom.className = atom.className + postfix
         modeAtom.key = atom.key + postfix
         modeAtom.id = atom.id + postfix
         modeAtom.meta = { mode, ...atom.meta }
@@ -346,14 +345,12 @@ export class Parser {
       }
     }
 
-    const cachedAtom = store.atomCache.get(atom.id)
+    const cachedAtom = atomCache.get(atom.id)
 
     if (cachedAtom) {
       this.addAtom(cachedAtom)
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
-
-    atom = atom.preprocessAtom(store.config)
 
     // if handled, push to this.atoms and skip it
     if (atom.handled) {
@@ -381,7 +378,7 @@ export class Parser {
   parseCSSObject(propValue: any, meta = {}) {
     const parsed = parse(propValue)
 
-    const prefixClassName = objectToClassName(propValue)
+    // const prefixClassName = objectToClassName(propValue)
 
     for (const { selector, selectorType, style } of parsed) {
       const entries = Object.entries(style)
@@ -400,7 +397,7 @@ export class Parser {
 
       const atom = new Atom(option)
 
-      const isVoid = selectorType === 'void'
+      // const isVoid = selectorType === 'void'
 
       try {
         this.mutateAtom(atom)
@@ -415,12 +412,12 @@ export class Parser {
         // TODO: need refactor
         atom.id = objectToClassName({ style })
 
-        atom.className = isVoid ? objectToClassName(style) : prefixClassName
+        // atom.className = isVoid ? objectToClassName(style) : prefixClassName
 
         atom.handled = true
       }
 
-      const cachedAtom = store.atomCache.get(atom.id)
+      const cachedAtom = atomCache.get(atom.id)
 
       if (cachedAtom) {
         this.addAtom(cachedAtom)
@@ -454,13 +451,14 @@ export class Parser {
       })
 
       if (!cur.isValid) return result
+      const className = this.getClassNameById(cur.id)
 
       if (index === -1) {
-        classNames.push(cur.className)
+        classNames.push(className)
         result = [...result, cur]
       } else {
         result.splice(index, 1, cur)
-        classNames.splice(index, 1, cur.className)
+        classNames.splice(index, 1, className)
       }
 
       return result
@@ -509,7 +507,7 @@ export class Parser {
 
     for (const atom of this.atoms) {
       let rule: string = ''
-      const { className, isValid, style = {} } = atom
+      const { id, isValid, style = {} } = atom
 
       // no style in falsy prop
       if (!isValid) continue
@@ -523,7 +521,7 @@ export class Parser {
 
       atom.inserted = true
 
-      const { pseudo, mode, breakpoint = '', childSelector } = atom.meta
+      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector } = atom.meta
 
       // TODO: need refactor
       const shouldUseUniqueClassName = !!this.atoms.find(
@@ -532,8 +530,9 @@ export class Parser {
       const uniqueSelector =
         shouldUseUniqueClassName || atom.meta.breakpoint ? '.' + this.uniqueClassName : ''
 
+      const className = this.getClassNameById(id)
       let selector = `${uniqueSelector}.${className}`
-      if (pseudo) selector = selector + pseudo
+      if (pseudo) selector = selector + pseudoPrefix + pseudo
       if (mode) selector = `.${modePrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
@@ -542,7 +541,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms-----:', this.atoms)
+    console.log('this.atoms-----:', this.atoms, rules)
 
     return rules
   }

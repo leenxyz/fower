@@ -1,5 +1,5 @@
 {
-  "name": "@fower/parser",
+  "name": "@fower/cache",
   "version": "1.27.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -19,14 +19,8 @@
     "node": ">=10"
   },
   "author": "forsigner",
-  "module": "dist/parser.esm.js",
+  "module": "dist/cache.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.27.0",
-    "@fower/cache": "^1.27.0",
-    "@fower/css-object-processor": "^1.27.0",
-    "@fower/sheet": "^1.27.0",
-    "@fower/store": "^1.27.0",
-    "@fower/types": "^1.27.0",
-    "@fower/utils": "^1.27.0"
+    "@fower/atom": "^1.27.0"
   }
 }

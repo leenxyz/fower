@@ -1,4 +1,5 @@
 import hash from 'string-hash'
+import { store } from '@fower/store'
 import * as CSS from 'csstype'
 import { Options, Meta } from './types'
 
@@ -19,10 +20,9 @@ export class Atom {
     this.propValue = options.propValue
 
     this.key = options.key || this.propKey
-    this.value = options.propValue || this.propValue
+    this.value = options.value || this.propValue
 
     this.style = options.style
-    this.className = options.className || ''
 
     this.handled = this.getInitialHandled()
     this.isValid = this.getIsValid()
@@ -32,19 +32,7 @@ export class Atom {
     // shallow clone it
     this.meta = { ...options.meta } || {}
 
-    const { propKey, propValue } = this
-
-    let id: string
-    if (typeof propValue === 'boolean' && propValue === true) {
-      id = propKey
-    } else if (Array.isArray(propValue)) {
-      const valueStr = propValue.join('-')
-      id = `${propKey}-${valueStr}`
-    } else {
-      id = `${propKey}-${String(propValue).replace(/\s/g, '-')}`
-    }
-
-    this.id = id
+    this.preprocessAtom()
   }
 
   /**
@@ -140,11 +128,6 @@ export class Atom {
   type: 'color' | 'backgroundColor' | 'borderColor' | 'padding' | 'margin' | ({} & string) = ''
 
   /**
-   * className of this atom
-   */
-  className: string
-
-  /**
    * if handled, this atom is ready to push to parser.atoms
    */
   handled: boolean
@@ -157,17 +140,30 @@ export class Atom {
   /** if not valid, do not generate style */
   isValid: boolean
 
-  createClassName(prefix = '') {
-    let value = this.id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+  setId = (): string => {
+    const { meta, key, value } = this
+    const { pseudoPrefix, childSelector, important, ...rest } = meta
+    const values = Object.values(rest).sort()
+    if (important) values.push('i')
 
-    const isValid = /^[a-zA-Z0-9-]+$/.test(value)
-    value = isValid ? value : `css-${hash(value)}`
-    const className = `${prefix}${value}`
+    let id: string
+    if (typeof value === 'boolean' && value === true) {
+      id = key
+    } else if (Array.isArray(value)) {
+      const valueStr = value.join('-')
+      id = `${key}-${valueStr}`
+    } else {
+      id = `${key}-${String(value).replace(/\s/g, '-')}`
+    }
 
-    // set to atom.className
-    this.className = className
+    if (values.length) id = id + '--' + values.join('--')
 
-    return className
+    // handle special charactor
+    id = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+
+    const isValid = /^[a-zA-Z0-9-]+$/.test(id)
+    this.id = isValid ? id : `css-${hash(id)}`
+    return id
   }
 
   /**
@@ -175,14 +171,17 @@ export class Atom {
    * @param config fower config
    * @returns
    */
-  preprocessAtom(config: any) {
-    return this.postfixPreprocessor(config)
+  preprocessAtom() {
+    const newAtom = this.postfixPreprocessor()
+    this.setId()
+
+    return newAtom
   }
 
-  postfixPreprocessor(config: any) {
+  postfixPreprocessor() {
     const connector = '--'
     const specialPseudos = ['after', 'before', 'placeholder', 'selection']
-    const { pseudos = [], theme } = config
+    const { pseudos = [], theme } = store.config
     const { breakpoints, modes, spacings } = theme || {}
 
     const { propKey, propValue } = this
@@ -228,8 +227,8 @@ export class Atom {
 
     if (isPseudo) {
       const pseudo = result.find((i) => pseudoKeys.includes(i)) as string
-      const pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
-      this.meta.pseudo = pseudoPrefix + pseudo
+      this.meta.pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
+      this.meta.pseudo = pseudo
     }
 
     if (isResponsive) {

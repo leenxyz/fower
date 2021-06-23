@@ -14,9 +14,17 @@ export interface Meta {
 
   /**
    * @exmple
-   * pseudo: ':hover'
+   * --hover -> hover
+   * --befor -> befor
    */
   pseudo?: string
+
+  /**
+   * @exmple
+   * --hover -> :
+   * --befor -> ::
+   */
+  pseudoPrefix?: string
 
   /**
    * child selector for atom.className
@@ -31,16 +39,6 @@ export interface Meta {
   important?: boolean
 
   /**
-   * color postfix for opacify,transparent,darken,lighten
-   * @example
-   * gray200--O20 -> O20
-   * gray200--T20 -> T20
-   * #666--D40 -> D40
-   * #999--L40 -> L40
-   */
-  colorPostfix?: string
-
-  /**
    * color name or value
    * @example
    * gray200--O20 -> gray200
@@ -49,6 +47,16 @@ export interface Meta {
    * #999--L40 -> #999
    */
   color?: string
+
+  /**
+   * color postfix for opacify,transparent,darken,lighten
+   * @example
+   * gray200--O20 -> O20
+   * gray200--T20 -> T20
+   * #666--D40 -> D40
+   * #999--L40 -> L40
+   */
+  colorPostfix?: string
 }
 export interface Options {
   propKey: 'css' | 'debug' | ({} & string)
@@ -60,6 +68,6 @@ export interface Options {
   meta?: Meta
 
   style?: any
-  className?: string
+
   handled?: boolean
 }

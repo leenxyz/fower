@@ -21,7 +21,6 @@
   "author": "forsigner",
   "module": "dist/store.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.27.0",
     "@fower/types": "^1.27.0",
     "deepmerge": "^4.2.2"
   }
