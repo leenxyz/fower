@@ -21,25 +21,38 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Basics',
       items: [
         'basic',
         'css-prop',
         'pseudo',
         'responsive',
-        'theme-mode',
-        'predictable-style',
-        'color-helper',
         'keyframes',
         'dynamic-style',
         'programmable',
         'reuse',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Advanced',
+      items: [
         'configuration',
+        'theme-mode',
+        'color-helper',
+        'predictable-style',
         'add-atom',
         'compose-atom',
         // 'plugin',
-        'typescript',
+        'ssr',
       ],
+    },
+
+    {
+      type: 'category',
+      label: 'Tooling',
+      items: ['typescript', 'intellisense'],
     },
 
     {
@@ -58,11 +71,13 @@ module.exports = {
         'design-system-line-heights',
       ],
     },
-  ],
 
-  // Api: ['styled', 'css', 'createStyle'],
-  // Examples: ['example-avatar', 'example-media-object'],
-  // FAQS: ['faq-1', 'faq-2', 'faq-3'],
+    {
+      type: 'category',
+      label: 'FAQs',
+      items: ['faq-1', 'faq-2', 'faq-3'],
+    },
+  ],
 
   api: [
     'packages/core',
