@@ -24,7 +24,6 @@ module.exports = {
       },
     },
   },
-
   themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
     prism: {
@@ -89,8 +88,12 @@ module.exports = {
         },
         { to: '/blog', label: 'Blog', position: 'right' },
         {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/forsigner/fower',
-          label: 'GitHub',
+          // label: 'GitHub',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
           position: 'right',

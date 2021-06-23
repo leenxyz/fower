@@ -1,31 +1,11 @@
-import { Box, Text } from '@fower/react';
+import { Box } from '@fower/react';
 
 export default () => {
-  return (
-    <div>
-      <Box
-        css={{
-          userSelect: 'none',
-          backgroundColor: '#feebc8',
-        }}
-      >
-        Use Atomic Props in CSS Props
-      </Box>
-      <Box
-        css={{
-          userSelect: 'none',
-          backgroundColor: '#feebc8',
-        }}
-      >
-        Use Atomic Props in CSS Props
-      </Box>
-    </div>
-  );
   return (
     <Box>
       <Box>CSS Prop</Box>
 
-      <Text
+      <Box
         text4XL
         red500
         css={{
@@ -34,7 +14,7 @@ export default () => {
         }}
       >
         Hi, Fower!
-      </Text>
+      </Box>
 
       <Box
         text4XL

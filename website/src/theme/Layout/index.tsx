@@ -43,8 +43,7 @@ function Layout(props: Props): JSX.Element {
       <Navbar />
       <Box
         w-1360--md
-        // className={clsx('main-wrapper', wrapperClassName)}
-        className={clsx(wrapperClassName)}
+        className={clsx('main-wrapper', wrapperClassName)}
         style={{
           // maxWidth: '1360px',
           // width: '1360px',

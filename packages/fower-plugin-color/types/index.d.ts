@@ -1,4 +1,4 @@
-import { FowerPlugin, FowerColor } from '@fower/types'
+import { FowerPlugin } from '@fower/types'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -14,7 +14,7 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Text black>Hello world</Text>
+     * <Box black>Hello world</Box>
      * ```
      */
     transparent?: boolean

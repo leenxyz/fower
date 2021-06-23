@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { createStyle, setTheme, keyframes } from '@fower/core'
 import { styled } from '@fower/styled'
-import { Text, View, Box, Image } from '@fower/react'
+import { Box } from '@fower/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled(
@@ -108,10 +108,7 @@ const ReactLiveScope = {
   createStyle,
   keyframes,
   styled,
-  Text,
   Box,
-  View,
-  Image,
   Heading,
   Wrapper,
 }

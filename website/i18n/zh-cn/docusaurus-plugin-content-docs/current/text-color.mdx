@@ -1,6 +1,6 @@
 ---
 id: text-color
-title: Text Color
+title: Box Color
 ---
 
 | Atomic Props  | CSS Properties        |
@@ -12,9 +12,9 @@ title: Text Color
 
 ```jsx live
 <Box textXL toEvenly>
-  <Text gray600>gray600</Text>
-  <Text red500>red500</Text>
-  <Text green400>green400</Text>
+  <Box gray600>gray600</Box>
+  <Box red500>red500</Box>
+  <Box green400>green400</Box>
 </Box>
 ```
 
@@ -24,9 +24,9 @@ call preset color：[Color palette](/docs/design-system-colors#color-palettes)
 
 ```jsx live
 <Box textXL toEvenly>
-  <Text color="orange400">orange400</Text>
-  <Text color="deeppink">deeppink</Text>
-  <Text color="#4fd1c5">#4fd1c5</Text>
+  <Box color="orange400">orange400</Box>
+  <Box color="deeppink">deeppink</Box>
+  <Box color="#4fd1c5">#4fd1c5</Box>
 </Box>
 ```
 
@@ -86,12 +86,12 @@ transparentize color:
 
 ```jsx live
 <Box textXL row toEvenly>
-  <Text green400 red400--hover>
+  <Box green400 red400--hover>
     Hello
-  </Text>
-  <Text color="#4fd1c5" color--hover="purple">
+  </Box>
+  <Box color="#4fd1c5" color--hover="purple">
     Hello
-  </Text>
+  </Box>
 </Box>
 ```
 
@@ -99,15 +99,15 @@ hover with transparentize, lighten, darken:
 
 ```jsx live
 <Box textXL row toEvenly>
-  <Text green400 green400--T60--hover>
+  <Box green400 green400--T60--hover>
     Hello
-  </Text>
-  <Text green400 green400--L30--hover>
+  </Box>
+  <Box green400 green400--L30--hover>
     Hello
-  </Text>
-  <Text green400 green400--D30--hover>
+  </Box>
+  <Box green400 green400--D30--hover>
     Hello
-  </Text>
+  </Box>
 </Box>
 ```
 

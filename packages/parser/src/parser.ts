@@ -165,22 +165,24 @@ export class Parser {
     let propList: PropItem[] = []
     if (!this.props) return []
 
+    let props = { ...this.props }
+
     if (this.props?.className) {
       for (const item of this.props.className.split(/\s+/)) {
-        this.props[item] = true
+        props[item] = true
       }
     }
 
-    const { excludedProps = [] } = this.props
-    for (const propKey in this.props) {
-      if (!Reflect.has(this.props, propKey)) continue
+    const { excludedProps = [] } = props
+    for (const propKey in props) {
+      if (!Reflect.has(props, propKey)) continue
 
       // the prop should be excluded by user setting
       if (excludedProps.includes(propKey)) continue
 
       if (reactProps.includes(propKey)) continue
 
-      const propValue = this.props[propKey]
+      const propValue = props[propKey]
 
       if (!this.isValidProp(propKey, propValue)) continue
 

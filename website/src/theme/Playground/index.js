@@ -12,7 +12,7 @@ import Translate from '@docusaurus/Translate'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import usePrismTheme from '@theme/hooks/usePrismTheme'
 import styles from './styles.module.css'
-import { Box, Text } from '@fower/react'
+import { Box } from '@fower/react'
 
 function Header({ children }) {
   return <div className={clsx(styles.playgroundHeader)}>{children}</div>
@@ -41,9 +41,9 @@ function EditorWithHeader() {
   return (
     <Box relative>
       <LiveEditor className={styles.playgroundEditor} />
-      <Text textXS fontBold green400 absolute bottom-2 right-8>
+      <Box textXS fontBold green400 absolute bottom-2 right-8>
         LIVE DEMO
-      </Text>
+      </Box>
     </Box>
   )
 }

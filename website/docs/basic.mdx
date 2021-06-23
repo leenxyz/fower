@@ -56,9 +56,9 @@ At first glance, You may be very resistant to abbreviations like `toCenterY p-20
 In order to give you a deeper understanding of the usage of Fower, let's review the basic usage:
 
 ```jsx live
-<Text text2XL fontBold green500>
+<Box text2XL fontBold green500>
   Hi, Fower
-</Text>
+</Box>
 ```
 
 The simplest way to use Fower is to set some Atomic Props directly on the Fower component. The Atomic Props `text2XL`, `fontBold`, `green500` will produce the following style:
@@ -86,9 +86,9 @@ function Demo() {
   const a = 5
   const b = 5
   return (
-    <Text text={30} p={a + b} bg="#bee3f8" fontBold>
+    <Box text={30} p={a + b} bg="#bee3f8" fontBold>
       Hi, Fower
-    </Text>
+    </Box>
   )
 }
 ```

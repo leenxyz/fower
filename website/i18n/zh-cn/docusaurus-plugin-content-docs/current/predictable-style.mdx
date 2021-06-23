@@ -21,13 +21,13 @@ For example, if you have some css rule like below:
 If we set `className="red blue"` to a text, it will be color `blue `.
 
 ```jsx live
-<Text className="red blue">Fower</Text>
+<Box className="red blue">Fower</Box>
 ```
 
 If we reverse it to `className="blue red"` to a text, it will be color `blue `, too.
 
 ```jsx live
-<Text className="blue red">Fower</Text>
+<Box className="blue red">Fower</Box>
 ```
 
 The color of text is not depended by the order of classNames, it's not predictable.
@@ -39,25 +39,25 @@ In Fower, the style is predictable. The style is depended by the order of Atomic
 If we set props to `red400 green400`, the color of text is `green400`:
 
 ```jsx live
-<Text red400 green400>
+<Box red400 green400>
   Fower
-</Text>
+</Box>
 ```
 
 If we set props to `green400 red400`, the color of text is `red400`:
 
 ```jsx live
-<Text green400 red400>
+<Box green400 red400>
   Fower
-</Text>
+</Box>
 ```
 
 If we set props to `green400 red400 blue400`, the color of text is `blue400`:
 
 ```jsx live
-<Text green400 red400 blue400>
+<Box green400 red400 blue400>
   Fower
-</Text>
+</Box>
 ```
 
 ## Useful use case
