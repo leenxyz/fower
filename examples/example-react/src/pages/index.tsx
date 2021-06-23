@@ -136,7 +136,7 @@ export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default');
   return (
     <Box p10>
-      <Box green300--i--hover toCenter gray500--dark spaceX2 flexWrap="wrap">
+      <Box toCenter gray500--dark spaceX2 flexWrap gap-10>
         {pages.map((i) => (
           <Link key={i} to={'/' + i}>
             {i}
@@ -155,14 +155,6 @@ export default function IndexPage() {
         }}
       >
         切换 {colorMode}
-      </Box>
-
-      <Box as="h2" spaceX4 row debugChildren>
-        <Box>BB</Box>
-        <Box>BB</Box>
-        <Box>BB</Box>
-        <Box>BB</Box>
-        <Box>BB</Box>
       </Box>
     </Box>
   );

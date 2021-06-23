@@ -213,10 +213,11 @@ declare namespace FowerTypes {
 
     /**
      * handle props before parse
-     * @param propItem
+     * @param propKey
+     * @param propValue
      * @param parser
      */
-    beforeParseProps?(propItem: PropItem, parser: ParserInterface): any
+    beforeParseProps?(propKey: string, propValue: any, parser: ParserInterface): any
 
     /**
      * before handle atom

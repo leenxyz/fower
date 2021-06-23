@@ -2,6 +2,17 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
+    <Box
+      text4XL
+      bgRed500
+      css={{
+        p4: true,
+      }}
+    >
+      Hi, Fower!
+    </Box>
+  );
+  return (
     <Box>
       <Box>CSS Prop</Box>
 

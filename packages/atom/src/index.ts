@@ -6,13 +6,20 @@ const invalidProps = ['excludedProps']
 
 export { Options, Meta }
 
+/**
+ * @example p2,mx4,left10,spaceX4...
+ * @example p-20,opacity-80
+ */
+export const digitReg =
+  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|stroke|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?-?\d+[a-z]*?|-auto)$/i
+
 export class Atom {
   constructor(private readonly options: Options) {
     this.propKey = options.propKey
     this.propValue = options.propValue
 
     this.key = options.key || this.propKey
-    this.value = options.value || this.propValue
+    this.value = options.propValue || this.propValue
 
     this.style = options.style
     this.className = options.className || ''
@@ -163,6 +170,116 @@ export class Atom {
     return className
   }
 
+  /**
+   *
+   * @param config fower config
+   * @returns
+   */
+  preprocessAtom(config: any) {
+    return this.postfixPreprocessor(config)
+  }
+
+  postfixPreprocessor(config: any) {
+    const connector = '--'
+    const specialPseudos = ['after', 'before', 'placeholder', 'selection']
+    const { pseudos = [], theme } = config
+    const { breakpoints, modes, spacings } = theme || {}
+
+    const { propKey, propValue } = this
+
+    const breakpointKeys = Object.keys(breakpoints)
+    const modeKeys: string[] = modes || []
+    const pseudoKeys: string[] = pseudos
+
+    const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
+    const regModeStr = `${connector}(${modeKeys.join('|')})`
+    const regPseudoStr = `${connector}(${pseudoKeys.join('|')})`
+
+    const regMode = new RegExp(regModeStr)
+    const regPseudo = new RegExp(regPseudoStr)
+    const regResponsive = new RegExp(regResponsiveStr)
+    const regImportant = /--i/i
+    const regColorPostfix = /--[told](\d{1,2}|100)($|--)/i
+
+    /** handle value like: red500--T40, #666--O30 */
+    if (regColorPostfix.test(propValue)) {
+      const [colorName, postfix] = propValue.split('--')
+      this.value = colorName
+      this.meta.colorPostfix = postfix
+    }
+
+    const isMode = regMode.test(propKey)
+    const isPseudo = regPseudo.test(propKey)
+    const isResponsive = regResponsive.test(propKey)
+    const isImportant = regImportant.test(propKey)
+    const isColorPostfix = regColorPostfix.test(propKey)
+
+    const hasPostfix = isMode || isPseudo || isResponsive || isImportant || isColorPostfix
+
+    if (!hasPostfix) return this.digitPreprocessor(spacings)
+
+    const result = propKey.split(connector)
+
+    this.key = result[0] // key that already removed postfix
+
+    if (isMode) {
+      this.meta.mode = result.find((i) => modeKeys.includes(i))
+    }
+
+    if (isPseudo) {
+      const pseudo = result.find((i) => pseudoKeys.includes(i)) as string
+      const pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
+      this.meta.pseudo = pseudoPrefix + pseudo
+    }
+
+    if (isResponsive) {
+      const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
+      this.meta.breakpoint = (breakpoints as any)[breakpointType]
+    }
+
+    if (isImportant) {
+      this.meta.important = !!result.find((i) => i === 'i')
+    }
+
+    if (isColorPostfix) {
+      this.meta.colorPostfix = result.find((i) => regColorPostfix.test(`--${i}`))
+    }
+
+    // check is theme space key, if yes, preprocess it
+    this.digitPreprocessor(spacings)
+
+    return this
+  }
+
+  digitPreprocessor(spacings: any) {
+    if (!digitReg.test(this.key)) return this
+
+    // is theme space key
+    const isSpace = /^([a-z]+)(\d+)$/i.test(this.key)
+
+    /**
+     *  match props link: m4,mx2,mt9, spaceX4...
+     *  to m4 -> [ key: m, value: 4 ]
+     *  to m-20 -> [ key: m, value: 20 ]
+     *  to m-20px -> [ key: m, value: '20px' ]
+     */
+
+    const keyStr = this.key.toString()
+    const result =
+      keyStr.match(/^([a-z]+)(\d+)$/i) ||
+      keyStr.match(/^([a-z]*)-(-?\d+[a-z]*?)$/i) ||
+      keyStr.match(/^([a-z]+)-(auto)$/i)
+
+    if (!result) return this
+
+    const [, newKey, newPropValue] = result
+
+    this.key = newKey
+    this.value = isSpace ? spacings[newPropValue.toLowerCase()] : newPropValue
+
+    return this
+  }
+
   private getInitialHandled() {
     if (this.options.handled) return this.options.handled
     if (this.isFalsePropValue) return true
@@ -172,7 +289,6 @@ export class Atom {
 
   private getIsValid() {
     if (this.isFalsePropValue) return false
-    if (this.propValue === undefined || this.propValue === null) return false
     if (invalidProps.includes(this.propKey)) return false
     return true
   }

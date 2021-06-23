@@ -30,7 +30,7 @@ const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className', 'p
  */
 export class Parser {
   constructor(public props = {} as Props) {
-    this.traverseProps()
+    this.traverseProps(props)
 
     if (store.config.autoDarkMode) {
       this.autoDarkMode()
@@ -60,159 +60,11 @@ export class Parser {
     return store.config.plugins
   }
 
-  digitPreprocessor(propItem: PropItem): PropItem {
-    const spacings: any = store.config.theme.spacings
-    if (!digitReg.test(propItem.key)) return propItem
-
-    // is theme space key
-    const isSpace = /^([a-z]+)(\d+)$/i.test(propItem.key)
-
-    /**
-     *  match props link: m4,mx2,mt9, spaceX4...
-     *  to m4 -> [ key: m, value: 4 ]
-     *  to m-20 -> [ key: m, value: 20 ]
-     *  to m-20px -> [ key: m, value: '20px' ]
-     */
-
-    const keyStr = propItem.key.toString()
-    const result =
-      keyStr.match(/^([a-z]+)(\d+)$/i) ||
-      keyStr.match(/^([a-z]*)-(-?\d+[a-z]*?)$/i) ||
-      keyStr.match(/^([a-z]+)-(auto)$/i)
-
-    if (!result) return propItem
-
-    const [, newKey, newPropValue] = result
-
-    propItem.key = newKey
-    propItem.value = isSpace ? spacings[newPropValue.toLowerCase()] : newPropValue
-
-    return propItem
-  }
-
-  postfixPreprocessor(propItem: PropItem): PropItem {
-    const connector = '--'
-    const specialPseudos = ['after', 'before', 'placeholder', 'selection']
-    const { pseudos = [], theme } = store.config
-    const { breakpoints, modes } = theme || {}
-
-    const { propKey, propValue } = propItem
-
-    const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = modes || []
-    const pseudoKeys: string[] = pseudos
-
-    const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
-    const regModeStr = `${connector}(${modeKeys.join('|')})`
-    const regPseudoStr = `${connector}(${pseudoKeys.join('|')})`
-
-    const regMode = new RegExp(regModeStr)
-    const regPseudo = new RegExp(regPseudoStr)
-    const regResponsive = new RegExp(regResponsiveStr)
-    const regImportant = /--i/i
-    const regColorPostfix = /--[told](\d{1,2}|100)($|--)/i
-
-    /** handle value like: bg="red500--T40", color="#666--O30" */
-    if (regColorPostfix.test(propValue)) {
-      const [colorName, postfix] = propValue.split('--')
-      propItem.value = colorName
-      propItem.meta.colorPostfix = postfix
-    }
-
-    const isMode = regMode.test(propKey)
-    const isPseudo = regPseudo.test(propKey)
-    const isResponsive = regResponsive.test(propKey)
-    const isImportant = regImportant.test(propKey)
-    const isColorPostfix = regColorPostfix.test(propKey)
-
-    const hasPostfix = isMode || isPseudo || isResponsive || isImportant || isColorPostfix
-
-    if (!hasPostfix) return this.digitPreprocessor(propItem)
-
-    const result = propKey.split(connector)
-
-    propItem.key = result[0] // key that already removed postfix
-
-    if (isMode) {
-      propItem.meta.mode = result.find((i) => modeKeys.includes(i))
-    }
-
-    if (isPseudo) {
-      const pseudo = result.find((i) => pseudoKeys.includes(i)) as string
-      const pseudoPrefix = specialPseudos.includes(pseudo) ? '::' : ':'
-      propItem.meta.pseudo = pseudoPrefix + pseudo
-    }
-
-    if (isResponsive) {
-      const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
-      propItem.meta.breakpoint = (breakpoints as any)[breakpointType]
-    }
-
-    if (isImportant) {
-      propItem.meta.important = !!result.find((i) => i === 'i')
-    }
-
-    if (isColorPostfix) {
-      propItem.meta.colorPostfix = result.find((i) => regColorPostfix.test(`--${i}`))
-    }
-
-    // check is theme space key, if yes, preprocess it
-    // this.digitPreprocessor(spacings)
-    return this.digitPreprocessor(propItem)
-  }
-
-  preprocessProps(): PropItem[] {
-    let propList: PropItem[] = []
-    if (!this.props) return []
-
-    let props = { ...this.props }
-
-    if (this.props?.className) {
-      for (const item of this.props.className.split(/\s+/)) {
-        props[item] = true
-      }
-    }
-
-    const { excludedProps = [] } = props
-    for (const propKey in props) {
-      if (!Reflect.has(props, propKey)) continue
-
-      // the prop should be excluded by user setting
-      if (excludedProps.includes(propKey)) continue
-
-      if (reactProps.includes(propKey)) continue
-
-      const propValue = props[propKey]
-
-      if (!this.isValidProp(propKey, propValue)) continue
-
-      let propItem = this.postfixPreprocessor({
-        propKey,
-        propValue,
-        key: propKey,
-        meta: {},
-      } as PropItem)
-
-      for (const plugin of this.plugins) {
-        if (plugin.isMatch(propItem.key)) {
-          if (plugin.beforeParseProps) {
-            plugin.beforeParseProps(propItem, this)
-          }
-
-          this.propList.push(propItem)
-          break
-        }
-      }
-    }
-
-    return propList
-  }
-
   /**
    * traverse Props to init atoms
    */
-  traverseProps(): void {
-    if (isEmptyObj(this.props)) return
+  traverseProps(props: Props): void {
+    if (isEmptyObj(props)) return
 
     const { pseudos = [], theme } = this.config
     const { breakpoints, modes } = theme || {}
@@ -220,11 +72,25 @@ export class Parser {
     const modeKeys: string[] = modes || []
     const pseudoKeys: string[] = pseudos
 
-    this.preprocessProps()
+    const { excludedProps = [] } = props
+    const entries = Object.entries<any>(props)
+
+    if (props?.className) {
+      for (const item of props.className.split(/\s+/)) {
+        entries.push([item, true])
+      }
+    }
+
+    console.log('entries====:', entries)
 
     // traverse Props
-    for (const item of this.propList) {
-      const { propKey, propValue } = item
+    for (let [propKey, propValue] of entries) {
+      // the prop should be excluded by user setting
+      if (excludedProps.includes(propKey)) continue
+
+      if (reactProps.includes(propKey)) continue
+
+      if (!this.isValidProp(propKey, propValue)) continue
 
       // parse css prop
       if (propKey === 'css') {
@@ -265,7 +131,7 @@ export class Parser {
         continue
       }
 
-      let atom = new Atom(item)
+      let atom = new Atom({ propKey, propValue })
 
       try {
         this.mutateAtom(atom)
@@ -488,6 +354,8 @@ export class Parser {
       this.addAtom(cachedAtom)
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
+
+    atom = atom.preprocessAtom(store.config)
 
     // if handled, push to this.atoms and skip it
     if (atom.handled) {
