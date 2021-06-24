@@ -8,7 +8,7 @@ export default () => {
       </Box>
 
       <Box debug debugChildren>
-        <Box p10 inlineBlock>
+        <Box p1 inlineBlock>
           p1
         </Box>
         <Box p4 inlineBlock>

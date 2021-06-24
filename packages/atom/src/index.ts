@@ -162,7 +162,12 @@ export class Atom {
     id = id.replace(/[#()]/g, '').replace(/\%/g, 'p').replace(/\s+/g, '-').replace(/\.+/g, 'dot-')
 
     const isValid = /^[a-zA-Z0-9-]+$/.test(id)
-    this.id = isValid ? id : `css-${hash(id)}`
+    id = isValid ? id : `css-${hash(id)}`
+
+    if (this.isFalsePropValue) id = id + '--false'
+
+    this.id = id
+
     return id
   }
 
