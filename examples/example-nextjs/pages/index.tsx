@@ -12,7 +12,11 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <Box bgRed200 p4>
+        <Box bgRed200 p4 m6>
+          foo
+        </Box>
+
+        <Box bgRed200 p4 bgGreen100>
           foo
         </Box>
 

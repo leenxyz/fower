@@ -1,16 +1,9 @@
 import { Atom } from '@fower/atom'
 
-export const serverCache: any = (globalThis as any).fower?.atomCache || []
+export const ssrAtomIds: string[] = (globalThis as any)?.SSR_ATOM_IDS || []
 
-export const atomCache = new Map<string, Atom>(
-  serverCache.map((cache: any) => {
-    const [key, value] = cache
-    const temp: any = new Atom({ propKey: 'css', propValue: {} })
+export const atomCache = new Map<string, Atom>()
 
-    for (const c in value) {
-      temp[c] = value[c]
-    }
-
-    return [key, temp]
-  }),
-)
+export function getAtomIds() {
+  return Array.from(atomCache.keys())
+}

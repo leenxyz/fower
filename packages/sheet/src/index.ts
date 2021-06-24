@@ -5,13 +5,21 @@ class StyleSheet {
 
   private cssString = ''
 
+  private ssrAtomIds: string[] | null = null
+
   private createStyleElement(): HTMLStyleElement {
     const $style = document.createElement('style')
 
-    $style.dataset.fower = 'fower'
+    $style.dataset.fower = ''
     document.head.append($style)
 
     return $style
+  }
+
+  getSsrAtomIds(): string[] {
+    if (!this.$style) return []
+    if (this.ssrAtomIds) return this.ssrAtomIds
+    return this.$style?.dataset.fower?.split(',') || []
   }
 
   insertStyleToHtml(rules: string[]) {
@@ -19,17 +27,17 @@ class StyleSheet {
       this.$style = this.createStyleElement()
     }
 
-    const str = rules.join('\n')
-    this.$style.innerHTML += str
-    return
+    // const str = rules.join('\n')
+    // this.$style.innerHTML += str
+    // return
 
-    // for (const rule of rules) {
-    //   try {
-    //     this.$style.sheet!.insertRule(rule)
-    //   } catch (error) {
-    //     console.warn(error)
-    //   }
-    // }
+    for (const rule of rules) {
+      try {
+        this.$style.sheet!.insertRule(rule)
+      } catch (error) {
+        console.warn(error)
+      }
+    }
   }
 
   insertStyles(rules: string[] = []) {

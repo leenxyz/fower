@@ -284,6 +284,7 @@ export class Parser {
       atomCache.set(atom.id, atom)
     }
 
+    const ssrAtomIds = styleSheet.getSsrAtomIds()
     const { modes = {} } = this.config.theme.colors
     const entries = Object.entries<any>(modes)
 
@@ -305,9 +306,12 @@ export class Parser {
         modeAtom.meta = { mode, ...atom.meta }
         modeAtom.style[styleKey as 'color'] = colorValue
 
+        if (ssrAtomIds.includes(modeAtom.id)) modeAtom.inserted = true
         this.atoms.push(modeAtom)
       }
     }
+
+    if (ssrAtomIds.includes(atom.id)) atom.inserted = true
     this.atoms.push(atom)
   }
 
@@ -541,7 +545,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    console.log('this.atoms-----:', this.atoms, rules)
+    // console.log('this.atoms-----:', this.atoms, rules)
 
     return rules
   }

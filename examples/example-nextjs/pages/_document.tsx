@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { styleSheet } from '@fower/sheet'
-import { atomCache } from '@fower/cache'
+import { getAtomIds } from '@fower/cache'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -9,21 +9,21 @@ class MyDocument extends Document {
   }
 
   render() {
-    const initialScript = `
-      window.fower = {
-        atomCache: ${JSON.stringify(Array.from(atomCache))}
-      }
-    `
     return (
       <Html>
         <Head>
-          <style data-fower="fower">{styleSheet.getStyle()}</style>
+          <style data-fower={getAtomIds()}>{styleSheet.getStyle()}</style>
         </Head>
         <body>
           <Main />
           <NextScript />
 
-          <script type="text/javascript" dangerouslySetInnerHTML={{ __html: initialScript }} />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `window.SSR_ATOM_IDS = ${JSON.stringify(getAtomIds())}`,
+            }}
+          />
         </body>
       </Html>
     )
