@@ -95,7 +95,7 @@ export class Parser {
 
       // parse css prop
       if (propKey === 'css') {
-        this.parseCSSObject(propValue)
+        this.parseCSSObject(propValue, {})
         continue
       }
 
@@ -382,17 +382,23 @@ export class Parser {
   parseCSSObject(propValue: any, meta = {}) {
     const parsed = parse(propValue)
 
-    // const prefixClassName = objectToClassName(propValue)
-
     for (const { selector, selectorType, style } of parsed) {
       const entries = Object.entries(style)
       if (!entries.length) continue
+
+      // entries.length is 1
       const [propKey, propValue] = entries[0]
 
-      let option: Options = { propKey, propValue, meta }
+      const option: Options = {
+        propKey,
+        propValue,
+        meta: { ...meta },
+      }
 
       if (selectorType === 'pseudo' && option.meta) {
-        option.meta.pseudo = selector
+        const [, pseudoPrefix, pseudo] = selector.match(/(:+)(.+)/) || []
+        option.meta.pseudoPrefix = pseudoPrefix
+        option.meta.pseudo = pseudo
       }
 
       if (selectorType === 'child' && option.meta) {
@@ -400,8 +406,6 @@ export class Parser {
       }
 
       const atom = new Atom(option)
-
-      // const isVoid = selectorType === 'void'
 
       try {
         this.mutateAtom(atom)
@@ -412,11 +416,6 @@ export class Parser {
       // not match atomic props rule
       if (!atom.style) {
         atom.style = style
-
-        // TODO: need refactor
-        atom.id = objectToClassName({ style })
-
-        // atom.className = isVoid ? objectToClassName(style) : prefixClassName
 
         atom.handled = true
       }
@@ -545,7 +544,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms-----:', this.atoms, rules)
+    // console.log('this.atoms-----:', this.atoms)
 
     return rules
   }

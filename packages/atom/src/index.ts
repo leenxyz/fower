@@ -153,13 +153,13 @@ export class Atom {
       const valueStr = value.join('-')
       id = `${key}-${valueStr}`
     } else {
-      id = `${key}-${String(value).replace(/\s/g, '-')}`
+      id = `${key}-${String(value)}`
     }
 
     if (values.length) id = id + '--' + values.join('--')
 
     // handle special charactor
-    id = id.replace(/#/g, '').replace(/\%/g, 'p').replace(/\./g, 'd')
+    id = id.replace(/[#()]/g, '').replace(/\%/g, 'p').replace(/\s+/g, '-').replace(/\.+/g, 'dot-')
 
     const isValid = /^[a-zA-Z0-9-]+$/.test(id)
     this.id = isValid ? id : `css-${hash(id)}`
