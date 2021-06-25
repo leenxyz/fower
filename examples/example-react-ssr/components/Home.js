@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@fower/react'
+import { css } from '@emotion/css'
 
 export const Home = () => {
   const [theme, setTheme] = useState(false)
@@ -10,7 +11,9 @@ export const Home = () => {
         switch theme
       </Box>
       <Box row borderB-1 flex-4>
-        <Box flex-4>name</Box>
+        <Box flex-4 className={myClassName}>
+          name
+        </Box>
         <Box flex-8>address</Box>
       </Box>
       {userList.map((user) => {

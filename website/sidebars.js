@@ -45,7 +45,7 @@ module.exports = {
         'add-atom',
         'compose-atom',
         // 'plugin',
-        // 'ssr',
+        'ssr',
       ],
     },
 

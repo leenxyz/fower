@@ -1,8 +1,6 @@
 import express from 'express'
 import React from 'react'
-import { styleSheet } from '@fower/sheet'
-import { Box } from '@fower/react'
-import { atomCache } from '@fower/cache'
+import { Box, getAtomIds, getCssString } from '@fower/react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
@@ -15,29 +13,11 @@ app.use(express.static('public'))
 app.get('*', function (req, res) {
   let context = {}
 
-  const content = renderToString(
+  const html = renderToString(
     <StaticRouter location={req.path} context={context}>
       <div>{renderRoutes(routes)}</div>
     </StaticRouter>,
   )
-
-  const html = `
-    <html>
-      <head>
-        <title>测试</title>
-        <style data-fower="fower">${styleSheet.getStyle()}</style>
-      </head>
-      <body>
-        <div id="root">${content}</div>
-        <script>
-          window.fower = {
-            atomCache: ${JSON.stringify([...atomCache])}
-          }
-        </script>
-        <script src="/index.js"></script>
-      </body>
-    </html>
-  `
 
   if (context.action === 'REPLACE') {
     res.redirect(301, context.url)
@@ -46,7 +26,18 @@ app.get('*', function (req, res) {
   if (context.NotFound) {
     res.status(404)
   }
-  res.send(html)
+  res.send(`
+    <html>
+      <head>
+        <title>测试</title>
+        <style data-fower="${getAtomIds()}">${getCssString()}</style>
+      </head>
+      <body>
+        <div id="root">${html}</div>
+        <script src="/index.js"></script>
+      </body>
+    </html>
+  `)
 })
 
 app.listen(3000, function () {

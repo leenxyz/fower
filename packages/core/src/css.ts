@@ -7,7 +7,7 @@ import { argsToProps } from '@fower/utils'
  * @param args
  * @returns  classNames
  */
-export function css(...args: CSSArgs[]): string {
+export function css(...args: CSSArgs): string {
   if (!args.length) return ''
   const parser = new Parser(argsToProps(args))
   parser.insertRule()

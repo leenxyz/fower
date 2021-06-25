@@ -1,29 +1,17 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { styleSheet } from '@fower/sheet'
-import { getAtomIds } from '@fower/cache'
+import { ServerStyle, getAtomIds, getCssString } from '@fower/react'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
-  }
-
   render() {
     return (
       <Html>
         <Head>
-          <style data-fower={getAtomIds()}>{styleSheet.getStyle()}</style>
+          <style data-fower={getAtomIds()} dangerouslySetInnerHTML={{ __html: getCssString() }} />
+          {/* <ServerStyle /> */}
         </Head>
         <body>
           <Main />
           <NextScript />
-
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `window.SSR_ATOM_IDS = ${JSON.stringify(getAtomIds())}`,
-            }}
-          />
         </body>
       </Html>
     )

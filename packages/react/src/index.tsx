@@ -1,24 +1,32 @@
+import React from 'react'
 import { setConfig, injectGlobalStyle } from '@fower/core'
 import presetWeb from '@fower/preset-web'
+import { styleSheet } from '@fower/sheet'
+import { getAtomIds } from '@fower/cache'
+import { isBrowser } from '@fower/utils'
 
-export { jsx } from './jsx'
-export { Box, BoxComponent } from './Box'
+export * from './jsx'
+export * from './Box'
+export { getAtomIds }
 
-const serverCache = (globalThis as any).fower
+export function getCssString() {
+  return styleSheet.getStyle()
+}
 
-if (!serverCache) {
+export function ServerStyle() {
+  return <style data-fower={getAtomIds()} dangerouslySetInnerHTML={{ __html: getCssString() }} />
+}
+
+setConfig(presetWeb)
+
+// TODO: need refactor
+if (isBrowser) {
   injectGlobalStyle({
-    '*': {
-      border: '0 solid #ccc',
-      boxSizing: 'border-box',
-    },
-    '*::before': {
-      boxSizing: 'border-box',
-    },
-    '*::after': {
+    '*, ::before, ::after': {
+      borderWidth: 0,
+      borderStyle: 'solid',
+      borderColor: '#d4d4d4',
       boxSizing: 'border-box',
     },
   })
 }
-
-setConfig(presetWeb)

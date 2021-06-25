@@ -85,6 +85,22 @@ function toRuleContent(style: Dict) {
   return str
 }
 
+function toRule(rule: ParsedItem, wrapperSelector = '') {
+  const { selector, selectorType, style } = rule
+  const ruleContent = toRuleContent(style)
+
+  // not nested style
+  if (selectorType === 'void') {
+    const atomicClassName = objectToClassName(style) || wrapperSelector
+    return `.${atomicClassName} {${ruleContent}}`
+  }
+
+  const connector = selectorType === 'pseudo' ? '' : ' '
+  const finalSelector = wrapperSelector + connector + selector
+
+  return `${finalSelector} {${ruleContent}}`
+}
+
 /**
  *  to rules can insertRule
  *  TODO: need improve
@@ -94,23 +110,7 @@ function toRuleContent(style: Dict) {
  */
 export function toRules(cssObj: CSSObject, className?: string): string[] {
   const wrapperSelector = className ? `.${className}` : ''
-
   const parsed = parse(cssObj)
-
-  const rules = parsed.map(({ selector, selectorType, style }) => {
-    const ruleContent = toRuleContent(style)
-
-    // not nested style
-    if (selectorType === 'void') {
-      const atomicClassName = objectToClassName(style) || wrapperSelector
-      return `.${atomicClassName} {${ruleContent}}`
-    }
-
-    const connector = selectorType === 'pseudo' ? '' : ' '
-    const finalSelector = wrapperSelector + connector + selector
-
-    return `${finalSelector} {${ruleContent}}`
-  })
-
+  const rules = parsed.map((rule) => toRule(rule, wrapperSelector))
   return rules
 }
