@@ -81,8 +81,6 @@ export class Parser {
       }
     }
 
-    console.log('entries====:', entries)
-
     // traverse Props
     for (let [propKey, propValue] of entries) {
       // the prop should be excluded by user setting
