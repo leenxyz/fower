@@ -1,4 +1,11 @@
-import { ReactElement, createElement, ElementType, forwardRef, ComponentProps } from 'react'
+import {
+  ReactElement,
+  createElement,
+  ElementType,
+  forwardRef,
+  ComponentProps,
+  ReactNode,
+} from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
 import { store } from '@fower/store'
 import { upFirst, argsToProps } from '@fower/utils'
@@ -8,7 +15,7 @@ import { Parser } from '@fower/parser'
 export type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 
 export interface InjectedProps {
-  children?: any
+  children?: ReactNode
 }
 
 /**
@@ -40,7 +47,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 > {
   if (!component) return null as any
 
-  const StyledComponent = forwardRef((props: any = {}, ref) => {
+  const StyledComponent = forwardRef((props = {}, ref) => {
     const { inline } = store.config
     const prepareProps = { ...argsToProps(args), ...props }
 

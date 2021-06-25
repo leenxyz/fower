@@ -59,9 +59,17 @@ export function objectToClassName(style: Dict, prefix = 'css-') {
   return prefix + hashed
 }
 
+/**
+ * for styled(...) and css(...)
+ * @param args
+ * @returns
+ */
 export function argsToProps(args: any[]) {
   let obj = args.reduce(
     (result, cur) => {
+      if (typeof cur === 'string') {
+        if (cur !== 'className') result[cur] = true
+      }
       if (typeof cur !== 'object') return result
       if (Array.isArray(cur)) {
         for (const key of cur) {

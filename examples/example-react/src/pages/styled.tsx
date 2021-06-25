@@ -13,12 +13,13 @@ const Text = styled(
   },
 );
 
-export default () => {
-  return (
-    <Text bgYellow200 gray700>
-      styled text~~
-    </Text>
-  );
+export default function Styled() {
+  // return (
+  //   <Box bgYellow200 gray700 inlineBlock p4 m4>
+  //     <div>gogo</div>
+  //     styled text~~
+  //   </Box>
+  // );
   return (
     <Box toCenter h-100vh spaceX3 flexWrap>
       <Text p3 bgYellow200 gray700>
@@ -29,4 +30,4 @@ export default () => {
       </Box>
     </Box>
   );
-};
+}

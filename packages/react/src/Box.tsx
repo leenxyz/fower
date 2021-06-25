@@ -20,7 +20,7 @@ export interface BoxComponent<T extends As, P = any> {
 export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const { as = 'div', ...rest } = props as any
   const parser = new Parser(rest)
-  const parsedProps: any = parser.getParsedProps()
+  const parsedProps = parser.getParsedProps()
 
   const { inline } = store.config
 
@@ -34,12 +34,14 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
       }
     }
   } else {
-    parser.insertRule()
-    const finalClassName = parser.getClassNames().join(' ')
+    const finalClassName = parser.getClassNames().join(' ').trim()
 
     if (finalClassName) {
+      parser.insertRule()
       parsedProps.className = finalClassName
     }
   }
   return createElement(as, { ref, ...parsedProps })
 }) as any
+
+Box.displayName = 'BoxComponent'
