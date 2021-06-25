@@ -2,7 +2,7 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box toCenter h-100vh space3 flexWrap>
+    <Box toCenter h-100vh space3 flexWrap css={{}}>
       <Box square20 bgOrange400 rounded></Box>
       <Box square20 bgOrange400 roundedFull roundedTopRight-0--i></Box>
       <Box square20 bgOrange400 roundedFull roundedNone--hover></Box>

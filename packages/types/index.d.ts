@@ -52,6 +52,8 @@ declare namespace FowerTypes {
 
   type PseudosObject = { [P in CSS.Pseudos]?: FowerCSSProperties }
 
+  type AtomicArray = Array<keyof Omit<AtomicProps, keyof PostfixAtomicProps> | ({} & string)>
+
   type CSSObject<T = any> =
     | (FowerCSSProperties & PseudosObject)
     | {
@@ -59,6 +61,8 @@ declare namespace FowerTypes {
           ? CSSObject<T[K]>
           : FowerCSSProperties | number | string | boolean
       }
+
+  type StyledArgs = (AtomicArray | CSSObject)[]
 
   // type CSSObject<T = FowerCSSProperties> =
   //   | (FowerCSSProperties & PseudosObject)

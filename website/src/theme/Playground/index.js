@@ -20,20 +20,10 @@ function Header({ children }) {
 
 function ResultWithHeader() {
   return (
-    <>
-      <Header>
-        <Translate
-          id="theme.Playground.result"
-          description="The result label of the live codeblocks"
-        >
-          Result
-        </Translate>
-      </Header>
-      <div className={styles.playgroundPreview}>
-        <LivePreview />
-        <LiveError />
-      </div>
-    </>
+    <div className={styles.playgroundPreview}>
+      <LivePreview />
+      <LiveError />
+    </div>
   )
 }
 

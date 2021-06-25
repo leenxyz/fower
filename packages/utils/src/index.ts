@@ -58,3 +58,23 @@ export function objectToClassName(style: Dict, prefix = 'css-') {
   const hashed = hash(JSON.stringify(style))
   return prefix + hashed
 }
+
+export function argsToProps(args: any[]) {
+  let obj = args.reduce(
+    (result, cur) => {
+      if (typeof cur !== 'object') return result
+      if (Array.isArray(cur)) {
+        for (const key of cur) {
+          result[key] = true
+        }
+      } else {
+        result.css = { ...result.css, ...cur }
+      }
+      return result
+    },
+    { css: {} } as any,
+  )
+  const { css, ...rest } = obj
+
+  return { ...rest, css } // make css to lasted attr
+}

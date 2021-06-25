@@ -30,6 +30,7 @@ module.exports = {
         'keyframes',
         'dynamic-style',
         'programmable',
+        'styled',
         'reuse',
       ],
     },
