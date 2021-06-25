@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-transform",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,12 +22,12 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-transform.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.27.0",
-    "@fower/cache": "^1.27.0",
-    "@fower/core": "^1.27.0",
-    "@fower/parser": "^1.27.0",
-    "@fower/types": "^1.27.0",
-    "@fower/utils": "^1.27.0",
+    "@fower/atom": "^1.28.0",
+    "@fower/cache": "^1.28.0",
+    "@fower/core": "^1.28.0",
+    "@fower/parser": "^1.28.0",
+    "@fower/types": "^1.28.0",
+    "@fower/utils": "^1.28.0",
     "csstype": "^3.0.8"
   },
   "gitHead": "d941869ac2031099734aa3bef6ee52112698b1ee"

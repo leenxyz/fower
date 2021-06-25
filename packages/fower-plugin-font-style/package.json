@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-font-style",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-font-style.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.27.0",
-    "@fower/core": "^1.27.0",
-    "@fower/store": "^1.27.0",
-    "@fower/types": "^1.27.0",
-    "@fower/utils": "^1.27.0"
+    "@fower/atom": "^1.28.0",
+    "@fower/core": "^1.28.0",
+    "@fower/store": "^1.28.0",
+    "@fower/types": "^1.28.0",
+    "@fower/utils": "^1.28.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@fower/cache",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,6 +21,6 @@
   "author": "forsigner",
   "module": "dist/cache.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.27.0"
+    "@fower/atom": "^1.28.0"
   }
 }
