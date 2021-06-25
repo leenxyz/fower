@@ -43,39 +43,61 @@ function StyledAnyComponent() {
 }
 ```
 
-## Reuse style
+## With initial atomic props
 
-为了更好地复用样式，使用`styled`创建组件时，我们可以给组件初始化一些样式。
+In order to better reuse styles, when using `styled` to create a component, we can initialize some styles for the component.
 
-使用 modifier：
-
-```js
-const StyledItem = styled(Item, 'p-10 bgRed white text3XL')
+```jsx live
+function StyledDemo() {
+  const Item = styled('div', ['py4', 'px20', 'bgOrange300', 'bgGreen300--hover', 'fontBold'])
+  return (
+    <Box toEvenly>
+      <Item>A</Item>
+      <Item>B</Item>
+      <Item bgRed300>C</Item>
+    </Box>
+  )
+}
 ```
 
-如果 modifier 不能满足，你可以使用 CSS Object style：
+## Initial with object style
 
-```js
-const StyledItem = styled(Item, {
-  display: 'inline-block',
-  lineHeight: '30px',
-})
+```jsx live
+function StyledDemo() {
+  const Item = styled('div', {
+    py: '12',
+    px20: true,
+    bgOrange300: true,
+    'bgBlue300--hover': true,
+    text4XL: true,
+    textShadow: '1px 2px 2px #0cf',
+  })
+  return (
+    <Box toEvenly>
+      <Item>A</Item>
+      <Item>B</Item>
+      <Item bgRed300>C</Item>
+    </Box>
+  )
+}
 ```
 
-或者两种并存：
+## Both
 
-```js
-const StyledItem = styled(Item, 'p-10 bgRed white text3XL', {
-  display: 'inline-block',
-  lineHeight: '30px',
-})
-```
-
-或者接受多个参数:
-
-```js
-const StyledItem = styled(Item, 'p-10', 'bgRed', 'white', 'text3XL', {
-  display: 'inline-block',
-  lineHeight: '30px',
-})
+```jsx live
+function StyledDemo() {
+  const Item = styled('div', ['py4', 'px20', 'fontBold'], {
+    bgOrange300: true,
+    'bgBlue300--hover': true,
+    text4XL: true,
+    textShadow: '1px 2px 2px #0cf',
+  })
+  return (
+    <Box toEvenly>
+      <Item>A</Item>
+      <Item>B</Item>
+      <Item bgRed300>C</Item>
+    </Box>
+  )
+}
 ```

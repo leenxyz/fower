@@ -31,7 +31,6 @@ module.exports = {
         'dynamic-style',
         'programmable',
         'styled',
-        'reuse',
       ],
     },
 
