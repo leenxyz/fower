@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { createStyle, setTheme, keyframes } from '@fower/core'
+import { createStyle, setTheme, keyframes, injectGlobalStyle } from '@fower/core'
 import { styled } from '@fower/styled'
 import { Box } from '@fower/react'
 
@@ -18,6 +18,14 @@ const Button = styled(
 const Input = styled('input', 'border', 'rounded', 'px4', 'py2')
 
 import { addAtom } from '@fower/core'
+
+injectGlobalStyle({
+  '.title': {
+    fontWeight: 800,
+    fontSize: '20px',
+    color: 'hotpink',
+  },
+})
 
 addAtom('textHeading', {
   fontSize: 28,
@@ -102,6 +110,7 @@ const Wrapper = (props) => {
 const ReactLiveScope = {
   React,
   ...React,
+  injectGlobalStyle,
   ButtonExample,
   Button,
   Input,

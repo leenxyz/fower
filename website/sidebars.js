@@ -28,6 +28,7 @@ module.exports = {
         'pseudo',
         'responsive',
         'keyframes',
+        'global-style',
         'dynamic-style',
         'programmable',
         'styled',

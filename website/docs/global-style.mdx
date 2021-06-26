@@ -1,0 +1,23 @@
+---
+id: global-style
+title: Global style
+sidebar_label: Global style
+---
+
+Sometimes you might want to insert global css like resets or font faces. Use `injectGlobalStyle` to write global CSS, and `injectGlobalStyle` supports ssr.
+
+```jsx
+injectGlobalStyle({
+  '.title': {
+    fontWeight: 800,
+    fontSize: '20px',
+    color: 'hotpink',
+  },
+})
+```
+
+```jsx live
+<Box toCenter p4>
+  <div className="title">Heading</div>
+</Box>
+```
