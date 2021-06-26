@@ -39,6 +39,11 @@ export interface Meta {
   important?: boolean
 
   /**
+   * is global style, value is global selector
+   */
+  global?: string
+
+  /**
    * color name or value
    * @example
    * gray200--O20 -> gray200
@@ -63,7 +68,7 @@ export interface Options {
   propValue?: any
 
   key?: string
-  value?: string | number | boolean
+  value?: any
 
   meta?: Meta
 

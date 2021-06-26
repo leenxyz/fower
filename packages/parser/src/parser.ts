@@ -510,7 +510,7 @@ export class Parser {
 
     for (const atom of this.atoms) {
       let rule: string = ''
-      const { id, isValid, style = {} } = atom
+      const { id, isValid, style = {}, meta } = atom
 
       // no style in falsy prop
       if (!isValid) continue
@@ -524,7 +524,7 @@ export class Parser {
 
       atom.inserted = true
 
-      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector } = atom.meta
+      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector } = meta
 
       // TODO: need refactor
       const shouldUseUniqueClassName = !!this.atoms.find(
@@ -534,7 +534,7 @@ export class Parser {
         shouldUseUniqueClassName || atom.meta.breakpoint ? '.' + this.uniqueClassName : ''
 
       const className = this.getClassNameById(id)
-      let selector = `${uniqueSelector}.${className}`
+      let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
       if (pseudo) selector = selector + pseudoPrefix + pseudo
       if (mode) selector = `.${modePrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`

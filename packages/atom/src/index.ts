@@ -12,7 +12,7 @@ export { Options, Meta }
  * @example p-20,opacity-80
  */
 export const digitReg =
-  /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|stroke|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?-?\d+[a-z]*?|-auto)$/i
+  /^(m[xytrbl]?-?|p[xytrbl]?|space[xy]?|top-?|right-?|bottom-?|left-?|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex-?|leading|stroke|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?\d+[a-z]*?|-auto)$/i
 
 export class Atom {
   constructor(private readonly options: Options) {
@@ -114,7 +114,7 @@ export class Atom {
    * <Box m-4></Box> -> 4
    * <Box m4></Box> -> 16
    */
-  value: string = ''
+  value: any = ''
 
   meta: Meta
 
@@ -145,8 +145,15 @@ export class Atom {
     const { pseudoPrefix, childSelector, important, ...rest } = meta
     const values = Object.values(rest).sort()
     if (important) values.push('i')
-
     let id: string
+
+    // is global style
+    if (meta.global) {
+      id = hash(JSON.stringify(value)).toString()
+      this.id = id
+      return id
+    }
+
     if (typeof value === 'boolean' && value === true) {
       id = key
     } else if (Array.isArray(value)) {
