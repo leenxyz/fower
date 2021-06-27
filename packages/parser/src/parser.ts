@@ -3,7 +3,7 @@ import { store } from '@fower/store'
 import { atomCache } from '@fower/cache'
 import { formatColor } from '@fower/color-helper'
 import { styleSheet } from '@fower/sheet'
-import { Props, PropItem } from '@fower/types'
+import { Props } from '@fower/types'
 import { parse } from '@fower/css-object-processor'
 import {
   isEmptyObj,
@@ -42,8 +42,6 @@ export class Parser {
    * atom parsed from props
    */
   atoms: Atom[] = []
-
-  propList: PropItem[] = []
 
   get uniqueClassName() {
     return objectToClassName(Object.keys(this.props))

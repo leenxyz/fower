@@ -1,37 +1,15 @@
 import * as CSS from 'csstype'
-import { Atom, Meta } from '@fower/atom'
+import type { Atom, Meta } from '@fower/atom'
+import type { Parser } from '@fower/parser'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
 export as namespace FowerTypes
 
 declare namespace FowerTypes {
-  interface ParserInterface {
-    atoms: Atom[]
-
-    propList: PropItem[]
-
-    props: any
-
-    config: FowerTypes.Configuration
-
-    uniqueClassName: string
-
-    hasResponsive: boolean
-
-    addAtom(atom: Atom): void
-
-    getClassNames(): string[]
-
-    toStyle(): any
-
-    toRules(enableInserted?: boolean): string[]
-
-    getParsedProps(): any
-    insertRule(): any
-  }
-
   type FowerColor = CSS.Property.Color | keyof Colors
+
+  type FowerThemeColor = keyof Colors
 
   type As = React.ElementType
 
@@ -196,14 +174,6 @@ declare namespace FowerTypes {
     transformUnit?: (data: string | number) => string
   }
 
-  interface PropItem {
-    propKey: string
-    propValue: any
-    key: string
-    value: any
-    meta: Meta
-  }
-
   interface Props {
     style?: any
     className?: string
@@ -225,7 +195,7 @@ declare namespace FowerTypes {
      * @param propValue
      * @param parser
      */
-    beforeParseProps?(propKey: string, propValue: any, parser: ParserInterface): any
+    beforeParseProps?(propKey: string, propValue: any, parser: Parser): any
 
     /**
      * before handle atom
@@ -233,20 +203,20 @@ declare namespace FowerTypes {
      * @param atom
      * @param parser
      */
-    beforeHandleAtom?(atom: Atom, parser: ParserInterface): Atom
+    beforeHandleAtom?(atom: Atom, parser: Parser): Atom
 
     /**
      * on atom style creating
      * @param atom
      * @param parser
      */
-    handleAtom?(atom: Atom, parser: ParserInterface): Atom
+    handleAtom?(atom: Atom, parser: Parser): Atom
 
     /**
      * after atom style created
      * @param parser
      */
-    afterAtomStyleCreate?(parser: ParserInterface): void
+    afterAtomStyleCreate?(parser: Parser): void
   }
 
   interface Theme {

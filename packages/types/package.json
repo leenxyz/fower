@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@fower/atom": "^1.28.0",
+        "@fower/parser": "^1.28.0",
         "csstype": "^3.0.8"
     }
 }
