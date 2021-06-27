@@ -64,7 +64,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'fower-layout-introduction',
+          docId: 'layout-toolkit',
           position: 'left',
           label: 'Atoms',
         },

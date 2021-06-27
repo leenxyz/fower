@@ -1,0 +1,47 @@
+---
+id: about-atomic-props
+sidebar_label: About Atomic Props
+title: About Atomic Props
+---
+
+Inspired by [Atomic CSS](https://acss.io/) and [Tailwindcss](https://tailwindcss.com/), Fower uses Atomic props to write styles. So what are atomic properties? I think you must know CSS atomic classes. They look like this: `.p-2`, `.m-10`, `.bg-green`, `.flex`... Atomic properties and CSS atomic classes are very Similar, except that it is not written in className, but directly in Markup.
+
+Atomic props can be written in HTML:
+
+```jsx
+<div bgRed300 text3XL>
+  Fower
+</div>
+```
+
+It can also be written in custom components:
+
+```jsx live
+<Box bgRed300 text3XL>
+  Fower
+</Box>
+```
+
+To put it simply, the atomic props is the **style unit** that acts on the UI Markup.
+
+## Different with CSS atomic classes?
+
+As mentioned above, atomic properties and atomic classes are very similar. What is the difference between them? I think the biggest difference is: Atomic props are dynamic, while atomic classes are static.
+
+Let's take padding as an example. Its CSS atomic class can have `.p-1`, `.p-2`, `p-4`, `p-5`... It is an enumeration and is limited. Since CSS atomic classes are static, you need to write a lot of code. , Its CSS code is easy to swell, and a padding-related atomic class may require thousands of lines of code.
+
+## Different with inline style?
+
+- **Less code**, the amount of inline style code is larger, it is easy to make JSX messy, "Atomic props" retains the conciseness of JSX and is more readable.
+
+- **Style reuse**, use inline styles, styles cannot be reused, use "Atomic props", styles are reused, and the code size will not expand too much with the development of the project.
+
+## Why use Atomic props
+
+- **Scoped style**
+
+  The traditional CSS classes are global, and it is easy for styles to affect each other when developing in a team. Fower uses atomic attributes to write styles, and atomic attributes eventually generate unique atomic class names, and there is no problem of styles affecting each other.
+
+- **Design system**
+
+  It is easy to create a design system by using Atomic props.

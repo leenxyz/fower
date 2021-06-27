@@ -1,41 +1,47 @@
 ---
 id: faq-1
 sidebar_label: Why CSS in JS?
-title: 为什么选择CSS in JS？
+title: Why CSS in JS?
 ---
 
-## 天生的 Scoped 样式
+## Borned with scoped style
 
-传统基于类选择器的 CSS， 有一个被大家诟病的地方就是没有本地作用域，所有声明的样式都是全局生效的，这让大型项目的 CSS 编写和维护变得异常困难。为了解决这个问题，前端社区花了非常大的精力解决这个问题，比如 BEM/SMACSS/OOCSS 等 CSS 使用方法论，比如 Less/Sass/Stylus 等 CSS 预处理器。
+One aspect of traditional CSS based on class selectors is that there is no local scope, and all styles are globally effective, which makes it extremely difficult to write and maintain CSS for large projects. In order to solve this problem, the front-end community has spent a lot of energy to solve this problem, such as BEM/SMACSS/OOCSS and other methodologies, such as CSS preprocessors such as Less/Sass/Stylus.
 
-BEM/SMACSS/OOCSS 的问题在于它们只是约定，你很难让团队成员达成这些方法论的共识，并且长期完美的格遵循这些约定。
+The disadvantage of BEM/SMACSS/OOCSS is that they are just conventions. It is difficult for team members to reach consensus on these methodologies and follow these conventions perfectly for a long time.
 
-Less/Sass/Stylus 试图把编程能力带到 CSS，可惜带来的并不是真正的编程能力，反而让工具链变得复杂，而且扩展的语法也并不好用。
+Less/Sass/Stylus tried to bring programming ability to CSS, but it didn't bring real programming ability. Instead, it made the tool chain more complicated, and the extended syntax was not easy to use.
 
-CSS-in-JS 呢？ 它是天生的 Scoped 样式，它从机制上解决 CSS 作用域问题，而不是一些难以遵守的约定。
+What about CSS-in-JS? It is a natural scoped style, which solves the CSS scope problem mechanically, rather than relying on some difficult-to-observe conventions.
 
-## 消除无用代码
+## Dead Code Elimination
 
-由于 HTML 和 CSS 一般通过类名建立联系, 他们之间存在隐式关系，因此通常很难跟踪未使用的 CSS 样式，删除组件后，很难精确删除对应的 CSS，因为你会黑怕其他地方使用了样式，你会没信心删除，而且缺乏安全感。使用 CSS-in-JS，样式和结构的关系是显式的，样式和结构是绑定的，结构和样式的增加、修改、删除是同步，几乎不会出现死代码。
+Since HTML and CSS are generally connected through class names, and there is an implicit relationship between them, it is usually difficult to track unused CSS styles. After deleting components, it is difficult to accurately delete the corresponding CSS. Because you will be afraid of using styles elsewhere, you will have no confidence in deleting CSS code and feel insecure.
 
-特别是大型前端项目，使用传统的方法很容易让无用的 CSS 膨胀，越来越来越多，并且每人敢动，而使用 CSS-in-JS，不会出现无用代码。
+With CSS-in-JS, the relationship between style and structure is explicit, and style and structure are bound. The addition, modification, and deletion of structure and style code are synchronized, and there is almost no dead code.
 
-## 动态样式
+Especially for large front-end projects, it is easy to inflate useless CSS codes using traditional methods, and no one dares to modify these codes. With CSS-in-JS, there will be no dead code.
 
-根据应用的状态控制组件的样式，我们称之为动态样式。CSS-in-JS 非常强大的特性之一是基于状态的样式。传统的处理方式是，定义多个 CSS 类名，用 JS 根据应用状态改变 CSS 类名。这种处理方式的最大缺点: 样式的状态是脱离应用状态的上下文(Context)的，它通过 CSS 类名钩子关联，另外这种方式代码编写十分繁琐。使用 CSS-in-JS，样式规则直接根据应用状态生产，样式在状态的上下文中，你可以理解为 Style=f(State)，不用通过 CSS 类名这些中间人隐式地描述动态样式。
+## Dynamic style
 
-## 组件化
+The style of the component is controlled according to the state of the application, which we call dynamic style. One of the very powerful features of CSS-in-JS is state-based styles.
 
-曾经 Web 应用是基于页面 (Page)的，一个页面的实现通常由 HTML、JS、CSS 3 个文件组成，那时关注点分离是合理的。现在，前端进入了组件化时代，一个页面通常由多个组件组合完成，这时 CSS in JS 更适合组件化的场景。
+The traditional approach is to define multiple CSS class names, and use JS to change the CSS class names according to the application state. The biggest disadvantage of this approach: the state of the style is out of the context of the application (Context), it is related by the CSS class name hook, and the code writing in this way is very cumbersome.
 
-## 更好的开发体验
+With CSS-in-JS, style rules are directly produced according to the application state. The style is in the context of the state. You can understand it as Style=f(State). You don't need to use CSS class names to implicitly describe dynamic styles.
 
-你不需要写 CSS，只需写 JS，心智负担更小，而且可以配合 TypeScript，类型提示更加精准。 CSS-in-JS 使开发人员更具表现力，同时鼓励使用比级联更可维护的模式。在组件体系结构中，将多个组件的关注点放在一个地方就成为了当务之急。
+## Componentization
 
-## 强约束性
+Once web applications were based on pages. A page usually consisted of three files: HTML, JS, and CSS. At that time, separation of concerns was reasonable. Now, the front end has entered the era of componentization. A page is usually composed of multiple components. At this time, CSS in JS is more suitable for componentized scenarios.
 
-多年以来，前端开发人员一直在与 CSS 的各种方法论作斗争，比如 BEM/SMACSS/OOCSS，但在没有严格监督的情况下都很难落实和管理展。Fower 提供一种提约束的编写样式方法: Atomic Props，让每个人使用同样的方式编写样式。
+## Better development experience
 
-## 支持非浏览器，如 React Native, 小程序
+You don't need to write CSS, you only need to write JS, which reduces your mental burden. And with TypeScript, type hints are more accurate. CSS-in-JS makes developers more expressive and makes the code more maintainable.
 
-我们团队是 RN 的深度用户，使用 Fower 可以统一 UI 开发的体验。
+## Consistent coding style
+
+For many years, front-end developers have been struggling with various CSS methodologies, such as BEM/SMACSS/OOCSS, but it is difficult to implement and manage the exhibition without strict supervision. Fower provides a restrictive way of writing styles: Atomic Props, allowing everyone to use the same way to write styles.
+
+## Support non-browser, such as React Native, applet
+
+Our team is a deep user of RN, using Fower can unify the UI development experience.

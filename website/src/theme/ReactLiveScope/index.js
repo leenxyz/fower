@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import { createStyle, setTheme, keyframes, injectGlobalStyle } from '@fower/core'
+import { addAtom, composeAtom } from '@fower/core'
 import { styled } from '@fower/styled'
 import { Box } from '@fower/react'
 
@@ -17,8 +18,6 @@ const Button = styled(
 )
 const Input = styled('input', 'border', 'rounded', 'px4', 'py2')
 
-import { addAtom } from '@fower/core'
-
 injectGlobalStyle({
   '.title': {
     fontWeight: 800,
@@ -31,6 +30,16 @@ addAtom('textHeading', {
   fontSize: 28,
   fontWeight: 600,
   lineHeight: 1.5,
+})
+
+composeAtom('formInput', {
+  'border-2': true,
+  borderGray200: true,
+  'borderOrange400--focus': true,
+  rounded: true,
+  outlineNone: true,
+  px4: true,
+  py2: true,
 })
 
 addAtom(/heading(sm|md|lg)/i, (atom) => {

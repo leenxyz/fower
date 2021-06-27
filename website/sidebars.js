@@ -3,7 +3,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Introduction',
-      items: ['about', 'comparison', 'differences-with-tailwindcss'],
+      items: ['about', 'about-atomic-props', 'comparison', 'differences-with-tailwindcss'],
     },
     {
       type: 'category',
@@ -37,16 +37,28 @@ module.exports = {
 
     {
       type: 'category',
+      label: 'Cool Features',
+      items: [
+        'layout-toolkit',
+        'predictable-style',
+        'color-helper',
+        'composition-postfix',
+        'auto-dark-mode',
+      ],
+    },
+
+    {
+      type: 'category',
       label: 'Advanced',
       items: [
         'configuration',
         'theme-mode',
-        'color-helper',
-        'predictable-style',
         'add-atom',
         'compose-atom',
         // 'plugin',
         'ssr',
+        'typescript',
+        //  'intellisense'
       ],
     },
 
@@ -69,17 +81,12 @@ module.exports = {
 
     {
       type: 'category',
-      label: 'Tooling',
-      items: [
-        'typescript',
-        //  'intellisense'
-      ],
-    },
-
-    {
-      type: 'category',
       label: 'FAQs',
-      items: ['faq-1', 'faq-2', 'faq-3'],
+      items: [
+        'faq-1',
+        'faq-2',
+        // 'faq-3'
+      ],
     },
   ],
 
@@ -106,7 +113,6 @@ module.exports = {
       type: 'category',
       label: 'Layout Toolkit',
       items: [
-        'fower-layout-introduction',
         'to-center',
         'to-center-x',
         'to-center-y',

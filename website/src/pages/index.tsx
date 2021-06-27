@@ -89,7 +89,7 @@ const previews = [
     subject: 'Layout toolkit',
     description:
       'Fower provides a powerful Flexbox-based layout toolkit. By adjusting the direction and alignment of the layout, you can build most of the layout and make the layout easier.',
-    link: '/docs/fower-layout-introduction',
+    link: '/docs/layout-toolkit',
     tags: ['type-safe', 'effective'],
     code: `
 <Box toCenter bgGray100 p4>
