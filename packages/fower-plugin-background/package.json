@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-background",
-  "version": "1.28.0",
+  "version": "1.29.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-background.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.28.0",
-    "@fower/parser": "^1.28.0",
-    "@fower/types": "^1.28.0",
-    "@fower/utils": "^1.28.0"
+    "@fower/atom": "^1.29.0",
+    "@fower/parser": "^1.29.0",
+    "@fower/types": "^1.29.0",
+    "@fower/utils": "^1.29.0"
   }
 }
