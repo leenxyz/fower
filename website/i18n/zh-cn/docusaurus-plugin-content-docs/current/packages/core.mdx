@@ -102,19 +102,15 @@ export default () => {
 import { injectGlobalStyle } from '@fower/core'
 
 injectGlobalStyle({
+  '*, ::before, ::after': {
+    borderWidth: 0,
+    borderStyle: 'solid',
+    borderColor: '#d4d4d4',
+    boxSizing: 'border-box',
+  },
   html: {
     padding: 0,
     margin: 0,
-  },
-  '*': {
-    border: '0 solid #ccc',
-    boxSizing: 'border-box',
-  },
-  '*::before': {
-    boxSizing: 'border-box',
-  },
-  '*::after': {
-    boxSizing: 'border-box',
   },
 })
 ```

@@ -45,23 +45,6 @@ const pages = [
   'TextAlignment',
 ];
 
-injectGlobalStyle({
-  '*': {},
-  // body: {
-  //   margin: '0',
-  //   backgroundColor: 'red',
-  //   ':hover': {
-  //     backgroundColor: 'green',
-  //   },
-  // },
-  div: {
-    // backgroundColor: 'yellow',
-    ':hover': {
-      // backgroundColor: 'blue',
-    },
-  },
-});
-
 setConfig({
   // inline: true,
   pseudos: ['hover'],
