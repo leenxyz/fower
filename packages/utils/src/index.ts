@@ -16,7 +16,11 @@ export function downFirst(s: string = '') {
 }
 
 export function kebab(str: string) {
-  return downFirst(str).replace(/[A-Z]/g, (capital) => '-' + capital.toLowerCase())
+  return downFirst(str)
+    .replace(/[A-Z]/g, (capital) => {
+      return '-' + capital.toLowerCase()
+    })
+    .replace(/-+/g, '-')
 }
 
 export function camel(str: string) {
