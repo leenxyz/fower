@@ -8,8 +8,9 @@ export default (): FowerPlugin => {
   return {
     isMatch,
     handleAtom(atom) {
+      const key = atom.key.replace(/^justify/, 'justify-').replace(/^align/, 'align-')
       atom.style = {
-        [atom.key]: atom.value,
+        [key]: atom.value,
       }
       return atom
     },

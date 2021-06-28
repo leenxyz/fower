@@ -25,7 +25,4 @@ injectGlobalStyle({
     borderColor: '#d4d4d4',
     boxSizing: 'border-box',
   },
-  body: {
-    boxSizing: 'border-box',
-  },
 })

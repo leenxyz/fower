@@ -283,7 +283,7 @@ export class Parser {
     }
 
     const ssrAtomIds = styleSheet.getSsrAtomIds()
-    const { modes = {} } = this.config.theme.colors
+    const { modes = {} } = this.config.theme?.colors || {}
     const entries = Object.entries<any>(modes)
 
     /** for color mode */

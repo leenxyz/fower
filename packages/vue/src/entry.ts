@@ -16,20 +16,16 @@ function isVue2() {
   return false
 }
 
+setConfig(presetWeb)
+
 injectGlobalStyle({
-  '*': {
-    border: '0 solid #ccc',
-    boxSizing: 'border-box',
-  },
-  '*::before': {
-    boxSizing: 'border-box',
-  },
-  '*::after': {
+  '*, ::before, ::after': {
+    borderWidth: 0,
+    borderStyle: 'solid',
+    borderColor: '#d4d4d4',
     boxSizing: 'border-box',
   },
 })
-
-setConfig(presetWeb)
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

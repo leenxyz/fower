@@ -11,7 +11,7 @@ export function toStyle(key: string, value: any): any {
   /** display */
   if (key === 'display') return { display: value }
 
-  return { display: kebab(key) }
+  return { display: kebab(key.replace('inline', 'inline-')) }
 }
 
 export default (): FowerPlugin => {
