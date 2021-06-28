@@ -15,10 +15,16 @@ export function downFirst(s: string = '') {
   return s.replace(/^[A-Z]/, (g) => g.toLowerCase())
 }
 
-export function kebab(value: string) {
-  return downFirst(value).replace(/[A-Z]/g, (capital) => {
-    return '-' + capital.toLowerCase()
-  })
+export function kebab(str: string) {
+  return downFirst(str).replace(/[A-Z]/g, (capital) => '-' + capital.toLowerCase())
+}
+
+export function camel(str: string) {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) =>
+      index === 0 ? word.toLowerCase() : word.toUpperCase(),
+    )
+    .replace(/(\s+|-|_)/g, '')
 }
 
 /**

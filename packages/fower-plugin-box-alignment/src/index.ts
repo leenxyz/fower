@@ -1,4 +1,5 @@
 import { FowerPlugin } from '@fower/types'
+import { camel } from '@fower/utils'
 
 function isMatch(key: string) {
   return /^justify(Content|Items|Self)$|^align(Items|Content|Self)$/i.test(key)
@@ -10,7 +11,7 @@ export default (): FowerPlugin => {
     handleAtom(atom) {
       const key = atom.key.replace(/^justify/, 'justify-').replace(/^align/, 'align-')
       atom.style = {
-        [key]: atom.value,
+        [camel(key)]: atom.value,
       }
       return atom
     },
