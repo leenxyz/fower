@@ -1,5 +1,5 @@
 import React from 'react'
-import { setConfig, injectGlobalStyle } from '@fower/core'
+import { setConfig } from '@fower/core'
 import presetWeb from '@fower/preset-web'
 import { styleSheet } from '@fower/sheet'
 import { getAtomIds } from '@fower/cache'
@@ -17,12 +17,3 @@ export function ServerStyle() {
 }
 
 setConfig(presetWeb)
-
-injectGlobalStyle({
-  '*, ::before, ::after': {
-    borderWidth: 0,
-    borderStyle: 'solid',
-    borderColor: '#d4d4d4',
-    boxSizing: 'border-box',
-  },
-})

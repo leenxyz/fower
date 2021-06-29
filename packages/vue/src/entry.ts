@@ -1,4 +1,4 @@
-import { setConfig, injectGlobalStyle } from '@fower/core'
+import { setConfig } from '@fower/core'
 import { store } from '@fower/store'
 import presetWeb from '@fower/preset-web'
 import { PluginFunction } from 'vue'
@@ -17,15 +17,6 @@ function isVue2() {
 }
 
 setConfig(presetWeb)
-
-injectGlobalStyle({
-  '*, ::before, ::after': {
-    borderWidth: 0,
-    borderStyle: 'solid',
-    borderColor: '#d4d4d4',
-    boxSizing: 'border-box',
-  },
-})
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
