@@ -4,6 +4,8 @@ import presetWeb from '@fower/preset-web'
 import { styleSheet } from '@fower/sheet'
 import { getAtomIds } from '@fower/cache'
 
+setConfig(presetWeb)
+
 export * from './jsx'
 export * from './Box'
 export * from './useMode'
@@ -16,5 +18,3 @@ export function getCssString() {
 export function ServerStyle() {
   return <style data-fower={getAtomIds()} dangerouslySetInnerHTML={{ __html: getCssString() }} />
 }
-
-setConfig(presetWeb)

@@ -11,18 +11,17 @@ class Store {
   config = {
     unit: 'px',
     inline: false,
+    important: false,
+    mode: {
+      currentMode: 'light',
+      autoDarkMode: false,
+      supportedModes: ['light', 'dark'],
+      classPrefix: '',
+    },
     prefix: '',
     pseudos: [],
     theme: {
       breakpoints: {},
-      modes: [] as string[],
-      mode: {
-        // currentMode: isBrowser ? localStorage.getItem(modeCacheKey) : 'light',
-        currentMode: 'light',
-        supportedModes: ['light', 'dark'],
-        autoDarkMode: false,
-        classPrefix: '',
-      },
     } as Theme,
     plugins: [],
   } as Configuration
@@ -58,13 +57,12 @@ class Store {
   }
 
   getMode = (): string => {
-    return this.config.theme.mode?.currentMode || ''
+    return this.config.mode?.currentMode || ''
   }
 
   setMode = (mode: ModeType) => {
     if (!isBrowser) return
-    const { theme } = this.config
-    const { currentMode } = theme.mode
+    const { currentMode } = this.config.mode
     if (currentMode) {
       document.documentElement.classList.remove(currentMode)
     }
@@ -74,7 +72,7 @@ class Store {
 
     localStorage.setItem(modeCacheKey, mode)
 
-    this.setTheme({ mode: { currentMode: mode } })
+    this.setConfig({ mode: { currentMode: mode } })
   }
 
   use = (...plugins: FowerPlugin[]) => {

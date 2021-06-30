@@ -1,9 +1,7 @@
 import { Theme } from '@fower/types'
 import { colors } from '@fower/colors'
 
-export const theme: Partial<Theme> = {
-  modes: ['dark'],
-  modePrefix: '',
+export const theme = {
   breakpoints: {
     sm: '640px',
     md: '768px',
@@ -113,4 +111,4 @@ export const theme: Partial<Theme> = {
     extrabold: 800,
     black: 900,
   },
-}
+} as Theme

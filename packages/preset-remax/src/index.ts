@@ -6,7 +6,6 @@ import { theme } from './theme'
 export const presetRemax: Preset = {
   unit: 'rpx',
   inline: true,
-  autoDarkMode: false,
   theme: theme as Theme,
   plugins,
 }

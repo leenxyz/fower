@@ -33,7 +33,7 @@ export class Parser {
   constructor(public props = {} as Props) {
     this.traverseProps(props)
 
-    if (store.config.autoDarkMode) {
+    if (store.config.mode?.autoDarkMode) {
       this.autoDarkMode()
     }
   }
@@ -51,7 +51,7 @@ export class Parser {
     return !!this.atoms.find((i) => !!i.meta.breakpoint)
   }
 
-  get config(): any {
+  get config() {
     return store.config
   }
 
@@ -67,10 +67,11 @@ export class Parser {
   traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
-    const { pseudos = [], theme } = this.config
-    const { breakpoints, modes } = theme || {}
+    const { pseudos = [], theme, mode } = this.config
+    const { supportedModes } = mode
+    const breakpoints: any = theme.breakpoints || {}
     const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = modes || []
+    const modeKeys: string[] = supportedModes || []
     const pseudoKeys: string[] = pseudos
 
     const { excludedProps = [] } = props
@@ -502,7 +503,7 @@ export class Parser {
    * @returns
    */
   toRules(enableInserted = false): string[] {
-    const { modePrefix = '' } = this.config.theme
+    const { classPrefix = '' } = this.config.mode
     const rules: string[] = []
 
     // sort responsive style
@@ -538,15 +539,13 @@ export class Parser {
       const className = this.getClassNameById(id)
       let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
       if (pseudo) selector = selector + pseudoPrefix + pseudo
-      if (mode) selector = `.${modePrefix}${mode} ${selector}`
+      if (mode) selector = `.${classPrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)
     }
-
-    // console.log('this.atoms-----:', this.atoms)
 
     return rules
   }
@@ -559,7 +558,8 @@ export class Parser {
 
     /** ignore atomic prop */
     const parsedProps = entries.reduce<any>((result, [key, value]) => {
-      const find = atoms.find((atom) => [atom.propKey, atom.key, atom.id, 'css'].includes(key))
+      const find = atoms.find((atom) => [atom.propKey, atom.key, 'css'].includes(key))
+
       if (!find) result[key] = value
       return result
     }, {})

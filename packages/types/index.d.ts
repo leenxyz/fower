@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import type { Atom, Meta } from '@fower/atom'
+import type { Atom } from '@fower/atom'
 import type { Parser } from '@fower/parser'
 
 // tslint:disable-next-line:export-just-namespace
@@ -162,10 +162,26 @@ declare namespace FowerTypes {
      */
     important?: boolean
 
-    /**
-     * enable auto dark mode
-     */
-    autoDarkMode?: boolean
+    mode: {
+      /**
+       * @example
+       *  current: 'dark', default is light
+       */
+      currentMode: ModeType
+
+      /**
+       * enable auto dark mode
+       */
+      autoDarkMode?: boolean
+
+      /**
+       * @example
+       *  supportedModes: ['dark', 'yellow']
+       */
+      supportedModes: ModeType[]
+
+      classPrefix?: string // eg: fower-
+    }
 
     pseudos?: string[]
 
@@ -222,29 +238,6 @@ declare namespace FowerTypes {
   }
 
   interface Theme {
-    modes?: string[] // eg: modes: ['dark', 'yellow']
-    modePrefix?: string // eg: fower-
-    mode: {
-      /**
-       * @example
-       *  current: 'dark', default is light
-       */
-      currentMode: ModeType
-
-      /**
-       * @example
-       *  modes: ['dark', 'yellow']
-       */
-      supportedModes: ModeType[]
-
-      /**
-       * enable auto dark mode
-       */
-      autoDarkMode: boolean
-
-      classPrefix?: string // eg: fower-
-    }
-
     breakpoints: {
       sm: string
       md: string

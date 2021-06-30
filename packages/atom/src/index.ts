@@ -193,13 +193,14 @@ export class Atom {
   postfixPreprocessor() {
     const connector = '--'
     const specialPseudos = ['after', 'before', 'placeholder', 'selection']
-    const { pseudos = [], theme } = store.config
-    const { breakpoints, modes, spacings } = theme || {}
+    const { pseudos = [], theme, mode } = store.config
+    const { supportedModes } = mode
+    const { breakpoints, spacings } = theme
 
     const { propKey, propValue } = this
 
     const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = modes || []
+    const modeKeys: string[] = supportedModes || []
     const pseudoKeys: string[] = pseudos
 
     const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`
