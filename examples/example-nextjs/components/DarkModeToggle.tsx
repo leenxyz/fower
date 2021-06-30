@@ -1,17 +1,13 @@
-import { Box } from '@fower/react'
-import React, { useState } from 'react'
+import { Box, useMode } from '@fower/react'
+import React from 'react'
 
 export function DarkModeToggle() {
-  const [mode, setMode] = useState('Light')
+  const { mode, setMode } = useMode()
+
   function toggleMode() {
-    if (mode === 'Dark') {
-      setMode('Light')
-      document.documentElement.classList.remove('dark')
-    } else {
-      setMode('Dark')
-      document.documentElement.classList.add('dark')
-    }
+    setMode(mode === 'dark' ? 'light' : 'dark')
   }
+
   return (
     <Box
       as="button"
@@ -27,8 +23,8 @@ export function DarkModeToggle() {
       toCenter
     >
       <Box>Toggle mode</Box>
-      {mode === 'Dark' && '🌞'}
-      {mode === 'Light' && '🌜'}
+      {mode === 'dark' && '🌞'}
+      {mode === 'light' && '🌜'}
     </Box>
   )
 }

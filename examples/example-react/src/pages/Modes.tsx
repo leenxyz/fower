@@ -4,11 +4,13 @@ import { store } from '@fower/store';
 import { useState } from 'react';
 
 setTheme({
-  modes: [
-    'red', // red mode
-    'blue', // red mode
-    'large', // large text mode
-  ],
+  mode: {
+    supportedModes: [
+      'red', // red mode
+      'blue', // red mode
+      'large', // large text mode
+    ],
+  },
 });
 
 export default () => {

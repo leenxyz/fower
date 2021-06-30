@@ -3,7 +3,7 @@
   <div>
     <!-- <h1 class="text4XL" p1 red400 border-6>Hello, Vue</h1> -->
     <h1 red300>Hello, Vue x</h1>
-    <h1 red300 border inlineBlock  flexWrap>Hello, Vuexxx</h1>
+    <h1 red300 border inlineBlock flexWrap py-20>Hello, Vuexxx</h1>
     <div h-200 textXS toEvenly>
       <div bgGreen100 square-90 border class="red300">AAA</div>
       <div m4 toCenter square-100 bgOrange200>BBB</div>

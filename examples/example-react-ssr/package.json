@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:**",
-    "build": "npm-run-all --parallel build:**",
+    "build": "echo",
+    "build:prod": "npm-run-all --parallel build:**",
     "dev:build:server": "webpack --config webpack.server.js --watch",
     "dev:build:client": "webpack --config webpack.client.js --watch",
     "dev:start": "nodemon --watch build --exec node \"./build/bundle.js\"",

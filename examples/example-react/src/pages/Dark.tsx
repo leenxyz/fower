@@ -3,12 +3,14 @@ import { setTheme } from '@fower/core';
 import { useState } from 'react';
 
 setTheme({
-  // modePrefix: 'tw-',
-  modes: [
-    'red', // red mode
-    'blue', // red mode
-    'large', // large text mode
-  ],
+  mode: {
+    classPrefix: 'fower-',
+    supportedModes: [
+      'red', // red mode
+      'blue', // red mode
+      'large', // large text mode
+    ],
+  },
 });
 
 export default () => {

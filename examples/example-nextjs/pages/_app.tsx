@@ -3,7 +3,9 @@ import { setConfig } from '@fower/core'
 import '@fower/react'
 
 setConfig({
-  autoDarkMode: true,
+  mode: {
+    autoDarkMode: true,
+  },
 })
 
 function MyApp({ Component, pageProps }) {

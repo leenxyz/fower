@@ -112,11 +112,15 @@ By default, `dark mode` is built-in support in Fower, you can use `--dark` postf
 import { setTheme } from '@fower/core'
 
 setTheme({
-  modes: [
-    'red', // red mode
-    'blue', // red mode
-    'large', // large text mode
-  ],
+  mode: {
+    currentMode: 'light',
+    supportedModes: [
+      'red', // red mode
+      'blue', // red mode
+      'large', // large text mode
+    ],
+    classPrefix: '',
+  },
 })
 ```
 

@@ -31,7 +31,7 @@ composeAtom('formInput', {
   py2: true,
 });
 
-const MyText = styled('span', 'border', 'p-1', 'rounded', {
+const MyText = styled('span', ['border', 'p-1', 'rounded'], {
   display: 'flex',
 });
 

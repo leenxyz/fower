@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { createStyle, setTheme, keyframes, injectGlobalStyle } from '@fower/core'
+import { createStyle, setTheme, keyframes, injectGlobalStyle, setConfig } from '@fower/core'
 import { addAtom, composeAtom } from '@fower/core'
 import { styled } from '@fower/styled'
 import { Box } from '@fower/react'
@@ -60,12 +60,17 @@ addAtom(/heading(sm|md|lg)/i, (atom) => {
   return atom
 })
 
+setConfig({
+  mode: {
+    supportedMode: [
+      'red', // red mode
+      'blue', // red mode
+      'large', // large text mode
+    ],
+  },
+})
+
 setTheme({
-  modes: [
-    'red', // red mode
-    'blue', // red mode
-    'large', // large text mode
-  ],
   spacings: {
     100: 400,
   },
