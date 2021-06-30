@@ -1,6 +1,5 @@
 import { store } from '@fower/store'
 import { useState, useEffect } from 'react'
-import {} from 'react'
 interface Result {
   mode: string
   setMode: (mode: string) => void
@@ -11,7 +10,7 @@ export function useMode(): Result {
 
   useEffect(() => {
     const cacheMode = localStorage.getItem('fower-mode')
-    if (cacheMode) {
+    if (cacheMode && cacheMode !== store.config.mode.currentMode) {
       setMode(cacheMode)
     }
   }, [])

@@ -1,7 +1,6 @@
 import deepmerge from 'deepmerge'
 import { FowerPlugin, Configuration, Theme, CSSObject, ModeType } from '@fower/types'
 import { isBrowser } from '@fower/utils'
-import type { Atom } from '@fower/atom'
 import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
@@ -15,8 +14,24 @@ class Store {
     important: false,
     mode: {
       currentMode: 'light',
-      autoDarkMode: false,
-      supportedModes: ['light', 'dark'],
+      autoDarkMode: {
+        enabled: false,
+        mappings: {
+          white: 'black',
+          black: 'white',
+          '50': '900',
+          '100': '800',
+          '200': '700',
+          '300': '600',
+          '400': '500',
+          '500': '400',
+          '600': '300',
+          '700': '200',
+          '800': '100',
+          '900': '50',
+        },
+      },
+      modeList: ['light', 'dark'],
       classPrefix: '',
     },
     prefix: '',
@@ -27,7 +42,7 @@ class Store {
     plugins: [],
   } as Configuration
 
-  atomCache = new Map<string, Atom>()
+  atomCache = new Map<string, any>()
 
   getAtomIds = () => {
     return Array.from(this.atomCache.keys())

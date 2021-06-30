@@ -194,13 +194,13 @@ export class Atom {
     const connector = '--'
     const specialPseudos = ['after', 'before', 'placeholder', 'selection']
     const { pseudos = [], theme, mode } = store.config
-    const { supportedModes } = mode
+    const { modeList } = mode
     const { breakpoints, spacings } = theme
 
     const { propKey, propValue } = this
 
     const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = supportedModes || []
+    const modeKeys: string[] = modeList || []
     const pseudoKeys: string[] = pseudos
 
     const regResponsiveStr = `${connector}(${breakpointKeys.join('|')})`

@@ -170,15 +170,18 @@ declare namespace FowerTypes {
       currentMode: ModeType
 
       /**
-       * enable auto dark mode
+       * @example
+       *  modeList: ['dark', 'yellow']
        */
-      autoDarkMode?: boolean
+      modeList: ModeType[]
 
       /**
-       * @example
-       *  supportedModes: ['dark', 'yellow']
+       * enable auto dark mode
        */
-      supportedModes: ModeType[]
+      autoDarkMode: {
+        enabled: boolean
+        mappings: Record<string, string | boolean>
+      }
 
       classPrefix?: string // eg: fower-
     }
@@ -206,14 +209,6 @@ declare namespace FowerTypes {
 
   interface FowerPlugin {
     isMatch(key: string): boolean
-
-    /**
-     * handle props before parse
-     * @param propKey
-     * @param propValue
-     * @param parser
-     */
-    beforeParseProps?(propKey: string, propValue: any, parser: Parser): any
 
     /**
      * before handle atom

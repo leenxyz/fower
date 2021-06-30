@@ -1,5 +1,6 @@
 import { Atom, Options } from '@fower/atom'
 import { store } from '@fower/store'
+import { upFirst } from '@fower/utils'
 import { formatColor } from '@fower/color-helper'
 import { styleSheet } from '@fower/sheet'
 import { Props } from '@fower/types'
@@ -14,6 +15,8 @@ import {
 import { isUnitProp } from './is-unit-prop'
 
 type Dict = Record<string, any>
+
+const colorKeys = ['color', 'backgroundColor', 'borderColor']
 
 /**
  * @example p2,mx4,left10,spaceX4...
@@ -67,10 +70,10 @@ export class Parser {
     if (isEmptyObj(props)) return
 
     const { pseudos = [], theme, mode } = this.config
-    const { supportedModes } = mode
+    const { modeList } = mode
     const breakpoints: any = theme.breakpoints || {}
     const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = supportedModes || []
+    const modeKeys: string[] = modeList || []
     const pseudoKeys: string[] = pseudos
 
     const { excludedProps = [] } = props
@@ -148,67 +151,88 @@ export class Parser {
     }
   }
 
-  autoDarkMode() {
-    const colorMap: any = {
-      white: 'black',
-      black: 'white',
-      '50': '900',
-      '100': '800',
-      '200': '700',
-      '300': '600',
-      '400': '500',
-      '500': '400',
-      '600': '300',
-      '700': '200',
-      '800': '100',
-      '900': '50',
+  getAutoDarkModeAtom(atom: Atom): Atom | null {
+    if (atom.meta.mode) return null
+    if (!atom.style) return null
+
+    const entries = Object.entries(atom.style)
+    if (!entries?.length) return null
+
+    let options = {} as Options
+    let darkColor = ''
+
+    const { config } = store
+    const mappings: any = config.mode.autoDarkMode.mappings
+    const colors: any = config.theme.colors
+
+    const [colorKey, colorName] = entries[0] as [string, string]
+
+    // check is valid color key
+    if (!colorKeys.includes(colorKey)) return null
+
+    // only color in theme is valid
+    if (!colors[colorName]) return null
+
+    // if scale is existed, scale should be 100,200,300,400...
+    let [, , scale] = colorName.match(/^([a-z]+)(\d+)$/i) || []
+
+    // is disable, eg: { red200: false}
+    if (mappings[colorName] === false) return null
+
+    if (mappings[colorName]) {
+      darkColor = mappings[colorName]
+    } else {
+      darkColor = colorName.replace(scale, mappings[scale])
     }
+    const isColor = colorKey === 'color'
+    const isBgColor = colorKey === 'backgroundColor'
+    const isBorderColor = colorKey === 'borderColor'
 
-    const colorKeys = ['color', 'backgroundColor', 'borderColor']
-    const darkAtoms: Atom[] = []
-
-    /** TODO: hack for auto dark mode, need to refactor */
-    for (const atom of this.atoms) {
-      if (colorKeys.includes(atom.type) && !atom.meta.mode) {
-        const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
-        if (find) continue
-
-        const entries = Object.entries(atom.style)
-        if (!entries?.length) continue
-
-        const [, colorValue] = entries[0]
-
-        if (!colorValue) continue
-
-        let [, , mapKey] = colorValue.match(/^([a-z]+)(\d+)$/i) || []
-        if (['white', 'black'].includes(colorValue)) mapKey = colorValue
-        colorMap
-
-        let str = JSON.stringify(atom).replace(new RegExp(`${mapKey}`, 'g'), colorMap[mapKey])
-
-        if (mapKey === 'white') str = str.replace(/White/g, 'Black')
-        if (mapKey === 'black') str = str.replace(/Black/g, 'White')
-
-        const cloned: Atom = JSON.parse(str)
-
-        const darkAtom = new Atom({
-          ...cloned,
-          propKey: cloned.propKey + '--dark',
-          meta: { ...cloned.meta, mode: 'dark' },
-        })
-
-        const cachedAtom = store.atomCache.get(darkAtom.id)
-
-        if (cachedAtom) {
-          darkAtoms.push(cachedAtom)
-        } else {
-          darkAtoms.push(darkAtom)
-        }
+    if (colors[darkColor]) {
+      if (isColor) {
+        options.propKey = darkColor
+      } else if (isBgColor) {
+        options.propKey = `bg${upFirst(darkColor)}`
+      } else if (isBorderColor) {
+        options.propKey = `border${upFirst(darkColor)}`
+      }
+      options.propValue = true
+    } else {
+      if (isColor) {
+        options.propKey = 'color'
+        options.propValue = darkColor
+      } else if (isBgColor) {
+        options.propKey = 'bg'
+        options.propValue = darkColor
+      } else if (isBorderColor) {
+        options.propKey = 'borderColor'
+        options.propValue = darkColor
       }
     }
 
-    for (const darkAtom of darkAtoms) {
-      this.addAtom(darkAtom)
+    options.style = { [colorKey]: darkColor }
+
+    return new Atom({
+      ...options,
+      meta: { ...atom.meta, mode: 'dark' },
+    })
+  }
+
+  autoDarkMode() {
+    for (const atom of this.atoms) {
+      const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
+      if (find) continue
+
+      const darkAtom = this.getAutoDarkModeAtom(atom)
+      if (!darkAtom) continue
+
+      const cachedAtom = store.atomCache.get(darkAtom.id)
+
+      if (cachedAtom) {
+        this.addAtom(cachedAtom)
+      } else {
+        this.addAtom(darkAtom)
+      }
     }
   }
 
