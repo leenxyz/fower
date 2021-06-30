@@ -24,6 +24,8 @@ declare namespace FowerTypes {
 
   type PropValue = boolean | number | string
 
+  type ModeType = 'light' | 'dark' | ({} & string)
+
   type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 
   interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
@@ -222,6 +224,27 @@ declare namespace FowerTypes {
   interface Theme {
     modes?: string[] // eg: modes: ['dark', 'yellow']
     modePrefix?: string // eg: fower-
+    mode: {
+      /**
+       * @example
+       *  current: 'dark', default is light
+       */
+      currentMode: ModeType
+
+      /**
+       * @example
+       *  modes: ['dark', 'yellow']
+       */
+      supportedModes: ModeType[]
+
+      /**
+       * enable auto dark mode
+       */
+      autoDarkMode: boolean
+
+      classPrefix?: string // eg: fower-
+    }
+
     breakpoints: {
       sm: string
       md: string

@@ -15,6 +15,6 @@ injectGlobalStyle({
   },
 })
 
-const { setConfig, getConfig, setTheme, getTheme, addAtom, composeAtom } = store
+const { setConfig, getConfig, setTheme, getTheme, setMode, getMode, addAtom, composeAtom } = store
 
-export { setConfig, getConfig, setTheme, getTheme, addAtom, composeAtom }
+export { setConfig, getConfig, setTheme, getTheme, setMode, getMode, addAtom, composeAtom }

@@ -1,7 +1,7 @@
 import { Theme } from '@fower/types'
 import { colors } from '@fower/colors'
 
-export const theme: Theme = {
+export const theme: Partial<Theme> = {
   modes: ['dark'],
   modePrefix: '',
   breakpoints: {

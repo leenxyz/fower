@@ -22,6 +22,7 @@
   "module": "dist/store.esm.js",
   "dependencies": {
     "@fower/types": "^1.29.0",
+    "@fower/utils": "^1.29.0",
     "deepmerge": "^4.2.2"
   }
 }

@@ -6,6 +6,7 @@ import { getAtomIds } from '@fower/cache'
 
 export * from './jsx'
 export * from './Box'
+export * from './useMode'
 export { getAtomIds }
 
 export function getCssString() {

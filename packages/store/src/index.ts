@@ -1,8 +1,11 @@
 import deepmerge from 'deepmerge'
-import { FowerPlugin, Configuration, Theme, CSSObject } from '@fower/types'
+import { FowerPlugin, Configuration, Theme, CSSObject, ModeType } from '@fower/types'
+import { isBrowser } from '@fower/utils'
 import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
+
+const modeCacheKey = 'fower-mode'
 
 class Store {
   config = {
@@ -13,6 +16,13 @@ class Store {
     theme: {
       breakpoints: {},
       modes: [] as string[],
+      mode: {
+        // currentMode: isBrowser ? localStorage.getItem(modeCacheKey) : 'light',
+        currentMode: 'light',
+        supportedModes: ['light', 'dark'],
+        autoDarkMode: false,
+        classPrefix: '',
+      },
     } as Theme,
     plugins: [],
   } as Configuration
@@ -45,6 +55,26 @@ class Store {
 
   setTheme = (partialThemeConfig: PartialThemeConfig) => {
     this.config.theme = deepmerge(this.config.theme || {}, partialThemeConfig) as any
+  }
+
+  getMode = (): string => {
+    return this.config.theme.mode?.currentMode || ''
+  }
+
+  setMode = (mode: ModeType) => {
+    if (!isBrowser) return
+    const { theme } = this.config
+    const { currentMode } = theme.mode
+    if (currentMode) {
+      document.documentElement.classList.remove(currentMode)
+    }
+    if (mode) {
+      document.documentElement.classList.add(mode)
+    }
+
+    localStorage.setItem(modeCacheKey, mode)
+
+    this.setTheme({ mode: { currentMode: mode } })
   }
 
   use = (...plugins: FowerPlugin[]) => {

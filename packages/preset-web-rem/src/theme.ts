@@ -1,7 +1,7 @@
 import { Theme } from '@fower/types'
 import { colors } from '@fower/colors'
 
-export const theme: Theme = {
+export const theme: Partial<Theme> = {
   modes: ['dark'],
   breakpoints: {
     sm: '640px',
@@ -44,11 +44,9 @@ export const theme: Theme = {
     96: '24rem',
   },
   fontFamilies: {
-    sans:
-      'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+    sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
     serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-    mono:
-      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+    mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   },
   fontSizes: {
     xs: '0.75rem',

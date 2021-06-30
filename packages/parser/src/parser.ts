@@ -267,12 +267,16 @@ export class Parser {
       const posfix = important ? ' !important' : ''
       const colors: any = store.theme.colors
 
-      if (colorPostfix) {
-        value = formatColor(colors[value] || value, colorPostfix)
-      } else {
-        value = this.formatCssValue(cssKey, colors[value] || value)
+      try {
+        if (colorPostfix) {
+          value = formatColor(colors?.[value] || value, colorPostfix)
+        } else {
+          value = this.formatCssValue(cssKey, colors?.[value] || value)
+        }
+        return r + `${cssKey}: ${value}${posfix};`
+      } catch (error) {
+        return ''
       }
-      return r + `${cssKey}: ${value}${posfix};`
     }, '')
   }
 
