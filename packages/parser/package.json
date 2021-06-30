@@ -22,7 +22,6 @@
   "module": "dist/parser.esm.js",
   "dependencies": {
     "@fower/atom": "^1.29.0",
-    "@fower/cache": "^1.29.0",
     "@fower/css-object-processor": "^1.29.0",
     "@fower/sheet": "^1.29.0",
     "@fower/store": "^1.29.0",

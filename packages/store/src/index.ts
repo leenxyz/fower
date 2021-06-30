@@ -1,6 +1,7 @@
 import deepmerge from 'deepmerge'
 import { FowerPlugin, Configuration, Theme, CSSObject, ModeType } from '@fower/types'
 import { isBrowser } from '@fower/utils'
+import type { Atom } from '@fower/atom'
 import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
@@ -25,6 +26,12 @@ class Store {
     } as Theme,
     plugins: [],
   } as Configuration
+
+  atomCache = new Map<string, Atom>()
+
+  getAtomIds = () => {
+    return Array.from(this.atomCache.keys())
+  }
 
   // composed atomic props
   compositions = new Map<string, any>()

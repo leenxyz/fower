@@ -1,6 +1,5 @@
 import { Atom, Options } from '@fower/atom'
 import { store } from '@fower/store'
-import { atomCache } from '@fower/cache'
 import { formatColor } from '@fower/color-helper'
 import { styleSheet } from '@fower/sheet'
 import { Props } from '@fower/types'
@@ -198,7 +197,7 @@ export class Parser {
           meta: { ...cloned.meta, mode: 'dark' },
         })
 
-        const cachedAtom = atomCache.get(darkAtom.id)
+        const cachedAtom = store.atomCache.get(darkAtom.id)
 
         if (cachedAtom) {
           darkAtoms.push(cachedAtom)
@@ -283,8 +282,8 @@ export class Parser {
 
   addAtom(atom: Atom) {
     // if not cached, let's cache it
-    if (!atomCache.get(atom.id)) {
-      atomCache.set(atom.id, atom)
+    if (!store.atomCache.get(atom.id)) {
+      store.atomCache.set(atom.id, atom)
     }
 
     const ssrAtomIds = styleSheet.getSsrAtomIds()
@@ -352,7 +351,7 @@ export class Parser {
       }
     }
 
-    const cachedAtom = atomCache.get(atom.id)
+    const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
       this.addAtom(cachedAtom)
@@ -423,7 +422,7 @@ export class Parser {
         atom.handled = true
       }
 
-      const cachedAtom = atomCache.get(atom.id)
+      const cachedAtom = store.atomCache.get(atom.id)
 
       if (cachedAtom) {
         this.addAtom(cachedAtom)
