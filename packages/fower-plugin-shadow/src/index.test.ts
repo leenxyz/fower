@@ -37,10 +37,10 @@ test('shadow', () => {
   expect(atom.style.boxShadow).toEqual(store.theme.shadows['base'])
 })
 
-test('shadowMD', () => {
+test('shadowMedium', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'shadowMD',
+      propKey: 'shadowMedium',
       propValue: true,
     }),
     parser,

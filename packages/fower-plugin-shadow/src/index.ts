@@ -11,7 +11,7 @@ export function toStyle({ key, value, isValueProp }: Atom) {
   const styleValue = key.replace('shadow', '')
   const shadowSize = styleValue.toLowerCase()
   const shadows: any = store.getTheme().shadows
-  const shadowValue = shadows[shadowSize || 'base']
+  const shadowValue = shadows[shadowSize || 'medium']
   return { boxShadow: shadowValue }
 }
 

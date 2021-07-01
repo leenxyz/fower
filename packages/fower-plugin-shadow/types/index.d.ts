@@ -25,10 +25,10 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Box shadowSM></Box>
+     * <Box shadowTiny></Box>
      * ```
      */
-    shadowSM?: PropValue
+    shadowTiny?: PropValue
 
     /**
      * Set shadow
@@ -37,10 +37,10 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Box shadowMD></Box>
+     * <Box shadowMedium></Box>
      * ```
      */
-    shadowMD?: PropValue
+    shadowMedium?: PropValue
 
     /**
      * Set shadow
@@ -49,10 +49,10 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Box shadowLG></Box>
+     * <Box shadowLarge></Box>
      * ```
      */
-    shadowLG?: PropValue
+    shadowLarge?: PropValue
 
     /**
      * Set shadow
@@ -61,10 +61,10 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Box shadowXL></Box>
+     * <Box shadowHuge></Box>
      * ```
      */
-    shadowXL?: PropValue
+    shadowHuge?: PropValue
 
     /**
      * Set shadow
@@ -73,10 +73,10 @@ declare module '@fower/types' {
      *
      * @example
      * ```tsx
-     * <Box shadow2XL></Box>
+     * <Box shadowGigantic></Box>
      * ```
      */
-    shadow2XL?: PropValue
+    shadowGigantic?: PropValue
 
     /**
      * Set shadow
