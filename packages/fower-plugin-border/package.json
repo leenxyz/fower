@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-border",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,11 +22,11 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-border.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.29.0",
-    "@fower/color-helper": "^1.29.0",
-    "@fower/core": "^1.29.0",
-    "@fower/store": "^1.29.0",
-    "@fower/types": "^1.29.0",
-    "@fower/utils": "^1.29.0"
+    "@fower/atom": "^1.30.0",
+    "@fower/color-helper": "^1.30.0",
+    "@fower/core": "^1.30.0",
+    "@fower/store": "^1.30.0",
+    "@fower/types": "^1.30.0",
+    "@fower/utils": "^1.30.0"
   }
 }

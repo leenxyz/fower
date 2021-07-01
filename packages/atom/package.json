@@ -1,6 +1,6 @@
 {
   "name": "@fower/atom",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,7 +21,7 @@
   "author": "forsigner",
   "module": "dist/atom.esm.js",
   "dependencies": {
-    "@fower/store": "^1.29.0",
+    "@fower/store": "^1.30.0",
     "string-hash": "^1.1.3"
   }
 }
