@@ -12,8 +12,8 @@ const parser = new Parser({})
 
 test('isMatch', () => {
   expect(isMatch!('rounded')).toEqual(true)
-  expect(isMatch!('roundedT-10')).toEqual(true)
-  expect(isMatch!('roundedBL-10rem')).toEqual(true)
+  expect(isMatch!('roundedTop-10')).toEqual(true)
+  expect(isMatch!('roundedBottomLeft-10rem')).toEqual(true)
 })
 
 test('rounded={8}', () => {
@@ -35,37 +35,37 @@ test('rounded', () => {
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['base'])
+  expect(atom.style.borderRadius).toEqual(store.theme.radii['medium'])
 })
 
-test('roundedMD', () => {
+test('roundedMedium', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'roundedMD',
+      propKey: 'roundedMedium',
       propValue: true,
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderRadius).toEqual(store.theme.radii['medium'])
 })
 
-test('roundedTMD', () => {
+test('roundedTopMedium', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'roundedTMD',
+      propKey: 'roundedTopMedium',
       propValue: true,
     }),
     parser,
   )
 
-  expect(atom.style.borderTopLeftRadius).toEqual(store.theme.radii['md'])
-  expect(atom.style.borderTopRightRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderTopLeftRadius).toEqual(store.theme.radii['medium'])
+  expect(atom.style.borderTopRightRadius).toEqual(store.theme.radii['medium'])
 })
 
-test('roundedTR={8}', () => {
+test('roundedTopRight={8}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'roundedTR',
+      propKey: 'roundedTopRight',
       propValue: 8,
     }),
     parser,

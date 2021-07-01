@@ -50,7 +50,7 @@ export default () => {
   );
   return (
     <Box
-      rounded3XL
+      roundedGigantic
       text2XL
       _hover={['bgOrange300', 'border']}
       _md={['bgTeal400', 'text5XL']}

@@ -137,7 +137,7 @@ function CodePreview({ title, subject, description, link, code, tags = [] }) {
           Learn more {subject}
         </Box>
       </Box>
-      <Box overflow="hidden" roundedXL flex={1} textSM>
+      <Box overflow="hidden" roundedHuge flex={1} textSM>
         <LiveProvider code={code} scope={{ Box }} theme={theme}>
           <LivePreview style={{ width: '100%' }} />
           <LiveEditor

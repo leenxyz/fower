@@ -27,7 +27,7 @@ setConfig({
 export default () => {
   const { mode, setMode } = useMode();
   return (
-    <Box h-400 roundedLG p4 column toCenter spaceY3 bgWhite>
+    <Box h-400 roundedLarge p4 column toCenter spaceY3 bgWhite>
       <Box
         as="button"
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}

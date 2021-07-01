@@ -10,7 +10,7 @@ export default () => {
           src="https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*OGyZSI087zkAAAAAAAAAAABkARQnAQ"
           className={styles.logo}
         />
-        <View bgOrange400 p4 rounded2XL>
+        <View bgOrange400 p4 roundedGigantic>
           Hello Fower
         </View>
         <View className={styles.text}>

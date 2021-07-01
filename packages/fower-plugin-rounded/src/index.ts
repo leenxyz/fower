@@ -34,13 +34,13 @@ export function toStyle(atomKey: string, value: any) {
   const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 
   if (atomKey === 'rounded') {
-    const isBase = typeof value === 'boolean'
+    const isDefault = typeof value === 'boolean'
     return {
-      borderRadius: isBase ? radii['base'] : value,
+      borderRadius: isDefault ? radii.medium : value,
     }
   }
 
-  //  roundedNone|roundedSM|roundedXL|roundedFull...
+  //  roundedNone|roundedSmall|roundedLarge|roundedHuge...
   if (presetReg.test(atomKey)) {
     const [themeKey] = atomKey.match(presetReg) || []
 

@@ -15,7 +15,7 @@ export default () => {
   }
 
   return (
-    <Box h-400 roundedLG bgGray200 p4>
+    <Box h-400 roundedLarge bgGray200 p4>
       <Box red600>40 Lorem ipsum dolor sit amet</Box>
       <Box column toCenter spaceY3 gray800 textCenter>
         <Box
@@ -33,7 +33,7 @@ export default () => {
         >
           Toggle {mode}
         </Box>
-        <Box gray700 text3XL bgBlue300 p4 rounded2XL rounded--dark>
+        <Box gray700 text3XL bgBlue300 p4 roundedGigantic rounded--dark>
           Powerful Theme Mode
         </Box>
         <Box textSM>

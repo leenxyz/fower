@@ -232,7 +232,7 @@ table td {
   padding: 24px;
 }
 
-.roundedTopLG {
+.roundedTopLarge {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -264,7 +264,7 @@ table td {
   background-color: rgb(255, 255, 255);
 }
 
-.roundedXL {
+.roundedHuge {
   border-radius: 12px;
 }
 

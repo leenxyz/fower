@@ -29,14 +29,14 @@ declare module '@fower/types' {
      * ```
      */
     roundedFull?: boolean
-
     roundedNone?: boolean
-    roundedSM?: boolean
-    roundedMD?: boolean
-    roundedLG?: boolean
-    roundedXL?: boolean
-    rounded2XL?: boolean
-    rounded3XL?: boolean
+
+    roundedTiny?: boolean
+    roundedSmall?: boolean
+    roundedMedium?: boolean
+    roundedLarge?: boolean
+    roundedHuge?: boolean
+    roundedGigantic?: boolean
 
     /**
      * Set borderTopLeftRadius and borderTopRightRadius
@@ -54,12 +54,13 @@ declare module '@fower/types' {
 
     roundedTopFull?: boolean
     roundedTopNone?: boolean
-    roundedTopSM?: boolean
-    roundedTopMD?: boolean
-    roundedTopLG?: boolean
-    roundedTopXL?: boolean
-    roundedTop2XL?: boolean
-    roundedTop3XL?: boolean
+
+    roundedTopTiny?: boolean
+    roundedTopSmall?: boolean
+    roundedTopMedium?: boolean
+    roundedTopLarge?: boolean
+    roundedTopHuge?: boolean
+    roundedTopGigantic?: boolean
 
     /**
      * Set borderTopRightRadius and borderBottomRightRadius
@@ -77,12 +78,13 @@ declare module '@fower/types' {
 
     roundedRightFull?: boolean
     roundedRightNone?: boolean
-    roundedRightSM?: boolean
-    roundedRightMD?: boolean
-    roundedRightLG?: boolean
-    roundedRightXL?: boolean
-    roundedRight2XL?: boolean
-    roundedRight3XL?: boolean
+
+    roundedRightTiny?: boolean
+    roundedRightSmall?: boolean
+    roundedRightMedium?: boolean
+    roundedRightLarge?: boolean
+    roundedRightHuge?: boolean
+    roundedRightGigantic?: boolean
 
     /**
      * Set borderBottomLeftRadius and borderBottomRightRadius
@@ -100,12 +102,13 @@ declare module '@fower/types' {
 
     roundedBottomFull?: boolean
     roundedBottomNone?: boolean
-    roundedBottomSM?: boolean
-    roundedBottomMD?: boolean
-    roundedBottomLeftG?: boolean
-    roundedBottomXL?: boolean
-    roundedBottom2XL?: boolean
-    roundedBottom3XL?: boolean
+
+    roundedBottomTiny?: boolean
+    roundedBottomSmall?: boolean
+    roundedBottomMedium?: boolean
+    roundedBottomLarge?: boolean
+    roundedBottomHuge?: boolean
+    roundedBottomGigantic?: boolean
 
     /**
      * Set borderTopLeftRadius and borderBottomLeftRadius
@@ -123,12 +126,13 @@ declare module '@fower/types' {
 
     roundedLeftFull?: boolean
     roundedLeftNone?: boolean
-    roundedLeftSM?: boolean
-    roundedLeftMD?: boolean
-    roundedLeftLG?: boolean
-    roundedLeftXL?: boolean
-    roundedLeft2XL?: boolean
-    roundedLeft3XL?: boolean
+
+    roundedLeftTiny?: boolean
+    roundedLeftSmall?: boolean
+    roundedLeftMedium?: boolean
+    roundedLeftLarge?: boolean
+    roundedLeftHuge?: boolean
+    roundedLeftGigantic?: boolean
 
     /**
      * Set borderTopLeftRadius
@@ -146,12 +150,13 @@ declare module '@fower/types' {
 
     roundedTopLeftFull?: boolean
     roundedTopLeftNone?: boolean
-    roundedTopLeftSM?: boolean
-    roundedTopLeftMD?: boolean
-    roundedTopLeftLG?: boolean
-    roundedTopLeftXL?: boolean
-    roundedTopLeft2XL?: boolean
-    roundedTopLeft3XL?: boolean
+
+    roundedTopLeftTiny?: boolean
+    roundedTopLeftSmall?: boolean
+    roundedTopLeftMedium?: boolean
+    roundedTopLeftLarge?: boolean
+    roundedTopLeftHuge?: boolean
+    roundedTopLeftGigantic?: boolean
 
     /**
      * Set borderTopRightRadius
@@ -169,12 +174,13 @@ declare module '@fower/types' {
 
     roundedTopRightFull?: boolean
     roundedTopRightNone?: boolean
-    roundedTopRightSM?: boolean
-    roundedTopRightMD?: boolean
-    roundedTopRightLG?: boolean
-    roundedTopRightXL?: boolean
-    roundedTopRight2XL?: boolean
-    roundedTopRight3XL?: boolean
+
+    roundedTopRightTiny?: boolean
+    roundedTopRightSmall?: boolean
+    roundedTopRightMedium?: boolean
+    roundedTopRightLarge?: boolean
+    roundedTopRightHuge?: boolean
+    roundedTopRightGigantic?: boolean
 
     /**
      * Set borderBottomLeftRadius
@@ -189,13 +195,16 @@ declare module '@fower/types' {
      * ```
      */
     roundedBottomLeft?: PropValue
+
+    roundedBottomLeftFull?: boolean
     roundedBottomLeftNone?: boolean
-    roundedBottomLeftSM?: boolean
-    roundedBottomLeftMD?: boolean
-    roundedBottomLeftLG?: boolean
-    roundedBottomLeftXL?: boolean
-    roundedBottomLeft2XL?: boolean
-    roundedBottomLeft3XL?: boolean
+
+    roundedBottomLeftTiny?: boolean
+    roundedBottomLeftSmall?: boolean
+    roundedBottomLeftMedium?: boolean
+    roundedBottomLeftLarge?: boolean
+    roundedBottomLeftHuge?: boolean
+    roundedBottomLeftGigantic?: boolean
 
     /**
      * Set borderBottomRightRadius
@@ -210,12 +219,15 @@ declare module '@fower/types' {
      * ```
      */
     roundedBottomRight?: PropValue
+
+    roundedBottomRightFull?: boolean
     roundedBottomRightNone?: boolean
-    roundedBottomRightSM?: boolean
-    roundedBottomRightMD?: boolean
-    roundedBottomRightLG?: boolean
-    roundedBottomRightXL?: boolean
-    roundedBottomRight2XL?: boolean
-    roundedBottomRight3XL?: boolean
+
+    roundedBottomRightTiny?: boolean
+    roundedBottomRightSmall?: boolean
+    roundedBottomRightMedium?: boolean
+    roundedBottomRightLarge?: boolean
+    roundedBottomRightHuge?: boolean
+    roundedBottomRightGigantic?: boolean
   }
 }
