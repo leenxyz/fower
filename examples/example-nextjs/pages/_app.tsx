@@ -4,7 +4,9 @@ import '@fower/react'
 
 setConfig({
   mode: {
-    autoDarkMode: true,
+    autoDarkMode: {
+      enabled: true,
+    },
   },
 })
 

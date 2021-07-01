@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import { createStyle, setTheme, keyframes, injectGlobalStyle, setConfig } from '@fower/core'
 import { addAtom, composeAtom } from '@fower/core'
 import { styled } from '@fower/styled'
-import { Box } from '@fower/react'
+import { Box, useMode } from '@fower/react'
 
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled(
@@ -125,6 +125,7 @@ const ReactLiveScope = {
   React,
   ...React,
   injectGlobalStyle,
+  useMode,
   ButtonExample,
   Button,
   Input,

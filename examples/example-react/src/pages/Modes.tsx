@@ -1,11 +1,21 @@
-import { Box } from '@fower/react';
-import { setTheme, getTheme } from '@fower/core';
+import { Box, useMode } from '@fower/react';
+import { setConfig } from '@fower/core';
 import { store } from '@fower/store';
 import { useState } from 'react';
 
-setTheme({
+setConfig({
   mode: {
-    supportedModes: [
+    autoDarkMode: {
+      enabled: true,
+      mappings: {
+        // white: 'gray800',
+        // white: '#111826',
+        // white: false,
+        red300: '#fc0',
+        red100: 'green600',
+      },
+    },
+    modeList: [
       'red', // red mode
       'blue', // red mode
       'large', // large text mode
@@ -14,40 +24,47 @@ setTheme({
 });
 
 export default () => {
-  const [mode, setMode] = useState('default');
-  function toggleMode(mode: string) {
-    setMode(mode);
-    document.documentElement.classList.add(mode);
-    const modes = ['default', 'red', 'blue', 'large'];
-    document.documentElement.classList.remove(
-      ...modes.filter((i) => i !== mode),
-    );
-  }
+  const { mode, setMode } = useMode();
   return (
-    <Box h-400 roundedLG p4 column toCenter spaceY3>
-      <Box text2XL red400--red blue400--blue text6XL--large>
+    <Box h-400 roundedLG p4 column toCenter spaceY3 bgWhite>
+      <Box
+        as="button"
+        onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+        cursorPointer
+        bgGreen100
+        px4
+        py2
+        rounded
+        green800
+      >
+        Toggle
+      </Box>
+      <Box text2XL gray800 bgRed100>
+        Auto Dark Mode
+      </Box>
+      <Box text2XL black red400--red blue400--blue text6XL--large>
         Multiple theme mode
       </Box>
-      <Box toCenter spaceX2>
+      <Box toCenter spaceX2 black>
         <Box as="label" toCenter>
           <input
             type="radio"
             name="mode"
-            defaultChecked={mode === 'default'}
-            onClick={() => toggleMode('default')}
+            defaultChecked={mode === 'light'}
+            onClick={() => setMode('light')}
           />
           Default
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('red')} />
+          <input type="radio" name="mode" onClick={() => setMode('red')} />
           Red
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('blue')} />
+          <input type="radio" name="mode" onClick={() => setMode('blue')} />
           Blue
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('large')} />
+          <input type="radio" name="mode" onClick={() => setMode('large')} />
           Large text
         </Box>
       </Box>

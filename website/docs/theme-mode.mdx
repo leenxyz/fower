@@ -14,16 +14,12 @@ Why we call it **theme mode**? Because it's not just about **color**, you will l
 Now, Let's build a `dark` mode UI. How to write `dark` mode style? It's very simple, just add the `--dark` postfix to the Atomic props like `bgGray800--dark`, `white--dark`. The live demo:
 
 ```jsx live
+// import { useMode } from '@fower/react'
+
 function App() {
-  const [mode, setMode] = useState('Light')
+  const { mode, setMode } = useMode()
   function toggleMode() {
-    if (mode === 'Dark') {
-      setMode('Light')
-      document.documentElement.classList.remove('dark')
-    } else {
-      setMode('Dark')
-      document.documentElement.classList.add('dark')
-    }
+    setMode(mode === 'dark' ? 'light' : 'dark')
   }
   return (
     <Box h-300 roundedLG bgGray800--dark bgOrange100 p4 toCenter>
@@ -57,16 +53,11 @@ How to toggle theme mode? It's also very simple, just remove or add a `.dark` CS
 When change the theme mode, you can change any style for the app, not just the color style. For example, you can set `roundedFull--dark` in dark mode:
 
 ```jsx live
+// import { useMode } from '@fower/react'
 function App() {
-  const [mode, setMode] = useState('Light')
+  const { mode, setMode } = useMode()
   function toggleMode() {
-    if (mode === 'Dark') {
-      setMode('Light')
-      document.documentElement.classList.remove('dark')
-    } else {
-      setMode('Dark')
-      document.documentElement.classList.add('dark')
-    }
+    setMode(mode === 'dark' ? 'light' : 'dark')
   }
   return (
     <Box h-400 roundedLG bgGray800--dark bgOrange100 p4>
@@ -104,17 +95,17 @@ function App() {
 }
 ```
 
-## Config theme mode
+## Config mode
 
 By default, `dark mode` is built-in support in Fower, you can use `--dark` postfix with Atomic Props directly. You can customize theme mode by config theme 'modes' option:
 
 ```jsx
-import { setTheme } from '@fower/core'
+import { setConfig } from '@fower/core'
 
-setTheme({
+setConfig({
   mode: {
     currentMode: 'light',
-    supportedModes: [
+    modeList: [
       'red', // red mode
       'blue', // red mode
       'large', // large text mode
@@ -129,15 +120,10 @@ Then you can you `--red`, `--blue`, `--large` postfix with Atomic Props:
 <Modes />
 
 ```jsx
+// import { useMode } from '@fower/react'
 function App() {
-  const modes = ['default', 'red', 'blue', 'large']
-  const [mode, setMode] = useState('default')
-  function toggleMode(mode) {
-    setMode(mode)
+  const { mode, setMode } = useMode()
 
-    document.documentElement.classList.add(mode)
-    document.documentElement.classList.remove(...modes.filter((i) => i !== mode))
-  }
   return (
     <Box h-400 roundedLG p4 column toCenter spaceY3>
       <Box text2XL red400--red blue400--blue text6XL--large>
@@ -148,21 +134,21 @@ function App() {
           <input
             type="radio"
             name="mode"
-            defaultChecked={mode === 'default'}
-            onClick={() => toggleMode('default')}
+            defaultChecked={mode === 'light'}
+            onClick={() => setMode('light')}
           />
-          Default
+          Light
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('red')} />
+          <input type="radio" name="mode" onClick={() => setMode('red')} />
           Red
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('blue')} />
+          <input type="radio" name="mode" onClick={() => setMode('blue')} />
           Blue
         </Box>
         <Box as="label" toCenter>
-          <input type="radio" name="mode" onClick={() => toggleMode('large')} />
+          <input type="radio" name="mode" onClick={() => setMode('large')} />
           Large text
         </Box>
       </Box>

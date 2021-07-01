@@ -2,9 +2,13 @@
 <template>
   <div>
     <!-- <h1 class="text4XL" p1 red400 border-6>Hello, Vue</h1> -->
+    <span bgGreen200 mr-2 v-if="Math.random() > 0.5">Now you see me</span>
+    <span bgRed200 mr-4 v-else>Now you don't</span>
+
+    <span mr-2 class="majia"> mr-2 </span>
     <h1 red300>Hello, Vue x</h1>
-    <h1 red300 border inlineBlock flexWrap py-20>Hello, Vuexxx</h1>
-    <div h-200 textXS toEvenly>
+    <h1 red300 border>Hello, Vuexxx</h1>
+    <div h-200 textXS toEvenly title="">
       <div bgGreen100 square-90 border class="red300">AAA</div>
       <div m4 toCenter square-100 bgOrange200>BBB</div>
       <div class="border red100" toCenter bgBlue400 square-100 green400 white>CCC</div>

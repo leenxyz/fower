@@ -1,15 +1,17 @@
 import React from 'react'
 import { Box } from '@fower/react'
-import { setTheme } from '@fower/core'
+import { setConfig } from '@fower/core'
 import { store } from '@fower/store'
 import { useState } from 'react'
 
-setTheme({
-  modes: [
-    'red', // red mode
-    'blue', // red mode
-    'large', // large text mode
-  ],
+setConfig({
+  mode: {
+    modeList: [
+      'red', // red mode
+      'blue', // red mode
+      'large', // large text mode
+    ],
+  },
 })
 
 export const Modes = () => {

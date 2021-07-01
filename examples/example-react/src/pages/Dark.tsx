@@ -5,7 +5,7 @@ import { useState } from 'react';
 setTheme({
   mode: {
     classPrefix: 'fower-',
-    supportedModes: [
+    modeList: [
       'red', // red mode
       'blue', // red mode
       'large', // large text mode
