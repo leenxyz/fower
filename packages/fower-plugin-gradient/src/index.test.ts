@@ -1,19 +1,46 @@
+import { setConfig } from '@fower/core'
 import { Parser } from '@fower/parser'
+import { presetWeb } from '@fower/preset-web'
 import { Atom } from '@fower/atom'
-import plugin from '.'
+import plugin from './index'
 
 const { isMatch, handleAtom } = plugin()
-const parser = {} as Parser
+
+setConfig(presetWeb)
+const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('scale')).toEqual(true)
+  expect(isMatch!('gradientX')).toEqual(true)
+  expect(isMatch!('gradientY')).toEqual(true)
 })
 
-test('scale', () => {
+test('gradientX', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'scale',
-      propValue: '120',
+      propKey: 'gradientX',
+      propValue: ['red400', 'yellow400'],
+    }),
+    parser,
+  )
+  expect(atom.style.backgroundImage).toEqual('linear-gradient(to right, #ff8787,#ffd43b)')
+})
+
+test('gradientX', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'gradientY',
+      propValue: ['red400', 'yellow400'],
+    }),
+    parser,
+  )
+  expect(atom.style.backgroundImage).toEqual('linear-gradient(to bottom, #ff8787,#ffd43b)')
+})
+
+test('invalid propValue', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'gradientY',
+      propValue: 'wrong value',
     }),
     parser,
   )
