@@ -64,7 +64,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'layout-toolkit',
+          docId: 'to-center',
           position: 'left',
           label: 'Atoms',
         },

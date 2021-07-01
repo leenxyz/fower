@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@fower/react'
 import { HomeHighLight } from './HomeHighLight'
 
-const code = `<div toCenterY p3 w-240 bgWhite roundedHuge shadowMD>
+const code = `<div toCenterY p3 w-240 bgWhite roundedHuge shadowMedium>
   <img circle-48 src="/img/logo.png" />
   <div ml-10>
     <h2 textLeft textXL fontBold>
@@ -15,7 +15,7 @@ export function HomeDemo() {
   return (
     <div className="home-demo">
       <Box className="bgOrange100 p6 roundedTopLarge toCenter flex">
-        <Box className="toCenterY p3 w-240 bgWhite roundedHuge shadowMD">
+        <Box className="toCenterY p3 w-240 bgWhite roundedHuge shadowMedium">
           <img className="circle-48" src="/img/logo.png" />
           <Box className="ml-10">
             <Box className="textLeft textXL fontBold">Fower</Box>

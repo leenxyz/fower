@@ -7,29 +7,29 @@ export default () => {
         Shadow
       </Box>
 
-      <Box py-50 row toEvenly>
-        <Box bgWhite square-128 rounded-4 toCenter shadowSM>
-          shadowSM
+      <Box py-50 row toEvenly flexWrap>
+        <Box bgWhite square-128 rounded-4 toCenter shadowTiny>
+          shadowTiny
         </Box>
 
         <Box bgWhite square-128 rounded-4 toCenter shadow>
           Base
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowMD>
-          shadowMD
+        <Box bgWhite square-128 rounded-4 toCenter shadowMedium>
+          shadowMedium
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowLG>
-          shadowLG
+        <Box bgWhite square-128 rounded-4 toCenter shadowLarge>
+          shadowLarge
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowXL>
-          shadowXL
+        <Box bgWhite square-128 rounded-4 toCenter shadowHuge>
+          shadowHuge
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadow2XL>
-          shadow2XL
+        <Box bgWhite square-128 rounded-4 toCenter shadowGigantic>
+          shadowGigantic
         </Box>
 
         <Box bgWhite square-128 rounded-4 toCenter shadowInner>

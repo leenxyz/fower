@@ -5,18 +5,19 @@ title: Border Radius
 
 Atomic props for controlling the border radius of an element.
 
-| Atomic Props                              | CSS Properties                                                               |
-| ----------------------------------------- | ---------------------------------------------------------------------------- |
-| rounded-{value} / rounded={value}         | border-radius: {value};                                                      |
-| roundedFull-{value} / roundedFull={value} | border-radius: 9999px;                                                       |
-| roundedT-{value} / roundedT={value}       | border-top-left-radius: {value};<br/>border-top-right-radius: {value};       |
-| roundedR-{value} / roundedR={value}       | border-top-right-radius: {value};<br/>border-bottom-right-radius: {value};   |
-| roundedB-{value} / roundedB={value}       | border-bottom-left-radius: {value};<br/>border-bottom-right-radius: {value}; |
-| roundedL-{value} / roundedL={value}       | border-top-left-radius: {value};<br/>border-bottom-left-radius: {value};     |
-| roundedTL-{value} / roundedTL={value}     | border-top-left-radius: {value};                                             |
-| roundedTR-{value} / roundedTR={value}     | border-top-right-radius: {value};                                            |
-| roundedBL-{value} / roundedBL={value}     | border-bottom-left-radius: {value};                                          |
-| roundedBR-{value} / roundedBR={value}     | border-bottom-right-radius: {value};                                         |
+| Atomic Props                                            | CSS Properties                                                               |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| rounded-{value} / rounded={value}                       | border-radius: {value};                                                      |
+| roundedFull                                             | border-radius: 9999px;                                                       |
+| roundedNone                                             | border-radius: none;                                                         |
+| roundedTop-{value} / roundedTop={value}                 | border-top-left-radius: {value};<br/>border-top-right-radius: {value};       |
+| roundedRight-{value} / roundedRight={value}             | border-top-right-radius: {value};<br/>border-bottom-right-radius: {value};   |
+| roundedBottom-{value} / roundedBottom={value}           | border-bottom-left-radius: {value};<br/>border-bottom-right-radius: {value}; |
+| roundedLeft-{value} / roundedLeft={value}               | border-top-left-radius: {value};<br/>border-bottom-left-radius: {value};     |
+| roundedTopLeft-{value} / roundedTopLeft={value}         | border-top-left-radius: {value};                                             |
+| roundedTopRight-{value} / roundedTopRight={value}       | border-top-right-radius: {value};                                            |
+| roundedBottomLeft-{value} / roundedBottomLeft={value}   | border-bottom-left-radius: {value};                                          |
+| roundedBottomRight-{value} / roundedBottomRight={value} | border-bottom-right-radius: {value};                                         |
 
 ## Rounded corners
 
@@ -33,27 +34,27 @@ Use `rounded-{size}` to set rounded corner of an element.
 
 ## One sides corners
 
-Use `rounded{T|R|B|L}-{size}` to set one side corner of an element.
+Use `rounded{Top|Right|Bottom|Left}-{size}` to set one side corner of an element.
 
 ```jsx live
 <Box toEvenly>
-  <Box square-100 bgYellow200 roundedT-20></Box>
-  <Box square-100 bgRed200 roundedR-20></Box>
-  <Box square-100 bgGreen200 roundedB-20></Box>
-  <Box square-100 bgBlue200 roundedL-20></Box>
+  <Box square-100 bgYellow200 roundedTop-20></Box>
+  <Box square-100 bgRed200 roundedRight-20></Box>
+  <Box square-100 bgGreen200 roundedBottom-20></Box>
+  <Box square-100 bgBlue200 roundedLeft-20></Box>
 </Box>
 ```
 
 ## Single cornner
 
-Use `rounded{TL|TR|BL|BR}-{size}` to single corner of an element.
+Use `rounded{TopLeft|TopRight|BottomLeft|BottomRight}-{size}` to single corner of an element.
 
 ```jsx live
 <Box toEvenly>
-  <Box square-100 bgYellow200 roundedTL-20></Box>
-  <Box square-100 bgRed200 roundedTR-20></Box>
-  <Box square-100 bgGreen200 roundedBL-20></Box>
-  <Box square-100 bgBlue200 roundedBR-20></Box>
+  <Box square-100 bgYellow200 roundedTopLeft-20></Box>
+  <Box square-100 bgRed200 roundedTopRight-20></Box>
+  <Box square-100 bgGreen200 roundedBottomLeft-20></Box>
+  <Box square-100 bgBlue200 roundedBottomRight-20></Box>
 </Box>
 ```
 
@@ -65,5 +66,15 @@ Use the `roundedFull` props to create pills and circles.
 <Box toEvenly>
   <Box w-200 h-100 bgYellow200 roundedFull></Box>
   <Box square-100 bgYellow200 roundedFull></Box>
+</Box>
+```
+
+## roundedNone
+
+Use the `roundedNone` props to set none rounded.
+
+```jsx live
+<Box toEvenly>
+  <Box square-100 bgYellow200 roundedNone></Box>
 </Box>
 ```
