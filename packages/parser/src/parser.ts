@@ -35,7 +35,7 @@ export class Parser {
   constructor(public props = {} as Props) {
     this.traverseProps(props)
 
-    if (store.config.mode?.autoDarkMode) {
+    if (store.config.mode?.autoDarkMode?.enabled) {
       this.autoDarkMode()
     }
   }
@@ -544,12 +544,6 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      if (!enableInserted) {
-        if (atom.inserted) continue
-      }
-
-      atom.inserted = true
-
       const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector } = meta
 
       // TODO: need refactor
@@ -558,6 +552,14 @@ export class Parser {
       )
       const uniqueSelector =
         shouldUseUniqueClassName || atom.meta.breakpoint ? '.' + this.uniqueClassName : ''
+
+      if (!enableInserted) {
+        if (!shouldUseUniqueClassName) {
+          if (atom.inserted) continue
+        }
+      }
+
+      atom.inserted = true
 
       const className = this.getClassNameById(id)
       let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
@@ -569,6 +571,7 @@ export class Parser {
 
       rules.push(rule)
     }
+    // console.log('this.atoms---', this.atoms)
 
     return rules
   }
@@ -581,6 +584,9 @@ export class Parser {
 
     /** ignore atomic prop */
     const parsedProps = entries.reduce<any>((result, [key, value]) => {
+      // ignore prop with  postfix
+      if (/.*--(\d+)?[a-z]+$/i.test(key)) return result
+
       const find = atoms.find((atom) => [atom.propKey, atom.key, 'css'].includes(key))
 
       if (!find) result[key] = value

@@ -3,4 +3,22 @@ id: composition-postfix
 title: Composition Postfix
 ---
 
-wip...
+Fower proveders some postfix to handle style, there is four type postfix:
+
+- **pseudo**, like: `--hover`, `--focus`, `--active`...
+- **color**, like: `--D30`, `--L20`, `--T60`, `--O20`...
+- **responsive**, like: `--sm`, `--md`, `--lg`...
+- **mode**, like: `--dark`, `--red`, `--green`...
+- **important**, just `--i`;
+
+One cool feature of Fower is Composition Postfix. You can combine some postfix, and The order is arbitrary:
+
+```jsx live
+<Box square-84 bgOrange300 bgOrange400--D10--hover--sm></Box>
+```
+
+The below code is equal above:
+
+```jsx live
+<Box square-84 bgOrange300 bgOrange400--hover--sm--D10></Box>
+```
