@@ -1,5 +1,4 @@
 import { setConfig } from '@fower/core'
-import { store } from '@fower/store'
 import { presetWeb } from '@fower/preset-web'
 import { Atom } from '../src'
 
@@ -9,14 +8,14 @@ beforeAll(() => {
 
 test('meta of normal prop is empty', () => {
   const atom = new Atom({ propKey: 'p10', propValue: true })
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.meta).toMatchObject({})
   expect(atom.key).toEqual('p')
 })
 
 test('false prop', () => {
   const atom = new Atom({ propKey: 'p10', propValue: false })
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.handled).toBeTruthy()
   expect(atom.isValid).toBeFalsy()
 })
@@ -26,16 +25,18 @@ test('if pseudo, meta.pseudo should be truthy', () => {
     propKey: 'toCenter--hover',
     propValue: true,
   })
-  atom.postfixPreprocessor(store.config)
-  expect(atom.meta.pseudo).toEqual(':hover')
+  atom.postfixPreprocessor()
+  expect(atom.meta.pseudo).toEqual('hover')
+  expect(atom.meta.pseudoPrefix).toEqual(':')
   expect(atom.key).toEqual('toCenter')
 
   const atom2 = new Atom({
     propKey: 'toCenter--after',
     propValue: true,
   })
-  atom2.postfixPreprocessor(store.config)
-  expect(atom2.meta.pseudo).toEqual('::after')
+  atom2.postfixPreprocessor()
+  expect(atom2.meta.pseudo).toEqual('after')
+  expect(atom2.meta.pseudoPrefix).toEqual('::')
   expect(atom2.key).toEqual('toCenter')
 })
 
@@ -45,7 +46,7 @@ test('if mode, meta.mode should be truthy', () => {
     propValue: true,
   })
 
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.meta.mode).toEqual('dark')
   expect(atom.key).toEqual('p')
 })
@@ -55,7 +56,7 @@ test('if responsive, meta.breakpoint should be truthy', () => {
     propKey: 'p10--sm',
     propValue: true,
   })
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.meta.breakpoint).toEqual('640px')
   expect(atom.key).toEqual('p')
 })
@@ -66,7 +67,7 @@ test('if important, meta.important should be truthy', () => {
     propValue: true,
   })
 
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.meta.important).toBeTruthy()
   expect(atom.key).toEqual('p')
 })
@@ -77,9 +78,10 @@ test('compose postfix', () => {
     propValue: true,
   })
 
-  atom1.postfixPreprocessor(store.config)
+  atom1.postfixPreprocessor()
   expect(atom1.meta.mode).toEqual('dark')
-  expect(atom1.meta.pseudo).toEqual(':hover')
+  expect(atom1.meta.pseudo).toEqual('hover')
+  expect(atom1.meta.pseudoPrefix).toEqual(':')
   expect(atom1.meta.breakpoint).toEqual('640px')
   expect(atom1.meta.important).toEqual(true)
   expect(atom1.key).toEqual('p')
@@ -88,9 +90,10 @@ test('compose postfix', () => {
     propKey: 'red200--dark--i--sm--hover--T20',
     propValue: true,
   })
-  atom2.postfixPreprocessor(store.config)
+  atom2.postfixPreprocessor()
   expect(atom2.meta.mode).toEqual('dark')
-  expect(atom2.meta.pseudo).toEqual(':hover')
+  expect(atom2.meta.pseudo).toEqual('hover')
+  expect(atom2.meta.pseudoPrefix).toEqual(':')
   expect(atom2.meta.breakpoint).toEqual('640px')
   expect(atom2.meta.important).toEqual(true)
   expect(atom2.meta.colorPostfix).toEqual('T20')
@@ -103,7 +106,7 @@ test('if color postfix, meta.colorPostfix should be truthy', () => {
     propValue: true,
   })
 
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
   expect(atom.meta.colorPostfix).toEqual('T20')
   expect(atom.key).toEqual('red200')
 })
@@ -113,7 +116,7 @@ test('if color postfix in propValue', () => {
     propKey: 'color',
     propValue: 'red200--T20',
   })
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
 
   expect(atom.value).toEqual('red200')
   expect(atom.meta.colorPostfix).toEqual('T20')
@@ -125,7 +128,7 @@ test('no match plugin', () => {
     propKey: 'hello--hover',
     propValue: true,
   })
-  atom.postfixPreprocessor(store.config)
+  atom.postfixPreprocessor()
 
   expect(atom.handled).toBeFalsy()
 })

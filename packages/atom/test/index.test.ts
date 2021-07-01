@@ -21,7 +21,7 @@ test('atom.id with <Box p-10={false}></Box>', () => {
     propKey: 'p-10',
     propValue: false,
   })
-  expect(atom.id).toEqual('p-10-false')
+  expect(atom.id).toEqual('p-10--false')
   expect(atom.isValueProp).toBeFalsy()
 })
 

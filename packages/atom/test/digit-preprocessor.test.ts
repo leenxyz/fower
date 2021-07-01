@@ -1,11 +1,9 @@
 import { Atom, digitReg } from '../src'
+import { setConfig } from '@fower/core'
+import { presetWeb } from '@fower/preset-web'
 
-let spacings: any
-
-beforeEach(() => {
-  spacings = {
-    1: 4,
-  }
+beforeAll(() => {
+  setConfig(presetWeb)
 })
 
 test('process <Box p-10 />', () => {
@@ -13,7 +11,7 @@ test('process <Box p-10 />', () => {
     propKey: 'p-10',
     propValue: true,
   })
-  const newAtom = atom.digitPreprocessor(spacings)
+  const newAtom = atom.digitPreprocessor()
   expect(newAtom.key).toEqual('p')
   expect(newAtom.value).toEqual('10')
 })
@@ -23,7 +21,7 @@ test('process <Box m-10rem />, with unit', () => {
     propKey: 'm-10rem',
     propValue: true,
   })
-  const newAtom = atom.digitPreprocessor(spacings)
+  const newAtom = atom.digitPreprocessor()
   expect(newAtom.key).toEqual('m')
   expect(newAtom.value).toEqual('10rem')
 })
@@ -33,7 +31,7 @@ test('process <Box p1 /> with spacings', () => {
     propKey: 'p1',
     propValue: true,
   })
-  const newAtom = atom.digitPreprocessor(spacings)
+  const newAtom = atom.digitPreprocessor()
   expect(newAtom.key).toEqual('p')
   expect(newAtom.value).toEqual(4)
 })
@@ -43,7 +41,7 @@ test('propKey is not matched', () => {
     propKey: 'textFoo',
     propValue: true,
   })
-  const newAtom = atom.digitPreprocessor(spacings)
+  const newAtom = atom.digitPreprocessor()
   expect(newAtom.key).toEqual(atom.propKey)
 })
 

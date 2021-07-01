@@ -195,7 +195,7 @@ export class Atom {
     const specialPseudos = ['after', 'before', 'placeholder', 'selection']
     const { pseudos = [], theme, mode } = store.config
     const { modeList } = mode
-    const { breakpoints, spacings } = theme
+    const { breakpoints } = theme
 
     const { propKey, propValue } = this
 
@@ -228,7 +228,7 @@ export class Atom {
 
     const hasPostfix = isMode || isPseudo || isResponsive || isImportant || isColorPostfix
 
-    if (!hasPostfix) return this.digitPreprocessor(spacings)
+    if (!hasPostfix) return this.digitPreprocessor()
 
     const result = propKey.split(connector)
 
@@ -258,13 +258,15 @@ export class Atom {
     }
 
     // check is theme space key, if yes, preprocess it
-    this.digitPreprocessor(spacings)
+    this.digitPreprocessor()
 
     return this
   }
 
-  digitPreprocessor(spacings: any) {
+  digitPreprocessor() {
     if (!digitReg.test(this.key)) return this
+
+    const spacings: any = store.config.theme.spacings
 
     // is theme space key
     const isSpace = /^([a-z]+)(\d+)$/i.test(this.key)
@@ -287,7 +289,7 @@ export class Atom {
     const [, newKey, newPropValue] = result
 
     this.key = newKey
-    this.value = isSpace ? spacings[newPropValue.toLowerCase()] : newPropValue
+    this.value = isSpace ? spacings[`${newPropValue.toLowerCase()}`] : newPropValue
 
     return this
   }
