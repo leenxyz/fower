@@ -36,11 +36,9 @@ export const theme: Partial<Theme> = {
     96: 384,
   },
   fontFamilies: {
-    sans:
-      'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+    sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
     serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-    mono:
-      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+    mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   },
   fontSizes: {
     xs: 12,
@@ -67,13 +65,12 @@ export const theme: Partial<Theme> = {
   },
   radii: {
     none: 0,
-    sm: 2,
-    base: 4,
-    md: 6,
-    lg: 8,
-    xl: 12,
-    '2xl': 16,
-    '3xl': 24,
+    tiny: 2,
+    small: 4,
+    medium: 6,
+    large: 8,
+    huge: 12,
+    gigantic: 16,
     full: 9999,
   },
   fontWeights: {

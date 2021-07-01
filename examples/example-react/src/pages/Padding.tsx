@@ -3,17 +3,6 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box>
-      <Box
-        square-80
-        // square-90--hover
-        bgOrange300
-        bgOrange400--hover--sm--D10
-      ></Box>
-      <Box square-80 bgOrange300 bgOrange400--D10--hover--sm></Box>
-    </Box>
-  );
-  return (
-    <Box>
       <Box text3XL fontBold>
         Padding
       </Box>
