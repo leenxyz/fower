@@ -34,7 +34,7 @@ test('shadow', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows['base'])
+  expect(atom.style.boxShadow).toEqual(store.theme.shadows['medium'])
 })
 
 test('shadowMedium', () => {
@@ -45,5 +45,5 @@ test('shadowMedium', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows['md'])
+  expect(atom.style.boxShadow).toEqual(store.theme.shadows['medium'])
 })
