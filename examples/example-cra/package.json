@@ -15,7 +15,7 @@
     "start": "react-scripts start",
     "build": "echo",
     "build:prod": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

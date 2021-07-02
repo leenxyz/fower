@@ -8,6 +8,13 @@ const atomCache = store.atomCache
 
 beforeAll(() => {
   setConfig(presetWeb)
+  setConfig({
+    mode: {
+      autoDarkMode: {
+        enabled: true,
+      },
+    },
+  })
 })
 
 beforeEach(() => {
@@ -25,6 +32,50 @@ test('test props: {p4: true}', () => {
   expect(parser.hasResponsive).toStrictEqual(false)
 })
 
+test('test props with className', () => {
+  const props = { className: 'p4' }
+  const parser = new Parser(props)
+
+  expect(parser.atoms.length).toBe(1)
+  expect(parser.atoms[0].id).toEqual('p-16')
+})
+
+test('test props with with pseudo like _hover, _focus', () => {
+  const props = { _hover: { p: 4 } }
+  const parser = new Parser(props)
+  const [atom] = parser.atoms
+  expect(parser.atoms.length).toBe(1)
+  expect(atom.id).toEqual('p-4--hover')
+  expect(atom.style.padding).toEqual(4)
+  expect(atom.meta.pseudo).toEqual('hover')
+  expect(atom.meta.pseudoPrefix).toEqual(':')
+})
+
+test('test props with with mode like _dark', () => {
+  const props = { _dark: ['red300'] }
+  const parser = new Parser(props)
+  const [atom] = parser.atoms
+  expect(parser.atoms.length).toBe(1)
+  expect(atom.id).toEqual('red300--dark')
+  expect(atom.style.color).toEqual('red300')
+  expect(atom.meta.mode).toEqual('dark')
+})
+
+test('test props with with responsive key like _md', () => {
+  const props = { _md: ['w-100', 'h-100'] }
+  const parser = new Parser(props)
+  expect(parser.atoms.length).toBe(2)
+  const [atom1, atom2] = parser.atoms
+
+  expect(atom1.id).toEqual('w-100--768px')
+  expect(atom1.style.width).toEqual('100')
+  expect(atom1.meta.breakpoint).toEqual('768px')
+
+  expect(atom2.id).toEqual('h-100--768px')
+  expect(atom2.style.height).toEqual('100')
+  expect(atom2.meta.breakpoint).toEqual('768px')
+})
+
 test('isValidProp()', () => {
   const parser = new Parser({})
   expect(parser.isValidProp('css', {})).toBeTruthy()
@@ -34,7 +85,7 @@ test('isValidProp()', () => {
   expect(parser.isValidProp('p', true)).toBeTruthy()
   expect(parser.isValidProp('p', false)).toBeTruthy()
   expect(parser.isValidProp('p', {})).toBeFalsy()
-  expect(parser.isValidProp('p', [])).toBeFalsy()
+  expect(parser.isValidProp('p', [])).toBeTruthy()
 })
 
 test('formatCssValue()', () => {
@@ -94,7 +145,7 @@ test('mutateAtom(), cachedAtom should throw', () => {
   const atom = new Atom({ propKey: 'p1', propValue: true })
   atomCache.set(atom.id, atom)
 
-  expect(atom.id).toEqual('p1')
+  expect(atom.id).toEqual('p-4')
   expect(() => parser.mutateAtom(atom)).toThrow()
   expect(parser.atoms.length).toEqual(1)
 })
@@ -121,7 +172,7 @@ test('mutateAtom(), atom should match a plugin', () => {
   expect(atom.handled).toBeTruthy()
   expect(atom.key).toEqual('p')
   expect(atom.value).toEqual('50')
-  expect(atom.className).toEqual('p-50')
+  expect(atom.id).toEqual('p-50')
   expect(atom.style.padding).toEqual('50')
   expect(parser.atoms.length).toEqual(0)
 })
@@ -136,7 +187,7 @@ test('mutateAtom(), atom should match a plugin', () => {
   expect(atom.handled).toBeTruthy()
   expect(atom.key).toEqual('p')
   expect(atom.value).toEqual('50')
-  expect(atom.className).toEqual('p-50')
+  expect(atom.id).toEqual('p-50')
   expect(atom.style.padding).toEqual('50')
   expect(parser.atoms.length).toEqual(0)
 })
@@ -145,19 +196,19 @@ describe('getClassNames()', () => {
   test('normal', () => {
     const parser = new Parser({ p1: true, m1: true })
     const classNames = parser.getClassNames()
-    expect(classNames).toMatchObject(['p1', 'm1'])
+    expect(classNames).toMatchObject(['p-4', 'm-4'])
   })
 
   test('with override style', () => {
     const parser = new Parser({ p1: true, p2: true, m1: true, m2: true })
     const classNames = parser.getClassNames()
-    expect(classNames).toMatchObject(['p2', 'm2'])
+    expect(classNames).toMatchObject(['p-8', 'm-8'])
   })
 
   test('with pseudo', () => {
     const parser = new Parser({ p1: true, 'p2--hover': true })
     const classNames = parser.getClassNames()
-    expect(classNames).toMatchObject(['p1', 'p2--hover'])
+    expect(classNames).toMatchObject(['p-4', 'p-8--hover'])
   })
 })
 
@@ -175,7 +226,7 @@ describe('toRules()', () => {
     const parser = new Parser({ p1: true, m1: true })
     const rules = parser.toRules()
     expect(parser.atoms.length).toEqual(2)
-    expect(rules).toMatchObject(['.p1 { padding: 4px; }', '.m1 { margin: 4px; }'])
+    expect(rules).toMatchObject(['.p-4 { padding: 4px; }', '.m-4 { margin: 4px; }'])
   })
 })
 
@@ -185,12 +236,11 @@ describe('css prop', () => {
     const parser = new Parser({ css: value })
     expect(parser.atoms[0]).toMatchObject({
       value: 4,
-      id: 'p1',
+      id: 'p-4',
       propKey: 'p1',
       propValue: true,
       key: 'p',
       style: { padding: 4 },
-      className: 'p1',
       handled: true,
       isValid: true,
       inserted: false,
@@ -203,7 +253,7 @@ describe('css prop', () => {
     const parser = new Parser({ css: value })
     const [atom] = parser.atoms
     expect(parser.atoms.length).toEqual(1)
-    expect(atom.className).toMatch(/^css-/)
+    expect(atom.id).toEqual('backgroundColor-red')
   })
 
   test('parseCSSProp() with pseudo', () => {
@@ -212,7 +262,8 @@ describe('css prop', () => {
     })
     const [atom] = parser.atoms
     expect(parser.atoms.length).toEqual(1)
-    expect(atom.meta.pseudo).toEqual(':hover')
+    expect(atom.meta.pseudo).toEqual('hover')
+    expect(atom.meta.pseudoPrefix).toEqual(':')
   })
 
   test('parseCSSProp() with child selector', () => {
@@ -231,7 +282,7 @@ describe('css prop', () => {
     const parser = new Parser({ css: value })
 
     expect(() => parser.mutateAtom(new Atom({ propKey: 'p1', propValue: true }))).toThrow()
-    expect(parser.atoms[0]).toMatchObject(atom)
+    expect(parser.atoms[0].id).toEqual(atom.id)
   })
 })
 
@@ -257,4 +308,54 @@ test('insertRule()', () => {
   })
   parser.insertRule()
   expect(1).toBeTruthy() // TODO:
+})
+
+describe('Auto dark mode', () => {
+  test('color', () => {
+    const props = { green200: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('green200')
+    expect(atom1.style.color).toEqual('green200')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('green700--dark')
+    expect(atom2.style.color).toEqual('green700')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
+
+  test('background color', () => {
+    const props = { bgGreen200: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('bgGreen200')
+    expect(atom1.style.backgroundColor).toEqual('green200')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('bgGreen700--dark')
+    expect(atom2.style.backgroundColor).toEqual('green700')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
+
+  test('border color', () => {
+    const props = { borderGreen200: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('borderGreen200')
+    expect(atom1.style.borderColor).toEqual('green200')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('borderGreen700--dark')
+    expect(atom2.style.borderColor).toEqual('green700')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
 })

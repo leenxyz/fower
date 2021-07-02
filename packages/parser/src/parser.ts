@@ -116,7 +116,10 @@ export class Parser {
           continue
         }
         if (pseudoKeys.includes(postfix)) {
-          this.parseCSSObject(obj, { pseudo: ':' + postfix })
+          this.parseCSSObject(obj, {
+            pseudoPrefix: ':',
+            pseudo: postfix,
+          })
           continue
         }
       }

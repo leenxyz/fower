@@ -3,7 +3,7 @@ import { toRules, parse, flatten } from '../src'
 
 describe('css object processor', () => {
   test('flatten empty cssObject', () => {
-    const cssObject: CSSObject = {}
+    const cssObject: any = {}
     const result = flatten(cssObject)
 
     expect(Array.isArray(result)).toEqual(true)
