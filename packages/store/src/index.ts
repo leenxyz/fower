@@ -7,7 +7,7 @@ type Strategy = 'replace' | 'merge' | 'deepmerge'
 
 const modeCacheKey = 'fower-mode'
 
-class Store {
+export class Store {
   config = {
     unit: 'px',
     inline: false,
