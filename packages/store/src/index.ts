@@ -144,7 +144,7 @@ export class Store {
 
   composeAtom = (atomName: string, cssObject: CSSObject) => {
     if (this.compositions.get(atomName)) {
-      console.warn(atomName, 'is existed')
+      console.log(`composed atom "${atomName}" is existed`)
     } else {
       this.compositions.set(atomName, cssObject)
     }
