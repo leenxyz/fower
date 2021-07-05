@@ -248,7 +248,7 @@ export class Atom {
 
     if (isResponsive) {
       const breakpointType = result.find((i) => breakpointKeys.includes(i)) as string
-      this.meta.breakpoint = (breakpoints as any)[breakpointType]
+      this.meta.breakpoint = breakpointType
     }
 
     if (isImportant) {

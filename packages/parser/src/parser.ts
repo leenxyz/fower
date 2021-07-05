@@ -466,7 +466,8 @@ export class Parser {
   }
 
   makeResponsiveStyle(breakpoint: string, rule: string) {
-    return `@media (min-width: ${breakpoint}) {${rule}}`
+    const breakpoints: any = this.config.theme.breakpoints
+    return `@media (min-width: ${breakpoints[breakpoint]}) {${rule}}`
   }
 
   /**
@@ -537,10 +538,14 @@ export class Parser {
   toRules(enableInserted = false): string[] {
     const { classPrefix = '' } = this.config.mode
     const rules: string[] = []
+    const breakpoints: any = this.config.theme.breakpoints
 
     // sort responsive style
     this.atoms = this.atoms.sort((a, b) => {
-      return parseInt(b.meta.breakpoint || '0') - parseInt(a.meta.breakpoint || '0')
+      return (
+        parseInt(breakpoints[b.meta.breakpoint as string] || '0') -
+        parseInt(breakpoints[a.meta.breakpoint as string] || '0')
+      )
     })
 
     for (const atom of this.atoms) {

@@ -143,11 +143,7 @@ export class Store {
   }
 
   composeAtom = (atomName: string, cssObject: CSSObject) => {
-    if (this.compositions.get(atomName)) {
-      console.log(`composed atom "${atomName}" is existed`)
-    } else {
-      this.compositions.set(atomName, cssObject)
-    }
+    this.compositions.set(atomName, cssObject)
   }
 }
 
