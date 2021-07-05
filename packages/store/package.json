@@ -1,6 +1,6 @@
 {
   "name": "@fower/store",
-  "version": "1.30.0",
+  "version": "1.31.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,8 +21,8 @@
   "author": "forsigner",
   "module": "dist/store.esm.js",
   "dependencies": {
-    "@fower/types": "^1.30.0",
-    "@fower/utils": "^1.30.0",
+    "@fower/types": "^1.31.0",
+    "@fower/utils": "^1.31.0",
     "deepmerge": "^4.2.2"
   }
 }
