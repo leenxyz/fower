@@ -8,8 +8,7 @@ export function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    init(props) {
-      console.log('initt', props)
+    init() {
       store.composeAtom('container', {
         'w-100p': true,
         'maxW-640px--sm': true,

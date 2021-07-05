@@ -79,6 +79,12 @@ export class Parser {
     const { excludedProps = [] } = props
     const entries = Object.entries<any>(props)
 
+    for (const plugin of this.plugins) {
+      if (plugin.init) {
+        plugin.init(props)
+      }
+    }
+
     if (props?.className) {
       for (const item of props.className.split(/\s+/)) {
         entries.push([item, true])
@@ -583,7 +589,7 @@ export class Parser {
 
       rules.push(rule)
     }
-    console.log('this.atoms---', this.atoms)
+    // console.log('this.atoms---', this.atoms)
 
     return rules
   }

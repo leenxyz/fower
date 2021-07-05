@@ -30,6 +30,7 @@
     "fower-plugin-box-alignment": "^1.31.0",
     "fower-plugin-box-sizing": "^1.31.0",
     "fower-plugin-color": "^1.31.0",
+    "fower-plugin-container": "^1.31.0",
     "fower-plugin-cursor": "^1.31.0",
     "fower-plugin-debug": "^1.31.0",
     "fower-plugin-display": "^1.31.0",

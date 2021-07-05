@@ -210,6 +210,8 @@ declare namespace FowerTypes {
   interface FowerPlugin {
     isMatch(key: string): boolean
 
+    init?(props: Props): void
+
     /**
      * before handle atom
      * to modify some atom attr before handle
