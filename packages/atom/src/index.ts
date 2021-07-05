@@ -212,6 +212,7 @@ export class Atom {
     const regResponsive = new RegExp(regResponsiveStr)
     const regImportant = /--i/i
     const regColorPostfix = /--[told](\d{1,2}|100)($|--)/i
+    const regParentSelector = /--\$\w+/i
 
     /** handle value like: red500--T40, #666--O30 */
     if (regColorPostfix.test(propValue)) {
@@ -225,6 +226,7 @@ export class Atom {
     const isResponsive = regResponsive.test(propKey)
     const isImportant = regImportant.test(propKey)
     const isColorPostfix = regColorPostfix.test(propKey)
+    const isParentSelector = regParentSelector.test(propKey)
 
     const hasPostfix = isMode || isPseudo || isResponsive || isImportant || isColorPostfix
 
@@ -255,6 +257,10 @@ export class Atom {
 
     if (isColorPostfix) {
       this.meta.colorPostfix = result.find((i) => regColorPostfix.test(`--${i}`))
+    }
+
+    if (isParentSelector) {
+      this.meta.parentClass = result.find((i) => i.startsWith('$'))?.replace(/^\$/, '')
     }
 
     // check is theme space key, if yes, preprocess it

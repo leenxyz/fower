@@ -547,7 +547,7 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector } = meta
+      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector, parentClass } = meta
 
       // TODO: need refactor
       const shouldUseUniqueClassName = !!this.atoms.find(
@@ -566,15 +566,24 @@ export class Parser {
 
       const className = this.getClassNameById(id)
       let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
-      if (pseudo) selector = selector + pseudoPrefix + pseudo
       if (mode) selector = `.${classPrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
+
+      if (pseudo) {
+        const pseudoSelector = pseudoPrefix + pseudo
+        if (parentClass) {
+          selector = `.${parentClass}${pseudoSelector} ${selector}`
+        } else {
+          selector = selector + pseudoSelector
+        }
+      }
+
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)
     }
-    // console.log('this.atoms---', this.atoms)
+    console.log('this.atoms---', this.atoms)
 
     return rules
   }

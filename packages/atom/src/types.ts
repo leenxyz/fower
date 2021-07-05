@@ -34,6 +34,13 @@ export interface Meta {
   childSelector?: string
 
   /**
+   * parent class for group pseudo
+   * @exmple
+   * parentClass: 'group'
+   */
+  parentClass?: string
+
+  /**
    * is !important style
    */
   important?: boolean
