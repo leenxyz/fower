@@ -61,8 +61,9 @@ export default (): FowerPlugin => {
 
       /** set default Duration */
       const hasDuration = parser.atoms.find((i) => i.key === 'duration')
+
       if (!hasDuration) {
-        const durationId = 'duration-200'
+        const durationId = 'transition-duration-200'
         const durationAtom = store.atomCache.get(durationId)
 
         if (durationAtom) {

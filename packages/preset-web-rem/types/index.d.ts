@@ -1,3 +1,4 @@
+/// <reference types="fower-plugin-animation" />
 /// <reference types="fower-plugin-appearance" />
 /// <reference types="fower-plugin-appearance" />
 /// <reference types="fower-plugin-background" />

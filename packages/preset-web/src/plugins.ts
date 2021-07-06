@@ -41,6 +41,7 @@ import gradient from 'fower-plugin-gradient'
 import ring from 'fower-plugin-ring'
 import svg from 'fower-plugin-svg'
 import container from 'fower-plugin-container'
+import animation from 'fower-plugin-animation'
 
 export const plugins = [
   appearance(),
@@ -86,4 +87,5 @@ export const plugins = [
   ring(),
   svg(),
   container(),
+  animation(),
 ]
