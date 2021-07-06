@@ -120,6 +120,11 @@ const Wrapper = (props) => {
   )
 }
 
+// 兼容 taro、remax demo报错
+const View = styled('div')
+const Image = styled('img')
+const Text = styled('span')
+
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
@@ -135,6 +140,9 @@ const ReactLiveScope = {
   Box,
   Heading,
   Wrapper,
+  View,
+  Image,
+  Text,
 }
 
 export default ReactLiveScope
