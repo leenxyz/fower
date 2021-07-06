@@ -57,7 +57,7 @@ test('if responsive, meta.breakpoint should be truthy', () => {
     propValue: true,
   })
   atom.postfixPreprocessor()
-  expect(atom.meta.breakpoint).toEqual('640px')
+  expect(atom.meta.breakpoint).toEqual('sm')
   expect(atom.key).toEqual('p')
 })
 
@@ -82,19 +82,19 @@ test('compose postfix', () => {
   expect(atom1.meta.mode).toEqual('dark')
   expect(atom1.meta.pseudo).toEqual('hover')
   expect(atom1.meta.pseudoPrefix).toEqual(':')
-  expect(atom1.meta.breakpoint).toEqual('640px')
+  expect(atom1.meta.breakpoint).toEqual('sm')
   expect(atom1.meta.important).toEqual(true)
   expect(atom1.key).toEqual('p')
 
   const atom2 = new Atom({
-    propKey: 'red200--dark--i--sm--hover--T20',
+    propKey: 'red200--dark--i--md--hover--T20',
     propValue: true,
   })
   atom2.postfixPreprocessor()
   expect(atom2.meta.mode).toEqual('dark')
   expect(atom2.meta.pseudo).toEqual('hover')
   expect(atom2.meta.pseudoPrefix).toEqual(':')
-  expect(atom2.meta.breakpoint).toEqual('640px')
+  expect(atom2.meta.breakpoint).toEqual('md')
   expect(atom2.meta.important).toEqual(true)
   expect(atom2.meta.colorPostfix).toEqual('T20')
   expect(atom2.key).toEqual('red200')

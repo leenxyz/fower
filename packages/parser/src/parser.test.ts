@@ -134,7 +134,7 @@ test('styleObjectToString()', () => {
 test('makeResponsiveStyle()', () => {
   const parser = new Parser({})
 
-  const style = parser.makeResponsiveStyle('640px', 'width: 10px;')
+  const style = parser.makeResponsiveStyle('sm', 'width: 10px;')
   const result = `@media (min-width: 640px) {width: 10px;}`
 
   expect(style).toBe(result)

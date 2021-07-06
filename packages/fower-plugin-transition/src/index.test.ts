@@ -3,7 +3,7 @@ import { Atom } from '@fower/atom'
 import plugin from '.'
 
 const { isMatch, handleAtom } = plugin()
-const parser = new Parser({})
+const parser = new Parser({ transitionCommon: true })
 
 test('isMatch', () => {
   expect(isMatch!('transition')).toEqual(true)
@@ -23,6 +23,7 @@ test('isMatch', () => {
 })
 
 test('delay', () => {
+  const parser = new Parser({ transitionCommon: true })
   const atom = handleAtom!(
     new Atom({
       propKey: 'delay',
@@ -30,7 +31,19 @@ test('delay', () => {
     }),
     parser,
   )
-  expect(atom.style.transitionDelay).toEqual('100ms')
+  expect(atom.style.transitionDelay).toEqual('100ms !important')
+})
+
+test('delay with no transition', () => {
+  const parser = new Parser()
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'delay',
+      propValue: 100,
+    }),
+    parser,
+  )
+  expect(atom.style.transitionDelay).toBeUndefined()
 })
 
 test('duration', () => {
@@ -41,7 +54,7 @@ test('duration', () => {
     }),
     parser,
   )
-  expect(atom.style.transitionDuration).toEqual('100ms')
+  expect(atom.style.transitionDuration).toEqual('100ms !important')
 })
 
 test('transition', () => {
