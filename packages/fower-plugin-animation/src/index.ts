@@ -2,12 +2,10 @@ import { FowerPlugin } from '@fower/types'
 import { keyframes } from '@fower/core'
 import { Atom } from '@fower/atom'
 
-const timingReg = /^ease(linear|In|Out|InOut)/i
-
-const isPresetAnimation = (key: string) => /^animate(None|Spin|ping|pulse|bounce)/i.test(key)
+const isPresetAnimation = (key: string) => /^animate(None|Spin|Ping|Pulse|Bounce)/i.test(key)
 
 export function isMatch(key: string) {
-  return isPresetAnimation(key) || timingReg.test(key)
+  return isPresetAnimation(key)
 }
 
 function toStyle(atom: Atom): any {
@@ -90,9 +88,6 @@ export default (): FowerPlugin => {
     handleAtom(atom) {
       atom.style = toStyle(atom)
       return atom
-    },
-    afterAtomStyleCreate(parser) {
-      if (!parser.atoms.length) return
     },
   }
 }

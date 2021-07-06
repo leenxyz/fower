@@ -15,9 +15,44 @@ declare module '@fower/types' {
      */
     animateNone?: boolean
 
+    /**
+     * animate spin
+     *
+     * @example
+     * ```tsx
+     * <Box animateSpin></Box>
+     * ```
+     */
     animateSpin?: boolean
+
+    /**
+     * animate ping
+     *
+     * @example
+     * ```tsx
+     * <Box animatePing></Box>
+     * ```
+     */
     animatePing?: boolean
+
+    /**
+     * animate Pulse
+     *
+     * @example
+     * ```tsx
+     * <Box animatePulse></Box>
+     * ```
+     */
     animatePulse?: boolean
+
+    /**
+     * animate Bounce
+     *
+     * @example
+     * ```tsx
+     * <Box animateBounce></Box>
+     * ```
+     */
     animateBounce?: boolean
   }
 }

@@ -1,4 +1,5 @@
 import { setConfig } from '@fower/core'
+import { store } from '@fower/store'
 import { Parser } from '@fower/parser'
 import { presetWeb } from '@fower/preset-web'
 import { Atom } from '@fower/atom'
@@ -6,32 +7,75 @@ import plugin from '.'
 
 setConfig(presetWeb)
 
-const { isMatch, handleAtom } = plugin()
+const { isMatch, handleAtom, init } = plugin()
 const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('blue200')).toEqual(true)
-  expect(isMatch!('color')).toEqual(true)
+  expect(isMatch!('animateNone')).toEqual(true)
+  expect(isMatch!('animateSpin')).toEqual(true)
+  expect(isMatch!('animatePing')).toEqual(true)
+  expect(isMatch!('animatePulse')).toEqual(true)
+  expect(isMatch!('animateBounce')).toEqual(true)
+  expect(isMatch!('animateFOO')).toEqual(false)
 })
 
-test('color="#fc0"', () => {
-  const atom = handleAtom!(
-    new Atom({
-      propKey: 'color',
-      propValue: '#fc0',
-    }),
-    parser,
-  )
-  expect(atom.style.color).toEqual('#fc0')
+test('init', () => {
+  init!({})
+  init!({})
+  expect(store.compositions.get('foo')).toBeFalsy() // TODO:
 })
 
-test('red400', () => {
+test('animateNone', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'red400',
+      propKey: 'animateNone',
       propValue: true,
     }),
     parser,
   )
-  expect(atom.style.color).toEqual('red400')
+  expect(atom.style.animation).toEqual('none')
+})
+
+test('animateSpin', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'animateSpin',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.animation).toEqual('spin 1s linear infinite')
+})
+
+test('animatePing', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'animatePing',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.animation).toEqual('ping 1s cubic-bezier(0, 0, 0.2, 1) infinite')
+})
+
+test('animatePulse', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'animatePulse',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.animation).toEqual('pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite')
+})
+
+test('animateBounce', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'animateBounce',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.animation).toEqual('bounce 1s infinite')
 })
