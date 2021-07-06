@@ -9,6 +9,7 @@ export default () => {
         // delay-100
         // duration-200
         // easeInOut
+        scale-200--hover
         transitionCommon
         bgRed600--hover
       ></Box>

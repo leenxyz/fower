@@ -1,9 +1,11 @@
 import { Atom } from '@fower/atom'
+import { Parser } from '@fower/parser'
 import { store } from '@fower/store'
 import { FowerPlugin } from '@fower/types'
 
 const timingReg = /^ease(linear|In|Out|InOut)/i
 const transitionReg = /^transition(None|All|Common|Colors|Opacity|Shadow|Transform)?$/i
+const commonKeys = ['duration', 'delay']
 
 const transitionMaps: any = {
   none: 'none',
@@ -24,12 +26,16 @@ const easeMaps: any = {
 }
 
 export function isMatch(key: string) {
-  return timingReg.test(key) || transitionReg.test(key) || ['duration', 'delay'].includes(key)
+  return timingReg.test(key) || transitionReg.test(key) || commonKeys.includes(key)
 }
 
-export function toStyle(key: string, value: any): any {
-  if (key === 'delay') return { transitionDelay: `${value}ms` }
-  if (key === 'duration') return { transitionDuration: `${value}ms` }
+export function toStyle(atom: Atom, parser: Parser): any {
+  const { key, value } = atom
+  const some = Object.keys(parser.props).some((i) => transitionReg.test(i))
+  const prefix = some ? 'transition' : 'animation'
+
+  if (key === 'delay') return { [`${prefix}Delay`]: `${value}ms !important` }
+  if (key === 'duration') return { [`${prefix}Duration`]: `${value}ms !important` }
   if (key === 'transition') return { transition: value }
 
   if (transitionReg.test(key)) {
@@ -37,7 +43,7 @@ export function toStyle(key: string, value: any): any {
   }
 
   if (timingReg.test(key)) {
-    return { transitionTimingFunction: easeMaps[key.toLowerCase()] }
+    return { [`${prefix}TimingFunction`]: easeMaps[key.toLowerCase()] }
   }
 
   return { transition: value }
@@ -46,8 +52,8 @@ export function toStyle(key: string, value: any): any {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.value)
+    handleAtom(atom, parser) {
+      atom.style = toStyle(atom, parser)
       return atom
     },
     afterAtomStyleCreate(parser) {

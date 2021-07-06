@@ -2,18 +2,6 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box
-      p4
-      inlineBlock
-      bgRed200
-      _hover={{
-        p10: true,
-      }}
-    >
-      p1
-    </Box>
-  );
-  return (
     <Box>
       <Box text3XL fontBold>
         Padding

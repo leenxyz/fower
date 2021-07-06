@@ -1,17 +1,18 @@
 import { FowerPlugin } from '@fower/types'
 import { keyframes } from '@fower/core'
+import { Atom } from '@fower/atom'
 
 const timingReg = /^ease(linear|In|Out|InOut)/i
 
+const isPresetAnimation = (key: string) => /^animate(None|Spin|ping|pulse|bounce)/i.test(key)
+
 export function isMatch(key: string) {
-  return (
-    /^animate(None|Spin|ping|pulse|bounce)/i.test(key) ||
-    timingReg.test(key) ||
-    ['duration', 'delay'].includes(key)
-  )
+  return isPresetAnimation(key) || timingReg.test(key)
 }
 
-function toStyle(key: string): any {
+function toStyle(atom: Atom): any {
+  const { key } = atom
+
   if (/^animateNone$/i.test(key)) {
     return { animation: 'none' }
   }
@@ -39,15 +40,6 @@ function toStyle(key: string): any {
       animation: 'bounce 1s infinite',
     }
   }
-
-  // animation-duration: 1s;
-  // animation-timing-function: linear;
-  // animation-delay: 0s;
-  // animation-iteration-count: infinite;
-  // animation-direction: normal;
-  // animation-fill-mode: none;
-  // animation-play-state: running;
-  // animation-name: spin;
 }
 
 export default (): FowerPlugin => {
@@ -96,8 +88,7 @@ export default (): FowerPlugin => {
     },
 
     handleAtom(atom) {
-      console.log('atom.key', atom.key)
-      atom.style = toStyle(atom.key)
+      atom.style = toStyle(atom)
       return atom
     },
     afterAtomStyleCreate(parser) {
