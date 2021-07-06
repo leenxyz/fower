@@ -1,47 +1,16 @@
-import { setConfig } from '@fower/core'
-import { Atom } from '@fower/atom'
+import { store } from '@fower/store'
 import plugin from '.'
 
-beforeAll(() => {
-  setConfig({ unit: 'px' })
-})
+const { isMatch, init } = plugin()
 
-const { isMatch, handleAtom } = plugin()
-
-const parser = {} as any
 test('isMatch', () => {
-  expect(isMatch!('zIndex')).toEqual(true)
+  expect(isMatch!('container')).toEqual(true)
+  expect(isMatch!('containerFOOO')).toEqual(false)
 })
 
-test('zIndex={10}', () => {
-  const atom = handleAtom!(
-    new Atom({
-      propKey: 'zIndex',
-      propValue: 10,
-    }),
-    parser,
-  )
-  expect(atom.style.zIndex).toEqual(10)
-})
-
-test('zIndex={-1}', () => {
-  const atom = handleAtom!(
-    new Atom({
-      propKey: 'zIndex',
-      propValue: -1,
-    }),
-    parser,
-  )
-  expect(atom.style.zIndex).toEqual(-1)
-})
-
-test('zIndex="10', () => {
-  const atom = handleAtom!(
-    new Atom({
-      propKey: 'zIndex',
-      propValue: '10',
-    }),
-    parser,
-  )
-  expect(atom.style.zIndex).toEqual('10')
+test('container', () => {
+  expect(store.compositions.get('container')).toBeFalsy()
+  init!({})
+  init!({})
+  expect(store.compositions.get('container')).toBeTruthy()
 })

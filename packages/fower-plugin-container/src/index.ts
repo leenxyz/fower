@@ -6,9 +6,11 @@ export function isMatch(key: string) {
 }
 
 export default (): FowerPlugin => {
+  let inited = false
   return {
     isMatch,
     init() {
+      if (inited) return
       store.composeAtom('container', {
         'w-100p': true,
         'maxW-640px--sm': true,
@@ -16,6 +18,7 @@ export default (): FowerPlugin => {
         'maxW-1024px--lg': true,
         'maxW-1280px--xl': true,
       })
+      inited = true
     },
   }
 }
