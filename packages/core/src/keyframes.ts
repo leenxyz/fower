@@ -9,7 +9,7 @@ type Input = Record<string, CSSProperties>
  * @param input
  * @returns
  */
-export function keyframes(input: Input): string {
+export function keyframes(input: Input, name?: string): string {
   const content = Object.entries(input).reduce<string>((result, [key, value]) => {
     const str = Object.entries(value).reduce<string>((r, [k, v]) => {
       return r + `${k}: ${v};`
@@ -17,13 +17,13 @@ export function keyframes(input: Input): string {
     return result + `${jsKeyToCssKey(key)} {${str}}`
   }, '')
 
-  const name = 'keyframes-' + hash(JSON.stringify(input))
+  const animationName = name || 'keyframes-' + hash(JSON.stringify(input))
   const rule = `
-    @keyframes ${name} {
+    @keyframes ${animationName} {
       ${content}
     }
   `
   styleSheet.insertStyles([rule])
 
-  return name
+  return animationName
 }
