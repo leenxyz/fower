@@ -12,6 +12,9 @@ beforeAll(() => {
     mode: {
       autoDarkMode: {
         enabled: true,
+        mappings: {
+          red800: '#fc0',
+        },
       },
     },
   })
@@ -113,6 +116,20 @@ test('formatCssValue()', () => {
   //   unit: 'none',
   // })
   // expect(parser.formatCssValue('width', 10)).toBe(10)
+})
+
+test('composition props', () => {
+  store.composeAtom('formInput', {
+    p: 10,
+  })
+  const { atoms } = new Parser({
+    formInput: true,
+  })
+
+  expect(atoms.length).toEqual(2)
+  expect(atoms[0].id).toEqual('p-10')
+  expect(atoms[0].style.padding).toEqual(10)
+  expect(atoms[1].id).toEqual('formInput')
 })
 
 test('styleObjectToString()', () => {
@@ -227,6 +244,20 @@ describe('toRules()', () => {
     const rules = parser.toRules()
     expect(parser.atoms.length).toEqual(2)
     expect(rules).toMatchObject(['.p-4 { padding: 4px; }', '.m-4 { margin: 4px; }'])
+  })
+
+  test('with pseudo', () => {
+    const parser = new Parser({ 'p1--hover': true })
+    const rules = parser.toRules()
+    expect(parser.atoms.length).toEqual(1)
+    expect(rules).toMatchObject(['.p-4--hover:hover { padding: 4px; }'])
+  })
+
+  test('with group pseudo', () => {
+    const parser = new Parser({ 'p1--$group--hover': true })
+    const rules = parser.toRules()
+    expect(parser.atoms.length).toEqual(1)
+    expect(rules).toMatchObject(['.group:hover .p-4--group--hover { padding: 4px; }'])
   })
 })
 
@@ -356,6 +387,60 @@ describe('Auto dark mode', () => {
 
     expect(atom2.id).toEqual('borderGreen700--dark')
     expect(atom2.style.borderColor).toEqual('green700')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
+
+  test('color with custo mapping', () => {
+    const props = { red800: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('red800')
+    expect(atom1.style.color).toEqual('red800')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('color-fc0--dark')
+    expect(atom2.propKey).toEqual('color')
+    expect(atom2.propValue).toEqual('#fc0')
+    expect(atom2.style.color).toEqual('#fc0')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
+
+  test('background color with custo mapping', () => {
+    const props = { bgRed800: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('bgRed800')
+    expect(atom1.style.backgroundColor).toEqual('red800')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('bg-fc0--dark')
+    expect(atom2.propKey).toEqual('bg')
+    expect(atom2.propValue).toEqual('#fc0')
+    expect(atom2.style.backgroundColor).toEqual('#fc0')
+    expect(atom2.meta.mode).toEqual('dark')
+  })
+
+  test('border color with custo mapping', () => {
+    const props = { borderRed800: true }
+    const parser = new Parser(props)
+    const [atom1, atom2] = parser.atoms
+
+    expect(parser.atoms.length).toBe(2)
+
+    expect(atom1.id).toEqual('borderRed800')
+    expect(atom1.style.borderColor).toEqual('red800')
+    expect(atom1.meta.mode).toBeFalsy()
+
+    expect(atom2.id).toEqual('borderColor-fc0--dark')
+    expect(atom2.propKey).toEqual('borderColor')
+    expect(atom2.propValue).toEqual('#fc0')
+    expect(atom2.style.borderColor).toEqual('#fc0')
     expect(atom2.meta.mode).toEqual('dark')
   })
 })

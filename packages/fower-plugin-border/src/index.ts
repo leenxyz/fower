@@ -17,6 +17,7 @@ function isMatch(key: string) {
 function toStyle({ key, value }: Atom) {
   if (key === 'border') {
     if (typeof value === 'boolean') return { borderWidth: 1 }
+    if (value === 'none') return { border: 'none' }
     return { borderWidth: value }
   }
 

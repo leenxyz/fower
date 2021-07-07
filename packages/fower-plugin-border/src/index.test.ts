@@ -38,6 +38,17 @@ test('border={2}', () => {
   expect(atom.style.borderWidth).toEqual(2)
 })
 
+test('border="none"', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'border',
+      propValue: 'none',
+    }),
+    parser,
+  )
+  expect(atom.style.border).toEqual('none')
+})
+
 test('borderT={2}', () => {
   const atom = handleAtom!(
     new Atom({
