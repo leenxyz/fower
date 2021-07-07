@@ -5,13 +5,11 @@ export default () => {
   return (
     <Box toCenter column spaceY-100>
       <Box
-        text-30
-        // animateSpin
-        animateBounce
-        // animatePing
-      >
-        40 Lorem ipsum dolor sit amet
-      </Box>
+        animateSpin
+        square20
+        roundedHuge
+        gradientX={['red400', 'orange400']}
+      />
 
       <Box flex square3 relative>
         <Box
@@ -33,7 +31,20 @@ export default () => {
         ></Box>
       </Box>
 
-      <Box square20 bgTeal400 animateSpin duration-4000></Box>
+      <Box border borderBlue300 shadow roundedMedium p4 w-100p mx-auto>
+        <Box animatePulse flex spaceX4>
+          <Box roundedFull bgBlue400 h12 w12></Box>
+          <Box flex-1 spaceY4 py1>
+            <Box h4 bgBlue400 rounded></Box>
+            <Box spaceY2>
+              <Box h4 bgBlue400 rounded></Box>
+              <Box h4 bgBlue400 rounded></Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box circle20 bgOrange400 animateBounce></Box>
     </Box>
   );
 };

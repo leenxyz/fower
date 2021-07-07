@@ -228,12 +228,13 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Transition',
+      label: 'Transition and Animation',
       items: [
         'transition-property',
         'transition-duration',
         'transition-timing-function',
         'transition-delay',
+        'animation',
       ],
     },
     {
