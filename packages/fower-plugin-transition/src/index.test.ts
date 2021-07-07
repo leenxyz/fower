@@ -2,7 +2,7 @@ import { Parser } from '@fower/parser'
 import { Atom } from '@fower/atom'
 import plugin from '.'
 
-const { isMatch, handleAtom } = plugin()
+const { isMatch, handleAtom, afterAtomStyleCreate } = plugin()
 const parser = new Parser({ transitionCommon: true })
 
 test('isMatch', () => {
@@ -112,4 +112,46 @@ test('easeLinear', () => {
     parser,
   )
   expect(atom.style.transitionTimingFunction).toEqual('linear')
+})
+
+describe('afterAtomStyleCreate', () => {
+  test('atom.length = 0', () => {
+    parser.atoms = []
+    afterAtomStyleCreate?.(parser)
+  })
+
+  test('no transition prop', () => {
+    parser.atoms = [
+      new Atom({
+        propKey: 'p-10',
+        propValue: true,
+      }),
+    ]
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(1)
+  })
+
+  test('no transition prop', () => {
+    parser.atoms = [
+      new Atom({
+        propKey: 'easeIn',
+        propValue: true,
+      }),
+    ]
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(1)
+  })
+
+  test('set default duration and timing', () => {
+    parser.atoms = [
+      new Atom({
+        propKey: 'transitionAll',
+        propValue: true,
+      }),
+    ]
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(3)
+    expect(parser.atoms[1].id).toEqual('transition-duration-200')
+    expect(parser.atoms[2].id).toEqual('easeInOut')
+  })
 })

@@ -45,8 +45,6 @@ export function toStyle(atom: Atom, parser: Parser): any {
   if (timingReg.test(key)) {
     return { [`${prefix}TimingFunction`]: easeMaps[key.toLowerCase()] }
   }
-
-  return { transition: value }
 }
 
 export default (): FowerPlugin => {
@@ -63,6 +61,7 @@ export default (): FowerPlugin => {
       if (!matched) return
 
       const hasTransition = parser.atoms.find((i) => transitionReg.test(i.key))
+
       if (!hasTransition) return
 
       /** set default Duration */
