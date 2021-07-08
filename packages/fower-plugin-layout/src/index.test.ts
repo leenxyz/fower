@@ -2,7 +2,9 @@ import { Parser } from '@fower/parser'
 import { Atom } from '@fower/atom'
 import plugin, { getFlexDirection } from '.'
 
-const { isMatch, handleAtom } = plugin()
+const { isMatch, handleAtom, beforeHandleAtom, afterAtomStyleCreate } = plugin()
+
+const parser = new Parser({ row: true })
 
 test('isMatch', () => {
   expect(isMatch!('toCenter')).toEqual(true)
@@ -22,6 +24,33 @@ test('getFlexDirection', () => {
   expect(getFlexDirection({ row: true })).toBe('row')
   expect(getFlexDirection({ column: true })).toBe('column')
   expect(getFlexDirection({})).toBe('row')
+})
+
+describe('beforeHandleAtom()', () => {
+  test('atom starts with row', () => {
+    const atom = handleAtom!(
+      new Atom({
+        propKey: 'toCenter',
+        propValue: true,
+      }),
+      parser,
+    )
+    beforeHandleAtom?.(atom, parser)
+    expect(atom.id).toEqual('row-toCenter')
+  })
+
+  test('not start with row', () => {
+    const atom = handleAtom!(
+      new Atom({
+        propKey: 'toCenter',
+        propValue: true,
+      }),
+      parser,
+    )
+    atom.id = 'row-' + atom.id
+    beforeHandleAtom?.(atom, parser)
+    expect(atom.id).toEqual('row-toCenter')
+  })
 })
 
 describe('row', () => {
@@ -279,5 +308,105 @@ describe('row or column props', () => {
     expect(atom.style).toBeUndefined()
     expect(atom.isValid).toEqual(false)
     expect(atom.handled).toEqual(true)
+  })
+})
+
+test('selfTop', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfTop',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('flex-start')
+})
+
+test('selfRight', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfRight',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('flex-end')
+})
+
+test('selfBottom', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfBottom',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('flex-end')
+})
+
+test('selfLeft', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfLeft',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('flex-start')
+})
+
+test('selfCenter', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfCenter',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('center')
+})
+
+test('selfAuto', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'selfAuto',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.alignSelf).toEqual('auto')
+})
+
+describe('afterAtomStyleCreate', () => {
+  test('no atoms', () => {
+    parser.atoms = []
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(0)
+  })
+
+  test('no matched atoms', () => {
+    const atom = handleAtom!(
+      new Atom({
+        propKey: 'foo',
+        propValue: true,
+      }),
+      parser,
+    )
+    parser.atoms = [atom]
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(1)
+  })
+
+  test('no matched atoms', () => {
+    const atom = handleAtom!(
+      new Atom({
+        propKey: 'toCenter',
+        propValue: true,
+      }),
+      parser,
+    )
+    parser.atoms = [atom]
+    afterAtomStyleCreate?.(parser)
+    expect(parser.atoms.length).toEqual(3)
   })
 })

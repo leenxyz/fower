@@ -151,7 +151,6 @@ export default (): FowerPlugin => {
     isMatch,
     beforeHandleAtom(atom, parser) {
       const direction = getFlexDirection(parser.props)
-      // TODO:
       if (atom.id.startsWith('row-') || atom.id.startsWith('column-')) {
         return atom
       }

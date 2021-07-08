@@ -376,14 +376,6 @@ export class Parser {
    * @param atom
    */
   mutateAtom(atom: Atom): void {
-    for (const plugin of this.plugins) {
-      if (!plugin.isMatch?.(atom.key)) continue
-
-      if (plugin.beforeHandleAtom) {
-        atom = plugin.beforeHandleAtom(atom, this as any)
-      }
-    }
-
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
