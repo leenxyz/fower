@@ -102,7 +102,7 @@ function toRule(rule: ParsedItem, wrapperSelector = '') {
 }
 
 /**
- *  to rules can insertRule
+ *  to rules can insertRules
  *  TODO: need improve
  * @param cssObj
  * @param className

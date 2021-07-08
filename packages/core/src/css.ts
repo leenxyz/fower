@@ -10,6 +10,6 @@ import { argsToProps } from '@fower/utils'
 export function css(...args: CSSArgs): string {
   if (!args.length) return ''
   const parser = new Parser(argsToProps(args))
-  parser.insertRule()
+  parser.insertRules()
   return parser.getClassNames().join(' ')
 }

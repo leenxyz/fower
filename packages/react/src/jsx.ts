@@ -26,7 +26,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
       parsedProps.style = { ...parser.toStyle(), ...props.style }
     }
   } else {
-    parser.insertRule()
+    parser.insertRules()
     const finalClassName = parser.getClassNames().join(' ').trim()
     if (finalClassName) parsedProps.className = finalClassName
   }

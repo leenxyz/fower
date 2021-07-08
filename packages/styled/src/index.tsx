@@ -89,7 +89,7 @@ function getCssParsedProps(props: any) {
 
   if (finalClassName) {
     parsedProps.className = finalClassName
-    parser.insertRule()
+    parser.insertRules()
   }
 
   return parsedProps

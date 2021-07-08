@@ -50,7 +50,7 @@ export class Parser {
   }
 
   get hasResponsive() {
-    return !!this.atoms.find((i) => !!i.meta.breakpoint)
+    return this.atoms.some((i) => !!i.meta.breakpoint)
   }
 
   get config() {
@@ -524,7 +524,7 @@ export class Parser {
   }
 
   /**
-   * get rules for parser.insertRule
+   * get rules for parser.insertRules
    * @returns
    */
   toRules(enableInserted = false): string[] {
@@ -611,7 +611,7 @@ export class Parser {
     return parsedProps
   }
 
-  insertRule() {
+  insertRules() {
     const rules = this.toRules()
     styleSheet.insertStyles(rules)
   }

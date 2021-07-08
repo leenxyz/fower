@@ -31,7 +31,7 @@ function handler(el: HTMLElement, bind: any) {
   const parser = new Parser(props)
 
   /** insert css to style element */
-  parser.insertRule()
+  parser.insertRules()
 
   /** rm no use attr */
   const parsedProps = parser.getParsedProps()

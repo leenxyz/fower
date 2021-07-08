@@ -34,5 +34,5 @@ export function injectGlobalStyle(cssObj: Record<string, CSS.Properties>) {
     parser.addAtom(atom)
   }
 
-  parser.insertRule()
+  parser.insertRules()
 }
