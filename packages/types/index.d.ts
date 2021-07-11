@@ -1,6 +1,4 @@
 import * as CSS from 'csstype'
-import type { Atom } from '@fower/atom'
-import type { Parser } from '@fower/parser'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
@@ -218,20 +216,202 @@ declare namespace FowerTypes {
      * @param atom
      * @param parser
      */
-    beforeHandleAtom?(atom: Atom, parser: Parser): Atom
+    beforeHandleAtom?(atom: AtomType, parser: ParserType): AtomType
 
     /**
      * on atom style creating
      * @param atom
      * @param parser
      */
-    handleAtom?(atom: Atom, parser: Parser): Atom
+    handleAtom?(atom: AtomType, parser: ParserType): AtomType
 
     /**
      * after atom style created
      * @param parser
      */
-    afterAtomStyleCreate?(parser: Parser): void
+    afterAtomStyleCreate?(parser: ParserType): void
+  }
+
+  class ParserType {
+    atoms: AtomType[]
+    get config(): Configuration
+    /**
+     * convert style object to string
+     * @param style
+     * @param meta
+     * @example
+     * { width: 10 } -> "width: 10px;"
+     * { paddingTop: 10, paddingBottom: 10 } -> "padding-top: 10px;padding-bottom: 10px;"
+     * @returns
+     */
+    addAtom(atom: AtomType): void
+    /**
+     * get component classNames
+     */
+    getClassNames(): string[]
+  }
+
+  interface Meta {
+    /**
+     * color mode
+     * @exmple
+     * mode: 'dark'
+     */
+    mode?: string
+    /**
+     * @exmple
+     * breakpoint: '640px'
+     */
+    breakpoint?: string
+    /**
+     * @exmple
+     * --hover -> hover
+     * --befor -> befor
+     */
+    pseudo?: string
+    /**
+     * @exmple
+     * --hover -> :
+     * --befor -> ::
+     */
+    pseudoPrefix?: string
+    /**
+     * child selector for atom.className
+     * @exmple
+     * childSelector: '.child'
+     */
+    childSelector?: string
+    /**
+     * sibling selector for atom.className
+     * @exmple
+     * childSelector: '.sibling'
+     */
+    siblingSelector?: string
+    /**
+     * parent class for group pseudo
+     * @exmple
+     * parentClass: 'group'
+     */
+    parentClass?: string
+    /**
+     * is !important style
+     */
+    important?: boolean
+    /**
+     * is global style, value is global selector
+     */
+    global?: string
+    /**
+     * color name or value
+     * @example
+     * gray200--O20 -> gray200
+     * gray200--T20 -> gray200
+     * #666--D40 -> #666
+     * #999--L40 -> #999
+     */
+    color?: string
+    /**
+     * color postfix for opacify,transparent,darken,lighten
+     * @example
+     * gray200--O20 -> O20
+     * gray200--T20 -> T20
+     * #666--D40 -> D40
+     * #999--L40 -> L40
+     */
+    colorPostfix?: string
+  }
+
+  interface AtomOptions {
+    propKey: 'css' | 'debug' | ({} & string)
+    propValue?: any
+    key?: string
+    value?: any
+    meta?: Meta
+    style?: any
+    handled?: boolean
+  }
+
+  class AtomType {
+    private readonly options
+    constructor(options: AtomOptions)
+    /**
+     * string or number prop
+     * @readonly
+     * @memberof Atom
+     */
+    get isValueProp(): boolean
+    /**
+     * get style keys string
+     * @readonlyReactElement
+     * @memberof Atom
+     * @example
+     * { color: "#999"} -> color
+     * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop
+     */
+    get styleKeys(): string
+    /**
+     * get style key hash
+     * @readonly
+     * @memberof Atom
+     * @example
+     * { color: "#999"} -> color + hashed meta
+     * { paddingTop: 10, paddingBottom: 10} -> paddingTop-paddingTop  + hashed meta
+     */
+    get styleKeysHash(): string
+    get isFalsePropValue(): boolean
+    get isTruePropValue(): boolean
+    /**
+     * original propKey, 原始的propkey
+     * @example
+     * <Box red200></Box> propKey is red200
+     * <Box red200--hover></Box> propKey is red200--hover
+     */
+    readonly propKey: 'css' | 'debug' | ({} & string)
+    /**
+     * original propValue
+     * @example
+     * <Box red200></Box>  -> true
+     * <Box p={10}></Box>  -> 10
+     * <Box color="red"></Box>  -> red
+     */
+    readonly propValue: any
+    /**
+     * get the primitive atomic key, exclude value or posfix
+     * @example
+     * m-4 -> m
+     * m={4} -> m
+     * m4 -> m
+     * m4--hover -> m
+     * m4--sm -> m
+     * m4--dark--sm-i -> m
+     */
+    key: string
+    /**
+     * atom value, get it from PropValue or propKey
+     * @example
+     * <Box toCenter></Box> -> true
+     * <Box m={4}></Box> -> 4
+     * <Box m-4></Box> -> 4
+     * <Box m4></Box> -> 16
+     */
+    value: any
+    meta: Meta
+    /**
+     * unique id for cache
+     */
+    id: string
+    style: CSS.Properties<number | string>
+    type: 'color' | 'backgroundColor' | 'borderColor' | 'padding' | 'margin' | ({} & string)
+    /**
+     * if handled, this atom is ready to push to parser.atoms
+     */
+    handled: boolean
+    /**
+     * already inserted to stylesheet
+     */
+    inserted: boolean
+    /** if not valid, do not generate style */
+    isValid: boolean
   }
 
   interface Theme {

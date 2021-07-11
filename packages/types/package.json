@@ -9,8 +9,6 @@
         "test": "echo 'build:test'"
     },
     "dependencies": {
-        "@fower/atom": "^1.35.0",
-        "@fower/parser": "^1.35.0",
         "csstype": "^3.0.8"
     }
 }
