@@ -34,6 +34,13 @@ export interface Meta {
   childSelector?: string
 
   /**
+   * sibling selector for atom.className
+   * @exmple
+   * childSelector: '.sibling'
+   */
+  siblingSelector?: string
+
+  /**
    * parent class for group pseudo
    * @exmple
    * parentClass: 'group'

@@ -166,7 +166,10 @@ export class Atom {
     if (values.length) id = id + '--' + values.join('--')
 
     // handle special charactor
-    id = id.replace(/[#()]/g, '').replace(/\%/g, 'p').replace(/\s+/g, '-').replace(/\.+/g, 'dot-')
+    id = id
+      .replace(/[#().]/g, '')
+      .replace(/\%/g, 'p')
+      .replace(/\s+/g, '-')
 
     const isValid = /^[a-zA-Z0-9-]+$/.test(id)
     id = isValid ? id : `css-${hash(id)}`
