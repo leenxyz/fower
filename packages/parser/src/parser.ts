@@ -432,6 +432,10 @@ export class Parser {
         option.meta.childSelector = selector
       }
 
+      if (selectorType === 'sibling' && option.meta) {
+        option.meta.siblingSelector = selector
+      }
+
       const atom = new Atom(option)
 
       try {
@@ -500,7 +504,9 @@ export class Parser {
 
     classNames = classNames.concat(filteredClassNames)
 
-    if (this.hasResponsive) classNames.unshift(this.uniqueClassName)
+    if (this.hasResponsive) {
+      classNames.unshift(this.uniqueClassName)
+    }
 
     return classNames
   }
@@ -550,14 +556,22 @@ export class Parser {
       // empty style
       if (isEmptyObj(style)) continue
 
-      const { pseudo, pseudoPrefix, mode, breakpoint = '', childSelector, parentClass } = meta
+      const {
+        pseudo,
+        pseudoPrefix,
+        mode,
+        breakpoint = '',
+        childSelector,
+        siblingSelector,
+        parentClass,
+      } = meta
 
       // TODO: need refactor
       const shouldUseUniqueClassName = !!this.atoms.find(
-        (i) => i.styleKeys === atom.styleKeys && (atom.meta.breakpoint || i.meta.breakpoint),
+        (i) => i.styleKeys === atom.styleKeys && (breakpoint || i.meta.breakpoint),
       )
       const uniqueSelector =
-        shouldUseUniqueClassName || atom.meta.breakpoint ? '.' + this.uniqueClassName : ''
+        shouldUseUniqueClassName || breakpoint ? '.' + this.uniqueClassName : ''
 
       if (!enableInserted) {
         if (!shouldUseUniqueClassName) {
@@ -571,6 +585,10 @@ export class Parser {
       let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
       if (mode) selector = `.${classPrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
+
+      if (siblingSelector) {
+        selector = `${selector}${siblingSelector}`
+      }
 
       if (pseudo) {
         const pseudoSelector = pseudoPrefix + pseudo
