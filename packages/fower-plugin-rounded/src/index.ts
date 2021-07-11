@@ -1,5 +1,4 @@
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, store } from '@fower/core'
 
 const Top = 'Top'
 const Left = 'Left'

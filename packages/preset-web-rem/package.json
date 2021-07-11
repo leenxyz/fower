@@ -23,7 +23,7 @@
   "module": "dist/preset-web-rem.esm.js",
   "dependencies": {
     "@fower/colors": "^1.36.0",
-    "@fower/types": "^1.36.0",
+    "@fower/core": "^1.36.0",
     "fower-plugin-animation": "^1.36.0",
     "fower-plugin-appearance": "^1.36.0",
     "fower-plugin-background": "^1.36.0",

@@ -1,6 +1,6 @@
 import { presetWeb } from '@fower/preset-web'
-import { store } from '@fower/store'
-import { injectGlobalStyle } from './injectGlobalStyle'
+import { store } from '@fower/core'
+import { injectGlobalStyle } from '../src/injectGlobalStyle'
 
 beforeAll(() => {
   store.setConfig(presetWeb)

@@ -1,4 +1,4 @@
-import { keyframes } from '.'
+import { keyframes } from '../src'
 
 test('keyframes()', () => {
   const name = keyframes({

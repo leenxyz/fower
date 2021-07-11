@@ -92,7 +92,7 @@ addAtom('textBody', {
   fontSize: 20,
 });
 
-declare module '@fower/types' {
+declare module '@fower/atomic-props' {
   export interface AtomicProps {
     textBody?: boolean;
     info?: boolean;

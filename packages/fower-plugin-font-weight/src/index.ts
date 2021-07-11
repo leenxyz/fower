@@ -1,5 +1,4 @@
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, store } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
 export function isMatch(key: string) {

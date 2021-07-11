@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 const padding = 'padding'
 const Top = 'Top'

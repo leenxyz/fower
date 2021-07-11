@@ -1,6 +1,4 @@
-import { Atom } from '@fower/atom'
-import { setConfig } from '@fower/core'
-import { Parser } from '@fower/parser'
+import { setConfig, Atom, Parser } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 

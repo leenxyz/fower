@@ -43,7 +43,7 @@ export default () => {
 Many people like the way **Babel Preset**. In order to get TypeScript IntelliSense, in addition to configuring the babel preset, you also need to add a type file in the project root directory, for example, we named it `index.d.ts `, the content is as follows:
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@fower/types';
+import { AtomicProps } from '@fower/atomic-props';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}

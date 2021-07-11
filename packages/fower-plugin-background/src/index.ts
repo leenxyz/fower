@@ -1,5 +1,5 @@
 import { downFirst } from '@fower/utils'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 export function isBg(key: string) {
   return /^bg?$/.test(key)

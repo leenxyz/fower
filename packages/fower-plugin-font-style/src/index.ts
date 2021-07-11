@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 export function isMatch(key: string) {
   return /^(not)?Italic$/i.test(key)

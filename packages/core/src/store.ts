@@ -1,9 +1,11 @@
 import deepmerge from 'deepmerge'
-import { FowerPlugin, Configuration, Theme, CSSObject, ModeType } from '@fower/types'
+import { FowerPlugin, Configuration, Theme, CSSObject, ModeType } from './typings'
 import { isBrowser } from '@fower/utils'
-import { PartialThemeConfig, PartialConfig } from './types'
 
 type Strategy = 'replace' | 'merge' | 'deepmerge'
+
+export type PartialThemeConfig = Theme | { [key: string]: any }
+export type PartialConfig = Configuration | { [key: string]: any }
 
 const modeCacheKey = 'fower-mode'
 

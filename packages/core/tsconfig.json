@@ -1,8 +1,15 @@
 {
-  "include": ["src", "types"],
+  "include": [
+    "src",
+    "types"
+  ],
   "compilerOptions": {
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "target": "ESNext",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,

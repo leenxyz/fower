@@ -1,5 +1,4 @@
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, store } from '@fower/core'
 
 export function isMatch(key: string) {
   if (key === 'color') return true

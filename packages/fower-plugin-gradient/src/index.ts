@@ -1,5 +1,4 @@
-import { FowerPlugin } from '@fower/types'
-import { store } from '@fower/store'
+import { FowerPlugin, store } from '@fower/core'
 
 function isMatch(key: string) {
   return /^gradient[XY]$/i.test(key)

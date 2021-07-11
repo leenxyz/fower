@@ -42,10 +42,10 @@
 /// <reference types="fower-plugin-visibility" />
 /// <reference types="fower-plugin-placeholder" />
 /// <reference types="fower-plugin-svg" />
-/// <reference types="@fower/types" />
-import { Preset, Theme } from '@fower/types'
+/// <reference types="@fower/atomic-props" />
+import { Preset, Theme } from '@fower/core'
 
 export declare const presetWeb: Preset
 export default presetWeb
-export declare const plugins: import('@fower/types').FowerPlugin[]
+export declare const plugins: import('@fower/core').FowerPlugin[]
 export declare const theme: Theme

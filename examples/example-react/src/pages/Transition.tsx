@@ -1,4 +1,5 @@
 import { Box } from '@fower/react';
+import { AtomicProps } from '@fower/atomic-props';
 
 export default () => {
   return (

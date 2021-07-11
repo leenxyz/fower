@@ -1,6 +1,5 @@
-import { FowerPlugin } from '@fower/types'
-import { Atom } from '@fower/atom'
-import { store } from '@fower/store'
+import { FowerPlugin } from '@fower/core'
+import { Atom, store } from '@fower/core'
 
 const row = 'row'
 const column = 'column'

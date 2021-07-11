@@ -1,10 +1,10 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '../src/typings'
 import deepmerge from 'deepmerge'
-import { store, Store } from '.'
-import { setConfig } from '@fower/core'
-import { Parser } from '@fower/parser'
+import { store, Store } from '../src/store'
+import { setConfig } from '../src'
+import { Parser } from '../src/parser'
 import { presetWeb } from '@fower/preset-web'
-import { Atom } from '@fower/atom'
+import { Atom } from '../src/atom'
 
 setConfig(presetWeb)
 const parser = new Parser({})

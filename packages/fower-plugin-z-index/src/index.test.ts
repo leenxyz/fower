@@ -1,5 +1,4 @@
-import { setConfig } from '@fower/core'
-import { Atom } from '@fower/atom'
+import { setConfig, Atom } from '@fower/core'
 import plugin from '.'
 
 beforeAll(() => {

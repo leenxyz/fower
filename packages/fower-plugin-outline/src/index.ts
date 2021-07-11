@@ -1,5 +1,5 @@
-import { Atom } from '@fower/atom'
-import { FowerPlugin } from '@fower/types'
+import { Atom } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 
 export function isMatch(key: string) {
   return key === 'outline' || isOutLineNone(key) || isOutLineOffset(key)

@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 export const sizeMaps: Record<string, string[]> = {
   w: ['width'],

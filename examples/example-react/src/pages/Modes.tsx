@@ -1,6 +1,5 @@
 import { Box, useMode } from '@fower/react';
-import { setConfig } from '@fower/core';
-import { store } from '@fower/store';
+import { setConfig, store } from '@fower/core';
 import { useState } from 'react';
 
 setConfig({

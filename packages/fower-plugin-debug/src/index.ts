@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 export const borderValue = '1px solid gold'
 

@@ -1,5 +1,5 @@
 import 'react'
-import { AtomicProps, CSSObject } from '@fower/types'
+import { AtomicProps, CSSObject } from '@fower/core'
 
 declare module 'react' {
   interface DOMAttributes<T> extends AtomicProps {

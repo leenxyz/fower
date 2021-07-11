@@ -1,7 +1,6 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { store } from '@fower/store'
-import { AtomicProps, As } from '@fower/types'
-import { Parser } from '@fower/parser'
+import { store, Parser, As } from '@fower/core'
+import { AtomicProps } from '@fower/atomic-props'
 
 export interface BoxComponent<T extends As, P = any> {
   <AsType extends As = 'div'>(

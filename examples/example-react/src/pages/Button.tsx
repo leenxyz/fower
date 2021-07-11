@@ -1,5 +1,5 @@
 import React, { cloneElement, forwardRef } from 'react';
-import { FowerColor } from '@fower/types';
+import { FowerColor } from '@fower/core';
 import { BoxComponent } from '@fower/react';
 import { styled } from '@fower/styled';
 import { Box } from '@fower/react';

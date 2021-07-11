@@ -1,4 +1,4 @@
-import { store } from '@fower/store'
+import { store } from '@fower/core'
 import plugin from '.'
 
 const { isMatch, init } = plugin()

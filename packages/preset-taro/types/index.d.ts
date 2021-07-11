@@ -26,11 +26,11 @@
 /// <reference types="fower-plugin-z-index" />
 /// <reference types="fower-plugin-outline" />
 /// <reference types="fower-plugin-ellipsis" />
-/// <reference types="@fower/types" />
+/// <reference types="@fower/core" />
 /// <reference types="react" />
 
-import { Preset } from '@fower/types'
+import { Preset } from '@fower/core'
 export declare const presetTaro: Preset
 export default presetTaro
 
-export declare const plugins: import('@fower/types').FowerPlugin[]
+export declare const plugins: import('@fower/core').FowerPlugin[]

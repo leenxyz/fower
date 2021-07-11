@@ -20,8 +20,5 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/colors.esm.js",
-  "dependencies": {
-    "@fower/types": "^1.36.0"
-  }
+  "module": "dist/colors.esm.js"
 }

@@ -1,9 +1,9 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, PropValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
 
-declare module '@fower/types' {
+declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
      * Set margin
@@ -19,7 +19,6 @@ declare module '@fower/types' {
      * ```
      */
     m?: PropValue
-
 
     /**
      * Set margin
@@ -156,9 +155,6 @@ declare module '@fower/types' {
      * ```
      */
     mx?: PropValue
-
-
-
 
     /**
      * Set marginLeft and marginRight

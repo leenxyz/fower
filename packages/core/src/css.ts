@@ -1,5 +1,5 @@
-import { CSSArgs } from '@fower/types'
-import { Parser } from '@fower/parser'
+import { CSSArgs } from './typings'
+import { Parser } from './parser'
 import { argsToProps } from '@fower/utils'
 
 /**

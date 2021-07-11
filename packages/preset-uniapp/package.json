@@ -23,7 +23,7 @@
   "module": "dist/preset-uniapp.esm.js",
   "dependencies": {
     "@fower/colors": "^1.36.0",
-    "@fower/types": "^1.36.0",
+    "@fower/core": "^1.36.0",
     "fower-plugin-background": "^1.36.0",
     "fower-plugin-border": "^1.36.0",
     "fower-plugin-box-alignment": "^1.36.0",

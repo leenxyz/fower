@@ -1,4 +1,4 @@
-import { Atom } from '@fower/atom'
+import { Atom } from '@fower/core'
 import plugin from '.'
 
 const { isMatch, handleAtom } = plugin()

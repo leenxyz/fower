@@ -26,10 +26,10 @@
 /// <reference types="fower-plugin-z-index" />
 /// <reference types="fower-plugin-outline" />
 /// <reference types="fower-plugin-ellipsis" />
-/// <reference types="@fower/types" />
+/// <reference types="@fower/core" />
 
-import { Preset } from '@fower/types'
+import { Preset } from '@fower/core'
 export declare const presetUniapp: Preset
 export default presetUniapp
 
-export declare const plugins: import('@fower/types').FowerPlugin[]
+export declare const plugins: import('@fower/core').FowerPlugin[]

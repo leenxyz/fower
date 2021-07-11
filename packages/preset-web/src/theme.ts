@@ -1,4 +1,4 @@
-import { Theme } from '@fower/types'
+import { Theme } from '@fower/core'
 import { colors } from '@fower/colors'
 
 export const theme = {

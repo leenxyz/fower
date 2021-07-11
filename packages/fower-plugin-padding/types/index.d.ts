@@ -1,9 +1,10 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, PropValue } from '@fower/core'
+import '@fower/atomic-props'
 
 declare const _default: () => FowerPlugin
 export default _default
 
-declare module '@fower/types' {
+declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
      * Set padding

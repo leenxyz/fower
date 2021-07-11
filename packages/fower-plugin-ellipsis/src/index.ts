@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 
 interface EllipsisPlugin {
   defaultLineNum?: number

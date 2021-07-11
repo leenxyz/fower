@@ -78,7 +78,7 @@ export default () => {
 Note that if you want to get TypeScript type hints, you need to extend the attribute types of HTML by creating a new `d.ts` file in the project root directory, you can name it `index.d.ts`, the code is as follows:
 
 ```jsx title="index.d.ts"
-import { AtomicProps } from '@fower/types';
+import { AtomicProps } from '@fower/atomic-props';
 
 declare module 'react' {
   interface HTMLAttributes<T> extends AtomicProps {}

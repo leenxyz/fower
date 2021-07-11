@@ -1,6 +1,5 @@
-import { Atom } from '@fower/atom'
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { Atom, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 import { isNumber } from '@fower/utils'
 
 function isMatch(key: string) {
@@ -20,7 +19,7 @@ export default (): FowerPlugin => {
       if (!matched) return
 
       // group atoms by pseudo
-      const atomsMap: Record<string, Atom[]> = {}
+      const atomsMap: Record<string, any[]> = {}
 
       for (const atom of parser.atoms) {
         if (!isMatch(atom.key)) continue

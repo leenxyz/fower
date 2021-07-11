@@ -1,6 +1,5 @@
 import { createElement } from 'react'
-import { store } from '@fower/store'
-import { Parser } from '@fower/parser'
+import { store, Parser } from '@fower/core'
 
 /**
  * JSX Pragma

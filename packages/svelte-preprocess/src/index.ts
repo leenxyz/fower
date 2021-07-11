@@ -1,7 +1,6 @@
 import { PreprocessorGroup } from 'svelte/types/compiler/preprocess'
 import posthtml, { NodeAttributes } from 'posthtml'
-import { setConfig } from '@fower/core'
-import { Parser } from '@fower/parser'
+import { setConfig, Parser } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 
 setConfig(presetWeb)

@@ -1,6 +1,5 @@
-import { FowerPlugin } from '@fower/types'
-import { store } from '@fower/store'
-import { Atom } from '@fower/atom'
+import { FowerPlugin } from '@fower/core'
+import { store, Atom } from '@fower/core'
 import { downFirst } from '@fower/utils'
 import { formatColor } from '@fower/color-helper'
 

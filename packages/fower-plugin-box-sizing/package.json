@@ -22,10 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-box-sizing.esm.js",
   "dependencies": {
-    "@fower/atom": "^1.36.0",
+    "@fower/atomic-props": "^1.36.0",
     "@fower/core": "^1.36.0",
-    "@fower/parser": "^1.36.0",
-    "@fower/types": "^1.36.0",
     "@fower/utils": "^1.36.0",
     "csstype": "^3.0.8"
   }

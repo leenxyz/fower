@@ -1,5 +1,5 @@
 import { Box } from '@fower/react';
-import { Atom } from '@fower/atom';
+import { Atom } from '@fower/core';
 
 export default () => {
   return (

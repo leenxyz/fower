@@ -1,6 +1,6 @@
 import { presetWeb } from '@fower/preset-web'
-import { store } from '@fower/store'
-import { css } from './css'
+import { store } from '@fower/core'
+import { css } from '../src/css'
 
 afterEach(() => {
   store.setConfig(presetWeb)

@@ -1,4 +1,4 @@
-import { store } from '@fower/store'
+import { store } from '@fower/core'
 import { useState, useEffect } from 'react'
 interface Result {
   mode: string

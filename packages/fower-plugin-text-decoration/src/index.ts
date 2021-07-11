@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 import { kebab } from '@fower/utils'
 
 export default (): FowerPlugin => {

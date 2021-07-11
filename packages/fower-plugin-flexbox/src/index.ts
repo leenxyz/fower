@@ -1,5 +1,5 @@
-import { Atom } from '@fower/atom'
-import { FowerPlugin } from '@fower/types'
+import { Atom } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 import { kebab } from '@fower/utils'
 
 export const flexMaps: Record<string, string> = {

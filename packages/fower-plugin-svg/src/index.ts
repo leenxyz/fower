@@ -1,6 +1,5 @@
-import { store } from '@fower/store'
 import { downFirst } from '@fower/utils'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, store } from '@fower/core'
 
 function isFillColor(key = '') {
   if (!key.startsWith('fill')) return false

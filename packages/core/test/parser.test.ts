@@ -1,8 +1,8 @@
-import { setConfig } from '@fower/core'
-import { store } from '@fower/store'
-import { Atom } from '@fower/atom'
+import { setConfig } from '../src'
+import { store } from '../src/store'
+import { Atom } from '../src/atom'
 import { presetWeb } from '@fower/preset-web'
-import { Parser } from './parser'
+import { Parser } from '../src/parser'
 
 const atomCache = store.atomCache
 
@@ -303,7 +303,7 @@ describe('css prop', () => {
     })
     const [atom] = parser.atoms
     expect(parser.atoms.length).toEqual(1)
-    expect(atom.meta.childSelector).toEqual(' .foo') // TODO:
+    expect(atom.meta.childSelector).toEqual('.foo') // TODO:
   })
 
   test('parseCSSProp() with cached atom', () => {
@@ -337,7 +337,7 @@ test('insertRule()', () => {
     p1: true,
     m1: true,
   })
-  parser.insertRule()
+  parser.insertRules()
   expect(1).toBeTruthy() // TODO:
 })
 

@@ -1,7 +1,5 @@
-import { Atom } from '@fower/atom'
-import { Parser } from '@fower/parser'
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { Atom, Parser, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 
 const timingReg = /^ease(linear|In|Out|InOut)/i
 const transitionReg = /^transition(None|All|Common|Colors|Opacity|Shadow|Transform)?$/i

@@ -1,10 +1,10 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 import * as CSS from 'csstype'
 
 declare const _default: () => FowerPlugin
 export default _default
 
-declare module '@fower/types' {
+declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
      * Set textAlign

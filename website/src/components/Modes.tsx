@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from '@fower/react'
 import { setConfig } from '@fower/core'
-import { store } from '@fower/store'
 import { useState } from 'react'
 
 setConfig({

@@ -1,6 +1,6 @@
 import * as CSS from 'csstype'
-import { Atom } from '@fower/atom'
-import { Parser } from '@fower/parser'
+import { Atom } from './atom'
+import { Parser } from './parser'
 
 /**
  * inject styles to global

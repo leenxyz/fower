@@ -1,6 +1,5 @@
-import { FowerPlugin } from '@fower/types'
-import { keyframes } from '@fower/core'
-import { Atom } from '@fower/atom'
+import { FowerPlugin } from '@fower/core'
+import { keyframes, Atom } from '@fower/core'
 
 const isPresetAnimation = (key: string) => /^animate(None|Spin|Ping|Pulse|Bounce)/i.test(key)
 

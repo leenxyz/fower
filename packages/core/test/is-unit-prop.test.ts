@@ -1,4 +1,4 @@
-import { isUnitProp } from './is-unit-prop'
+import { isUnitProp } from '../src/isUnitProp'
 
 test('color is not unitProp', () => {
   expect(isUnitProp('color')).toBeFalsy()

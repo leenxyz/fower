@@ -1,4 +1,4 @@
-import { Parser } from '@fower/parser'
+import { Parser } from '@fower/core'
 
 function handler(el: HTMLElement, bind: any) {
   const props: any = {}

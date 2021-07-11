@@ -1,6 +1,5 @@
-import { Atom } from '@fower/atom'
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { Atom, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 
 export function isMatch(key: string) {
   return /^shadow/i.test(key)

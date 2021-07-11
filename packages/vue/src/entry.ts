@@ -1,5 +1,4 @@
-import { setConfig } from '@fower/core'
-import { store } from '@fower/store'
+import { setConfig, store } from '@fower/core'
 import presetWeb from '@fower/preset-web'
 import { PluginFunction } from 'vue'
 import vcss from '@/v-css'

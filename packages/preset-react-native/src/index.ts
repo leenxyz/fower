@@ -1,5 +1,5 @@
-import { Preset } from '@fower/types'
-import { Theme } from '@fower/types'
+import { Preset } from '@fower/core'
+import { Theme } from '@fower/core'
 import { plugins } from './plugins'
 import { theme } from './theme'
 

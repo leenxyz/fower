@@ -1,8 +1,6 @@
 const { parseComponent } = require('vue-template-compiler')
 const posthtml = require('posthtml')
-const { css } = require('@fower/core')
-const { Parser } = require('@fower/parser')
-const { setConfig } = require('@fower/core')
+const { css, Parser, setConfig } = require('@fower/core')
 const { presetWeb } = require('@fower/preset-web')
 
 setConfig(presetWeb)

@@ -1,9 +1,9 @@
-import { Atom, Options } from '@fower/atom'
-import { store } from '@fower/store'
+import { Atom, Options } from './atom'
+import { store } from './store'
 import { upFirst } from '@fower/utils'
 import { formatColor } from '@fower/color-helper'
-import { styleSheet } from '@fower/sheet'
-import { Props } from '@fower/types'
+import { styleSheet } from './sheet'
+import { Props } from './typings'
 import { parse } from '@fower/css-object-processor'
 import {
   isEmptyObj,
@@ -12,7 +12,7 @@ import {
   isPercentNumber,
   isNumber,
 } from '@fower/utils'
-import { isUnitProp } from './is-unit-prop'
+import { isUnitProp } from './isUnitProp'
 
 type Dict = Record<string, any>
 

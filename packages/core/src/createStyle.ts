@@ -1,5 +1,6 @@
-import { Parser } from '@fower/parser'
-import { AtomicProps, FowerCSSProperties, PostfixAtomicProps } from '@fower/types'
+import { Parser } from './parser'
+import { FowerCSSProperties, PostfixAtomicProps } from './typings'
+import { AtomicProps } from '@fower/atomic-props'
 import { CSSProperties } from 'react'
 
 export function createStyle(

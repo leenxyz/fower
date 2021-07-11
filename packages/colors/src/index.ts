@@ -1,6 +1,4 @@
-import { Colors } from '@fower/types'
-
-export const colors: Colors = {
+export const colors: any = {
   transparent: 'transparent',
   white: '#ffffff',
   black: '#000',

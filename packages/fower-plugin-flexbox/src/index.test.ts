@@ -1,7 +1,6 @@
 import { setConfig } from '@fower/core'
-import { Parser } from '@fower/parser'
+import { Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
-import { Atom } from '@fower/atom'
 import plugin, { flexMaps } from '.'
 
 setConfig(presetWeb)

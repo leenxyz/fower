@@ -1,4 +1,4 @@
-import { CSSObject } from '@fower/types'
+import { CSSObject } from '@fower/core'
 import { toRules, parse, flatten } from '../src'
 
 describe('css object processor', () => {
@@ -60,7 +60,7 @@ describe('css object processor', () => {
     expect(parsed.length).toEqual(5)
 
     expect(parsed[0]).toMatchObject({
-      selector: ' .title', // TODO
+      selector: '.title', // TODO
       style: { padding: 1 },
     })
   })

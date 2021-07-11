@@ -7,10 +7,10 @@ import {
   ReactNode,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { store } from '@fower/store'
+import { store, Parser } from '@fower/core'
 import { upFirst, argsToProps } from '@fower/utils'
-import { AtomicProps, StyledArgs } from '@fower/types'
-import { Parser } from '@fower/parser'
+import { StyledArgs } from '@fower/core'
+import { AtomicProps } from '@fower/atomic-props'
 
 export type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
 

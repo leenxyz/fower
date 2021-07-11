@@ -1,8 +1,6 @@
 import React from 'react'
-import { setConfig } from '@fower/core'
+import { setConfig, styleSheet, store } from '@fower/core'
 import presetWeb from '@fower/preset-web'
-import { styleSheet } from '@fower/sheet'
-import { store } from '@fower/store'
 
 setConfig(presetWeb)
 

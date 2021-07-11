@@ -20,10 +20,10 @@
 /// <reference types="fower-plugin-font-style" />
 /// <reference types="fower-plugin-font-weight" />
 /// <reference types="fower-plugin-z-index" />
-/// <reference types="@fower/types" />
+/// <reference types="@fower/core" />
 
-import { Preset, Theme } from '@fower/types'
+import { Preset, Theme } from '@fower/core'
 export declare const presetReactNative: Preset
 export default presetReactNative
 export declare const theme: Partial<Theme>
-export declare const plugins: import('@fower/types').FowerPlugin[]
+export declare const plugins: import('@fower/core').FowerPlugin[]

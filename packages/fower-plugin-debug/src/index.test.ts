@@ -1,5 +1,4 @@
-import { Parser } from '@fower/parser'
-import { Atom } from '@fower/atom'
+import { Parser, Atom } from '@fower/core'
 import plugin, { borderValue } from '.'
 
 const { isMatch, handleAtom } = plugin()

@@ -24,8 +24,7 @@
   "dependencies": {
     "@fower/core": "^1.36.0",
     "@fower/preset-react-native": "^1.36.0",
-    "@fower/styled": "^1.36.0",
-    "@fower/types": "^1.36.0"
+    "@fower/styled": "^1.36.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.64.4"

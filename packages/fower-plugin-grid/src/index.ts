@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
 function isMatch(key: string) {

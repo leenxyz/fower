@@ -1,5 +1,4 @@
-import { store } from '@fower/store'
-import { FowerPlugin } from '@fower/types'
+import { FowerPlugin, store } from '@fower/core'
 
 function isPreset(key: string) {
   const { fontSizes = {} } = store.getTheme()

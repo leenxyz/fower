@@ -1,8 +1,6 @@
 const { parseComponent } = require('@dcloudio/uni-template-compiler')
 const posthtml = require('posthtml')
-const { css } = require('@fower/core')
-const { Parser } = require('@fower/parser')
-const { setConfig } = require('@fower/core')
+const { css, Parser, setConfig } = require('@fower/core')
 const { presetUniapp } = require('@fower/preset-uniapp')
 
 setConfig(presetUniapp)

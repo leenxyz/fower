@@ -1,8 +1,14 @@
 import { Box } from '@fower/react';
 
+declare module '@fower/atomic-props' {
+  export interface AtomicProps {
+    foo?: boolean;
+  }
+}
+
 export default () => {
   return (
-    <Box>
+    <Box bgBrandPrimary foo>
       <Box text3XL fontBold>
         Padding
       </Box>
