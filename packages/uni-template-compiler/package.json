@@ -1,6 +1,6 @@
 {
   "name": "@fower/uni-template-compiler",
-  "version": "1.36.0",
+  "version": "1.37.0",
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -11,7 +11,7 @@
   },
   "author": "doabit",
   "dependencies": {
-    "@fower/preset-uniapp": "^1.36.0",
+    "@fower/preset-uniapp": "^1.37.0",
     "posthtml": "^0.15.2"
   },
   "devDependencies": {
