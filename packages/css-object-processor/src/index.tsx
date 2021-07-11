@@ -14,7 +14,7 @@ type FlattenItem = (string | Dict)[]
 
 interface ParsedItem {
   selector: string
-  selectorType: 'void' | 'child' | 'pseudo'
+  selectorType: 'void' | 'child' | 'sibling' | 'pseudo'
   style: Dict
 }
 
@@ -57,14 +57,19 @@ export function parse(cssObj: CSSObject): ParsedItem[] {
   const flattenItems = flatten(cssObj)
   const paths = flattenItems.reduce<ParsedItem[]>((result, item) => {
     const style = item.pop() as Dict
-    const selector = item.reduce<string>((r, cur) => {
-      if (isPseudo(cur as string)) return `${r}${cur}`
-      return `${r} ${cur}`
-    }, '')
+    let selector = item
+      .reduce<string>((r, cur) => {
+        return isPseudo(cur as string) ? `${r}${cur}` : `${r} ${cur}`
+      }, '')
+      .trim()
 
     let selectorType: ParsedItem['selectorType'] = 'child'
     if (isPseudo(selector)) selectorType = 'pseudo'
     if (selector === '') selectorType = 'void'
+    if (selector.startsWith('&')) {
+      selectorType = 'sibling'
+      selector = selector.replace(/^&/, '')
+    }
 
     return [...result, { selector, style, selectorType }]
   }, [])
