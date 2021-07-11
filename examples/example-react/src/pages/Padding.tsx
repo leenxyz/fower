@@ -8,7 +8,7 @@ declare module '@fower/atomic-props' {
 
 export default () => {
   return (
-    <Box bgBrandPrimary foo>
+    <Box bgBrandPrimary>
       <Box text3XL fontBold>
         Padding
       </Box>
