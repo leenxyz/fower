@@ -2,6 +2,7 @@ import { AtomicProps } from '@fower/atomic-props'
 import type { Atom } from './atom'
 import type { Parser } from './parser'
 import * as CSS from 'csstype'
+import React from 'react'
 
 export type ComponentProps<T extends As> = React.ComponentProps<T> & {
   as?: As
@@ -19,7 +20,7 @@ export type FowerColor = CSS.Property.Color | keyof Colors
 
 export type FowerThemeColor = keyof Colors
 
-export type As = React.ElementType
+export type As = React.ElementType | React.ComponentType
 
 export type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 

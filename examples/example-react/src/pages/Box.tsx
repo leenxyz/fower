@@ -1,10 +1,15 @@
 import { Box } from '@fower/react';
 
+function Button(props: { bar: string }) {
+  return <div>text: {props.bar}</div>;
+}
+
 export default () => {
   return (
     <Box>
       <Box>basic box</Box>
-      <Box as="span" p2 orange400>
+      <Box as={Button} bar="bar"></Box>
+      <Box as="b" p2 orange400>
         Span1
       </Box>
       <Box as="span" green400 border>
