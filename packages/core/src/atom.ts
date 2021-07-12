@@ -1,7 +1,7 @@
 import hash from 'string-hash'
 import { store } from './store'
 import * as CSS from 'csstype'
-import { Options, Meta } from './atom.types'
+import { Options, Meta } from './typings'
 
 const invalidProps = ['excludedProps']
 
