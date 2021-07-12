@@ -1,4 +1,4 @@
-import { Atom, store } from '@fower/core'
+import { Atom } from '@fower/core'
 import { FowerPlugin } from '@fower/core'
 import { isNumber } from '@fower/utils'
 
@@ -75,7 +75,7 @@ export default (): FowerPlugin => {
         const sortedValues = values.sort()
         const propValue = ids.sort().join('-')
         const id = 'transform-' + propValue
-        const transformAtom = store.atomCache.get(id)
+        const transformAtom = parser.store.atomCache.get(id)
 
         if (transformAtom) {
           return parser.addAtom(transformAtom)

@@ -1,5 +1,5 @@
 import { presetWeb } from '@fower/preset-web'
-import { store } from '@fower/core'
+import { store } from '../src/store'
 import { css } from '../src/css'
 
 afterEach(() => {

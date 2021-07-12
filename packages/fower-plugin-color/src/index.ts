@@ -1,10 +1,10 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin, Parser } from '@fower/core'
 
-export function isMatch(key: string) {
+export function isMatch(key: string, parser: Parser) {
   if (key === 'color') return true
 
   // color in theme
-  const colors: any = store.theme.colors
+  const colors: any = parser.config.theme.colors
   return !!colors[key]
 }
 

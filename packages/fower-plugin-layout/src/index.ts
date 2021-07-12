@@ -1,5 +1,5 @@
 import { FowerPlugin } from '@fower/core'
-import { Atom, store } from '@fower/core'
+import { Atom } from '@fower/core'
 
 const row = 'row'
 const column = 'column'
@@ -177,7 +177,7 @@ export default (): FowerPlugin => {
 
       const direction = getFlexDirection(parser.props)
       const directionKey = 'flexDirection-' + direction
-      const directionAtom = store.atomCache.get(directionKey)
+      const directionAtom = parser.store.atomCache.get(directionKey)
 
       if (directionAtom) {
         parser.addAtom(directionAtom)
@@ -196,7 +196,7 @@ export default (): FowerPlugin => {
       if (findDisplay) return
 
       const flexKey = 'flex'
-      const flexAtom = store.atomCache.get(flexKey)
+      const flexAtom = parser.store.atomCache.get(flexKey)
 
       if (flexAtom) {
         parser.addAtom(flexAtom)

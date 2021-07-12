@@ -1,4 +1,4 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
 export function isMatch(key: string) {
@@ -8,9 +8,9 @@ export function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
+    handleAtom(atom, parser) {
       const { key } = atom
-      const fontFamilies: any = store.getTheme().fontFamilies
+      const fontFamilies: any = parser.config.theme.fontFamilies
       const posfix = key.replace(/^font/i, '')
       const styleValue = fontFamilies[downFirst(posfix)]
       atom.style = { fontFamily: styleValue }

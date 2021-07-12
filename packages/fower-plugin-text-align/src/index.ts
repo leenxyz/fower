@@ -1,5 +1,4 @@
-import { Atom } from '@fower/core'
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, Atom } from '@fower/core'
 
 export function isMatch(key: string) {
   return /^text(Left|Center|Right|Justify|Align)$/i.test(key)

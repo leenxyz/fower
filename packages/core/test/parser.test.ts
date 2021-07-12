@@ -1,7 +1,7 @@
+import { presetWeb } from '@fower/preset-web'
 import { setConfig } from '../src'
 import { store } from '../src/store'
 import { Atom } from '../src/atom'
-import { presetWeb } from '@fower/preset-web'
 import { Parser } from '../src/parser'
 
 const atomCache = store.atomCache
@@ -390,7 +390,7 @@ describe('Auto dark mode', () => {
     expect(atom2.meta.mode).toEqual('dark')
   })
 
-  test('color with custo mapping', () => {
+  test('color with custom mapping', () => {
     const props = { red800: true }
     const parser = new Parser(props)
     const [atom1, atom2] = parser.atoms
@@ -408,7 +408,7 @@ describe('Auto dark mode', () => {
     expect(atom2.meta.mode).toEqual('dark')
   })
 
-  test('background color with custo mapping', () => {
+  test('background color with custom mapping', () => {
     const props = { bgRed800: true }
     const parser = new Parser(props)
     const [atom1, atom2] = parser.atoms
@@ -426,7 +426,7 @@ describe('Auto dark mode', () => {
     expect(atom2.meta.mode).toEqual('dark')
   })
 
-  test('border color with custo mapping', () => {
+  test('border color with custom mapping', () => {
     const props = { borderRed800: true }
     const parser = new Parser(props)
     const [atom1, atom2] = parser.atoms

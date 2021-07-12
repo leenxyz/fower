@@ -1,4 +1,4 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 
 function isMatch(key: string) {
   return /^gradient[XY]$/i.test(key)
@@ -7,9 +7,9 @@ function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
+    handleAtom(atom, parser) {
       const { key, value } = atom
-      const { colors } = store.theme
+      const { colors } = parser.config.theme
       const postfix = key.replace(/^gradient/, '').toLowerCase()
       const direction = postfix === 'x' ? 'right' : 'bottom'
 

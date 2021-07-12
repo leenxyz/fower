@@ -1,4 +1,4 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin, Parser } from '@fower/core'
 
 const Top = 'Top'
 const Left = 'Left'
@@ -26,9 +26,9 @@ export function isMatch(key: string) {
  * @param value
  * @returns
  */
-export function toStyle(atomKey: string, value: any) {
+export function toStyle(atomKey: string, value: any, parser: Parser) {
   let style: any = {}
-  const radii: any = store.getTheme().radii || {}
+  const radii: any = parser.config.theme.radii || {}
   const radiiKeys = Object.keys(radii) || []
   const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 
@@ -67,8 +67,8 @@ export function toStyle(atomKey: string, value: any) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
-      atom.style = toStyle(atom.key, atom.value)
+    handleAtom(atom, parser) {
+      atom.style = toStyle(atom.key, atom.value, parser)
       return atom
     },
   }

@@ -53,6 +53,10 @@ export class Parser {
     return this.atoms.some((i) => !!i.meta.breakpoint)
   }
 
+  get store() {
+    return store
+  }
+
   get config() {
     return store.config
   }
@@ -146,7 +150,6 @@ export class Parser {
 
       try {
         this.mutateAtom(atom)
-
         if (atom.handled) this.addAtom(atom)
       } catch (error) {
         continue
@@ -390,14 +393,14 @@ export class Parser {
     }
 
     for (const plugin of this.plugins) {
-      if (!plugin.isMatch?.(atom.key)) continue
+      if (!plugin.isMatch?.(atom.key, this)) continue
 
       if (plugin.beforeHandleAtom) {
-        atom = plugin.beforeHandleAtom(atom, this as any)
+        atom = plugin.beforeHandleAtom(atom, this)
       }
 
       if (plugin.handleAtom) {
-        atom = plugin.handleAtom?.(atom, this as any)
+        atom = plugin.handleAtom?.(atom, this)
       }
 
       atom.handled = true

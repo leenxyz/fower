@@ -1,9 +1,9 @@
-import { FowerPlugin } from '../src/typings'
+import { presetWeb } from '@fower/preset-web'
 import deepmerge from 'deepmerge'
+import { FowerPlugin } from '../src/typings'
 import { store, Store } from '../src/store'
 import { setConfig } from '../src'
 import { Parser } from '../src/parser'
-import { presetWeb } from '@fower/preset-web'
 import { Atom } from '../src/atom'
 
 setConfig(presetWeb)
@@ -99,6 +99,7 @@ test('use()', () => {
 })
 
 describe('addAtom()', () => {
+  store.config.plugins = []
   test('with string matcher', () => {
     const { isMatch, handleAtom } = store.addAtom('textBody', {
       fontSize: 30,
@@ -159,8 +160,8 @@ describe('addAtom()', () => {
 
 test('getAtomIds', () => {
   const ids = store.getAtomIds()
-  expect(ids.length).toEqual(1)
-  expect(ids[0]).toEqual('p-8')
+  expect(ids.length).toEqual(2)
+  expect(ids[1]).toEqual('p-8')
 })
 
 describe('composeAtom()', () => {

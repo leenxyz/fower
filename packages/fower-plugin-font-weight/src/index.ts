@@ -1,4 +1,4 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
 export function isMatch(key: string) {
@@ -10,9 +10,9 @@ export function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
+    handleAtom(atom, parser) {
       const { key, value } = atom
-      const weights: any = store.getTheme().fontWeights
+      const weights: any = parser.config.theme.fontWeights
       const posfix = key.replace(/^font/i, '')
       const styleValue = /^weight$/i.test(posfix) ? value : weights[downFirst(posfix)]
       atom.style = { fontWeight: styleValue }

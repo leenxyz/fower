@@ -44,7 +44,7 @@ export type CSSObject<T = any> =
     }
 
 export interface FowerPlugin {
-  isMatch(key: string): boolean
+  isMatch(key: string, parser?: Parser): boolean
 
   init?(props: Props): void
 

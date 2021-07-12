@@ -1,5 +1,5 @@
 import { FowerPlugin } from '@fower/core'
-import { store, Atom } from '@fower/core'
+import { Parser, Atom } from '@fower/core'
 import { downFirst } from '@fower/utils'
 import { formatColor } from '@fower/color-helper'
 
@@ -9,8 +9,8 @@ function isMatch(key: string) {
   return ringReg.test(key)
 }
 
-function toStyle(atom: Atom): any {
-  const { colors } = store.theme
+function toStyle(atom: Atom, parser: Parser): any {
+  const { colors } = parser.store.theme
   type ColorKey = keyof typeof colors
   let width: string = '1'
   let color: ColorKey = 'brand500'
@@ -41,8 +41,8 @@ function toStyle(atom: Atom): any {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
-      atom.style = toStyle(atom)
+    handleAtom(atom, parser) {
+      atom.style = toStyle(atom, parser)
 
       return atom
     },

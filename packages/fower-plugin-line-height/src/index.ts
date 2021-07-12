@@ -1,4 +1,4 @@
-import { Atom, store } from '@fower/core'
+import { Atom, Parser } from '@fower/core'
 import { FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
@@ -6,10 +6,10 @@ export function isMatch(key: string) {
   return /^leading(None|Tight|Snug|Normal|Relaxed|Loose)?$/i.test(key)
 }
 
-export function toStyle({ key, value, isValueProp }: Atom): any {
+export function toStyle({ key, value, isValueProp }: Atom, parser: Parser): any {
   if (isValueProp) return { lineHeight: value }
 
-  const lineHeights: any = store.getTheme().lineHeights
+  const lineHeights: any = parser.store.getTheme().lineHeights
   const type = key.replace(/^leading/, '')
   const presetValue = lineHeights[downFirst(type)]
 
@@ -21,8 +21,8 @@ export function toStyle({ key, value, isValueProp }: Atom): any {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
-      atom.style = toStyle(atom)
+    handleAtom(atom, parser) {
+      atom.style = toStyle(atom, parser)
       return atom
     },
   }

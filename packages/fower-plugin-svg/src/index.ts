@@ -1,21 +1,21 @@
 import { downFirst } from '@fower/utils'
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin, Parser } from '@fower/core'
 
-function isFillColor(key = '') {
+function isFillColor(key = '', parser: Parser) {
   if (!key.startsWith('fill')) return false
 
-  const colors: any = store.theme.colors
+  const colors: any = parser.store.theme.colors
   const colorKey = downFirst(key.replace(/^fill/, ''))
   if (colors[colorKey]) return true
 
   return false
 }
 
-function isMatch(key: string) {
-  return /^stroke$|^(stroke|fill)?(Current|None)$/i.test(key) || isFillColor(key)
+function isMatch(key: string, parser: Parser) {
+  return /^stroke$|^(stroke|fill)?(Current|None)$/i.test(key) || isFillColor(key, parser)
 }
 
-function toStyle(key: string, value: any): any {
+function toStyle(key: string, value: any, parser: Parser): any {
   if (/Current$/i.test(key)) {
     const cssKey = key.replace(/current$/i, '')
     return { [cssKey]: 'currentColor' }
@@ -33,7 +33,7 @@ function toStyle(key: string, value: any): any {
     return { stroke: value }
   }
 
-  if (isFillColor(key)) {
+  if (isFillColor(key, parser)) {
     const colorKey = downFirst(key.replace(/^fill/, ''))
     return { fill: colorKey }
   }
@@ -42,9 +42,9 @@ function toStyle(key: string, value: any): any {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
+    handleAtom(atom, parser) {
       const { key, value } = atom
-      atom.style = toStyle(key, value)
+      atom.style = toStyle(key, value, parser)
 
       return atom
     },

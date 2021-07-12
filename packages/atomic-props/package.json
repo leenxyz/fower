@@ -2,7 +2,7 @@
     "name": "@fower/atomic-props",
     "version": "1.38.0",
     "license": "MIT",
-    "main": "",
+    "main": "index.js",
     "types": "index.d.ts",
     "scripts": {
         "build": "echo 'build'",

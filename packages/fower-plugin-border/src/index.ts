@@ -1,4 +1,4 @@
-import { Atom, store } from '@fower/core'
+import { Atom, Parser } from '@fower/core'
 import { FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
@@ -13,14 +13,14 @@ function isMatch(key: string) {
   return key.startsWith('border')
 }
 
-function toStyle({ key, value }: Atom) {
+function toStyle({ key, value }: Atom, parser: Parser) {
   if (key === 'border') {
     if (typeof value === 'boolean') return { borderWidth: 1 }
     if (value === 'none') return { border: 'none' }
     return { borderWidth: value }
   }
 
-  const colors: any = store.theme.colors
+  const colors: any = parser.config.theme.colors
   const postfix = key.replace(/^border/, '')
 
   /** @example borderSolid,borderDashed */
@@ -50,8 +50,8 @@ function toStyle({ key, value }: Atom) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom) {
-      atom.style = toStyle(atom)
+    handleAtom(atom, parser) {
+      atom.style = toStyle(atom, parser)
       return atom
     },
   }
