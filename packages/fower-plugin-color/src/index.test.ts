@@ -8,8 +8,8 @@ const { isMatch, handleAtom } = plugin()
 const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('blue200')).toEqual(true)
-  expect(isMatch!('color')).toEqual(true)
+  expect(isMatch!('blue200', parser)).toEqual(true)
+  expect(isMatch!('color', parser)).toEqual(true)
 })
 
 test('color="#fc0"', () => {

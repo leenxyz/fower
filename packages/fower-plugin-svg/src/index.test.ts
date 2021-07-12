@@ -8,14 +8,14 @@ setConfig(presetWeb)
 const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('stroke')).toEqual(true)
-  expect(isMatch!('fillCurrent')).toEqual(true)
-  expect(isMatch!('strokeCurrent')).toEqual(true)
-  expect(isMatch!('fillNone')).toEqual(true)
-  expect(isMatch!('fillRed200')).toEqual(true)
-  expect(isMatch!('fillFoo200')).toBeFalsy()
-  expect(isMatch!('fooooo')).toBeFalsy()
-  expect(isMatch!(undefined as any)).toBeFalsy()
+  expect(isMatch!('stroke', parser)).toEqual(true)
+  expect(isMatch!('fillCurrent', parser)).toEqual(true)
+  expect(isMatch!('strokeCurrent', parser)).toEqual(true)
+  expect(isMatch!('fillNone', parser)).toEqual(true)
+  expect(isMatch!('fillRed200', parser)).toEqual(true)
+  expect(isMatch!('fillFoo200', parser)).toBeFalsy()
+  expect(isMatch!('fooooo', parser)).toBeFalsy()
+  expect(isMatch!(undefined as any, parser)).toBeFalsy()
 })
 
 test('stroke widh number value', () => {

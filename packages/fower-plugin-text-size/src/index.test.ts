@@ -10,8 +10,8 @@ beforeAll(() => {
 })
 
 test('isMatch', () => {
-  expect(isMatch!('text')).toEqual(true)
-  expect(isMatch!('textSM')).toEqual(true)
+  expect(isMatch!('text', parser)).toEqual(true)
+  expect(isMatch!('textSM', parser)).toEqual(true)
 })
 
 test('text={10}', () => {
