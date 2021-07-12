@@ -1,6 +1,6 @@
 {
   "name": "example-vue-vite",
-  "version": "1.38.0",
+  "version": "1.39.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@fower/vue": "^1.38.0",
+    "@fower/vue": "^1.39.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {

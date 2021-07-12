@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-flexbox",
-  "version": "1.38.0",
+  "version": "1.39.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-flexbox.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.38.0",
-    "@fower/core": "^1.38.0",
-    "@fower/utils": "^1.38.0"
+    "@fower/atomic-props": "^1.39.0",
+    "@fower/core": "^1.39.0",
+    "@fower/utils": "^1.39.0"
   }
 }
