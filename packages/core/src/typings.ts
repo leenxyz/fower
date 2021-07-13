@@ -3,6 +3,7 @@ import type { Atom } from './atom'
 import type { Parser } from './parser'
 import * as CSS from 'csstype'
 import React from 'react'
+import '@fower/atomic-props'
 
 export type ComponentProps<T extends As> = React.ComponentProps<T> & {
   as?: As

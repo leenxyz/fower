@@ -16,10 +16,10 @@ export default class Index extends Component {
   render() {
     return (
       <View className="index">
-        <View h-100 border bgGreen200 text-16>
+        <View h28 border bgGreen200 text-32>
           Hello world!
         </View>
-        <View h-100px border bgRed200 text-16px>
+        <View h20 border bgRed200 text-16px>
           Hello world!
         </View>
       </View>

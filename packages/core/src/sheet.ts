@@ -23,6 +23,7 @@ class StyleSheet {
   }
 
   insertStyleToHtml(rules: string[]) {
+    if (!isBrowser) return
     if (!this.$style) {
       this.$style = this.createStyleElement()
     }

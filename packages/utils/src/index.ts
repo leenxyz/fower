@@ -5,7 +5,10 @@ type Dict = Record<string, any>
 export { hash }
 
 export const isBrowser =
-  typeof window === 'object' && typeof document === 'object' && document.nodeType === 9
+  typeof window === 'object' &&
+  typeof document === 'object' &&
+  document.nodeType === 9 &&
+  !!document.head?.append
 
 export function upFirst(s: string = '') {
   return s.replace(/^[a-z]/, (g) => g.toUpperCase())

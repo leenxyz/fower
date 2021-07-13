@@ -1,12 +1,21 @@
 import { Box } from '@fower/react';
+import { FowerHTMLProps } from '@fower/core';
+import { FC } from 'react';
 
-function Button(props: { bar: string }) {
+interface TagProps extends FowerHTMLProps<'div'> {}
+
+const Tag: FC<TagProps> = (props) => {
+  return <div {...props}>tag</div>;
+};
+
+const Button = (props: { bar: string }) => {
   return <div>text: {props.bar}</div>;
-}
+};
 
 export default () => {
   return (
     <Box>
+      <Tag></Tag>
       <Box>basic box</Box>
       <Box as={Button} bar="bar"></Box>
       <Box as="b" p2 orange400>
