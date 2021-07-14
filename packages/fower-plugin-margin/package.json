@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-margin",
-  "version": "1.39.1",
+  "version": "1.39.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-margin.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.39.1",
-    "@fower/core": "^1.39.1",
-    "@fower/utils": "^1.39.1"
+    "@fower/atomic-props": "^1.39.2",
+    "@fower/core": "^1.39.2",
+    "@fower/utils": "^1.39.2"
   }
 }

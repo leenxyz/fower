@@ -1,10 +1,10 @@
 {
   "name": "example-cra",
-  "version": "1.39.1",
+  "version": "1.39.2",
   "private": true,
   "dependencies": {
-    "@fower/babel-preset-fower": "^1.39.1",
-    "@fower/react": "^1.39.1",
+    "@fower/babel-preset-fower": "^1.39.2",
+    "@fower/react": "^1.39.2",
     "cra-template-typescript": "1.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
