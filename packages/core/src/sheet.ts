@@ -1,7 +1,12 @@
 import { isBrowser } from '@fower/utils'
 
 class StyleSheet {
-  private $style: HTMLStyleElement | null = globalThis.document?.querySelector?.('[data-fower]')
+  constructor() {
+    if (isBrowser) {
+      this.$style = globalThis.document?.querySelector?.('[data-fower]')
+    }
+  }
+  private $style: HTMLStyleElement | null = null
 
   private cssString = ''
 
