@@ -151,4 +151,3 @@ export class Store {
 }
 
 export const store = new Store()
-;(globalThis as any).__fower_store__ = store
