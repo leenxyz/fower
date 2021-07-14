@@ -1,6 +1,6 @@
 {
   "name": "@fower/uniapp",
-  "version": "1.39.2",
+  "version": "1.40.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,8 +24,8 @@
     "vue": "^2.6.11"
   },
   "dependencies": {
-    "@fower/core": "^1.39.2",
-    "@fower/preset-uniapp": "^1.39.2",
+    "@fower/core": "^1.40.0",
+    "@fower/preset-uniapp": "^1.40.0",
     "posthtml": "^0.15.2"
   }
 }
