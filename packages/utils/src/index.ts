@@ -28,7 +28,7 @@ export function kebab(str: string) {
 
 export function camel(str: string) {
   return str
-    .replace(/(?:^\w|[A-Z]|\b\w)|(?<=_)[a-z]/g, (word, index) => {
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
       return index === 0 ? word.toLowerCase() : word.toUpperCase()
     })
     .replace(/(\s+|-|_)/g, '')
