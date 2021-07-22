@@ -1,5 +1,4 @@
-import { FowerPlugin } from '@fower/core'
-import { Parser, Atom } from '@fower/core'
+import { FowerPlugin, Parser, Atom } from '@fower/core'
 import { downFirst } from '@fower/utils'
 import { formatColor } from '@fower/color-helper'
 

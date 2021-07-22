@@ -1,5 +1,4 @@
-import { Atom, Parser } from '@fower/core'
-import { FowerPlugin } from '@fower/core'
+import { Atom, Parser, FowerPlugin } from '@fower/core'
 import { downFirst } from '@fower/utils'
 
 export function isMatch(key: string) {
