@@ -9,6 +9,10 @@ export function isBgColor(key: string) {
   return /^bg.+$/i.test(key)
 }
 
+export function isBgClip(key: string) {
+  return /^bgClip.*$/i.test(key)
+}
+
 export function isBgRepeat(key: string) {
   return /^backgroundRepeat$/i.test(key)
 }
@@ -26,11 +30,17 @@ export function isBgPos(key: string) {
 }
 
 export function isMatch(key: string) {
-  return [isBg, isBgColor, isBgRepeat, isBgImg, isBgSize, isBgPos].some((cb) => cb(key))
+  return [isBg, isBgClip, isBgColor, isBgRepeat, isBgImg, isBgSize, isBgPos].some((cb) => cb(key))
 }
 
 function toStyle(key: string, value: string) {
   if (isBgImg(key)) return { backgroundImage: value }
+  if (isBgClip(key)) {
+    const postfix = key.replace(/^bgClip/i, '').toLowerCase()
+    if (postfix === 'text') return { '-webkit-background-clip': 'text' }
+    if (/^bgClip$/i.test(key)) return { backgroundClip: value }
+    return { backgroundClip: postfix + '-box' }
+  }
   if (isBgPos(key)) return { backgroundPosition: value }
   if (isBgSize(key)) return { backgroundSize: value }
   if (isBgRepeat(key)) return { backgroundRepeat: value }

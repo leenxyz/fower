@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, FowerColor } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default

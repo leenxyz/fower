@@ -46,7 +46,7 @@ declare module '@fower/atomic-props' {
      * <Box backgroundSize="100% 100%"></Box>
      * ```
      */
-    backgroundSize?: string | boolean
+    backgroundSize?: string | false
 
     /**
      * Set backgroundRepeat
@@ -56,7 +56,13 @@ declare module '@fower/atomic-props' {
      * <Box backgroundRepeat="no-repeat"></Box>
      * ```
      */
-    backgroundRepeat?: CSS.Property.BackgroundRepeat | boolean
+    backgroundRepeat?: CSS.Property.BackgroundRepeat | false
+
+    bgClip?: CSS.Property.BackgroundClip | false
+    bgClipBorder?: boolean
+    bgClipPadding?: boolean
+    bgClipContent?: boolean
+    bgClipText?: boolean
 
     bgTransparent?: boolean
     bgBlack?: boolean
