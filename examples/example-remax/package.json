@@ -1,7 +1,7 @@
 {
   "name": "@fower/example-remax",
   "private": true,
-  "version": "1.41.0",
+  "version": "1.42.0",
   "description": "Remax Project With TypeScript",
   "main": "index.js",
   "keywords": [],
@@ -13,7 +13,7 @@
     "build:prod": "cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
-    "@fower/remax": "^1.41.0",
+    "@fower/remax": "^1.42.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "remax": "^2.9.1"
