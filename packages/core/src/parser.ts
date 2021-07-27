@@ -623,7 +623,7 @@ export class Parser {
       // ignore prop with  postfix
       if (/.*--(\d+)?[a-z]+$/i.test(key)) return result
 
-      const find = atoms.find((atom) => [atom.propKey, atom.key, 'css'].includes(key))
+      const find = atoms.find((atom) => [atom.propKey, atom.key, atom.id, 'css'].includes(key))
 
       if (!find) result[key] = value
       return result
