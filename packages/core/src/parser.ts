@@ -382,7 +382,8 @@ export class Parser {
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
-      this.addAtom({ ...cachedAtom, propKey: atom.propKey } as Atom)
+      cachedAtom.propKeys.push(atom.propKey)
+      this.addAtom(cachedAtom)
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
 
@@ -623,7 +624,10 @@ export class Parser {
       // ignore prop with  postfix
       if (/.*--(\d+)?[a-z]+$/i.test(key)) return result
 
-      const find = atoms.find((atom) => [atom.propKey, atom.key, atom.id, 'css'].includes(key))
+      const find = atoms.find(
+        (atom) =>
+          [atom.propKey, atom.key, atom.id, 'css'].includes(key) || atom.propKeys.includes(key),
+      )
 
       if (!find) result[key] = value
       return result

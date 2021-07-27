@@ -19,6 +19,8 @@ export class Atom {
     this.propKey = options.propKey
     this.propValue = options.propValue
 
+    this.propKeys = [this.propKey]
+
     this.key = options.key || this.propKey
     this.value = options.value || this.propValue
 
@@ -93,6 +95,11 @@ export class Atom {
    * <Box color="red"></Box>  -> red
    */
   readonly propValue: any
+
+  /**
+   * all propKeys for this atom
+   */
+  propKeys: string[] = []
 
   /**
    * get the primitive atomic key, exclude value or posfix
