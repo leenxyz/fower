@@ -1,6 +1,6 @@
 import { Box } from '@fower/react';
 
-const Test = (props) => <Box square-100 {...props}></Box>;
+const Test = (props) => <Box square-24 {...props}></Box>;
 
 export default () => {
   return (

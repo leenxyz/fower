@@ -382,7 +382,7 @@ export class Parser {
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
-      this.addAtom(cachedAtom)
+      this.addAtom({ ...cachedAtom, propKey: atom.propKey } as Atom)
       throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
     }
 
