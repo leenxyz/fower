@@ -4,9 +4,14 @@ const Test = (props) => <Box square-24 {...props}></Box>;
 
 export default () => {
   return (
+    <Test square6 bgBlue200>
+      zz
+    </Test>
+  );
+  return (
     <Box p4>
-      <Test square10 bgBlue200>
-        zz
+      <Test square20 bgBlue200>
+        zzxax
       </Test>
 
       <Box toEvenly textXS>

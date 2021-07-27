@@ -1,10 +1,26 @@
 import { Box } from '@fower/react';
-import { Provider, Button } from 'reakit';
-import * as system from 'reakit-system-bootstrap';
 
 export default () => {
   return (
     <Box>
+      <Box>
+        <Box
+          as="span"
+          fontBold
+          text6XL
+          transparent
+          bgClipText
+          gradientX={['green400', 'blue600']}
+        >
+          Hello world
+        </Box>
+        <Box textXL bgClipBorder>
+          Hello world!
+        </Box>
+        <Box textXL bgClipContent>
+          Hello world!
+        </Box>
+      </Box>
       <Box text3XL fontBold>
         Background
       </Box>
@@ -59,6 +75,10 @@ export default () => {
 
       <Box textXL bg="green300--D20">
         bg="green300--D20"
+      </Box>
+
+      <Box textXL white--hover bg="#000--L20" bg--hover="#000">
+        bg--hover="#000"
       </Box>
 
       <Box textXL white--hover bg="#000--L20" bg--hover="#000">
