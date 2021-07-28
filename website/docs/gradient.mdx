@@ -5,17 +5,17 @@ title: Gradient
 
 Atomic props for control the font style of an element.
 
-| Atomic Props      | CSS Properties                                                |
-| ----------------- | ------------------------------------------------------------- |
-| gradientX={value} | background-image: linear-gradient(to right, color1, color2);  |
-| gradientY={value} | background-image: linear-gradient(to bottom, color1, color2); |
+| Atomic Props        | CSS Properties                                                |
+| ------------------- | ------------------------------------------------------------- |
+| bgGradientX={value} | background-image: linear-gradient(to right, color1, color2);  |
+| bgGradientY={value} | background-image: linear-gradient(to bottom, color1, color2); |
 
 ## gradientX
 
 ```jsx live
 <Box spaceX3 toLeft>
-  <Box square20 rounded gradientX={['red400', 'yellow400']} />
-  <Box h20 w-200 rounded gradientX={['purple500', 'pink500', 'red500']} />
+  <Box square20 rounded bgGradientX={['red400', 'yellow400']} />
+  <Box h20 w-200 rounded bgGradientX={['purple500', 'pink500', 'red500']} />
 </Box>
 ```
 
@@ -27,8 +27,8 @@ hover:
   h20
   w-200
   rounded
-  gradientX={['green400', 'blue500']}
-  gradientX--hover={['pink500', 'yellow500']}
+  bgGradientX={['green400', 'blue500']}
+  bgGradientX--hover={['pink500', 'yellow500']}
 />
 ```
 
@@ -36,8 +36,8 @@ hover:
 
 ```jsx live
 <Box spaceX3 toLeft>
-  <Box w20 h-160 rounded gradientY={['red400', 'yellow400']} />
-  <Box w20 h-160 rounded gradientY={['purple500', 'red500', 'yellow500']} />
+  <Box w20 h-160 rounded bgGradientY={['red400', 'yellow400']} />
+  <Box w20 h-160 rounded bgGradientY={['purple500', 'red500', 'yellow500']} />
 </Box>
 ```
 
@@ -48,7 +48,7 @@ active:
   cursorPointer
   square20
   rounded
-  gradientY={['green400', 'blue500']}
-  gradientY--active={['pink500', 'yellow500']}
+  bgGradientY={['green400', 'blue500']}
+  bgGradientY--active={['pink500', 'yellow500']}
 />
 ```
