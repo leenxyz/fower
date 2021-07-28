@@ -1,0 +1,53 @@
+---
+id: background-clip
+title: Background Clip
+---
+
+Atomic props for controlling the background color of an element.
+
+| Atomic Props  | CSS Properties                |
+| ------------- | ----------------------------- |
+| bgClipBorder  | background-clip: border-box;  |
+| bgClipPadding | background-clip: padding-box; |
+| bgClipContent | background-clip: content-box; |
+| bgClipText    | background-clip: text;        |
+
+<div class="bg-clip-border p-6 bg-indigo-600 border-4 border-indigo-300 border-dashed"></div>
+
+## bgClipBorder
+
+```jsx live
+<Box p4>
+  <Box as="span" bgClipBorder p6 bgTeal600 border-4 borderTeal300 borderDashed>
+    Hello world
+  </Box>
+</Box>
+```
+
+## bgClipPadding
+
+```jsx live
+<Box p4>
+  <Box as="span" bgClipPadding p6 bgTeal600 border-4 borderTeal300 borderDashed>
+    Hello world
+  </Box>
+</Box>
+```
+
+## bgClipContent
+
+```jsx live
+<Box p4>
+  <Box as="span" bgClipContent p6 bgTeal600 border-4 borderTeal300 borderDashed>
+    Hello world
+  </Box>
+</Box>
+```
+
+## bgClipText
+
+```jsx live
+<Box as="span" fontBold text6XL transparent bgClipText gradientX={['red400', 'yellow600']}>
+  Hello world
+</Box>
+```

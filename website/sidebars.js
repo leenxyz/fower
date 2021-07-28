@@ -167,6 +167,7 @@ module.exports = {
       label: 'Background',
       items: [
         'background-color',
+        'background-clip',
         'gradient',
         // 'background-repeat',
         // 'background-image',
