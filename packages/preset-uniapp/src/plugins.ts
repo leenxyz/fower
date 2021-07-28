@@ -28,8 +28,10 @@ import outline from 'fower-plugin-outline'
 import ellipsis from 'fower-plugin-ellipsis'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
+import gradient from 'fower-plugin-gradient'
 
 export const plugins = [
+  gradient(),
   background(),
   border(),
   color(),

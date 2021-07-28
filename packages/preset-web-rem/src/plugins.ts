@@ -43,10 +43,10 @@ import svg from 'fower-plugin-svg'
 import container from 'fower-plugin-container'
 import animation from 'fower-plugin-animation'
 
-
 export const plugins = [
   appearance(),
   debug(),
+  gradient(),
   background(),
   border(),
   color(),
@@ -84,7 +84,6 @@ export const plugins = [
   visibility(),
   boxSizing(),
   placeholder(),
-  gradient(),
   ring(),
   svg(),
   container(),

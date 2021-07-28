@@ -1,7 +1,7 @@
 import { FowerPlugin } from '@fower/core'
 
 function isMatch(key: string) {
-  return /^gradient[XY]$/i.test(key)
+  return /^bgGradient[XY]?$/i.test(key)
 }
 
 export default (): FowerPlugin => {
@@ -10,8 +10,13 @@ export default (): FowerPlugin => {
     handleAtom(atom, parser) {
       const { key, value } = atom
       const { colors } = parser.config.theme
-      const postfix = key.replace(/^gradient/, '').toLowerCase()
+      const postfix = key.replace(/^bgGradient/i, '').toLowerCase()
       const direction = postfix === 'x' ? 'right' : 'bottom'
+
+      if (postfix === '') {
+        atom.style = { backgroundImage: value }
+        return atom
+      }
 
       if (!Array.isArray(value)) return atom
 

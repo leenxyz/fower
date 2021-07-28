@@ -1,4 +1,5 @@
 import background from 'fower-plugin-background'
+import gradient from 'fower-plugin-gradient'
 import border from 'fower-plugin-border'
 import flexItem from 'fower-plugin-box-alignment'
 import color from 'fower-plugin-color'
@@ -30,6 +31,7 @@ import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 
 export const plugins = [
+  gradient(),
   background(),
   border(),
   color(),

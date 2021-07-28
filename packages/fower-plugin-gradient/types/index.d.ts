@@ -5,8 +5,10 @@ export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
-    gradientX?: boolean | FowerColor[]
+    bgGradientX?: false | FowerColor[]
 
-    gradientY?: boolean | FowerColor[]
+    bgGradientY?: false | FowerColor[]
+
+    bgGradient?: false | string
   }
 }
