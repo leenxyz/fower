@@ -8,14 +8,16 @@ setConfig(presetWeb)
 const parser = new Parser({})
 
 test('isMatch', () => {
-  expect(isMatch!('gradientX')).toEqual(true)
-  expect(isMatch!('gradientY')).toEqual(true)
+  expect(isMatch!('bgGradientX')).toEqual(true)
+  expect(isMatch!('bgGradientY')).toEqual(true)
+  expect(isMatch!('gradientX')).toEqual(false)
+  expect(isMatch!('gradientY')).toEqual(false)
 })
 
-test('gradientX', () => {
+test('bgGradientX', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'gradientX',
+      propKey: 'bgGradientX',
       propValue: ['red400', 'yellow400'],
     }),
     parser,
@@ -23,10 +25,10 @@ test('gradientX', () => {
   expect(atom.style.backgroundImage).toEqual('linear-gradient(to right, #ff8787,#ffd43b)')
 })
 
-test('gradientX', () => {
+test('bgGradientX', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'gradientY',
+      propKey: 'bgGradientY',
       propValue: ['red400', 'yellow400'],
     }),
     parser,

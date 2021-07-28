@@ -611,7 +611,7 @@ export class Parser {
 
       rules.push(rule)
     }
-    console.log('this.atoms---', this.atoms)
+    // console.log('this.atoms---', this.atoms)
 
     return rules
   }
