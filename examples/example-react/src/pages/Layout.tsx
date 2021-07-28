@@ -52,13 +52,13 @@ export default () => {
       </Box>
 
       <Box>toCenter</Box>
-      <Box direction="row" toCenter h-240 textXS debugChildren debug>
+      <Box toCenter h-240 textXS debugChildren debug>
         <Box square-100>AA</Box>
         <Box square-100>BB</Box>
       </Box>
 
       <Box>row toCenterX</Box>
-      <Box direction="row" toCenterX h-240 textXS debugChildren debug>
+      <Box toCenterX h-240 textXS debugChildren debug>
         <Box square-100>AA</Box>
         <Box square-100>BB</Box>
       </Box>
@@ -70,7 +70,7 @@ export default () => {
       </Box>
 
       <Box>toCenterY</Box>
-      <Box direction="row" toCenterY h-240 textXS debugChildren debug>
+      <Box toCenterY h-240 textXS debugChildren debug>
         <Box square-100>AA</Box>
         <Box square-100>BB</Box>
       </Box>

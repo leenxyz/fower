@@ -379,6 +379,14 @@ export class Parser {
    * @param atom
    */
   mutateAtom(atom: Atom): void {
+    for (const plugin of this.plugins) {
+      if (!plugin.isMatch?.(atom.key, this)) continue
+
+      if (plugin.beforeHandleAtom) {
+        atom = plugin.beforeHandleAtom(atom, this)
+      }
+    }
+
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
@@ -395,10 +403,6 @@ export class Parser {
 
     for (const plugin of this.plugins) {
       if (!plugin.isMatch?.(atom.key, this)) continue
-
-      if (plugin.beforeHandleAtom) {
-        atom = plugin.beforeHandleAtom(atom, this)
-      }
 
       if (plugin.handleAtom) {
         atom = plugin.handleAtom?.(atom, this)
@@ -602,13 +606,12 @@ export class Parser {
           selector = selector + pseudoSelector
         }
       }
-
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)
     }
-    // console.log('this.atoms---', this.atoms)
+    // console.log('this.atoms----', this.atoms)
 
     return rules
   }
