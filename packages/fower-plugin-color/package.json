@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-color",
-  "version": "1.44.0",
+  "version": "1.45.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-color.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.44.0",
-    "@fower/color-helper": "^1.44.0",
-    "@fower/core": "^1.44.0",
-    "@fower/utils": "^1.44.0"
+    "@fower/atomic-props": "^1.45.0",
+    "@fower/color-helper": "^1.45.0",
+    "@fower/core": "^1.45.0",
+    "@fower/utils": "^1.45.0"
   }
 }
