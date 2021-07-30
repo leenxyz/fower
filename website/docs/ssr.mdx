@@ -14,7 +14,7 @@ import { getCssString, getAtomIds } from '@fower/react'
 
 Here's an example with Next.js (Don't forget to set `data-fower={getAtomIds()}` in style tag):
 
-```jsx {2,9}
+```jsx {2,9} title="_document.tsx"
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { getAtomIds, getCssString } from '@fower/react'
 
@@ -34,7 +34,7 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument``
+export default MyDocument
 ```
 
 Alternative you can setup it with a `<ServerStyle>` component：
