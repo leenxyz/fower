@@ -6,8 +6,13 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * animate none
+     * set animation to none
      *
+     * ```css
+     * {
+     *   animation: none;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box animateNone></Box>
@@ -18,6 +23,12 @@ declare module '@fower/atomic-props' {
     /**
      * animate spin
      *
+     * ```css
+     * {
+     *   animation: spin 1s linear infinite;
+     * }
+     * ```
+     *
      * @example
      * ```tsx
      * <Box animateSpin></Box>
@@ -27,6 +38,12 @@ declare module '@fower/atomic-props' {
 
     /**
      * animate ping
+     *
+     * ```css
+     * {
+     *   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+     * }
+     * ```
      *
      * @example
      * ```tsx

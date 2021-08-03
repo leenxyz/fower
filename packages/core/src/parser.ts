@@ -110,6 +110,11 @@ export class Parser {
         continue
       }
 
+      if (Array.isArray(propValue)) {
+        this.parseResponsiveValue(propKey, propValue)
+        continue
+      }
+
       /** handle _hover, _sm, _dark... */
       if (propKey.startsWith('_')) {
         const postfix = propKey.replace(/^_/, '')
@@ -412,6 +417,16 @@ export class Parser {
 
       break // break from this plugin
     }
+  }
+
+  parseResponsiveValue(propKey: string, propValue: any[]) {
+    const { breakpoints } = this.config.theme
+    const keys = Object.keys(breakpoints)
+    const obj = propValue.reduce<any>((result, cur, i) => {
+      const prop = `${propKey}${i === 0 ? '' : '--' + keys[i - 1]}`
+      return { ...result, [prop]: cur }
+    }, {})
+    this.parseCSSObject(obj)
   }
 
   parseCSSObject(propValue: any, meta = {}) {
