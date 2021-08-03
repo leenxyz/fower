@@ -8,7 +8,7 @@ export default () => {
         animateSpin
         square20
         roundedHuge
-        gradientX={['red400', 'orange400']}
+        bgGradientX={['red400', 'orange400']}
       />
 
       <Box flex square3 relative>

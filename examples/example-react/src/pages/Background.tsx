@@ -10,7 +10,7 @@ export default () => {
           text6XL
           transparent
           bgClipText
-          gradientX={['green400', 'blue600']}
+          bgGradientX={['green400', 'blue600']}
         >
           Hello world
         </Box>
