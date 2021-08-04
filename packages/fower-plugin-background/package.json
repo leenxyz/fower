@@ -12,6 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "prebuild": "node gen-types.js",
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -23,6 +24,7 @@
   "module": "dist/fower-plugin-background.esm.js",
   "dependencies": {
     "@fower/atomic-props": "^1.46.0",
+    "@fower/colors": "^1.46.0",
     "@fower/core": "^1.46.0",
     "@fower/utils": "^1.46.0"
   }

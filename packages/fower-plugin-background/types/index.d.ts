@@ -1,6 +1,5 @@
-import { FowerPlugin, FowerColor } from '@fower/core'
+import { FowerPlugin, FowerColor, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 import * as CSS from 'csstype'
-
 declare const _default: () => FowerPlugin
 export default _default
 
@@ -8,252 +7,2262 @@ declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
      * Set background
-     *
+     * ```css
+     * {
+     *   background-color: $value;
+     * }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box bg="#112233"></Box>
      * <Box bg="red"></Box>
      * <Box bg="red500"></Box>
      * ```
      */
-    bg?: FowerColor | boolean
-
+    bg?: ResponsiveValue<FowerColor>
     /**
      * Set backgroundImage
-     *
+     * ```css
+     * {
+     *   background-image: $value;
+     * }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box backgroundImage="url('http...')"></Box>
      * ```
      */
-    backgroundImage?: CSS.Property.BackgroundImage | boolean
-
+    backgroundImage?: ResponsiveValue<CSS.Property.BackgroundImage>
     /**
-     * Set backgroundPosition
-     *
+     *  Set backgroundPosition
+     * ```css
+     * {
+     *   background-position: $value;
+     * }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box backgroundPosition="top left"></Box>
      * ```
      */
-    backgroundPosition?: CSS.Property.BackgroundPosition | boolean
-
+    backgroundPosition?: ResponsiveValue<CSS.Property.BackgroundPosition>
     /**
      * Set backgroundSize
-     *
+     * ```css
+     * {
+     *   background-size: $value;
+     * }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box backgroundSize="100% 100%"></Box>
      * ```
      */
-    backgroundSize?: string | false
-
+    backgroundSize?: ResponsiveValue<string>
     /**
      * Set backgroundRepeat
-     *
+     * ```css
+     * {
+     *   background-repeat: $value;
+     * }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box backgroundRepeat="no-repeat"></Box>
      * ```
      */
-    backgroundRepeat?: CSS.Property.BackgroundRepeat | false
-
-    bgClip?: CSS.Property.BackgroundClip | false
-    bgClipBorder?: boolean
-    bgClipPadding?: boolean
-    bgClipContent?: boolean
-    bgClipText?: boolean
-
-    bgTransparent?: boolean
-    bgBlack?: boolean
-    bgWhite?: boolean
-
-    bgBrand?: boolean
-    bgBrand50?: boolean
-    bgBrand100?: boolean
-    bgBrand200?: boolean
-    bgBrand300?: boolean
-    bgBrand400?: boolean
-    bgBrand500?: boolean
-    bgBrand600?: boolean
-    bgBrand700?: boolean
-    bgBrand800?: boolean
-    bgBrand900?: boolean
-
-    bgRose50?: boolean
-    bgRose100?: boolean
-    bgRose200?: boolean
-    bgRose300?: boolean
-    bgRose400?: boolean
-    bgRose500?: boolean
-    bgRose600?: boolean
-    bgRose700?: boolean
-    bgRose800?: boolean
-    bgRose900?: boolean
-
-    bgPink50?: boolean
-    bgPink100?: boolean
-    bgPink200?: boolean
-    bgPink300?: boolean
-    bgPink400?: boolean
-    bgPink500?: boolean
-    bgPink600?: boolean
-    bgPink700?: boolean
-    bgPink800?: boolean
-    bgPink900?: boolean
-
-    bgFuchsia50?: boolean
-    bgFuchsia100?: boolean
-    bgFuchsia200?: boolean
-    bgFuchsia300?: boolean
-    bgFuchsia400?: boolean
-    bgFuchsia500?: boolean
-    bgFuchsia600?: boolean
-    bgFuchsia700?: boolean
-    bgFuchsia800?: boolean
-    bgFuchsia900?: boolean
-
-    bgPurple50?: boolean // '#faf5ff'
-    bgPurple100?: boolean // '#f3e8ff'
-    bgPurple200?: boolean // '#e9d5ff'
-    bgPurple300?: boolean // '#d8b4fe'
-    bgPurple400?: boolean // '#c084fc'
-    bgPurple500?: boolean // '#a855f7'
-    bgPurple600?: boolean // '#9333ea'
-    bgPurple700?: boolean // '#7e22ce'
-    bgPurple800?: boolean // '#6b21a8'
-    bgPurple900?: boolean // '#581c87'
-
-    bgViolet50?: boolean // '#f5f3ff'
-    bgViolet100?: boolean // '#ede9fe'
-    bgViolet200?: boolean // '#ddd6fe'
-    bgViolet300?: boolean // '#c4b5fd'
-    bgViolet400?: boolean // '#a78bfa'
-    bgViolet500?: boolean // '#8b5cf6'
-    bgViolet600?: boolean // '#7c3aed'
-    bgViolet700?: boolean // '#6d28d9'
-    bgViolet800?: boolean // '#5b21b6'
-    bgViolet900?: boolean // '#4c1d95'
-
-    bgIndigo50?: boolean // '#eef2ff'
-    bgIndigo100?: boolean // '#e0e7ff'
-    bgIndigo200?: boolean // '#c7d2fe'
-    bgIndigo300?: boolean // '#a5b4fc'
-    bgIndigo400?: boolean // '#818cf8'
-    bgIndigo500?: boolean // '#6366f1'
-    bgIndigo600?: boolean // '#4f46e5'
-    bgIndigo700?: boolean // '#4338ca'
-    bgIndigo800?: boolean // '#3730a3'
-    bgIndigo900?: boolean // '#312e81'
-
-    bgBlue50?: boolean // '#eff6ff'
-    bgBlue100?: boolean // '#dbeafe'
-    bgBlue200?: boolean // '#bfdbfe'
-    bgBlue300?: boolean // '#93c5fd'
-    bgBlue400?: boolean // '#60a5fa'
-    bgBlue500?: boolean // '#3b82f6'
-    bgBlue600?: boolean // '#2563eb'
-    bgBlue700?: boolean // '#1d4ed8'
-    bgBlue800?: boolean // '#1e40af'
-    bgBlue900?: boolean // '#1e3a8a'
-
-    bgCyan50?: boolean // '#ecfeff'
-    bgCyan100?: boolean // '#cffafe'
-    bgCyan200?: boolean // '#a5f3fc'
-    bgCyan300?: boolean // '#67e8f9'
-    bgCyan400?: boolean // '#22d3ee'
-    bgCyan500?: boolean // '#06b6d4'
-    bgCyan600?: boolean // '#0891b2'
-    bgCyan700?: boolean // '#0e7490'
-    bgCyan800?: boolean // '#155e75'
-    bgCyan900?: boolean // '#164e63'
-
-    bgTeal50?: boolean // '#f0fdfa'
-    bgTeal100?: boolean // '#ccfbf1'
-    bgTeal200?: boolean // '#99f6e4'
-    bgTeal300?: boolean // '#5eead4'
-    bgTeal400?: boolean // '#2dd4bf'
-    bgTeal500?: boolean // '#14b8a6'
-    bgTeal600?: boolean // '#0d9488'
-    bgTeal700?: boolean // '#0f766e'
-    bgTeal800?: boolean // '#115e59'
-    bgTeal900?: boolean // '#134e4a'
-
-    bgGreen50?: boolean // '#f0fdf4'
-    bgGreen100?: boolean // '#dcfce7'
-    bgGreen200?: boolean // '#bbf7d0'
-    bgGreen300?: boolean // '#86efac'
-    bgGreen400?: boolean // '#4ade80'
-    bgGreen500?: boolean // '#22c55e'
-    bgGreen600?: boolean // '#16a34a'
-    bgGreen700?: boolean // '#15803d'
-    bgGreen800?: boolean // '#166534'
-    bgGreen900?: boolean // '#14532d'
-
-    bgLime50?: boolean // '#f7fee7'
-    bgLime100?: boolean // '#ecfccb'
-    bgLime200?: boolean // '#d9f99d'
-    bgLime300?: boolean // '#bef264'
-    bgLime400?: boolean // '#a3e635'
-    bgLime500?: boolean // '#84cc16'
-    bgLime600?: boolean // '#65a30d'
-    bgLime700?: boolean // '#4d7c0f'
-    bgLime800?: boolean // '#3f6212'
-    bgLime900?: boolean // '#365314'
-
-    bgYellow50?: boolean // '#fefce8'
-    bgYellow100?: boolean // '#fef9c3'
-    bgYellow200?: boolean // '#fef08a'
-    bgYellow300?: boolean // '#fde047'
-    bgYellow400?: boolean // '#facc15'
-    bgYellow500?: boolean // '#eab308'
-    bgYellow600?: boolean // '#ca8a04'
-    bgYellow700?: boolean // '#a16207'
-    bgYellow800?: boolean // '#854d0e'
-    bgYellow900?: boolean // '#713f12'
-
-    bgOrange50?: boolean // '#fff7ed'
-    bgOrange100?: boolean // '#ffedd5'
-    bgOrange200?: boolean // '#fed7aa'
-    bgOrange300?: boolean // '#fdba74'
-    bgOrange400?: boolean // '#fb923c'
-    bgOrange500?: boolean // '#f97316'
-    bgOrange600?: boolean // '#ea580c'
-    bgOrange700?: boolean // '#c2410c'
-    bgOrange800?: boolean // '#9a3412'
-    bgOrange900?: boolean // '#7c2d12'
-
-    bgRed50?: boolean // '#fef2f2'
-    bgRed100?: boolean // '#fee2e2'
-    bgRed200?: boolean // '#fecaca'
-    bgRed300?: boolean // '#fca5a5'
-    bgRed400?: boolean // '#f87171'
-    bgRed500?: boolean // '#ef4444'
-    bgRed600?: boolean // '#dc2626'
-    bgRed700?: boolean // '#b91c1c'
-    bgRed800?: boolean // '#991b1b'
-    bgRed900?: boolean // '#7f1d1d'
-
-    bgTrueGray50?: boolean // '#fafafa'
-    bgTrueGray100?: boolean // '#f5f5f5'
-    bgTrueGray200?: boolean // '#e5e5e5'
-    bgTrueGray300?: boolean // '#d4d4d4'
-    bgTrueGray400?: boolean // '#a3a3a3'
-    bgTrueGray500?: boolean // '#737373'
-    bgTrueGray600?: boolean // '#525252'
-    bgTrueGray700?: boolean // '#404040'
-    bgTrueGray800?: boolean // '#262626'
-    bgTrueGray900?: boolean // '#171717'
-
-    bgGray50?: boolean // '#fafafa'
-    bgGray100?: boolean // '#f4f4f5'
-    bgGray200?: boolean // '#e4e4e7'
-    bgGray300?: boolean // '#d4d4d8'
-    bgGray400?: boolean // '#a1a1aa'
-    bgGray500?: boolean // '#71717a'
-    bgGray600?: boolean // '#52525b'
-    bgGray700?: boolean // '#3f3f46'
-    bgGray800?: boolean // '#27272a'
-    bgGray900?: boolean // '#18181b'
+    backgroundRepeat?: ResponsiveValue<CSS.Property.BackgroundRepeat>
+    /**
+     * ```css
+     * {
+     *   background-clip: $value;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgClip="$value"></Box>
+     * ```
+     */
+    bgClip?: ResponsiveValue<CSS.Property.BackgroundClip>
+    /**
+     * ```css
+     * {
+     *   background-clip: border-box;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgClipBorder></Box>
+     * ```
+     */
+    bgClipBorder?: ResponsiveBoolean
+    /**
+     * ```css
+     * {
+     *   background-clip: padding-box;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgClipPadding></Box>
+     * ```
+     */
+    bgClipPadding?: ResponsiveBoolean
+    /**
+     * ```css
+     * {
+     *   background-clip: content-box;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgClipContent></Box>
+     * ```
+     */
+    bgClipContent?: ResponsiveBoolean
+    /**
+     * ```css
+     * {
+     *   background-clip: text;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgClipText></Box>
+     * ```
+     */
+    bgClipText?: ResponsiveBoolean
+    /**
+     * Set background to transparent
+     * ```css
+     * {
+     *   background-color: transparent;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTransparent></Box>
+     * ```
+     */
+    bgTransparent?: ResponsiveBoolean
+    /**
+     * Set background to white
+     * ```css
+     * {
+     *   background-color: #ffffff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgWhite></Box>
+     * ```
+     */
+    bgWhite?: ResponsiveBoolean
+    /**
+     * Set background to black
+     * ```css
+     * {
+     *   background-color: #000;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlack></Box>
+     * ```
+     */
+    bgBlack?: ResponsiveBoolean
+    /**
+     * Set background to brand
+     * ```css
+     * {
+     *   background-color: #20c997;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand></Box>
+     * ```
+     */
+    bgBrand?: ResponsiveBoolean
+    /**
+     * Set background to brand50
+     * ```css
+     * {
+     *   background-color: #e6fcf5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand50></Box>
+     * ```
+     */
+    bgBrand50?: ResponsiveBoolean
+    /**
+     * Set background to brand100
+     * ```css
+     * {
+     *   background-color: #c3fae8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand100></Box>
+     * ```
+     */
+    bgBrand100?: ResponsiveBoolean
+    /**
+     * Set background to brand200
+     * ```css
+     * {
+     *   background-color: #96f2d7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand200></Box>
+     * ```
+     */
+    bgBrand200?: ResponsiveBoolean
+    /**
+     * Set background to brand300
+     * ```css
+     * {
+     *   background-color: #63e6be;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand300></Box>
+     * ```
+     */
+    bgBrand300?: ResponsiveBoolean
+    /**
+     * Set background to brand400
+     * ```css
+     * {
+     *   background-color: #38d9a9;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand400></Box>
+     * ```
+     */
+    bgBrand400?: ResponsiveBoolean
+    /**
+     * Set background to brand500
+     * ```css
+     * {
+     *   background-color: #20c997;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand500></Box>
+     * ```
+     */
+    bgBrand500?: ResponsiveBoolean
+    /**
+     * Set background to brand600
+     * ```css
+     * {
+     *   background-color: #12b886;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand600></Box>
+     * ```
+     */
+    bgBrand600?: ResponsiveBoolean
+    /**
+     * Set background to brand700
+     * ```css
+     * {
+     *   background-color: #0ca678;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand700></Box>
+     * ```
+     */
+    bgBrand700?: ResponsiveBoolean
+    /**
+     * Set background to brand800
+     * ```css
+     * {
+     *   background-color: #099268;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand800></Box>
+     * ```
+     */
+    bgBrand800?: ResponsiveBoolean
+    /**
+     * Set background to brand900
+     * ```css
+     * {
+     *   background-color: #087f5b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBrand900></Box>
+     * ```
+     */
+    bgBrand900?: ResponsiveBoolean
+    /**
+     * Set background to pink50
+     * ```css
+     * {
+     *   background-color: #fff0f6;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink50></Box>
+     * ```
+     */
+    bgPink50?: ResponsiveBoolean
+    /**
+     * Set background to pink100
+     * ```css
+     * {
+     *   background-color: #ffdeeb;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink100></Box>
+     * ```
+     */
+    bgPink100?: ResponsiveBoolean
+    /**
+     * Set background to pink200
+     * ```css
+     * {
+     *   background-color: #fcc2d7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink200></Box>
+     * ```
+     */
+    bgPink200?: ResponsiveBoolean
+    /**
+     * Set background to pink300
+     * ```css
+     * {
+     *   background-color: #faa2c1;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink300></Box>
+     * ```
+     */
+    bgPink300?: ResponsiveBoolean
+    /**
+     * Set background to pink400
+     * ```css
+     * {
+     *   background-color: #f783ac;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink400></Box>
+     * ```
+     */
+    bgPink400?: ResponsiveBoolean
+    /**
+     * Set background to pink500
+     * ```css
+     * {
+     *   background-color: #f06595;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink500></Box>
+     * ```
+     */
+    bgPink500?: ResponsiveBoolean
+    /**
+     * Set background to pink600
+     * ```css
+     * {
+     *   background-color: #e64980;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink600></Box>
+     * ```
+     */
+    bgPink600?: ResponsiveBoolean
+    /**
+     * Set background to pink700
+     * ```css
+     * {
+     *   background-color: #d6336c;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink700></Box>
+     * ```
+     */
+    bgPink700?: ResponsiveBoolean
+    /**
+     * Set background to pink800
+     * ```css
+     * {
+     *   background-color: #c2255c;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink800></Box>
+     * ```
+     */
+    bgPink800?: ResponsiveBoolean
+    /**
+     * Set background to pink900
+     * ```css
+     * {
+     *   background-color: #a61e4d;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPink900></Box>
+     * ```
+     */
+    bgPink900?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia50
+     * ```css
+     * {
+     *   background-color: #f8f0fc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia50></Box>
+     * ```
+     */
+    bgFuchsia50?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia100
+     * ```css
+     * {
+     *   background-color: #f3d9fa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia100></Box>
+     * ```
+     */
+    bgFuchsia100?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia200
+     * ```css
+     * {
+     *   background-color: #eebefa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia200></Box>
+     * ```
+     */
+    bgFuchsia200?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia300
+     * ```css
+     * {
+     *   background-color: #e599f7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia300></Box>
+     * ```
+     */
+    bgFuchsia300?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia400
+     * ```css
+     * {
+     *   background-color: #da77f2;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia400></Box>
+     * ```
+     */
+    bgFuchsia400?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia500
+     * ```css
+     * {
+     *   background-color: #cc5de8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia500></Box>
+     * ```
+     */
+    bgFuchsia500?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia600
+     * ```css
+     * {
+     *   background-color: #be4bdb;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia600></Box>
+     * ```
+     */
+    bgFuchsia600?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia700
+     * ```css
+     * {
+     *   background-color: #ae3ec9;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia700></Box>
+     * ```
+     */
+    bgFuchsia700?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia800
+     * ```css
+     * {
+     *   background-color: #9c36b5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia800></Box>
+     * ```
+     */
+    bgFuchsia800?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia900
+     * ```css
+     * {
+     *   background-color: #862e9c;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgFuchsia900></Box>
+     * ```
+     */
+    bgFuchsia900?: ResponsiveBoolean
+    /**
+     * Set background to purple50
+     * ```css
+     * {
+     *   background-color: #faf5ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple50></Box>
+     * ```
+     */
+    bgPurple50?: ResponsiveBoolean
+    /**
+     * Set background to purple100
+     * ```css
+     * {
+     *   background-color: #f3e8ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple100></Box>
+     * ```
+     */
+    bgPurple100?: ResponsiveBoolean
+    /**
+     * Set background to purple200
+     * ```css
+     * {
+     *   background-color: #e9d5ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple200></Box>
+     * ```
+     */
+    bgPurple200?: ResponsiveBoolean
+    /**
+     * Set background to purple300
+     * ```css
+     * {
+     *   background-color: #d8b4fe;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple300></Box>
+     * ```
+     */
+    bgPurple300?: ResponsiveBoolean
+    /**
+     * Set background to purple400
+     * ```css
+     * {
+     *   background-color: #c084fc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple400></Box>
+     * ```
+     */
+    bgPurple400?: ResponsiveBoolean
+    /**
+     * Set background to purple500
+     * ```css
+     * {
+     *   background-color: #a855f7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple500></Box>
+     * ```
+     */
+    bgPurple500?: ResponsiveBoolean
+    /**
+     * Set background to purple600
+     * ```css
+     * {
+     *   background-color: #9333ea;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple600></Box>
+     * ```
+     */
+    bgPurple600?: ResponsiveBoolean
+    /**
+     * Set background to purple700
+     * ```css
+     * {
+     *   background-color: #7e22ce;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple700></Box>
+     * ```
+     */
+    bgPurple700?: ResponsiveBoolean
+    /**
+     * Set background to purple800
+     * ```css
+     * {
+     *   background-color: #6b21a8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple800></Box>
+     * ```
+     */
+    bgPurple800?: ResponsiveBoolean
+    /**
+     * Set background to purple900
+     * ```css
+     * {
+     *   background-color: #581c87;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgPurple900></Box>
+     * ```
+     */
+    bgPurple900?: ResponsiveBoolean
+    /**
+     * Set background to violet50
+     * ```css
+     * {
+     *   background-color: #f3f0ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet50></Box>
+     * ```
+     */
+    bgViolet50?: ResponsiveBoolean
+    /**
+     * Set background to violet100
+     * ```css
+     * {
+     *   background-color: #e5dbff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet100></Box>
+     * ```
+     */
+    bgViolet100?: ResponsiveBoolean
+    /**
+     * Set background to violet200
+     * ```css
+     * {
+     *   background-color: #d0bfff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet200></Box>
+     * ```
+     */
+    bgViolet200?: ResponsiveBoolean
+    /**
+     * Set background to violet300
+     * ```css
+     * {
+     *   background-color: #b197fc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet300></Box>
+     * ```
+     */
+    bgViolet300?: ResponsiveBoolean
+    /**
+     * Set background to violet400
+     * ```css
+     * {
+     *   background-color: #9775fa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet400></Box>
+     * ```
+     */
+    bgViolet400?: ResponsiveBoolean
+    /**
+     * Set background to violet500
+     * ```css
+     * {
+     *   background-color: #845ef7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet500></Box>
+     * ```
+     */
+    bgViolet500?: ResponsiveBoolean
+    /**
+     * Set background to violet600
+     * ```css
+     * {
+     *   background-color: #7950f2;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet600></Box>
+     * ```
+     */
+    bgViolet600?: ResponsiveBoolean
+    /**
+     * Set background to violet700
+     * ```css
+     * {
+     *   background-color: #7048e8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet700></Box>
+     * ```
+     */
+    bgViolet700?: ResponsiveBoolean
+    /**
+     * Set background to violet800
+     * ```css
+     * {
+     *   background-color: #6741d9;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet800></Box>
+     * ```
+     */
+    bgViolet800?: ResponsiveBoolean
+    /**
+     * Set background to violet900
+     * ```css
+     * {
+     *   background-color: #5f3dc4;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgViolet900></Box>
+     * ```
+     */
+    bgViolet900?: ResponsiveBoolean
+    /**
+     * Set background to indigo50
+     * ```css
+     * {
+     *   background-color: #edf2ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo50></Box>
+     * ```
+     */
+    bgIndigo50?: ResponsiveBoolean
+    /**
+     * Set background to indigo100
+     * ```css
+     * {
+     *   background-color: #dbe4ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo100></Box>
+     * ```
+     */
+    bgIndigo100?: ResponsiveBoolean
+    /**
+     * Set background to indigo200
+     * ```css
+     * {
+     *   background-color: #bac8ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo200></Box>
+     * ```
+     */
+    bgIndigo200?: ResponsiveBoolean
+    /**
+     * Set background to indigo300
+     * ```css
+     * {
+     *   background-color: #91a7ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo300></Box>
+     * ```
+     */
+    bgIndigo300?: ResponsiveBoolean
+    /**
+     * Set background to indigo400
+     * ```css
+     * {
+     *   background-color: #748ffc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo400></Box>
+     * ```
+     */
+    bgIndigo400?: ResponsiveBoolean
+    /**
+     * Set background to indigo500
+     * ```css
+     * {
+     *   background-color: #5c7cfa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo500></Box>
+     * ```
+     */
+    bgIndigo500?: ResponsiveBoolean
+    /**
+     * Set background to indigo600
+     * ```css
+     * {
+     *   background-color: #4c6ef5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo600></Box>
+     * ```
+     */
+    bgIndigo600?: ResponsiveBoolean
+    /**
+     * Set background to indigo700
+     * ```css
+     * {
+     *   background-color: #4263eb;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo700></Box>
+     * ```
+     */
+    bgIndigo700?: ResponsiveBoolean
+    /**
+     * Set background to indigo800
+     * ```css
+     * {
+     *   background-color: #3b5bdb;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo800></Box>
+     * ```
+     */
+    bgIndigo800?: ResponsiveBoolean
+    /**
+     * Set background to indigo900
+     * ```css
+     * {
+     *   background-color: #364fc7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgIndigo900></Box>
+     * ```
+     */
+    bgIndigo900?: ResponsiveBoolean
+    /**
+     * Set background to blue50
+     * ```css
+     * {
+     *   background-color: #e7f5ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue50></Box>
+     * ```
+     */
+    bgBlue50?: ResponsiveBoolean
+    /**
+     * Set background to blue100
+     * ```css
+     * {
+     *   background-color: #d0ebff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue100></Box>
+     * ```
+     */
+    bgBlue100?: ResponsiveBoolean
+    /**
+     * Set background to blue200
+     * ```css
+     * {
+     *   background-color: #a5d8ff;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue200></Box>
+     * ```
+     */
+    bgBlue200?: ResponsiveBoolean
+    /**
+     * Set background to blue300
+     * ```css
+     * {
+     *   background-color: #74c0fc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue300></Box>
+     * ```
+     */
+    bgBlue300?: ResponsiveBoolean
+    /**
+     * Set background to blue400
+     * ```css
+     * {
+     *   background-color: #4dabf7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue400></Box>
+     * ```
+     */
+    bgBlue400?: ResponsiveBoolean
+    /**
+     * Set background to blue500
+     * ```css
+     * {
+     *   background-color: #339af0;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue500></Box>
+     * ```
+     */
+    bgBlue500?: ResponsiveBoolean
+    /**
+     * Set background to blue600
+     * ```css
+     * {
+     *   background-color: #228be6;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue600></Box>
+     * ```
+     */
+    bgBlue600?: ResponsiveBoolean
+    /**
+     * Set background to blue700
+     * ```css
+     * {
+     *   background-color: #1c7ed6;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue700></Box>
+     * ```
+     */
+    bgBlue700?: ResponsiveBoolean
+    /**
+     * Set background to blue800
+     * ```css
+     * {
+     *   background-color: #1971c2;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue800></Box>
+     * ```
+     */
+    bgBlue800?: ResponsiveBoolean
+    /**
+     * Set background to blue900
+     * ```css
+     * {
+     *   background-color: #1864ab;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgBlue900></Box>
+     * ```
+     */
+    bgBlue900?: ResponsiveBoolean
+    /**
+     * Set background to cyan50
+     * ```css
+     * {
+     *   background-color: #e3fafc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan50></Box>
+     * ```
+     */
+    bgCyan50?: ResponsiveBoolean
+    /**
+     * Set background to cyan100
+     * ```css
+     * {
+     *   background-color: #c5f6fa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan100></Box>
+     * ```
+     */
+    bgCyan100?: ResponsiveBoolean
+    /**
+     * Set background to cyan200
+     * ```css
+     * {
+     *   background-color: #99e9f2;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan200></Box>
+     * ```
+     */
+    bgCyan200?: ResponsiveBoolean
+    /**
+     * Set background to cyan300
+     * ```css
+     * {
+     *   background-color: #66d9e8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan300></Box>
+     * ```
+     */
+    bgCyan300?: ResponsiveBoolean
+    /**
+     * Set background to cyan400
+     * ```css
+     * {
+     *   background-color: #3bc9db;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan400></Box>
+     * ```
+     */
+    bgCyan400?: ResponsiveBoolean
+    /**
+     * Set background to cyan500
+     * ```css
+     * {
+     *   background-color: #22b8cf;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan500></Box>
+     * ```
+     */
+    bgCyan500?: ResponsiveBoolean
+    /**
+     * Set background to cyan600
+     * ```css
+     * {
+     *   background-color: #15aabf;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan600></Box>
+     * ```
+     */
+    bgCyan600?: ResponsiveBoolean
+    /**
+     * Set background to cyan700
+     * ```css
+     * {
+     *   background-color: #1098ad;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan700></Box>
+     * ```
+     */
+    bgCyan700?: ResponsiveBoolean
+    /**
+     * Set background to cyan800
+     * ```css
+     * {
+     *   background-color: #0c8599;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan800></Box>
+     * ```
+     */
+    bgCyan800?: ResponsiveBoolean
+    /**
+     * Set background to cyan900
+     * ```css
+     * {
+     *   background-color: #0b7285;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgCyan900></Box>
+     * ```
+     */
+    bgCyan900?: ResponsiveBoolean
+    /**
+     * Set background to teal50
+     * ```css
+     * {
+     *   background-color: #e6fcf5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal50></Box>
+     * ```
+     */
+    bgTeal50?: ResponsiveBoolean
+    /**
+     * Set background to teal100
+     * ```css
+     * {
+     *   background-color: #c3fae8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal100></Box>
+     * ```
+     */
+    bgTeal100?: ResponsiveBoolean
+    /**
+     * Set background to teal200
+     * ```css
+     * {
+     *   background-color: #96f2d7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal200></Box>
+     * ```
+     */
+    bgTeal200?: ResponsiveBoolean
+    /**
+     * Set background to teal300
+     * ```css
+     * {
+     *   background-color: #63e6be;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal300></Box>
+     * ```
+     */
+    bgTeal300?: ResponsiveBoolean
+    /**
+     * Set background to teal400
+     * ```css
+     * {
+     *   background-color: #38d9a9;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal400></Box>
+     * ```
+     */
+    bgTeal400?: ResponsiveBoolean
+    /**
+     * Set background to teal500
+     * ```css
+     * {
+     *   background-color: #20c997;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal500></Box>
+     * ```
+     */
+    bgTeal500?: ResponsiveBoolean
+    /**
+     * Set background to teal600
+     * ```css
+     * {
+     *   background-color: #12b886;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal600></Box>
+     * ```
+     */
+    bgTeal600?: ResponsiveBoolean
+    /**
+     * Set background to teal700
+     * ```css
+     * {
+     *   background-color: #0ca678;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal700></Box>
+     * ```
+     */
+    bgTeal700?: ResponsiveBoolean
+    /**
+     * Set background to teal800
+     * ```css
+     * {
+     *   background-color: #099268;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal800></Box>
+     * ```
+     */
+    bgTeal800?: ResponsiveBoolean
+    /**
+     * Set background to teal900
+     * ```css
+     * {
+     *   background-color: #087f5b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTeal900></Box>
+     * ```
+     */
+    bgTeal900?: ResponsiveBoolean
+    /**
+     * Set background to green50
+     * ```css
+     * {
+     *   background-color: #ebfbee;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen50></Box>
+     * ```
+     */
+    bgGreen50?: ResponsiveBoolean
+    /**
+     * Set background to green100
+     * ```css
+     * {
+     *   background-color: #d3f9d8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen100></Box>
+     * ```
+     */
+    bgGreen100?: ResponsiveBoolean
+    /**
+     * Set background to green200
+     * ```css
+     * {
+     *   background-color: #b2f2bb;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen200></Box>
+     * ```
+     */
+    bgGreen200?: ResponsiveBoolean
+    /**
+     * Set background to green300
+     * ```css
+     * {
+     *   background-color: #8ce99a;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen300></Box>
+     * ```
+     */
+    bgGreen300?: ResponsiveBoolean
+    /**
+     * Set background to green400
+     * ```css
+     * {
+     *   background-color: #69db7c;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen400></Box>
+     * ```
+     */
+    bgGreen400?: ResponsiveBoolean
+    /**
+     * Set background to green500
+     * ```css
+     * {
+     *   background-color: #51cf66;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen500></Box>
+     * ```
+     */
+    bgGreen500?: ResponsiveBoolean
+    /**
+     * Set background to green600
+     * ```css
+     * {
+     *   background-color: #40c057;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen600></Box>
+     * ```
+     */
+    bgGreen600?: ResponsiveBoolean
+    /**
+     * Set background to green700
+     * ```css
+     * {
+     *   background-color: #37b24d;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen700></Box>
+     * ```
+     */
+    bgGreen700?: ResponsiveBoolean
+    /**
+     * Set background to green800
+     * ```css
+     * {
+     *   background-color: #2f9e44;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen800></Box>
+     * ```
+     */
+    bgGreen800?: ResponsiveBoolean
+    /**
+     * Set background to green900
+     * ```css
+     * {
+     *   background-color: #2b8a3e;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGreen900></Box>
+     * ```
+     */
+    bgGreen900?: ResponsiveBoolean
+    /**
+     * Set background to lime50
+     * ```css
+     * {
+     *   background-color: #f4fce3;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime50></Box>
+     * ```
+     */
+    bgLime50?: ResponsiveBoolean
+    /**
+     * Set background to lime100
+     * ```css
+     * {
+     *   background-color: #e9fac8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime100></Box>
+     * ```
+     */
+    bgLime100?: ResponsiveBoolean
+    /**
+     * Set background to lime200
+     * ```css
+     * {
+     *   background-color: #d8f5a2;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime200></Box>
+     * ```
+     */
+    bgLime200?: ResponsiveBoolean
+    /**
+     * Set background to lime300
+     * ```css
+     * {
+     *   background-color: #c0eb75;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime300></Box>
+     * ```
+     */
+    bgLime300?: ResponsiveBoolean
+    /**
+     * Set background to lime400
+     * ```css
+     * {
+     *   background-color: #a9e34b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime400></Box>
+     * ```
+     */
+    bgLime400?: ResponsiveBoolean
+    /**
+     * Set background to lime500
+     * ```css
+     * {
+     *   background-color: #94d82d;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime500></Box>
+     * ```
+     */
+    bgLime500?: ResponsiveBoolean
+    /**
+     * Set background to lime600
+     * ```css
+     * {
+     *   background-color: #82c91e;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime600></Box>
+     * ```
+     */
+    bgLime600?: ResponsiveBoolean
+    /**
+     * Set background to lime700
+     * ```css
+     * {
+     *   background-color: #74b816;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime700></Box>
+     * ```
+     */
+    bgLime700?: ResponsiveBoolean
+    /**
+     * Set background to lime800
+     * ```css
+     * {
+     *   background-color: #66a80f;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime800></Box>
+     * ```
+     */
+    bgLime800?: ResponsiveBoolean
+    /**
+     * Set background to lime900
+     * ```css
+     * {
+     *   background-color: #5c940d;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgLime900></Box>
+     * ```
+     */
+    bgLime900?: ResponsiveBoolean
+    /**
+     * Set background to yellow50
+     * ```css
+     * {
+     *   background-color: #fff9db;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow50></Box>
+     * ```
+     */
+    bgYellow50?: ResponsiveBoolean
+    /**
+     * Set background to yellow100
+     * ```css
+     * {
+     *   background-color: #fff3bf;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow100></Box>
+     * ```
+     */
+    bgYellow100?: ResponsiveBoolean
+    /**
+     * Set background to yellow200
+     * ```css
+     * {
+     *   background-color: #ffec99;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow200></Box>
+     * ```
+     */
+    bgYellow200?: ResponsiveBoolean
+    /**
+     * Set background to yellow300
+     * ```css
+     * {
+     *   background-color: #ffe066;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow300></Box>
+     * ```
+     */
+    bgYellow300?: ResponsiveBoolean
+    /**
+     * Set background to yellow400
+     * ```css
+     * {
+     *   background-color: #ffd43b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow400></Box>
+     * ```
+     */
+    bgYellow400?: ResponsiveBoolean
+    /**
+     * Set background to yellow500
+     * ```css
+     * {
+     *   background-color: #fcc419;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow500></Box>
+     * ```
+     */
+    bgYellow500?: ResponsiveBoolean
+    /**
+     * Set background to yellow600
+     * ```css
+     * {
+     *   background-color: #fab005;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow600></Box>
+     * ```
+     */
+    bgYellow600?: ResponsiveBoolean
+    /**
+     * Set background to yellow700
+     * ```css
+     * {
+     *   background-color: #f59f00;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow700></Box>
+     * ```
+     */
+    bgYellow700?: ResponsiveBoolean
+    /**
+     * Set background to yellow800
+     * ```css
+     * {
+     *   background-color: #f08c00;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow800></Box>
+     * ```
+     */
+    bgYellow800?: ResponsiveBoolean
+    /**
+     * Set background to yellow900
+     * ```css
+     * {
+     *   background-color: #e67700;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgYellow900></Box>
+     * ```
+     */
+    bgYellow900?: ResponsiveBoolean
+    /**
+     * Set background to orange50
+     * ```css
+     * {
+     *   background-color: #fff4e6;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange50></Box>
+     * ```
+     */
+    bgOrange50?: ResponsiveBoolean
+    /**
+     * Set background to orange100
+     * ```css
+     * {
+     *   background-color: #ffe8cc;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange100></Box>
+     * ```
+     */
+    bgOrange100?: ResponsiveBoolean
+    /**
+     * Set background to orange200
+     * ```css
+     * {
+     *   background-color: #ffd8a8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange200></Box>
+     * ```
+     */
+    bgOrange200?: ResponsiveBoolean
+    /**
+     * Set background to orange300
+     * ```css
+     * {
+     *   background-color: #ffc078;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange300></Box>
+     * ```
+     */
+    bgOrange300?: ResponsiveBoolean
+    /**
+     * Set background to orange400
+     * ```css
+     * {
+     *   background-color: #ffa94d;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange400></Box>
+     * ```
+     */
+    bgOrange400?: ResponsiveBoolean
+    /**
+     * Set background to orange500
+     * ```css
+     * {
+     *   background-color: #ff922b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange500></Box>
+     * ```
+     */
+    bgOrange500?: ResponsiveBoolean
+    /**
+     * Set background to orange600
+     * ```css
+     * {
+     *   background-color: #fd7e14;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange600></Box>
+     * ```
+     */
+    bgOrange600?: ResponsiveBoolean
+    /**
+     * Set background to orange700
+     * ```css
+     * {
+     *   background-color: #f76707;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange700></Box>
+     * ```
+     */
+    bgOrange700?: ResponsiveBoolean
+    /**
+     * Set background to orange800
+     * ```css
+     * {
+     *   background-color: #e8590c;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange800></Box>
+     * ```
+     */
+    bgOrange800?: ResponsiveBoolean
+    /**
+     * Set background to orange900
+     * ```css
+     * {
+     *   background-color: #d9480f;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgOrange900></Box>
+     * ```
+     */
+    bgOrange900?: ResponsiveBoolean
+    /**
+     * Set background to red50
+     * ```css
+     * {
+     *   background-color: #fff5f5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed50></Box>
+     * ```
+     */
+    bgRed50?: ResponsiveBoolean
+    /**
+     * Set background to red100
+     * ```css
+     * {
+     *   background-color: #ffe3e3;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed100></Box>
+     * ```
+     */
+    bgRed100?: ResponsiveBoolean
+    /**
+     * Set background to red200
+     * ```css
+     * {
+     *   background-color: #ffc9c9;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed200></Box>
+     * ```
+     */
+    bgRed200?: ResponsiveBoolean
+    /**
+     * Set background to red300
+     * ```css
+     * {
+     *   background-color: #ffa8a8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed300></Box>
+     * ```
+     */
+    bgRed300?: ResponsiveBoolean
+    /**
+     * Set background to red400
+     * ```css
+     * {
+     *   background-color: #ff8787;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed400></Box>
+     * ```
+     */
+    bgRed400?: ResponsiveBoolean
+    /**
+     * Set background to red500
+     * ```css
+     * {
+     *   background-color: #ff6b6b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed500></Box>
+     * ```
+     */
+    bgRed500?: ResponsiveBoolean
+    /**
+     * Set background to red600
+     * ```css
+     * {
+     *   background-color: #fa5252;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed600></Box>
+     * ```
+     */
+    bgRed600?: ResponsiveBoolean
+    /**
+     * Set background to red700
+     * ```css
+     * {
+     *   background-color: #f03e3e;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed700></Box>
+     * ```
+     */
+    bgRed700?: ResponsiveBoolean
+    /**
+     * Set background to red800
+     * ```css
+     * {
+     *   background-color: #e03131;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed800></Box>
+     * ```
+     */
+    bgRed800?: ResponsiveBoolean
+    /**
+     * Set background to red900
+     * ```css
+     * {
+     *   background-color: #c92a2a;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgRed900></Box>
+     * ```
+     */
+    bgRed900?: ResponsiveBoolean
+    /**
+     * Set background to trueGray50
+     * ```css
+     * {
+     *   background-color: #fafafa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray50></Box>
+     * ```
+     */
+    bgTrueGray50?: ResponsiveBoolean
+    /**
+     * Set background to trueGray100
+     * ```css
+     * {
+     *   background-color: #f5f5f5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray100></Box>
+     * ```
+     */
+    bgTrueGray100?: ResponsiveBoolean
+    /**
+     * Set background to trueGray200
+     * ```css
+     * {
+     *   background-color: #e5e5e5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray200></Box>
+     * ```
+     */
+    bgTrueGray200?: ResponsiveBoolean
+    /**
+     * Set background to trueGray300
+     * ```css
+     * {
+     *   background-color: #d4d4d4;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray300></Box>
+     * ```
+     */
+    bgTrueGray300?: ResponsiveBoolean
+    /**
+     * Set background to trueGray400
+     * ```css
+     * {
+     *   background-color: #a3a3a3;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray400></Box>
+     * ```
+     */
+    bgTrueGray400?: ResponsiveBoolean
+    /**
+     * Set background to trueGray500
+     * ```css
+     * {
+     *   background-color: #737373;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray500></Box>
+     * ```
+     */
+    bgTrueGray500?: ResponsiveBoolean
+    /**
+     * Set background to trueGray600
+     * ```css
+     * {
+     *   background-color: #525252;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray600></Box>
+     * ```
+     */
+    bgTrueGray600?: ResponsiveBoolean
+    /**
+     * Set background to trueGray700
+     * ```css
+     * {
+     *   background-color: #404040;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray700></Box>
+     * ```
+     */
+    bgTrueGray700?: ResponsiveBoolean
+    /**
+     * Set background to trueGray800
+     * ```css
+     * {
+     *   background-color: #262626;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray800></Box>
+     * ```
+     */
+    bgTrueGray800?: ResponsiveBoolean
+    /**
+     * Set background to trueGray900
+     * ```css
+     * {
+     *   background-color: #171717;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgTrueGray900></Box>
+     * ```
+     */
+    bgTrueGray900?: ResponsiveBoolean
+    /**
+     * Set background to gray50
+     * ```css
+     * {
+     *   background-color: #fafafa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray50></Box>
+     * ```
+     */
+    bgGray50?: ResponsiveBoolean
+    /**
+     * Set background to gray100
+     * ```css
+     * {
+     *   background-color: #f4f4f5;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray100></Box>
+     * ```
+     */
+    bgGray100?: ResponsiveBoolean
+    /**
+     * Set background to gray200
+     * ```css
+     * {
+     *   background-color: #e4e4e7;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray200></Box>
+     * ```
+     */
+    bgGray200?: ResponsiveBoolean
+    /**
+     * Set background to gray300
+     * ```css
+     * {
+     *   background-color: #d4d4d8;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray300></Box>
+     * ```
+     */
+    bgGray300?: ResponsiveBoolean
+    /**
+     * Set background to gray400
+     * ```css
+     * {
+     *   background-color: #a1a1aa;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray400></Box>
+     * ```
+     */
+    bgGray400?: ResponsiveBoolean
+    /**
+     * Set background to gray500
+     * ```css
+     * {
+     *   background-color: #71717a;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray500></Box>
+     * ```
+     */
+    bgGray500?: ResponsiveBoolean
+    /**
+     * Set background to gray600
+     * ```css
+     * {
+     *   background-color: #52525b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray600></Box>
+     * ```
+     */
+    bgGray600?: ResponsiveBoolean
+    /**
+     * Set background to gray700
+     * ```css
+     * {
+     *   background-color: #3f3f46;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray700></Box>
+     * ```
+     */
+    bgGray700?: ResponsiveBoolean
+    /**
+     * Set background to gray800
+     * ```css
+     * {
+     *   background-color: #27272a;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray800></Box>
+     * ```
+     */
+    bgGray800?: ResponsiveBoolean
+    /**
+     * Set background to gray900
+     * ```css
+     * {
+     *   background-color: #18181b;
+     * }
+     * ```
+     * @example
+     * ```
+     * <Box bgGray900></Box>
+     * ```
+     */
+    bgGray900?: ResponsiveBoolean
   }
 }
