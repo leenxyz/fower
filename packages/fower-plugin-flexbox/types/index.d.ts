@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveBoolean, ResponsiveValue } from '@fower/core'
 import * as CSS from 'csstype'
 
 declare const _default: () => FowerPlugin
@@ -17,7 +17,7 @@ declare module '@fower/atomic-props' {
      * <Box flexDirection="column-reverse"></Box>
      * ```
      */
-    flexDirection?: CSS.Property.FlexDirection
+    flexDirection?: ResponsiveValue<CSS.Property.FlexDirection>
 
     /**
      * set flex-flow、flex-shrink、flex-basis
@@ -34,7 +34,7 @@ declare module '@fower/atomic-props' {
      * <Box flexNone></Box> // flex: none;
      * ```
      */
-    flex?: CSS.Property.Flex | boolean
+    flex?: ResponsiveValue<CSS.Property.Flex | boolean>
 
     /**
      * set flex: 1 1 auto;
@@ -44,7 +44,7 @@ declare module '@fower/atomic-props' {
      * <Box flexAuto></Box> // flex: 1 1 auto;
      * ```
      */
-    flexAuto?: boolean
+    flexAuto?: ResponsiveBoolean
 
     /**
      * set flex: 0 1 auto;
@@ -54,7 +54,7 @@ declare module '@fower/atomic-props' {
      * <Box flexInitial></Box> // flex: 0 1 auto;
      * ```
      */
-    flexInitial?: boolean
+    flexInitial?: ResponsiveBoolean
 
     /**
      * set flex="none" // flex: 0 0 auto;
@@ -64,7 +64,7 @@ declare module '@fower/atomic-props' {
      * <Box flexNone></Box> // flex: none;
      * ```
      */
-    flexNone?: boolean
+    flexNone?: ResponsiveBoolean
 
     /**
      * set order
@@ -75,21 +75,13 @@ declare module '@fower/atomic-props' {
      * <Box order="1"></Box> // order: 1;
      * ```
      */
-    order?: CSS.Property.Order
+    order?: ResponsiveValue<CSS.Property.Order>
 
-    /**
-     * Set flex-basis, Defaults to auto
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
-     * @example
-     * ```tsx
-     * <Box flexWrap="wrap"></Box>
-     * ```
-     */
-    flexWrap?: CSS.Property.FlexWrap | boolean
+    flexWrap?: ResponsiveValue<CSS.Property.FlexWrap | boolean>
 
-    flexNowrap?: boolean
+    flexNowrap?: ResponsiveBoolean
 
-    flexWrapReverse?: boolean
+    flexWrapReverse?: ResponsiveBoolean
 
     /**
      * Set flex-grow, Defaults to 0
@@ -99,17 +91,17 @@ declare module '@fower/atomic-props' {
      * <Box flexGrow={1}></Box>
      * ```
      */
-    flexGrow?: CSS.Property.FlexGrow | boolean
+    flexGrow?: ResponsiveValue<CSS.Property.FlexGrow>
 
     /**
      * Set flex-shrink, Defaults to 1
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
      * @example
      * ```tsx
      * <Box flexShrink={2}></Box>
      * ```
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
      */
-    flexShrink?: CSS.Property.FlexShrink | boolean
+    flexShrink?: ResponsiveValue<CSS.Property.FlexShrink>
 
     /**
      * Set flex-basis, Defaults to auto
@@ -119,6 +111,6 @@ declare module '@fower/atomic-props' {
      * <Box flexBasis="10px"></Box>
      * ```
      */
-    flexBasis?: CSS.Property.FlexBasis | boolean
+    flexBasis?: ResponsiveValue<CSS.Property.FlexBasis>
   }
 }

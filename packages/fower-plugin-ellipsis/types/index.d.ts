@@ -1,4 +1,4 @@
-import { FowerPlugin, PropValue } from '@fower/core'
+import { FowerPlugin, PropValue, ResponsiveValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -18,7 +18,7 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis="200rem></Box>
      * ```
      */
-    ellipsis?: PropValue
+    ellipsis?: ResponsiveValue<PropValue>
 
     /**
      * single line of text ellipsis
@@ -33,7 +33,7 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis1="200rem"></Box>
      * ```
      */
-    ellipsis1?: PropValue
+    ellipsis1?: ResponsiveValue<PropValue>
 
     /**
      * multiline of text ellipsis
@@ -49,7 +49,7 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis2="200rem"></Box>
      * ```
      */
-    ellipsis2?: PropValue
+    ellipsis2?: ResponsiveValue<PropValue>
 
     /**
      * multiline of text ellipsis
@@ -65,7 +65,7 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis3="200rem"></Box>
      * ```
      */
-    ellipsis3?: PropValue
+    ellipsis3?: ResponsiveValue<PropValue>
 
     /**
      * multiline of text ellipsis
@@ -81,7 +81,7 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis4="200rem"></Box>
      * ```
      */
-    ellipsis4?: PropValue
+    ellipsis4?: ResponsiveValue<PropValue>
 
     /**
      * multiline of text ellipsis
@@ -97,6 +97,6 @@ declare module '@fower/atomic-props' {
      * <Box ellipsis5="200rem"></Box>
      * ```
      */
-    ellipsis5?: PropValue
+    ellipsis5?: ResponsiveValue<PropValue>
   }
 }

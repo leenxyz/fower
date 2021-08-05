@@ -1,956 +1,3136 @@
-import { FowerPlugin, PropValue } from '@fower/core'
-import '@fower/atomic-props'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set padding
-     *
+     * set padding to some value
+     * ```css
+     * {
+     *   padding: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box p-10></Box>
      * <Box p-1rem></Box>
      * <Box p-10p></Box>
      * <Box p={10}></Box>
-     * <Box p="10px 4px"></Box>
      * <Box p={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p?: PropValue
-
+    p?: ResponsiveValue<string | number | boolean>
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p0 is `padding: 0px`
+     * set padding to 0
+     * ```css
+     * {
+     *   padding: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p0?: boolean
-
+    p0?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p1 is `padding: 4px`
+     * set padding to 4
+     * ```css
+     * {
+     *   padding: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p1?: boolean
-
+    p1?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p2 is `padding: 8px`
+     * set padding to 8
+     * ```css
+     * {
+     *   padding: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p2?: boolean
-
+    p2?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p3 is `padding: 12px`
+     * set padding to 12
+     * ```css
+     * {
+     *   padding: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p3?: boolean
-
+    p3?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p4 is `padding: 16px`
+     * set padding to 16
+     * ```css
+     * {
+     *   padding: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p4?: boolean
-
+    p4?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p5 is `padding: 20px`
+     * set padding to 20
+     * ```css
+     * {
+     *   padding: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p5?: boolean
-
+    p5?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p6 is `padding: 24px`
+     * set padding to 24
+     * ```css
+     * {
+     *   padding: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p6?: boolean
-
+    p6?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p7 is `padding: 28px`
+     * set padding to 28
+     * ```css
+     * {
+     *   padding: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p7?: boolean
-
+    p7?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p8 is `padding: 32px`
+     * set padding to 32
+     * ```css
+     * {
+     *   padding: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p8?: boolean
-
+    p8?: ResponsiveBoolean
     /**
-     * Set padding
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * p9 is `padding: 36px`
+     * set padding to 36
+     * ```css
+     * {
+     *   padding: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p9?: boolean
-
-    p10?: boolean
-
-    p11?: boolean
-    p12?: boolean
-    p14?: boolean
-    p16?: boolean
-    p20?: boolean
-    p24?: boolean
-    p28?: boolean
-    p32?: boolean
-    p36?: boolean
-    p40?: boolean
-    p44?: boolean
-    p48?: boolean
-    p52?: boolean
-    p56?: boolean
-    p60?: boolean
-    p64?: boolean
-    p72?: boolean
-    p80?: boolean
-    p96?: boolean
-
+    p9?: ResponsiveBoolean
     /**
-     * Set padding horizontal
-     *
-     * px-10 is `padding-left: 10px; padding-right: 10px;`
-     *
+     * set padding to 40
+     * ```css
+     * {
+     *   padding: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p10?: ResponsiveBoolean
+    /**
+     * set padding to 44
+     * ```css
+     * {
+     *   padding: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p11?: ResponsiveBoolean
+    /**
+     * set padding to 48
+     * ```css
+     * {
+     *   padding: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p12?: ResponsiveBoolean
+    /**
+     * set padding to 56
+     * ```css
+     * {
+     *   padding: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p14?: ResponsiveBoolean
+    /**
+     * set padding to 64
+     * ```css
+     * {
+     *   padding: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p16?: ResponsiveBoolean
+    /**
+     * set padding to 80
+     * ```css
+     * {
+     *   padding: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p20?: ResponsiveBoolean
+    /**
+     * set padding to 96
+     * ```css
+     * {
+     *   padding: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p24?: ResponsiveBoolean
+    /**
+     * set padding to 112
+     * ```css
+     * {
+     *   padding: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p28?: ResponsiveBoolean
+    /**
+     * set padding to 128
+     * ```css
+     * {
+     *   padding: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p32?: ResponsiveBoolean
+    /**
+     * set padding to 144
+     * ```css
+     * {
+     *   padding: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p36?: ResponsiveBoolean
+    /**
+     * set padding to 160
+     * ```css
+     * {
+     *   padding: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p40?: ResponsiveBoolean
+    /**
+     * set padding to 176
+     * ```css
+     * {
+     *   padding: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p44?: ResponsiveBoolean
+    /**
+     * set padding to 192
+     * ```css
+     * {
+     *   padding: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p48?: ResponsiveBoolean
+    /**
+     * set padding to 208
+     * ```css
+     * {
+     *   padding: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p52?: ResponsiveBoolean
+    /**
+     * set padding to 224
+     * ```css
+     * {
+     *   padding: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p56?: ResponsiveBoolean
+    /**
+     * set padding to 240
+     * ```css
+     * {
+     *   padding: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p60?: ResponsiveBoolean
+    /**
+     * set padding to 256
+     * ```css
+     * {
+     *   padding: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p64?: ResponsiveBoolean
+    /**
+     * set padding to 288
+     * ```css
+     * {
+     *   padding: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p72?: ResponsiveBoolean
+    /**
+     * set padding to 320
+     * ```css
+     * {
+     *   padding: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p80?: ResponsiveBoolean
+    /**
+     * set padding to 384
+     * ```css
+     * {
+     *   padding: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box p96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    p96?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to some value
+     * ```css
+     * {
+     *   padding-left: $value;
+     *   padding-right: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box px-10></Box>
      * <Box px-1rem></Box>
      * <Box px-10p></Box>
+     * <Box px={10}></Box>
      * <Box px={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px?: PropValue
-
+    px?: ResponsiveValue<string | number | boolean>
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px0 is `padding-left: 0px; padding-right: 0px`
+     * set padding-left padding-right to 0
+     * ```css
+     * {
+     *   padding-left: 0px;
+     *   padding-right: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px0?: boolean
-
+    px0?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px1 is `padding-left: 4px; padding-right: 4px`
+     * set padding-left padding-right to 4
+     * ```css
+     * {
+     *   padding-left: 4px;
+     *   padding-right: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px1?: boolean
-
+    px1?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px2 is `padding-left: 8px; padding-right: 8px`
+     * set padding-left padding-right to 8
+     * ```css
+     * {
+     *   padding-left: 8px;
+     *   padding-right: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px2?: boolean
-
+    px2?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px3 is `padding-left: 12px; padding-right: 12px`
+     * set padding-left padding-right to 12
+     * ```css
+     * {
+     *   padding-left: 12px;
+     *   padding-right: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px3?: boolean
-
+    px3?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px4 is `padding-left: 16px; padding-right: 16px`
+     * set padding-left padding-right to 16
+     * ```css
+     * {
+     *   padding-left: 16px;
+     *   padding-right: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px4?: boolean
-
+    px4?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px5 is `padding-left: 20px; padding-right: 20px`
+     * set padding-left padding-right to 20
+     * ```css
+     * {
+     *   padding-left: 20px;
+     *   padding-right: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px5?: boolean
-
+    px5?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px6 is `padding-left: 24px; padding-right: 24px`
+     * set padding-left padding-right to 24
+     * ```css
+     * {
+     *   padding-left: 24px;
+     *   padding-right: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px6?: boolean
-
+    px6?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px7 is `padding-left: 28px; padding-right: 28px`
+     * set padding-left padding-right to 28
+     * ```css
+     * {
+     *   padding-left: 28px;
+     *   padding-right: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px7?: boolean
-
+    px7?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px8 is `padding-left: 32px; padding-right: 32px`
+     * set padding-left padding-right to 32
+     * ```css
+     * {
+     *   padding-left: 32px;
+     *   padding-right: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px8?: boolean
-
+    px8?: ResponsiveBoolean
     /**
-     * Set paddingLeft and paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * px9 is `padding-left: 36px; padding-right: 36px`
+     * set padding-left padding-right to 36
+     * ```css
+     * {
+     *   padding-left: 36px;
+     *   padding-right: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px9?: boolean
-    px10?: boolean
-    px11?: boolean
-    px12?: boolean
-    px14?: boolean
-    px16?: boolean
-    px20?: boolean
-    px24?: boolean
-    px28?: boolean
-    px32?: boolean
-    px36?: boolean
-    px40?: boolean
-    px44?: boolean
-    px48?: boolean
-    px52?: boolean
-    px56?: boolean
-    px60?: boolean
-    px64?: boolean
-    px72?: boolean
-    px80?: boolean
-    px96?: boolean
-
+    px9?: ResponsiveBoolean
     /**
-     * Set padding vertical
-     *
-     * py-10 is `padding-top: 10px; padding-bottom: 10px;`
-     *
+     * set padding-left padding-right to 40
+     * ```css
+     * {
+     *   padding-left: 40px;
+     *   padding-right: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px10?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 44
+     * ```css
+     * {
+     *   padding-left: 44px;
+     *   padding-right: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px11?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 48
+     * ```css
+     * {
+     *   padding-left: 48px;
+     *   padding-right: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px12?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 56
+     * ```css
+     * {
+     *   padding-left: 56px;
+     *   padding-right: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px14?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 64
+     * ```css
+     * {
+     *   padding-left: 64px;
+     *   padding-right: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px16?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 80
+     * ```css
+     * {
+     *   padding-left: 80px;
+     *   padding-right: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px20?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 96
+     * ```css
+     * {
+     *   padding-left: 96px;
+     *   padding-right: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px24?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 112
+     * ```css
+     * {
+     *   padding-left: 112px;
+     *   padding-right: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px28?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 128
+     * ```css
+     * {
+     *   padding-left: 128px;
+     *   padding-right: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px32?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 144
+     * ```css
+     * {
+     *   padding-left: 144px;
+     *   padding-right: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px36?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 160
+     * ```css
+     * {
+     *   padding-left: 160px;
+     *   padding-right: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px40?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 176
+     * ```css
+     * {
+     *   padding-left: 176px;
+     *   padding-right: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px44?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 192
+     * ```css
+     * {
+     *   padding-left: 192px;
+     *   padding-right: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px48?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 208
+     * ```css
+     * {
+     *   padding-left: 208px;
+     *   padding-right: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px52?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 224
+     * ```css
+     * {
+     *   padding-left: 224px;
+     *   padding-right: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px56?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 240
+     * ```css
+     * {
+     *   padding-left: 240px;
+     *   padding-right: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px60?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 256
+     * ```css
+     * {
+     *   padding-left: 256px;
+     *   padding-right: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px64?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 288
+     * ```css
+     * {
+     *   padding-left: 288px;
+     *   padding-right: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px72?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 320
+     * ```css
+     * {
+     *   padding-left: 320px;
+     *   padding-right: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px80?: ResponsiveBoolean
+    /**
+     * set padding-left padding-right to 384
+     * ```css
+     * {
+     *   padding-left: 384px;
+     *   padding-right: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box px96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    px96?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to some value
+     * ```css
+     * {
+     *   padding-top: $value;
+     *   padding-bottom: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box py-10></Box>
      * <Box py-1rem></Box>
      * <Box py-10p></Box>
+     * <Box py={10}></Box>
      * <Box py={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py?: PropValue
-
+    py?: ResponsiveValue<string | number | boolean>
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py0 is `padding-left: 0px; padding-right: 0px`
+     * set padding-top padding-bottom to 0
+     * ```css
+     * {
+     *   padding-top: 0px;
+     *   padding-bottom: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py0?: boolean
-
+    py0?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py1 is `padding-left: 4px; padding-right: 4px`
+     * set padding-top padding-bottom to 4
+     * ```css
+     * {
+     *   padding-top: 4px;
+     *   padding-bottom: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py1?: boolean
-
+    py1?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py2 is `padding-left: 8px; padding-right: 8px`
+     * set padding-top padding-bottom to 8
+     * ```css
+     * {
+     *   padding-top: 8px;
+     *   padding-bottom: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py2?: boolean
-
+    py2?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py3 is `padding-left: 12px; padding-right: 12px`
+     * set padding-top padding-bottom to 12
+     * ```css
+     * {
+     *   padding-top: 12px;
+     *   padding-bottom: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py3?: boolean
-
+    py3?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py4 is `padding-left: 16px; padding-right: 16px`
+     * set padding-top padding-bottom to 16
+     * ```css
+     * {
+     *   padding-top: 16px;
+     *   padding-bottom: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py4?: boolean
-
+    py4?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py5 is `padding-left: 20px; padding-right: 20px`
+     * set padding-top padding-bottom to 20
+     * ```css
+     * {
+     *   padding-top: 20px;
+     *   padding-bottom: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py5?: boolean
-
+    py5?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py6 is `padding-left: 24px; padding-right: 24px`
+     * set padding-top padding-bottom to 24
+     * ```css
+     * {
+     *   padding-top: 24px;
+     *   padding-bottom: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py6?: boolean
-
+    py6?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py7 is `padding-left: 28px; padding-right: 28px`
+     * set padding-top padding-bottom to 28
+     * ```css
+     * {
+     *   padding-top: 28px;
+     *   padding-bottom: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py7?: boolean
-
+    py7?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py8 is `padding-left: 32px; padding-right: 32px`
+     * set padding-top padding-bottom to 32
+     * ```css
+     * {
+     *   padding-top: 32px;
+     *   padding-bottom: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py8?: boolean
-
+    py8?: ResponsiveBoolean
     /**
-     * Set paddingTop and paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * py9 is `padding-left: 36px; padding-right: 36px`
+     * set padding-top padding-bottom to 36
+     * ```css
+     * {
+     *   padding-top: 36px;
+     *   padding-bottom: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py9?: boolean
-    py10?: boolean
-    py11?: boolean
-    py12?: boolean
-    py14?: boolean
-    py16?: boolean
-    py20?: boolean
-    py24?: boolean
-    py28?: boolean
-    py32?: boolean
-    py36?: boolean
-    py40?: boolean
-    py44?: boolean
-    py48?: boolean
-    py52?: boolean
-    py56?: boolean
-    py60?: boolean
-    py64?: boolean
-    py72?: boolean
-    py80?: boolean
-    py96?: boolean
-
+    py9?: ResponsiveBoolean
     /**
-     * Set paddingTop
-     *
+     * set padding-top padding-bottom to 40
+     * ```css
+     * {
+     *   padding-top: 40px;
+     *   padding-bottom: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py10?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 44
+     * ```css
+     * {
+     *   padding-top: 44px;
+     *   padding-bottom: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py11?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 48
+     * ```css
+     * {
+     *   padding-top: 48px;
+     *   padding-bottom: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py12?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 56
+     * ```css
+     * {
+     *   padding-top: 56px;
+     *   padding-bottom: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py14?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 64
+     * ```css
+     * {
+     *   padding-top: 64px;
+     *   padding-bottom: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py16?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 80
+     * ```css
+     * {
+     *   padding-top: 80px;
+     *   padding-bottom: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py20?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 96
+     * ```css
+     * {
+     *   padding-top: 96px;
+     *   padding-bottom: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py24?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 112
+     * ```css
+     * {
+     *   padding-top: 112px;
+     *   padding-bottom: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py28?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 128
+     * ```css
+     * {
+     *   padding-top: 128px;
+     *   padding-bottom: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py32?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 144
+     * ```css
+     * {
+     *   padding-top: 144px;
+     *   padding-bottom: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py36?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 160
+     * ```css
+     * {
+     *   padding-top: 160px;
+     *   padding-bottom: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py40?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 176
+     * ```css
+     * {
+     *   padding-top: 176px;
+     *   padding-bottom: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py44?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 192
+     * ```css
+     * {
+     *   padding-top: 192px;
+     *   padding-bottom: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py48?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 208
+     * ```css
+     * {
+     *   padding-top: 208px;
+     *   padding-bottom: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py52?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 224
+     * ```css
+     * {
+     *   padding-top: 224px;
+     *   padding-bottom: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py56?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 240
+     * ```css
+     * {
+     *   padding-top: 240px;
+     *   padding-bottom: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py60?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 256
+     * ```css
+     * {
+     *   padding-top: 256px;
+     *   padding-bottom: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py64?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 288
+     * ```css
+     * {
+     *   padding-top: 288px;
+     *   padding-bottom: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py72?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 320
+     * ```css
+     * {
+     *   padding-top: 320px;
+     *   padding-bottom: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py80?: ResponsiveBoolean
+    /**
+     * set padding-top padding-bottom to 384
+     * ```css
+     * {
+     *   padding-top: 384px;
+     *   padding-bottom: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box py96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    py96?: ResponsiveBoolean
+    /**
+     * set padding-top to some value
+     * ```css
+     * {
+     *   padding-top: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box pt-10></Box>
      * <Box pt-1rem></Box>
      * <Box pt-10p></Box>
      * <Box pt={10}></Box>
-     * <Box pt="10px 4px"></Box>
      * <Box pt={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pt?: PropValue
-
+    pt?: ResponsiveValue<string | number | boolean>
     /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt0 is `padding-top: 0px`
-     */
-    pt0?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt1 is `padding-top: 4px`
-     */
-    pt1?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt2 is `padding-top: 8px`
-     */
-    pt2?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt3 is `padding-top: 12px`
-     */
-    pt3?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt4 is `padding-top: 16px`
-     */
-    pt4?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt5 is `padding-top: 20px`
-     */
-    pt5?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt6 is `padding-top: 24px`
-     */
-    pt6?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt7 is `padding-top: 28px`
-     */
-    pt7?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt8 is `padding-top: 32px`
-     */
-    pt8?: boolean
-
-    /**
-     * Set paddingTop
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pt9 is `padding-top: 36px`
-     */
-    pt9?: boolean
-    pt10?: boolean
-    pt11?: boolean
-    pt12?: boolean
-    pt14?: boolean
-    pt16?: boolean
-    pt20?: boolean
-    pt24?: boolean
-    pt28?: boolean
-    pt32?: boolean
-    pt36?: boolean
-    pt40?: boolean
-    pt44?: boolean
-    pt48?: boolean
-    pt52?: boolean
-    pt56?: boolean
-    pt60?: boolean
-    pt64?: boolean
-    pt72?: boolean
-    pt80?: boolean
-    pt96?: boolean
-
-    /**
-     * Set padding bottom, pb is padding-bottom
-     *
+     * set padding-top to 0
+     * ```css
+     * {
+     *   padding-top: 0px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box pb-10></Box>
-     * <Box pb-1rem></Box>
-     * <Box pb-10p></Box>
-     * <Box pb={10}></Box>
-     * <Box pb="10px 4px"></Box>
-     * <Box pb={a + b}></Box>
+     * <Box pt0></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb?: PropValue
-
+    pt0?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb0 is `padding-bottom: 0px`
+     * set padding-top to 4
+     * ```css
+     * {
+     *   padding-top: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb0?: boolean
-
+    pt1?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb1 is `padding-bottom: 4px`
+     * set padding-top to 8
+     * ```css
+     * {
+     *   padding-top: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb1?: boolean
-
+    pt2?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb2 is `padding-bottom: 8px`
+     * set padding-top to 12
+     * ```css
+     * {
+     *   padding-top: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb2?: boolean
-
+    pt3?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb3 is `padding-bottom: 12px`
+     * set padding-top to 16
+     * ```css
+     * {
+     *   padding-top: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb3?: boolean
-
+    pt4?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb4 is `padding-bottom: 16px`
+     * set padding-top to 20
+     * ```css
+     * {
+     *   padding-top: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb4?: boolean
-
+    pt5?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb5 is `padding-bottom: 20px`
+     * set padding-top to 24
+     * ```css
+     * {
+     *   padding-top: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb5?: boolean
-
+    pt6?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb6 is `padding-bottom: 24px`
+     * set padding-top to 28
+     * ```css
+     * {
+     *   padding-top: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb6?: boolean
-
+    pt7?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb7 is `padding-bottom: 28px`
+     * set padding-top to 32
+     * ```css
+     * {
+     *   padding-top: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb7?: boolean
-
+    pt8?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb8 is `padding-bottom: 32px`
+     * set padding-top to 36
+     * ```css
+     * {
+     *   padding-top: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb8?: boolean
-
+    pt9?: ResponsiveBoolean
     /**
-     * Set paddingBottom
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pb9 is `padding-bottom: 36px`
+     * set padding-top to 40
+     * ```css
+     * {
+     *   padding-top: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb9?: boolean
-    pb10?: boolean
-    pb11?: boolean
-    pb12?: boolean
-    pb14?: boolean
-    pb16?: boolean
-    pb20?: boolean
-    pb24?: boolean
-    pb28?: boolean
-    pb32?: boolean
-    pb36?: boolean
-    pb40?: boolean
-    pb44?: boolean
-    pb48?: boolean
-    pb52?: boolean
-    pb56?: boolean
-    pb60?: boolean
-    pb64?: boolean
-    pb72?: boolean
-    pb80?: boolean
-    pb96?: boolean
-
+    pt10?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
+     * set padding-top to 44
+     * ```css
+     * {
+     *   padding-top: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt11?: ResponsiveBoolean
+    /**
+     * set padding-top to 48
+     * ```css
+     * {
+     *   padding-top: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt12?: ResponsiveBoolean
+    /**
+     * set padding-top to 56
+     * ```css
+     * {
+     *   padding-top: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt14?: ResponsiveBoolean
+    /**
+     * set padding-top to 64
+     * ```css
+     * {
+     *   padding-top: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt16?: ResponsiveBoolean
+    /**
+     * set padding-top to 80
+     * ```css
+     * {
+     *   padding-top: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt20?: ResponsiveBoolean
+    /**
+     * set padding-top to 96
+     * ```css
+     * {
+     *   padding-top: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt24?: ResponsiveBoolean
+    /**
+     * set padding-top to 112
+     * ```css
+     * {
+     *   padding-top: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt28?: ResponsiveBoolean
+    /**
+     * set padding-top to 128
+     * ```css
+     * {
+     *   padding-top: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt32?: ResponsiveBoolean
+    /**
+     * set padding-top to 144
+     * ```css
+     * {
+     *   padding-top: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt36?: ResponsiveBoolean
+    /**
+     * set padding-top to 160
+     * ```css
+     * {
+     *   padding-top: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt40?: ResponsiveBoolean
+    /**
+     * set padding-top to 176
+     * ```css
+     * {
+     *   padding-top: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt44?: ResponsiveBoolean
+    /**
+     * set padding-top to 192
+     * ```css
+     * {
+     *   padding-top: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt48?: ResponsiveBoolean
+    /**
+     * set padding-top to 208
+     * ```css
+     * {
+     *   padding-top: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt52?: ResponsiveBoolean
+    /**
+     * set padding-top to 224
+     * ```css
+     * {
+     *   padding-top: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt56?: ResponsiveBoolean
+    /**
+     * set padding-top to 240
+     * ```css
+     * {
+     *   padding-top: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt60?: ResponsiveBoolean
+    /**
+     * set padding-top to 256
+     * ```css
+     * {
+     *   padding-top: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt64?: ResponsiveBoolean
+    /**
+     * set padding-top to 288
+     * ```css
+     * {
+     *   padding-top: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt72?: ResponsiveBoolean
+    /**
+     * set padding-top to 320
+     * ```css
+     * {
+     *   padding-top: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt80?: ResponsiveBoolean
+    /**
+     * set padding-top to 384
+     * ```css
+     * {
+     *   padding-top: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pt96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pt96?: ResponsiveBoolean
+    /**
+     * set padding-right to some value
+     * ```css
+     * {
+     *   padding-right: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box pr-10></Box>
      * <Box pr-1rem></Box>
      * <Box pr-10p></Box>
      * <Box pr={10}></Box>
-     * <Box pr="10px 4px"></Box>
      * <Box pr={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr?: PropValue
-
+    pr?: ResponsiveValue<string | number | boolean>
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr0 is `padding-right: 0px`
+     * set padding-right to 0
+     * ```css
+     * {
+     *   padding-right: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr0?: boolean
-
+    pr0?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr1 is `padding-right: 4px`
+     * set padding-right to 4
+     * ```css
+     * {
+     *   padding-right: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr1?: boolean
-
+    pr1?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr2 is `padding-right: 8px`
+     * set padding-right to 8
+     * ```css
+     * {
+     *   padding-right: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr2?: boolean
-
+    pr2?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr3 is `padding-right: 12px`
+     * set padding-right to 12
+     * ```css
+     * {
+     *   padding-right: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr3?: boolean
-
+    pr3?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr4 is `padding-right: 12px`
+     * set padding-right to 16
+     * ```css
+     * {
+     *   padding-right: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr4?: boolean
-
+    pr4?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr5 is `padding-right: 16px`
+     * set padding-right to 20
+     * ```css
+     * {
+     *   padding-right: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr5?: boolean
-
+    pr5?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr6 is `padding-right: 24px`
+     * set padding-right to 24
+     * ```css
+     * {
+     *   padding-right: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr6?: boolean
-
+    pr6?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr7 is `padding-right: 28px`
+     * set padding-right to 28
+     * ```css
+     * {
+     *   padding-right: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr7?: boolean
-
+    pr7?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr8 is `padding-right: 32px`
+     * set padding-right to 32
+     * ```css
+     * {
+     *   padding-right: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr8?: boolean
-
+    pr8?: ResponsiveBoolean
     /**
-     * Set paddingRight
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pr9 is `padding-right: 36px`
+     * set padding-right to 36
+     * ```css
+     * {
+     *   padding-right: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr9?: boolean
-    pr10?: boolean
-    pr11?: boolean
-    pr12?: boolean
-    pr14?: boolean
-    pr16?: boolean
-    pr20?: boolean
-    pr24?: boolean
-    pr28?: boolean
-    pr32?: boolean
-    pr36?: boolean
-    pr40?: boolean
-    pr44?: boolean
-    pr48?: boolean
-    pr52?: boolean
-    pr56?: boolean
-    pr60?: boolean
-    pr64?: boolean
-    pr72?: boolean
-    pr80?: boolean
-    pr96?: boolean
-
+    pr9?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
+     * set padding-right to 40
+     * ```css
+     * {
+     *   padding-right: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr10?: ResponsiveBoolean
+    /**
+     * set padding-right to 44
+     * ```css
+     * {
+     *   padding-right: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr11?: ResponsiveBoolean
+    /**
+     * set padding-right to 48
+     * ```css
+     * {
+     *   padding-right: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr12?: ResponsiveBoolean
+    /**
+     * set padding-right to 56
+     * ```css
+     * {
+     *   padding-right: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr14?: ResponsiveBoolean
+    /**
+     * set padding-right to 64
+     * ```css
+     * {
+     *   padding-right: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr16?: ResponsiveBoolean
+    /**
+     * set padding-right to 80
+     * ```css
+     * {
+     *   padding-right: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr20?: ResponsiveBoolean
+    /**
+     * set padding-right to 96
+     * ```css
+     * {
+     *   padding-right: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr24?: ResponsiveBoolean
+    /**
+     * set padding-right to 112
+     * ```css
+     * {
+     *   padding-right: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr28?: ResponsiveBoolean
+    /**
+     * set padding-right to 128
+     * ```css
+     * {
+     *   padding-right: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr32?: ResponsiveBoolean
+    /**
+     * set padding-right to 144
+     * ```css
+     * {
+     *   padding-right: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr36?: ResponsiveBoolean
+    /**
+     * set padding-right to 160
+     * ```css
+     * {
+     *   padding-right: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr40?: ResponsiveBoolean
+    /**
+     * set padding-right to 176
+     * ```css
+     * {
+     *   padding-right: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr44?: ResponsiveBoolean
+    /**
+     * set padding-right to 192
+     * ```css
+     * {
+     *   padding-right: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr48?: ResponsiveBoolean
+    /**
+     * set padding-right to 208
+     * ```css
+     * {
+     *   padding-right: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr52?: ResponsiveBoolean
+    /**
+     * set padding-right to 224
+     * ```css
+     * {
+     *   padding-right: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr56?: ResponsiveBoolean
+    /**
+     * set padding-right to 240
+     * ```css
+     * {
+     *   padding-right: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr60?: ResponsiveBoolean
+    /**
+     * set padding-right to 256
+     * ```css
+     * {
+     *   padding-right: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr64?: ResponsiveBoolean
+    /**
+     * set padding-right to 288
+     * ```css
+     * {
+     *   padding-right: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr72?: ResponsiveBoolean
+    /**
+     * set padding-right to 320
+     * ```css
+     * {
+     *   padding-right: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr80?: ResponsiveBoolean
+    /**
+     * set padding-right to 384
+     * ```css
+     * {
+     *   padding-right: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pr96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pr96?: ResponsiveBoolean
+    /**
+     * set padding-bottom to some value
+     * ```css
+     * {
+     *   padding-bottom: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb-10></Box>
+     * <Box pb-1rem></Box>
+     * <Box pb-10p></Box>
+     * <Box pb={10}></Box>
+     * <Box pb={a + b}></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb?: ResponsiveValue<string | number | boolean>
+    /**
+     * set padding-bottom to 0
+     * ```css
+     * {
+     *   padding-bottom: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb0?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 4
+     * ```css
+     * {
+     *   padding-bottom: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb1?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 8
+     * ```css
+     * {
+     *   padding-bottom: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb2?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 12
+     * ```css
+     * {
+     *   padding-bottom: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb3?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 16
+     * ```css
+     * {
+     *   padding-bottom: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb4?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 20
+     * ```css
+     * {
+     *   padding-bottom: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb5?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 24
+     * ```css
+     * {
+     *   padding-bottom: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb6?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 28
+     * ```css
+     * {
+     *   padding-bottom: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb7?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 32
+     * ```css
+     * {
+     *   padding-bottom: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb8?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 36
+     * ```css
+     * {
+     *   padding-bottom: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb9?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 40
+     * ```css
+     * {
+     *   padding-bottom: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb10?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 44
+     * ```css
+     * {
+     *   padding-bottom: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb11?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 48
+     * ```css
+     * {
+     *   padding-bottom: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb12?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 56
+     * ```css
+     * {
+     *   padding-bottom: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb14?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 64
+     * ```css
+     * {
+     *   padding-bottom: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb16?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 80
+     * ```css
+     * {
+     *   padding-bottom: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb20?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 96
+     * ```css
+     * {
+     *   padding-bottom: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb24?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 112
+     * ```css
+     * {
+     *   padding-bottom: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb28?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 128
+     * ```css
+     * {
+     *   padding-bottom: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb32?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 144
+     * ```css
+     * {
+     *   padding-bottom: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb36?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 160
+     * ```css
+     * {
+     *   padding-bottom: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb40?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 176
+     * ```css
+     * {
+     *   padding-bottom: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb44?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 192
+     * ```css
+     * {
+     *   padding-bottom: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb48?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 208
+     * ```css
+     * {
+     *   padding-bottom: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb52?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 224
+     * ```css
+     * {
+     *   padding-bottom: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb56?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 240
+     * ```css
+     * {
+     *   padding-bottom: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb60?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 256
+     * ```css
+     * {
+     *   padding-bottom: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb64?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 288
+     * ```css
+     * {
+     *   padding-bottom: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb72?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 320
+     * ```css
+     * {
+     *   padding-bottom: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb80?: ResponsiveBoolean
+    /**
+     * set padding-bottom to 384
+     * ```css
+     * {
+     *   padding-bottom: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pb96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pb96?: ResponsiveBoolean
+    /**
+     * set padding-left to some value
+     * ```css
+     * {
+     *   padding-left: $value;
+     * }
+     * ```
      * @example
      * ```tsx
      * <Box pl-10></Box>
      * <Box pl-1rem></Box>
      * <Box pl-10p></Box>
      * <Box pl={10}></Box>
-     * <Box pl="10px 4px"></Box>
      * <Box pl={a + b}></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl?: PropValue
-
+    pl?: ResponsiveValue<string | number | boolean>
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl0 is `padding-left: 0px`
+     * set padding-left to 0
+     * ```css
+     * {
+     *   padding-left: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl0></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl0?: boolean
-
+    pl0?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl1 is `padding-left: 4px`
+     * set padding-left to 4
+     * ```css
+     * {
+     *   padding-left: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl1></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl1?: boolean
-
+    pl1?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl2 is `padding-left: 8px`
+     * set padding-left to 8
+     * ```css
+     * {
+     *   padding-left: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl2></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl2?: boolean
-
+    pl2?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl3 is `padding-left: 12px`
+     * set padding-left to 12
+     * ```css
+     * {
+     *   padding-left: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl3></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl3?: boolean
-
+    pl3?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl4 is `padding-left: 16px`
+     * set padding-left to 16
+     * ```css
+     * {
+     *   padding-left: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl4></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl4?: boolean
-
+    pl4?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl5 is `padding-left: 20px`
+     * set padding-left to 20
+     * ```css
+     * {
+     *   padding-left: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl5></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl5?: boolean
-
+    pl5?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl6 is `padding-left: 24px`
+     * set padding-left to 24
+     * ```css
+     * {
+     *   padding-left: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl6></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl6?: boolean
-
+    pl6?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl7 is `padding-left: 28px`
+     * set padding-left to 28
+     * ```css
+     * {
+     *   padding-left: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl7></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl7?: boolean
-
+    pl7?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl8 is `padding-left: 32px`
+     * set padding-left to 32
+     * ```css
+     * {
+     *   padding-left: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl8></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl8?: boolean
-
+    pl8?: ResponsiveBoolean
     /**
-     * Set paddingLeft
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * pl9 is `padding-left: 36px`
+     * set padding-left to 36
+     * ```css
+     * {
+     *   padding-left: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl9></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl9?: boolean
-    pl10?: boolean
-    pl11?: boolean
-    pl12?: boolean
-    pl14?: boolean
-    pl16?: boolean
-    pl20?: boolean
-    pl24?: boolean
-    pl28?: boolean
-    pl32?: boolean
-    pl36?: boolean
-    pl40?: boolean
-    pl44?: boolean
-    pl48?: boolean
-    pl52?: boolean
-    pl56?: boolean
-    pl60?: boolean
-    pl64?: boolean
-    pl72?: boolean
-    pl80?: boolean
-    pl96?: boolean
+    pl9?: ResponsiveBoolean
+    /**
+     * set padding-left to 40
+     * ```css
+     * {
+     *   padding-left: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl10></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl10?: ResponsiveBoolean
+    /**
+     * set padding-left to 44
+     * ```css
+     * {
+     *   padding-left: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl11></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl11?: ResponsiveBoolean
+    /**
+     * set padding-left to 48
+     * ```css
+     * {
+     *   padding-left: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl12></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl12?: ResponsiveBoolean
+    /**
+     * set padding-left to 56
+     * ```css
+     * {
+     *   padding-left: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl14></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl14?: ResponsiveBoolean
+    /**
+     * set padding-left to 64
+     * ```css
+     * {
+     *   padding-left: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl16></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl16?: ResponsiveBoolean
+    /**
+     * set padding-left to 80
+     * ```css
+     * {
+     *   padding-left: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl20></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl20?: ResponsiveBoolean
+    /**
+     * set padding-left to 96
+     * ```css
+     * {
+     *   padding-left: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl24></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl24?: ResponsiveBoolean
+    /**
+     * set padding-left to 112
+     * ```css
+     * {
+     *   padding-left: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl28></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl28?: ResponsiveBoolean
+    /**
+     * set padding-left to 128
+     * ```css
+     * {
+     *   padding-left: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl32></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl32?: ResponsiveBoolean
+    /**
+     * set padding-left to 144
+     * ```css
+     * {
+     *   padding-left: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl36></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl36?: ResponsiveBoolean
+    /**
+     * set padding-left to 160
+     * ```css
+     * {
+     *   padding-left: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl40></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl40?: ResponsiveBoolean
+    /**
+     * set padding-left to 176
+     * ```css
+     * {
+     *   padding-left: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl44></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl44?: ResponsiveBoolean
+    /**
+     * set padding-left to 192
+     * ```css
+     * {
+     *   padding-left: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl48></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl48?: ResponsiveBoolean
+    /**
+     * set padding-left to 208
+     * ```css
+     * {
+     *   padding-left: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl52></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl52?: ResponsiveBoolean
+    /**
+     * set padding-left to 224
+     * ```css
+     * {
+     *   padding-left: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl56></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl56?: ResponsiveBoolean
+    /**
+     * set padding-left to 240
+     * ```css
+     * {
+     *   padding-left: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl60></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl60?: ResponsiveBoolean
+    /**
+     * set padding-left to 256
+     * ```css
+     * {
+     *   padding-left: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl64></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl64?: ResponsiveBoolean
+    /**
+     * set padding-left to 288
+     * ```css
+     * {
+     *   padding-left: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl72></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl72?: ResponsiveBoolean
+    /**
+     * set padding-left to 320
+     * ```css
+     * {
+     *   padding-left: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl80></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl80?: ResponsiveBoolean
+    /**
+     * set padding-left to 384
+     * ```css
+     * {
+     *   padding-left: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pl96></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+     */
+    pl96?: ResponsiveBoolean
   }
 }

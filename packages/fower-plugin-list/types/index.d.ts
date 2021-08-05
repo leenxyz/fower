@@ -1,5 +1,4 @@
-import { FowerPlugin } from '@fower/core'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
@@ -7,32 +6,42 @@ declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
      * Set list-style-type to none
-     *
+     * ```css
+     * { list-style-type: none; }
+     * ```
      * @example
      * ```tsx
      * <Box listNone></Box>
      * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
      */
-    listNone?: boolean
-
+    listNone?: ResponsiveBoolean
     /**
      * Set list-style-type to disc
-     *
+     * ```css
+     * { list-style-type: disc; }
+     * ```
      * @example
      * ```tsx
      * <Box listDisc></Box>
      * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
      */
-    listDisc?: boolean
-
+    listDisc?: ResponsiveBoolean
     /**
      * Set list-style-type to decimal
-     *
+     * ```css
+     * { list-style-type: decimal; }
+     * ```
      * @example
      * ```tsx
      * <Box listDecimal></Box>
      * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
      */
-    listDecimal?: boolean
+    listDecimal?: ResponsiveBoolean
   }
 }

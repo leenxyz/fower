@@ -1,150 +1,191 @@
-import { FowerPlugin, PropValue } from '@fower/core'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set textSize to any size
-     *
+     * set font-size to some value
+     * ```css
+     * { font-size: $value;}
+     * ```
      * @example
      * ```tsx
-     * <Box text-14></Box>
-     * <Box text={14}></Box>
-     * <Box text="1.5rem"></Box>
+     * <Box text={16}></Box>
+     * <Box text={20}></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text?: PropValue
-
+    text?: ResponsiveValue<string | number>
     /**
-     * Set textSize to xs, default is 12px
-     *
+     * set font-size to xs, default is 12px
+     * ```css
+     * { font-size: 12px;}
+     * ```
      * @example
      * ```tsx
      * <Box textXS></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    textXS?: boolean
-
+    textXS?: ResponsiveBoolean
     /**
-     * Set textSize to sm, default is 14px
-     *
+     * set font-size to sm, default is 14px
+     * ```css
+     * { font-size: 14px;}
+     * ```
      * @example
      * ```tsx
      * <Box textSM></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    textSM?: boolean
-
+    textSM?: ResponsiveBoolean
     /**
-     * Set textSize to base, default is 16px
-     *
+     * set font-size to base, default is 16px
+     * ```css
+     * { font-size: 16px;}
+     * ```
      * @example
      * ```tsx
      * <Box textBase></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    textBase?: boolean
-
+    textBase?: ResponsiveBoolean
     /**
-     * Set textSize to lg, default is 18px
-     *
+     * set font-size to lg, default is 18px
+     * ```css
+     * { font-size: 18px;}
+     * ```
      * @example
      * ```tsx
      * <Box textLG></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    textLG?: boolean
-
+    textLG?: ResponsiveBoolean
     /**
-     * Set textSize to xl, default is 20px
-     *
+     * set font-size to xl, default is 20px
+     * ```css
+     * { font-size: 20px;}
+     * ```
      * @example
      * ```tsx
      * <Box textXL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    textXL?: boolean
-
+    textXL?: ResponsiveBoolean
     /**
-     * Set textSize to 2xl, default is 24px
-     *
+     * set font-size to 2xl, default is 24px
+     * ```css
+     * { font-size: 24px;}
+     * ```
      * @example
      * ```tsx
      * <Box text2XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text2XL?: boolean
-
+    text2XL?: ResponsiveBoolean
     /**
-     * Set textSize to 3xl, default is 30px
-     *
+     * set font-size to 3xl, default is 30px
+     * ```css
+     * { font-size: 30px;}
+     * ```
      * @example
      * ```tsx
      * <Box text3XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text3XL?: boolean
-
+    text3XL?: ResponsiveBoolean
     /**
-     * Set textSize to 4xl, default is 36px
-     *
+     * set font-size to 4xl, default is 36px
+     * ```css
+     * { font-size: 36px;}
+     * ```
      * @example
      * ```tsx
      * <Box text4XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text4XL?: boolean
-
+    text4XL?: ResponsiveBoolean
     /**
-     * Set textSize to 5xl, default is 48px
-     *
+     * set font-size to 5xl, default is 48px
+     * ```css
+     * { font-size: 48px;}
+     * ```
      * @example
      * ```tsx
-     * <Box text5XL</Box>
+     * <Box text5XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text5XL?: boolean
-
+    text5XL?: ResponsiveBoolean
     /**
-     * Set textSize to 6xl, default is 60px
-     *
+     * set font-size to 6xl, default is 60px
+     * ```css
+     * { font-size: 60px;}
+     * ```
      * @example
      * ```tsx
      * <Box text6XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text6XL?: boolean
-
+    text6XL?: ResponsiveBoolean
     /**
-     * Set textSize to 7xl, default is 72px
-     *
+     * set font-size to 7xl, default is 72px
+     * ```css
+     * { font-size: 72px;}
+     * ```
      * @example
      * ```tsx
      * <Box text7XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text7XL?: boolean
-
+    text7XL?: ResponsiveBoolean
     /**
-     * Set textSize 8xl lg, default is 96px
-     *
+     * set font-size to 8xl, default is 96px
+     * ```css
+     * { font-size: 96px;}
+     * ```
      * @example
      * ```tsx
      * <Box text8XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text8XL?: boolean
-
+    text8XL?: ResponsiveBoolean
     /**
-     * Set textSize to 9xl, default is 128px
-     *
+     * set font-size to 9xl, default is 128px
+     * ```css
+     * { font-size: 128px;}
+     * ```
      * @example
      * ```tsx
      * <Box text9XL></Box>
      * ```
+     * @see https://fower.vercel.app/docs/font-size
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
      */
-    text9XL?: boolean
+    text9XL?: ResponsiveBoolean
   }
 }

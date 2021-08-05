@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveBoolean } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -18,7 +18,7 @@ declare module '@fower/atomic-props' {
      * <Box animateNone></Box>
      * ```
      */
-    animateNone?: boolean
+    animateNone?: ResponsiveBoolean
 
     /**
      * animate spin
@@ -34,7 +34,7 @@ declare module '@fower/atomic-props' {
      * <Box animateSpin></Box>
      * ```
      */
-    animateSpin?: boolean
+    animateSpin?: ResponsiveBoolean
 
     /**
      * animate ping
@@ -50,26 +50,38 @@ declare module '@fower/atomic-props' {
      * <Box animatePing></Box>
      * ```
      */
-    animatePing?: boolean
+    animatePing?: ResponsiveBoolean
 
     /**
      * animate Pulse
+     *
+     * ```css
+     * {
+     *   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+     * }
+     * ```
      *
      * @example
      * ```tsx
      * <Box animatePulse></Box>
      * ```
      */
-    animatePulse?: boolean
+    animatePulse?: ResponsiveBoolean
 
     /**
      * animate Bounce
+     *
+     * ```css
+     * {
+     *   animation: bounce 1s infinite;
+     * }
+     * ```
      *
      * @example
      * ```tsx
      * <Box animateBounce></Box>
      * ```
      */
-    animateBounce?: boolean
+    animateBounce?: ResponsiveBoolean
   }
 }

@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -16,7 +16,7 @@ declare module '@fower/atomic-props' {
      * <Box gap={10}></Box>
      * ```
      */
-    gap?: number | boolean
+    gap?: ResponsiveValue<number>
 
     /**
      * Set grid column gap
@@ -29,7 +29,7 @@ declare module '@fower/atomic-props' {
      * <Box columnGap={10}></Box>
      * ```
      */
-    columnGap?: number | boolean
+    columnGap?: ResponsiveValue<number>
 
     /**
      * Set grid row gap
@@ -42,7 +42,7 @@ declare module '@fower/atomic-props' {
      * <Box rowGap={10}></Box>
      * ```
      */
-    rowGap?: number | boolean
+    rowGap?: ResponsiveValue<number>
 
     /**
      * Set gridTemplateColumns
@@ -52,6 +52,6 @@ declare module '@fower/atomic-props' {
      * <Box gridTemplateColumns-4></Box>
      * ```
      */
-    gridTemplateColumns?: number | boolean
+    gridTemplateColumns?: ResponsiveValue<number>
   }
 }

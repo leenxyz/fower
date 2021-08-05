@@ -6,11 +6,9 @@ export default () => {
       <Box
         as="svg"
         fillNone
-        // fillCurrent
-        // stroke="currentColor"
+        fillCurrent
         gray800
         square10
-        stroke-1
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >

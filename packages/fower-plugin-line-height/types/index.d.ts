@@ -1,91 +1,101 @@
-import { FowerPlugin, PropValue } from '@fower/core'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
+import * as CSS from 'csstype'
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set lineHeight
-     *
+     * set line-height to some value
+     * ```css
+     * { line-height: $value;}
+     * ```
      * @example
      * ```tsx
-     * <Box leading-10></Box>
-     * <Box leading="10px"></Box>
+     * <Box leading={1.5}></Box>
+     * <Box leading={2}></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leading?: PropValue
-
+    leading?: ResponsiveValue<CSS.Property.LineHeight>
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to none
+     * ```css
+     * { line-height: 1;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingNone></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingNone?: boolean
-
+    leadingNone?: ResponsiveBoolean
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to tight
+     * ```css
+     * { line-height: 1.25;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingTight></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingTight?: boolean
-
+    leadingTight?: ResponsiveBoolean
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to snug
+     * ```css
+     * { line-height: 1.375;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingSnug></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingSnug?: boolean
-
+    leadingSnug?: ResponsiveBoolean
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to normal
+     * ```css
+     * { line-height: 1.5;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingNormal></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingNormal?: boolean
-
+    leadingNormal?: ResponsiveBoolean
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to relaxed
+     * ```css
+     * { line-height: 1.625;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingRelaxed></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingRelaxed?: boolean
-
+    leadingRelaxed?: ResponsiveBoolean
     /**
-     * Set lineHeight
-     *
-     * NOTE: Theme restrict.
-     *
+     * set line-height to loose
+     * ```css
+     * { line-height: 2;}
+     * ```
      * @example
      * ```tsx
      * <Box leadingLoose></Box>
      * ```
+     * @see https://fower.vercel.app/docs/line-height
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
      */
-    leadingLoose?: boolean
+    leadingLoose?: ResponsiveBoolean
   }
 }

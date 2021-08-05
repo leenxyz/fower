@@ -1,91 +1,107 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 import * as CSS from 'csstype'
-
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set display
-     *
+     * Set display to some value
+     * ```css
+     * { display: $value }
+     * ```
      * @example
-     * ```tsx
+     * ```
      * <Box display="block"></Box>
      * <Box display="flex"></Box>
      * <Box display="inline-block"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    display?: CSS.Property.Display
-
+    display?: ResponsiveValue<CSS.Property.Display>
     /**
      * Set display to inline
-     *
+     * ```css
+     * { display: inline; }
+     * ```
      * @example
      * ```tsx
      * <Box inline></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    inline?: boolean
-
+    inline?: ResponsiveBoolean
     /**
      * Set display to inline-block
-     *
+     * ```css
+     * { display: inline-block; }
+     * ```
      * @example
      * ```tsx
      * <Box inlineBlock></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    inlineBlock?: boolean
-
+    inlineBlock?: ResponsiveBoolean
     /**
      * Set display to inline-flex
-     *
+     * ```css
+     * { display: inline-flex; }
+     * ```
      * @example
      * ```tsx
      * <Box inlineFlex></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    inlineFlex?: boolean
-
+    inlineFlex?: ResponsiveBoolean
     /**
      * Set display to block
-     *
+     * ```css
+     * { display: block; }
+     * ```
      * @example
      * ```tsx
      * <Box block></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    block?: boolean
-
+    block?: ResponsiveBoolean
     /**
      * Set display to grid
-     *
+     * ```css
+     * { display: grid; }
+     * ```
      * @example
      * ```tsx
      * <Box grid></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    grid?: boolean
-
-    /**
-     * Set display to none
-     *
-     * @example
-     * ```tsx
-     * <Box hidden></Box>
-     * ```
-     */
-    hidden?: boolean
-
+    grid?: ResponsiveBoolean
     /**
      * Set display to table
-     *
+     * ```css
+     * { display: table; }
+     * ```
      * @example
      * ```tsx
      * <Box table></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
-    table?: boolean
+    table?: ResponsiveBoolean
+    /**
+     * Set display to none
+     * ```css
+     * { display: none; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box hidden></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     */
+    hidden?: ResponsiveBoolean
   }
 }

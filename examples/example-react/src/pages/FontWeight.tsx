@@ -7,7 +7,7 @@ export default () => {
         <Box fontHairline>Lorem ipsum dolor sit amet</Box>
         <Box fontThin>Lorem ipsum dolor sit amet</Box>
         <Box fontLight>Lorem ipsum dolor sit amet</Box>
-        <Box fontNormal>Lorem ipsum dolor sit amet</Box>
+        <Box fontBlack>Lorem ipsum dolor sit amet</Box>
         <Box fontMedium>Lorem ipsum dolor sit amet</Box>
         <Box fontSemibold>Lorem ipsum dolor sit amet</Box>
         <Box fontBold>Lorem ipsum dolor sit amet</Box>

@@ -24,17 +24,20 @@ export default () => {
       </Box>
 
       <Box toEvenly mb6 bgGray100>
-        <Box toCenter p4 bgOrange200 borderT-2 borderOrange500>
-          borderT-2
+        <Box toCenter p4 bgOrange200 borderTop borderOrange500>
+          borderTop
         </Box>
-        <Box toCenter p4 bgOrange200 borderR-2 borderOrange500>
-          borderR-2
+        <Box toCenter p4 bgOrange200 borderTop-2 borderOrange500>
+          borderTop-2
         </Box>
-        <Box toCenter p4 bgOrange200 borderB-2 borderOrange500>
-          borderB-2
+        <Box toCenter p4 bgOrange200 borderRight-2 borderOrange500>
+          borderRight-2
         </Box>
-        <Box toCenter p4 bgOrange200 borderL-2 borderOrange500>
-          borderL-2
+        <Box toCenter p4 bgOrange200 borderBottom-2 borderOrange500>
+          borderBottom-2
+        </Box>
+        <Box toCenter p4 bgOrange200 borderLeft-2 borderOrange500>
+          borderLeft-2
         </Box>
       </Box>
 
@@ -57,6 +60,9 @@ export default () => {
       </Box>
 
       <Box toEvenly mb6 bgGray100>
+        <Box toCenter p4 border-2 borderColor="red400">
+          borderColor
+        </Box>
         <Box toCenter p4 border-2 borderPurple500>
           borderPurple500
         </Box>

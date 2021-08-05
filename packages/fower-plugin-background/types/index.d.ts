@@ -8,9 +8,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background
      * ```css
-     * {
-     *   background-color: $value;
-     * }
+     * { background-color: $value; }
      * ```
      * @example
      * ```
@@ -23,9 +21,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set backgroundImage
      * ```css
-     * {
-     *   background-image: $value;
-     * }
+     * { background-image: $value; }
      * ```
      * @example
      * ```
@@ -36,9 +32,7 @@ declare module '@fower/atomic-props' {
     /**
      *  Set backgroundPosition
      * ```css
-     * {
-     *   background-position: $value;
-     * }
+     * { background-position: $value; }
      * ```
      * @example
      * ```
@@ -49,9 +43,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set backgroundSize
      * ```css
-     * {
-     *   background-size: $value;
-     * }
+     * { background-size: $value; }
      * ```
      * @example
      * ```
@@ -62,9 +54,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set backgroundRepeat
      * ```css
-     * {
-     *   background-repeat: $value;
-     * }
+     * { background-repeat: $value; }
      * ```
      * @example
      * ```
@@ -74,9 +64,7 @@ declare module '@fower/atomic-props' {
     backgroundRepeat?: ResponsiveValue<CSS.Property.BackgroundRepeat>
     /**
      * ```css
-     * {
-     *   background-clip: $value;
-     * }
+     * { background-clip: $value; }
      * ```
      * @example
      * ```
@@ -86,9 +74,7 @@ declare module '@fower/atomic-props' {
     bgClip?: ResponsiveValue<CSS.Property.BackgroundClip>
     /**
      * ```css
-     * {
-     *   background-clip: border-box;
-     * }
+     * { background-clip: border-box; }
      * ```
      * @example
      * ```
@@ -98,9 +84,7 @@ declare module '@fower/atomic-props' {
     bgClipBorder?: ResponsiveBoolean
     /**
      * ```css
-     * {
-     *   background-clip: padding-box;
-     * }
+     * { background-clip: padding-box; }
      * ```
      * @example
      * ```
@@ -110,9 +94,7 @@ declare module '@fower/atomic-props' {
     bgClipPadding?: ResponsiveBoolean
     /**
      * ```css
-     * {
-     *   background-clip: content-box;
-     * }
+     * { background-clip: content-box; }
      * ```
      * @example
      * ```
@@ -122,9 +104,7 @@ declare module '@fower/atomic-props' {
     bgClipContent?: ResponsiveBoolean
     /**
      * ```css
-     * {
-     *   background-clip: text;
-     * }
+     * { background-clip: text; }
      * ```
      * @example
      * ```
@@ -135,12 +115,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to transparent
      * ```css
-     * {
-     *   background-color: transparent;
-     * }
+     * { background-color: transparent; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTransparent></Box>
      * ```
      */
@@ -148,12 +126,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to white
      * ```css
-     * {
-     *   background-color: #ffffff;
-     * }
+     * { background-color: #ffffff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgWhite></Box>
      * ```
      */
@@ -161,12 +137,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to black
      * ```css
-     * {
-     *   background-color: #000;
-     * }
+     * { background-color: #000; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlack></Box>
      * ```
      */
@@ -174,12 +148,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand
      * ```css
-     * {
-     *   background-color: #20c997;
-     * }
+     * { background-color: #20c997; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand></Box>
      * ```
      */
@@ -187,12 +159,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand50
      * ```css
-     * {
-     *   background-color: #e6fcf5;
-     * }
+     * { background-color: #e6fcf5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand50></Box>
      * ```
      */
@@ -200,12 +170,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand100
      * ```css
-     * {
-     *   background-color: #c3fae8;
-     * }
+     * { background-color: #c3fae8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand100></Box>
      * ```
      */
@@ -213,12 +181,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand200
      * ```css
-     * {
-     *   background-color: #96f2d7;
-     * }
+     * { background-color: #96f2d7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand200></Box>
      * ```
      */
@@ -226,12 +192,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand300
      * ```css
-     * {
-     *   background-color: #63e6be;
-     * }
+     * { background-color: #63e6be; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand300></Box>
      * ```
      */
@@ -239,12 +203,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand400
      * ```css
-     * {
-     *   background-color: #38d9a9;
-     * }
+     * { background-color: #38d9a9; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand400></Box>
      * ```
      */
@@ -252,12 +214,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand500
      * ```css
-     * {
-     *   background-color: #20c997;
-     * }
+     * { background-color: #20c997; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand500></Box>
      * ```
      */
@@ -265,12 +225,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand600
      * ```css
-     * {
-     *   background-color: #12b886;
-     * }
+     * { background-color: #12b886; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand600></Box>
      * ```
      */
@@ -278,12 +236,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand700
      * ```css
-     * {
-     *   background-color: #0ca678;
-     * }
+     * { background-color: #0ca678; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand700></Box>
      * ```
      */
@@ -291,12 +247,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand800
      * ```css
-     * {
-     *   background-color: #099268;
-     * }
+     * { background-color: #099268; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand800></Box>
      * ```
      */
@@ -304,12 +258,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand900
      * ```css
-     * {
-     *   background-color: #087f5b;
-     * }
+     * { background-color: #087f5b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBrand900></Box>
      * ```
      */
@@ -317,12 +269,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink50
      * ```css
-     * {
-     *   background-color: #fff0f6;
-     * }
+     * { background-color: #fff0f6; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink50></Box>
      * ```
      */
@@ -330,12 +280,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink100
      * ```css
-     * {
-     *   background-color: #ffdeeb;
-     * }
+     * { background-color: #ffdeeb; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink100></Box>
      * ```
      */
@@ -343,12 +291,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink200
      * ```css
-     * {
-     *   background-color: #fcc2d7;
-     * }
+     * { background-color: #fcc2d7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink200></Box>
      * ```
      */
@@ -356,12 +302,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink300
      * ```css
-     * {
-     *   background-color: #faa2c1;
-     * }
+     * { background-color: #faa2c1; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink300></Box>
      * ```
      */
@@ -369,12 +313,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink400
      * ```css
-     * {
-     *   background-color: #f783ac;
-     * }
+     * { background-color: #f783ac; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink400></Box>
      * ```
      */
@@ -382,12 +324,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink500
      * ```css
-     * {
-     *   background-color: #f06595;
-     * }
+     * { background-color: #f06595; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink500></Box>
      * ```
      */
@@ -395,12 +335,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink600
      * ```css
-     * {
-     *   background-color: #e64980;
-     * }
+     * { background-color: #e64980; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink600></Box>
      * ```
      */
@@ -408,12 +346,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink700
      * ```css
-     * {
-     *   background-color: #d6336c;
-     * }
+     * { background-color: #d6336c; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink700></Box>
      * ```
      */
@@ -421,12 +357,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink800
      * ```css
-     * {
-     *   background-color: #c2255c;
-     * }
+     * { background-color: #c2255c; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink800></Box>
      * ```
      */
@@ -434,12 +368,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink900
      * ```css
-     * {
-     *   background-color: #a61e4d;
-     * }
+     * { background-color: #a61e4d; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPink900></Box>
      * ```
      */
@@ -447,12 +379,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia50
      * ```css
-     * {
-     *   background-color: #f8f0fc;
-     * }
+     * { background-color: #f8f0fc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia50></Box>
      * ```
      */
@@ -460,12 +390,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia100
      * ```css
-     * {
-     *   background-color: #f3d9fa;
-     * }
+     * { background-color: #f3d9fa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia100></Box>
      * ```
      */
@@ -473,12 +401,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia200
      * ```css
-     * {
-     *   background-color: #eebefa;
-     * }
+     * { background-color: #eebefa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia200></Box>
      * ```
      */
@@ -486,12 +412,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia300
      * ```css
-     * {
-     *   background-color: #e599f7;
-     * }
+     * { background-color: #e599f7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia300></Box>
      * ```
      */
@@ -499,12 +423,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia400
      * ```css
-     * {
-     *   background-color: #da77f2;
-     * }
+     * { background-color: #da77f2; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia400></Box>
      * ```
      */
@@ -512,12 +434,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia500
      * ```css
-     * {
-     *   background-color: #cc5de8;
-     * }
+     * { background-color: #cc5de8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia500></Box>
      * ```
      */
@@ -525,12 +445,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia600
      * ```css
-     * {
-     *   background-color: #be4bdb;
-     * }
+     * { background-color: #be4bdb; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia600></Box>
      * ```
      */
@@ -538,12 +456,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia700
      * ```css
-     * {
-     *   background-color: #ae3ec9;
-     * }
+     * { background-color: #ae3ec9; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia700></Box>
      * ```
      */
@@ -551,12 +467,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia800
      * ```css
-     * {
-     *   background-color: #9c36b5;
-     * }
+     * { background-color: #9c36b5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia800></Box>
      * ```
      */
@@ -564,12 +478,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia900
      * ```css
-     * {
-     *   background-color: #862e9c;
-     * }
+     * { background-color: #862e9c; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgFuchsia900></Box>
      * ```
      */
@@ -577,12 +489,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple50
      * ```css
-     * {
-     *   background-color: #faf5ff;
-     * }
+     * { background-color: #faf5ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple50></Box>
      * ```
      */
@@ -590,12 +500,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple100
      * ```css
-     * {
-     *   background-color: #f3e8ff;
-     * }
+     * { background-color: #f3e8ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple100></Box>
      * ```
      */
@@ -603,12 +511,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple200
      * ```css
-     * {
-     *   background-color: #e9d5ff;
-     * }
+     * { background-color: #e9d5ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple200></Box>
      * ```
      */
@@ -616,12 +522,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple300
      * ```css
-     * {
-     *   background-color: #d8b4fe;
-     * }
+     * { background-color: #d8b4fe; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple300></Box>
      * ```
      */
@@ -629,12 +533,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple400
      * ```css
-     * {
-     *   background-color: #c084fc;
-     * }
+     * { background-color: #c084fc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple400></Box>
      * ```
      */
@@ -642,12 +544,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple500
      * ```css
-     * {
-     *   background-color: #a855f7;
-     * }
+     * { background-color: #a855f7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple500></Box>
      * ```
      */
@@ -655,12 +555,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple600
      * ```css
-     * {
-     *   background-color: #9333ea;
-     * }
+     * { background-color: #9333ea; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple600></Box>
      * ```
      */
@@ -668,12 +566,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple700
      * ```css
-     * {
-     *   background-color: #7e22ce;
-     * }
+     * { background-color: #7e22ce; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple700></Box>
      * ```
      */
@@ -681,12 +577,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple800
      * ```css
-     * {
-     *   background-color: #6b21a8;
-     * }
+     * { background-color: #6b21a8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple800></Box>
      * ```
      */
@@ -694,12 +588,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to purple900
      * ```css
-     * {
-     *   background-color: #581c87;
-     * }
+     * { background-color: #581c87; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgPurple900></Box>
      * ```
      */
@@ -707,12 +599,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet50
      * ```css
-     * {
-     *   background-color: #f3f0ff;
-     * }
+     * { background-color: #f3f0ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet50></Box>
      * ```
      */
@@ -720,12 +610,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet100
      * ```css
-     * {
-     *   background-color: #e5dbff;
-     * }
+     * { background-color: #e5dbff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet100></Box>
      * ```
      */
@@ -733,12 +621,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet200
      * ```css
-     * {
-     *   background-color: #d0bfff;
-     * }
+     * { background-color: #d0bfff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet200></Box>
      * ```
      */
@@ -746,12 +632,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet300
      * ```css
-     * {
-     *   background-color: #b197fc;
-     * }
+     * { background-color: #b197fc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet300></Box>
      * ```
      */
@@ -759,12 +643,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet400
      * ```css
-     * {
-     *   background-color: #9775fa;
-     * }
+     * { background-color: #9775fa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet400></Box>
      * ```
      */
@@ -772,12 +654,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet500
      * ```css
-     * {
-     *   background-color: #845ef7;
-     * }
+     * { background-color: #845ef7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet500></Box>
      * ```
      */
@@ -785,12 +665,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet600
      * ```css
-     * {
-     *   background-color: #7950f2;
-     * }
+     * { background-color: #7950f2; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet600></Box>
      * ```
      */
@@ -798,12 +676,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet700
      * ```css
-     * {
-     *   background-color: #7048e8;
-     * }
+     * { background-color: #7048e8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet700></Box>
      * ```
      */
@@ -811,12 +687,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet800
      * ```css
-     * {
-     *   background-color: #6741d9;
-     * }
+     * { background-color: #6741d9; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet800></Box>
      * ```
      */
@@ -824,12 +698,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet900
      * ```css
-     * {
-     *   background-color: #5f3dc4;
-     * }
+     * { background-color: #5f3dc4; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgViolet900></Box>
      * ```
      */
@@ -837,12 +709,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo50
      * ```css
-     * {
-     *   background-color: #edf2ff;
-     * }
+     * { background-color: #edf2ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo50></Box>
      * ```
      */
@@ -850,12 +720,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo100
      * ```css
-     * {
-     *   background-color: #dbe4ff;
-     * }
+     * { background-color: #dbe4ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo100></Box>
      * ```
      */
@@ -863,12 +731,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo200
      * ```css
-     * {
-     *   background-color: #bac8ff;
-     * }
+     * { background-color: #bac8ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo200></Box>
      * ```
      */
@@ -876,12 +742,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo300
      * ```css
-     * {
-     *   background-color: #91a7ff;
-     * }
+     * { background-color: #91a7ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo300></Box>
      * ```
      */
@@ -889,12 +753,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo400
      * ```css
-     * {
-     *   background-color: #748ffc;
-     * }
+     * { background-color: #748ffc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo400></Box>
      * ```
      */
@@ -902,12 +764,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo500
      * ```css
-     * {
-     *   background-color: #5c7cfa;
-     * }
+     * { background-color: #5c7cfa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo500></Box>
      * ```
      */
@@ -915,12 +775,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo600
      * ```css
-     * {
-     *   background-color: #4c6ef5;
-     * }
+     * { background-color: #4c6ef5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo600></Box>
      * ```
      */
@@ -928,12 +786,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo700
      * ```css
-     * {
-     *   background-color: #4263eb;
-     * }
+     * { background-color: #4263eb; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo700></Box>
      * ```
      */
@@ -941,12 +797,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo800
      * ```css
-     * {
-     *   background-color: #3b5bdb;
-     * }
+     * { background-color: #3b5bdb; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo800></Box>
      * ```
      */
@@ -954,12 +808,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo900
      * ```css
-     * {
-     *   background-color: #364fc7;
-     * }
+     * { background-color: #364fc7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgIndigo900></Box>
      * ```
      */
@@ -967,12 +819,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue50
      * ```css
-     * {
-     *   background-color: #e7f5ff;
-     * }
+     * { background-color: #e7f5ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue50></Box>
      * ```
      */
@@ -980,12 +830,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue100
      * ```css
-     * {
-     *   background-color: #d0ebff;
-     * }
+     * { background-color: #d0ebff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue100></Box>
      * ```
      */
@@ -993,12 +841,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue200
      * ```css
-     * {
-     *   background-color: #a5d8ff;
-     * }
+     * { background-color: #a5d8ff; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue200></Box>
      * ```
      */
@@ -1006,12 +852,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue300
      * ```css
-     * {
-     *   background-color: #74c0fc;
-     * }
+     * { background-color: #74c0fc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue300></Box>
      * ```
      */
@@ -1019,12 +863,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue400
      * ```css
-     * {
-     *   background-color: #4dabf7;
-     * }
+     * { background-color: #4dabf7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue400></Box>
      * ```
      */
@@ -1032,12 +874,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue500
      * ```css
-     * {
-     *   background-color: #339af0;
-     * }
+     * { background-color: #339af0; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue500></Box>
      * ```
      */
@@ -1045,12 +885,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue600
      * ```css
-     * {
-     *   background-color: #228be6;
-     * }
+     * { background-color: #228be6; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue600></Box>
      * ```
      */
@@ -1058,12 +896,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue700
      * ```css
-     * {
-     *   background-color: #1c7ed6;
-     * }
+     * { background-color: #1c7ed6; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue700></Box>
      * ```
      */
@@ -1071,12 +907,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue800
      * ```css
-     * {
-     *   background-color: #1971c2;
-     * }
+     * { background-color: #1971c2; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue800></Box>
      * ```
      */
@@ -1084,12 +918,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue900
      * ```css
-     * {
-     *   background-color: #1864ab;
-     * }
+     * { background-color: #1864ab; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgBlue900></Box>
      * ```
      */
@@ -1097,12 +929,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan50
      * ```css
-     * {
-     *   background-color: #e3fafc;
-     * }
+     * { background-color: #e3fafc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan50></Box>
      * ```
      */
@@ -1110,12 +940,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan100
      * ```css
-     * {
-     *   background-color: #c5f6fa;
-     * }
+     * { background-color: #c5f6fa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan100></Box>
      * ```
      */
@@ -1123,12 +951,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan200
      * ```css
-     * {
-     *   background-color: #99e9f2;
-     * }
+     * { background-color: #99e9f2; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan200></Box>
      * ```
      */
@@ -1136,12 +962,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan300
      * ```css
-     * {
-     *   background-color: #66d9e8;
-     * }
+     * { background-color: #66d9e8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan300></Box>
      * ```
      */
@@ -1149,12 +973,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan400
      * ```css
-     * {
-     *   background-color: #3bc9db;
-     * }
+     * { background-color: #3bc9db; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan400></Box>
      * ```
      */
@@ -1162,12 +984,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan500
      * ```css
-     * {
-     *   background-color: #22b8cf;
-     * }
+     * { background-color: #22b8cf; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan500></Box>
      * ```
      */
@@ -1175,12 +995,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan600
      * ```css
-     * {
-     *   background-color: #15aabf;
-     * }
+     * { background-color: #15aabf; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan600></Box>
      * ```
      */
@@ -1188,12 +1006,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan700
      * ```css
-     * {
-     *   background-color: #1098ad;
-     * }
+     * { background-color: #1098ad; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan700></Box>
      * ```
      */
@@ -1201,12 +1017,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan800
      * ```css
-     * {
-     *   background-color: #0c8599;
-     * }
+     * { background-color: #0c8599; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan800></Box>
      * ```
      */
@@ -1214,12 +1028,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan900
      * ```css
-     * {
-     *   background-color: #0b7285;
-     * }
+     * { background-color: #0b7285; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgCyan900></Box>
      * ```
      */
@@ -1227,12 +1039,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal50
      * ```css
-     * {
-     *   background-color: #e6fcf5;
-     * }
+     * { background-color: #e6fcf5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal50></Box>
      * ```
      */
@@ -1240,12 +1050,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal100
      * ```css
-     * {
-     *   background-color: #c3fae8;
-     * }
+     * { background-color: #c3fae8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal100></Box>
      * ```
      */
@@ -1253,12 +1061,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal200
      * ```css
-     * {
-     *   background-color: #96f2d7;
-     * }
+     * { background-color: #96f2d7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal200></Box>
      * ```
      */
@@ -1266,12 +1072,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal300
      * ```css
-     * {
-     *   background-color: #63e6be;
-     * }
+     * { background-color: #63e6be; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal300></Box>
      * ```
      */
@@ -1279,12 +1083,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal400
      * ```css
-     * {
-     *   background-color: #38d9a9;
-     * }
+     * { background-color: #38d9a9; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal400></Box>
      * ```
      */
@@ -1292,12 +1094,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal500
      * ```css
-     * {
-     *   background-color: #20c997;
-     * }
+     * { background-color: #20c997; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal500></Box>
      * ```
      */
@@ -1305,12 +1105,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal600
      * ```css
-     * {
-     *   background-color: #12b886;
-     * }
+     * { background-color: #12b886; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal600></Box>
      * ```
      */
@@ -1318,12 +1116,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal700
      * ```css
-     * {
-     *   background-color: #0ca678;
-     * }
+     * { background-color: #0ca678; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal700></Box>
      * ```
      */
@@ -1331,12 +1127,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal800
      * ```css
-     * {
-     *   background-color: #099268;
-     * }
+     * { background-color: #099268; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal800></Box>
      * ```
      */
@@ -1344,12 +1138,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal900
      * ```css
-     * {
-     *   background-color: #087f5b;
-     * }
+     * { background-color: #087f5b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTeal900></Box>
      * ```
      */
@@ -1357,12 +1149,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green50
      * ```css
-     * {
-     *   background-color: #ebfbee;
-     * }
+     * { background-color: #ebfbee; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen50></Box>
      * ```
      */
@@ -1370,12 +1160,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green100
      * ```css
-     * {
-     *   background-color: #d3f9d8;
-     * }
+     * { background-color: #d3f9d8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen100></Box>
      * ```
      */
@@ -1383,12 +1171,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green200
      * ```css
-     * {
-     *   background-color: #b2f2bb;
-     * }
+     * { background-color: #b2f2bb; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen200></Box>
      * ```
      */
@@ -1396,12 +1182,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green300
      * ```css
-     * {
-     *   background-color: #8ce99a;
-     * }
+     * { background-color: #8ce99a; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen300></Box>
      * ```
      */
@@ -1409,12 +1193,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green400
      * ```css
-     * {
-     *   background-color: #69db7c;
-     * }
+     * { background-color: #69db7c; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen400></Box>
      * ```
      */
@@ -1422,12 +1204,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green500
      * ```css
-     * {
-     *   background-color: #51cf66;
-     * }
+     * { background-color: #51cf66; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen500></Box>
      * ```
      */
@@ -1435,12 +1215,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green600
      * ```css
-     * {
-     *   background-color: #40c057;
-     * }
+     * { background-color: #40c057; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen600></Box>
      * ```
      */
@@ -1448,12 +1226,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green700
      * ```css
-     * {
-     *   background-color: #37b24d;
-     * }
+     * { background-color: #37b24d; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen700></Box>
      * ```
      */
@@ -1461,12 +1237,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green800
      * ```css
-     * {
-     *   background-color: #2f9e44;
-     * }
+     * { background-color: #2f9e44; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen800></Box>
      * ```
      */
@@ -1474,12 +1248,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green900
      * ```css
-     * {
-     *   background-color: #2b8a3e;
-     * }
+     * { background-color: #2b8a3e; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGreen900></Box>
      * ```
      */
@@ -1487,12 +1259,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime50
      * ```css
-     * {
-     *   background-color: #f4fce3;
-     * }
+     * { background-color: #f4fce3; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime50></Box>
      * ```
      */
@@ -1500,12 +1270,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime100
      * ```css
-     * {
-     *   background-color: #e9fac8;
-     * }
+     * { background-color: #e9fac8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime100></Box>
      * ```
      */
@@ -1513,12 +1281,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime200
      * ```css
-     * {
-     *   background-color: #d8f5a2;
-     * }
+     * { background-color: #d8f5a2; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime200></Box>
      * ```
      */
@@ -1526,12 +1292,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime300
      * ```css
-     * {
-     *   background-color: #c0eb75;
-     * }
+     * { background-color: #c0eb75; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime300></Box>
      * ```
      */
@@ -1539,12 +1303,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime400
      * ```css
-     * {
-     *   background-color: #a9e34b;
-     * }
+     * { background-color: #a9e34b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime400></Box>
      * ```
      */
@@ -1552,12 +1314,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime500
      * ```css
-     * {
-     *   background-color: #94d82d;
-     * }
+     * { background-color: #94d82d; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime500></Box>
      * ```
      */
@@ -1565,12 +1325,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime600
      * ```css
-     * {
-     *   background-color: #82c91e;
-     * }
+     * { background-color: #82c91e; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime600></Box>
      * ```
      */
@@ -1578,12 +1336,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime700
      * ```css
-     * {
-     *   background-color: #74b816;
-     * }
+     * { background-color: #74b816; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime700></Box>
      * ```
      */
@@ -1591,12 +1347,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime800
      * ```css
-     * {
-     *   background-color: #66a80f;
-     * }
+     * { background-color: #66a80f; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime800></Box>
      * ```
      */
@@ -1604,12 +1358,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime900
      * ```css
-     * {
-     *   background-color: #5c940d;
-     * }
+     * { background-color: #5c940d; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgLime900></Box>
      * ```
      */
@@ -1617,12 +1369,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow50
      * ```css
-     * {
-     *   background-color: #fff9db;
-     * }
+     * { background-color: #fff9db; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow50></Box>
      * ```
      */
@@ -1630,12 +1380,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow100
      * ```css
-     * {
-     *   background-color: #fff3bf;
-     * }
+     * { background-color: #fff3bf; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow100></Box>
      * ```
      */
@@ -1643,12 +1391,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow200
      * ```css
-     * {
-     *   background-color: #ffec99;
-     * }
+     * { background-color: #ffec99; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow200></Box>
      * ```
      */
@@ -1656,12 +1402,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow300
      * ```css
-     * {
-     *   background-color: #ffe066;
-     * }
+     * { background-color: #ffe066; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow300></Box>
      * ```
      */
@@ -1669,12 +1413,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow400
      * ```css
-     * {
-     *   background-color: #ffd43b;
-     * }
+     * { background-color: #ffd43b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow400></Box>
      * ```
      */
@@ -1682,12 +1424,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow500
      * ```css
-     * {
-     *   background-color: #fcc419;
-     * }
+     * { background-color: #fcc419; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow500></Box>
      * ```
      */
@@ -1695,12 +1435,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow600
      * ```css
-     * {
-     *   background-color: #fab005;
-     * }
+     * { background-color: #fab005; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow600></Box>
      * ```
      */
@@ -1708,12 +1446,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow700
      * ```css
-     * {
-     *   background-color: #f59f00;
-     * }
+     * { background-color: #f59f00; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow700></Box>
      * ```
      */
@@ -1721,12 +1457,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow800
      * ```css
-     * {
-     *   background-color: #f08c00;
-     * }
+     * { background-color: #f08c00; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow800></Box>
      * ```
      */
@@ -1734,12 +1468,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow900
      * ```css
-     * {
-     *   background-color: #e67700;
-     * }
+     * { background-color: #e67700; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgYellow900></Box>
      * ```
      */
@@ -1747,12 +1479,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange50
      * ```css
-     * {
-     *   background-color: #fff4e6;
-     * }
+     * { background-color: #fff4e6; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange50></Box>
      * ```
      */
@@ -1760,12 +1490,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange100
      * ```css
-     * {
-     *   background-color: #ffe8cc;
-     * }
+     * { background-color: #ffe8cc; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange100></Box>
      * ```
      */
@@ -1773,12 +1501,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange200
      * ```css
-     * {
-     *   background-color: #ffd8a8;
-     * }
+     * { background-color: #ffd8a8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange200></Box>
      * ```
      */
@@ -1786,12 +1512,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange300
      * ```css
-     * {
-     *   background-color: #ffc078;
-     * }
+     * { background-color: #ffc078; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange300></Box>
      * ```
      */
@@ -1799,12 +1523,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange400
      * ```css
-     * {
-     *   background-color: #ffa94d;
-     * }
+     * { background-color: #ffa94d; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange400></Box>
      * ```
      */
@@ -1812,12 +1534,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange500
      * ```css
-     * {
-     *   background-color: #ff922b;
-     * }
+     * { background-color: #ff922b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange500></Box>
      * ```
      */
@@ -1825,12 +1545,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange600
      * ```css
-     * {
-     *   background-color: #fd7e14;
-     * }
+     * { background-color: #fd7e14; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange600></Box>
      * ```
      */
@@ -1838,12 +1556,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange700
      * ```css
-     * {
-     *   background-color: #f76707;
-     * }
+     * { background-color: #f76707; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange700></Box>
      * ```
      */
@@ -1851,12 +1567,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange800
      * ```css
-     * {
-     *   background-color: #e8590c;
-     * }
+     * { background-color: #e8590c; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange800></Box>
      * ```
      */
@@ -1864,12 +1578,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange900
      * ```css
-     * {
-     *   background-color: #d9480f;
-     * }
+     * { background-color: #d9480f; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgOrange900></Box>
      * ```
      */
@@ -1877,12 +1589,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red50
      * ```css
-     * {
-     *   background-color: #fff5f5;
-     * }
+     * { background-color: #fff5f5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed50></Box>
      * ```
      */
@@ -1890,12 +1600,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red100
      * ```css
-     * {
-     *   background-color: #ffe3e3;
-     * }
+     * { background-color: #ffe3e3; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed100></Box>
      * ```
      */
@@ -1903,12 +1611,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red200
      * ```css
-     * {
-     *   background-color: #ffc9c9;
-     * }
+     * { background-color: #ffc9c9; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed200></Box>
      * ```
      */
@@ -1916,12 +1622,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red300
      * ```css
-     * {
-     *   background-color: #ffa8a8;
-     * }
+     * { background-color: #ffa8a8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed300></Box>
      * ```
      */
@@ -1929,12 +1633,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red400
      * ```css
-     * {
-     *   background-color: #ff8787;
-     * }
+     * { background-color: #ff8787; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed400></Box>
      * ```
      */
@@ -1942,12 +1644,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red500
      * ```css
-     * {
-     *   background-color: #ff6b6b;
-     * }
+     * { background-color: #ff6b6b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed500></Box>
      * ```
      */
@@ -1955,12 +1655,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red600
      * ```css
-     * {
-     *   background-color: #fa5252;
-     * }
+     * { background-color: #fa5252; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed600></Box>
      * ```
      */
@@ -1968,12 +1666,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red700
      * ```css
-     * {
-     *   background-color: #f03e3e;
-     * }
+     * { background-color: #f03e3e; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed700></Box>
      * ```
      */
@@ -1981,12 +1677,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red800
      * ```css
-     * {
-     *   background-color: #e03131;
-     * }
+     * { background-color: #e03131; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed800></Box>
      * ```
      */
@@ -1994,12 +1688,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red900
      * ```css
-     * {
-     *   background-color: #c92a2a;
-     * }
+     * { background-color: #c92a2a; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgRed900></Box>
      * ```
      */
@@ -2007,12 +1699,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray50
      * ```css
-     * {
-     *   background-color: #fafafa;
-     * }
+     * { background-color: #fafafa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray50></Box>
      * ```
      */
@@ -2020,12 +1710,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray100
      * ```css
-     * {
-     *   background-color: #f5f5f5;
-     * }
+     * { background-color: #f5f5f5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray100></Box>
      * ```
      */
@@ -2033,12 +1721,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray200
      * ```css
-     * {
-     *   background-color: #e5e5e5;
-     * }
+     * { background-color: #e5e5e5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray200></Box>
      * ```
      */
@@ -2046,12 +1732,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray300
      * ```css
-     * {
-     *   background-color: #d4d4d4;
-     * }
+     * { background-color: #d4d4d4; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray300></Box>
      * ```
      */
@@ -2059,12 +1743,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray400
      * ```css
-     * {
-     *   background-color: #a3a3a3;
-     * }
+     * { background-color: #a3a3a3; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray400></Box>
      * ```
      */
@@ -2072,12 +1754,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray500
      * ```css
-     * {
-     *   background-color: #737373;
-     * }
+     * { background-color: #737373; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray500></Box>
      * ```
      */
@@ -2085,12 +1765,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray600
      * ```css
-     * {
-     *   background-color: #525252;
-     * }
+     * { background-color: #525252; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray600></Box>
      * ```
      */
@@ -2098,12 +1776,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray700
      * ```css
-     * {
-     *   background-color: #404040;
-     * }
+     * { background-color: #404040; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray700></Box>
      * ```
      */
@@ -2111,12 +1787,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray800
      * ```css
-     * {
-     *   background-color: #262626;
-     * }
+     * { background-color: #262626; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray800></Box>
      * ```
      */
@@ -2124,12 +1798,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to trueGray900
      * ```css
-     * {
-     *   background-color: #171717;
-     * }
+     * { background-color: #171717; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgTrueGray900></Box>
      * ```
      */
@@ -2137,12 +1809,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray50
      * ```css
-     * {
-     *   background-color: #fafafa;
-     * }
+     * { background-color: #fafafa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray50></Box>
      * ```
      */
@@ -2150,12 +1820,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray100
      * ```css
-     * {
-     *   background-color: #f4f4f5;
-     * }
+     * { background-color: #f4f4f5; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray100></Box>
      * ```
      */
@@ -2163,12 +1831,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray200
      * ```css
-     * {
-     *   background-color: #e4e4e7;
-     * }
+     * { background-color: #e4e4e7; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray200></Box>
      * ```
      */
@@ -2176,12 +1842,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray300
      * ```css
-     * {
-     *   background-color: #d4d4d8;
-     * }
+     * { background-color: #d4d4d8; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray300></Box>
      * ```
      */
@@ -2189,12 +1853,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray400
      * ```css
-     * {
-     *   background-color: #a1a1aa;
-     * }
+     * { background-color: #a1a1aa; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray400></Box>
      * ```
      */
@@ -2202,12 +1864,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray500
      * ```css
-     * {
-     *   background-color: #71717a;
-     * }
+     * { background-color: #71717a; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray500></Box>
      * ```
      */
@@ -2215,12 +1875,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray600
      * ```css
-     * {
-     *   background-color: #52525b;
-     * }
+     * { background-color: #52525b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray600></Box>
      * ```
      */
@@ -2228,12 +1886,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray700
      * ```css
-     * {
-     *   background-color: #3f3f46;
-     * }
+     * { background-color: #3f3f46; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray700></Box>
      * ```
      */
@@ -2241,12 +1897,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray800
      * ```css
-     * {
-     *   background-color: #27272a;
-     * }
+     * { background-color: #27272a; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray800></Box>
      * ```
      */
@@ -2254,12 +1908,10 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to gray900
      * ```css
-     * {
-     *   background-color: #18181b;
-     * }
+     * { background-color: #18181b; }
      * ```
      * @example
-     * ```
+     * ```tsx
      * <Box bgGray900></Box>
      * ```
      */

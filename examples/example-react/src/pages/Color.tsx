@@ -1,4 +1,4 @@
-import { Box, View } from '@fower/react';
+import { Box } from '@fower/react';
 
 export default () => {
   return (

@@ -1,51 +1,49 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 import * as CSS from 'csstype'
-
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set boxSizing
-     *
+     * Set box-sizing to some value
      * ```css
-     * { boxSizing: 'content-box' }
+     * { box-sizing: $value; }
      * ```
-     *
      * @example
      * ```tsx
-     * <Box boxSizing="content-box">Hello world</Box>
+     * <Box boxSizing="content-box"></Box>
+     * <Box boxSizing="border-box"></Box>
      * ```
+     * @see https://fower.vercel.app/docs/box-sizing
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
      */
-    boxSizing?: CSS.Property.BoxSizing | boolean
-
+    boxSizing?: ResponsiveValue<CSS.Property.BoxSizing>
     /**
-     * Set boxSizing to content-box
-     *
+     * Set box-sizing to content-box
      * ```css
-     * { boxSizing: 'content-box' }
+     * { box-sizing: content-box; }
      * ```
-     *
      * @example
      * ```tsx
-     * <Box boxContent>Hello world</Box>
+     * <Box boxContent></Box>
      * ```
+     * @see https://fower.vercel.app/docs/box-sizing
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
      */
-    boxContent?: boolean
-
+    boxContent?: ResponsiveBoolean
     /**
-     * Set boxSizing to border-box
-     *
+     * Set box-sizing to border-box
      * ```css
-     * { boxSizing: 'border-box' }
+     * { box-sizing: border-box; }
      * ```
-     *
      * @example
      * ```tsx
-     * <Box boxBorder>Hello world</Box>
+     * <Box boxBorder></Box>
      * ```
+     * @see https://fower.vercel.app/docs/box-sizing
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
      */
-    boxBorder?: boolean
+    boxBorder?: ResponsiveBoolean
   }
 }

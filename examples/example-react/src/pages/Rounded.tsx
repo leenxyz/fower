@@ -13,6 +13,7 @@ export default () => {
       </Box>
       <Box toCenter spaceX3 flexWrap>
         <Box square20 bgOrange400 rounded></Box>
+        <Box square20 bgOrange400 roundedTop={0}></Box>
         <Box square20 bgOrange400 roundedTiny></Box>
         <Box square20 bgOrange400 roundedLarge></Box>
         <Box square20 bgOrange400 roundedFull roundedTopRight-0--i></Box>

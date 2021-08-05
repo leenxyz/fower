@@ -1,4 +1,4 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveBoolean } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -6,7 +6,7 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * debug
+     * debug self
      *
      * Fower will auto add border to self element.
      *
@@ -15,7 +15,7 @@ declare module '@fower/atomic-props' {
      * <Box debug></Box>
      * ```
      */
-    debug?: boolean
+    debug?: ResponsiveBoolean
 
     /**
      * debugChildren
@@ -27,6 +27,6 @@ declare module '@fower/atomic-props' {
      * <Box debugChildren></Box>
      * ```
      */
-    debugChildren?: boolean
+    debugChildren?: ResponsiveBoolean
   }
 }

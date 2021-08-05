@@ -1,13 +1,8 @@
 import { Atom, Parser } from '@fower/core'
 import { FowerPlugin } from '@fower/core'
-import { downFirst } from '@fower/utils'
+import { downFirst, upFirst } from '@fower/utils'
 
-const positionMaps: Record<string, string> = {
-  T: 'Top',
-  L: 'Left',
-  R: 'Right',
-  B: 'Bottom',
-}
+const positionRegex = /^border(Top|Left|Right|Bottom)/i
 
 function isMatch(key: string) {
   return key.startsWith('border')
@@ -28,11 +23,12 @@ function toStyle({ key, value }: Atom, parser: Parser) {
     return { borderStyle: postfix.toLowerCase() }
   }
 
-  /** @example border-0,border-1,border-2,borderT-2,borderB-2, borderT, borderR={2} */
-  if (/^border[trbl]?$/i.test(key)) {
-    const position = postfix.replace(/-\d+$/, '')
-    const borderPosition = positionMaps[position.toUpperCase()] || ''
-    const cssKey = `border${borderPosition}Width`
+  /** @example border-0,border-1,border-2,borderTop-2,borderBottom-2... */
+  if (positionRegex.test(key)) {
+    const cssKey = `border${upFirst(postfix)}Width`
+    if (typeof value === 'boolean' && value === true) {
+      return { [cssKey]: 1 }
+    }
     return { [cssKey]: value }
   }
 

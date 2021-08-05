@@ -2,13 +2,7 @@ const { colors } = require('@fower/colors')
 const { upFirst } = require('@fower/utils')
 const { SemicolonPreference } = require('typescript')
 const { join } = require('path')
-const {
-  Project,
-  VariableDeclarationKind,
-  MethodDeclarationStructure,
-  PropertyDeclarationStructure,
-  OptionalKind,
-} = require('ts-morph')
+const { Project } = require('ts-morph')
 
 /** init somethings */
 const project = new Project()
@@ -114,7 +108,7 @@ const listProps = lists.map((item) => {
     type: item.type,
     docs: [
       {
-        description: [item.desc, '```css', '{', `  ${item.css}`, '}', '```'].join('\n'),
+        description: [item.desc, '```css', `{ ${item.css} }`, '```'].join('\n'),
         tags: [
           {
             tagName: 'example',
@@ -136,15 +130,18 @@ const properties = Object.keys(colors).reduce(function (result, cur) {
         description: [
           'Set background to ' + cur,
           '```css',
-          '{',
-          `  background-color: ${colors[cur]};`,
-          '}',
+          `{ background-color: ${colors[cur]}; }`,
           '```',
         ].join('\n'),
         tags: [
           {
             tagName: 'example',
-            text: ['\n', '```', `<Box ${name}></Box>`, '```'],
+            text: ['\n', '```tsx', `<Box ${name}></Box>`, '```'],
+          },
+
+          {
+            tagName: 'see',
+            text: [`https://developer.mozilla.org/en-US/docs/Web/CSS/background-color`],
           },
         ],
       },

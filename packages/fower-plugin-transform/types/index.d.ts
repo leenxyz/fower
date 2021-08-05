@@ -1,24 +1,24 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
-    scale?: boolean | number
+    scale?: ResponsiveValue<number>
 
-    rotate?: boolean | number
+    rotate?: ResponsiveValue<number>
 
-    translateX?: boolean | number | string
+    translateX?: ResponsiveValue<number | string>
 
-    translateY?: boolean | number | string
+    translateY?: ResponsiveValue<number | string>
 
     // translateZ?: boolean | number | string
 
-    skewX?: boolean | number
+    skewX?: ResponsiveValue<number>
 
-    skewY?: boolean | number
+    skewY?: ResponsiveValue<number>
 
-    origin?: boolean | string | number
+    origin?: ResponsiveValue<number | string>
   }
 }

@@ -1,67 +1,75 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 import * as CSS from 'csstype'
-
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set textAlign
-     *
+     * Set text-align to some value
+     * ```css
+     * { text-align: $value; }
+     * ```
      * @example
      * ```tsx
      * <Box textAlign="center"></Box>
+     * <Box textAlign="right"></Box>
      * ```
+     * @see https://fower.vercel.app/docs/text-alignment
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    textAlign?: CSS.Property.TextAlign 
-
+    textAlign?: ResponsiveValue<CSS.Property.TextAlign>
     /**
-     * Set textAlign to left
-     *
-     * textLeft is `text-align: left`
-     *
+     * Set text-align to left
+     * ```css
+     * { text-align: left; }
+     * ```
      * @example
      * ```tsx
      * <Box textLeft></Box>
      * ```
+     * @see https://fower.vercel.app/docs/text-alignment
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    textLeft?: boolean
-
+    textLeft?: ResponsiveBoolean
     /**
-     * Set textAlign to center
-     *
-     * textCenter is `text-align: center`
-     *
+     * Set text-align to center
+     * ```css
+     * { text-align: center; }
+     * ```
      * @example
      * ```tsx
      * <Box textCenter></Box>
      * ```
+     * @see https://fower.vercel.app/docs/text-alignment
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    textCenter?: boolean
-
+    textCenter?: ResponsiveBoolean
     /**
-     * Set textAlign to right
-     *
-     * textRight is `text-align: right`
-     *
+     * Set text-align to right
+     * ```css
+     * { text-align: right; }
+     * ```
      * @example
      * ```tsx
      * <Box textRight></Box>
      * ```
+     * @see https://fower.vercel.app/docs/text-alignment
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    textRight?: boolean
-
+    textRight?: ResponsiveBoolean
     /**
-     * Set textAlign to justify
-     *
-     * textJustify is `text-align: justify`
-     *
+     * Set text-align to justify
+     * ```css
+     * { text-align: justify; }
+     * ```
      * @example
      * ```tsx
      * <Box textJustify></Box>
      * ```
+     * @see https://fower.vercel.app/docs/text-alignment
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    textJustify?: boolean
+    textJustify?: ResponsiveBoolean
   }
 }

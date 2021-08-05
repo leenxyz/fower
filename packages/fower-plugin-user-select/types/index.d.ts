@@ -1,48 +1,56 @@
-import { FowerPlugin } from '@fower/core'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set useSelect to none
-     *
+     * Set user-select to none
+     * ```css
+     * { use-select: none; }
+     * ```
      * @example
      * ```tsx
      * <Box selectNone></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
      */
-    selectNone?: boolean
-
+    selectNone?: ResponsiveBoolean
     /**
-     * Set useSelect to all
-     *
+     * Set user-select to all
+     * ```css
+     * { use-select: all; }
+     * ```
      * @example
      * ```tsx
      * <Box selectAll></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
      */
-    selectAll?: boolean
-
+    selectAll?: ResponsiveBoolean
     /**
-     * Set useSelect to text
-     *
+     * Set user-select to text
+     * ```css
+     * { use-select: text; }
+     * ```
      * @example
      * ```tsx
      * <Box selectText></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
      */
-    selectText?: boolean
-
+    selectText?: ResponsiveBoolean
     /**
-     * Set useSelect to auto
-     *
+     * Set user-select to auto
+     * ```css
+     * { use-select: auto; }
+     * ```
      * @example
      * ```tsx
      * <Box selectAuto></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
      */
-    selectAuto?: boolean
+    selectAuto?: ResponsiveBoolean
   }
 }

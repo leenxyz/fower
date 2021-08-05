@@ -1,4 +1,4 @@
-import { FowerPlugin, FowerColor } from '@fower/core'
+import { FowerPlugin, FowerColor, ResponsiveValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -9,6 +9,6 @@ declare module '@fower/atomic-props' {
 
     bgGradientY?: false | FowerColor[]
 
-    bgGradient?: false | string
+    bgGradient?: ResponsiveValue<string>
   }
 }

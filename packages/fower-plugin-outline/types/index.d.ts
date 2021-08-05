@@ -1,4 +1,4 @@
-import { FowerPlugin, PropValue } from '@fower/core'
+import { FowerPlugin, ResponsiveBoolean, ResponsiveValue } from '@fower/core'
 
 declare const _default: () => FowerPlugin
 export default _default
@@ -11,10 +11,10 @@ declare module '@fower/atomic-props' {
      * @example
      * ```tsx
      * <Box outline></Box>
-     * <Box outline="dashed red;"></Box>
+     * <Box outline="1px dashed red;"></Box>
      * ```
      */
-    outline?: PropValue
+    outline?: ResponsiveValue<string | number>
 
     /**
      * Set outline to none
@@ -24,7 +24,7 @@ declare module '@fower/atomic-props' {
      * <Box outlineNone></Box>
      * ```
      */
-    outlineNone?: boolean
+    outlineNone?: ResponsiveBoolean
 
     /**
      * Set outlineOffset
@@ -34,6 +34,6 @@ declare module '@fower/atomic-props' {
      * <Box outlineOffset="0.2em"></Box>
      * ```
      */
-    outlineOffset?: PropValue
+    outlineOffset?: ResponsiveValue<string | number>
   }
 }

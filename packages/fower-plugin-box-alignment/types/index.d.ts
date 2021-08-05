@@ -1,70 +1,93 @@
-import { FowerPlugin } from '@fower/core'
+import { FowerPlugin, ResponsiveValue } from "@fower/core"
 import * as CSS from 'csstype'
-
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set justify-content
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+     * Set justify-content to some value
+     * ```css
+     * { justify-content: $value; }
+     * ```
      * @example
      * ```tsx
-     * <Box justifyContent="flex-start"></Box>
+     * <Box justifyContent="start"></Box>
+     * <Box justifyContent="center"></Box>
+     * <Box justifyContent="space-between"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
      */
-    justifyContent?: CSS.Property.JustifyContent | false
-
+    justifyContent?: ResponsiveValue<CSS.Property.JustifyContent>
     /**
-     * Set justify-items
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items
+     * Set justify-items to some value
+     * ```css
+     * { justify-items: $value; }
+     * ```
      * @example
      * ```tsx
      * <Box justifyItems="start"></Box>
+     * <Box justifyItems="center"></Box>
+     * <Box justifyItems="stretch"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items
      */
-    justifyItems?: CSS.Property.JustifyItems | false
-
+    justifyItems?: ResponsiveValue<CSS.Property.JustifyItems>
     /**
-     * Set justify-self
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
+     * Set justify-self to some value
+     * ```css
+     * { justify-self: $value; }
+     * ```
      * @example
      * ```tsx
      * <Box justifySelf="start"></Box>
+     * <Box justifySelf="center"></Box>
+     * <Box justifySelf="stretch"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
      */
-    justifySelf?: CSS.Property.JustifySelf | false
-
+    justifySelf?: ResponsiveValue<CSS.Property.JustifySelf>
     /**
-     * Set align-items
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+     * Set align-items to some value
+     * ```css
+     * { align-items: $value; }
+     * ```
      * @example
      * ```tsx
+     * <Box alignItems="start"></Box>
+     * <Box alignItems="center"></Box>
      * <Box alignItems="stretch"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
      */
-    alignItems?: CSS.Property.AlignItems | false
-
+    alignItems?: ResponsiveValue<CSS.Property.AlignItems>
     /**
-     * Set align-content
-     *
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+     * Set align-content to some value
+     * ```css
+     * { align-content: $value; }
+     * ```
      * @example
      * ```tsx
-     * <Box alignContent="flex-start"></Box>
+     * <Box alignContent="start"></Box>
+     * <Box alignContent="center"></Box>
+     * <Box alignContent="space-between"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
      */
-    alignContent?: CSS.Property.AlignContent | false
-
+    alignContent?: ResponsiveValue<CSS.Property.AlignContent>
     /**
-     * Set align-self
-     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
+     * Set align-self to some value
+     * ```css
+     * { align-self: $value; }
+     * ```
      * @example
      * ```tsx
-     * <Box alignSelf="auto"></Box>
+     * <Box alignSelf="start"></Box>
+     * <Box alignSelf="center"></Box>
+     * <Box alignSelf="stretch"></Box>
      * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
      */
-    alignSelf?: CSS.Property.AlignSelf | false
+    alignSelf?: ResponsiveValue<CSS.Property.AlignSelf>
   }
 }

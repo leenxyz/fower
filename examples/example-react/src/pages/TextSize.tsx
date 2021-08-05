@@ -36,28 +36,6 @@ const MyText = styled('span', ['border', 'p-1', 'rounded'], {
 });
 
 export default () => {
-  console.log(
-    '------createStyle:',
-    createStyle('bgOrange300', 'rounded', {
-      p10: true,
-      textShadow: '1px 2px 2px #ccc',
-    }),
-  );
-  return (
-    <MyText text3XL fontBold green400>
-      Hello world
-    </MyText>
-  );
-  return (
-    <Box
-      roundedGigantic
-      text2XL
-      _hover={['bgOrange300', 'border']}
-      _md={['bgTeal400', 'text5XL']}
-    >
-      40 Lorem ipsum dolor sit amet
-    </Box>
-  );
   return (
     <Box _hover={['p1', 'p4']}>
       <Box text-30>40 Lorem ipsum dolor sit amet</Box>

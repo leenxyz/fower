@@ -13,6 +13,9 @@ export type FowerHTMLProps<T extends As> = ComponentProps<T> & AtomicProps & { a
 
 export type Preset = Partial<Configuration>
 
+export type ResponsiveValue<T = any> = [T, ...T[]] | T | false
+export type ResponsiveBoolean = ResponsiveValue<boolean> | boolean
+
 export type PropValue = boolean | number | string
 
 export type ModeType = 'light' | 'dark' | ({} & string)

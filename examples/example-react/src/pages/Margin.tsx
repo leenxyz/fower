@@ -2,16 +2,6 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box inlineBlock debug>
-      <Box m-40 p4 inlineBlock bgRed400 className="main gogo">
-        m4
-      </Box>
-      <Box m-30 p3 inlineBlock bgRed400 className="main gogo">
-        m4
-      </Box>
-    </Box>
-  );
-  return (
     <Box>
       <Box text3XL fontBold>
         Margin

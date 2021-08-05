@@ -3,7 +3,9 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box>
-      <Box text={[12, 20, 40, 60]}>Lorem ipsum dolor sit amet</Box>
+      <Box text={[12, 20, 40, 60]} textXS>
+        Lorem ipsum dolor sit amet
+      </Box>
       <Box color={['green500', 'red500', 'yellow500', 'blue500']}>
         Lorem ipsum dolor sit amet
       </Box>

@@ -12,8 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "prebuild": "node gen-types.js",
     "start": "tsdx watch --verbose",
+    "prebuild": "node gen-types.js",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",

@@ -106,14 +106,26 @@ export default () => {
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
         </Box>
-        <Box flexWrap="wrap" bgOrange100 w-350 h-320 alignContent="space-evenly">
+        <Box
+          flexWrap="wrap"
+          bgOrange100
+          w-350
+          h-320
+          alignContent="space-evenly"
+        >
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
         </Box>
-        <Box flexWrap="wrap" bgOrange100 w-350 h-320 alignContent="space-around">
+        <Box
+          flexWrap="wrap"
+          bgOrange100
+          w-350
+          h-320
+          alignContent="space-around"
+        >
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
           <Box m2 bgOrange400 square-100></Box>
