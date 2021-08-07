@@ -15,7 +15,7 @@ declare module '@fower/atomic-props' {
      * <Box position="absolute"></Box>
      * <Box position="sticky"></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
     position?: ResponsiveValue<CSS.Property.Position>
     /**
@@ -87,15 +87,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box top-10></Box>
+     * <Box top-8></Box>
      * <Box top-1rem></Box>
-     * <Box top-10p></Box>
-     * <Box top={10}></Box>
+     * <Box top-4px></Box>
+     * <Box top={8}></Box>
      * <Box top={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    top?: ResponsiveValue<string | number | boolean>
+    top?: ResponsiveValue<string | number>
     /**
      * set top to 0
      * ```css
@@ -525,15 +525,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box right-10></Box>
+     * <Box right-8></Box>
      * <Box right-1rem></Box>
-     * <Box right-10p></Box>
-     * <Box right={10}></Box>
+     * <Box right-4px></Box>
+     * <Box right={8}></Box>
      * <Box right={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    right?: ResponsiveValue<string | number | boolean>
+    right?: ResponsiveValue<string | number>
     /**
      * set right to 0
      * ```css
@@ -963,15 +963,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box bottom-10></Box>
+     * <Box bottom-8></Box>
      * <Box bottom-1rem></Box>
-     * <Box bottom-10p></Box>
-     * <Box bottom={10}></Box>
+     * <Box bottom-4px></Box>
+     * <Box bottom={8}></Box>
      * <Box bottom={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    bottom?: ResponsiveValue<string | number | boolean>
+    bottom?: ResponsiveValue<string | number>
     /**
      * set bottom to 0
      * ```css
@@ -1401,15 +1401,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box left-10></Box>
+     * <Box left-8></Box>
      * <Box left-1rem></Box>
-     * <Box left-10p></Box>
-     * <Box left={10}></Box>
+     * <Box left-4px></Box>
+     * <Box left={8}></Box>
      * <Box left={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    left?: ResponsiveValue<string | number | boolean>
+    left?: ResponsiveValue<string | number>
     /**
      * set left to 0
      * ```css

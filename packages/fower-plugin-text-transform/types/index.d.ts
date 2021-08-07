@@ -1,5 +1,4 @@
 import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
-import * as CSS from 'csstype'
 declare const _default: () => FowerPlugin
 export default _default
 
@@ -8,7 +7,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set text-transform to none
      * ```css
-     * { display: none; }
+     * { text-transform: none; }
      * ```
      * @example
      * ```tsx
@@ -21,7 +20,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set text-transform to uppercase
      * ```css
-     * { display: uppercase; }
+     * { text-transform: uppercase; }
      * ```
      * @example
      * ```tsx
@@ -34,7 +33,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set text-transform to lowercase
      * ```css
-     * { display: lowercase; }
+     * { text-transform: lowercase; }
      * ```
      * @example
      * ```tsx
@@ -47,7 +46,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set text-transform to capitalize
      * ```css
-     * { display: capitalize; }
+     * { text-transform: capitalize; }
      * ```
      * @example
      * ```tsx

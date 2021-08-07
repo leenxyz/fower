@@ -16,7 +16,7 @@ declare module '@fower/atomic-props' {
      * <Box textAlign="right"></Box>
      * ```
      * @see https://fower.vercel.app/docs/text-alignment
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
      */
     textAlign?: ResponsiveValue<CSS.Property.TextAlign>
     /**
@@ -29,7 +29,7 @@ declare module '@fower/atomic-props' {
      * <Box textLeft></Box>
      * ```
      * @see https://fower.vercel.app/docs/text-alignment
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
      */
     textLeft?: ResponsiveBoolean
     /**
@@ -42,7 +42,7 @@ declare module '@fower/atomic-props' {
      * <Box textCenter></Box>
      * ```
      * @see https://fower.vercel.app/docs/text-alignment
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
      */
     textCenter?: ResponsiveBoolean
     /**
@@ -55,7 +55,7 @@ declare module '@fower/atomic-props' {
      * <Box textRight></Box>
      * ```
      * @see https://fower.vercel.app/docs/text-alignment
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
      */
     textRight?: ResponsiveBoolean
     /**
@@ -68,7 +68,7 @@ declare module '@fower/atomic-props' {
      * <Box textJustify></Box>
      * ```
      * @see https://fower.vercel.app/docs/text-alignment
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
      */
     textJustify?: ResponsiveBoolean
   }

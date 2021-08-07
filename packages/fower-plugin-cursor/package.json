@@ -14,7 +14,7 @@
   "scripts": {
     "start": "tsdx watch --verbose",
     "build": "tsdx build",
-    "prebuild": "node gen-types.js",
+    "build:types": "node gen-types.js",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
     "test:cov": "tsdx test --coverage --passWithNoTests",

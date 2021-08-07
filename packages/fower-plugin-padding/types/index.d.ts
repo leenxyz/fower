@@ -13,15 +13,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box p-10></Box>
+     * <Box p-8></Box>
      * <Box p-1rem></Box>
-     * <Box p-10p></Box>
-     * <Box p={10}></Box>
+     * <Box p-4px></Box>
+     * <Box p={8}></Box>
      * <Box p={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    p?: ResponsiveValue<string | number | boolean>
+    p?: ResponsiveValue<string | number>
     /**
      * set padding to 0
      * ```css
@@ -452,15 +452,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box px-10></Box>
+     * <Box px-8></Box>
      * <Box px-1rem></Box>
-     * <Box px-10p></Box>
-     * <Box px={10}></Box>
+     * <Box px-4px></Box>
+     * <Box px={8}></Box>
      * <Box px={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    px?: ResponsiveValue<string | number | boolean>
+    px?: ResponsiveValue<string | number>
     /**
      * set padding-left padding-right to 0
      * ```css
@@ -921,15 +921,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box py-10></Box>
+     * <Box py-8></Box>
      * <Box py-1rem></Box>
-     * <Box py-10p></Box>
-     * <Box py={10}></Box>
+     * <Box py-4px></Box>
+     * <Box py={8}></Box>
      * <Box py={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    py?: ResponsiveValue<string | number | boolean>
+    py?: ResponsiveValue<string | number>
     /**
      * set padding-top padding-bottom to 0
      * ```css
@@ -1389,15 +1389,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box pt-10></Box>
+     * <Box pt-8></Box>
      * <Box pt-1rem></Box>
-     * <Box pt-10p></Box>
-     * <Box pt={10}></Box>
+     * <Box pt-4px></Box>
+     * <Box pt={8}></Box>
      * <Box pt={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pt?: ResponsiveValue<string | number | boolean>
+    pt?: ResponsiveValue<string | number>
     /**
      * set padding-top to 0
      * ```css
@@ -1827,15 +1827,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box pr-10></Box>
+     * <Box pr-8></Box>
      * <Box pr-1rem></Box>
-     * <Box pr-10p></Box>
-     * <Box pr={10}></Box>
+     * <Box pr-4px></Box>
+     * <Box pr={8}></Box>
      * <Box pr={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pr?: ResponsiveValue<string | number | boolean>
+    pr?: ResponsiveValue<string | number>
     /**
      * set padding-right to 0
      * ```css
@@ -2265,15 +2265,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box pb-10></Box>
+     * <Box pb-8></Box>
      * <Box pb-1rem></Box>
-     * <Box pb-10p></Box>
-     * <Box pb={10}></Box>
+     * <Box pb-4px></Box>
+     * <Box pb={8}></Box>
      * <Box pb={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pb?: ResponsiveValue<string | number | boolean>
+    pb?: ResponsiveValue<string | number>
     /**
      * set padding-bottom to 0
      * ```css
@@ -2703,15 +2703,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box pl-10></Box>
+     * <Box pl-8></Box>
      * <Box pl-1rem></Box>
-     * <Box pl-10p></Box>
-     * <Box pl={10}></Box>
+     * <Box pl-4px></Box>
+     * <Box pl={8}></Box>
      * <Box pl={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/padding
      */
-    pl?: ResponsiveValue<string | number | boolean>
+    pl?: ResponsiveValue<string | number>
     /**
      * set padding-left to 0
      * ```css

@@ -6,20 +6,20 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * set children elements to some value
+     * set the space between child elements to some value
      * @example
      * ```tsx
-     * <Box space-10></Box>
+     * <Box space-8></Box>
      * <Box space-1rem></Box>
-     * <Box space-10p></Box>
-     * <Box space={10}></Box>
+     * <Box space-4px></Box>
+     * <Box space={8}></Box>
      * <Box space={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    space?: ResponsiveValue<string | number | boolean>
+    space?: ResponsiveValue<string | number>
     /**
-     * set children elements to 0
+     * set the space between child elements to 0
      * @example
      * ```tsx
      * <Box space0></Box>
@@ -28,7 +28,7 @@ declare module '@fower/atomic-props' {
      */
     space0?: ResponsiveBoolean
     /**
-     * set children elements to 4
+     * set the space between child elements to 4
      * @example
      * ```tsx
      * <Box space1></Box>
@@ -37,7 +37,7 @@ declare module '@fower/atomic-props' {
      */
     space1?: ResponsiveBoolean
     /**
-     * set children elements to 8
+     * set the space between child elements to 8
      * @example
      * ```tsx
      * <Box space2></Box>
@@ -46,7 +46,7 @@ declare module '@fower/atomic-props' {
      */
     space2?: ResponsiveBoolean
     /**
-     * set children elements to 12
+     * set the space between child elements to 12
      * @example
      * ```tsx
      * <Box space3></Box>
@@ -55,7 +55,7 @@ declare module '@fower/atomic-props' {
      */
     space3?: ResponsiveBoolean
     /**
-     * set children elements to 16
+     * set the space between child elements to 16
      * @example
      * ```tsx
      * <Box space4></Box>
@@ -64,7 +64,7 @@ declare module '@fower/atomic-props' {
      */
     space4?: ResponsiveBoolean
     /**
-     * set children elements to 20
+     * set the space between child elements to 20
      * @example
      * ```tsx
      * <Box space5></Box>
@@ -73,7 +73,7 @@ declare module '@fower/atomic-props' {
      */
     space5?: ResponsiveBoolean
     /**
-     * set children elements to 24
+     * set the space between child elements to 24
      * @example
      * ```tsx
      * <Box space6></Box>
@@ -82,7 +82,7 @@ declare module '@fower/atomic-props' {
      */
     space6?: ResponsiveBoolean
     /**
-     * set children elements to 28
+     * set the space between child elements to 28
      * @example
      * ```tsx
      * <Box space7></Box>
@@ -91,7 +91,7 @@ declare module '@fower/atomic-props' {
      */
     space7?: ResponsiveBoolean
     /**
-     * set children elements to 32
+     * set the space between child elements to 32
      * @example
      * ```tsx
      * <Box space8></Box>
@@ -100,7 +100,7 @@ declare module '@fower/atomic-props' {
      */
     space8?: ResponsiveBoolean
     /**
-     * set children elements to 36
+     * set the space between child elements to 36
      * @example
      * ```tsx
      * <Box space9></Box>
@@ -109,7 +109,7 @@ declare module '@fower/atomic-props' {
      */
     space9?: ResponsiveBoolean
     /**
-     * set children elements to 40
+     * set the space between child elements to 40
      * @example
      * ```tsx
      * <Box space10></Box>
@@ -118,7 +118,7 @@ declare module '@fower/atomic-props' {
      */
     space10?: ResponsiveBoolean
     /**
-     * set children elements to 44
+     * set the space between child elements to 44
      * @example
      * ```tsx
      * <Box space11></Box>
@@ -127,7 +127,7 @@ declare module '@fower/atomic-props' {
      */
     space11?: ResponsiveBoolean
     /**
-     * set children elements to 48
+     * set the space between child elements to 48
      * @example
      * ```tsx
      * <Box space12></Box>
@@ -136,7 +136,7 @@ declare module '@fower/atomic-props' {
      */
     space12?: ResponsiveBoolean
     /**
-     * set children elements to 56
+     * set the space between child elements to 56
      * @example
      * ```tsx
      * <Box space14></Box>
@@ -145,7 +145,7 @@ declare module '@fower/atomic-props' {
      */
     space14?: ResponsiveBoolean
     /**
-     * set children elements to 64
+     * set the space between child elements to 64
      * @example
      * ```tsx
      * <Box space16></Box>
@@ -154,7 +154,7 @@ declare module '@fower/atomic-props' {
      */
     space16?: ResponsiveBoolean
     /**
-     * set children elements to 80
+     * set the space between child elements to 80
      * @example
      * ```tsx
      * <Box space20></Box>
@@ -163,7 +163,7 @@ declare module '@fower/atomic-props' {
      */
     space20?: ResponsiveBoolean
     /**
-     * set children elements to 96
+     * set the space between child elements to 96
      * @example
      * ```tsx
      * <Box space24></Box>
@@ -172,7 +172,7 @@ declare module '@fower/atomic-props' {
      */
     space24?: ResponsiveBoolean
     /**
-     * set children elements to 112
+     * set the space between child elements to 112
      * @example
      * ```tsx
      * <Box space28></Box>
@@ -181,7 +181,7 @@ declare module '@fower/atomic-props' {
      */
     space28?: ResponsiveBoolean
     /**
-     * set children elements to 128
+     * set the space between child elements to 128
      * @example
      * ```tsx
      * <Box space32></Box>
@@ -190,7 +190,7 @@ declare module '@fower/atomic-props' {
      */
     space32?: ResponsiveBoolean
     /**
-     * set children elements to 144
+     * set the space between child elements to 144
      * @example
      * ```tsx
      * <Box space36></Box>
@@ -199,7 +199,7 @@ declare module '@fower/atomic-props' {
      */
     space36?: ResponsiveBoolean
     /**
-     * set children elements to 160
+     * set the space between child elements to 160
      * @example
      * ```tsx
      * <Box space40></Box>
@@ -208,7 +208,7 @@ declare module '@fower/atomic-props' {
      */
     space40?: ResponsiveBoolean
     /**
-     * set children elements to 176
+     * set the space between child elements to 176
      * @example
      * ```tsx
      * <Box space44></Box>
@@ -217,7 +217,7 @@ declare module '@fower/atomic-props' {
      */
     space44?: ResponsiveBoolean
     /**
-     * set children elements to 192
+     * set the space between child elements to 192
      * @example
      * ```tsx
      * <Box space48></Box>
@@ -226,7 +226,7 @@ declare module '@fower/atomic-props' {
      */
     space48?: ResponsiveBoolean
     /**
-     * set children elements to 208
+     * set the space between child elements to 208
      * @example
      * ```tsx
      * <Box space52></Box>
@@ -235,7 +235,7 @@ declare module '@fower/atomic-props' {
      */
     space52?: ResponsiveBoolean
     /**
-     * set children elements to 224
+     * set the space between child elements to 224
      * @example
      * ```tsx
      * <Box space56></Box>
@@ -244,7 +244,7 @@ declare module '@fower/atomic-props' {
      */
     space56?: ResponsiveBoolean
     /**
-     * set children elements to 240
+     * set the space between child elements to 240
      * @example
      * ```tsx
      * <Box space60></Box>
@@ -253,7 +253,7 @@ declare module '@fower/atomic-props' {
      */
     space60?: ResponsiveBoolean
     /**
-     * set children elements to 256
+     * set the space between child elements to 256
      * @example
      * ```tsx
      * <Box space64></Box>
@@ -262,7 +262,7 @@ declare module '@fower/atomic-props' {
      */
     space64?: ResponsiveBoolean
     /**
-     * set children elements to 288
+     * set the space between child elements to 288
      * @example
      * ```tsx
      * <Box space72></Box>
@@ -271,7 +271,7 @@ declare module '@fower/atomic-props' {
      */
     space72?: ResponsiveBoolean
     /**
-     * set children elements to 320
+     * set the space between child elements to 320
      * @example
      * ```tsx
      * <Box space80></Box>
@@ -280,7 +280,7 @@ declare module '@fower/atomic-props' {
      */
     space80?: ResponsiveBoolean
     /**
-     * set children elements to 384
+     * set the space between child elements to 384
      * @example
      * ```tsx
      * <Box space96></Box>
@@ -289,20 +289,20 @@ declare module '@fower/atomic-props' {
      */
     space96?: ResponsiveBoolean
     /**
-     * set children elements to some value
+     * set the space between child elements to some value
      * @example
      * ```tsx
-     * <Box spaceX-10></Box>
+     * <Box spaceX-8></Box>
      * <Box spaceX-1rem></Box>
-     * <Box spaceX-10p></Box>
-     * <Box spaceX={10}></Box>
+     * <Box spaceX-4px></Box>
+     * <Box spaceX={8}></Box>
      * <Box spaceX={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    spaceX?: ResponsiveValue<string | number | boolean>
+    spaceX?: ResponsiveValue<string | number>
     /**
-     * set children elements to 0
+     * set the space between child elements to 0
      * @example
      * ```tsx
      * <Box spaceX0></Box>
@@ -311,7 +311,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX0?: ResponsiveBoolean
     /**
-     * set children elements to 4
+     * set the space between child elements to 4
      * @example
      * ```tsx
      * <Box spaceX1></Box>
@@ -320,7 +320,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX1?: ResponsiveBoolean
     /**
-     * set children elements to 8
+     * set the space between child elements to 8
      * @example
      * ```tsx
      * <Box spaceX2></Box>
@@ -329,7 +329,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX2?: ResponsiveBoolean
     /**
-     * set children elements to 12
+     * set the space between child elements to 12
      * @example
      * ```tsx
      * <Box spaceX3></Box>
@@ -338,7 +338,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX3?: ResponsiveBoolean
     /**
-     * set children elements to 16
+     * set the space between child elements to 16
      * @example
      * ```tsx
      * <Box spaceX4></Box>
@@ -347,7 +347,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX4?: ResponsiveBoolean
     /**
-     * set children elements to 20
+     * set the space between child elements to 20
      * @example
      * ```tsx
      * <Box spaceX5></Box>
@@ -356,7 +356,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX5?: ResponsiveBoolean
     /**
-     * set children elements to 24
+     * set the space between child elements to 24
      * @example
      * ```tsx
      * <Box spaceX6></Box>
@@ -365,7 +365,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX6?: ResponsiveBoolean
     /**
-     * set children elements to 28
+     * set the space between child elements to 28
      * @example
      * ```tsx
      * <Box spaceX7></Box>
@@ -374,7 +374,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX7?: ResponsiveBoolean
     /**
-     * set children elements to 32
+     * set the space between child elements to 32
      * @example
      * ```tsx
      * <Box spaceX8></Box>
@@ -383,7 +383,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX8?: ResponsiveBoolean
     /**
-     * set children elements to 36
+     * set the space between child elements to 36
      * @example
      * ```tsx
      * <Box spaceX9></Box>
@@ -392,7 +392,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX9?: ResponsiveBoolean
     /**
-     * set children elements to 40
+     * set the space between child elements to 40
      * @example
      * ```tsx
      * <Box spaceX10></Box>
@@ -401,7 +401,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX10?: ResponsiveBoolean
     /**
-     * set children elements to 44
+     * set the space between child elements to 44
      * @example
      * ```tsx
      * <Box spaceX11></Box>
@@ -410,7 +410,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX11?: ResponsiveBoolean
     /**
-     * set children elements to 48
+     * set the space between child elements to 48
      * @example
      * ```tsx
      * <Box spaceX12></Box>
@@ -419,7 +419,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX12?: ResponsiveBoolean
     /**
-     * set children elements to 56
+     * set the space between child elements to 56
      * @example
      * ```tsx
      * <Box spaceX14></Box>
@@ -428,7 +428,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX14?: ResponsiveBoolean
     /**
-     * set children elements to 64
+     * set the space between child elements to 64
      * @example
      * ```tsx
      * <Box spaceX16></Box>
@@ -437,7 +437,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX16?: ResponsiveBoolean
     /**
-     * set children elements to 80
+     * set the space between child elements to 80
      * @example
      * ```tsx
      * <Box spaceX20></Box>
@@ -446,7 +446,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX20?: ResponsiveBoolean
     /**
-     * set children elements to 96
+     * set the space between child elements to 96
      * @example
      * ```tsx
      * <Box spaceX24></Box>
@@ -455,7 +455,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX24?: ResponsiveBoolean
     /**
-     * set children elements to 112
+     * set the space between child elements to 112
      * @example
      * ```tsx
      * <Box spaceX28></Box>
@@ -464,7 +464,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX28?: ResponsiveBoolean
     /**
-     * set children elements to 128
+     * set the space between child elements to 128
      * @example
      * ```tsx
      * <Box spaceX32></Box>
@@ -473,7 +473,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX32?: ResponsiveBoolean
     /**
-     * set children elements to 144
+     * set the space between child elements to 144
      * @example
      * ```tsx
      * <Box spaceX36></Box>
@@ -482,7 +482,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX36?: ResponsiveBoolean
     /**
-     * set children elements to 160
+     * set the space between child elements to 160
      * @example
      * ```tsx
      * <Box spaceX40></Box>
@@ -491,7 +491,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX40?: ResponsiveBoolean
     /**
-     * set children elements to 176
+     * set the space between child elements to 176
      * @example
      * ```tsx
      * <Box spaceX44></Box>
@@ -500,7 +500,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX44?: ResponsiveBoolean
     /**
-     * set children elements to 192
+     * set the space between child elements to 192
      * @example
      * ```tsx
      * <Box spaceX48></Box>
@@ -509,7 +509,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX48?: ResponsiveBoolean
     /**
-     * set children elements to 208
+     * set the space between child elements to 208
      * @example
      * ```tsx
      * <Box spaceX52></Box>
@@ -518,7 +518,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX52?: ResponsiveBoolean
     /**
-     * set children elements to 224
+     * set the space between child elements to 224
      * @example
      * ```tsx
      * <Box spaceX56></Box>
@@ -527,7 +527,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX56?: ResponsiveBoolean
     /**
-     * set children elements to 240
+     * set the space between child elements to 240
      * @example
      * ```tsx
      * <Box spaceX60></Box>
@@ -536,7 +536,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX60?: ResponsiveBoolean
     /**
-     * set children elements to 256
+     * set the space between child elements to 256
      * @example
      * ```tsx
      * <Box spaceX64></Box>
@@ -545,7 +545,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX64?: ResponsiveBoolean
     /**
-     * set children elements to 288
+     * set the space between child elements to 288
      * @example
      * ```tsx
      * <Box spaceX72></Box>
@@ -554,7 +554,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX72?: ResponsiveBoolean
     /**
-     * set children elements to 320
+     * set the space between child elements to 320
      * @example
      * ```tsx
      * <Box spaceX80></Box>
@@ -563,7 +563,7 @@ declare module '@fower/atomic-props' {
      */
     spaceX80?: ResponsiveBoolean
     /**
-     * set children elements to 384
+     * set the space between child elements to 384
      * @example
      * ```tsx
      * <Box spaceX96></Box>
@@ -572,20 +572,20 @@ declare module '@fower/atomic-props' {
      */
     spaceX96?: ResponsiveBoolean
     /**
-     * set children elements to some value
+     * set the space between child elements to some value
      * @example
      * ```tsx
-     * <Box spaceY-10></Box>
+     * <Box spaceY-8></Box>
      * <Box spaceY-1rem></Box>
-     * <Box spaceY-10p></Box>
-     * <Box spaceY={10}></Box>
+     * <Box spaceY-4px></Box>
+     * <Box spaceY={8}></Box>
      * <Box spaceY={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
      */
-    spaceY?: ResponsiveValue<string | number | boolean>
+    spaceY?: ResponsiveValue<string | number>
     /**
-     * set children elements to 0
+     * set the space between child elements to 0
      * @example
      * ```tsx
      * <Box spaceY0></Box>
@@ -594,7 +594,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY0?: ResponsiveBoolean
     /**
-     * set children elements to 4
+     * set the space between child elements to 4
      * @example
      * ```tsx
      * <Box spaceY1></Box>
@@ -603,7 +603,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY1?: ResponsiveBoolean
     /**
-     * set children elements to 8
+     * set the space between child elements to 8
      * @example
      * ```tsx
      * <Box spaceY2></Box>
@@ -612,7 +612,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY2?: ResponsiveBoolean
     /**
-     * set children elements to 12
+     * set the space between child elements to 12
      * @example
      * ```tsx
      * <Box spaceY3></Box>
@@ -621,7 +621,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY3?: ResponsiveBoolean
     /**
-     * set children elements to 16
+     * set the space between child elements to 16
      * @example
      * ```tsx
      * <Box spaceY4></Box>
@@ -630,7 +630,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY4?: ResponsiveBoolean
     /**
-     * set children elements to 20
+     * set the space between child elements to 20
      * @example
      * ```tsx
      * <Box spaceY5></Box>
@@ -639,7 +639,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY5?: ResponsiveBoolean
     /**
-     * set children elements to 24
+     * set the space between child elements to 24
      * @example
      * ```tsx
      * <Box spaceY6></Box>
@@ -648,7 +648,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY6?: ResponsiveBoolean
     /**
-     * set children elements to 28
+     * set the space between child elements to 28
      * @example
      * ```tsx
      * <Box spaceY7></Box>
@@ -657,7 +657,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY7?: ResponsiveBoolean
     /**
-     * set children elements to 32
+     * set the space between child elements to 32
      * @example
      * ```tsx
      * <Box spaceY8></Box>
@@ -666,7 +666,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY8?: ResponsiveBoolean
     /**
-     * set children elements to 36
+     * set the space between child elements to 36
      * @example
      * ```tsx
      * <Box spaceY9></Box>
@@ -675,7 +675,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY9?: ResponsiveBoolean
     /**
-     * set children elements to 40
+     * set the space between child elements to 40
      * @example
      * ```tsx
      * <Box spaceY10></Box>
@@ -684,7 +684,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY10?: ResponsiveBoolean
     /**
-     * set children elements to 44
+     * set the space between child elements to 44
      * @example
      * ```tsx
      * <Box spaceY11></Box>
@@ -693,7 +693,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY11?: ResponsiveBoolean
     /**
-     * set children elements to 48
+     * set the space between child elements to 48
      * @example
      * ```tsx
      * <Box spaceY12></Box>
@@ -702,7 +702,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY12?: ResponsiveBoolean
     /**
-     * set children elements to 56
+     * set the space between child elements to 56
      * @example
      * ```tsx
      * <Box spaceY14></Box>
@@ -711,7 +711,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY14?: ResponsiveBoolean
     /**
-     * set children elements to 64
+     * set the space between child elements to 64
      * @example
      * ```tsx
      * <Box spaceY16></Box>
@@ -720,7 +720,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY16?: ResponsiveBoolean
     /**
-     * set children elements to 80
+     * set the space between child elements to 80
      * @example
      * ```tsx
      * <Box spaceY20></Box>
@@ -729,7 +729,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY20?: ResponsiveBoolean
     /**
-     * set children elements to 96
+     * set the space between child elements to 96
      * @example
      * ```tsx
      * <Box spaceY24></Box>
@@ -738,7 +738,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY24?: ResponsiveBoolean
     /**
-     * set children elements to 112
+     * set the space between child elements to 112
      * @example
      * ```tsx
      * <Box spaceY28></Box>
@@ -747,7 +747,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY28?: ResponsiveBoolean
     /**
-     * set children elements to 128
+     * set the space between child elements to 128
      * @example
      * ```tsx
      * <Box spaceY32></Box>
@@ -756,7 +756,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY32?: ResponsiveBoolean
     /**
-     * set children elements to 144
+     * set the space between child elements to 144
      * @example
      * ```tsx
      * <Box spaceY36></Box>
@@ -765,7 +765,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY36?: ResponsiveBoolean
     /**
-     * set children elements to 160
+     * set the space between child elements to 160
      * @example
      * ```tsx
      * <Box spaceY40></Box>
@@ -774,7 +774,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY40?: ResponsiveBoolean
     /**
-     * set children elements to 176
+     * set the space between child elements to 176
      * @example
      * ```tsx
      * <Box spaceY44></Box>
@@ -783,7 +783,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY44?: ResponsiveBoolean
     /**
-     * set children elements to 192
+     * set the space between child elements to 192
      * @example
      * ```tsx
      * <Box spaceY48></Box>
@@ -792,7 +792,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY48?: ResponsiveBoolean
     /**
-     * set children elements to 208
+     * set the space between child elements to 208
      * @example
      * ```tsx
      * <Box spaceY52></Box>
@@ -801,7 +801,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY52?: ResponsiveBoolean
     /**
-     * set children elements to 224
+     * set the space between child elements to 224
      * @example
      * ```tsx
      * <Box spaceY56></Box>
@@ -810,7 +810,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY56?: ResponsiveBoolean
     /**
-     * set children elements to 240
+     * set the space between child elements to 240
      * @example
      * ```tsx
      * <Box spaceY60></Box>
@@ -819,7 +819,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY60?: ResponsiveBoolean
     /**
-     * set children elements to 256
+     * set the space between child elements to 256
      * @example
      * ```tsx
      * <Box spaceY64></Box>
@@ -828,7 +828,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY64?: ResponsiveBoolean
     /**
-     * set children elements to 288
+     * set the space between child elements to 288
      * @example
      * ```tsx
      * <Box spaceY72></Box>
@@ -837,7 +837,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY72?: ResponsiveBoolean
     /**
-     * set children elements to 320
+     * set the space between child elements to 320
      * @example
      * ```tsx
      * <Box spaceY80></Box>
@@ -846,7 +846,7 @@ declare module '@fower/atomic-props' {
      */
     spaceY80?: ResponsiveBoolean
     /**
-     * set children elements to 384
+     * set the space between child elements to 384
      * @example
      * ```tsx
      * <Box spaceY96></Box>

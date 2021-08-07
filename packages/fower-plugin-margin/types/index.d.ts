@@ -1,4 +1,4 @@
-import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from '@fower/core'
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
@@ -13,15 +13,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box m-10></Box>
+     * <Box m-4></Box>
      * <Box m-1rem></Box>
-     * <Box m-10p></Box>
-     * <Box m={10}></Box>
+     * <Box m-8px></Box>
+     * <Box m={8}></Box>
      * <Box m={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    m?: ResponsiveValue<string | number | boolean>
+    m?: ResponsiveValue<string | number>
     /**
      * set margin to 0
      * ```css
@@ -452,15 +452,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box mx-10></Box>
+     * <Box mx-4></Box>
      * <Box mx-1rem></Box>
-     * <Box mx-10p></Box>
-     * <Box mx={10}></Box>
+     * <Box mx-8px></Box>
+     * <Box mx={8}></Box>
      * <Box mx={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    mx?: ResponsiveValue<string | number | boolean>
+    mx?: ResponsiveValue<string | number>
     /**
      * set margin-left margin-right to 0
      * ```css
@@ -921,15 +921,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box my-10></Box>
+     * <Box my-4></Box>
      * <Box my-1rem></Box>
-     * <Box my-10p></Box>
-     * <Box my={10}></Box>
+     * <Box my-8px></Box>
+     * <Box my={8}></Box>
      * <Box my={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    my?: ResponsiveValue<string | number | boolean>
+    my?: ResponsiveValue<string | number>
     /**
      * set margin-top margin-top to 0
      * ```css
@@ -1389,15 +1389,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box mt-10></Box>
+     * <Box mt-4></Box>
      * <Box mt-1rem></Box>
-     * <Box mt-10p></Box>
-     * <Box mt={10}></Box>
+     * <Box mt-8px></Box>
+     * <Box mt={8}></Box>
      * <Box mt={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    mt?: ResponsiveValue<string | number | boolean>
+    mt?: ResponsiveValue<string | number>
     /**
      * set margin-top to 0
      * ```css
@@ -1827,15 +1827,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box mr-10></Box>
+     * <Box mr-4></Box>
      * <Box mr-1rem></Box>
-     * <Box mr-10p></Box>
-     * <Box mr={10}></Box>
+     * <Box mr-8px></Box>
+     * <Box mr={8}></Box>
      * <Box mr={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    mr?: ResponsiveValue<string | number | boolean>
+    mr?: ResponsiveValue<string | number>
     /**
      * set margin-right to 0
      * ```css
@@ -2265,15 +2265,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box mb-10></Box>
+     * <Box mb-4></Box>
      * <Box mb-1rem></Box>
-     * <Box mb-10p></Box>
-     * <Box mb={10}></Box>
+     * <Box mb-8px></Box>
+     * <Box mb={8}></Box>
      * <Box mb={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    mb?: ResponsiveValue<string | number | boolean>
+    mb?: ResponsiveValue<string | number>
     /**
      * set margin-bottom to 0
      * ```css
@@ -2703,15 +2703,15 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box ml-10></Box>
+     * <Box ml-4></Box>
      * <Box ml-1rem></Box>
-     * <Box ml-10p></Box>
-     * <Box ml={10}></Box>
+     * <Box ml-8px></Box>
+     * <Box ml={8}></Box>
      * <Box ml={a + b}></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    ml?: ResponsiveValue<string | number | boolean>
+    ml?: ResponsiveValue<string | number>
     /**
      * set margin-left to 0
      * ```css

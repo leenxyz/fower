@@ -1,1086 +1,3357 @@
-import { FowerPlugin, PropValue } from '@fower/core'
-
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * Set width
-     *
+     * set width to some value
+     * ```css
+     * {
+     *   width: $value;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box w-10></Box>
+     * <Box w-8></Box>
      * <Box w-1rem></Box>
-     * <Box w-10p></Box>
-     * <Box w={10}></Box>
-     * <Box w="10px 4px"></Box>
+     * <Box w-4px></Box>
+     * <Box w={8}></Box>
      * <Box w={a + b}></Box>
      * ```
      */
-    w?: PropValue
-
+    w?: ResponsiveValue<string | number>
     /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w0 is `width: 0px`
-     */
-    w0?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-     *
-     * w1 is `width: 4px`
-     */
-    w1?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-     *
-     * w2 is `width: 8px`
-     */
-    w2?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w3 is `width: 12px`
-     */
-    w3?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w4 is `width: 16px`
-     */
-    w4?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w5 is `width: 20px`
-     */
-    w5?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w6 is `width: 24px`
-     */
-    w6?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w7 is `width: 28px`
-     */
-    w7?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w8 is `width: 32px`
-     */
-    w8?: boolean
-
-    /**
-     * Set width
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * w9 is `width: 36px`
-     */
-    w9?: boolean
-    w10?: boolean
-    w11?: boolean
-    w12?: boolean
-    w14?: boolean
-    w16?: boolean
-    w20?: boolean
-    w24?: boolean
-    w28?: boolean
-    w32?: boolean
-    w36?: boolean
-    w40?: boolean
-    w44?: boolean
-    w48?: boolean
-    w52?: boolean
-    w56?: boolean
-    w60?: boolean
-    w64?: boolean
-    w72?: boolean
-    w80?: boolean
-    w96?: boolean
-
-    /**
-     * Set height
-     *
+     * set width to 0
+     * ```css
+     * {
+     *   width: 0px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box h-10></Box>
+     * <Box w0></Box>
+     * ```
+     */
+    w0?: ResponsiveBoolean
+    /**
+     * set width to 4
+     * ```css
+     * {
+     *   width: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w1></Box>
+     * ```
+     */
+    w1?: ResponsiveBoolean
+    /**
+     * set width to 8
+     * ```css
+     * {
+     *   width: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w2></Box>
+     * ```
+     */
+    w2?: ResponsiveBoolean
+    /**
+     * set width to 12
+     * ```css
+     * {
+     *   width: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w3></Box>
+     * ```
+     */
+    w3?: ResponsiveBoolean
+    /**
+     * set width to 16
+     * ```css
+     * {
+     *   width: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w4></Box>
+     * ```
+     */
+    w4?: ResponsiveBoolean
+    /**
+     * set width to 20
+     * ```css
+     * {
+     *   width: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w5></Box>
+     * ```
+     */
+    w5?: ResponsiveBoolean
+    /**
+     * set width to 24
+     * ```css
+     * {
+     *   width: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w6></Box>
+     * ```
+     */
+    w6?: ResponsiveBoolean
+    /**
+     * set width to 28
+     * ```css
+     * {
+     *   width: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w7></Box>
+     * ```
+     */
+    w7?: ResponsiveBoolean
+    /**
+     * set width to 32
+     * ```css
+     * {
+     *   width: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w8></Box>
+     * ```
+     */
+    w8?: ResponsiveBoolean
+    /**
+     * set width to 36
+     * ```css
+     * {
+     *   width: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w9></Box>
+     * ```
+     */
+    w9?: ResponsiveBoolean
+    /**
+     * set width to 40
+     * ```css
+     * {
+     *   width: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w10></Box>
+     * ```
+     */
+    w10?: ResponsiveBoolean
+    /**
+     * set width to 44
+     * ```css
+     * {
+     *   width: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w11></Box>
+     * ```
+     */
+    w11?: ResponsiveBoolean
+    /**
+     * set width to 48
+     * ```css
+     * {
+     *   width: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w12></Box>
+     * ```
+     */
+    w12?: ResponsiveBoolean
+    /**
+     * set width to 56
+     * ```css
+     * {
+     *   width: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w14></Box>
+     * ```
+     */
+    w14?: ResponsiveBoolean
+    /**
+     * set width to 64
+     * ```css
+     * {
+     *   width: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w16></Box>
+     * ```
+     */
+    w16?: ResponsiveBoolean
+    /**
+     * set width to 80
+     * ```css
+     * {
+     *   width: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w20></Box>
+     * ```
+     */
+    w20?: ResponsiveBoolean
+    /**
+     * set width to 96
+     * ```css
+     * {
+     *   width: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w24></Box>
+     * ```
+     */
+    w24?: ResponsiveBoolean
+    /**
+     * set width to 112
+     * ```css
+     * {
+     *   width: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w28></Box>
+     * ```
+     */
+    w28?: ResponsiveBoolean
+    /**
+     * set width to 128
+     * ```css
+     * {
+     *   width: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w32></Box>
+     * ```
+     */
+    w32?: ResponsiveBoolean
+    /**
+     * set width to 144
+     * ```css
+     * {
+     *   width: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w36></Box>
+     * ```
+     */
+    w36?: ResponsiveBoolean
+    /**
+     * set width to 160
+     * ```css
+     * {
+     *   width: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w40></Box>
+     * ```
+     */
+    w40?: ResponsiveBoolean
+    /**
+     * set width to 176
+     * ```css
+     * {
+     *   width: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w44></Box>
+     * ```
+     */
+    w44?: ResponsiveBoolean
+    /**
+     * set width to 192
+     * ```css
+     * {
+     *   width: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w48></Box>
+     * ```
+     */
+    w48?: ResponsiveBoolean
+    /**
+     * set width to 208
+     * ```css
+     * {
+     *   width: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w52></Box>
+     * ```
+     */
+    w52?: ResponsiveBoolean
+    /**
+     * set width to 224
+     * ```css
+     * {
+     *   width: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w56></Box>
+     * ```
+     */
+    w56?: ResponsiveBoolean
+    /**
+     * set width to 240
+     * ```css
+     * {
+     *   width: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w60></Box>
+     * ```
+     */
+    w60?: ResponsiveBoolean
+    /**
+     * set width to 256
+     * ```css
+     * {
+     *   width: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w64></Box>
+     * ```
+     */
+    w64?: ResponsiveBoolean
+    /**
+     * set width to 288
+     * ```css
+     * {
+     *   width: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w72></Box>
+     * ```
+     */
+    w72?: ResponsiveBoolean
+    /**
+     * set width to 320
+     * ```css
+     * {
+     *   width: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w80></Box>
+     * ```
+     */
+    w80?: ResponsiveBoolean
+    /**
+     * set width to 384
+     * ```css
+     * {
+     *   width: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box w96></Box>
+     * ```
+     */
+    w96?: ResponsiveBoolean
+    /**
+     * set height to some value
+     * ```css
+     * {
+     *   height: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h-8></Box>
      * <Box h-1rem></Box>
-     * <Box h-10p></Box>
-     * <Box h={10}></Box>
-     * <Box h="10px 4px"></Box>
+     * <Box h-4px></Box>
+     * <Box h={8}></Box>
      * <Box h={a + b}></Box>
      * ```
      */
-    h?: PropValue
-
+    h?: ResponsiveValue<string | number>
     /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h0 is `height: 0px`
-     */
-    h0?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h1 is `height: 4px`
-     */
-    h1?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h2 is `height: 8px`
-     */
-    h2?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h3 is `height: 12px`
-     */
-    h3?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h4 is `height: 16px`
-     */
-    h4?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h5 is `height: 20px`
-     */
-    h5?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h6 is `height: 24px`
-     */
-    h6?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h7 is `height: 28px`
-     */
-    h7?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h8 is `height: 32px`
-     */
-    h8?: boolean
-
-    /**
-     * Set height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * h9 is `height: 36px`
-     */
-    h9?: boolean
-    h10?: boolean
-    h11?: boolean
-    h12?: boolean
-    h14?: boolean
-    h16?: boolean
-    h20?: boolean
-    h24?: boolean
-    h28?: boolean
-    h32?: boolean
-    h36?: boolean
-    h40?: boolean
-    h44?: boolean
-    h48?: boolean
-    h52?: boolean
-    h56?: boolean
-    h60?: boolean
-    h64?: boolean
-    h72?: boolean
-    h80?: boolean
-    h96?: boolean
-
-    /**
-     * Set square size
-     *
-     * square-10 is `width: 10px; height: 10px;`
-     *
+     * set height to 0
+     * ```css
+     * {
+     *   height: 0px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box square-10></Box>
-     * <Box square-1rem></Box>
-     * <Box square-10p></Box>
-     * <Box square={a + b}></Box>
+     * <Box h0></Box>
      * ```
      */
-    square?: PropValue
-
+    h0?: ResponsiveBoolean
     /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s0 is `width: 0px; height: 0px`
-     */
-    square0?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s1 is `width:4px; height: 4px`
-     */
-    square1?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s2 is `width:8px; height: 8px`
-     */
-    square2?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s3 is `width:12px; height: 12px`
-     */
-    square3?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s4 is `width:16px; height: 16px`
-     */
-    square4?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s5 is `width:20px; height: 20px`
-     */
-    square5?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s6 is `width:24px; height: 24px`
-     */
-    square6?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s7 is `width:28px; height: 28px`
-     */
-    square7?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s8 is `width:32px; height: 32px`
-     */
-    square8?: boolean
-
-    /**
-     * Set size
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * s9 is `width:36px; height: 36px`
-     */
-    square9?: boolean
-    square10?: boolean
-    square11?: boolean
-    square12?: boolean
-    square14?: boolean
-    square16?: boolean
-    square20?: boolean
-    square24?: boolean
-    square28?: boolean
-    square32?: boolean
-    square36?: boolean
-    square40?: boolean
-    square44?: boolean
-    square48?: boolean
-    square52?: boolean
-    square56?: boolean
-    square60?: boolean
-    square64?: boolean
-    square72?: boolean
-    square80?: boolean
-    square96?: boolean
-
-    /**
-     * Set circle
-     *
-     * circle-10 is `width: 10px; height: 10px; border-radius: 10px`
-     *
+     * set height to 4
+     * ```css
+     * {
+     *   height: 4px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box circle-10></Box>
-     * <Box circle-1rem></Box>
-     * <Box circle-10p></Box>
-     * <Box circle={a + b}></Box>
+     * <Box h1></Box>
      * ```
      */
-    circle?: PropValue
-
+    h1?: ResponsiveBoolean
     /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle0 is `width: 0px; height: 0px; border-radius: 0px`
-     */
-    circle0?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle1 is `width:4px; height: 4px; border-radius: 4px`
-     */
-    circle1?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle2 is `width:8px; height: 8px; border-radius: 8px`
-     */
-    circle2?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle3 is `width:12px; height: 12px; border-radius: 12px`
-     */
-    circle3?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle4 is `width:16px; height: 16px; border-radius: 16px`
-     */
-    circle4?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle5 is `width:20px; height: 20px; border-radius: 20px`
-     */
-    circle5?: boolean
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle6 is `width:24px; height: 24px; border-radius: 24px`
-     */
-    circle6?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle7 is `width:28px; height: 28px; border-radius: 28px`
-     */
-    circle7?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle8 is `width:32px; height: 32px; border-radius: 32px`
-     */
-    circle8?: boolean
-
-    /**
-     * Set circle
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * circle9 is `width:36px; height: 36px; border-radius: 36px`
-     */
-    circle9?: boolean
-
-    circle10?: boolean
-    circle11?: boolean
-    circle12?: boolean
-    circle14?: boolean
-    circle16?: boolean
-    circle20?: boolean
-    circle24?: boolean
-    circle28?: boolean
-    circle32?: boolean
-    circle36?: boolean
-    circle40?: boolean
-    circle44?: boolean
-    circle48?: boolean
-    circle52?: boolean
-    circle56?: boolean
-    circle60?: boolean
-    circle64?: boolean
-    circle72?: boolean
-    circle80?: boolean
-    circle96?: boolean
-
-    /**
-     * Set minWidth
-     *
+     * set height to 8
+     * ```css
+     * {
+     *   height: 8px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box minW-10></Box>
-     * <Box minW-1rem></Box>
-     * <Box minW-10p></Box>
-     * <Box minW={10}></Box>
-     * <Box minW="10px 4px"></Box>
-     * <Box minW={a + b}></Box>
+     * <Box h2></Box>
      * ```
      */
-    minW?: PropValue
-
+    h2?: ResponsiveBoolean
     /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW0 is `min-width: 0px`
-     */
-    minW0?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW1 is `min-width:4px`
-     */
-    minW1?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW2 is `min-width:8px`
-     */
-    minW2?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW3 is `min-width:12px`
-     */
-    minW3?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW4 is `min-width:16px`
-     */
-    minW4?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW5 is `min-width:20px`
-     */
-    minW5?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW6 is `min-width:24px`
-     */
-    minW6?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW7 is `min-width:28px`
-     */
-    minW7?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW8 is `min-width:32px`
-     */
-    minW8?: boolean
-
-    /**
-     * Set minWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minW9 is `min-width:36px`
-     */
-    minW9?: boolean
-    minW10?: boolean
-    minW11?: boolean
-    minW12?: boolean
-    minW14?: boolean
-    minW16?: boolean
-    minW20?: boolean
-    minW24?: boolean
-    minW28?: boolean
-    minW32?: boolean
-    minW36?: boolean
-    minW40?: boolean
-    minW44?: boolean
-    minW48?: boolean
-    minW52?: boolean
-    minW56?: boolean
-    minW60?: boolean
-    minW64?: boolean
-    minW72?: boolean
-    minW80?: boolean
-    minW96?: boolean
-
-    /**
-     * Set maxHeight
-     *
+     * set height to 12
+     * ```css
+     * {
+     *   height: 12px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box maxW-10></Box>
-     * <Box maxW-1rem></Box>
-     * <Box maxW-10p></Box>
-     * <Box maxW={10}></Box>
-     * <Box maxW="10px 4px"></Box>
-     * <Box maxW={a + b}></Box>
+     * <Box h3></Box>
      * ```
      */
-    maxW?: PropValue
-
+    h3?: ResponsiveBoolean
     /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW0 is `max-width: 0px`
-     */
-    maxW0?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW1 is `max-width: 4px`
-     */
-    maxW1?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW2 is `max-width: 8px`
-     */
-    maxW2?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW3 is `max-width: 12px`
-     */
-    maxW3?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW4 is `max-width: 16px`
-     */
-    maxW4?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW5 is `max-width: 20px`
-     */
-    maxW5?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW6 is `max-width: 24px`
-     */
-    maxW6?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW7 is `max-width: 28px`
-     */
-    maxW7?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW8 is `max-width: 32px`
-     */
-    maxW8?: boolean
-
-    /**
-     * Set maxWidth
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxW9 is `max-width: 36px`
-     */
-    maxW9?: boolean
-    maxW10?: boolean
-    maxW11?: boolean
-    maxW12?: boolean
-    maxW14?: boolean
-    maxW16?: boolean
-    maxW20?: boolean
-    maxW24?: boolean
-    maxW28?: boolean
-    maxW32?: boolean
-    maxW36?: boolean
-    maxW40?: boolean
-    maxW44?: boolean
-    maxW48?: boolean
-    maxW52?: boolean
-    maxW56?: boolean
-    maxW60?: boolean
-    maxW64?: boolean
-    maxW72?: boolean
-    maxW80?: boolean
-    maxW96?: boolean
-
-    /**
-     * Set min-height
-     *
+     * set height to 16
+     * ```css
+     * {
+     *   height: 16px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box minH-10></Box>
-     * <Box minH-1rem></Box>
-     * <Box minH-10p></Box>
-     * <Box minH={10}></Box>
-     * <Box minH="10px 4px"></Box>
-     * <Box minH={a + b}></Box>
+     * <Box h4></Box>
      * ```
      */
-    minH?: PropValue
-
+    h4?: ResponsiveBoolean
     /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH0 is `min-height: 0px`
-     */
-    minH0?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH1 is `min-height: 4px`
-     */
-    minH1?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH2 is `min-height: 8px`
-     */
-    minH2?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH3 is `min-height: 12px`
-     */
-    minH3?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH4 is `min-height: 16px`
-     */
-    minH4?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH5 is `min-height: 20px`
-     */
-    minH5?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH6 is `min-height: 24px`
-     */
-    minH6?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH7 is `min-height: 28px`
-     */
-    minH7?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH8 is `min-height: 32px`
-     */
-    minH8?: boolean
-
-    /**
-     * Set min-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * minH9 is `min-height: 36px`
-     */
-    minH9?: boolean
-    minH10?: boolean
-    minH11?: boolean
-    minH12?: boolean
-    minH14?: boolean
-    minH16?: boolean
-    minH20?: boolean
-    minH24?: boolean
-    minH28?: boolean
-    minH32?: boolean
-    minH36?: boolean
-    minH40?: boolean
-    minH44?: boolean
-    minH48?: boolean
-    minH52?: boolean
-    minH56?: boolean
-    minH60?: boolean
-    minH64?: boolean
-    minH72?: boolean
-    minH80?: boolean
-    minH96?: boolean
-
-    /**
-     * Set max-height
-     *
+     * set height to 20
+     * ```css
+     * {
+     *   height: 20px;
+     * }
+     * ```
      * @example
      * ```tsx
-     * <Box maxH-10></Box>
+     * <Box h5></Box>
+     * ```
+     */
+    h5?: ResponsiveBoolean
+    /**
+     * set height to 24
+     * ```css
+     * {
+     *   height: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h6></Box>
+     * ```
+     */
+    h6?: ResponsiveBoolean
+    /**
+     * set height to 28
+     * ```css
+     * {
+     *   height: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h7></Box>
+     * ```
+     */
+    h7?: ResponsiveBoolean
+    /**
+     * set height to 32
+     * ```css
+     * {
+     *   height: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h8></Box>
+     * ```
+     */
+    h8?: ResponsiveBoolean
+    /**
+     * set height to 36
+     * ```css
+     * {
+     *   height: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h9></Box>
+     * ```
+     */
+    h9?: ResponsiveBoolean
+    /**
+     * set height to 40
+     * ```css
+     * {
+     *   height: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h10></Box>
+     * ```
+     */
+    h10?: ResponsiveBoolean
+    /**
+     * set height to 44
+     * ```css
+     * {
+     *   height: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h11></Box>
+     * ```
+     */
+    h11?: ResponsiveBoolean
+    /**
+     * set height to 48
+     * ```css
+     * {
+     *   height: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h12></Box>
+     * ```
+     */
+    h12?: ResponsiveBoolean
+    /**
+     * set height to 56
+     * ```css
+     * {
+     *   height: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h14></Box>
+     * ```
+     */
+    h14?: ResponsiveBoolean
+    /**
+     * set height to 64
+     * ```css
+     * {
+     *   height: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h16></Box>
+     * ```
+     */
+    h16?: ResponsiveBoolean
+    /**
+     * set height to 80
+     * ```css
+     * {
+     *   height: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h20></Box>
+     * ```
+     */
+    h20?: ResponsiveBoolean
+    /**
+     * set height to 96
+     * ```css
+     * {
+     *   height: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h24></Box>
+     * ```
+     */
+    h24?: ResponsiveBoolean
+    /**
+     * set height to 112
+     * ```css
+     * {
+     *   height: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h28></Box>
+     * ```
+     */
+    h28?: ResponsiveBoolean
+    /**
+     * set height to 128
+     * ```css
+     * {
+     *   height: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h32></Box>
+     * ```
+     */
+    h32?: ResponsiveBoolean
+    /**
+     * set height to 144
+     * ```css
+     * {
+     *   height: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h36></Box>
+     * ```
+     */
+    h36?: ResponsiveBoolean
+    /**
+     * set height to 160
+     * ```css
+     * {
+     *   height: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h40></Box>
+     * ```
+     */
+    h40?: ResponsiveBoolean
+    /**
+     * set height to 176
+     * ```css
+     * {
+     *   height: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h44></Box>
+     * ```
+     */
+    h44?: ResponsiveBoolean
+    /**
+     * set height to 192
+     * ```css
+     * {
+     *   height: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h48></Box>
+     * ```
+     */
+    h48?: ResponsiveBoolean
+    /**
+     * set height to 208
+     * ```css
+     * {
+     *   height: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h52></Box>
+     * ```
+     */
+    h52?: ResponsiveBoolean
+    /**
+     * set height to 224
+     * ```css
+     * {
+     *   height: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h56></Box>
+     * ```
+     */
+    h56?: ResponsiveBoolean
+    /**
+     * set height to 240
+     * ```css
+     * {
+     *   height: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h60></Box>
+     * ```
+     */
+    h60?: ResponsiveBoolean
+    /**
+     * set height to 256
+     * ```css
+     * {
+     *   height: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h64></Box>
+     * ```
+     */
+    h64?: ResponsiveBoolean
+    /**
+     * set height to 288
+     * ```css
+     * {
+     *   height: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h72></Box>
+     * ```
+     */
+    h72?: ResponsiveBoolean
+    /**
+     * set height to 320
+     * ```css
+     * {
+     *   height: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h80></Box>
+     * ```
+     */
+    h80?: ResponsiveBoolean
+    /**
+     * set height to 384
+     * ```css
+     * {
+     *   height: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box h96></Box>
+     * ```
+     */
+    h96?: ResponsiveBoolean
+    /**
+     * set max-height to some value
+     * ```css
+     * {
+     *   max-height: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH-8></Box>
      * <Box maxH-1rem></Box>
-     * <Box maxH-10p></Box>
-     * <Box maxH={10}></Box>
-     * <Box maxH="10px 4px"></Box>
+     * <Box maxH-4px></Box>
+     * <Box maxH={8}></Box>
      * <Box maxH={a + b}></Box>
      * ```
      */
-    maxH?: PropValue
-
+    maxH?: ResponsiveValue<string | number>
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH0 is `max-height: 0px`
+     * set max-height to 0
+     * ```css
+     * {
+     *   max-height: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH0></Box>
+     * ```
      */
-    maxH0?: boolean
-
+    maxH0?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH1 is `max-height: 4px`
+     * set max-height to 4
+     * ```css
+     * {
+     *   max-height: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH1></Box>
+     * ```
      */
-    maxH1?: boolean
-
+    maxH1?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH2 is `max-height: 8px`
+     * set max-height to 8
+     * ```css
+     * {
+     *   max-height: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH2></Box>
+     * ```
      */
-    maxH2?: boolean
-
+    maxH2?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH3 is `max-height: 12px`
+     * set max-height to 12
+     * ```css
+     * {
+     *   max-height: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH3></Box>
+     * ```
      */
-    maxH3?: boolean
-
+    maxH3?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH4 is `max-height: 16px`
+     * set max-height to 16
+     * ```css
+     * {
+     *   max-height: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH4></Box>
+     * ```
      */
-    maxH4?: boolean
-
+    maxH4?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH5 is `max-height: 20px`
+     * set max-height to 20
+     * ```css
+     * {
+     *   max-height: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH5></Box>
+     * ```
      */
-    maxH5?: boolean
-
+    maxH5?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH6 is `max-height: 24px`
+     * set max-height to 24
+     * ```css
+     * {
+     *   max-height: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH6></Box>
+     * ```
      */
-    maxH6?: boolean
-
+    maxH6?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH7 is `max-height: 28px`
+     * set max-height to 28
+     * ```css
+     * {
+     *   max-height: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH7></Box>
+     * ```
      */
-    maxH7?: boolean
-
+    maxH7?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH8 is `max-height: 32px`
+     * set max-height to 32
+     * ```css
+     * {
+     *   max-height: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH8></Box>
+     * ```
      */
-    maxH8?: boolean
-
+    maxH8?: ResponsiveBoolean
     /**
-     * Set max-height
-     *
-     * NOTE: Theme restrict.
-
-     *
-     * maxH9 is `max-height: 36px`
+     * set max-height to 36
+     * ```css
+     * {
+     *   max-height: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH9></Box>
+     * ```
      */
-    maxH9?: boolean
-    maxH10?: boolean
-    maxH11?: boolean
-    maxH12?: boolean
-    maxH14?: boolean
-    maxH16?: boolean
-    maxH20?: boolean
-    maxH24?: boolean
-    maxH28?: boolean
-    maxH32?: boolean
-    maxH36?: boolean
-    maxH40?: boolean
-    maxH44?: boolean
-    maxH48?: boolean
-    maxH52?: boolean
-    maxH56?: boolean
-    maxH60?: boolean
-    maxH64?: boolean
-    maxH72?: boolean
-    maxH80?: boolean
-    maxH96?: boolean
+    maxH9?: ResponsiveBoolean
+    /**
+     * set max-height to 40
+     * ```css
+     * {
+     *   max-height: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH10></Box>
+     * ```
+     */
+    maxH10?: ResponsiveBoolean
+    /**
+     * set max-height to 44
+     * ```css
+     * {
+     *   max-height: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH11></Box>
+     * ```
+     */
+    maxH11?: ResponsiveBoolean
+    /**
+     * set max-height to 48
+     * ```css
+     * {
+     *   max-height: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH12></Box>
+     * ```
+     */
+    maxH12?: ResponsiveBoolean
+    /**
+     * set max-height to 56
+     * ```css
+     * {
+     *   max-height: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH14></Box>
+     * ```
+     */
+    maxH14?: ResponsiveBoolean
+    /**
+     * set max-height to 64
+     * ```css
+     * {
+     *   max-height: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH16></Box>
+     * ```
+     */
+    maxH16?: ResponsiveBoolean
+    /**
+     * set max-height to 80
+     * ```css
+     * {
+     *   max-height: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH20></Box>
+     * ```
+     */
+    maxH20?: ResponsiveBoolean
+    /**
+     * set max-height to 96
+     * ```css
+     * {
+     *   max-height: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH24></Box>
+     * ```
+     */
+    maxH24?: ResponsiveBoolean
+    /**
+     * set max-height to 112
+     * ```css
+     * {
+     *   max-height: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH28></Box>
+     * ```
+     */
+    maxH28?: ResponsiveBoolean
+    /**
+     * set max-height to 128
+     * ```css
+     * {
+     *   max-height: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH32></Box>
+     * ```
+     */
+    maxH32?: ResponsiveBoolean
+    /**
+     * set max-height to 144
+     * ```css
+     * {
+     *   max-height: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH36></Box>
+     * ```
+     */
+    maxH36?: ResponsiveBoolean
+    /**
+     * set max-height to 160
+     * ```css
+     * {
+     *   max-height: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH40></Box>
+     * ```
+     */
+    maxH40?: ResponsiveBoolean
+    /**
+     * set max-height to 176
+     * ```css
+     * {
+     *   max-height: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH44></Box>
+     * ```
+     */
+    maxH44?: ResponsiveBoolean
+    /**
+     * set max-height to 192
+     * ```css
+     * {
+     *   max-height: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH48></Box>
+     * ```
+     */
+    maxH48?: ResponsiveBoolean
+    /**
+     * set max-height to 208
+     * ```css
+     * {
+     *   max-height: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH52></Box>
+     * ```
+     */
+    maxH52?: ResponsiveBoolean
+    /**
+     * set max-height to 224
+     * ```css
+     * {
+     *   max-height: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH56></Box>
+     * ```
+     */
+    maxH56?: ResponsiveBoolean
+    /**
+     * set max-height to 240
+     * ```css
+     * {
+     *   max-height: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH60></Box>
+     * ```
+     */
+    maxH60?: ResponsiveBoolean
+    /**
+     * set max-height to 256
+     * ```css
+     * {
+     *   max-height: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH64></Box>
+     * ```
+     */
+    maxH64?: ResponsiveBoolean
+    /**
+     * set max-height to 288
+     * ```css
+     * {
+     *   max-height: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH72></Box>
+     * ```
+     */
+    maxH72?: ResponsiveBoolean
+    /**
+     * set max-height to 320
+     * ```css
+     * {
+     *   max-height: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH80></Box>
+     * ```
+     */
+    maxH80?: ResponsiveBoolean
+    /**
+     * set max-height to 384
+     * ```css
+     * {
+     *   max-height: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxH96></Box>
+     * ```
+     */
+    maxH96?: ResponsiveBoolean
+    /**
+     * set max-width to some value
+     * ```css
+     * {
+     *   max-width: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW-8></Box>
+     * <Box maxW-1rem></Box>
+     * <Box maxW-4px></Box>
+     * <Box maxW={8}></Box>
+     * <Box maxW={a + b}></Box>
+     * ```
+     */
+    maxW?: ResponsiveValue<string | number>
+    /**
+     * set max-width to 0
+     * ```css
+     * {
+     *   max-width: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW0></Box>
+     * ```
+     */
+    maxW0?: ResponsiveBoolean
+    /**
+     * set max-width to 4
+     * ```css
+     * {
+     *   max-width: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW1></Box>
+     * ```
+     */
+    maxW1?: ResponsiveBoolean
+    /**
+     * set max-width to 8
+     * ```css
+     * {
+     *   max-width: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW2></Box>
+     * ```
+     */
+    maxW2?: ResponsiveBoolean
+    /**
+     * set max-width to 12
+     * ```css
+     * {
+     *   max-width: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW3></Box>
+     * ```
+     */
+    maxW3?: ResponsiveBoolean
+    /**
+     * set max-width to 16
+     * ```css
+     * {
+     *   max-width: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW4></Box>
+     * ```
+     */
+    maxW4?: ResponsiveBoolean
+    /**
+     * set max-width to 20
+     * ```css
+     * {
+     *   max-width: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW5></Box>
+     * ```
+     */
+    maxW5?: ResponsiveBoolean
+    /**
+     * set max-width to 24
+     * ```css
+     * {
+     *   max-width: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW6></Box>
+     * ```
+     */
+    maxW6?: ResponsiveBoolean
+    /**
+     * set max-width to 28
+     * ```css
+     * {
+     *   max-width: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW7></Box>
+     * ```
+     */
+    maxW7?: ResponsiveBoolean
+    /**
+     * set max-width to 32
+     * ```css
+     * {
+     *   max-width: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW8></Box>
+     * ```
+     */
+    maxW8?: ResponsiveBoolean
+    /**
+     * set max-width to 36
+     * ```css
+     * {
+     *   max-width: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW9></Box>
+     * ```
+     */
+    maxW9?: ResponsiveBoolean
+    /**
+     * set max-width to 40
+     * ```css
+     * {
+     *   max-width: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW10></Box>
+     * ```
+     */
+    maxW10?: ResponsiveBoolean
+    /**
+     * set max-width to 44
+     * ```css
+     * {
+     *   max-width: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW11></Box>
+     * ```
+     */
+    maxW11?: ResponsiveBoolean
+    /**
+     * set max-width to 48
+     * ```css
+     * {
+     *   max-width: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW12></Box>
+     * ```
+     */
+    maxW12?: ResponsiveBoolean
+    /**
+     * set max-width to 56
+     * ```css
+     * {
+     *   max-width: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW14></Box>
+     * ```
+     */
+    maxW14?: ResponsiveBoolean
+    /**
+     * set max-width to 64
+     * ```css
+     * {
+     *   max-width: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW16></Box>
+     * ```
+     */
+    maxW16?: ResponsiveBoolean
+    /**
+     * set max-width to 80
+     * ```css
+     * {
+     *   max-width: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW20></Box>
+     * ```
+     */
+    maxW20?: ResponsiveBoolean
+    /**
+     * set max-width to 96
+     * ```css
+     * {
+     *   max-width: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW24></Box>
+     * ```
+     */
+    maxW24?: ResponsiveBoolean
+    /**
+     * set max-width to 112
+     * ```css
+     * {
+     *   max-width: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW28></Box>
+     * ```
+     */
+    maxW28?: ResponsiveBoolean
+    /**
+     * set max-width to 128
+     * ```css
+     * {
+     *   max-width: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW32></Box>
+     * ```
+     */
+    maxW32?: ResponsiveBoolean
+    /**
+     * set max-width to 144
+     * ```css
+     * {
+     *   max-width: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW36></Box>
+     * ```
+     */
+    maxW36?: ResponsiveBoolean
+    /**
+     * set max-width to 160
+     * ```css
+     * {
+     *   max-width: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW40></Box>
+     * ```
+     */
+    maxW40?: ResponsiveBoolean
+    /**
+     * set max-width to 176
+     * ```css
+     * {
+     *   max-width: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW44></Box>
+     * ```
+     */
+    maxW44?: ResponsiveBoolean
+    /**
+     * set max-width to 192
+     * ```css
+     * {
+     *   max-width: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW48></Box>
+     * ```
+     */
+    maxW48?: ResponsiveBoolean
+    /**
+     * set max-width to 208
+     * ```css
+     * {
+     *   max-width: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW52></Box>
+     * ```
+     */
+    maxW52?: ResponsiveBoolean
+    /**
+     * set max-width to 224
+     * ```css
+     * {
+     *   max-width: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW56></Box>
+     * ```
+     */
+    maxW56?: ResponsiveBoolean
+    /**
+     * set max-width to 240
+     * ```css
+     * {
+     *   max-width: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW60></Box>
+     * ```
+     */
+    maxW60?: ResponsiveBoolean
+    /**
+     * set max-width to 256
+     * ```css
+     * {
+     *   max-width: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW64></Box>
+     * ```
+     */
+    maxW64?: ResponsiveBoolean
+    /**
+     * set max-width to 288
+     * ```css
+     * {
+     *   max-width: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW72></Box>
+     * ```
+     */
+    maxW72?: ResponsiveBoolean
+    /**
+     * set max-width to 320
+     * ```css
+     * {
+     *   max-width: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW80></Box>
+     * ```
+     */
+    maxW80?: ResponsiveBoolean
+    /**
+     * set max-width to 384
+     * ```css
+     * {
+     *   max-width: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box maxW96></Box>
+     * ```
+     */
+    maxW96?: ResponsiveBoolean
+    /**
+     * set min-height to some value
+     * ```css
+     * {
+     *   min-height: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH-8></Box>
+     * <Box minH-1rem></Box>
+     * <Box minH-4px></Box>
+     * <Box minH={8}></Box>
+     * <Box minH={a + b}></Box>
+     * ```
+     */
+    minH?: ResponsiveValue<string | number>
+    /**
+     * set min-height to 0
+     * ```css
+     * {
+     *   min-height: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH0></Box>
+     * ```
+     */
+    minH0?: ResponsiveBoolean
+    /**
+     * set min-height to 4
+     * ```css
+     * {
+     *   min-height: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH1></Box>
+     * ```
+     */
+    minH1?: ResponsiveBoolean
+    /**
+     * set min-height to 8
+     * ```css
+     * {
+     *   min-height: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH2></Box>
+     * ```
+     */
+    minH2?: ResponsiveBoolean
+    /**
+     * set min-height to 12
+     * ```css
+     * {
+     *   min-height: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH3></Box>
+     * ```
+     */
+    minH3?: ResponsiveBoolean
+    /**
+     * set min-height to 16
+     * ```css
+     * {
+     *   min-height: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH4></Box>
+     * ```
+     */
+    minH4?: ResponsiveBoolean
+    /**
+     * set min-height to 20
+     * ```css
+     * {
+     *   min-height: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH5></Box>
+     * ```
+     */
+    minH5?: ResponsiveBoolean
+    /**
+     * set min-height to 24
+     * ```css
+     * {
+     *   min-height: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH6></Box>
+     * ```
+     */
+    minH6?: ResponsiveBoolean
+    /**
+     * set min-height to 28
+     * ```css
+     * {
+     *   min-height: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH7></Box>
+     * ```
+     */
+    minH7?: ResponsiveBoolean
+    /**
+     * set min-height to 32
+     * ```css
+     * {
+     *   min-height: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH8></Box>
+     * ```
+     */
+    minH8?: ResponsiveBoolean
+    /**
+     * set min-height to 36
+     * ```css
+     * {
+     *   min-height: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH9></Box>
+     * ```
+     */
+    minH9?: ResponsiveBoolean
+    /**
+     * set min-height to 40
+     * ```css
+     * {
+     *   min-height: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH10></Box>
+     * ```
+     */
+    minH10?: ResponsiveBoolean
+    /**
+     * set min-height to 44
+     * ```css
+     * {
+     *   min-height: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH11></Box>
+     * ```
+     */
+    minH11?: ResponsiveBoolean
+    /**
+     * set min-height to 48
+     * ```css
+     * {
+     *   min-height: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH12></Box>
+     * ```
+     */
+    minH12?: ResponsiveBoolean
+    /**
+     * set min-height to 56
+     * ```css
+     * {
+     *   min-height: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH14></Box>
+     * ```
+     */
+    minH14?: ResponsiveBoolean
+    /**
+     * set min-height to 64
+     * ```css
+     * {
+     *   min-height: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH16></Box>
+     * ```
+     */
+    minH16?: ResponsiveBoolean
+    /**
+     * set min-height to 80
+     * ```css
+     * {
+     *   min-height: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH20></Box>
+     * ```
+     */
+    minH20?: ResponsiveBoolean
+    /**
+     * set min-height to 96
+     * ```css
+     * {
+     *   min-height: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH24></Box>
+     * ```
+     */
+    minH24?: ResponsiveBoolean
+    /**
+     * set min-height to 112
+     * ```css
+     * {
+     *   min-height: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH28></Box>
+     * ```
+     */
+    minH28?: ResponsiveBoolean
+    /**
+     * set min-height to 128
+     * ```css
+     * {
+     *   min-height: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH32></Box>
+     * ```
+     */
+    minH32?: ResponsiveBoolean
+    /**
+     * set min-height to 144
+     * ```css
+     * {
+     *   min-height: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH36></Box>
+     * ```
+     */
+    minH36?: ResponsiveBoolean
+    /**
+     * set min-height to 160
+     * ```css
+     * {
+     *   min-height: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH40></Box>
+     * ```
+     */
+    minH40?: ResponsiveBoolean
+    /**
+     * set min-height to 176
+     * ```css
+     * {
+     *   min-height: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH44></Box>
+     * ```
+     */
+    minH44?: ResponsiveBoolean
+    /**
+     * set min-height to 192
+     * ```css
+     * {
+     *   min-height: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH48></Box>
+     * ```
+     */
+    minH48?: ResponsiveBoolean
+    /**
+     * set min-height to 208
+     * ```css
+     * {
+     *   min-height: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH52></Box>
+     * ```
+     */
+    minH52?: ResponsiveBoolean
+    /**
+     * set min-height to 224
+     * ```css
+     * {
+     *   min-height: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH56></Box>
+     * ```
+     */
+    minH56?: ResponsiveBoolean
+    /**
+     * set min-height to 240
+     * ```css
+     * {
+     *   min-height: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH60></Box>
+     * ```
+     */
+    minH60?: ResponsiveBoolean
+    /**
+     * set min-height to 256
+     * ```css
+     * {
+     *   min-height: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH64></Box>
+     * ```
+     */
+    minH64?: ResponsiveBoolean
+    /**
+     * set min-height to 288
+     * ```css
+     * {
+     *   min-height: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH72></Box>
+     * ```
+     */
+    minH72?: ResponsiveBoolean
+    /**
+     * set min-height to 320
+     * ```css
+     * {
+     *   min-height: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH80></Box>
+     * ```
+     */
+    minH80?: ResponsiveBoolean
+    /**
+     * set min-height to 384
+     * ```css
+     * {
+     *   min-height: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minH96></Box>
+     * ```
+     */
+    minH96?: ResponsiveBoolean
+    /**
+     * set min-width to some value
+     * ```css
+     * {
+     *   min-width: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW-8></Box>
+     * <Box minW-1rem></Box>
+     * <Box minW-4px></Box>
+     * <Box minW={8}></Box>
+     * <Box minW={a + b}></Box>
+     * ```
+     */
+    minW?: ResponsiveValue<string | number>
+    /**
+     * set min-width to 0
+     * ```css
+     * {
+     *   min-width: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW0></Box>
+     * ```
+     */
+    minW0?: ResponsiveBoolean
+    /**
+     * set min-width to 4
+     * ```css
+     * {
+     *   min-width: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW1></Box>
+     * ```
+     */
+    minW1?: ResponsiveBoolean
+    /**
+     * set min-width to 8
+     * ```css
+     * {
+     *   min-width: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW2></Box>
+     * ```
+     */
+    minW2?: ResponsiveBoolean
+    /**
+     * set min-width to 12
+     * ```css
+     * {
+     *   min-width: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW3></Box>
+     * ```
+     */
+    minW3?: ResponsiveBoolean
+    /**
+     * set min-width to 16
+     * ```css
+     * {
+     *   min-width: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW4></Box>
+     * ```
+     */
+    minW4?: ResponsiveBoolean
+    /**
+     * set min-width to 20
+     * ```css
+     * {
+     *   min-width: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW5></Box>
+     * ```
+     */
+    minW5?: ResponsiveBoolean
+    /**
+     * set min-width to 24
+     * ```css
+     * {
+     *   min-width: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW6></Box>
+     * ```
+     */
+    minW6?: ResponsiveBoolean
+    /**
+     * set min-width to 28
+     * ```css
+     * {
+     *   min-width: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW7></Box>
+     * ```
+     */
+    minW7?: ResponsiveBoolean
+    /**
+     * set min-width to 32
+     * ```css
+     * {
+     *   min-width: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW8></Box>
+     * ```
+     */
+    minW8?: ResponsiveBoolean
+    /**
+     * set min-width to 36
+     * ```css
+     * {
+     *   min-width: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW9></Box>
+     * ```
+     */
+    minW9?: ResponsiveBoolean
+    /**
+     * set min-width to 40
+     * ```css
+     * {
+     *   min-width: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW10></Box>
+     * ```
+     */
+    minW10?: ResponsiveBoolean
+    /**
+     * set min-width to 44
+     * ```css
+     * {
+     *   min-width: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW11></Box>
+     * ```
+     */
+    minW11?: ResponsiveBoolean
+    /**
+     * set min-width to 48
+     * ```css
+     * {
+     *   min-width: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW12></Box>
+     * ```
+     */
+    minW12?: ResponsiveBoolean
+    /**
+     * set min-width to 56
+     * ```css
+     * {
+     *   min-width: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW14></Box>
+     * ```
+     */
+    minW14?: ResponsiveBoolean
+    /**
+     * set min-width to 64
+     * ```css
+     * {
+     *   min-width: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW16></Box>
+     * ```
+     */
+    minW16?: ResponsiveBoolean
+    /**
+     * set min-width to 80
+     * ```css
+     * {
+     *   min-width: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW20></Box>
+     * ```
+     */
+    minW20?: ResponsiveBoolean
+    /**
+     * set min-width to 96
+     * ```css
+     * {
+     *   min-width: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW24></Box>
+     * ```
+     */
+    minW24?: ResponsiveBoolean
+    /**
+     * set min-width to 112
+     * ```css
+     * {
+     *   min-width: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW28></Box>
+     * ```
+     */
+    minW28?: ResponsiveBoolean
+    /**
+     * set min-width to 128
+     * ```css
+     * {
+     *   min-width: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW32></Box>
+     * ```
+     */
+    minW32?: ResponsiveBoolean
+    /**
+     * set min-width to 144
+     * ```css
+     * {
+     *   min-width: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW36></Box>
+     * ```
+     */
+    minW36?: ResponsiveBoolean
+    /**
+     * set min-width to 160
+     * ```css
+     * {
+     *   min-width: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW40></Box>
+     * ```
+     */
+    minW40?: ResponsiveBoolean
+    /**
+     * set min-width to 176
+     * ```css
+     * {
+     *   min-width: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW44></Box>
+     * ```
+     */
+    minW44?: ResponsiveBoolean
+    /**
+     * set min-width to 192
+     * ```css
+     * {
+     *   min-width: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW48></Box>
+     * ```
+     */
+    minW48?: ResponsiveBoolean
+    /**
+     * set min-width to 208
+     * ```css
+     * {
+     *   min-width: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW52></Box>
+     * ```
+     */
+    minW52?: ResponsiveBoolean
+    /**
+     * set min-width to 224
+     * ```css
+     * {
+     *   min-width: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW56></Box>
+     * ```
+     */
+    minW56?: ResponsiveBoolean
+    /**
+     * set min-width to 240
+     * ```css
+     * {
+     *   min-width: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW60></Box>
+     * ```
+     */
+    minW60?: ResponsiveBoolean
+    /**
+     * set min-width to 256
+     * ```css
+     * {
+     *   min-width: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW64></Box>
+     * ```
+     */
+    minW64?: ResponsiveBoolean
+    /**
+     * set min-width to 288
+     * ```css
+     * {
+     *   min-width: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW72></Box>
+     * ```
+     */
+    minW72?: ResponsiveBoolean
+    /**
+     * set min-width to 320
+     * ```css
+     * {
+     *   min-width: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW80></Box>
+     * ```
+     */
+    minW80?: ResponsiveBoolean
+    /**
+     * set min-width to 384
+     * ```css
+     * {
+     *   min-width: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box minW96></Box>
+     * ```
+     */
+    minW96?: ResponsiveBoolean
+    /**
+     * set width height to some value
+     * ```css
+     * {
+     *   width: $value;
+     *   height: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square-8></Box>
+     * <Box square-1rem></Box>
+     * <Box square-4px></Box>
+     * <Box square={8}></Box>
+     * <Box square={a + b}></Box>
+     * ```
+     */
+    square?: ResponsiveValue<string | number>
+    /**
+     * set width height to 0
+     * ```css
+     * {
+     *   width: 0px;
+     *   height: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square0></Box>
+     * ```
+     */
+    square0?: ResponsiveBoolean
+    /**
+     * set width height to 4
+     * ```css
+     * {
+     *   width: 4px;
+     *   height: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square1></Box>
+     * ```
+     */
+    square1?: ResponsiveBoolean
+    /**
+     * set width height to 8
+     * ```css
+     * {
+     *   width: 8px;
+     *   height: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square2></Box>
+     * ```
+     */
+    square2?: ResponsiveBoolean
+    /**
+     * set width height to 12
+     * ```css
+     * {
+     *   width: 12px;
+     *   height: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square3></Box>
+     * ```
+     */
+    square3?: ResponsiveBoolean
+    /**
+     * set width height to 16
+     * ```css
+     * {
+     *   width: 16px;
+     *   height: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square4></Box>
+     * ```
+     */
+    square4?: ResponsiveBoolean
+    /**
+     * set width height to 20
+     * ```css
+     * {
+     *   width: 20px;
+     *   height: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square5></Box>
+     * ```
+     */
+    square5?: ResponsiveBoolean
+    /**
+     * set width height to 24
+     * ```css
+     * {
+     *   width: 24px;
+     *   height: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square6></Box>
+     * ```
+     */
+    square6?: ResponsiveBoolean
+    /**
+     * set width height to 28
+     * ```css
+     * {
+     *   width: 28px;
+     *   height: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square7></Box>
+     * ```
+     */
+    square7?: ResponsiveBoolean
+    /**
+     * set width height to 32
+     * ```css
+     * {
+     *   width: 32px;
+     *   height: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square8></Box>
+     * ```
+     */
+    square8?: ResponsiveBoolean
+    /**
+     * set width height to 36
+     * ```css
+     * {
+     *   width: 36px;
+     *   height: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square9></Box>
+     * ```
+     */
+    square9?: ResponsiveBoolean
+    /**
+     * set width height to 40
+     * ```css
+     * {
+     *   width: 40px;
+     *   height: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square10></Box>
+     * ```
+     */
+    square10?: ResponsiveBoolean
+    /**
+     * set width height to 44
+     * ```css
+     * {
+     *   width: 44px;
+     *   height: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square11></Box>
+     * ```
+     */
+    square11?: ResponsiveBoolean
+    /**
+     * set width height to 48
+     * ```css
+     * {
+     *   width: 48px;
+     *   height: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square12></Box>
+     * ```
+     */
+    square12?: ResponsiveBoolean
+    /**
+     * set width height to 56
+     * ```css
+     * {
+     *   width: 56px;
+     *   height: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square14></Box>
+     * ```
+     */
+    square14?: ResponsiveBoolean
+    /**
+     * set width height to 64
+     * ```css
+     * {
+     *   width: 64px;
+     *   height: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square16></Box>
+     * ```
+     */
+    square16?: ResponsiveBoolean
+    /**
+     * set width height to 80
+     * ```css
+     * {
+     *   width: 80px;
+     *   height: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square20></Box>
+     * ```
+     */
+    square20?: ResponsiveBoolean
+    /**
+     * set width height to 96
+     * ```css
+     * {
+     *   width: 96px;
+     *   height: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square24></Box>
+     * ```
+     */
+    square24?: ResponsiveBoolean
+    /**
+     * set width height to 112
+     * ```css
+     * {
+     *   width: 112px;
+     *   height: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square28></Box>
+     * ```
+     */
+    square28?: ResponsiveBoolean
+    /**
+     * set width height to 128
+     * ```css
+     * {
+     *   width: 128px;
+     *   height: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square32></Box>
+     * ```
+     */
+    square32?: ResponsiveBoolean
+    /**
+     * set width height to 144
+     * ```css
+     * {
+     *   width: 144px;
+     *   height: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square36></Box>
+     * ```
+     */
+    square36?: ResponsiveBoolean
+    /**
+     * set width height to 160
+     * ```css
+     * {
+     *   width: 160px;
+     *   height: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square40></Box>
+     * ```
+     */
+    square40?: ResponsiveBoolean
+    /**
+     * set width height to 176
+     * ```css
+     * {
+     *   width: 176px;
+     *   height: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square44></Box>
+     * ```
+     */
+    square44?: ResponsiveBoolean
+    /**
+     * set width height to 192
+     * ```css
+     * {
+     *   width: 192px;
+     *   height: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square48></Box>
+     * ```
+     */
+    square48?: ResponsiveBoolean
+    /**
+     * set width height to 208
+     * ```css
+     * {
+     *   width: 208px;
+     *   height: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square52></Box>
+     * ```
+     */
+    square52?: ResponsiveBoolean
+    /**
+     * set width height to 224
+     * ```css
+     * {
+     *   width: 224px;
+     *   height: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square56></Box>
+     * ```
+     */
+    square56?: ResponsiveBoolean
+    /**
+     * set width height to 240
+     * ```css
+     * {
+     *   width: 240px;
+     *   height: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square60></Box>
+     * ```
+     */
+    square60?: ResponsiveBoolean
+    /**
+     * set width height to 256
+     * ```css
+     * {
+     *   width: 256px;
+     *   height: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square64></Box>
+     * ```
+     */
+    square64?: ResponsiveBoolean
+    /**
+     * set width height to 288
+     * ```css
+     * {
+     *   width: 288px;
+     *   height: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square72></Box>
+     * ```
+     */
+    square72?: ResponsiveBoolean
+    /**
+     * set width height to 320
+     * ```css
+     * {
+     *   width: 320px;
+     *   height: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square80></Box>
+     * ```
+     */
+    square80?: ResponsiveBoolean
+    /**
+     * set width height to 384
+     * ```css
+     * {
+     *   width: 384px;
+     *   height: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box square96></Box>
+     * ```
+     */
+    square96?: ResponsiveBoolean
+    /**
+     * set width height border-radius to some value
+     * ```css
+     * {
+     *   width: $value;
+     *   height: $value;
+     *   border-radius: $value;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle-8></Box>
+     * <Box circle-1rem></Box>
+     * <Box circle-4px></Box>
+     * <Box circle={8}></Box>
+     * <Box circle={a + b}></Box>
+     * ```
+     */
+    circle?: ResponsiveValue<string | number>
+    /**
+     * set width height border-radius to 0
+     * ```css
+     * {
+     *   width: 0px;
+     *   height: 0px;
+     *   border-radius: 0px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle0></Box>
+     * ```
+     */
+    circle0?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 4
+     * ```css
+     * {
+     *   width: 4px;
+     *   height: 4px;
+     *   border-radius: 4px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle1></Box>
+     * ```
+     */
+    circle1?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 8
+     * ```css
+     * {
+     *   width: 8px;
+     *   height: 8px;
+     *   border-radius: 8px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle2></Box>
+     * ```
+     */
+    circle2?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 12
+     * ```css
+     * {
+     *   width: 12px;
+     *   height: 12px;
+     *   border-radius: 12px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle3></Box>
+     * ```
+     */
+    circle3?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 16
+     * ```css
+     * {
+     *   width: 16px;
+     *   height: 16px;
+     *   border-radius: 16px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle4></Box>
+     * ```
+     */
+    circle4?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 20
+     * ```css
+     * {
+     *   width: 20px;
+     *   height: 20px;
+     *   border-radius: 20px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle5></Box>
+     * ```
+     */
+    circle5?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 24
+     * ```css
+     * {
+     *   width: 24px;
+     *   height: 24px;
+     *   border-radius: 24px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle6></Box>
+     * ```
+     */
+    circle6?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 28
+     * ```css
+     * {
+     *   width: 28px;
+     *   height: 28px;
+     *   border-radius: 28px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle7></Box>
+     * ```
+     */
+    circle7?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 32
+     * ```css
+     * {
+     *   width: 32px;
+     *   height: 32px;
+     *   border-radius: 32px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle8></Box>
+     * ```
+     */
+    circle8?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 36
+     * ```css
+     * {
+     *   width: 36px;
+     *   height: 36px;
+     *   border-radius: 36px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle9></Box>
+     * ```
+     */
+    circle9?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 40
+     * ```css
+     * {
+     *   width: 40px;
+     *   height: 40px;
+     *   border-radius: 40px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle10></Box>
+     * ```
+     */
+    circle10?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 44
+     * ```css
+     * {
+     *   width: 44px;
+     *   height: 44px;
+     *   border-radius: 44px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle11></Box>
+     * ```
+     */
+    circle11?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 48
+     * ```css
+     * {
+     *   width: 48px;
+     *   height: 48px;
+     *   border-radius: 48px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle12></Box>
+     * ```
+     */
+    circle12?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 56
+     * ```css
+     * {
+     *   width: 56px;
+     *   height: 56px;
+     *   border-radius: 56px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle14></Box>
+     * ```
+     */
+    circle14?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 64
+     * ```css
+     * {
+     *   width: 64px;
+     *   height: 64px;
+     *   border-radius: 64px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle16></Box>
+     * ```
+     */
+    circle16?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 80
+     * ```css
+     * {
+     *   width: 80px;
+     *   height: 80px;
+     *   border-radius: 80px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle20></Box>
+     * ```
+     */
+    circle20?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 96
+     * ```css
+     * {
+     *   width: 96px;
+     *   height: 96px;
+     *   border-radius: 96px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle24></Box>
+     * ```
+     */
+    circle24?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 112
+     * ```css
+     * {
+     *   width: 112px;
+     *   height: 112px;
+     *   border-radius: 112px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle28></Box>
+     * ```
+     */
+    circle28?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 128
+     * ```css
+     * {
+     *   width: 128px;
+     *   height: 128px;
+     *   border-radius: 128px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle32></Box>
+     * ```
+     */
+    circle32?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 144
+     * ```css
+     * {
+     *   width: 144px;
+     *   height: 144px;
+     *   border-radius: 144px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle36></Box>
+     * ```
+     */
+    circle36?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 160
+     * ```css
+     * {
+     *   width: 160px;
+     *   height: 160px;
+     *   border-radius: 160px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle40></Box>
+     * ```
+     */
+    circle40?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 176
+     * ```css
+     * {
+     *   width: 176px;
+     *   height: 176px;
+     *   border-radius: 176px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle44></Box>
+     * ```
+     */
+    circle44?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 192
+     * ```css
+     * {
+     *   width: 192px;
+     *   height: 192px;
+     *   border-radius: 192px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle48></Box>
+     * ```
+     */
+    circle48?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 208
+     * ```css
+     * {
+     *   width: 208px;
+     *   height: 208px;
+     *   border-radius: 208px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle52></Box>
+     * ```
+     */
+    circle52?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 224
+     * ```css
+     * {
+     *   width: 224px;
+     *   height: 224px;
+     *   border-radius: 224px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle56></Box>
+     * ```
+     */
+    circle56?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 240
+     * ```css
+     * {
+     *   width: 240px;
+     *   height: 240px;
+     *   border-radius: 240px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle60></Box>
+     * ```
+     */
+    circle60?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 256
+     * ```css
+     * {
+     *   width: 256px;
+     *   height: 256px;
+     *   border-radius: 256px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle64></Box>
+     * ```
+     */
+    circle64?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 288
+     * ```css
+     * {
+     *   width: 288px;
+     *   height: 288px;
+     *   border-radius: 288px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle72></Box>
+     * ```
+     */
+    circle72?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 320
+     * ```css
+     * {
+     *   width: 320px;
+     *   height: 320px;
+     *   border-radius: 320px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle80></Box>
+     * ```
+     */
+    circle80?: ResponsiveBoolean
+    /**
+     * set width height border-radius to 384
+     * ```css
+     * {
+     *   width: 384px;
+     *   height: 384px;
+     *   border-radius: 384px;
+     * }
+     * ```
+     * @example
+     * ```tsx
+     * <Box circle96></Box>
+     * ```
+     */
+    circle96?: ResponsiveBoolean
   }
 }

@@ -16,7 +16,8 @@ declare module '@fower/atomic-props' {
      * <Box display="flex"></Box>
      * <Box display="inline-block"></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     display?: ResponsiveValue<CSS.Property.Display>
     /**
@@ -28,7 +29,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box inline></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     inline?: ResponsiveBoolean
     /**
@@ -40,7 +42,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box inlineBlock></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     inlineBlock?: ResponsiveBoolean
     /**
@@ -52,7 +55,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box inlineFlex></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     inlineFlex?: ResponsiveBoolean
     /**
@@ -64,7 +68,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box block></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     block?: ResponsiveBoolean
     /**
@@ -76,7 +81,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box grid></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     grid?: ResponsiveBoolean
     /**
@@ -88,7 +94,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box table></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     table?: ResponsiveBoolean
     /**
@@ -100,7 +107,8 @@ declare module '@fower/atomic-props' {
      * ```tsx
      * <Box hidden></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
      */
     hidden?: ResponsiveBoolean
   }
