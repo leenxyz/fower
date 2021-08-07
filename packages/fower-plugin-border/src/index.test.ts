@@ -9,8 +9,8 @@ const parser = new Parser({})
 
 test('isMatch', () => {
   expect(isMatch!('border')).toEqual(true)
-  expect(isMatch!('borderT')).toEqual(true)
-  expect(isMatch!('borderTR')).toEqual(true)
+  expect(isMatch!('borderTop')).toEqual(true)
+  expect(isMatch!('borderTopRight')).toEqual(true)
   expect(isMatch!('borderRed400')).toEqual(true)
 })
 
@@ -47,10 +47,10 @@ test('border="none"', () => {
   expect(atom.style.border).toEqual('none')
 })
 
-test('borderT={2}', () => {
+test('borderTop={2}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'borderT',
+      propKey: 'borderTop',
       propValue: 2,
     }),
     parser,

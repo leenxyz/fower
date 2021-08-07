@@ -110,11 +110,6 @@ export class Parser {
         continue
       }
 
-      if (Array.isArray(propValue)) {
-        this.parseResponsiveValue(propKey, propValue)
-        continue
-      }
-
       /** handle _hover, _sm, _dark... */
       if (propKey.startsWith('_')) {
         const postfix = propKey.replace(/^_/, '')
@@ -137,6 +132,11 @@ export class Parser {
           })
           continue
         }
+      }
+
+      if (Array.isArray(propValue)) {
+        this.parseResponsiveValue(propKey, propValue)
+        continue
       }
 
       const composition = store.compositions.get(propKey)
