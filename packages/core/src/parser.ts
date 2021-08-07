@@ -135,8 +135,13 @@ export class Parser {
       }
 
       if (Array.isArray(propValue)) {
-        this.parseResponsiveValue(propKey, propValue)
-        continue
+        // TODO: hack for bgGradientX, bgGradientY
+        if (/^bgGradient[XY].*/i.test(propKey) && !Array.isArray(propValue[0])) {
+          // do nothing
+        } else {
+          this.parseResponsiveValue(propKey, propValue)
+          continue
+        }
       }
 
       const composition = store.compositions.get(propKey)

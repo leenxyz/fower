@@ -5,9 +5,9 @@ export default _default
 
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
-    bgGradientX?: false | FowerColor[]
+    bgGradientX?: ResponsiveValue<FowerColor[]>
 
-    bgGradientY?: false | FowerColor[]
+    bgGradientY?: ResponsiveValue<FowerColor[]>
 
     bgGradient?: ResponsiveValue<string>
   }
