@@ -1,6 +1,6 @@
 {
   "name": "@fower/styled",
-  "version": "1.46.0",
+  "version": "1.47.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,9 +24,9 @@
     "@types/hoist-non-react-statics": "^3.3.1"
   },
   "dependencies": {
-    "@fower/atomic-props": "^1.46.0",
-    "@fower/core": "^1.46.0",
-    "@fower/utils": "^1.46.0",
+    "@fower/atomic-props": "^1.47.0",
+    "@fower/core": "^1.47.0",
+    "@fower/utils": "^1.47.0",
     "hoist-non-react-statics": "^3.3.2"
   }
 }
