@@ -533,7 +533,8 @@ export class Parser {
     classNames = classNames.concat(filteredClassNames)
 
     if (this.hasResponsive) {
-      classNames.unshift(this.uniqueClassName)
+      const breakpoints: any = this.config.theme.breakpoints
+      classNames.push(...Object.keys(breakpoints).map((i) => `r-${i}`))
     }
 
     return classNames
@@ -566,13 +567,7 @@ export class Parser {
     const rules: string[] = []
     const breakpoints: any = this.config.theme.breakpoints
 
-    // sort responsive style
-    this.atoms = this.atoms.sort((a, b) => {
-      return (
-        parseInt(breakpoints[b.meta.breakpoint as string] || '0') -
-        parseInt(breakpoints[a.meta.breakpoint as string] || '0')
-      )
-    })
+    const breakpointKeys = Object.keys(breakpoints)
 
     for (const atom of this.atoms) {
       let rule: string = ''
@@ -594,23 +589,15 @@ export class Parser {
         parentClass,
       } = meta
 
-      // TODO: need refactor
-      const shouldUseUniqueClassName = !!this.atoms.find(
-        (i) => i.styleKeys === atom.styleKeys && (breakpoint || i.meta.breakpoint),
-      )
-      const uniqueSelector =
-        shouldUseUniqueClassName || breakpoint ? '.' + this.uniqueClassName : ''
-
       if (!enableInserted) {
-        if (!shouldUseUniqueClassName) {
-          if (atom.inserted) continue
-        }
+        if (atom.inserted) continue
       }
 
       atom.inserted = true
 
       const className = this.getClassNameById(id)
-      let selector = meta.global ? meta.global : `${uniqueSelector}.${className}`
+      let selector = meta.global ? meta.global : `.${className}`
+
       if (mode) selector = `.${classPrefix}${mode} ${selector}`
       if (childSelector) selector = `${selector} ${childSelector}`
 
@@ -626,7 +613,15 @@ export class Parser {
           selector = selector + pseudoSelector
         }
       }
+
+      // TODO: need refactor
+      if (breakpoint) {
+        const keys = breakpointKeys.slice(0, breakpointKeys.indexOf(breakpoint) + 1)
+        selector = selector + '.' + keys.map((i) => `r-${i}`).join('.')
+      }
+
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
+
       if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
 
       rules.push(rule)

@@ -5,10 +5,10 @@ title: Border Width
 
 Atomic props for controlling the style of an element's borders.
 
-| Atomic Props         | CSS Properties                |
-| -------------------- | ----------------------------- |
-| border-{value}       | border-width: {value};        |
-| border{TRBL}-{value} | border-{side}-width: {value}; |
+| Atomic Props                          | CSS Properties                |
+| ------------------------------------- | ----------------------------- |
+| border-{value}                        | border-width: {value};        |
+| border{Top,Right,Bottom,Left}-{value} | border-{side}-width: {value}; |
 
 ## All sides
 
@@ -36,21 +36,21 @@ Use `border-{value} ` props to set the border width for all sides of an element.
 
 ## Single side
 
-Use `border{T|R|B|L}-{value} ` props to set the border width for one side of an element.
+Use `border{Top,Right,Bottom,Left}-{value} ` props to set the border width for one side of an element.
 
 ```jsx live
 <Box toEvenly>
-  <Box toCenter p4 bgOrange200 borderT-2 borderOrange500>
-    borderT-2
+  <Box toCenter p4 bgOrange200 borderTop-2 borderOrange500>
+    borderTop-2
   </Box>
-  <Box toCenter p4 bgOrange200 borderR-2 borderOrange500>
-    borderR-2
+  <Box toCenter p4 bgOrange200 borderRight-2 borderOrange500>
+    borderRight-2
   </Box>
-  <Box toCenter p4 bgOrange200 borderB-2 borderOrange500>
-    borderB-2
+  <Box toCenter p4 bgOrange200 borderBottom-2 borderOrange500>
+    borderBottom-2
   </Box>
-  <Box toCenter p4 bgOrange200 borderL-2 borderOrange500>
-    borderL-2
+  <Box toCenter p4 bgOrange200 borderLeft-2 borderOrange500>
+    borderLeft-2
   </Box>
 </Box>
 ```
