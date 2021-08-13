@@ -6,7 +6,7 @@ export interface BoxComponent<T extends As, P = any> {
   <AsType extends As = 'div'>(
     props: { as?: AsType } & P &
       Omit<ComponentProps<AsType>, keyof ComponentProps<T>> &
-      Omit<ComponentProps<T>, keyof P> &
+      Omit<ComponentProps<T>, keyof P | 'color'> &
       AtomicProps,
   ): JSX.Element
 
