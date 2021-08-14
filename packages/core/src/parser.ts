@@ -407,13 +407,13 @@ export class Parser {
     if (cachedAtom) {
       cachedAtom.propKeys.push(atom.propKey)
       this.addAtom(cachedAtom)
-      throw new Error('atom is cached, add to this.atoms derectly, no need to mutate')
+      throw new Error('atom is cached, add to this.atoms directly, no need to mutate')
     }
 
     // if handled, push to this.atoms and skip it
     if (atom.handled) {
       this.addAtom(atom)
-      throw new Error('atom is handled, add to this.atoms derectly ,no need to mutate')
+      throw new Error('atom is handled, add to this.atoms directly ,no need to mutate')
     }
 
     for (const plugin of this.plugins) {
@@ -631,7 +631,7 @@ export class Parser {
 
       rules.push(rule)
     }
-    // console.log('this.atoms---', this.atoms)
+    console.log('this.atoms---', this.atoms)
 
     return rules
   }

@@ -4,27 +4,28 @@ export default () => {
   return (
     <div>
       <Box
-        debugChildren
         debug
         square-500
         // flex
         // column
         // columnReverse
         // rowReverse
-        row
+        // row
         // column--sm
         // row--md
         // column--lg
         // flexDirection={['row', 'column', 'row']}
-        // toCenterY
+        toCenterY
         // toRight
         // toLeft
         // toBottom
         // toTop
-        // toCenterY
+        // toCenterX
       >
-        {/* <Box square-100>AAA</Box> */}
-        <Box square-100 selfBottom>
+        <Box square-100 debug>
+          AAA
+        </Box>
+        <Box square-100 debug>
           BBB
         </Box>
       </Box>

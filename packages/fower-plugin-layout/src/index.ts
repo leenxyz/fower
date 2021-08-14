@@ -23,23 +23,18 @@ export function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    handleAtom(atom, parser) {
-      if (!parser.data.layoutAtoms) parser.data.layoutAtoms = []
-      if (!parser.data.directionAtoms) parser.data.directionAtoms = []
-
-      /** @example <Box toCenter></Box> */
-      if (isLayout(atom.key)) parser.data.layoutAtoms.push(atom)
-
+    beforeHandleAtom(atom) {
+      return atom
+    },
+    handleAtom(atom) {
       /** @example <Box column></Box> */
       if (isDirection(atom.key)) {
-        parser.data.directionAtoms.push(atom)
         atom.id = `flexDirection-${atom.id}`
         atom.style = { flexDirection: kebab(atom.key) } as any
       }
 
       /** @example <Box flexDirection="row"></Box> */
       if (isFlexDirection(atom.key)) {
-        parser.data.directionAtoms.push(atom)
         atom.style = { flexDirection: kebab(atom.value) } as any
       }
 
@@ -52,8 +47,17 @@ export default (): FowerPlugin => {
       const matched = parser.atoms.find((i) => isMatch(i.key))
       if (!matched) return
 
-      const directionAtoms: Atom[] = parser.data.directionAtoms
-      const layoutAtoms: Atom[] = parser.data.layoutAtoms
+      const directionAtoms: Atom[] = []
+      const layoutAtoms: Atom[] = []
+
+      for (const atom of parser.atoms) {
+        if (!isMatch(atom.key)) continue
+        if (isLayout(atom.key)) {
+          layoutAtoms.push(atom)
+        } else {
+          directionAtoms.push(atom)
+        }
+      }
 
       /**
        * set default flex-direction
@@ -64,6 +68,7 @@ export default (): FowerPlugin => {
         const rowAtom = parser.store.atomCache.get(rowKey)
         if (rowAtom) {
           parser.addAtom(rowAtom)
+          directionAtoms.push(rowAtom)
         } else {
           const newRowAtom = new Atom({
             propKey: rowKey,
@@ -73,8 +78,8 @@ export default (): FowerPlugin => {
             style: { flexDirection: directionRow },
           })
           newRowAtom.id = `flexDirection-${newRowAtom.id}`
-          parser.data.directionAtoms.push(newRowAtom)
           parser.addAtom(newRowAtom)
+          directionAtoms.push(newRowAtom)
         }
       }
 
