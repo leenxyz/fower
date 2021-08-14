@@ -1,5 +1,5 @@
-import { FowerPlugin } from '@fower/core'
-import { Atom } from '@fower/core'
+import { FowerPlugin, Atom } from '@fower/core'
+import { kebab } from '@fower/utils'
 import { layoutKeys, toLayoutStyle } from './toLayoutStyle'
 
 const layoutReg = new RegExp(`${layoutKeys.join('|')}`, 'i')
@@ -34,13 +34,13 @@ export default (): FowerPlugin => {
       if (isDirection(atom.key)) {
         parser.data.directionAtoms.push(atom)
         atom.id = `flexDirection-${atom.id}`
-        atom.style = { flexDirection: atom.key } as any
+        atom.style = { flexDirection: kebab(atom.key) } as any
       }
 
       /** @example <Box flexDirection="row"></Box> */
       if (isFlexDirection(atom.key)) {
         parser.data.directionAtoms.push(atom)
-        atom.style = { flexDirection: atom.value } as any
+        atom.style = { flexDirection: kebab(atom.value) } as any
       }
 
       return atom

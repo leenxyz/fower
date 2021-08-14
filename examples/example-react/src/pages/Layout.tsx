@@ -7,17 +7,26 @@ export default () => {
         debugChildren
         debug
         square-500
-        // row
+        // flex
+        // column
+        // columnReverse
+        // rowReverse
+        row
         // column--sm
         // row--md
         // column--lg
-        flexDirection={['row', 'column', 'row']}
-        toCenterX
+        // flexDirection={['row', 'column', 'row']}
+        // toCenterY
+        // toRight
+        // toLeft
+        // toBottom
+        // toTop
+        // toCenterY
       >
-        <h1>first blood</h1>
-        <h3 style={{ color: 'hotpink' }}>fooooooooo</h3>
         {/* <Box square-100>AAA</Box> */}
-        {/* <Box square-100>BBB</Box> */}
+        <Box square-100 selfBottom>
+          BBB
+        </Box>
       </Box>
     </div>
   );

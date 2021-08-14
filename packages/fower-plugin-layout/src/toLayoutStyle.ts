@@ -48,6 +48,8 @@ export const layoutKeys = [
   selfStretch,
 ]
 
+type FlexDirection = 'column' | 'columnReverse' | 'row' | 'rowReverse'
+
 /**
  * Get alignment style
  * 这里比较复杂
@@ -55,7 +57,7 @@ export const layoutKeys = [
  * @param props
  * @returns
  */
-export function toLayoutStyle(key: string, direction: string) {
+export function toLayoutStyle(key: string, direction: FlexDirection) {
   const style: any = {}
 
   let styleKey: 'justifyContent' | 'alignItems' = '' as any
@@ -80,11 +82,18 @@ export function toLayoutStyle(key: string, direction: string) {
     }
   }
 
+  const isRowReverse = /^rowReverse$/i.test(direction)
+  const isColumnReverse = /^columnReverse$/i.test(direction)
+
   /** 设置container样式 */
-  if ([toTop, toLeft].includes(key)) {
-    style[styleKey] = flexStart
-  } else if ([toBottom, toRight].includes(key)) {
-    style[styleKey] = flexEnd
+  if (key === toTop) {
+    style[styleKey] = isColumnReverse ? flexEnd : flexStart
+  } else if (key === toBottom) {
+    style[styleKey] = isColumnReverse ? flexStart : flexEnd
+  } else if (key === toLeft) {
+    style[styleKey] = isRowReverse ? flexEnd : flexStart
+  } else if (key === toRight) {
+    style[styleKey] = isRowReverse ? flexStart : flexEnd
   } else if ([toCenterX, toCenterY].includes(key)) {
     style[styleKey] = center
   } else if (key === toBetween) {
@@ -98,7 +107,7 @@ export function toLayoutStyle(key: string, direction: string) {
     style.alignItems = center
   }
 
-  /** 设置 self align样式 */
+  /** TODO: 设置 self align样式 */
   if ([selfTop, selfLeft].includes(key)) {
     style.alignSelf = flexStart
   } else if ([selfBottom, selfRight].includes(key)) {

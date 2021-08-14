@@ -15,6 +15,7 @@ declare module '@fower/atomic-props' {
      * <Box row></Box>
      * ```
      * @see https://fower.vercel.app/docs/flex-direction
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
      */
     row?: ResponsiveBoolean
     /**
@@ -27,8 +28,35 @@ declare module '@fower/atomic-props' {
      * <Box column></Box>
      * ```
      * @see https://fower.vercel.app/docs/flex-direction
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
      */
     column?: ResponsiveBoolean
+    /**
+     * Set flex-direction to rowReverse
+     * ```css
+     * { flex-direction: rowReverse; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rowReverse></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/flex-direction
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+     */
+    rowReverse?: ResponsiveBoolean
+    /**
+     * Set flex-direction to columnReverse
+     * ```css
+     * { flex-direction: columnReverse; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box columnReverse></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/flex-direction
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+     */
+    columnReverse?: ResponsiveBoolean
     /**
      * Set flex-direction to some value
      * ```css
@@ -41,7 +69,8 @@ declare module '@fower/atomic-props' {
      * <Box flexDirection={['column', 'row', 'column', 'row']}></Box>
      * <Box flexDirection="row-reverse"></Box>
      * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+     * @see https://fower.vercel.app/docs/flex-direction
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
      */
     flexDirection?: ResponsiveValue<CSS.Property.FlexDirection>
     /**

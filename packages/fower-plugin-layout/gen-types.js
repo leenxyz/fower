@@ -26,7 +26,7 @@ const typingModule = sourceFile.addModule({
   name: `'@fower/atomic-props'`,
 })
 
-const directionProps = ['row', 'column'].map((key) => ({
+const directionProps = ['row', 'column', 'rowReverse', 'columnReverse'].map((key) => ({
   name: `${key}?`,
   type: `ResponsiveBoolean`,
   docs: [
@@ -44,7 +44,10 @@ const directionProps = ['row', 'column'].map((key) => ({
         },
         {
           tagName: 'see',
-          text: [`https://fower.vercel.app/docs/flex-direction`],
+          text: [
+            'https://fower.vercel.app/docs/flex-direction',
+            'https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction',
+          ],
         },
       ],
     },
@@ -77,7 +80,10 @@ directionProps.push({
         },
         {
           tagName: 'see',
-          text: [`https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction`],
+          text: [
+            'https://fower.vercel.app/docs/flex-direction',
+            'https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction',
+          ],
         },
       ],
     },
