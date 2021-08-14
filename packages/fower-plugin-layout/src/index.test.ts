@@ -1,5 +1,5 @@
 import { Parser, Atom } from '@fower/core'
-import plugin, { getFlexDirection } from '.'
+import plugin from '.'
 
 const { isMatch, handleAtom, beforeHandleAtom, afterAtomStyleCreate } = plugin()
 
@@ -16,13 +16,6 @@ test('isMatch', () => {
   expect(isMatch!('toEvenly')).toEqual(true)
   expect(isMatch!('toAround')).toEqual(true)
   expect(isMatch!('toBetween')).toEqual(true)
-})
-
-test('getFlexDirection', () => {
-  expect(getFlexDirection({ flexDirection: 'row-reverse' })).toBe('row-reverse')
-  expect(getFlexDirection({ row: true })).toBe('row')
-  expect(getFlexDirection({ column: true })).toBe('column')
-  expect(getFlexDirection({})).toBe('row')
 })
 
 describe('beforeHandleAtom()', () => {
