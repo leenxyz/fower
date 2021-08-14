@@ -51,6 +51,39 @@ const directionProps = ['row', 'column'].map((key) => ({
   ],
 }))
 
+directionProps.push({
+  name: 'flexDirection?',
+  type: `ResponsiveValue<CSS.Property.FlexDirection>`,
+  docs: [
+    {
+      description: [
+        `Set flex-direction to some value`,
+        '```css',
+        `{ flex-direction: $value; }`,
+        '```',
+      ].join('\n'),
+      tags: [
+        {
+          tagName: 'example',
+          text: [
+            '\n',
+            '```tsx',
+            `<Box flexDirection="row"></Box>`,
+            `<Box flexDirection="column"></Box>`,
+            `<Box flexDirection={['column', 'row', 'column', 'row']}></Box>`,
+            `<Box flexDirection="row-reverse"></Box>`,
+            '```',
+          ],
+        },
+        {
+          tagName: 'see',
+          text: [`https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction`],
+        },
+      ],
+    },
+  ],
+})
+
 const toKeys = [
   'Top',
   'Left',

@@ -2,6 +2,26 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
+    <div>
+      <Box
+        debugChildren
+        debug
+        square-500
+        // row
+        // column--sm
+        // row--md
+        // column--lg
+        flexDirection={['row', 'column', 'row']}
+        toCenterX
+      >
+        <h1>first blood</h1>
+        <h3 style={{ color: 'hotpink' }}>fooooooooo</h3>
+        {/* <Box square-100>AAA</Box> */}
+        {/* <Box square-100>BBB</Box> */}
+      </Box>
+    </div>
+  );
+  return (
     <Box cursorPointer>
       <Box>row toLeft</Box>
       <Box h-240 textXS debugChildren debug row toLeft>

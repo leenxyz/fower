@@ -11,8 +11,8 @@ export default (): FowerPlugin => {
     handleAtom(atom, parser) {
       const { key } = atom
       const fontFamilies: any = parser.config.theme.fontFamilies
-      const posfix = key.replace(/^font/i, '')
-      const styleValue = fontFamilies[downFirst(posfix)]
+      const postfix = key.replace(/^font/i, '')
+      const styleValue = fontFamilies[downFirst(postfix)]
       atom.style = { fontFamily: styleValue }
       return atom
     },

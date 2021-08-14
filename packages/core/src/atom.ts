@@ -102,7 +102,7 @@ export class Atom {
   propKeys: string[] = []
 
   /**
-   * get the primitive atomic key, exclude value or posfix
+   * get the primitive atomic key, exclude value or postfix
    * @example
    * m-4 -> m
    * m={4} -> m

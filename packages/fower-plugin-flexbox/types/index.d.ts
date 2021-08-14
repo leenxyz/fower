@@ -7,19 +7,6 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * set flex-direction
-     *
-     * @example
-     * ```tsx
-     * <Box flexDirection="row"></Box>
-     * <Box flexDirection="row-reverse"></Box>
-     * <Box flexDirection="column"></Box>
-     * <Box flexDirection="column-reverse"></Box>
-     * ```
-     */
-    flexDirection?: ResponsiveValue<CSS.Property.FlexDirection>
-
-    /**
      * set flex-flow、flex-shrink、flex-basis
      * flex={true} is special, it equal: { display: flex }
      *

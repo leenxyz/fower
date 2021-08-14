@@ -30,6 +30,21 @@ declare module '@fower/atomic-props' {
      */
     column?: ResponsiveBoolean
     /**
+     * Set flex-direction to some value
+     * ```css
+     * { flex-direction: $value; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box flexDirection="row"></Box>
+     * <Box flexDirection="column"></Box>
+     * <Box flexDirection={['column', 'row', 'column', 'row']}></Box>
+     * <Box flexDirection="row-reverse"></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+     */
+    flexDirection?: ResponsiveValue<CSS.Property.FlexDirection>
+    /**
      * Make all children elements to Top in flex container, whether it's row or column
      * @example
      * ```tsx

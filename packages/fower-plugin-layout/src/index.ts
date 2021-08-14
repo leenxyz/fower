@@ -95,6 +95,10 @@ export function getFlexDirection(props: any = {}): string {
   return 'row'
 }
 
+function isFlexDirection(key: string) {
+  return /^flexDirection$/.test(key)
+}
+
 function isDirection(key: string) {
   return [row, column].includes(key)
 }
@@ -104,7 +108,7 @@ function isLayout(key: string) {
 }
 
 export function isMatch(key: string) {
-  return isDirection(key) || isLayout(key)
+  return isDirection(key) || isFlexDirection(key) || isLayout(key)
 }
 
 export const flexDirections = ['column', 'column-reverse', 'row', 'row-reverse']
@@ -180,14 +184,20 @@ export default (): FowerPlugin => {
       if (!parser.data.layoutAtoms) parser.data.layoutAtoms = []
       if (!parser.data.directionAtoms) parser.data.directionAtoms = []
 
+      /** @example <Box toCenter></Box> */
       if (isLayout(atom.key)) parser.data.layoutAtoms.push(atom)
 
+      /** @example <Box column></Box> */
       if (isDirection(atom.key)) {
         parser.data.directionAtoms.push(atom)
         atom.id = `flexDirection-${atom.id}`
         atom.style = { flexDirection: atom.key } as any
-        // atom.isValid = false
-        // atom.handled = true
+      }
+
+      /** @example <Box flexDirection="row"></Box> */
+      if (isFlexDirection(atom.key)) {
+        parser.data.directionAtoms.push(atom)
+        atom.style = { flexDirection: atom.value } as any
       }
 
       return atom
@@ -224,17 +234,20 @@ export default (): FowerPlugin => {
       }
 
       for (const directionAtom of directionAtoms) {
-        const { key: direction } = directionAtom
+        const { key, value } = directionAtom
         const { breakpoint } = directionAtom.meta
+        const direction = isDirection(key) ? key : value
 
         for (const layoutAtom of layoutAtoms) {
           const newAtom = new Atom(layoutAtom)
           if (breakpoint) {
             newAtom.meta.breakpoint = layoutAtom.meta.breakpoint || breakpoint
           }
-          newAtom.style = toLayoutStyle(newAtom.key, direction)
+
           newAtom.setId()
           newAtom.id = `${direction}-${newAtom.id}`
+
+          newAtom.style = toLayoutStyle(newAtom.key, direction)
           parser.addAtom(newAtom)
         }
       }

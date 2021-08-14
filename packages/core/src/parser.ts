@@ -315,7 +315,7 @@ export class Parser {
     const { important, colorPostfix } = meta
     return Object.entries(style).reduce<string>((r, [key, value]) => {
       const cssKey = jsKeyToCssKey(key)
-      const posfix = important ? ' !important' : ''
+      const postfix = important ? ' !important' : ''
       const colors: any = store.theme.colors
 
       try {
@@ -324,7 +324,7 @@ export class Parser {
         } else {
           value = this.formatCssValue(cssKey, colors?.[value] || value)
         }
-        return r + `${cssKey}: ${value}${posfix};`
+        return r + `${cssKey}: ${value}${postfix};`
       } catch (error) {
         return ''
       }

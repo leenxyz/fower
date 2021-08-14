@@ -13,8 +13,8 @@ export default (): FowerPlugin => {
     handleAtom(atom, parser) {
       const { key, value } = atom
       const weights: any = parser.config.theme.fontWeights
-      const posfix = key.replace(/^font/i, '')
-      const styleValue = /^weight$/i.test(posfix) ? value : weights[downFirst(posfix)]
+      const postfix = key.replace(/^font/i, '')
+      const styleValue = /^weight$/i.test(postfix) ? value : weights[downFirst(postfix)]
       atom.style = { fontWeight: styleValue }
       return atom
     },
