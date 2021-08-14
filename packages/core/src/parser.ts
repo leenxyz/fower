@@ -45,6 +45,11 @@ export class Parser {
    */
   atoms: Atom[] = []
 
+  /**
+   * For extensibility
+   */
+  data: Record<string, any> = {}
+
   get uniqueClassName() {
     return objectToClassName(Object.keys(this.props))
   }
