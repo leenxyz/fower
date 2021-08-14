@@ -19,7 +19,7 @@ export function isMatch(key: string) {
 }
 
 export function toStyle(atom: Atom) {
-  const { key, value } = atom
+  const { direction: key, value } = atom
   const style: any = {}
 
   if (wrapReg.test(key) && atom.isTruePropValue) {

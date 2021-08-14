@@ -56,6 +56,26 @@ const layoutToolkits = [
 
 const layoutReg = new RegExp(`${layoutToolkits.join('|')}`, 'i')
 
+export function getDirections(props: any = {}): string[] {
+  const { flexDirection } = props
+  let directions: string[] = []
+  if (flexDirection) {
+    directions = Array.isArray(directions) ? flexDirection : [flexDirection]
+  }
+
+  for (const key in props) {
+    if (/^row/.test(key) && !!props[key]) directions.push('row')
+    if (/^column/.test(key) && !!props[key]) directions.push('column')
+  }
+
+  const values = ['row', 'column']
+  return directions.reduce<string[]>((r, cur) => {
+    if (!values.includes(cur)) return r
+    if (!r.includes(cur)) return [...r, cur]
+    return r
+  }, [])
+}
+
 // TODO: should refactor
 export function getFlexDirection(props: any = {}): string {
   if (props.flexDirection) return props.flexDirection
@@ -75,9 +95,19 @@ export function getFlexDirection(props: any = {}): string {
   return 'row'
 }
 
-export function isMatch(key: string) {
-  return [row, column].includes(key) || layoutReg.test(key)
+function isDirection(key: string) {
+  return [row, column].includes(key)
 }
+
+function isLayout(key: string) {
+  return layoutReg.test(key)
+}
+
+export function isMatch(key: string) {
+  return isDirection(key) || isLayout(key)
+}
+
+export const flexDirections = ['column', 'column-reverse', 'row', 'row-reverse']
 
 /**
  * Get alignment style
@@ -86,9 +116,7 @@ export function isMatch(key: string) {
  * @param props
  * @returns
  */
-export function toStyle(key: string, props: any) {
-  if (key === 'direction') return
-  const direction = getFlexDirection(props)
+export function toLayoutStyle(key: string, direction: string) {
   const style: any = {}
 
   let styleKey: 'justifyContent' | 'alignItems' = '' as any
@@ -148,22 +176,19 @@ export function toStyle(key: string, props: any) {
 export default (): FowerPlugin => {
   return {
     isMatch,
-    beforeHandleAtom(atom, parser) {
-      const direction = getFlexDirection(parser.props)
-      if (atom.id.startsWith('row-') || atom.id.startsWith('column-')) {
-        return atom
-      }
-      atom.id = `${direction}-${atom.id}`
-      return atom
-    },
     handleAtom(atom, parser) {
-      if ([row, column].includes(atom.propKey)) {
-        atom.isValid = false
-        atom.handled = true
-        return atom
-      }
+      if (!parser.data.layoutAtoms) parser.data.layoutAtoms = []
+      if (!parser.data.directionAtoms) parser.data.directionAtoms = []
 
-      atom.style = toStyle(atom.key, parser.props)
+      if (isLayout(atom.key)) parser.data.layoutAtoms.push(atom)
+
+      if (isDirection(atom.key)) {
+        parser.data.directionAtoms.push(atom)
+        atom.id = `flexDirection-${atom.id}`
+        atom.style = { flexDirection: atom.key } as any
+        // atom.isValid = false
+        // atom.handled = true
+      }
 
       return atom
     },
@@ -171,27 +196,50 @@ export default (): FowerPlugin => {
     afterAtomStyleCreate(parser) {
       if (!parser.atoms.length) return
 
-      const matched = parser.atoms.find((i) => isMatch(i.key))
+      const matched = parser.atoms.find((i) => isMatch(i.key) || /^flexDirection$/.test(i.key))
 
       if (!matched) return
 
-      const direction = getFlexDirection(parser.props)
-      const directionKey = 'flexDirection-' + direction
-      const directionAtom = parser.store.atomCache.get(directionKey)
+      const directionAtoms: Atom[] = parser.data.directionAtoms
+      const layoutAtoms: Atom[] = parser.data.layoutAtoms
 
-      if (directionAtom) {
-        parser.addAtom(directionAtom)
-      } else {
-        const atom = new Atom({
-          propKey: directionKey,
-          propValue: true,
-          handled: true,
-          style: { flexDirection: direction },
-        })
-        parser.addAtom(atom)
+      if (!directionAtoms.length) {
+        const directionRow = 'row'
+        const rowKey = 'flexDirection-' + directionRow
+        const rowAtom = parser.store.atomCache.get(rowKey)
+        if (rowAtom) {
+          parser.addAtom(rowAtom)
+        } else {
+          const newRowAtom = new Atom({
+            propKey: rowKey,
+            propValue: true,
+            key: directionRow,
+            handled: true,
+            style: { flexDirection: directionRow },
+          })
+          newRowAtom.id = `flexDirection-${newRowAtom.id}`
+          parser.data.directionAtoms.push(newRowAtom)
+          parser.addAtom(newRowAtom)
+        }
       }
 
-      // if have display style, dont't create flex atom
+      for (const directionAtom of directionAtoms) {
+        const { key: direction } = directionAtom
+        const { breakpoint } = directionAtom.meta
+
+        for (const layoutAtom of layoutAtoms) {
+          const newAtom = new Atom(layoutAtom)
+          if (breakpoint) {
+            newAtom.meta.breakpoint = layoutAtom.meta.breakpoint || breakpoint
+          }
+          newAtom.style = toLayoutStyle(newAtom.key, direction)
+          newAtom.setId()
+          newAtom.id = `${direction}-${newAtom.id}`
+          parser.addAtom(newAtom)
+        }
+      }
+
+      // if have display style, don't create flex atom
       const findDisplay = parser.atoms.find((i) => !!i?.style?.display)
       if (findDisplay) return
 
