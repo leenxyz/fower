@@ -83,6 +83,7 @@ export default (): FowerPlugin => {
         }
       }
 
+      /** 每个 layout atom 要根据 breakpoint 生成 */
       for (const directionAtom of directionAtoms) {
         const { key, value } = directionAtom
         const { breakpoint } = directionAtom.meta
@@ -97,8 +98,13 @@ export default (): FowerPlugin => {
           newAtom.setId()
           newAtom.id = `${direction}-${newAtom.id}`
 
-          newAtom.style = toLayoutStyle(newAtom.key, direction)
-          parser.addAtom(newAtom)
+          const cachedAtom = parser.store.atomCache.get(newAtom.id)
+          if (cachedAtom) {
+            parser.addAtom(cachedAtom)
+          } else {
+            newAtom.style = toLayoutStyle(newAtom.key, direction)
+            parser.addAtom(newAtom)
+          }
         }
       }
 
