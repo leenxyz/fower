@@ -9,7 +9,7 @@ function isFlexDirection(key: string) {
 }
 
 function isDirection(key: string) {
-  return /^(row|column)(Reverse)?/i.test(key)
+  return /^(row|column)(Reverse)?$/i.test(key)
 }
 
 function isLayout(key: string) {
@@ -23,10 +23,9 @@ export function isMatch(key: string) {
 export default (): FowerPlugin => {
   return {
     isMatch,
+
+    /** For cache atom, we set id in beforeHandleAtom */
     beforeHandleAtom(atom) {
-      return atom
-    },
-    handleAtom(atom) {
       /** @example <Box column></Box> */
       if (isDirection(atom.key)) {
         atom.id = `flexDirection-${atom.id}`
@@ -37,10 +36,11 @@ export default (): FowerPlugin => {
       if (isFlexDirection(atom.key)) {
         atom.style = { flexDirection: kebab(atom.value) } as any
       }
-
       return atom
     },
-
+    handleAtom(atom) {
+      return atom
+    },
     afterAtomStyleCreate(parser) {
       if (!parser.atoms.length) return
 

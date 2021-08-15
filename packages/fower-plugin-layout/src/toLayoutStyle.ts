@@ -1,3 +1,5 @@
+import * as CSS from 'csstype'
+
 const toTop = 'totop'
 const toLeft = 'toleft'
 const toRight = 'toright'
@@ -57,7 +59,10 @@ type FlexDirection = 'column' | 'columnReverse' | 'row' | 'rowReverse'
  * @param props
  * @returns
  */
-export function toLayoutStyle(key: string, direction: FlexDirection) {
+export function toLayoutStyle(
+  key: string,
+  direction: FlexDirection,
+): CSS.Properties<number | string> {
   const style: any = {}
 
   let styleKey: 'justifyContent' | 'alignItems' = '' as any

@@ -2,6 +2,14 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
+    <Box h-240 textXS debugChildren debug row toLeft>
+      <Box square-100 selfBottom>
+        AAA
+      </Box>
+      <Box square-100>BBB</Box>
+    </Box>
+  );
+  return (
     <Box cursorPointer>
       <Box>row toLeft</Box>
       <Box h-240 textXS debugChildren debug row toLeft>

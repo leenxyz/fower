@@ -144,7 +144,14 @@ export default () => {
       </Box>
 
       <Box as="h2">wrap</Box>
-      <Box spaceX3 row flexWrap="wrap">
+      <Box spaceX3 row flexWrap>
+        <Box bgOrange400 m2 p4 w-300></Box>
+        <Box bgOrange500 m2 p4 w-300></Box>
+        <Box bgOrange400 m2 p4 w-300></Box>
+      </Box>
+
+      <Box as="h2">wrap reverse</Box>
+      <Box spaceX3 row flexWrapReverse>
         <Box bgOrange400 m2 p4 w-300></Box>
         <Box bgOrange500 m2 p4 w-300></Box>
         <Box bgOrange400 m2 p4 w-300></Box>
