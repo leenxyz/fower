@@ -1,6 +1,6 @@
 ---
 id: responsive
-title: Responsive
+title: Responsive Styles
 ---
 
 ## About Responsive
@@ -15,7 +15,94 @@ This is the responsive style of traditional CSS frameworks, most of which are on
 
 Each Atomic Props of Fower supports responsiveness, not just a container that supports responsiveness, which allows you to implement complex responsive interfaces more easily.
 
-## Postfix
+## The Array syntax
+
+All atomic props accept arrays as values for mobile-first responsive styles.
+
+```jsx
+// responsive flex direction
+<Box flexDirection={['column', 'row']} />
+
+// responsive width
+<Box width={[1, 1/2, 1/4]} />
+
+// responsive font size
+<Box fontSize={[ '14px', '18px', '24px', '32px' ]} />
+
+// responsive margin
+<Box m={[ 4, 8, 16, 32 ]} />
+
+// responsive padding
+<Box p={[ 4, 8, 16, 32 ]} />
+```
+
+What array value does? `<Box width={[1, 1/2, 1/4]} />` will generate:
+
+```css
+.Box-hash {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .Box-hash {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Box-hash {
+    width: 25%;
+  }
+}
+```
+
+demo:
+
+```jsx live
+<Box toCenterX p6 bgOrange100 flexDirection={['column', 'row']}>
+  <Box as="img" src="https://bit.ly/3iRRLWF" rounded w={['100%', 200]} mr={[0, 20]} />
+  <Box>
+    <Box textLG fontBold>
+      Lorem Ipsum
+    </Box>
+    <Box>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Box>
+  </Box>
+</Box>
+```
+
+## The Postfix syntax
+
+Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
+
+demo:
+
+```jsx live
+<Box toCenterX p6 bgOrange100 column row--sm>
+  <Box as="img" src="https://bit.ly/3iRRLWF" rounded w-100p w-200--sm mr5--sm />
+  <Box>
+    <Box textLG fontBold>
+      Lorem Ipsum
+    </Box>
+    <Box>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Box>
+  </Box>
+</Box>
+```
+
+## Breakpoints
+
+By default, there are five breakpoint in Fower: `sm`, `md`, `lg`, `xl`, `2xl`.
 
 | Breakpoint postfix | Minimum width | CSS                                |
 | ------------------ | ------------- | ---------------------------------- |
@@ -25,12 +112,17 @@ Each Atomic Props of Fower supports responsiveness, not just a container that su
 | xl                 | 1280px        | @media (min-width: 1280px) { ... } |
 | 2xl                | 1536px        | @media (min-width: 1536px) { ... } |
 
-## Usage
+You can customize breakpoints by `setTheme`:
 
-Use `--{postfix}` like `--sm`, `--md`, `--lg` to set responsive style.
-
-```jsx live
-<Box textSM textLG--sm text4XL--md text6XL--lg>
-  Lorem ipsum dolor sit amet
-</Box>
+```js {8}
+setTheme({
+  breakpoints: {
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
+    '3xl': '1780px',
+  },
+})
 ```

@@ -1,4 +1,6 @@
 import { Box } from '@fower/react';
+import { setTheme } from '@fower/core';
+// https://bit.ly/3iRRLWF
 
 export default () => {
   return (
