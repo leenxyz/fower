@@ -15,7 +15,11 @@ test('isMatch', () => {
   }
 
   expect(isMatch!('flexNone')).toEqual(true)
-  expect(isMatch!('flexDirection')).toEqual(true)
+  expect(isMatch!('flexInitial')).toEqual(true)
+  expect(isMatch!('flexAuto')).toEqual(true)
+  expect(isMatch!('flexWrap')).toEqual(true)
+  expect(isMatch!('flexWrapReverse')).toEqual(true)
+  expect(isMatch!('flexNowrap')).toEqual(true)
 })
 
 test('flex={true}', () => {
@@ -52,17 +56,6 @@ test('flex="10', () => {
   expect(atom.style.flex).toEqual('10')
 })
 
-test('flexDirection="row"', () => {
-  const atom = handleAtom!(
-    new Atom({
-      propKey: 'flexDirection',
-      propValue: 'row',
-    }),
-    parser,
-  )
-  expect(atom.style.flexDirection).toEqual('row')
-})
-
 test('flexNone', () => {
   const atom = handleAtom!(
     new Atom({
@@ -72,4 +65,15 @@ test('flexNone', () => {
     parser,
   )
   expect(atom.style.flex).toEqual(flexMaps['none'])
+})
+
+test('flexWrap', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'flexWrap',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.flexWrap).toEqual('wrap')
 })

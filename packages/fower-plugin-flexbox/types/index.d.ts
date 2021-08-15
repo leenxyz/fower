@@ -64,10 +64,34 @@ declare module '@fower/atomic-props' {
      */
     order?: ResponsiveValue<CSS.Property.Order>
 
+    /**
+     * Set flex-wrap to wrap
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+     * @example
+     * ```tsx
+     * <Box flexWrap></Box>
+     * ```
+     */
     flexWrap?: ResponsiveValue<CSS.Property.FlexWrap | boolean>
 
+    /**
+     * Set flex-wrap to nowrap
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+     * @example
+     * ```tsx
+     * <Box flexWrap></Box>
+     * ```
+     */
     flexNowrap?: ResponsiveBoolean
 
+    /**
+     * Set flex-wrap to wrap-reverse
+     * @See https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+     * @example
+     * ```tsx
+     * <Box flexWrap></Box>
+     * ```
+     */
     flexWrapReverse?: ResponsiveBoolean
 
     /**
