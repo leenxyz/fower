@@ -16,6 +16,7 @@ export default (): FowerPlugin => {
         'maxW-768px--md': true,
         'maxW-1024px--lg': true,
         'maxW-1280px--xl': true,
+        'maxW-1536px--2xl': true,
       })
       inited = true
     },
