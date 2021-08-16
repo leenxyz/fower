@@ -42,6 +42,7 @@ import ring from 'fower-plugin-ring'
 import svg from 'fower-plugin-svg'
 import container from 'fower-plugin-container'
 import animation from 'fower-plugin-animation'
+import wordBreak from 'fower-plugin-word-break'
 
 export const plugins = [
   appearance(),
@@ -88,4 +89,5 @@ export const plugins = [
   svg(),
   container(),
   animation(),
+  wordBreak(),
 ]

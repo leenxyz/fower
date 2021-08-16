@@ -41,6 +41,7 @@
 /// <reference types="fower-plugin-user-select" />
 /// <reference types="fower-plugin-visibility" />
 /// <reference types="fower-plugin-placeholder" />
+/// <reference types="fower-plugin-word-break" />
 /// <reference types="fower-plugin-svg" />
 /// <reference types="@fower/atomic-props" />
 import { Preset, Theme } from '@fower/core'

@@ -6,52 +6,51 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
-     * text truncate
+     * Set line breaks to normal
      *
      * @example
      * ```css
      * {
-     *   overflow: hidden;
-     *   text-overflow: ellipsis;
-     *   white-space: nowrap;
+     *   overflow-wrap: normal;
+     *   word-break: normal;
      * }
      * ```
      *
      * ```tsx
-     * <Box truncate></Box>
+     * <Box breakNormal></Box>
      * ```
      */
-    truncate?: ResponsiveBoolean
+    breakNormal?: ResponsiveBoolean
 
     /**
-     * set text-overflow to ellipsis
+     * set overflow-wrap to break-word
      *
      * ```css
      * {
-     *   text-overflow: ellipsis;
+     *   overflow-wrap: break-word;
      * }
      * ```
      *
      * @example
      * ```tsx
-     * <Box overflowEllipsis></Box>
+     * <Box breakWords></Box>
      * ```
      */
-    overflowEllipsis?: ResponsiveBoolean
+    breakWords?: ResponsiveBoolean
 
     /**
-     * set text-overflow to clip
+     * set word-break to break-all
      *
      * ```css
      * {
-     *   text-overflow: clip;
+     *   word-break: break-all;
      * }
      * ```
      * @example
      * ```tsx
-     * <Box overflowClip></Box>
+     * <Box breakAll></Box>
      * ```
      */
-    overflowClip?: ResponsiveBoolean
+    breakAll?: ResponsiveBoolean
   }
 }

@@ -27,9 +27,7 @@ export function toStyle(atom: Atom) {
     return style
   }
 
-  if (isFlexProps(key)) {
-    style[key] = value
-  }
+  if (isFlexProps(key)) style[key] = value
 
   if (flexReg.test(key)) {
     const postfix = key.replace(/^flex/, '').toLowerCase()

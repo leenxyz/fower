@@ -68,6 +68,7 @@
     "fower-plugin-transition": "^1.50.0",
     "fower-plugin-user-select": "^1.50.0",
     "fower-plugin-visibility": "^1.50.0",
+    "fower-plugin-word-break": "^1.50.0",
     "fower-plugin-z-index": "^1.50.0"
   }
 }
