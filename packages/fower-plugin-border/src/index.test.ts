@@ -12,6 +12,7 @@ test('isMatch', () => {
   expect(isMatch!('borderTop')).toEqual(true)
   expect(isMatch!('borderTopRight')).toEqual(true)
   expect(isMatch!('borderRed400')).toEqual(true)
+  expect(isMatch!('borderTopRed400')).toEqual(true)
 })
 
 test('border', () => {
@@ -36,6 +37,17 @@ test('border={2}', () => {
   expect(atom.style.borderWidth).toEqual(2)
 })
 
+test('border="1px solid red"', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'border',
+      propValue: '1px solid red',
+    }),
+    parser,
+  )
+  expect(atom.style.border).toEqual('1px solid red')
+})
+
 test('border="none"', () => {
   const atom = handleAtom!(
     new Atom({
@@ -47,6 +59,17 @@ test('border="none"', () => {
   expect(atom.style.border).toEqual('none')
 })
 
+test('borderTop', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'borderTop',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.borderTopWidth).toEqual(1)
+})
+
 test('borderTop={2}', () => {
   const atom = handleAtom!(
     new Atom({
@@ -56,6 +79,28 @@ test('borderTop={2}', () => {
     parser,
   )
   expect(atom.style.borderTopWidth).toEqual(2)
+})
+
+test('borderTop="1px solid green"', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'borderTop',
+      propValue: '1px solid green',
+    }),
+    parser,
+  )
+  expect(atom.style.borderTop).toEqual('1px solid green')
+})
+
+test('borderTopRed400', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'borderTopRed400',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.borderTopColor).toEqual('#ff8787')
 })
 
 test('borderDashed', () => {

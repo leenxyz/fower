@@ -49,7 +49,7 @@ function toStyle({ key, value }: Atom, parser: Parser) {
     const [, cssKey, , ColorName] = key.match(positionColorRegex) as string[]
 
     const colorName = downFirst(ColorName)
-    return { [camel(`${cssKey}Color`)]: colors[colorName] || colorName }
+    return { [camel(`${cssKey}Color`)]: colors[colorName] }
   }
   /** @example borderGray20,borderRed20--O20,borderBlue--T20 */
   const colorName = downFirst(postfix)
