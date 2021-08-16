@@ -10,7 +10,7 @@ export const Home = () => {
       <Box onClick={() => setTheme(!theme)} toCenter py-20>
         switch theme
       </Box>
-      <Box row borderB-1 flex-4>
+      <Box row borderBottom-1 flex-4>
         <Box flex-4 className={myClassName}>
           name
         </Box>
@@ -19,7 +19,7 @@ export const Home = () => {
       {userList.map((user) => {
         const { name, address } = user
         return (
-          <Box key={name} row borderB-1 borderGray100>
+          <Box key={name} row borderBottom-1 borderGray100>
             <Box flex-4 fontBold gray900>
               {name}
             </Box>

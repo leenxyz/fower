@@ -45,13 +45,20 @@ export default () => {
         <Box toCenter p4 bgOrange200 border-4 borderOrange500 borderSolid>
           borderSolid
         </Box>
-        <Box toCenter p4 bgOrange200 borderT-4 borderOrange500 borderDashed>
+        <Box toCenter p4 bgOrange200 borderTop-4 borderOrange500 borderDashed>
           borderDashed
         </Box>
-        <Box toCenter p4 bgOrange200 borderR-4 borderOrange500 borderDotted>
+        <Box toCenter p4 bgOrange200 borderRight-4 borderOrange500 borderDotted>
           borderDotted
         </Box>
-        <Box toCenter p4 bgOrange200 borderB-4 borderOrange500 borderDouble>
+        <Box
+          toCenter
+          p4
+          bgOrange200
+          borderBottom-4
+          borderOrange500
+          borderDouble
+        >
           borderDouble
         </Box>
         <Box toCenter p4 bgOrange200 border-4 borderOrange500 borderNone>

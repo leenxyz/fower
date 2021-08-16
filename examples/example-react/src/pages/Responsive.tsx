@@ -3,16 +3,6 @@ import { setTheme } from '@fower/core';
 
 export default () => {
   return (
-    <div>
-      <Box text-12 text={[12, 20, 40, 60]}>
-        Lorem ipsum dolor sit amet
-      </Box>
-
-      <Box text={[12, 20, 40, 60]}>Lorem ipsum dolor sit amet</Box>
-    </div>
-  );
-
-  return (
     <Box>
       <Box text={[12, 20, 40, 60]} textXS>
         Lorem ipsum dolor sit amet
