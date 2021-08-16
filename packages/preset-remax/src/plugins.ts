@@ -23,7 +23,6 @@ import fontStyle from 'fower-plugin-font-style'
 import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
 import outline from 'fower-plugin-outline'
-import ellipsis from 'fower-plugin-ellipsis'
 import visibility from 'fower-plugin-visibility'
 import boxSizing from 'fower-plugin-box-sizing'
 import gradient from 'fower-plugin-gradient'
@@ -55,7 +54,6 @@ export const plugins = [
   fontWeight(),
   zIndex(),
   outline(),
-  ellipsis(),
   visibility(),
   boxSizing(),
 ]

@@ -33,7 +33,6 @@
 /// <reference types="fower-plugin-z-index" />
 /// <reference types="fower-plugin-outline" />
 /// <reference types="fower-plugin-cursor" />
-/// <reference types="fower-plugin-ellipsis" />
 /// <reference types="fower-plugin-debug" />
 /// <reference types="fower-plugin-space" />
 /// <reference types="fower-plugin-transform" />

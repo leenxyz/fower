@@ -25,7 +25,6 @@
 /// <reference types="fower-plugin-font-weight" />
 /// <reference types="fower-plugin-z-index" />
 /// <reference types="fower-plugin-outline" />
-/// <reference types="fower-plugin-ellipsis" />
 /// <reference types="@fower/core" />
 
 import { Preset } from '@fower/core'
