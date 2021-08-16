@@ -8,11 +8,16 @@ function isMatch(key: string) {
   return key.startsWith('border')
 }
 
+function isWidthType(value: any) {
+  return /^\d(px|rem|em|vh|vw)?$/.test(String(value))
+}
+
 function toStyle({ key, value }: Atom, parser: Parser) {
   if (key === 'border') {
     if (typeof value === 'boolean') return { borderWidth: 1 }
     if (value === 'none') return { border: 'none' }
-    return { borderWidth: value }
+    if (isWidthType(value)) return { borderWidth: value }
+    return { border: value }
   }
 
   const colors: any = parser.config.theme.colors
@@ -23,13 +28,17 @@ function toStyle({ key, value }: Atom, parser: Parser) {
     return { borderStyle: postfix.toLowerCase() }
   }
 
-  /** @example border-0,border-1,border-2,borderTop-2,borderBottom-2... */
+  /**
+   *  @example border-0,border-1,border-2,borderTop-2,borderBottom-2...
+   *  @example borderTop="2px solid green"
+   * */
   if (positionRegex.test(key)) {
     const cssKey = `border${upFirst(postfix)}Width`
     if (typeof value === 'boolean' && value === true) {
       return { [cssKey]: 1 }
     }
-    return { [cssKey]: value }
+    if (isWidthType(value)) return { [cssKey]: value }
+    return { [key]: value }
   }
 
   /** @example borderGray20,borderRed20--O20,borderBlue--T20 */
@@ -38,15 +47,14 @@ function toStyle({ key, value }: Atom, parser: Parser) {
     return { borderColor: colorName }
   }
 
-  return {
-    [key]: colors[value] || value,
-  }
+  return { [key]: colors[value] || value }
 }
 
 export default (): FowerPlugin => {
   return {
     isMatch,
     handleAtom(atom, parser) {
+      console.log('atom', atom)
       atom.style = toStyle(atom, parser)
       return atom
     },
