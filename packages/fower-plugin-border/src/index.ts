@@ -1,8 +1,10 @@
 import { Atom, Parser } from '@fower/core'
 import { FowerPlugin } from '@fower/core'
-import { downFirst, upFirst } from '@fower/utils'
+import { downFirst, upFirst, camel } from '@fower/utils'
 
-const positionRegex = /^border(Top|Left|Right|Bottom)/i
+const borderPosition = 'border(Top|Left|Right|Bottom)'
+const positionRegex = new RegExp(`^${borderPosition}$`, 'i')
+const positionColorRegex = new RegExp(`^(${borderPosition})([a-z]+\\d{2,3})$`, 'i')
 
 function isMatch(key: string) {
   return key.startsWith('border')
@@ -31,6 +33,7 @@ function toStyle({ key, value }: Atom, parser: Parser) {
   /**
    *  @example border-0,border-1,border-2,borderTop-2,borderBottom-2...
    *  @example borderTop="2px solid green"
+   *  @example borderTopRed200
    * */
   if (positionRegex.test(key)) {
     const cssKey = `border${upFirst(postfix)}Width`
@@ -38,9 +41,16 @@ function toStyle({ key, value }: Atom, parser: Parser) {
       return { [cssKey]: 1 }
     }
     if (isWidthType(value)) return { [cssKey]: value }
+
     return { [key]: value }
   }
 
+  if (positionColorRegex.test(key)) {
+    const [, cssKey, , ColorName] = key.match(positionColorRegex) as string[]
+
+    const colorName = downFirst(ColorName)
+    return { [camel(`${cssKey}Color`)]: colors[colorName] || colorName }
+  }
   /** @example borderGray20,borderRed20--O20,borderBlue--T20 */
   const colorName = downFirst(postfix)
   if (colors[colorName]) {
@@ -54,7 +64,6 @@ export default (): FowerPlugin => {
   return {
     isMatch,
     handleAtom(atom, parser) {
-      console.log('atom', atom)
       atom.style = toStyle(atom, parser)
       return atom
     },

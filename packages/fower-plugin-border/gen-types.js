@@ -47,7 +47,7 @@ const commons = [
   },
 ]
 
-const commmonProps = commons.map((item) => {
+const commonProps = commons.map((item) => {
   return {
     name: item.name + '?',
     type: item.type,
@@ -128,7 +128,7 @@ const borderStyleProps = ['Solid', 'Dashed', 'Dotted', 'Double', 'None'].map((it
   ],
 }))
 
-const colorProps = Object.keys(colors).map((cur) => {
+const colorProps = Object.keys(colors).reduce((result, cur) => {
   const name = 'border' + upFirst(cur)
   let exampleArr = [`<Box ${name}></Box>`]
   if (!['transparent'].includes(cur)) {
@@ -140,7 +140,7 @@ const colorProps = Object.keys(colors).map((cur) => {
       `<Box ${name}--D20></Box> // darken color`,
     ]
   }
-  return {
+  const colorProp = {
     name: name + '?',
     type: 'ResponsiveBoolean',
     docs: [
@@ -164,12 +164,56 @@ const colorProps = Object.keys(colors).map((cur) => {
       },
     ],
   }
-})
+  result.push(colorProp)
+
+  /** for single size */
+  const sizeProps = ['top', 'right', 'bottom', 'left'].reduce((r, key) => {
+    const name = 'border' + upFirst(key) + upFirst(cur)
+    let exampleArr = [`<Box ${name}></Box>`]
+    if (!['transparent'].includes(cur)) {
+      exampleArr = [
+        ...exampleArr,
+        `<Box ${name}--T20></Box> // transparentize color`,
+        `<Box ${name}--O20></Box> // opacify color`,
+        `<Box ${name}--L20></Box> // lighten color`,
+        `<Box ${name}--D20></Box> // darken color`,
+      ]
+    }
+    const colorProp = {
+      name: name + '?',
+      type: 'ResponsiveBoolean',
+      docs: [
+        {
+          description: [
+            `Set border ${key} color to ' + cur`,
+            '```css',
+            `{ border-${key}-color: ${colors[cur]}; }`,
+            '```',
+          ].join('\n'),
+          tags: [
+            {
+              tagName: 'example',
+              text: ['\n', '```tsx', ...exampleArr, '```'],
+            },
+            {
+              tagName: 'see',
+              text: ['https://developer.mozilla.org/en-US/docs/Web/CSS/border-color'],
+            },
+          ],
+        },
+      ],
+    }
+    r.push(colorProp)
+    return r
+  }, [])
+
+  return result.concat(sizeProps)
+}, [])
 
 typingModule.addInterface({
   name: 'AtomicProps',
   isExported: true,
-  properties: [...commmonProps, ...borderProps, ...borderStyleProps, ...colorProps],
+  properties: [...commonProps, ...borderProps, ...borderStyleProps, ...colorProps],
 })
 
 /** format types code */
