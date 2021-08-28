@@ -111,3 +111,12 @@ Supported strategy:
 - `deepmerge`, default strategy, it will deepmerge to default config.
 - `merge`, it will merge to default config, equal to `Object.assign`.
 - `replace`, it will replace current config.
+
+## Notice
+
+Before you get or set config, you should import platform package at first.
+
+```ts
+import '@fower/react'
+import { getConfig, setConfig } from '@fower/core'
+```
