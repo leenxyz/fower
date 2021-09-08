@@ -24,7 +24,7 @@ export class Atom {
     this.key = options.key || this.propKey
     this.value = options.value || this.propValue
 
-    this.style = options.style
+    this.style = options.style || {}
 
     this.handled = this.getInitialHandled()
     this.isValid = this.getIsValid()
