@@ -1,6 +1,6 @@
 {
   "name": "@fower/core",
-  "version": "1.51.0",
+  "version": "1.51.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.51.0",
-    "@fower/css-object-processor": "^1.51.0",
-    "@fower/utils": "^1.51.0",
+    "@fower/atomic-props": "^1.51.1",
+    "@fower/css-object-processor": "^1.51.1",
+    "@fower/utils": "^1.51.1",
     "deepmerge": "^4.2.2",
     "string-hash": "^1.1.3"
   }

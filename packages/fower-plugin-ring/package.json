@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-ring",
-  "version": "1.51.0",
+  "version": "1.51.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,10 +23,10 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-ring.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.51.0",
-    "@fower/color-helper": "^1.51.0",
-    "@fower/core": "^1.51.0",
-    "@fower/utils": "^1.51.0",
+    "@fower/atomic-props": "^1.51.1",
+    "@fower/color-helper": "^1.51.1",
+    "@fower/core": "^1.51.1",
+    "@fower/utils": "^1.51.1",
     "csstype": "^3.0.8"
   }
 }
