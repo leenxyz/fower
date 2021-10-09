@@ -9,7 +9,7 @@
         "*.tsconfg.json"
       ],
       "message": "chore(release): publish",
-      "registry": "http://registry.npmjs.org"
+      "registry": "https://registry.npmjs.org"
     }
   },
   "version": "1.52.0"
