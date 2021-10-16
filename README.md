@@ -1,6 +1,6 @@
 # Fower
 
-An utility-first CSS in JS library for rapid UI development.
+A utility-first CSS in JS library for rapid UI development.
 
 [![npm](https://img.shields.io/npm/v/@fower/core.svg)](https://www.npmjs.com/package/@fower/core)
 [![Coverage Status](https://coveralls.io/repos/github/forsigner/fower/badge.svg?branch=master)](https://coveralls.io/github/forsigner/fower?branch=master)
