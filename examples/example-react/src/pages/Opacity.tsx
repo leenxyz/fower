@@ -3,7 +3,10 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box row toEvenly bgGreen50 p6 white>
-      <Box toCenter square-100 bgGreen500 opacity-20>
+      <Box toCenter square-100 border bgGreen500 opacity-20={null}>
+        opacity-20
+      </Box>
+      <Box toCenter square-100 border bgGreen500 opacity-20>
         opacity-20
       </Box>
       <Box toCenter square-100 bgGreen500 opacity-40>

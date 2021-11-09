@@ -71,7 +71,8 @@ export class Atom {
     return Object.keys(this.style || {}).join('-') + JSON.stringify(rest)
   }
 
-  get isFalsePropValue() {
+  get isFalsyPropValue() {
+    if (this.propValue === undefined || this.propValue === null) return true
     return typeof this.propValue === 'boolean' && !this.propValue
   }
 
@@ -181,7 +182,7 @@ export class Atom {
     const isValid = /^[a-zA-Z0-9-]+$/.test(id)
     id = isValid ? id : `css-${hash(id)}`
 
-    if (this.isFalsePropValue) id = id + '--false'
+    if (this.isFalsyPropValue) id = id + '--false'
 
     this.id = id
 
@@ -312,13 +313,13 @@ export class Atom {
 
   private getInitialHandled() {
     if (this.options.handled) return this.options.handled
-    if (this.isFalsePropValue) return true
+    if (this.isFalsyPropValue) return true
     if (invalidProps.includes(this.propKey)) return true
     return false
   }
 
   private getIsValid() {
-    if (this.isFalsePropValue) return false
+    if (this.isFalsyPropValue) return false
     if (invalidProps.includes(this.propKey)) return false
     return true
   }
