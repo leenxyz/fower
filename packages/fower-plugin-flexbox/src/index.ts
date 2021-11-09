@@ -27,7 +27,10 @@ export function toStyle(atom: Atom) {
     return style
   }
 
-  if (isFlexProps(key)) style[key] = value
+  if (isFlexProps(key)) {
+    const newKey = kebab(key.replace(/^flex/, 'flex-'))
+    style[newKey] = value
+  }
 
   if (flexReg.test(key)) {
     const postfix = key.replace(/^flex/, '').toLowerCase()
