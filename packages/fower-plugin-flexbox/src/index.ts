@@ -28,7 +28,7 @@ export function toStyle(atom: Atom) {
   }
 
   if (isFlexProps(key)) {
-    const shouldKebab = /^flex(Grow|Shrink|Basis|Wrap)$/i
+    const shouldKebab = /^flex(Grow|Shrink|Basis|Wrap)$/i.test(key)
     const newKey = shouldKebab ? kebab(key.replace(/^flex/, 'flex-')) : key
     style[newKey] = value
   }
