@@ -1,19 +1,9 @@
 import { Box } from '@fower/react';
 
-const Test = (props) => <Box square-24 {...props}></Box>;
-
 export default () => {
-  return (
-    <Test square6 bgBlue200>
-      zz
-    </Test>
-  );
+  return <Box square={20.5} bgGreen300></Box>;
   return (
     <Box p4>
-      <Test square20 bgBlue200>
-        zzxax
-      </Test>
-
       <Box toEvenly textXS>
         <Box w9 h5 bgBlue200>
           w9 h5
