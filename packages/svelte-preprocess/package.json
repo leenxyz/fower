@@ -24,8 +24,8 @@
     "svelte": "^3.37.0"
   },
   "dependencies": {
-    "@fower/core": "^1.55.0",
-    "@fower/preset-web": "^1.55.0",
+    "@fower/core": "1.55.0",
+    "@fower/preset-web": "1.55.0",
     "posthtml": "^0.15.2"
   }
 }

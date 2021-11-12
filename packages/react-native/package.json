@@ -22,9 +22,9 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@fower/core": "^1.55.0",
-    "@fower/preset-react-native": "^1.55.0",
-    "@fower/styled": "^1.55.0"
+    "@fower/core": "1.55.0",
+    "@fower/preset-react-native": "1.55.0",
+    "@fower/styled": "1.55.0"
   },
   "devDependencies": {
     "@types/react-native": "^0.64.4"

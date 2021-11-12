@@ -19,9 +19,9 @@
   "author": "forsigner",
   "module": "dist/taro.esm.js",
   "dependencies": {
-    "@fower/core": "^1.55.0",
-    "@fower/preset-taro": "^1.55.0",
-    "@fower/styled": "^1.55.0"
+    "@fower/core": "1.55.0",
+    "@fower/preset-taro": "1.55.0",
+    "@fower/styled": "1.55.0"
   },
   "devDependencies": {
     "@tarojs/components": "^3.0.23"

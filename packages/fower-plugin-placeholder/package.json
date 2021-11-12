@@ -23,9 +23,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-placeholder.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.55.0",
-    "@fower/color-helper": "^1.55.0",
-    "@fower/core": "^1.55.0",
-    "@fower/utils": "^1.55.0"
+    "@fower/atomic-props": "1.55.0",
+    "@fower/color-helper": "1.55.0",
+    "@fower/core": "1.55.0",
+    "@fower/utils": "1.55.0"
   }
 }

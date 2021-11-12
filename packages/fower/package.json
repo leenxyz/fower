@@ -21,6 +21,6 @@
   "author": "forsigner",
   "module": "dist/fower.esm.js",
   "dependencies": {
-    "@fower/core": "^1.55.0"
+    "@fower/core": "1.55.0"
   }
 }

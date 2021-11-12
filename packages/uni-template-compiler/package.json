@@ -11,7 +11,7 @@
   },
   "author": "doabit",
   "dependencies": {
-    "@fower/preset-uniapp": "^1.55.0",
+    "@fower/preset-uniapp": "1.55.0",
     "posthtml": "^0.15.2"
   },
   "devDependencies": {
