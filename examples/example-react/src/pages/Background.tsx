@@ -2,11 +2,34 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
+    <Box
+      red600
+      fontBold
+      bgGreen200
+      text6XL={() => true}
+      p4={() => true}
+      css={{
+        marginTop: 20,
+        textShadow: '#FC0 1px 0 10px',
+        '::before': {
+          bgBlue100: true,
+          content: '"@@"',
+        },
+        ':hover': {
+          // bgBlue100: true,
+          backgroundColor: '#fc0',
+        },
+      }}
+    >
+      Hello world
+    </Box>
+  );
+  return (
     <Box>
       <Box>
         <Box
           as="span"
-          fontBold
+          fontBold={() => true}
           text6XL
           transparent
           bgClipText
