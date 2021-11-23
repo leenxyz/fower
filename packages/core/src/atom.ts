@@ -168,9 +168,9 @@ export class Atom {
     } else if (Array.isArray(value)) {
       const valueStr = value.join('-')
       id = `${key}-${valueStr}`
-    } else if (typeof value === 'function') {
-      const valueStr = hash(value.toString())
-      id = `${key}-${valueStr}`
+      // } else if (typeof value === 'function') {
+      //   const valueStr = hash(value.toString())
+      //   id = `${key}-${valueStr}`
     } else {
       id = `${key}-${String(value)}`
     }
@@ -197,7 +197,7 @@ export class Atom {
    */
   preprocessAtom() {
     const newAtom = this.postfixPreprocessor()
-    this.setId()
+    // this.setId()
     return newAtom
   }
 

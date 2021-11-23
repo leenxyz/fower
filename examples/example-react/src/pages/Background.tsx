@@ -3,24 +3,22 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box
-      red600
+      color={() => 'yellow400'}
       fontBold
       bgGreen200
+      bgRed200--hover={() => true}
       text6XL={() => true}
       p4={() => true}
       css={{
-        marginTop: 20,
-        textShadow: '#FC0 1px 0 10px',
-        '::before': {
-          bgBlue100: true,
-          content: '"@@"',
-        },
-        ':hover': {
-          // bgBlue100: true,
-          backgroundColor: '#fc0',
-        },
+        'm-40': () => true,
       }}
     >
+      <Box
+        as="input"
+        onKeyDown={(e) => {
+          console.log(e.key);
+        }}
+      />
       Hello world
     </Box>
   );

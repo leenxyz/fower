@@ -397,10 +397,15 @@ export class Parser {
     for (const plugin of this.plugins) {
       if (!plugin.isMatch?.(atom.key, this)) continue
 
+      // 处理函数 props
+      if (typeof atom.value === 'function') atom.value = atom.value()
+
       if (plugin.beforeHandleAtom) {
         atom = plugin.beforeHandleAtom(atom, this)
       }
     }
+
+    atom.setId()
 
     const cachedAtom = store.atomCache.get(atom.id)
 
