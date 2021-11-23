@@ -477,10 +477,9 @@ export class Parser {
         continue
       }
 
-      // not match atomic props rule
-      if (!atom.style) {
+      // not match atomic props rule, 说明是非原子属性
+      if (!atom.style || !Object.keys(atom.style).length) {
         atom.style = style
-
         atom.handled = true
       }
 
