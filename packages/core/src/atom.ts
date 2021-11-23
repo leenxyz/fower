@@ -17,16 +17,12 @@ export const digitReg =
 export class Atom {
   constructor(private readonly options: Options) {
     this.propKey = options.propKey
-
-    const propValue =
-      typeof options.propValue === 'function' ? options.propValue() : options.propValue
-
-    this.propValue = propValue
+    this.propValue = options.propValue
 
     this.propKeys = [this.propKey]
 
     this.key = options.key || this.propKey
-    this.value = propValue
+    this.value = options.value || this.propValue
 
     this.style = options.style || {}
 
@@ -153,7 +149,8 @@ export class Atom {
   isValid: boolean
 
   setId = (): string => {
-    const { meta, key, value } = this
+    let { meta, key, value } = this
+
     const { pseudoPrefix, childSelector, important, ...rest } = meta
     const values = Object.values(rest).sort()
     if (important) values.push('i')
@@ -170,6 +167,9 @@ export class Atom {
       id = key
     } else if (Array.isArray(value)) {
       const valueStr = value.join('-')
+      id = `${key}-${valueStr}`
+    } else if (typeof value === 'function') {
+      const valueStr = hash(value.toString())
       id = `${key}-${valueStr}`
     } else {
       id = `${key}-${String(value)}`
@@ -198,7 +198,6 @@ export class Atom {
   preprocessAtom() {
     const newAtom = this.postfixPreprocessor()
     this.setId()
-
     return newAtom
   }
 
