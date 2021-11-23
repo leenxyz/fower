@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-uniapp",
-  "version": "1.55.0",
+  "version": "1.56.0",
   "private": true,
   "scripts": {
     "serve": "npm run dev:h5",
@@ -80,8 +80,8 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-31920210514002",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-31920210514002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-31920210514002",
-    "@fower/uni-template-compiler": "^1.55.0",
-    "@fower/vue": "^1.55.0",
+    "@fower/uni-template-compiler": "^1.56.0",
+    "@fower/vue": "^1.56.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-typescript": "*",
     "@vue/cli-service": "^4.5.13",

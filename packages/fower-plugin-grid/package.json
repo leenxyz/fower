@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-grid",
-  "version": "1.55.0",
+  "version": "1.56.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,8 +22,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-grid.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "1.55.0",
-    "@fower/core": "1.55.0",
-    "@fower/utils": "1.55.0"
+    "@fower/atomic-props": "^1.56.0",
+    "@fower/core": "^1.56.0",
+    "@fower/utils": "^1.56.0"
   }
 }
