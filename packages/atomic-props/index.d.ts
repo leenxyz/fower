@@ -15,7 +15,7 @@ declare namespace FowerTypes {
     | {
         [K in keyof T]?: T[K] extends object
           ? CSSObject<T[K]>
-          : FowerCSSProperties | number | string | boolean
+          : FowerCSSProperties | number | string | boolean | (() => any)
       }
 
   type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
