@@ -375,7 +375,7 @@ export class Parser {
    * @returns
    */
   isValidProp(propKey: string, propValue: any): boolean {
-    const validTypes = ['string', 'boolean', 'number', 'undefined']
+    const validTypes = ['string', 'boolean', 'number', 'undefined', 'function']
     if (propKey === 'css') return true
 
     // for _hover,_sm,_dark...

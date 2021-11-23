@@ -17,12 +17,16 @@ export const digitReg =
 export class Atom {
   constructor(private readonly options: Options) {
     this.propKey = options.propKey
-    this.propValue = options.propValue
+
+    const propValue =
+      typeof options.propValue === 'function' ? options.propValue() : options.propValue
+
+    this.propValue = propValue
 
     this.propKeys = [this.propKey]
 
     this.key = options.key || this.propKey
-    this.value = options.value || this.propValue
+    this.value = propValue
 
     this.style = options.style || {}
 
