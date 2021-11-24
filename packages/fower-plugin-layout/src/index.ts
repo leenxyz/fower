@@ -29,6 +29,7 @@ export default (): FowerPlugin => {
       /** @example <Box column></Box> */
       if (isDirection(atom.key)) {
         atom.id = `flexDirection-${atom.id}`
+
         atom.style = { flexDirection: kebab(atom.key) } as any
       }
 
@@ -77,6 +78,9 @@ export default (): FowerPlugin => {
             handled: true,
             style: { flexDirection: directionRow },
           })
+
+          newRowAtom.setId()
+
           newRowAtom.id = `flexDirection-${newRowAtom.id}`
           parser.addAtom(newRowAtom)
           directionAtoms.push(newRowAtom)
@@ -124,6 +128,8 @@ export default (): FowerPlugin => {
           handled: true,
           style: { display: 'flex' },
         })
+
+        atom.setId()
         parser.addAtom(atom)
       }
     },

@@ -397,6 +397,9 @@ export class Parser {
     for (const plugin of this.plugins) {
       if (!plugin.isMatch?.(atom.key, this)) continue
 
+      // why set id here? because of function prop Value
+      if (!atom.id) atom.setId()
+
       // 处理函数 props
       if (typeof atom.value === 'function') atom.value = atom.value()
 
@@ -404,8 +407,6 @@ export class Parser {
         atom = plugin.beforeHandleAtom(atom, this)
       }
     }
-
-    atom.setId()
 
     const cachedAtom = store.atomCache.get(atom.id)
 
