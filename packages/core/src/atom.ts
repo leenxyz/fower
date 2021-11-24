@@ -15,7 +15,12 @@ export const digitReg =
   /^(m[xytrbl]?-?|p[xytrbl]?|space[xy]?|top-?|right-?|bottom-?|left-?|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex-?|leading|stroke|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border(Top|Right|Bottom|Left)?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?\d+[a-z]*?|-auto)$/i
 
 export class Atom {
-  constructor(private readonly options: Options) {
+  /**
+   *
+   * @param options
+   * @param autoSetId  setId when new Atom(), default is true
+   */
+  constructor(private readonly options: Options, private readonly autoSetId = true) {
     this.propKey = options.propKey
     this.propValue = options.propValue
 
@@ -197,7 +202,7 @@ export class Atom {
    */
   preprocessAtom() {
     const newAtom = this.postfixPreprocessor()
-    // this.setId()
+    if (this.autoSetId) this.setId()
     return newAtom
   }
 

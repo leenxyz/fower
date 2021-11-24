@@ -161,7 +161,8 @@ export class Parser {
         continue
       }
 
-      let atom = new Atom({ propKey, propValue })
+      // common props
+      let atom = new Atom({ propKey, propValue }, false)
 
       try {
         this.mutateAtom(atom)
@@ -477,7 +478,7 @@ export class Parser {
         option.meta.siblingSelector = selector
       }
 
-      const atom = new Atom(option)
+      const atom = new Atom(option, false)
 
       try {
         this.mutateAtom(atom)
