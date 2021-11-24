@@ -1,6 +1,6 @@
 {
     "name": "@fower/atomic-props",
-    "version": "1.57.0",
+    "version": "1.58.0",
     "license": "MIT",
     "main": "index.js",
     "types": "index.d.ts",

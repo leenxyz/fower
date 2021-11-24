@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-text-transform",
-  "version": "1.57.0",
+  "version": "1.58.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-text-transform.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.57.0",
-    "@fower/core": "^1.57.0",
-    "@fower/utils": "^1.57.0"
+    "@fower/atomic-props": "^1.58.0",
+    "@fower/core": "^1.58.0",
+    "@fower/utils": "^1.58.0"
   }
 }
