@@ -332,6 +332,8 @@ export class Parser {
   }
 
   addAtom(atom: Atom) {
+    if (!atom.id) atom.setId()
+
     // if not cached, let's cache it
     if (!store.atomCache.get(atom.id)) {
       store.atomCache.set(atom.id, atom)

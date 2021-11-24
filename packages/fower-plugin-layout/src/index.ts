@@ -129,7 +129,6 @@ export default (): FowerPlugin => {
           style: { display: 'flex' },
         })
 
-        atom.setId()
         parser.addAtom(atom)
       }
     },
