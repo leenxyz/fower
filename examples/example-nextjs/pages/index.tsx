@@ -4,16 +4,16 @@ import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
 export default function Home() {
-  return (
-    <Box toCenter>
-      <Box bgYellow400 p4>
-        a
-      </Box>
-      <Box bgGreen500 p4>
-        b
-      </Box>
-    </Box>
-  )
+  // return (
+  //   <Box toCenter>
+  //     <Box bgYellow400 p4>
+  //       a
+  //     </Box>
+  //     <Box bgGreen500 p4>
+  //       b
+  //     </Box>
+  //   </Box>
+  // )
   return (
     <Box
       bgWhite

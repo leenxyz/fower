@@ -44,5 +44,5 @@ test('invalid propValue', () => {
     }),
     parser,
   )
-  expect(atom.style).toBeFalsy()
+  expect(atom.style).toMatchObject({})
 })

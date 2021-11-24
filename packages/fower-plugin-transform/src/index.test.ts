@@ -21,7 +21,7 @@ test('scale', () => {
     }),
     parser,
   )
-  expect(atom.style).toBeFalsy()
+  expect(Object.keys(atom.style).length).toEqual(0)
 })
 
 describe('afterAtomStyleCreate', () => {
