@@ -185,10 +185,14 @@ export class Atom {
     // handle special character
     id = id.replace(/[#()]/g, '').replace('.', '_').replace(/\%/g, 'p').replace(/\s+/g, '-')
 
+    if (this.isFalsyPropValue) id = id + '--false'
+
+    if (meta.childSelector) {
+      id = meta.childSelector + '-' + id
+    }
+
     const isValid = /^[a-zA-Z0-9-_]+$/.test(id)
     id = isValid ? id : `css-${hash(id)}`
-
-    if (this.isFalsyPropValue) id = id + '--false'
 
     this.id = id
 
