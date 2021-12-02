@@ -2,27 +2,6 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box
-      color={() => 'yellow400'}
-      fontBold
-      bgGreen200
-      bgRed200--hover={() => true}
-      text6XL={() => true}
-      p4={() => true}
-      css={{
-        'm-40': () => true,
-      }}
-    >
-      <Box
-        as="input"
-        onKeyDown={(e) => {
-          console.log(e.key);
-        }}
-      />
-      Hello world
-    </Box>
-  );
-  return (
     <Box>
       <Box>
         <Box

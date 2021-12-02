@@ -411,6 +411,11 @@ export class Parser {
       }
     }
 
+    // for nested style, like css props
+    if (Object.values(atom.meta || {}).length) {
+      if (!atom.id) atom.setId()
+    }
+
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
@@ -640,7 +645,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms---', this.atoms)
+    // console.log('this.atoms---', this.atoms, rules)
 
     return rules
   }

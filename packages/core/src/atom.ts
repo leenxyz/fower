@@ -183,7 +183,11 @@ export class Atom {
     if (values.length) id = id + '--' + values.join('--')
 
     // handle special character
-    id = id.replace(/[#()]/g, '').replace('.', '_').replace(/\%/g, 'p').replace(/\s+/g, '-')
+    id = id
+      .replace(/[#()"']/g, '')
+      .replace('.', '_')
+      .replace(/\%/g, 'p')
+      .replace(/\s+/g, '-')
 
     if (this.isFalsyPropValue) id = id + '--false'
 

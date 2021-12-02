@@ -478,48 +478,48 @@ export interface Colors {
 export interface Meta {
   /**
    * color mode
-   * @exmple
+   * @example
    * mode: 'dark'
    */
   mode?: string
 
   /**
-   * @exmple
+   * @example
    * breakpoint: '640px'
    */
   breakpoint?: string
 
   /**
-   * @exmple
+   * @example
    * --hover -> hover
    * --befor -> befor
    */
   pseudo?: string
 
   /**
-   * @exmple
+   * @example
    * --hover -> :
-   * --befor -> ::
+   * --before -> ::
    */
   pseudoPrefix?: string
 
   /**
    * child selector for atom.className
-   * @exmple
+   * @example
    * childSelector: '.child'
    */
   childSelector?: string
 
   /**
    * sibling selector for atom.className
-   * @exmple
+   * @example
    * childSelector: '.sibling'
    */
   siblingSelector?: string
 
   /**
    * parent class for group pseudo
-   * @exmple
+   * @example
    * parentClass: 'group'
    */
   parentClass?: string
