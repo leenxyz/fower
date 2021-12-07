@@ -23,6 +23,7 @@
   "module": "dist/core.esm.js",
   "dependencies": {
     "@fower/atomic-props": "^1.59.0",
+    "@fower/color-helper": "^1.59.0",
     "@fower/css-object-processor": "^1.59.0",
     "@fower/utils": "^1.59.0",
     "deepmerge": "^4.2.2",
