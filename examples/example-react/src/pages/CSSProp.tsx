@@ -1,11 +1,12 @@
 import { Box } from '@fower/react';
 
 export default () => {
+  const a = 1;
   return (
     <Box>
       <Box
         css={{
-          color: 'red',
+          color: () => (a > 0 ? 'red' : 'blue'),
         }}
       >
         foo

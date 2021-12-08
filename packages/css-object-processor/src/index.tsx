@@ -27,7 +27,9 @@ export function flatten(cssObj: CSSObject): FlattenItem[] {
   if (!cssObj) return cssObj
 
   //  not object, just css primitive value like '10px', 'red
-  if (typeof cssObj !== 'object') return cssObj
+  if (typeof cssObj !== 'object') {
+    return typeof cssObj === 'function' ? (cssObj as any)() : cssObj
+  }
 
   // responsive value
   if (Array.isArray(cssObj)) return cssObj
