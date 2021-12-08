@@ -1,0 +1,44 @@
+---
+id: text-overflow
+title: Text Overflow
+---
+
+| Atomic Props     | CSS Properties                                                  |
+| ---------------- | --------------------------------------------------------------- |
+| truncate         | overflow: hidden; text-overflow: ellipsis; white-space: nowrap; |
+| overflowEllipsis | text-overflow: ellipsis;                                        |
+| overflowClip     | text-overflow: clip;                                            |
+
+## Truncate
+
+Use `truncate` atomic props to truncate overflowing text with an ellipsis (…) if needed.
+
+```jsx live
+<Box w-200 textLG truncate>
+  Lorem ipsum dolor sit amet
+</Box>
+```
+
+## Overflow Ellipsis
+
+Use `overflowEllipsis` to truncate overflowing text with an ellipsis (…) if needed.
+
+```jsx live
+<Box p3 w-200 textLG overflowEllipsis overflowHidden bgRed100>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione
+  dolorem nisi velit cum.
+</Box>
+```
+
+## Overflow Clip
+
+Use `overflowClip` to truncate the text at the limit of the content area.
+
+```jsx live
+<Box p3 w-200 textLG overflowClip overflowHidden bgRed100>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione
+  dolorem nisi velit cum.
+</Box>
+```

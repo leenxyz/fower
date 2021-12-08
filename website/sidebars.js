@@ -159,6 +159,7 @@ module.exports = {
         'text-alignment',
         'text-decoration',
         'text-transform',
+        'text-overflow',
         // 'ellipsis',
       ],
     },
