@@ -1,5 +1,10 @@
 import { Box } from '@fower/react';
 import { injectGlobalStyle } from '@fower/core';
+import { setConfig } from '@fower/core';
+
+setConfig({
+  objectPropKeys: ['css', 'sx'],
+});
 
 injectGlobalStyle({
   '.title': {

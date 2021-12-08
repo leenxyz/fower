@@ -109,9 +109,9 @@ export class Parser {
 
       if (!this.isValidProp(propKey, propValue)) continue
 
-      // parse css prop
-      if (propKey === 'css') {
-        this.parseCSSObject(propValue, {})
+      // parse object prop
+      if (this.config.objectPropKeys?.includes(propKey)) {
+        this.parseObjectProp(propValue, {})
         continue
       }
 
@@ -123,15 +123,15 @@ export class Parser {
           : propValue
 
         if (modeKeys.includes(postfix)) {
-          this.parseCSSObject(obj, { mode: postfix })
+          this.parseObjectProp(obj, { mode: postfix })
           continue
         }
         if (breakpointKeys.includes(postfix)) {
-          this.parseCSSObject(obj, { breakpoint: breakpoints[postfix] })
+          this.parseObjectProp(obj, { breakpoint: breakpoints[postfix] })
           continue
         }
         if (pseudoKeys.includes(postfix)) {
-          this.parseCSSObject(obj, {
+          this.parseObjectProp(obj, {
             pseudoPrefix: ':',
             pseudo: postfix,
           })
@@ -152,7 +152,7 @@ export class Parser {
       const composition = store.compositions.get(propKey)
 
       if (composition) {
-        this.parseCSSObject(composition, {})
+        this.parseObjectProp(composition, {})
 
         const atom = new Atom({ propKey, propValue })
         atom.handled = true
@@ -379,7 +379,7 @@ export class Parser {
    */
   isValidProp(propKey: string, propValue: any): boolean {
     const validTypes = ['string', 'boolean', 'number', 'undefined', 'function']
-    if (propKey === 'css') return true
+    if (this.config.objectPropKeys?.includes(propKey)) return true
 
     // for _hover,_sm,_dark...
     if (propKey.startsWith('_')) return true
@@ -450,10 +450,10 @@ export class Parser {
       const prop = `${propKey}${i === 0 ? '' : '--' + keys[i - 1]}`
       return { ...result, [prop]: cur }
     }, {})
-    this.parseCSSObject(obj)
+    this.parseObjectProp(obj)
   }
 
-  parseCSSObject(propValue: any, meta = {}) {
+  parseObjectProp(propValue: any, meta = {}) {
     const parsed = parse(propValue)
 
     for (const { selector, selectorType, style } of parsed) {
@@ -667,7 +667,8 @@ export class Parser {
 
       const find = atoms.find(
         (atom) =>
-          [atom.propKey, atom.key, atom.id, 'css'].includes(key) || atom.propKeys.includes(key),
+          [atom.propKey, atom.key, atom.id, ...(this.config.objectPropKeys || [])].includes(key) ||
+          atom.propKeys.includes(key),
       )
 
       if (!find) result[key] = value

@@ -127,6 +127,11 @@ export interface Configuration {
    */
   important?: boolean
 
+  /**
+   * object style keys, default is ['css'], you can customize it to ['sx'], or both ['css', 'sx']
+   */
+  objectPropKeys?: string[]
+
   mode: {
     /**
      * @example

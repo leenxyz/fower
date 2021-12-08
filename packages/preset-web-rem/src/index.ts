@@ -4,6 +4,7 @@ import { theme } from './theme'
 
 export const presetWebRem: Preset = {
   unit: 'rem',
+  objectPropKeys: ['css'],
   prefix: '',
   plugins,
   theme,

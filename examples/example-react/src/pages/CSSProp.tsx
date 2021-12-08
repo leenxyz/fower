@@ -4,17 +4,15 @@ export default () => {
   return (
     <Box>
       <Box
-        teal500
         css={{
-          verticalAlign: 'middle',
+          color: 'red',
         }}
       >
         foo
       </Box>
       <Box
-        red500
-        css={{
-          verticalAlign: 'middle',
+        sx={{
+          color: 'green',
         }}
       >
         bar
