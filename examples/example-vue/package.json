@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-vue",
-  "version": "1.60.0",
+  "version": "1.61.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,12 +11,12 @@
     "test": "echo 'build:test'"
   },
   "dependencies": {
-    "@fower/vue": "^1.60.0",
+    "@fower/vue": "^1.61.0",
     "core-js": "^3.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@fower/vue-template-compiler": "^1.60.0",
+    "@fower/vue-template-compiler": "^1.61.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
