@@ -412,7 +412,7 @@ export class Parser {
     }
 
     // for nested style, like css props
-    if (Object.values(atom.meta || {}).length) {
+    if (Object.values(atom.meta || {}).length || Object.values(atom.style || {}).length) {
       if (!atom.id) atom.setId()
     }
 
@@ -469,6 +469,11 @@ export class Parser {
         meta: { ...meta },
       }
 
+      // 对于正常的css属性，例如 vertical-align，设置 style
+      if (style && Object.keys(style).length) {
+        option.style = style
+      }
+
       if (selectorType === 'pseudo' && option.meta) {
         const [, pseudoPrefix, pseudo] = selector.match(/(:+)(.+)/) || []
         option.meta.pseudoPrefix = pseudoPrefix
@@ -493,7 +498,6 @@ export class Parser {
 
       // not match atomic props rule, 说明是非原子属性
       if (!atom.style || !Object.keys(atom.style).length) {
-        atom.style = style
         atom.handled = true
       }
 
@@ -645,7 +649,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms---', this.atoms, rules)
+    // console.log('this.atoms---', this.atoms)
 
     return rules
   }
