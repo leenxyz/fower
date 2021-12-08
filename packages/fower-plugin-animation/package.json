@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-animation",
-  "version": "1.59.0",
+  "version": "1.60.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-animation.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.59.0",
-    "@fower/color-helper": "^1.59.0",
-    "@fower/core": "^1.59.0",
-    "@fower/utils": "^1.59.0"
+    "@fower/atomic-props": "^1.60.0",
+    "@fower/color-helper": "^1.60.0",
+    "@fower/core": "^1.60.0",
+    "@fower/utils": "^1.60.0"
   }
 }
