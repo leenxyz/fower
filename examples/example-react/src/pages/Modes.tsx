@@ -5,8 +5,8 @@ import { useState } from 'react';
 setConfig({
   mode: {
     autoDarkMode: {
-      // enabled: true,
-      enabled: false,
+      enabled: true,
+      // enabled: false,
       mappings: {
         // white: 'gray800',
         // white: '#111826',

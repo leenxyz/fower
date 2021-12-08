@@ -1,6 +1,14 @@
 import { Box } from '@fower/react';
+import { setConfig } from '@fower/core';
 import { useState } from 'react';
-import { Button } from './Button';
+
+setConfig({
+  mode: {
+    autoDarkMode: {
+      enabled: true,
+    },
+  },
+});
 
 export default () => {
   const [mode, setMode] = useState('Light');
@@ -13,10 +21,16 @@ export default () => {
       document.documentElement.classList.add('dark');
     }
   }
+  // return (
+  //   <Box border-4 borderGray200--T4 m3 p4 bgRed200>
+  //     Not only color mode, theme mode any thing: size, padding, margin,
+  //     rounded...
+  //   </Box>
+  // );
 
   return (
-    <Box h-400 roundedLarge bgGray200 p4>
-      <Box red600>40 Lorem ipsum dolor sit amet</Box>
+    <Box h-400 roundedLarge bgGray100--L2 p4>
+      {/* <Box red600>40 Lorem ipsum dolor sit amet</Box> */}
       <Box column toCenter spaceY3 gray800 textCenter>
         <Box
           as="button"
@@ -33,10 +47,10 @@ export default () => {
         >
           Toggle {mode}
         </Box>
-        <Box gray700 text3XL bgBlue300 p4 roundedGigantic rounded--dark>
+        {/* <Box gray700 text3XL bgBlue300 p4 roundedGigantic rounded--dark>
           Powerful Theme Mode
-        </Box>
-        <Box textSM>
+        </Box> */}
+        <Box textSM border p4 borderGray300--T4>
           Not only color mode, theme mode any thing: size, padding, margin,
           rounded...
         </Box>
