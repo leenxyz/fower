@@ -44,5 +44,31 @@ declare module '@fower/atomic-props' {
      * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
      */
     listDecimal?: ResponsiveBoolean
+    /**
+     * Set list-style-type to circle
+     * ```css
+     * { list-style-type: circle; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box listCircle></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+     */
+    listCircle?: ResponsiveBoolean
+    /**
+     * Set list-style-type to square
+     * ```css
+     * { list-style-type: square; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box listSquare></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+     */
+    listSquare?: ResponsiveBoolean
   }
 }

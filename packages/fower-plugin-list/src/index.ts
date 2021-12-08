@@ -3,7 +3,7 @@ import { FowerPlugin } from '@fower/core'
 export default (): FowerPlugin => {
   return {
     isMatch(key) {
-      return /^list(disc|decimal|none)$/i.test(key)
+      return /^list(disc|circle|square|decimal|none)$/i.test(key)
     },
     handleAtom(atom) {
       const { key } = atom

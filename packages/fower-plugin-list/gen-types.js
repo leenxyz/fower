@@ -27,7 +27,7 @@ const typingModule = sourceFile.addModule({
   name: `'@fower/atomic-props'`,
 })
 
-const keys = ['None', 'Disc', 'Decimal']
+const keys = ['None', 'Disc', 'Decimal', 'Circle', 'Square']
 
 const properties = keys.map((key) => {
   const name = 'list' + key

@@ -32,6 +32,26 @@ export default () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Box>
       </Box>
+
+      <Box as="ul" listSquare>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
+
+      <Box as="ul" listCircle>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
     </Box>
   );
 };

@@ -1,25 +1,6 @@
 import { Box } from '@fower/react';
 
 export default () => {
-  const a = 1;
-  return (
-    <Box>
-      <Box
-        css={{
-          color: () => (a > 0 ? 'red' : 'blue'),
-        }}
-      >
-        foo
-      </Box>
-      <Box
-        sx={{
-          color: 'green',
-        }}
-      >
-        bar
-      </Box>
-    </Box>
-  );
   return (
     <Box>
       <Box
