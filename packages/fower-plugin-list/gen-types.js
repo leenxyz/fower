@@ -7,7 +7,7 @@ const { Project } = require('ts-morph')
 const project = new Project()
 const cwd = process.cwd()
 // const outPath = join(cwd, 'types', 'index.d.ts')
-const outPath = join(cwd, 'index.d.ts')
+const outPath = join(cwd, 'types', 'index.d.ts')
 const sourceFile = project.createSourceFile(outPath, undefined, {
   overwrite: true,
 })
