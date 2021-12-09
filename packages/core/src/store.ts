@@ -13,6 +13,7 @@ const modeCacheKey = 'fower-mode'
 export class Store {
   config = {
     unit: 'px',
+    objectPropKeys: ['css'],
     inline: false,
     important: false,
     mode: {
