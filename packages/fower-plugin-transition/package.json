@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-transition",
-  "version": "1.61.0",
+  "version": "1.62.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-transition.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.61.0",
-    "@fower/core": "^1.61.0",
-    "@fower/utils": "^1.61.0"
+    "@fower/atomic-props": "^1.62.0",
+    "@fower/core": "^1.62.0",
+    "@fower/utils": "^1.62.0"
   }
 }
