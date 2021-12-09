@@ -52,6 +52,36 @@ export default () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Box>
       </Box>
+
+      <Box as="ul" listLowerAlpha>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
+
+      <Box as="ul" listLowerRoman>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
+
+      <Box as="ul" listTradChineseInformal>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
     </Box>
   );
 };
