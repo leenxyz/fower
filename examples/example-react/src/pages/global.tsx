@@ -1,10 +1,13 @@
 import { Box } from '@fower/react';
 import { injectGlobalStyle } from '@fower/core';
-import { setConfig } from '@fower/core';
+import { css, setConfig } from '@fower/core';
 
 setConfig({
-  objectPropKeys: ['css', 'sx'],
+  objectPropKeys: ['sx'],
 });
+
+// 预期输出 toRight，但是会输出空
+console.log('----', css({ toRight: true }));
 
 injectGlobalStyle({
   '.title': {

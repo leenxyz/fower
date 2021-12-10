@@ -2,6 +2,18 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
+    <Box
+      textXL
+      border
+      mt={() => 20}
+      bg={() => {
+        return 'brand500';
+      }}
+    >
+      bgBrand
+    </Box>
+  );
+  return (
     <Box>
       <Box>
         <Box

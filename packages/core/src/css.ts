@@ -1,6 +1,7 @@
 import { CSSArgs } from './typings'
 import { Parser } from './parser'
 import { argsToProps } from '@fower/utils'
+import { store } from './store'
 
 /**
  * convert atomic props to classNames
@@ -9,7 +10,7 @@ import { argsToProps } from '@fower/utils'
  */
 export function css(...args: CSSArgs): string {
   if (!args.length) return ''
-  const parser = new Parser(argsToProps(args))
+  const parser = new Parser(argsToProps(args, store.config?.objectPropKeys?.[0]))
   parser.insertRules()
   return parser.getClassNames().join(' ')
 }

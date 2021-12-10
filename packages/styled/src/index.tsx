@@ -7,9 +7,8 @@ import {
   ReactNode,
 } from 'react'
 import hoistNonReactStatics from 'hoist-non-react-statics'
-import { store, Parser } from '@fower/core'
 import { upFirst, argsToProps } from '@fower/utils'
-import { StyledArgs } from '@fower/core'
+import { StyledArgs, store, Parser } from '@fower/core'
 import { AtomicProps } from '@fower/atomic-props'
 
 export type StyledComponent<P extends {}> = (props: P) => ReactElement<P, any> | null
@@ -49,7 +48,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 
   const StyledComponent = forwardRef((props = {}, ref) => {
     const { inline } = store.config
-    const prepareProps = { ...argsToProps(args), ...props }
+    const prepareProps = { ...argsToProps(args, store.config?.objectPropKeys?.[0]), ...props }
 
     const parsedProps = inline
       ? getInLineParsedProps(prepareProps)

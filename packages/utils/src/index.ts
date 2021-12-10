@@ -77,7 +77,7 @@ export function objectToClassName(style: Dict, prefix = 'css-') {
  * @param args
  * @returns
  */
-export function argsToProps(args: any[]) {
+export function argsToProps(args: any[], objectPropKey = 'css') {
   let obj = args.reduce(
     (result, cur) => {
       if (typeof cur === 'string') {
@@ -89,13 +89,12 @@ export function argsToProps(args: any[]) {
           result[key] = true
         }
       } else {
-        result.css = { ...result.css, ...cur }
+        result[objectPropKey] = { ...result[objectPropKey], ...cur }
       }
       return result
     },
-    { css: {} } as any,
+    { [objectPropKey]: {} } as any,
   )
-  const { css, ...rest } = obj
 
-  return { ...rest, css } // make css to lasted attr
+  return { ...obj, [objectPropKey]: obj[objectPropKey] } // make css to lasted attr
 }
