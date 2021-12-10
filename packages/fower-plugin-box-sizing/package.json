@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-box-sizing",
-  "version": "1.62.0",
+  "version": "1.62.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,9 +23,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-box-sizing.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.62.0",
-    "@fower/core": "^1.62.0",
-    "@fower/utils": "^1.62.0",
+    "@fower/atomic-props": "^1.62.1",
+    "@fower/core": "^1.62.1",
+    "@fower/utils": "^1.62.1",
     "csstype": "^3.0.8"
   }
 }
