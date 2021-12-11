@@ -82,6 +82,26 @@ export default () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </Box>
       </Box>
+
+      <Box as="ul" listDisc listInside>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
+
+      <Box as="ul" listDisc listOutside>
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+
+        <Box as="li">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </Box>
+      </Box>
     </Box>
   );
 };

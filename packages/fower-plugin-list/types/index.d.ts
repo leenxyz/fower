@@ -6,6 +6,32 @@ export default _default
 declare module '@fower/atomic-props' {
   export interface AtomicProps {
     /**
+     * Set list-style-type to inside
+     * ```css
+     * { list-style-type: inside; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box listInside></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+     */
+    listInside?: ResponsiveBoolean
+    /**
+     * Set list-style-type to outside
+     * ```css
+     * { list-style-type: outside; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box listOutside></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/list-type
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+     */
+    listOutside?: ResponsiveBoolean
+    /**
      * Set list-style-type to none
      * ```css
      * { list-style-type: none; }

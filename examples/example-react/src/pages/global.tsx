@@ -7,7 +7,7 @@ setConfig({
 });
 
 // 预期输出 toRight，但是会输出空
-console.log('----', css({ toRight: true }));
+// console.log('----', css({ toRight: true }));
 
 injectGlobalStyle({
   '.title': {

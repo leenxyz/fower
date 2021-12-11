@@ -28,6 +28,8 @@ const typingModule = sourceFile.addModule({
 })
 
 const keys = [
+  'Inside',
+  'Outside',
   'None',
   'Disc',
   'Decimal',
