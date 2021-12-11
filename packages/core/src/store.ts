@@ -61,6 +61,8 @@ export class Store {
     ],
     theme: {
       breakpoints: {},
+      colors: {},
+      spacings: {},
     } as Theme,
     plugins: [],
   } as Configuration
