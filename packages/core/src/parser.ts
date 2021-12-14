@@ -26,7 +26,23 @@ export const digitReg =
   /^([mp][xytrbl]?|space[xy]?|top|right|bottom|left|[wh]|square|circle|min[hw]|max[hw]|opacity|delay|duration|translate[xyz]|scale[xy]?|rotate[xy]?|skew[xy]?|text|zIndex|leading|stroke|fontWeight|outlineOffset|order|flex(Grow|Shrink|Basis)?|(row|column)?Gap|gridTemplateColumns|border[trbl]?|rounded(Top(Left|Right)?|Right|Bottom(Left|Right)?|Left)?)(-?-?\d+[a-z]*?|-auto)$/i
 
 //  high-frequency used props in react
-const reactProps = ['children', 'onClick', 'onChange', 'onBlur', 'className', 'placeholder']
+const reactProps = [
+  'children',
+  'onClick',
+  'onChange',
+  'onBlur',
+  'id',
+  'className',
+  'style',
+  'title',
+  'tabIndex',
+  'placeholder',
+  'href',
+  'src',
+  'contentEditable',
+  'defaultChecked',
+  'defaultValue',
+]
 
 /**
  * An Abstract tool to handle atomic props
