@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-overflow",
-  "version": "1.63.0",
+  "version": "1.64.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-overflow.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.63.0",
-    "@fower/core": "^1.63.0",
-    "@fower/utils": "^1.63.0"
+    "@fower/atomic-props": "^1.64.0",
+    "@fower/core": "^1.64.0",
+    "@fower/utils": "^1.64.0"
   }
 }
