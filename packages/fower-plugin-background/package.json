@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-background",
-  "version": "1.64.0",
+  "version": "1.64.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,9 +23,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-background.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.64.0",
-    "@fower/colors": "^1.64.0",
-    "@fower/core": "^1.64.0",
-    "@fower/utils": "^1.64.0"
+    "@fower/atomic-props": "^1.64.1",
+    "@fower/colors": "^1.64.1",
+    "@fower/core": "^1.64.1",
+    "@fower/utils": "^1.64.1"
   }
 }
