@@ -634,6 +634,7 @@ export class Parser {
       atom.inserted = true
 
       const className = this.getClassNameById(id)
+
       let selector = meta.global ? meta.global : `.${className}`
 
       if (mode) selector = `.${classPrefix}${mode} ${selector}`
