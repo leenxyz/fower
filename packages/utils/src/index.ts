@@ -76,28 +76,28 @@ export function objectToClassName(style: Record<string, any>, prefix = 'css-') {
  * @returns
  */
 export function argsToProps(args: any[], objectPropKey = 'css') {
-  let obj = args.reduce(
-    (result, cur) => {
-      if (typeof cur === 'string') {
-        cur
-          .split(/\s+/)
-          .filter((s) => !!s)
-          .forEach((s) => {
-            if (cur !== 'className') result[s] = true
-          })
-      }
-      if (typeof cur !== 'object') return result
-      if (Array.isArray(cur)) {
-        for (const key of cur) {
-          result[key] = true
-        }
-      } else {
-        result[objectPropKey] = { ...result[objectPropKey], ...cur }
-      }
-      return result
-    },
-    { [objectPropKey]: {} } as any,
-  )
+  return args.reduce((result, cur) => {
+    // handle string like 'toCenter px-8 m0'
+    if (typeof cur === 'string') {
+      cur
+        .split(/\s+/)
+        .filter((s) => !!s)
+        .forEach((s) => {
+          if (cur !== 'className') result[s] = true
+        })
+    }
 
-  return { ...obj, [objectPropKey]: obj[objectPropKey] } // make css to lasted attr
+    if (typeof cur !== 'object') return result
+
+    // hanlde array like ['toCenter', 'px-8', 'mb2']
+    if (Array.isArray(cur)) {
+      for (const key of cur) {
+        result[key] = true
+      }
+    } else {
+      // not array, set to objectPropKey
+      result[objectPropKey] = { ...(result[objectPropKey] || {}), ...cur }
+    }
+    return result
+  }, {} as any)
 }

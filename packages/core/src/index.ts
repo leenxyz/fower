@@ -1,13 +1,14 @@
 import { store } from './store'
 export * from './css'
+export * from './isAtomicArgsValid'
 export * from './createStyle'
 export * from './keyframes'
 export * from './injectGlobalStyle'
-export { Parser } from './parser'
 export * from './atom'
 export * from './store'
 export * from './sheet'
 export * from './typings'
+export { Parser } from './parser'
 
 import { injectGlobalStyle } from './injectGlobalStyle'
 
