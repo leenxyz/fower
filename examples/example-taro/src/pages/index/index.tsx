@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import { View, Text } from '@fower/taro'
+import { View } from '@tarojs/components'
+import { Text, Switch } from '@fower/taro'
 import './index.css'
 
 export default class Index extends Component {
@@ -16,12 +17,8 @@ export default class Index extends Component {
   render() {
     return (
       <View className="index">
-        <View h-100 border bgGreen200 text-16>
-          Hello world!
-        </View>
-        <View h-100px border bgRed200 text-16px>
-          Hello world!
-        </View>
+        <Text red300>Hello world!</Text>
+        <Switch color="#000" excludedProps={['color']} />
       </View>
     )
   }
