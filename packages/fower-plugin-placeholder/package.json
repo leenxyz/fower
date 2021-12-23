@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-placeholder",
-  "version": "1.64.1",
+  "version": "1.65.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,9 +23,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-placeholder.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.64.1",
-    "@fower/color-helper": "^1.64.1",
-    "@fower/core": "^1.64.1",
-    "@fower/utils": "^1.64.1"
+    "@fower/atomic-props": "^1.65.0",
+    "@fower/color-helper": "^1.65.0",
+    "@fower/core": "^1.65.0",
+    "@fower/utils": "^1.65.0"
   }
 }
