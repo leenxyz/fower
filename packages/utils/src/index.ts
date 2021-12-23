@@ -1,7 +1,5 @@
 import hash from 'string-hash'
 
-type Dict = Record<string, any>
-
 export { hash }
 
 export const isBrowser =
@@ -67,7 +65,7 @@ export function jsKeyToCssKey(key: string): string {
   return /^[A-Z].+$/.test(key) ? '-' + kebab(key) : kebab(key)
 }
 
-export function objectToClassName(style: Dict, prefix = 'css-') {
+export function objectToClassName(style: Record<string, any>, prefix = 'css-') {
   const hashed = hash(JSON.stringify(style))
   return prefix + hashed
 }
@@ -81,7 +79,12 @@ export function argsToProps(args: any[], objectPropKey = 'css') {
   let obj = args.reduce(
     (result, cur) => {
       if (typeof cur === 'string') {
-        if (cur !== 'className') result[cur] = true
+        cur
+          .split(/\s+/)
+          .filter((s) => !!s)
+          .forEach((s) => {
+            if (cur !== 'className') result[s] = true
+          })
       }
       if (typeof cur !== 'object') return result
       if (Array.isArray(cur)) {

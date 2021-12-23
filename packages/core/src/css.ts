@@ -5,7 +5,20 @@ import { store } from './store'
 
 /**
  * convert atomic props to classNames
+ *
  * @param args
+ *
+ * Valid args:
+ *
+ * ```js
+ * css('toCenter', 'px-8', 'mb2')
+ * css('toCenter px-8')
+ * css(['toCenter', 'px-8'])
+ * css({
+ *  px: 8,
+ *  mb: 2,
+ * })
+ * ```
  * @returns  classNames
  */
 export function css(...args: CSSArgs): string {

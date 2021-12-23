@@ -43,7 +43,7 @@ export type AtomicArray = AtomicKey[]
 
 export type StyledArgs = (AtomicArray | CSSObject)[]
 
-export type CSSArgs = (AtomicArray | CSSObject | AtomicKey)[]
+export type CSSArgs = (AtomicArray | CSSObject | AtomicKey | ({} & string))[]
 
 export type CSSObject<T = any> =
   | (FowerCSSProperties & PseudosObject)
