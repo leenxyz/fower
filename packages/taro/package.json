@@ -24,6 +24,6 @@
     "@fower/styled": "^1.65.0"
   },
   "devDependencies": {
-    "@tarojs/components": "^3.0.23"
+    "@tarojs/components": "^3.4.1"
   }
 }
