@@ -16,7 +16,7 @@
     "@fower/remax": "^1.66.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "remax": "^2.9.1"
+    "remax": "^2.15.12"
   },
   "devDependencies": {
     "@types/react": "^16.14.2",
