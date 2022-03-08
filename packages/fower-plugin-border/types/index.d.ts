@@ -383,89 +383,9 @@ declare module '@fower/atomic-props' {
      */
     borderLeftBlack?: ResponsiveBoolean
     /**
-     * Set border color to brand
-     * ```css
-     * { border-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box borderBrand></Box>
-     * <Box borderBrand--T20></Box> // transparentize color
-     * <Box borderBrand--O20></Box> // opacify color
-     * <Box borderBrand--L20></Box> // lighten color
-     * <Box borderBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
-     */
-    borderBrand?: ResponsiveBoolean
-    /**
-     * Set border top color to ' + cur
-     * ```css
-     * { border-top-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box borderTopBrand></Box>
-     * <Box borderTopBrand--T20></Box> // transparentize color
-     * <Box borderTopBrand--O20></Box> // opacify color
-     * <Box borderTopBrand--L20></Box> // lighten color
-     * <Box borderTopBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
-     */
-    borderTopBrand?: ResponsiveBoolean
-    /**
-     * Set border right color to ' + cur
-     * ```css
-     * { border-right-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box borderRightBrand></Box>
-     * <Box borderRightBrand--T20></Box> // transparentize color
-     * <Box borderRightBrand--O20></Box> // opacify color
-     * <Box borderRightBrand--L20></Box> // lighten color
-     * <Box borderRightBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
-     */
-    borderRightBrand?: ResponsiveBoolean
-    /**
-     * Set border bottom color to ' + cur
-     * ```css
-     * { border-bottom-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box borderBottomBrand></Box>
-     * <Box borderBottomBrand--T20></Box> // transparentize color
-     * <Box borderBottomBrand--O20></Box> // opacify color
-     * <Box borderBottomBrand--L20></Box> // lighten color
-     * <Box borderBottomBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
-     */
-    borderBottomBrand?: ResponsiveBoolean
-    /**
-     * Set border left color to ' + cur
-     * ```css
-     * { border-left-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box borderLeftBrand></Box>
-     * <Box borderLeftBrand--T20></Box> // transparentize color
-     * <Box borderLeftBrand--O20></Box> // opacify color
-     * <Box borderLeftBrand--L20></Box> // lighten color
-     * <Box borderLeftBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
-     */
-    borderLeftBrand?: ResponsiveBoolean
-    /**
      * Set border color to brand50
      * ```css
-     * { border-color: #e6fcf5; }
+     * { border-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -481,7 +401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e6fcf5; }
+     * { border-top-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -497,7 +417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e6fcf5; }
+     * { border-right-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -513,7 +433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e6fcf5; }
+     * { border-bottom-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -529,7 +449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e6fcf5; }
+     * { border-left-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -545,7 +465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand100
      * ```css
-     * { border-color: #c3fae8; }
+     * { border-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -561,7 +481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c3fae8; }
+     * { border-top-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -577,7 +497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c3fae8; }
+     * { border-right-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -593,7 +513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c3fae8; }
+     * { border-bottom-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -609,7 +529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c3fae8; }
+     * { border-left-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -625,7 +545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand200
      * ```css
-     * { border-color: #96f2d7; }
+     * { border-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -641,7 +561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #96f2d7; }
+     * { border-top-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -657,7 +577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #96f2d7; }
+     * { border-right-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -673,7 +593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #96f2d7; }
+     * { border-bottom-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -689,7 +609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #96f2d7; }
+     * { border-left-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -705,7 +625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand300
      * ```css
-     * { border-color: #63e6be; }
+     * { border-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -721,7 +641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #63e6be; }
+     * { border-top-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -737,7 +657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #63e6be; }
+     * { border-right-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -753,7 +673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #63e6be; }
+     * { border-bottom-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -769,7 +689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #63e6be; }
+     * { border-left-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -785,7 +705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand400
      * ```css
-     * { border-color: #38d9a9; }
+     * { border-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -801,7 +721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #38d9a9; }
+     * { border-top-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -817,7 +737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #38d9a9; }
+     * { border-right-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -833,7 +753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #38d9a9; }
+     * { border-bottom-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -849,7 +769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #38d9a9; }
+     * { border-left-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -865,7 +785,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand500
      * ```css
-     * { border-color: #20c997; }
+     * { border-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -881,7 +801,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #20c997; }
+     * { border-top-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -897,7 +817,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #20c997; }
+     * { border-right-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -913,7 +833,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #20c997; }
+     * { border-bottom-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -929,7 +849,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #20c997; }
+     * { border-left-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -945,7 +865,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand600
      * ```css
-     * { border-color: #12b886; }
+     * { border-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -961,7 +881,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #12b886; }
+     * { border-top-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -977,7 +897,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #12b886; }
+     * { border-right-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -993,7 +913,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #12b886; }
+     * { border-bottom-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -1009,7 +929,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #12b886; }
+     * { border-left-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -1025,7 +945,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand700
      * ```css
-     * { border-color: #0ca678; }
+     * { border-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1041,7 +961,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #0ca678; }
+     * { border-top-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1057,7 +977,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #0ca678; }
+     * { border-right-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1073,7 +993,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #0ca678; }
+     * { border-bottom-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1089,7 +1009,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #0ca678; }
+     * { border-left-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1105,7 +1025,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand800
      * ```css
-     * { border-color: #099268; }
+     * { border-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1121,7 +1041,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #099268; }
+     * { border-top-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1137,7 +1057,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #099268; }
+     * { border-right-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1153,7 +1073,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #099268; }
+     * { border-bottom-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1169,7 +1089,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #099268; }
+     * { border-left-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1185,7 +1105,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to brand900
      * ```css
-     * { border-color: #087f5b; }
+     * { border-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1201,7 +1121,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #087f5b; }
+     * { border-top-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1217,7 +1137,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #087f5b; }
+     * { border-right-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1233,7 +1153,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #087f5b; }
+     * { border-bottom-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1249,7 +1169,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #087f5b; }
+     * { border-left-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1263,9 +1183,809 @@ declare module '@fower/atomic-props' {
      */
     borderLeftBrand900?: ResponsiveBoolean
     /**
+     * Set border color to rose50
+     * ```css
+     * { border-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose50></Box>
+     * <Box borderRose50--T20></Box> // transparentize color
+     * <Box borderRose50--O20></Box> // opacify color
+     * <Box borderRose50--L20></Box> // lighten color
+     * <Box borderRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose50></Box>
+     * <Box borderTopRose50--T20></Box> // transparentize color
+     * <Box borderTopRose50--O20></Box> // opacify color
+     * <Box borderTopRose50--L20></Box> // lighten color
+     * <Box borderTopRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose50></Box>
+     * <Box borderRightRose50--T20></Box> // transparentize color
+     * <Box borderRightRose50--O20></Box> // opacify color
+     * <Box borderRightRose50--L20></Box> // lighten color
+     * <Box borderRightRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose50></Box>
+     * <Box borderBottomRose50--T20></Box> // transparentize color
+     * <Box borderBottomRose50--O20></Box> // opacify color
+     * <Box borderBottomRose50--L20></Box> // lighten color
+     * <Box borderBottomRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose50></Box>
+     * <Box borderLeftRose50--T20></Box> // transparentize color
+     * <Box borderLeftRose50--O20></Box> // opacify color
+     * <Box borderLeftRose50--L20></Box> // lighten color
+     * <Box borderLeftRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose50?: ResponsiveBoolean
+    /**
+     * Set border color to rose100
+     * ```css
+     * { border-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose100></Box>
+     * <Box borderRose100--T20></Box> // transparentize color
+     * <Box borderRose100--O20></Box> // opacify color
+     * <Box borderRose100--L20></Box> // lighten color
+     * <Box borderRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose100></Box>
+     * <Box borderTopRose100--T20></Box> // transparentize color
+     * <Box borderTopRose100--O20></Box> // opacify color
+     * <Box borderTopRose100--L20></Box> // lighten color
+     * <Box borderTopRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose100></Box>
+     * <Box borderRightRose100--T20></Box> // transparentize color
+     * <Box borderRightRose100--O20></Box> // opacify color
+     * <Box borderRightRose100--L20></Box> // lighten color
+     * <Box borderRightRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose100></Box>
+     * <Box borderBottomRose100--T20></Box> // transparentize color
+     * <Box borderBottomRose100--O20></Box> // opacify color
+     * <Box borderBottomRose100--L20></Box> // lighten color
+     * <Box borderBottomRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose100></Box>
+     * <Box borderLeftRose100--T20></Box> // transparentize color
+     * <Box borderLeftRose100--O20></Box> // opacify color
+     * <Box borderLeftRose100--L20></Box> // lighten color
+     * <Box borderLeftRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose100?: ResponsiveBoolean
+    /**
+     * Set border color to rose200
+     * ```css
+     * { border-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose200></Box>
+     * <Box borderRose200--T20></Box> // transparentize color
+     * <Box borderRose200--O20></Box> // opacify color
+     * <Box borderRose200--L20></Box> // lighten color
+     * <Box borderRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose200></Box>
+     * <Box borderTopRose200--T20></Box> // transparentize color
+     * <Box borderTopRose200--O20></Box> // opacify color
+     * <Box borderTopRose200--L20></Box> // lighten color
+     * <Box borderTopRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose200></Box>
+     * <Box borderRightRose200--T20></Box> // transparentize color
+     * <Box borderRightRose200--O20></Box> // opacify color
+     * <Box borderRightRose200--L20></Box> // lighten color
+     * <Box borderRightRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose200></Box>
+     * <Box borderBottomRose200--T20></Box> // transparentize color
+     * <Box borderBottomRose200--O20></Box> // opacify color
+     * <Box borderBottomRose200--L20></Box> // lighten color
+     * <Box borderBottomRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose200></Box>
+     * <Box borderLeftRose200--T20></Box> // transparentize color
+     * <Box borderLeftRose200--O20></Box> // opacify color
+     * <Box borderLeftRose200--L20></Box> // lighten color
+     * <Box borderLeftRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose200?: ResponsiveBoolean
+    /**
+     * Set border color to rose300
+     * ```css
+     * { border-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose300></Box>
+     * <Box borderRose300--T20></Box> // transparentize color
+     * <Box borderRose300--O20></Box> // opacify color
+     * <Box borderRose300--L20></Box> // lighten color
+     * <Box borderRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose300></Box>
+     * <Box borderTopRose300--T20></Box> // transparentize color
+     * <Box borderTopRose300--O20></Box> // opacify color
+     * <Box borderTopRose300--L20></Box> // lighten color
+     * <Box borderTopRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose300></Box>
+     * <Box borderRightRose300--T20></Box> // transparentize color
+     * <Box borderRightRose300--O20></Box> // opacify color
+     * <Box borderRightRose300--L20></Box> // lighten color
+     * <Box borderRightRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose300></Box>
+     * <Box borderBottomRose300--T20></Box> // transparentize color
+     * <Box borderBottomRose300--O20></Box> // opacify color
+     * <Box borderBottomRose300--L20></Box> // lighten color
+     * <Box borderBottomRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose300></Box>
+     * <Box borderLeftRose300--T20></Box> // transparentize color
+     * <Box borderLeftRose300--O20></Box> // opacify color
+     * <Box borderLeftRose300--L20></Box> // lighten color
+     * <Box borderLeftRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose300?: ResponsiveBoolean
+    /**
+     * Set border color to rose400
+     * ```css
+     * { border-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose400></Box>
+     * <Box borderRose400--T20></Box> // transparentize color
+     * <Box borderRose400--O20></Box> // opacify color
+     * <Box borderRose400--L20></Box> // lighten color
+     * <Box borderRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose400></Box>
+     * <Box borderTopRose400--T20></Box> // transparentize color
+     * <Box borderTopRose400--O20></Box> // opacify color
+     * <Box borderTopRose400--L20></Box> // lighten color
+     * <Box borderTopRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose400></Box>
+     * <Box borderRightRose400--T20></Box> // transparentize color
+     * <Box borderRightRose400--O20></Box> // opacify color
+     * <Box borderRightRose400--L20></Box> // lighten color
+     * <Box borderRightRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose400></Box>
+     * <Box borderBottomRose400--T20></Box> // transparentize color
+     * <Box borderBottomRose400--O20></Box> // opacify color
+     * <Box borderBottomRose400--L20></Box> // lighten color
+     * <Box borderBottomRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose400></Box>
+     * <Box borderLeftRose400--T20></Box> // transparentize color
+     * <Box borderLeftRose400--O20></Box> // opacify color
+     * <Box borderLeftRose400--L20></Box> // lighten color
+     * <Box borderLeftRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose400?: ResponsiveBoolean
+    /**
+     * Set border color to rose500
+     * ```css
+     * { border-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose500></Box>
+     * <Box borderRose500--T20></Box> // transparentize color
+     * <Box borderRose500--O20></Box> // opacify color
+     * <Box borderRose500--L20></Box> // lighten color
+     * <Box borderRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose500></Box>
+     * <Box borderTopRose500--T20></Box> // transparentize color
+     * <Box borderTopRose500--O20></Box> // opacify color
+     * <Box borderTopRose500--L20></Box> // lighten color
+     * <Box borderTopRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose500></Box>
+     * <Box borderRightRose500--T20></Box> // transparentize color
+     * <Box borderRightRose500--O20></Box> // opacify color
+     * <Box borderRightRose500--L20></Box> // lighten color
+     * <Box borderRightRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose500></Box>
+     * <Box borderBottomRose500--T20></Box> // transparentize color
+     * <Box borderBottomRose500--O20></Box> // opacify color
+     * <Box borderBottomRose500--L20></Box> // lighten color
+     * <Box borderBottomRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose500></Box>
+     * <Box borderLeftRose500--T20></Box> // transparentize color
+     * <Box borderLeftRose500--O20></Box> // opacify color
+     * <Box borderLeftRose500--L20></Box> // lighten color
+     * <Box borderLeftRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose500?: ResponsiveBoolean
+    /**
+     * Set border color to rose600
+     * ```css
+     * { border-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose600></Box>
+     * <Box borderRose600--T20></Box> // transparentize color
+     * <Box borderRose600--O20></Box> // opacify color
+     * <Box borderRose600--L20></Box> // lighten color
+     * <Box borderRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose600></Box>
+     * <Box borderTopRose600--T20></Box> // transparentize color
+     * <Box borderTopRose600--O20></Box> // opacify color
+     * <Box borderTopRose600--L20></Box> // lighten color
+     * <Box borderTopRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose600></Box>
+     * <Box borderRightRose600--T20></Box> // transparentize color
+     * <Box borderRightRose600--O20></Box> // opacify color
+     * <Box borderRightRose600--L20></Box> // lighten color
+     * <Box borderRightRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose600></Box>
+     * <Box borderBottomRose600--T20></Box> // transparentize color
+     * <Box borderBottomRose600--O20></Box> // opacify color
+     * <Box borderBottomRose600--L20></Box> // lighten color
+     * <Box borderBottomRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose600></Box>
+     * <Box borderLeftRose600--T20></Box> // transparentize color
+     * <Box borderLeftRose600--O20></Box> // opacify color
+     * <Box borderLeftRose600--L20></Box> // lighten color
+     * <Box borderLeftRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose600?: ResponsiveBoolean
+    /**
+     * Set border color to rose700
+     * ```css
+     * { border-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose700></Box>
+     * <Box borderRose700--T20></Box> // transparentize color
+     * <Box borderRose700--O20></Box> // opacify color
+     * <Box borderRose700--L20></Box> // lighten color
+     * <Box borderRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose700></Box>
+     * <Box borderTopRose700--T20></Box> // transparentize color
+     * <Box borderTopRose700--O20></Box> // opacify color
+     * <Box borderTopRose700--L20></Box> // lighten color
+     * <Box borderTopRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose700></Box>
+     * <Box borderRightRose700--T20></Box> // transparentize color
+     * <Box borderRightRose700--O20></Box> // opacify color
+     * <Box borderRightRose700--L20></Box> // lighten color
+     * <Box borderRightRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose700></Box>
+     * <Box borderBottomRose700--T20></Box> // transparentize color
+     * <Box borderBottomRose700--O20></Box> // opacify color
+     * <Box borderBottomRose700--L20></Box> // lighten color
+     * <Box borderBottomRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose700></Box>
+     * <Box borderLeftRose700--T20></Box> // transparentize color
+     * <Box borderLeftRose700--O20></Box> // opacify color
+     * <Box borderLeftRose700--L20></Box> // lighten color
+     * <Box borderLeftRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose700?: ResponsiveBoolean
+    /**
+     * Set border color to rose800
+     * ```css
+     * { border-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose800></Box>
+     * <Box borderRose800--T20></Box> // transparentize color
+     * <Box borderRose800--O20></Box> // opacify color
+     * <Box borderRose800--L20></Box> // lighten color
+     * <Box borderRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose800></Box>
+     * <Box borderTopRose800--T20></Box> // transparentize color
+     * <Box borderTopRose800--O20></Box> // opacify color
+     * <Box borderTopRose800--L20></Box> // lighten color
+     * <Box borderTopRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose800></Box>
+     * <Box borderRightRose800--T20></Box> // transparentize color
+     * <Box borderRightRose800--O20></Box> // opacify color
+     * <Box borderRightRose800--L20></Box> // lighten color
+     * <Box borderRightRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose800></Box>
+     * <Box borderBottomRose800--T20></Box> // transparentize color
+     * <Box borderBottomRose800--O20></Box> // opacify color
+     * <Box borderBottomRose800--L20></Box> // lighten color
+     * <Box borderBottomRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose800></Box>
+     * <Box borderLeftRose800--T20></Box> // transparentize color
+     * <Box borderLeftRose800--O20></Box> // opacify color
+     * <Box borderLeftRose800--L20></Box> // lighten color
+     * <Box borderLeftRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose800?: ResponsiveBoolean
+    /**
+     * Set border color to rose900
+     * ```css
+     * { border-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRose900></Box>
+     * <Box borderRose900--T20></Box> // transparentize color
+     * <Box borderRose900--O20></Box> // opacify color
+     * <Box borderRose900--L20></Box> // lighten color
+     * <Box borderRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRose900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopRose900></Box>
+     * <Box borderTopRose900--T20></Box> // transparentize color
+     * <Box borderTopRose900--O20></Box> // opacify color
+     * <Box borderTopRose900--L20></Box> // lighten color
+     * <Box borderTopRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopRose900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightRose900></Box>
+     * <Box borderRightRose900--T20></Box> // transparentize color
+     * <Box borderRightRose900--O20></Box> // opacify color
+     * <Box borderRightRose900--L20></Box> // lighten color
+     * <Box borderRightRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightRose900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomRose900></Box>
+     * <Box borderBottomRose900--T20></Box> // transparentize color
+     * <Box borderBottomRose900--O20></Box> // opacify color
+     * <Box borderBottomRose900--L20></Box> // lighten color
+     * <Box borderBottomRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomRose900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftRose900></Box>
+     * <Box borderLeftRose900--T20></Box> // transparentize color
+     * <Box borderLeftRose900--O20></Box> // opacify color
+     * <Box borderLeftRose900--L20></Box> // lighten color
+     * <Box borderLeftRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftRose900?: ResponsiveBoolean
+    /**
      * Set border color to pink50
      * ```css
-     * { border-color: #fff0f6; }
+     * { border-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -1281,7 +2001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fff0f6; }
+     * { border-top-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -1297,7 +2017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fff0f6; }
+     * { border-right-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -1313,7 +2033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fff0f6; }
+     * { border-bottom-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -1329,7 +2049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fff0f6; }
+     * { border-left-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -1345,7 +2065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink100
      * ```css
-     * { border-color: #ffdeeb; }
+     * { border-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -1361,7 +2081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffdeeb; }
+     * { border-top-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -1377,7 +2097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffdeeb; }
+     * { border-right-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -1393,7 +2113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffdeeb; }
+     * { border-bottom-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -1409,7 +2129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffdeeb; }
+     * { border-left-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -1425,7 +2145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink200
      * ```css
-     * { border-color: #fcc2d7; }
+     * { border-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -1441,7 +2161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fcc2d7; }
+     * { border-top-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -1457,7 +2177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fcc2d7; }
+     * { border-right-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -1473,7 +2193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fcc2d7; }
+     * { border-bottom-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -1489,7 +2209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fcc2d7; }
+     * { border-left-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -1505,7 +2225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink300
      * ```css
-     * { border-color: #faa2c1; }
+     * { border-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -1521,7 +2241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #faa2c1; }
+     * { border-top-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -1537,7 +2257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #faa2c1; }
+     * { border-right-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -1553,7 +2273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #faa2c1; }
+     * { border-bottom-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -1569,7 +2289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #faa2c1; }
+     * { border-left-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -1585,7 +2305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink400
      * ```css
-     * { border-color: #f783ac; }
+     * { border-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -1601,7 +2321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f783ac; }
+     * { border-top-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -1617,7 +2337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f783ac; }
+     * { border-right-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -1633,7 +2353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f783ac; }
+     * { border-bottom-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -1649,7 +2369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f783ac; }
+     * { border-left-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -1665,7 +2385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink500
      * ```css
-     * { border-color: #f06595; }
+     * { border-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -1681,7 +2401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f06595; }
+     * { border-top-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -1697,7 +2417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f06595; }
+     * { border-right-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -1713,7 +2433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f06595; }
+     * { border-bottom-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -1729,7 +2449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f06595; }
+     * { border-left-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -1745,7 +2465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink600
      * ```css
-     * { border-color: #e64980; }
+     * { border-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -1761,7 +2481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e64980; }
+     * { border-top-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -1777,7 +2497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e64980; }
+     * { border-right-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -1793,7 +2513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e64980; }
+     * { border-bottom-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -1809,7 +2529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e64980; }
+     * { border-left-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -1825,7 +2545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink700
      * ```css
-     * { border-color: #d6336c; }
+     * { border-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -1841,7 +2561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d6336c; }
+     * { border-top-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -1857,7 +2577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d6336c; }
+     * { border-right-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -1873,7 +2593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d6336c; }
+     * { border-bottom-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -1889,7 +2609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d6336c; }
+     * { border-left-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -1905,7 +2625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink800
      * ```css
-     * { border-color: #c2255c; }
+     * { border-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -1921,7 +2641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c2255c; }
+     * { border-top-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -1937,7 +2657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c2255c; }
+     * { border-right-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -1953,7 +2673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c2255c; }
+     * { border-bottom-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -1969,7 +2689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c2255c; }
+     * { border-left-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -1985,7 +2705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to pink900
      * ```css
-     * { border-color: #a61e4d; }
+     * { border-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -2001,7 +2721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #a61e4d; }
+     * { border-top-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -2017,7 +2737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #a61e4d; }
+     * { border-right-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -2033,7 +2753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #a61e4d; }
+     * { border-bottom-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -2049,7 +2769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #a61e4d; }
+     * { border-left-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -2065,7 +2785,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia50
      * ```css
-     * { border-color: #f8f0fc; }
+     * { border-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -2081,7 +2801,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f8f0fc; }
+     * { border-top-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -2097,7 +2817,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f8f0fc; }
+     * { border-right-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -2113,7 +2833,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f8f0fc; }
+     * { border-bottom-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -2129,7 +2849,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f8f0fc; }
+     * { border-left-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -2145,7 +2865,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia100
      * ```css
-     * { border-color: #f3d9fa; }
+     * { border-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -2161,7 +2881,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f3d9fa; }
+     * { border-top-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -2177,7 +2897,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f3d9fa; }
+     * { border-right-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -2193,7 +2913,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f3d9fa; }
+     * { border-bottom-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -2209,7 +2929,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f3d9fa; }
+     * { border-left-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -2225,7 +2945,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia200
      * ```css
-     * { border-color: #eebefa; }
+     * { border-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -2241,7 +2961,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #eebefa; }
+     * { border-top-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -2257,7 +2977,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #eebefa; }
+     * { border-right-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -2273,7 +2993,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #eebefa; }
+     * { border-bottom-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -2289,7 +3009,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #eebefa; }
+     * { border-left-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -2305,7 +3025,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia300
      * ```css
-     * { border-color: #e599f7; }
+     * { border-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -2321,7 +3041,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e599f7; }
+     * { border-top-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -2337,7 +3057,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e599f7; }
+     * { border-right-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -2353,7 +3073,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e599f7; }
+     * { border-bottom-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -2369,7 +3089,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e599f7; }
+     * { border-left-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -2385,7 +3105,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia400
      * ```css
-     * { border-color: #da77f2; }
+     * { border-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -2401,7 +3121,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #da77f2; }
+     * { border-top-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -2417,7 +3137,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #da77f2; }
+     * { border-right-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -2433,7 +3153,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #da77f2; }
+     * { border-bottom-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -2449,7 +3169,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #da77f2; }
+     * { border-left-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -2465,7 +3185,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia500
      * ```css
-     * { border-color: #cc5de8; }
+     * { border-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -2481,7 +3201,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #cc5de8; }
+     * { border-top-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -2497,7 +3217,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #cc5de8; }
+     * { border-right-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -2513,7 +3233,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #cc5de8; }
+     * { border-bottom-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -2529,7 +3249,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #cc5de8; }
+     * { border-left-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -2545,7 +3265,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia600
      * ```css
-     * { border-color: #be4bdb; }
+     * { border-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -2561,7 +3281,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #be4bdb; }
+     * { border-top-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -2577,7 +3297,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #be4bdb; }
+     * { border-right-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -2593,7 +3313,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #be4bdb; }
+     * { border-bottom-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -2609,7 +3329,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #be4bdb; }
+     * { border-left-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -2625,7 +3345,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia700
      * ```css
-     * { border-color: #ae3ec9; }
+     * { border-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -2641,7 +3361,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ae3ec9; }
+     * { border-top-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -2657,7 +3377,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ae3ec9; }
+     * { border-right-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -2673,7 +3393,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ae3ec9; }
+     * { border-bottom-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -2689,7 +3409,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ae3ec9; }
+     * { border-left-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -2705,7 +3425,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia800
      * ```css
-     * { border-color: #9c36b5; }
+     * { border-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -2721,7 +3441,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #9c36b5; }
+     * { border-top-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -2737,7 +3457,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #9c36b5; }
+     * { border-right-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -2753,7 +3473,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #9c36b5; }
+     * { border-bottom-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -2769,7 +3489,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #9c36b5; }
+     * { border-left-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -2785,7 +3505,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to fuchsia900
      * ```css
-     * { border-color: #862e9c; }
+     * { border-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -2801,7 +3521,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #862e9c; }
+     * { border-top-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -2817,7 +3537,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #862e9c; }
+     * { border-right-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -2833,7 +3553,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #862e9c; }
+     * { border-bottom-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -2849,7 +3569,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #862e9c; }
+     * { border-left-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -3665,7 +4385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet50
      * ```css
-     * { border-color: #f3f0ff; }
+     * { border-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -3681,7 +4401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f3f0ff; }
+     * { border-top-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -3697,7 +4417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f3f0ff; }
+     * { border-right-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -3713,7 +4433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f3f0ff; }
+     * { border-bottom-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -3729,7 +4449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f3f0ff; }
+     * { border-left-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -3745,7 +4465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet100
      * ```css
-     * { border-color: #e5dbff; }
+     * { border-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -3761,7 +4481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e5dbff; }
+     * { border-top-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -3777,7 +4497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e5dbff; }
+     * { border-right-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -3793,7 +4513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e5dbff; }
+     * { border-bottom-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -3809,7 +4529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e5dbff; }
+     * { border-left-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -3825,7 +4545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet200
      * ```css
-     * { border-color: #d0bfff; }
+     * { border-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -3841,7 +4561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d0bfff; }
+     * { border-top-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -3857,7 +4577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d0bfff; }
+     * { border-right-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -3873,7 +4593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d0bfff; }
+     * { border-bottom-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -3889,7 +4609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d0bfff; }
+     * { border-left-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -3905,7 +4625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet300
      * ```css
-     * { border-color: #b197fc; }
+     * { border-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -3921,7 +4641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #b197fc; }
+     * { border-top-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -3937,7 +4657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #b197fc; }
+     * { border-right-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -3953,7 +4673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #b197fc; }
+     * { border-bottom-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -3969,7 +4689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #b197fc; }
+     * { border-left-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -3985,7 +4705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet400
      * ```css
-     * { border-color: #9775fa; }
+     * { border-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -4001,7 +4721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #9775fa; }
+     * { border-top-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -4017,7 +4737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #9775fa; }
+     * { border-right-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -4033,7 +4753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #9775fa; }
+     * { border-bottom-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -4049,7 +4769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #9775fa; }
+     * { border-left-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -4065,7 +4785,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet500
      * ```css
-     * { border-color: #845ef7; }
+     * { border-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -4081,7 +4801,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #845ef7; }
+     * { border-top-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -4097,7 +4817,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #845ef7; }
+     * { border-right-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -4113,7 +4833,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #845ef7; }
+     * { border-bottom-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -4129,7 +4849,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #845ef7; }
+     * { border-left-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -4145,7 +4865,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet600
      * ```css
-     * { border-color: #7950f2; }
+     * { border-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -4161,7 +4881,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #7950f2; }
+     * { border-top-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -4177,7 +4897,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #7950f2; }
+     * { border-right-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -4193,7 +4913,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #7950f2; }
+     * { border-bottom-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -4209,7 +4929,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #7950f2; }
+     * { border-left-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -4225,7 +4945,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet700
      * ```css
-     * { border-color: #7048e8; }
+     * { border-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -4241,7 +4961,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #7048e8; }
+     * { border-top-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -4257,7 +4977,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #7048e8; }
+     * { border-right-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -4273,7 +4993,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #7048e8; }
+     * { border-bottom-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -4289,7 +5009,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #7048e8; }
+     * { border-left-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -4305,7 +5025,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet800
      * ```css
-     * { border-color: #6741d9; }
+     * { border-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -4321,7 +5041,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #6741d9; }
+     * { border-top-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -4337,7 +5057,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #6741d9; }
+     * { border-right-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -4353,7 +5073,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #6741d9; }
+     * { border-bottom-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -4369,7 +5089,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #6741d9; }
+     * { border-left-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -4385,7 +5105,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to violet900
      * ```css
-     * { border-color: #5f3dc4; }
+     * { border-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -4401,7 +5121,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #5f3dc4; }
+     * { border-top-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -4417,7 +5137,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #5f3dc4; }
+     * { border-right-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -4433,7 +5153,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #5f3dc4; }
+     * { border-bottom-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -4449,7 +5169,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #5f3dc4; }
+     * { border-left-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -4465,7 +5185,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo50
      * ```css
-     * { border-color: #edf2ff; }
+     * { border-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -4481,7 +5201,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #edf2ff; }
+     * { border-top-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -4497,7 +5217,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #edf2ff; }
+     * { border-right-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -4513,7 +5233,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #edf2ff; }
+     * { border-bottom-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -4529,7 +5249,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #edf2ff; }
+     * { border-left-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -4545,7 +5265,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo100
      * ```css
-     * { border-color: #dbe4ff; }
+     * { border-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -4561,7 +5281,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #dbe4ff; }
+     * { border-top-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -4577,7 +5297,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #dbe4ff; }
+     * { border-right-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -4593,7 +5313,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #dbe4ff; }
+     * { border-bottom-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -4609,7 +5329,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #dbe4ff; }
+     * { border-left-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -4625,7 +5345,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo200
      * ```css
-     * { border-color: #bac8ff; }
+     * { border-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -4641,7 +5361,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #bac8ff; }
+     * { border-top-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -4657,7 +5377,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #bac8ff; }
+     * { border-right-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -4673,7 +5393,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #bac8ff; }
+     * { border-bottom-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -4689,7 +5409,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #bac8ff; }
+     * { border-left-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -4705,7 +5425,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo300
      * ```css
-     * { border-color: #91a7ff; }
+     * { border-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -4721,7 +5441,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #91a7ff; }
+     * { border-top-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -4737,7 +5457,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #91a7ff; }
+     * { border-right-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -4753,7 +5473,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #91a7ff; }
+     * { border-bottom-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -4769,7 +5489,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #91a7ff; }
+     * { border-left-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -4785,7 +5505,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo400
      * ```css
-     * { border-color: #748ffc; }
+     * { border-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -4801,7 +5521,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #748ffc; }
+     * { border-top-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -4817,7 +5537,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #748ffc; }
+     * { border-right-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -4833,7 +5553,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #748ffc; }
+     * { border-bottom-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -4849,7 +5569,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #748ffc; }
+     * { border-left-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -4865,7 +5585,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo500
      * ```css
-     * { border-color: #5c7cfa; }
+     * { border-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -4881,7 +5601,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #5c7cfa; }
+     * { border-top-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -4897,7 +5617,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #5c7cfa; }
+     * { border-right-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -4913,7 +5633,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #5c7cfa; }
+     * { border-bottom-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -4929,7 +5649,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #5c7cfa; }
+     * { border-left-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -4945,7 +5665,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo600
      * ```css
-     * { border-color: #4c6ef5; }
+     * { border-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -4961,7 +5681,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #4c6ef5; }
+     * { border-top-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -4977,7 +5697,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #4c6ef5; }
+     * { border-right-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -4993,7 +5713,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #4c6ef5; }
+     * { border-bottom-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -5009,7 +5729,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #4c6ef5; }
+     * { border-left-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -5025,7 +5745,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo700
      * ```css
-     * { border-color: #4263eb; }
+     * { border-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -5041,7 +5761,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #4263eb; }
+     * { border-top-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -5057,7 +5777,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #4263eb; }
+     * { border-right-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -5073,7 +5793,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #4263eb; }
+     * { border-bottom-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -5089,7 +5809,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #4263eb; }
+     * { border-left-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -5105,7 +5825,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo800
      * ```css
-     * { border-color: #3b5bdb; }
+     * { border-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -5121,7 +5841,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #3b5bdb; }
+     * { border-top-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -5137,7 +5857,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #3b5bdb; }
+     * { border-right-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -5153,7 +5873,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #3b5bdb; }
+     * { border-bottom-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -5169,7 +5889,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #3b5bdb; }
+     * { border-left-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -5185,7 +5905,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to indigo900
      * ```css
-     * { border-color: #364fc7; }
+     * { border-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -5201,7 +5921,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #364fc7; }
+     * { border-top-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -5217,7 +5937,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #364fc7; }
+     * { border-right-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -5233,7 +5953,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #364fc7; }
+     * { border-bottom-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -5249,7 +5969,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #364fc7; }
+     * { border-left-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -5265,7 +5985,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue50
      * ```css
-     * { border-color: #e7f5ff; }
+     * { border-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -5281,7 +6001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e7f5ff; }
+     * { border-top-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -5297,7 +6017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e7f5ff; }
+     * { border-right-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -5313,7 +6033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e7f5ff; }
+     * { border-bottom-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -5329,7 +6049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e7f5ff; }
+     * { border-left-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -5345,7 +6065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue100
      * ```css
-     * { border-color: #d0ebff; }
+     * { border-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -5361,7 +6081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d0ebff; }
+     * { border-top-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -5377,7 +6097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d0ebff; }
+     * { border-right-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -5393,7 +6113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d0ebff; }
+     * { border-bottom-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -5409,7 +6129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d0ebff; }
+     * { border-left-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -5425,7 +6145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue200
      * ```css
-     * { border-color: #a5d8ff; }
+     * { border-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -5441,7 +6161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #a5d8ff; }
+     * { border-top-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -5457,7 +6177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #a5d8ff; }
+     * { border-right-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -5473,7 +6193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #a5d8ff; }
+     * { border-bottom-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -5489,7 +6209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #a5d8ff; }
+     * { border-left-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -5505,7 +6225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue300
      * ```css
-     * { border-color: #74c0fc; }
+     * { border-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -5521,7 +6241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #74c0fc; }
+     * { border-top-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -5537,7 +6257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #74c0fc; }
+     * { border-right-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -5553,7 +6273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #74c0fc; }
+     * { border-bottom-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -5569,7 +6289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #74c0fc; }
+     * { border-left-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -5585,7 +6305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue400
      * ```css
-     * { border-color: #4dabf7; }
+     * { border-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -5601,7 +6321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #4dabf7; }
+     * { border-top-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -5617,7 +6337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #4dabf7; }
+     * { border-right-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -5633,7 +6353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #4dabf7; }
+     * { border-bottom-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -5649,7 +6369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #4dabf7; }
+     * { border-left-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -5665,7 +6385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue500
      * ```css
-     * { border-color: #339af0; }
+     * { border-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -5681,7 +6401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #339af0; }
+     * { border-top-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -5697,7 +6417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #339af0; }
+     * { border-right-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -5713,7 +6433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #339af0; }
+     * { border-bottom-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -5729,7 +6449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #339af0; }
+     * { border-left-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -5745,7 +6465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue600
      * ```css
-     * { border-color: #228be6; }
+     * { border-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -5761,7 +6481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #228be6; }
+     * { border-top-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -5777,7 +6497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #228be6; }
+     * { border-right-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -5793,7 +6513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #228be6; }
+     * { border-bottom-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -5809,7 +6529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #228be6; }
+     * { border-left-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -5825,7 +6545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue700
      * ```css
-     * { border-color: #1c7ed6; }
+     * { border-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -5841,7 +6561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #1c7ed6; }
+     * { border-top-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -5857,7 +6577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #1c7ed6; }
+     * { border-right-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -5873,7 +6593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #1c7ed6; }
+     * { border-bottom-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -5889,7 +6609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #1c7ed6; }
+     * { border-left-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -5905,7 +6625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue800
      * ```css
-     * { border-color: #1971c2; }
+     * { border-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -5921,7 +6641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #1971c2; }
+     * { border-top-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -5937,7 +6657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #1971c2; }
+     * { border-right-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -5953,7 +6673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #1971c2; }
+     * { border-bottom-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -5969,7 +6689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #1971c2; }
+     * { border-left-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -5985,7 +6705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to blue900
      * ```css
-     * { border-color: #1864ab; }
+     * { border-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -6001,7 +6721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #1864ab; }
+     * { border-top-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -6017,7 +6737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #1864ab; }
+     * { border-right-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -6033,7 +6753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #1864ab; }
+     * { border-bottom-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -6049,7 +6769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #1864ab; }
+     * { border-left-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -6063,9 +6783,809 @@ declare module '@fower/atomic-props' {
      */
     borderLeftBlue900?: ResponsiveBoolean
     /**
+     * Set border color to lightBlue50
+     * ```css
+     * { border-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue50></Box>
+     * <Box borderLightBlue50--T20></Box> // transparentize color
+     * <Box borderLightBlue50--O20></Box> // opacify color
+     * <Box borderLightBlue50--L20></Box> // lighten color
+     * <Box borderLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue50></Box>
+     * <Box borderTopLightBlue50--T20></Box> // transparentize color
+     * <Box borderTopLightBlue50--O20></Box> // opacify color
+     * <Box borderTopLightBlue50--L20></Box> // lighten color
+     * <Box borderTopLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue50></Box>
+     * <Box borderRightLightBlue50--T20></Box> // transparentize color
+     * <Box borderRightLightBlue50--O20></Box> // opacify color
+     * <Box borderRightLightBlue50--L20></Box> // lighten color
+     * <Box borderRightLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue50></Box>
+     * <Box borderBottomLightBlue50--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue50--O20></Box> // opacify color
+     * <Box borderBottomLightBlue50--L20></Box> // lighten color
+     * <Box borderBottomLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue50></Box>
+     * <Box borderLeftLightBlue50--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue50--O20></Box> // opacify color
+     * <Box borderLeftLightBlue50--L20></Box> // lighten color
+     * <Box borderLeftLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue50?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue100
+     * ```css
+     * { border-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue100></Box>
+     * <Box borderLightBlue100--T20></Box> // transparentize color
+     * <Box borderLightBlue100--O20></Box> // opacify color
+     * <Box borderLightBlue100--L20></Box> // lighten color
+     * <Box borderLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue100></Box>
+     * <Box borderTopLightBlue100--T20></Box> // transparentize color
+     * <Box borderTopLightBlue100--O20></Box> // opacify color
+     * <Box borderTopLightBlue100--L20></Box> // lighten color
+     * <Box borderTopLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue100></Box>
+     * <Box borderRightLightBlue100--T20></Box> // transparentize color
+     * <Box borderRightLightBlue100--O20></Box> // opacify color
+     * <Box borderRightLightBlue100--L20></Box> // lighten color
+     * <Box borderRightLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue100></Box>
+     * <Box borderBottomLightBlue100--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue100--O20></Box> // opacify color
+     * <Box borderBottomLightBlue100--L20></Box> // lighten color
+     * <Box borderBottomLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue100></Box>
+     * <Box borderLeftLightBlue100--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue100--O20></Box> // opacify color
+     * <Box borderLeftLightBlue100--L20></Box> // lighten color
+     * <Box borderLeftLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue100?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue200
+     * ```css
+     * { border-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue200></Box>
+     * <Box borderLightBlue200--T20></Box> // transparentize color
+     * <Box borderLightBlue200--O20></Box> // opacify color
+     * <Box borderLightBlue200--L20></Box> // lighten color
+     * <Box borderLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue200></Box>
+     * <Box borderTopLightBlue200--T20></Box> // transparentize color
+     * <Box borderTopLightBlue200--O20></Box> // opacify color
+     * <Box borderTopLightBlue200--L20></Box> // lighten color
+     * <Box borderTopLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue200></Box>
+     * <Box borderRightLightBlue200--T20></Box> // transparentize color
+     * <Box borderRightLightBlue200--O20></Box> // opacify color
+     * <Box borderRightLightBlue200--L20></Box> // lighten color
+     * <Box borderRightLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue200></Box>
+     * <Box borderBottomLightBlue200--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue200--O20></Box> // opacify color
+     * <Box borderBottomLightBlue200--L20></Box> // lighten color
+     * <Box borderBottomLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue200></Box>
+     * <Box borderLeftLightBlue200--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue200--O20></Box> // opacify color
+     * <Box borderLeftLightBlue200--L20></Box> // lighten color
+     * <Box borderLeftLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue200?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue300
+     * ```css
+     * { border-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue300></Box>
+     * <Box borderLightBlue300--T20></Box> // transparentize color
+     * <Box borderLightBlue300--O20></Box> // opacify color
+     * <Box borderLightBlue300--L20></Box> // lighten color
+     * <Box borderLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue300></Box>
+     * <Box borderTopLightBlue300--T20></Box> // transparentize color
+     * <Box borderTopLightBlue300--O20></Box> // opacify color
+     * <Box borderTopLightBlue300--L20></Box> // lighten color
+     * <Box borderTopLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue300></Box>
+     * <Box borderRightLightBlue300--T20></Box> // transparentize color
+     * <Box borderRightLightBlue300--O20></Box> // opacify color
+     * <Box borderRightLightBlue300--L20></Box> // lighten color
+     * <Box borderRightLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue300></Box>
+     * <Box borderBottomLightBlue300--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue300--O20></Box> // opacify color
+     * <Box borderBottomLightBlue300--L20></Box> // lighten color
+     * <Box borderBottomLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue300></Box>
+     * <Box borderLeftLightBlue300--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue300--O20></Box> // opacify color
+     * <Box borderLeftLightBlue300--L20></Box> // lighten color
+     * <Box borderLeftLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue300?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue400
+     * ```css
+     * { border-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue400></Box>
+     * <Box borderLightBlue400--T20></Box> // transparentize color
+     * <Box borderLightBlue400--O20></Box> // opacify color
+     * <Box borderLightBlue400--L20></Box> // lighten color
+     * <Box borderLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue400></Box>
+     * <Box borderTopLightBlue400--T20></Box> // transparentize color
+     * <Box borderTopLightBlue400--O20></Box> // opacify color
+     * <Box borderTopLightBlue400--L20></Box> // lighten color
+     * <Box borderTopLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue400></Box>
+     * <Box borderRightLightBlue400--T20></Box> // transparentize color
+     * <Box borderRightLightBlue400--O20></Box> // opacify color
+     * <Box borderRightLightBlue400--L20></Box> // lighten color
+     * <Box borderRightLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue400></Box>
+     * <Box borderBottomLightBlue400--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue400--O20></Box> // opacify color
+     * <Box borderBottomLightBlue400--L20></Box> // lighten color
+     * <Box borderBottomLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue400></Box>
+     * <Box borderLeftLightBlue400--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue400--O20></Box> // opacify color
+     * <Box borderLeftLightBlue400--L20></Box> // lighten color
+     * <Box borderLeftLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue400?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue500
+     * ```css
+     * { border-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue500></Box>
+     * <Box borderLightBlue500--T20></Box> // transparentize color
+     * <Box borderLightBlue500--O20></Box> // opacify color
+     * <Box borderLightBlue500--L20></Box> // lighten color
+     * <Box borderLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue500></Box>
+     * <Box borderTopLightBlue500--T20></Box> // transparentize color
+     * <Box borderTopLightBlue500--O20></Box> // opacify color
+     * <Box borderTopLightBlue500--L20></Box> // lighten color
+     * <Box borderTopLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue500></Box>
+     * <Box borderRightLightBlue500--T20></Box> // transparentize color
+     * <Box borderRightLightBlue500--O20></Box> // opacify color
+     * <Box borderRightLightBlue500--L20></Box> // lighten color
+     * <Box borderRightLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue500></Box>
+     * <Box borderBottomLightBlue500--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue500--O20></Box> // opacify color
+     * <Box borderBottomLightBlue500--L20></Box> // lighten color
+     * <Box borderBottomLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue500></Box>
+     * <Box borderLeftLightBlue500--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue500--O20></Box> // opacify color
+     * <Box borderLeftLightBlue500--L20></Box> // lighten color
+     * <Box borderLeftLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue500?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue600
+     * ```css
+     * { border-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue600></Box>
+     * <Box borderLightBlue600--T20></Box> // transparentize color
+     * <Box borderLightBlue600--O20></Box> // opacify color
+     * <Box borderLightBlue600--L20></Box> // lighten color
+     * <Box borderLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue600></Box>
+     * <Box borderTopLightBlue600--T20></Box> // transparentize color
+     * <Box borderTopLightBlue600--O20></Box> // opacify color
+     * <Box borderTopLightBlue600--L20></Box> // lighten color
+     * <Box borderTopLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue600></Box>
+     * <Box borderRightLightBlue600--T20></Box> // transparentize color
+     * <Box borderRightLightBlue600--O20></Box> // opacify color
+     * <Box borderRightLightBlue600--L20></Box> // lighten color
+     * <Box borderRightLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue600></Box>
+     * <Box borderBottomLightBlue600--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue600--O20></Box> // opacify color
+     * <Box borderBottomLightBlue600--L20></Box> // lighten color
+     * <Box borderBottomLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue600></Box>
+     * <Box borderLeftLightBlue600--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue600--O20></Box> // opacify color
+     * <Box borderLeftLightBlue600--L20></Box> // lighten color
+     * <Box borderLeftLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue600?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue700
+     * ```css
+     * { border-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue700></Box>
+     * <Box borderLightBlue700--T20></Box> // transparentize color
+     * <Box borderLightBlue700--O20></Box> // opacify color
+     * <Box borderLightBlue700--L20></Box> // lighten color
+     * <Box borderLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue700></Box>
+     * <Box borderTopLightBlue700--T20></Box> // transparentize color
+     * <Box borderTopLightBlue700--O20></Box> // opacify color
+     * <Box borderTopLightBlue700--L20></Box> // lighten color
+     * <Box borderTopLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue700></Box>
+     * <Box borderRightLightBlue700--T20></Box> // transparentize color
+     * <Box borderRightLightBlue700--O20></Box> // opacify color
+     * <Box borderRightLightBlue700--L20></Box> // lighten color
+     * <Box borderRightLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue700></Box>
+     * <Box borderBottomLightBlue700--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue700--O20></Box> // opacify color
+     * <Box borderBottomLightBlue700--L20></Box> // lighten color
+     * <Box borderBottomLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue700></Box>
+     * <Box borderLeftLightBlue700--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue700--O20></Box> // opacify color
+     * <Box borderLeftLightBlue700--L20></Box> // lighten color
+     * <Box borderLeftLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue700?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue800
+     * ```css
+     * { border-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue800></Box>
+     * <Box borderLightBlue800--T20></Box> // transparentize color
+     * <Box borderLightBlue800--O20></Box> // opacify color
+     * <Box borderLightBlue800--L20></Box> // lighten color
+     * <Box borderLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue800></Box>
+     * <Box borderTopLightBlue800--T20></Box> // transparentize color
+     * <Box borderTopLightBlue800--O20></Box> // opacify color
+     * <Box borderTopLightBlue800--L20></Box> // lighten color
+     * <Box borderTopLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue800></Box>
+     * <Box borderRightLightBlue800--T20></Box> // transparentize color
+     * <Box borderRightLightBlue800--O20></Box> // opacify color
+     * <Box borderRightLightBlue800--L20></Box> // lighten color
+     * <Box borderRightLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue800></Box>
+     * <Box borderBottomLightBlue800--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue800--O20></Box> // opacify color
+     * <Box borderBottomLightBlue800--L20></Box> // lighten color
+     * <Box borderBottomLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue800></Box>
+     * <Box borderLeftLightBlue800--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue800--O20></Box> // opacify color
+     * <Box borderLeftLightBlue800--L20></Box> // lighten color
+     * <Box borderLeftLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue800?: ResponsiveBoolean
+    /**
+     * Set border color to lightBlue900
+     * ```css
+     * { border-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLightBlue900></Box>
+     * <Box borderLightBlue900--T20></Box> // transparentize color
+     * <Box borderLightBlue900--O20></Box> // opacify color
+     * <Box borderLightBlue900--L20></Box> // lighten color
+     * <Box borderLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLightBlue900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopLightBlue900></Box>
+     * <Box borderTopLightBlue900--T20></Box> // transparentize color
+     * <Box borderTopLightBlue900--O20></Box> // opacify color
+     * <Box borderTopLightBlue900--L20></Box> // lighten color
+     * <Box borderTopLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopLightBlue900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightLightBlue900></Box>
+     * <Box borderRightLightBlue900--T20></Box> // transparentize color
+     * <Box borderRightLightBlue900--O20></Box> // opacify color
+     * <Box borderRightLightBlue900--L20></Box> // lighten color
+     * <Box borderRightLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightLightBlue900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomLightBlue900></Box>
+     * <Box borderBottomLightBlue900--T20></Box> // transparentize color
+     * <Box borderBottomLightBlue900--O20></Box> // opacify color
+     * <Box borderBottomLightBlue900--L20></Box> // lighten color
+     * <Box borderBottomLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomLightBlue900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftLightBlue900></Box>
+     * <Box borderLeftLightBlue900--T20></Box> // transparentize color
+     * <Box borderLeftLightBlue900--O20></Box> // opacify color
+     * <Box borderLeftLightBlue900--L20></Box> // lighten color
+     * <Box borderLeftLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftLightBlue900?: ResponsiveBoolean
+    /**
      * Set border color to cyan50
      * ```css
-     * { border-color: #e3fafc; }
+     * { border-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -6081,7 +7601,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e3fafc; }
+     * { border-top-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -6097,7 +7617,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e3fafc; }
+     * { border-right-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -6113,7 +7633,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e3fafc; }
+     * { border-bottom-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -6129,7 +7649,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e3fafc; }
+     * { border-left-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -6145,7 +7665,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan100
      * ```css
-     * { border-color: #c5f6fa; }
+     * { border-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -6161,7 +7681,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c5f6fa; }
+     * { border-top-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -6177,7 +7697,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c5f6fa; }
+     * { border-right-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -6193,7 +7713,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c5f6fa; }
+     * { border-bottom-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -6209,7 +7729,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c5f6fa; }
+     * { border-left-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -6225,7 +7745,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan200
      * ```css
-     * { border-color: #99e9f2; }
+     * { border-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -6241,7 +7761,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #99e9f2; }
+     * { border-top-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -6257,7 +7777,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #99e9f2; }
+     * { border-right-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -6273,7 +7793,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #99e9f2; }
+     * { border-bottom-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -6289,7 +7809,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #99e9f2; }
+     * { border-left-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -6305,7 +7825,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan300
      * ```css
-     * { border-color: #66d9e8; }
+     * { border-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -6321,7 +7841,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #66d9e8; }
+     * { border-top-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -6337,7 +7857,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #66d9e8; }
+     * { border-right-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -6353,7 +7873,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #66d9e8; }
+     * { border-bottom-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -6369,7 +7889,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #66d9e8; }
+     * { border-left-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -6385,7 +7905,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan400
      * ```css
-     * { border-color: #3bc9db; }
+     * { border-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -6401,7 +7921,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #3bc9db; }
+     * { border-top-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -6417,7 +7937,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #3bc9db; }
+     * { border-right-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -6433,7 +7953,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #3bc9db; }
+     * { border-bottom-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -6449,7 +7969,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #3bc9db; }
+     * { border-left-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -6465,7 +7985,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan500
      * ```css
-     * { border-color: #22b8cf; }
+     * { border-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -6481,7 +8001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #22b8cf; }
+     * { border-top-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -6497,7 +8017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #22b8cf; }
+     * { border-right-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -6513,7 +8033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #22b8cf; }
+     * { border-bottom-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -6529,7 +8049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #22b8cf; }
+     * { border-left-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -6545,7 +8065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan600
      * ```css
-     * { border-color: #15aabf; }
+     * { border-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -6561,7 +8081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #15aabf; }
+     * { border-top-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -6577,7 +8097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #15aabf; }
+     * { border-right-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -6593,7 +8113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #15aabf; }
+     * { border-bottom-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -6609,7 +8129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #15aabf; }
+     * { border-left-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -6625,7 +8145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan700
      * ```css
-     * { border-color: #1098ad; }
+     * { border-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -6641,7 +8161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #1098ad; }
+     * { border-top-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -6657,7 +8177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #1098ad; }
+     * { border-right-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -6673,7 +8193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #1098ad; }
+     * { border-bottom-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -6689,7 +8209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #1098ad; }
+     * { border-left-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -6705,7 +8225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan800
      * ```css
-     * { border-color: #0c8599; }
+     * { border-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -6721,7 +8241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #0c8599; }
+     * { border-top-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -6737,7 +8257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #0c8599; }
+     * { border-right-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -6753,7 +8273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #0c8599; }
+     * { border-bottom-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -6769,7 +8289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #0c8599; }
+     * { border-left-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -6785,7 +8305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to cyan900
      * ```css
-     * { border-color: #0b7285; }
+     * { border-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -6801,7 +8321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #0b7285; }
+     * { border-top-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -6817,7 +8337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #0b7285; }
+     * { border-right-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -6833,7 +8353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #0b7285; }
+     * { border-bottom-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -6849,7 +8369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #0b7285; }
+     * { border-left-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -6865,7 +8385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal50
      * ```css
-     * { border-color: #e6fcf5; }
+     * { border-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -6881,7 +8401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e6fcf5; }
+     * { border-top-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -6897,7 +8417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e6fcf5; }
+     * { border-right-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -6913,7 +8433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e6fcf5; }
+     * { border-bottom-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -6929,7 +8449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e6fcf5; }
+     * { border-left-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -6945,7 +8465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal100
      * ```css
-     * { border-color: #c3fae8; }
+     * { border-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -6961,7 +8481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c3fae8; }
+     * { border-top-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -6977,7 +8497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c3fae8; }
+     * { border-right-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -6993,7 +8513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c3fae8; }
+     * { border-bottom-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -7009,7 +8529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c3fae8; }
+     * { border-left-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -7025,7 +8545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal200
      * ```css
-     * { border-color: #96f2d7; }
+     * { border-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -7041,7 +8561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #96f2d7; }
+     * { border-top-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -7057,7 +8577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #96f2d7; }
+     * { border-right-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -7073,7 +8593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #96f2d7; }
+     * { border-bottom-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -7089,7 +8609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #96f2d7; }
+     * { border-left-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -7105,7 +8625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal300
      * ```css
-     * { border-color: #63e6be; }
+     * { border-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -7121,7 +8641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #63e6be; }
+     * { border-top-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -7137,7 +8657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #63e6be; }
+     * { border-right-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -7153,7 +8673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #63e6be; }
+     * { border-bottom-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -7169,7 +8689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #63e6be; }
+     * { border-left-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -7185,7 +8705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal400
      * ```css
-     * { border-color: #38d9a9; }
+     * { border-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -7201,7 +8721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #38d9a9; }
+     * { border-top-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -7217,7 +8737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #38d9a9; }
+     * { border-right-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -7233,7 +8753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #38d9a9; }
+     * { border-bottom-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -7249,7 +8769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #38d9a9; }
+     * { border-left-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -7265,7 +8785,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal500
      * ```css
-     * { border-color: #20c997; }
+     * { border-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -7281,7 +8801,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #20c997; }
+     * { border-top-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -7297,7 +8817,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #20c997; }
+     * { border-right-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -7313,7 +8833,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #20c997; }
+     * { border-bottom-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -7329,7 +8849,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #20c997; }
+     * { border-left-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -7345,7 +8865,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal600
      * ```css
-     * { border-color: #12b886; }
+     * { border-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -7361,7 +8881,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #12b886; }
+     * { border-top-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -7377,7 +8897,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #12b886; }
+     * { border-right-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -7393,7 +8913,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #12b886; }
+     * { border-bottom-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -7409,7 +8929,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #12b886; }
+     * { border-left-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -7425,7 +8945,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal700
      * ```css
-     * { border-color: #0ca678; }
+     * { border-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -7441,7 +8961,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #0ca678; }
+     * { border-top-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -7457,7 +8977,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #0ca678; }
+     * { border-right-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -7473,7 +8993,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #0ca678; }
+     * { border-bottom-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -7489,7 +9009,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #0ca678; }
+     * { border-left-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -7505,7 +9025,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal800
      * ```css
-     * { border-color: #099268; }
+     * { border-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -7521,7 +9041,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #099268; }
+     * { border-top-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -7537,7 +9057,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #099268; }
+     * { border-right-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -7553,7 +9073,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #099268; }
+     * { border-bottom-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -7569,7 +9089,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #099268; }
+     * { border-left-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -7585,7 +9105,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to teal900
      * ```css
-     * { border-color: #087f5b; }
+     * { border-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -7601,7 +9121,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #087f5b; }
+     * { border-top-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -7617,7 +9137,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #087f5b; }
+     * { border-right-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -7633,7 +9153,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #087f5b; }
+     * { border-bottom-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -7649,7 +9169,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #087f5b; }
+     * { border-left-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -7663,9 +9183,809 @@ declare module '@fower/atomic-props' {
      */
     borderLeftTeal900?: ResponsiveBoolean
     /**
+     * Set border color to emerald50
+     * ```css
+     * { border-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald50></Box>
+     * <Box borderEmerald50--T20></Box> // transparentize color
+     * <Box borderEmerald50--O20></Box> // opacify color
+     * <Box borderEmerald50--L20></Box> // lighten color
+     * <Box borderEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald50></Box>
+     * <Box borderTopEmerald50--T20></Box> // transparentize color
+     * <Box borderTopEmerald50--O20></Box> // opacify color
+     * <Box borderTopEmerald50--L20></Box> // lighten color
+     * <Box borderTopEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald50></Box>
+     * <Box borderRightEmerald50--T20></Box> // transparentize color
+     * <Box borderRightEmerald50--O20></Box> // opacify color
+     * <Box borderRightEmerald50--L20></Box> // lighten color
+     * <Box borderRightEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald50></Box>
+     * <Box borderBottomEmerald50--T20></Box> // transparentize color
+     * <Box borderBottomEmerald50--O20></Box> // opacify color
+     * <Box borderBottomEmerald50--L20></Box> // lighten color
+     * <Box borderBottomEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald50></Box>
+     * <Box borderLeftEmerald50--T20></Box> // transparentize color
+     * <Box borderLeftEmerald50--O20></Box> // opacify color
+     * <Box borderLeftEmerald50--L20></Box> // lighten color
+     * <Box borderLeftEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald50?: ResponsiveBoolean
+    /**
+     * Set border color to emerald100
+     * ```css
+     * { border-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald100></Box>
+     * <Box borderEmerald100--T20></Box> // transparentize color
+     * <Box borderEmerald100--O20></Box> // opacify color
+     * <Box borderEmerald100--L20></Box> // lighten color
+     * <Box borderEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald100></Box>
+     * <Box borderTopEmerald100--T20></Box> // transparentize color
+     * <Box borderTopEmerald100--O20></Box> // opacify color
+     * <Box borderTopEmerald100--L20></Box> // lighten color
+     * <Box borderTopEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald100></Box>
+     * <Box borderRightEmerald100--T20></Box> // transparentize color
+     * <Box borderRightEmerald100--O20></Box> // opacify color
+     * <Box borderRightEmerald100--L20></Box> // lighten color
+     * <Box borderRightEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald100></Box>
+     * <Box borderBottomEmerald100--T20></Box> // transparentize color
+     * <Box borderBottomEmerald100--O20></Box> // opacify color
+     * <Box borderBottomEmerald100--L20></Box> // lighten color
+     * <Box borderBottomEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald100></Box>
+     * <Box borderLeftEmerald100--T20></Box> // transparentize color
+     * <Box borderLeftEmerald100--O20></Box> // opacify color
+     * <Box borderLeftEmerald100--L20></Box> // lighten color
+     * <Box borderLeftEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald100?: ResponsiveBoolean
+    /**
+     * Set border color to emerald200
+     * ```css
+     * { border-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald200></Box>
+     * <Box borderEmerald200--T20></Box> // transparentize color
+     * <Box borderEmerald200--O20></Box> // opacify color
+     * <Box borderEmerald200--L20></Box> // lighten color
+     * <Box borderEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald200></Box>
+     * <Box borderTopEmerald200--T20></Box> // transparentize color
+     * <Box borderTopEmerald200--O20></Box> // opacify color
+     * <Box borderTopEmerald200--L20></Box> // lighten color
+     * <Box borderTopEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald200></Box>
+     * <Box borderRightEmerald200--T20></Box> // transparentize color
+     * <Box borderRightEmerald200--O20></Box> // opacify color
+     * <Box borderRightEmerald200--L20></Box> // lighten color
+     * <Box borderRightEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald200></Box>
+     * <Box borderBottomEmerald200--T20></Box> // transparentize color
+     * <Box borderBottomEmerald200--O20></Box> // opacify color
+     * <Box borderBottomEmerald200--L20></Box> // lighten color
+     * <Box borderBottomEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald200></Box>
+     * <Box borderLeftEmerald200--T20></Box> // transparentize color
+     * <Box borderLeftEmerald200--O20></Box> // opacify color
+     * <Box borderLeftEmerald200--L20></Box> // lighten color
+     * <Box borderLeftEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald200?: ResponsiveBoolean
+    /**
+     * Set border color to emerald300
+     * ```css
+     * { border-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald300></Box>
+     * <Box borderEmerald300--T20></Box> // transparentize color
+     * <Box borderEmerald300--O20></Box> // opacify color
+     * <Box borderEmerald300--L20></Box> // lighten color
+     * <Box borderEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald300></Box>
+     * <Box borderTopEmerald300--T20></Box> // transparentize color
+     * <Box borderTopEmerald300--O20></Box> // opacify color
+     * <Box borderTopEmerald300--L20></Box> // lighten color
+     * <Box borderTopEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald300></Box>
+     * <Box borderRightEmerald300--T20></Box> // transparentize color
+     * <Box borderRightEmerald300--O20></Box> // opacify color
+     * <Box borderRightEmerald300--L20></Box> // lighten color
+     * <Box borderRightEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald300></Box>
+     * <Box borderBottomEmerald300--T20></Box> // transparentize color
+     * <Box borderBottomEmerald300--O20></Box> // opacify color
+     * <Box borderBottomEmerald300--L20></Box> // lighten color
+     * <Box borderBottomEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald300></Box>
+     * <Box borderLeftEmerald300--T20></Box> // transparentize color
+     * <Box borderLeftEmerald300--O20></Box> // opacify color
+     * <Box borderLeftEmerald300--L20></Box> // lighten color
+     * <Box borderLeftEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald300?: ResponsiveBoolean
+    /**
+     * Set border color to emerald400
+     * ```css
+     * { border-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald400></Box>
+     * <Box borderEmerald400--T20></Box> // transparentize color
+     * <Box borderEmerald400--O20></Box> // opacify color
+     * <Box borderEmerald400--L20></Box> // lighten color
+     * <Box borderEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald400></Box>
+     * <Box borderTopEmerald400--T20></Box> // transparentize color
+     * <Box borderTopEmerald400--O20></Box> // opacify color
+     * <Box borderTopEmerald400--L20></Box> // lighten color
+     * <Box borderTopEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald400></Box>
+     * <Box borderRightEmerald400--T20></Box> // transparentize color
+     * <Box borderRightEmerald400--O20></Box> // opacify color
+     * <Box borderRightEmerald400--L20></Box> // lighten color
+     * <Box borderRightEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald400></Box>
+     * <Box borderBottomEmerald400--T20></Box> // transparentize color
+     * <Box borderBottomEmerald400--O20></Box> // opacify color
+     * <Box borderBottomEmerald400--L20></Box> // lighten color
+     * <Box borderBottomEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald400></Box>
+     * <Box borderLeftEmerald400--T20></Box> // transparentize color
+     * <Box borderLeftEmerald400--O20></Box> // opacify color
+     * <Box borderLeftEmerald400--L20></Box> // lighten color
+     * <Box borderLeftEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald400?: ResponsiveBoolean
+    /**
+     * Set border color to emerald500
+     * ```css
+     * { border-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald500></Box>
+     * <Box borderEmerald500--T20></Box> // transparentize color
+     * <Box borderEmerald500--O20></Box> // opacify color
+     * <Box borderEmerald500--L20></Box> // lighten color
+     * <Box borderEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald500></Box>
+     * <Box borderTopEmerald500--T20></Box> // transparentize color
+     * <Box borderTopEmerald500--O20></Box> // opacify color
+     * <Box borderTopEmerald500--L20></Box> // lighten color
+     * <Box borderTopEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald500></Box>
+     * <Box borderRightEmerald500--T20></Box> // transparentize color
+     * <Box borderRightEmerald500--O20></Box> // opacify color
+     * <Box borderRightEmerald500--L20></Box> // lighten color
+     * <Box borderRightEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald500></Box>
+     * <Box borderBottomEmerald500--T20></Box> // transparentize color
+     * <Box borderBottomEmerald500--O20></Box> // opacify color
+     * <Box borderBottomEmerald500--L20></Box> // lighten color
+     * <Box borderBottomEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald500></Box>
+     * <Box borderLeftEmerald500--T20></Box> // transparentize color
+     * <Box borderLeftEmerald500--O20></Box> // opacify color
+     * <Box borderLeftEmerald500--L20></Box> // lighten color
+     * <Box borderLeftEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald500?: ResponsiveBoolean
+    /**
+     * Set border color to emerald600
+     * ```css
+     * { border-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald600></Box>
+     * <Box borderEmerald600--T20></Box> // transparentize color
+     * <Box borderEmerald600--O20></Box> // opacify color
+     * <Box borderEmerald600--L20></Box> // lighten color
+     * <Box borderEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald600></Box>
+     * <Box borderTopEmerald600--T20></Box> // transparentize color
+     * <Box borderTopEmerald600--O20></Box> // opacify color
+     * <Box borderTopEmerald600--L20></Box> // lighten color
+     * <Box borderTopEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald600></Box>
+     * <Box borderRightEmerald600--T20></Box> // transparentize color
+     * <Box borderRightEmerald600--O20></Box> // opacify color
+     * <Box borderRightEmerald600--L20></Box> // lighten color
+     * <Box borderRightEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald600></Box>
+     * <Box borderBottomEmerald600--T20></Box> // transparentize color
+     * <Box borderBottomEmerald600--O20></Box> // opacify color
+     * <Box borderBottomEmerald600--L20></Box> // lighten color
+     * <Box borderBottomEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald600></Box>
+     * <Box borderLeftEmerald600--T20></Box> // transparentize color
+     * <Box borderLeftEmerald600--O20></Box> // opacify color
+     * <Box borderLeftEmerald600--L20></Box> // lighten color
+     * <Box borderLeftEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald600?: ResponsiveBoolean
+    /**
+     * Set border color to emerald700
+     * ```css
+     * { border-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald700></Box>
+     * <Box borderEmerald700--T20></Box> // transparentize color
+     * <Box borderEmerald700--O20></Box> // opacify color
+     * <Box borderEmerald700--L20></Box> // lighten color
+     * <Box borderEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald700></Box>
+     * <Box borderTopEmerald700--T20></Box> // transparentize color
+     * <Box borderTopEmerald700--O20></Box> // opacify color
+     * <Box borderTopEmerald700--L20></Box> // lighten color
+     * <Box borderTopEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald700></Box>
+     * <Box borderRightEmerald700--T20></Box> // transparentize color
+     * <Box borderRightEmerald700--O20></Box> // opacify color
+     * <Box borderRightEmerald700--L20></Box> // lighten color
+     * <Box borderRightEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald700></Box>
+     * <Box borderBottomEmerald700--T20></Box> // transparentize color
+     * <Box borderBottomEmerald700--O20></Box> // opacify color
+     * <Box borderBottomEmerald700--L20></Box> // lighten color
+     * <Box borderBottomEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald700></Box>
+     * <Box borderLeftEmerald700--T20></Box> // transparentize color
+     * <Box borderLeftEmerald700--O20></Box> // opacify color
+     * <Box borderLeftEmerald700--L20></Box> // lighten color
+     * <Box borderLeftEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald700?: ResponsiveBoolean
+    /**
+     * Set border color to emerald800
+     * ```css
+     * { border-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald800></Box>
+     * <Box borderEmerald800--T20></Box> // transparentize color
+     * <Box borderEmerald800--O20></Box> // opacify color
+     * <Box borderEmerald800--L20></Box> // lighten color
+     * <Box borderEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald800></Box>
+     * <Box borderTopEmerald800--T20></Box> // transparentize color
+     * <Box borderTopEmerald800--O20></Box> // opacify color
+     * <Box borderTopEmerald800--L20></Box> // lighten color
+     * <Box borderTopEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald800></Box>
+     * <Box borderRightEmerald800--T20></Box> // transparentize color
+     * <Box borderRightEmerald800--O20></Box> // opacify color
+     * <Box borderRightEmerald800--L20></Box> // lighten color
+     * <Box borderRightEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald800></Box>
+     * <Box borderBottomEmerald800--T20></Box> // transparentize color
+     * <Box borderBottomEmerald800--O20></Box> // opacify color
+     * <Box borderBottomEmerald800--L20></Box> // lighten color
+     * <Box borderBottomEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald800></Box>
+     * <Box borderLeftEmerald800--T20></Box> // transparentize color
+     * <Box borderLeftEmerald800--O20></Box> // opacify color
+     * <Box borderLeftEmerald800--L20></Box> // lighten color
+     * <Box borderLeftEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald800?: ResponsiveBoolean
+    /**
+     * Set border color to emerald900
+     * ```css
+     * { border-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderEmerald900></Box>
+     * <Box borderEmerald900--T20></Box> // transparentize color
+     * <Box borderEmerald900--O20></Box> // opacify color
+     * <Box borderEmerald900--L20></Box> // lighten color
+     * <Box borderEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderEmerald900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopEmerald900></Box>
+     * <Box borderTopEmerald900--T20></Box> // transparentize color
+     * <Box borderTopEmerald900--O20></Box> // opacify color
+     * <Box borderTopEmerald900--L20></Box> // lighten color
+     * <Box borderTopEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopEmerald900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightEmerald900></Box>
+     * <Box borderRightEmerald900--T20></Box> // transparentize color
+     * <Box borderRightEmerald900--O20></Box> // opacify color
+     * <Box borderRightEmerald900--L20></Box> // lighten color
+     * <Box borderRightEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightEmerald900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomEmerald900></Box>
+     * <Box borderBottomEmerald900--T20></Box> // transparentize color
+     * <Box borderBottomEmerald900--O20></Box> // opacify color
+     * <Box borderBottomEmerald900--L20></Box> // lighten color
+     * <Box borderBottomEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomEmerald900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftEmerald900></Box>
+     * <Box borderLeftEmerald900--T20></Box> // transparentize color
+     * <Box borderLeftEmerald900--O20></Box> // opacify color
+     * <Box borderLeftEmerald900--L20></Box> // lighten color
+     * <Box borderLeftEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftEmerald900?: ResponsiveBoolean
+    /**
      * Set border color to green50
      * ```css
-     * { border-color: #ebfbee; }
+     * { border-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -7681,7 +10001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ebfbee; }
+     * { border-top-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -7697,7 +10017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ebfbee; }
+     * { border-right-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -7713,7 +10033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ebfbee; }
+     * { border-bottom-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -7729,7 +10049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ebfbee; }
+     * { border-left-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -7745,7 +10065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green100
      * ```css
-     * { border-color: #d3f9d8; }
+     * { border-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -7761,7 +10081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d3f9d8; }
+     * { border-top-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -7777,7 +10097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d3f9d8; }
+     * { border-right-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -7793,7 +10113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d3f9d8; }
+     * { border-bottom-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -7809,7 +10129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d3f9d8; }
+     * { border-left-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -7825,7 +10145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green200
      * ```css
-     * { border-color: #b2f2bb; }
+     * { border-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -7841,7 +10161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #b2f2bb; }
+     * { border-top-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -7857,7 +10177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #b2f2bb; }
+     * { border-right-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -7873,7 +10193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #b2f2bb; }
+     * { border-bottom-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -7889,7 +10209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #b2f2bb; }
+     * { border-left-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -7905,7 +10225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green300
      * ```css
-     * { border-color: #8ce99a; }
+     * { border-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -7921,7 +10241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #8ce99a; }
+     * { border-top-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -7937,7 +10257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #8ce99a; }
+     * { border-right-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -7953,7 +10273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #8ce99a; }
+     * { border-bottom-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -7969,7 +10289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #8ce99a; }
+     * { border-left-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -7985,7 +10305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green400
      * ```css
-     * { border-color: #69db7c; }
+     * { border-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -8001,7 +10321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #69db7c; }
+     * { border-top-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -8017,7 +10337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #69db7c; }
+     * { border-right-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -8033,7 +10353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #69db7c; }
+     * { border-bottom-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -8049,7 +10369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #69db7c; }
+     * { border-left-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -8065,7 +10385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green500
      * ```css
-     * { border-color: #51cf66; }
+     * { border-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -8081,7 +10401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #51cf66; }
+     * { border-top-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -8097,7 +10417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #51cf66; }
+     * { border-right-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -8113,7 +10433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #51cf66; }
+     * { border-bottom-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -8129,7 +10449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #51cf66; }
+     * { border-left-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -8145,7 +10465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green600
      * ```css
-     * { border-color: #40c057; }
+     * { border-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -8161,7 +10481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #40c057; }
+     * { border-top-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -8177,7 +10497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #40c057; }
+     * { border-right-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -8193,7 +10513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #40c057; }
+     * { border-bottom-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -8209,7 +10529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #40c057; }
+     * { border-left-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -8225,7 +10545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green700
      * ```css
-     * { border-color: #37b24d; }
+     * { border-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -8241,7 +10561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #37b24d; }
+     * { border-top-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -8257,7 +10577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #37b24d; }
+     * { border-right-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -8273,7 +10593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #37b24d; }
+     * { border-bottom-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -8289,7 +10609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #37b24d; }
+     * { border-left-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -8305,7 +10625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green800
      * ```css
-     * { border-color: #2f9e44; }
+     * { border-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -8321,7 +10641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #2f9e44; }
+     * { border-top-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -8337,7 +10657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #2f9e44; }
+     * { border-right-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -8353,7 +10673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #2f9e44; }
+     * { border-bottom-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -8369,7 +10689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #2f9e44; }
+     * { border-left-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -8385,7 +10705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to green900
      * ```css
-     * { border-color: #2b8a3e; }
+     * { border-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -8401,7 +10721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #2b8a3e; }
+     * { border-top-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -8417,7 +10737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #2b8a3e; }
+     * { border-right-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -8433,7 +10753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #2b8a3e; }
+     * { border-bottom-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -8449,7 +10769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #2b8a3e; }
+     * { border-left-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -8465,7 +10785,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime50
      * ```css
-     * { border-color: #f4fce3; }
+     * { border-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -8481,7 +10801,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f4fce3; }
+     * { border-top-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -8497,7 +10817,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f4fce3; }
+     * { border-right-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -8513,7 +10833,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f4fce3; }
+     * { border-bottom-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -8529,7 +10849,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f4fce3; }
+     * { border-left-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -8545,7 +10865,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime100
      * ```css
-     * { border-color: #e9fac8; }
+     * { border-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -8561,7 +10881,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e9fac8; }
+     * { border-top-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -8577,7 +10897,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e9fac8; }
+     * { border-right-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -8593,7 +10913,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e9fac8; }
+     * { border-bottom-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -8609,7 +10929,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e9fac8; }
+     * { border-left-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -8625,7 +10945,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime200
      * ```css
-     * { border-color: #d8f5a2; }
+     * { border-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -8641,7 +10961,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d8f5a2; }
+     * { border-top-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -8657,7 +10977,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d8f5a2; }
+     * { border-right-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -8673,7 +10993,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d8f5a2; }
+     * { border-bottom-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -8689,7 +11009,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d8f5a2; }
+     * { border-left-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -8705,7 +11025,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime300
      * ```css
-     * { border-color: #c0eb75; }
+     * { border-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -8721,7 +11041,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c0eb75; }
+     * { border-top-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -8737,7 +11057,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c0eb75; }
+     * { border-right-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -8753,7 +11073,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c0eb75; }
+     * { border-bottom-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -8769,7 +11089,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c0eb75; }
+     * { border-left-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -8785,7 +11105,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime400
      * ```css
-     * { border-color: #a9e34b; }
+     * { border-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -8801,7 +11121,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #a9e34b; }
+     * { border-top-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -8817,7 +11137,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #a9e34b; }
+     * { border-right-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -8833,7 +11153,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #a9e34b; }
+     * { border-bottom-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -8849,7 +11169,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #a9e34b; }
+     * { border-left-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -8865,7 +11185,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime500
      * ```css
-     * { border-color: #94d82d; }
+     * { border-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -8881,7 +11201,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #94d82d; }
+     * { border-top-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -8897,7 +11217,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #94d82d; }
+     * { border-right-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -8913,7 +11233,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #94d82d; }
+     * { border-bottom-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -8929,7 +11249,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #94d82d; }
+     * { border-left-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -8945,7 +11265,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime600
      * ```css
-     * { border-color: #82c91e; }
+     * { border-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -8961,7 +11281,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #82c91e; }
+     * { border-top-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -8977,7 +11297,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #82c91e; }
+     * { border-right-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -8993,7 +11313,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #82c91e; }
+     * { border-bottom-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -9009,7 +11329,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #82c91e; }
+     * { border-left-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -9025,7 +11345,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime700
      * ```css
-     * { border-color: #74b816; }
+     * { border-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -9041,7 +11361,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #74b816; }
+     * { border-top-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -9057,7 +11377,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #74b816; }
+     * { border-right-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -9073,7 +11393,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #74b816; }
+     * { border-bottom-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -9089,7 +11409,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #74b816; }
+     * { border-left-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -9105,7 +11425,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime800
      * ```css
-     * { border-color: #66a80f; }
+     * { border-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -9121,7 +11441,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #66a80f; }
+     * { border-top-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -9137,7 +11457,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #66a80f; }
+     * { border-right-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -9153,7 +11473,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #66a80f; }
+     * { border-bottom-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -9169,7 +11489,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #66a80f; }
+     * { border-left-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -9185,7 +11505,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to lime900
      * ```css
-     * { border-color: #5c940d; }
+     * { border-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -9201,7 +11521,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #5c940d; }
+     * { border-top-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -9217,7 +11537,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #5c940d; }
+     * { border-right-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -9233,7 +11553,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #5c940d; }
+     * { border-bottom-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -9249,7 +11569,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #5c940d; }
+     * { border-left-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -9265,7 +11585,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow50
      * ```css
-     * { border-color: #fff9db; }
+     * { border-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -9281,7 +11601,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fff9db; }
+     * { border-top-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -9297,7 +11617,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fff9db; }
+     * { border-right-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -9313,7 +11633,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fff9db; }
+     * { border-bottom-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -9329,7 +11649,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fff9db; }
+     * { border-left-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -9345,7 +11665,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow100
      * ```css
-     * { border-color: #fff3bf; }
+     * { border-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -9361,7 +11681,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fff3bf; }
+     * { border-top-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -9377,7 +11697,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fff3bf; }
+     * { border-right-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -9393,7 +11713,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fff3bf; }
+     * { border-bottom-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -9409,7 +11729,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fff3bf; }
+     * { border-left-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -9425,7 +11745,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow200
      * ```css
-     * { border-color: #ffec99; }
+     * { border-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -9441,7 +11761,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffec99; }
+     * { border-top-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -9457,7 +11777,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffec99; }
+     * { border-right-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -9473,7 +11793,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffec99; }
+     * { border-bottom-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -9489,7 +11809,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffec99; }
+     * { border-left-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -9505,7 +11825,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow300
      * ```css
-     * { border-color: #ffe066; }
+     * { border-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -9521,7 +11841,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffe066; }
+     * { border-top-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -9537,7 +11857,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffe066; }
+     * { border-right-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -9553,7 +11873,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffe066; }
+     * { border-bottom-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -9569,7 +11889,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffe066; }
+     * { border-left-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -9585,7 +11905,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow400
      * ```css
-     * { border-color: #ffd43b; }
+     * { border-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -9601,7 +11921,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffd43b; }
+     * { border-top-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -9617,7 +11937,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffd43b; }
+     * { border-right-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -9633,7 +11953,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffd43b; }
+     * { border-bottom-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -9649,7 +11969,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffd43b; }
+     * { border-left-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -9665,7 +11985,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow500
      * ```css
-     * { border-color: #fcc419; }
+     * { border-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -9681,7 +12001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fcc419; }
+     * { border-top-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -9697,7 +12017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fcc419; }
+     * { border-right-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -9713,7 +12033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fcc419; }
+     * { border-bottom-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -9729,7 +12049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fcc419; }
+     * { border-left-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -9745,7 +12065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow600
      * ```css
-     * { border-color: #fab005; }
+     * { border-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -9761,7 +12081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fab005; }
+     * { border-top-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -9777,7 +12097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fab005; }
+     * { border-right-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -9793,7 +12113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fab005; }
+     * { border-bottom-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -9809,7 +12129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fab005; }
+     * { border-left-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -9825,7 +12145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow700
      * ```css
-     * { border-color: #f59f00; }
+     * { border-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -9841,7 +12161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f59f00; }
+     * { border-top-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -9857,7 +12177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f59f00; }
+     * { border-right-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -9873,7 +12193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f59f00; }
+     * { border-bottom-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -9889,7 +12209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f59f00; }
+     * { border-left-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -9905,7 +12225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow800
      * ```css
-     * { border-color: #f08c00; }
+     * { border-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -9921,7 +12241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f08c00; }
+     * { border-top-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -9937,7 +12257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f08c00; }
+     * { border-right-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -9953,7 +12273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f08c00; }
+     * { border-bottom-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -9969,7 +12289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f08c00; }
+     * { border-left-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -9985,7 +12305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to yellow900
      * ```css
-     * { border-color: #e67700; }
+     * { border-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -10001,7 +12321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e67700; }
+     * { border-top-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -10017,7 +12337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e67700; }
+     * { border-right-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -10033,7 +12353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e67700; }
+     * { border-bottom-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -10049,7 +12369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e67700; }
+     * { border-left-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -10063,9 +12383,809 @@ declare module '@fower/atomic-props' {
      */
     borderLeftYellow900?: ResponsiveBoolean
     /**
+     * Set border color to amber50
+     * ```css
+     * { border-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber50></Box>
+     * <Box borderAmber50--T20></Box> // transparentize color
+     * <Box borderAmber50--O20></Box> // opacify color
+     * <Box borderAmber50--L20></Box> // lighten color
+     * <Box borderAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber50></Box>
+     * <Box borderTopAmber50--T20></Box> // transparentize color
+     * <Box borderTopAmber50--O20></Box> // opacify color
+     * <Box borderTopAmber50--L20></Box> // lighten color
+     * <Box borderTopAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber50></Box>
+     * <Box borderRightAmber50--T20></Box> // transparentize color
+     * <Box borderRightAmber50--O20></Box> // opacify color
+     * <Box borderRightAmber50--L20></Box> // lighten color
+     * <Box borderRightAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber50></Box>
+     * <Box borderBottomAmber50--T20></Box> // transparentize color
+     * <Box borderBottomAmber50--O20></Box> // opacify color
+     * <Box borderBottomAmber50--L20></Box> // lighten color
+     * <Box borderBottomAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber50></Box>
+     * <Box borderLeftAmber50--T20></Box> // transparentize color
+     * <Box borderLeftAmber50--O20></Box> // opacify color
+     * <Box borderLeftAmber50--L20></Box> // lighten color
+     * <Box borderLeftAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber50?: ResponsiveBoolean
+    /**
+     * Set border color to amber100
+     * ```css
+     * { border-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber100></Box>
+     * <Box borderAmber100--T20></Box> // transparentize color
+     * <Box borderAmber100--O20></Box> // opacify color
+     * <Box borderAmber100--L20></Box> // lighten color
+     * <Box borderAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber100></Box>
+     * <Box borderTopAmber100--T20></Box> // transparentize color
+     * <Box borderTopAmber100--O20></Box> // opacify color
+     * <Box borderTopAmber100--L20></Box> // lighten color
+     * <Box borderTopAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber100></Box>
+     * <Box borderRightAmber100--T20></Box> // transparentize color
+     * <Box borderRightAmber100--O20></Box> // opacify color
+     * <Box borderRightAmber100--L20></Box> // lighten color
+     * <Box borderRightAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber100></Box>
+     * <Box borderBottomAmber100--T20></Box> // transparentize color
+     * <Box borderBottomAmber100--O20></Box> // opacify color
+     * <Box borderBottomAmber100--L20></Box> // lighten color
+     * <Box borderBottomAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber100></Box>
+     * <Box borderLeftAmber100--T20></Box> // transparentize color
+     * <Box borderLeftAmber100--O20></Box> // opacify color
+     * <Box borderLeftAmber100--L20></Box> // lighten color
+     * <Box borderLeftAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber100?: ResponsiveBoolean
+    /**
+     * Set border color to amber200
+     * ```css
+     * { border-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber200></Box>
+     * <Box borderAmber200--T20></Box> // transparentize color
+     * <Box borderAmber200--O20></Box> // opacify color
+     * <Box borderAmber200--L20></Box> // lighten color
+     * <Box borderAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber200></Box>
+     * <Box borderTopAmber200--T20></Box> // transparentize color
+     * <Box borderTopAmber200--O20></Box> // opacify color
+     * <Box borderTopAmber200--L20></Box> // lighten color
+     * <Box borderTopAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber200></Box>
+     * <Box borderRightAmber200--T20></Box> // transparentize color
+     * <Box borderRightAmber200--O20></Box> // opacify color
+     * <Box borderRightAmber200--L20></Box> // lighten color
+     * <Box borderRightAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber200></Box>
+     * <Box borderBottomAmber200--T20></Box> // transparentize color
+     * <Box borderBottomAmber200--O20></Box> // opacify color
+     * <Box borderBottomAmber200--L20></Box> // lighten color
+     * <Box borderBottomAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber200></Box>
+     * <Box borderLeftAmber200--T20></Box> // transparentize color
+     * <Box borderLeftAmber200--O20></Box> // opacify color
+     * <Box borderLeftAmber200--L20></Box> // lighten color
+     * <Box borderLeftAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber200?: ResponsiveBoolean
+    /**
+     * Set border color to amber300
+     * ```css
+     * { border-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber300></Box>
+     * <Box borderAmber300--T20></Box> // transparentize color
+     * <Box borderAmber300--O20></Box> // opacify color
+     * <Box borderAmber300--L20></Box> // lighten color
+     * <Box borderAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber300></Box>
+     * <Box borderTopAmber300--T20></Box> // transparentize color
+     * <Box borderTopAmber300--O20></Box> // opacify color
+     * <Box borderTopAmber300--L20></Box> // lighten color
+     * <Box borderTopAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber300></Box>
+     * <Box borderRightAmber300--T20></Box> // transparentize color
+     * <Box borderRightAmber300--O20></Box> // opacify color
+     * <Box borderRightAmber300--L20></Box> // lighten color
+     * <Box borderRightAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber300></Box>
+     * <Box borderBottomAmber300--T20></Box> // transparentize color
+     * <Box borderBottomAmber300--O20></Box> // opacify color
+     * <Box borderBottomAmber300--L20></Box> // lighten color
+     * <Box borderBottomAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber300></Box>
+     * <Box borderLeftAmber300--T20></Box> // transparentize color
+     * <Box borderLeftAmber300--O20></Box> // opacify color
+     * <Box borderLeftAmber300--L20></Box> // lighten color
+     * <Box borderLeftAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber300?: ResponsiveBoolean
+    /**
+     * Set border color to amber400
+     * ```css
+     * { border-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber400></Box>
+     * <Box borderAmber400--T20></Box> // transparentize color
+     * <Box borderAmber400--O20></Box> // opacify color
+     * <Box borderAmber400--L20></Box> // lighten color
+     * <Box borderAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber400></Box>
+     * <Box borderTopAmber400--T20></Box> // transparentize color
+     * <Box borderTopAmber400--O20></Box> // opacify color
+     * <Box borderTopAmber400--L20></Box> // lighten color
+     * <Box borderTopAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber400></Box>
+     * <Box borderRightAmber400--T20></Box> // transparentize color
+     * <Box borderRightAmber400--O20></Box> // opacify color
+     * <Box borderRightAmber400--L20></Box> // lighten color
+     * <Box borderRightAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber400></Box>
+     * <Box borderBottomAmber400--T20></Box> // transparentize color
+     * <Box borderBottomAmber400--O20></Box> // opacify color
+     * <Box borderBottomAmber400--L20></Box> // lighten color
+     * <Box borderBottomAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber400></Box>
+     * <Box borderLeftAmber400--T20></Box> // transparentize color
+     * <Box borderLeftAmber400--O20></Box> // opacify color
+     * <Box borderLeftAmber400--L20></Box> // lighten color
+     * <Box borderLeftAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber400?: ResponsiveBoolean
+    /**
+     * Set border color to amber500
+     * ```css
+     * { border-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber500></Box>
+     * <Box borderAmber500--T20></Box> // transparentize color
+     * <Box borderAmber500--O20></Box> // opacify color
+     * <Box borderAmber500--L20></Box> // lighten color
+     * <Box borderAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber500></Box>
+     * <Box borderTopAmber500--T20></Box> // transparentize color
+     * <Box borderTopAmber500--O20></Box> // opacify color
+     * <Box borderTopAmber500--L20></Box> // lighten color
+     * <Box borderTopAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber500></Box>
+     * <Box borderRightAmber500--T20></Box> // transparentize color
+     * <Box borderRightAmber500--O20></Box> // opacify color
+     * <Box borderRightAmber500--L20></Box> // lighten color
+     * <Box borderRightAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber500></Box>
+     * <Box borderBottomAmber500--T20></Box> // transparentize color
+     * <Box borderBottomAmber500--O20></Box> // opacify color
+     * <Box borderBottomAmber500--L20></Box> // lighten color
+     * <Box borderBottomAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber500></Box>
+     * <Box borderLeftAmber500--T20></Box> // transparentize color
+     * <Box borderLeftAmber500--O20></Box> // opacify color
+     * <Box borderLeftAmber500--L20></Box> // lighten color
+     * <Box borderLeftAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber500?: ResponsiveBoolean
+    /**
+     * Set border color to amber600
+     * ```css
+     * { border-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber600></Box>
+     * <Box borderAmber600--T20></Box> // transparentize color
+     * <Box borderAmber600--O20></Box> // opacify color
+     * <Box borderAmber600--L20></Box> // lighten color
+     * <Box borderAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber600></Box>
+     * <Box borderTopAmber600--T20></Box> // transparentize color
+     * <Box borderTopAmber600--O20></Box> // opacify color
+     * <Box borderTopAmber600--L20></Box> // lighten color
+     * <Box borderTopAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber600></Box>
+     * <Box borderRightAmber600--T20></Box> // transparentize color
+     * <Box borderRightAmber600--O20></Box> // opacify color
+     * <Box borderRightAmber600--L20></Box> // lighten color
+     * <Box borderRightAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber600></Box>
+     * <Box borderBottomAmber600--T20></Box> // transparentize color
+     * <Box borderBottomAmber600--O20></Box> // opacify color
+     * <Box borderBottomAmber600--L20></Box> // lighten color
+     * <Box borderBottomAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber600></Box>
+     * <Box borderLeftAmber600--T20></Box> // transparentize color
+     * <Box borderLeftAmber600--O20></Box> // opacify color
+     * <Box borderLeftAmber600--L20></Box> // lighten color
+     * <Box borderLeftAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber600?: ResponsiveBoolean
+    /**
+     * Set border color to amber700
+     * ```css
+     * { border-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber700></Box>
+     * <Box borderAmber700--T20></Box> // transparentize color
+     * <Box borderAmber700--O20></Box> // opacify color
+     * <Box borderAmber700--L20></Box> // lighten color
+     * <Box borderAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber700></Box>
+     * <Box borderTopAmber700--T20></Box> // transparentize color
+     * <Box borderTopAmber700--O20></Box> // opacify color
+     * <Box borderTopAmber700--L20></Box> // lighten color
+     * <Box borderTopAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber700></Box>
+     * <Box borderRightAmber700--T20></Box> // transparentize color
+     * <Box borderRightAmber700--O20></Box> // opacify color
+     * <Box borderRightAmber700--L20></Box> // lighten color
+     * <Box borderRightAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber700></Box>
+     * <Box borderBottomAmber700--T20></Box> // transparentize color
+     * <Box borderBottomAmber700--O20></Box> // opacify color
+     * <Box borderBottomAmber700--L20></Box> // lighten color
+     * <Box borderBottomAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber700></Box>
+     * <Box borderLeftAmber700--T20></Box> // transparentize color
+     * <Box borderLeftAmber700--O20></Box> // opacify color
+     * <Box borderLeftAmber700--L20></Box> // lighten color
+     * <Box borderLeftAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber700?: ResponsiveBoolean
+    /**
+     * Set border color to amber800
+     * ```css
+     * { border-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber800></Box>
+     * <Box borderAmber800--T20></Box> // transparentize color
+     * <Box borderAmber800--O20></Box> // opacify color
+     * <Box borderAmber800--L20></Box> // lighten color
+     * <Box borderAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber800></Box>
+     * <Box borderTopAmber800--T20></Box> // transparentize color
+     * <Box borderTopAmber800--O20></Box> // opacify color
+     * <Box borderTopAmber800--L20></Box> // lighten color
+     * <Box borderTopAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber800></Box>
+     * <Box borderRightAmber800--T20></Box> // transparentize color
+     * <Box borderRightAmber800--O20></Box> // opacify color
+     * <Box borderRightAmber800--L20></Box> // lighten color
+     * <Box borderRightAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber800></Box>
+     * <Box borderBottomAmber800--T20></Box> // transparentize color
+     * <Box borderBottomAmber800--O20></Box> // opacify color
+     * <Box borderBottomAmber800--L20></Box> // lighten color
+     * <Box borderBottomAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber800></Box>
+     * <Box borderLeftAmber800--T20></Box> // transparentize color
+     * <Box borderLeftAmber800--O20></Box> // opacify color
+     * <Box borderLeftAmber800--L20></Box> // lighten color
+     * <Box borderLeftAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber800?: ResponsiveBoolean
+    /**
+     * Set border color to amber900
+     * ```css
+     * { border-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderAmber900></Box>
+     * <Box borderAmber900--T20></Box> // transparentize color
+     * <Box borderAmber900--O20></Box> // opacify color
+     * <Box borderAmber900--L20></Box> // lighten color
+     * <Box borderAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderAmber900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopAmber900></Box>
+     * <Box borderTopAmber900--T20></Box> // transparentize color
+     * <Box borderTopAmber900--O20></Box> // opacify color
+     * <Box borderTopAmber900--L20></Box> // lighten color
+     * <Box borderTopAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopAmber900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightAmber900></Box>
+     * <Box borderRightAmber900--T20></Box> // transparentize color
+     * <Box borderRightAmber900--O20></Box> // opacify color
+     * <Box borderRightAmber900--L20></Box> // lighten color
+     * <Box borderRightAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightAmber900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomAmber900></Box>
+     * <Box borderBottomAmber900--T20></Box> // transparentize color
+     * <Box borderBottomAmber900--O20></Box> // opacify color
+     * <Box borderBottomAmber900--L20></Box> // lighten color
+     * <Box borderBottomAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomAmber900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftAmber900></Box>
+     * <Box borderLeftAmber900--T20></Box> // transparentize color
+     * <Box borderLeftAmber900--O20></Box> // opacify color
+     * <Box borderLeftAmber900--L20></Box> // lighten color
+     * <Box borderLeftAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftAmber900?: ResponsiveBoolean
+    /**
      * Set border color to orange50
      * ```css
-     * { border-color: #fff4e6; }
+     * { border-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -10081,7 +13201,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fff4e6; }
+     * { border-top-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -10097,7 +13217,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fff4e6; }
+     * { border-right-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -10113,7 +13233,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fff4e6; }
+     * { border-bottom-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -10129,7 +13249,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fff4e6; }
+     * { border-left-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -10145,7 +13265,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange100
      * ```css
-     * { border-color: #ffe8cc; }
+     * { border-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -10161,7 +13281,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffe8cc; }
+     * { border-top-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -10177,7 +13297,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffe8cc; }
+     * { border-right-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -10193,7 +13313,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffe8cc; }
+     * { border-bottom-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -10209,7 +13329,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffe8cc; }
+     * { border-left-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -10225,7 +13345,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange200
      * ```css
-     * { border-color: #ffd8a8; }
+     * { border-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -10241,7 +13361,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffd8a8; }
+     * { border-top-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -10257,7 +13377,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffd8a8; }
+     * { border-right-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -10273,7 +13393,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffd8a8; }
+     * { border-bottom-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -10289,7 +13409,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffd8a8; }
+     * { border-left-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -10305,7 +13425,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange300
      * ```css
-     * { border-color: #ffc078; }
+     * { border-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -10321,7 +13441,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffc078; }
+     * { border-top-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -10337,7 +13457,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffc078; }
+     * { border-right-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -10353,7 +13473,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffc078; }
+     * { border-bottom-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -10369,7 +13489,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffc078; }
+     * { border-left-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -10385,7 +13505,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange400
      * ```css
-     * { border-color: #ffa94d; }
+     * { border-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -10401,7 +13521,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffa94d; }
+     * { border-top-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -10417,7 +13537,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffa94d; }
+     * { border-right-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -10433,7 +13553,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffa94d; }
+     * { border-bottom-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -10449,7 +13569,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffa94d; }
+     * { border-left-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -10465,7 +13585,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange500
      * ```css
-     * { border-color: #ff922b; }
+     * { border-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -10481,7 +13601,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ff922b; }
+     * { border-top-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -10497,7 +13617,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ff922b; }
+     * { border-right-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -10513,7 +13633,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ff922b; }
+     * { border-bottom-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -10529,7 +13649,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ff922b; }
+     * { border-left-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -10545,7 +13665,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange600
      * ```css
-     * { border-color: #fd7e14; }
+     * { border-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -10561,7 +13681,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fd7e14; }
+     * { border-top-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -10577,7 +13697,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fd7e14; }
+     * { border-right-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -10593,7 +13713,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fd7e14; }
+     * { border-bottom-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -10609,7 +13729,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fd7e14; }
+     * { border-left-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -10625,7 +13745,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange700
      * ```css
-     * { border-color: #f76707; }
+     * { border-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -10641,7 +13761,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f76707; }
+     * { border-top-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -10657,7 +13777,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f76707; }
+     * { border-right-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -10673,7 +13793,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f76707; }
+     * { border-bottom-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -10689,7 +13809,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f76707; }
+     * { border-left-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -10705,7 +13825,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange800
      * ```css
-     * { border-color: #e8590c; }
+     * { border-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -10721,7 +13841,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e8590c; }
+     * { border-top-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -10737,7 +13857,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e8590c; }
+     * { border-right-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -10753,7 +13873,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e8590c; }
+     * { border-bottom-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -10769,7 +13889,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e8590c; }
+     * { border-left-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -10785,7 +13905,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to orange900
      * ```css
-     * { border-color: #d9480f; }
+     * { border-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -10801,7 +13921,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #d9480f; }
+     * { border-top-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -10817,7 +13937,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #d9480f; }
+     * { border-right-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -10833,7 +13953,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #d9480f; }
+     * { border-bottom-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -10849,7 +13969,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #d9480f; }
+     * { border-left-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -10865,7 +13985,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red50
      * ```css
-     * { border-color: #fff5f5; }
+     * { border-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -10881,7 +14001,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fff5f5; }
+     * { border-top-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -10897,7 +14017,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fff5f5; }
+     * { border-right-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -10913,7 +14033,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fff5f5; }
+     * { border-bottom-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -10929,7 +14049,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fff5f5; }
+     * { border-left-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -10945,7 +14065,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red100
      * ```css
-     * { border-color: #ffe3e3; }
+     * { border-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -10961,7 +14081,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffe3e3; }
+     * { border-top-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -10977,7 +14097,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffe3e3; }
+     * { border-right-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -10993,7 +14113,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffe3e3; }
+     * { border-bottom-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -11009,7 +14129,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffe3e3; }
+     * { border-left-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -11025,7 +14145,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red200
      * ```css
-     * { border-color: #ffc9c9; }
+     * { border-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -11041,7 +14161,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffc9c9; }
+     * { border-top-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -11057,7 +14177,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffc9c9; }
+     * { border-right-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -11073,7 +14193,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffc9c9; }
+     * { border-bottom-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -11089,7 +14209,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffc9c9; }
+     * { border-left-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -11105,7 +14225,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red300
      * ```css
-     * { border-color: #ffa8a8; }
+     * { border-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -11121,7 +14241,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ffa8a8; }
+     * { border-top-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -11137,7 +14257,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ffa8a8; }
+     * { border-right-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -11153,7 +14273,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ffa8a8; }
+     * { border-bottom-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -11169,7 +14289,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ffa8a8; }
+     * { border-left-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -11185,7 +14305,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red400
      * ```css
-     * { border-color: #ff8787; }
+     * { border-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -11201,7 +14321,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ff8787; }
+     * { border-top-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -11217,7 +14337,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ff8787; }
+     * { border-right-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -11233,7 +14353,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ff8787; }
+     * { border-bottom-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -11249,7 +14369,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ff8787; }
+     * { border-left-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -11265,7 +14385,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red500
      * ```css
-     * { border-color: #ff6b6b; }
+     * { border-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -11281,7 +14401,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #ff6b6b; }
+     * { border-top-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -11297,7 +14417,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #ff6b6b; }
+     * { border-right-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -11313,7 +14433,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #ff6b6b; }
+     * { border-bottom-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -11329,7 +14449,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #ff6b6b; }
+     * { border-left-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -11345,7 +14465,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red600
      * ```css
-     * { border-color: #fa5252; }
+     * { border-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -11361,7 +14481,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #fa5252; }
+     * { border-top-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -11377,7 +14497,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #fa5252; }
+     * { border-right-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -11393,7 +14513,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #fa5252; }
+     * { border-bottom-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -11409,7 +14529,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #fa5252; }
+     * { border-left-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -11425,7 +14545,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red700
      * ```css
-     * { border-color: #f03e3e; }
+     * { border-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -11441,7 +14561,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #f03e3e; }
+     * { border-top-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -11457,7 +14577,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #f03e3e; }
+     * { border-right-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -11473,7 +14593,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #f03e3e; }
+     * { border-bottom-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -11489,7 +14609,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #f03e3e; }
+     * { border-left-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -11505,7 +14625,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red800
      * ```css
-     * { border-color: #e03131; }
+     * { border-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -11521,7 +14641,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #e03131; }
+     * { border-top-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -11537,7 +14657,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #e03131; }
+     * { border-right-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -11553,7 +14673,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #e03131; }
+     * { border-bottom-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -11569,7 +14689,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #e03131; }
+     * { border-left-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -11585,7 +14705,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border color to red900
      * ```css
-     * { border-color: #c92a2a; }
+     * { border-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -11601,7 +14721,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border top color to ' + cur
      * ```css
-     * { border-top-color: #c92a2a; }
+     * { border-top-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -11617,7 +14737,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border right color to ' + cur
      * ```css
-     * { border-right-color: #c92a2a; }
+     * { border-right-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -11633,7 +14753,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border bottom color to ' + cur
      * ```css
-     * { border-bottom-color: #c92a2a; }
+     * { border-bottom-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -11649,7 +14769,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set border left color to ' + cur
      * ```css
-     * { border-left-color: #c92a2a; }
+     * { border-left-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -11662,6 +14782,806 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
      */
     borderLeftRed900?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray50
+     * ```css
+     * { border-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray50></Box>
+     * <Box borderWarmGray50--T20></Box> // transparentize color
+     * <Box borderWarmGray50--O20></Box> // opacify color
+     * <Box borderWarmGray50--L20></Box> // lighten color
+     * <Box borderWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray50></Box>
+     * <Box borderTopWarmGray50--T20></Box> // transparentize color
+     * <Box borderTopWarmGray50--O20></Box> // opacify color
+     * <Box borderTopWarmGray50--L20></Box> // lighten color
+     * <Box borderTopWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray50></Box>
+     * <Box borderRightWarmGray50--T20></Box> // transparentize color
+     * <Box borderRightWarmGray50--O20></Box> // opacify color
+     * <Box borderRightWarmGray50--L20></Box> // lighten color
+     * <Box borderRightWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray50></Box>
+     * <Box borderBottomWarmGray50--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray50--O20></Box> // opacify color
+     * <Box borderBottomWarmGray50--L20></Box> // lighten color
+     * <Box borderBottomWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray50></Box>
+     * <Box borderLeftWarmGray50--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray50--O20></Box> // opacify color
+     * <Box borderLeftWarmGray50--L20></Box> // lighten color
+     * <Box borderLeftWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray50?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray100
+     * ```css
+     * { border-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray100></Box>
+     * <Box borderWarmGray100--T20></Box> // transparentize color
+     * <Box borderWarmGray100--O20></Box> // opacify color
+     * <Box borderWarmGray100--L20></Box> // lighten color
+     * <Box borderWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray100></Box>
+     * <Box borderTopWarmGray100--T20></Box> // transparentize color
+     * <Box borderTopWarmGray100--O20></Box> // opacify color
+     * <Box borderTopWarmGray100--L20></Box> // lighten color
+     * <Box borderTopWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray100></Box>
+     * <Box borderRightWarmGray100--T20></Box> // transparentize color
+     * <Box borderRightWarmGray100--O20></Box> // opacify color
+     * <Box borderRightWarmGray100--L20></Box> // lighten color
+     * <Box borderRightWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray100></Box>
+     * <Box borderBottomWarmGray100--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray100--O20></Box> // opacify color
+     * <Box borderBottomWarmGray100--L20></Box> // lighten color
+     * <Box borderBottomWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray100></Box>
+     * <Box borderLeftWarmGray100--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray100--O20></Box> // opacify color
+     * <Box borderLeftWarmGray100--L20></Box> // lighten color
+     * <Box borderLeftWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray100?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray200
+     * ```css
+     * { border-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray200></Box>
+     * <Box borderWarmGray200--T20></Box> // transparentize color
+     * <Box borderWarmGray200--O20></Box> // opacify color
+     * <Box borderWarmGray200--L20></Box> // lighten color
+     * <Box borderWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray200></Box>
+     * <Box borderTopWarmGray200--T20></Box> // transparentize color
+     * <Box borderTopWarmGray200--O20></Box> // opacify color
+     * <Box borderTopWarmGray200--L20></Box> // lighten color
+     * <Box borderTopWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray200></Box>
+     * <Box borderRightWarmGray200--T20></Box> // transparentize color
+     * <Box borderRightWarmGray200--O20></Box> // opacify color
+     * <Box borderRightWarmGray200--L20></Box> // lighten color
+     * <Box borderRightWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray200></Box>
+     * <Box borderBottomWarmGray200--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray200--O20></Box> // opacify color
+     * <Box borderBottomWarmGray200--L20></Box> // lighten color
+     * <Box borderBottomWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray200></Box>
+     * <Box borderLeftWarmGray200--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray200--O20></Box> // opacify color
+     * <Box borderLeftWarmGray200--L20></Box> // lighten color
+     * <Box borderLeftWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray200?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray300
+     * ```css
+     * { border-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray300></Box>
+     * <Box borderWarmGray300--T20></Box> // transparentize color
+     * <Box borderWarmGray300--O20></Box> // opacify color
+     * <Box borderWarmGray300--L20></Box> // lighten color
+     * <Box borderWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray300></Box>
+     * <Box borderTopWarmGray300--T20></Box> // transparentize color
+     * <Box borderTopWarmGray300--O20></Box> // opacify color
+     * <Box borderTopWarmGray300--L20></Box> // lighten color
+     * <Box borderTopWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray300></Box>
+     * <Box borderRightWarmGray300--T20></Box> // transparentize color
+     * <Box borderRightWarmGray300--O20></Box> // opacify color
+     * <Box borderRightWarmGray300--L20></Box> // lighten color
+     * <Box borderRightWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray300></Box>
+     * <Box borderBottomWarmGray300--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray300--O20></Box> // opacify color
+     * <Box borderBottomWarmGray300--L20></Box> // lighten color
+     * <Box borderBottomWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray300></Box>
+     * <Box borderLeftWarmGray300--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray300--O20></Box> // opacify color
+     * <Box borderLeftWarmGray300--L20></Box> // lighten color
+     * <Box borderLeftWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray300?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray400
+     * ```css
+     * { border-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray400></Box>
+     * <Box borderWarmGray400--T20></Box> // transparentize color
+     * <Box borderWarmGray400--O20></Box> // opacify color
+     * <Box borderWarmGray400--L20></Box> // lighten color
+     * <Box borderWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray400></Box>
+     * <Box borderTopWarmGray400--T20></Box> // transparentize color
+     * <Box borderTopWarmGray400--O20></Box> // opacify color
+     * <Box borderTopWarmGray400--L20></Box> // lighten color
+     * <Box borderTopWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray400></Box>
+     * <Box borderRightWarmGray400--T20></Box> // transparentize color
+     * <Box borderRightWarmGray400--O20></Box> // opacify color
+     * <Box borderRightWarmGray400--L20></Box> // lighten color
+     * <Box borderRightWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray400></Box>
+     * <Box borderBottomWarmGray400--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray400--O20></Box> // opacify color
+     * <Box borderBottomWarmGray400--L20></Box> // lighten color
+     * <Box borderBottomWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray400></Box>
+     * <Box borderLeftWarmGray400--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray400--O20></Box> // opacify color
+     * <Box borderLeftWarmGray400--L20></Box> // lighten color
+     * <Box borderLeftWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray400?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray500
+     * ```css
+     * { border-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray500></Box>
+     * <Box borderWarmGray500--T20></Box> // transparentize color
+     * <Box borderWarmGray500--O20></Box> // opacify color
+     * <Box borderWarmGray500--L20></Box> // lighten color
+     * <Box borderWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray500></Box>
+     * <Box borderTopWarmGray500--T20></Box> // transparentize color
+     * <Box borderTopWarmGray500--O20></Box> // opacify color
+     * <Box borderTopWarmGray500--L20></Box> // lighten color
+     * <Box borderTopWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray500></Box>
+     * <Box borderRightWarmGray500--T20></Box> // transparentize color
+     * <Box borderRightWarmGray500--O20></Box> // opacify color
+     * <Box borderRightWarmGray500--L20></Box> // lighten color
+     * <Box borderRightWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray500></Box>
+     * <Box borderBottomWarmGray500--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray500--O20></Box> // opacify color
+     * <Box borderBottomWarmGray500--L20></Box> // lighten color
+     * <Box borderBottomWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray500></Box>
+     * <Box borderLeftWarmGray500--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray500--O20></Box> // opacify color
+     * <Box borderLeftWarmGray500--L20></Box> // lighten color
+     * <Box borderLeftWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray500?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray600
+     * ```css
+     * { border-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray600></Box>
+     * <Box borderWarmGray600--T20></Box> // transparentize color
+     * <Box borderWarmGray600--O20></Box> // opacify color
+     * <Box borderWarmGray600--L20></Box> // lighten color
+     * <Box borderWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray600></Box>
+     * <Box borderTopWarmGray600--T20></Box> // transparentize color
+     * <Box borderTopWarmGray600--O20></Box> // opacify color
+     * <Box borderTopWarmGray600--L20></Box> // lighten color
+     * <Box borderTopWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray600></Box>
+     * <Box borderRightWarmGray600--T20></Box> // transparentize color
+     * <Box borderRightWarmGray600--O20></Box> // opacify color
+     * <Box borderRightWarmGray600--L20></Box> // lighten color
+     * <Box borderRightWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray600></Box>
+     * <Box borderBottomWarmGray600--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray600--O20></Box> // opacify color
+     * <Box borderBottomWarmGray600--L20></Box> // lighten color
+     * <Box borderBottomWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray600></Box>
+     * <Box borderLeftWarmGray600--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray600--O20></Box> // opacify color
+     * <Box borderLeftWarmGray600--L20></Box> // lighten color
+     * <Box borderLeftWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray600?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray700
+     * ```css
+     * { border-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray700></Box>
+     * <Box borderWarmGray700--T20></Box> // transparentize color
+     * <Box borderWarmGray700--O20></Box> // opacify color
+     * <Box borderWarmGray700--L20></Box> // lighten color
+     * <Box borderWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray700></Box>
+     * <Box borderTopWarmGray700--T20></Box> // transparentize color
+     * <Box borderTopWarmGray700--O20></Box> // opacify color
+     * <Box borderTopWarmGray700--L20></Box> // lighten color
+     * <Box borderTopWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray700></Box>
+     * <Box borderRightWarmGray700--T20></Box> // transparentize color
+     * <Box borderRightWarmGray700--O20></Box> // opacify color
+     * <Box borderRightWarmGray700--L20></Box> // lighten color
+     * <Box borderRightWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray700></Box>
+     * <Box borderBottomWarmGray700--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray700--O20></Box> // opacify color
+     * <Box borderBottomWarmGray700--L20></Box> // lighten color
+     * <Box borderBottomWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray700></Box>
+     * <Box borderLeftWarmGray700--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray700--O20></Box> // opacify color
+     * <Box borderLeftWarmGray700--L20></Box> // lighten color
+     * <Box borderLeftWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray700?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray800
+     * ```css
+     * { border-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray800></Box>
+     * <Box borderWarmGray800--T20></Box> // transparentize color
+     * <Box borderWarmGray800--O20></Box> // opacify color
+     * <Box borderWarmGray800--L20></Box> // lighten color
+     * <Box borderWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray800></Box>
+     * <Box borderTopWarmGray800--T20></Box> // transparentize color
+     * <Box borderTopWarmGray800--O20></Box> // opacify color
+     * <Box borderTopWarmGray800--L20></Box> // lighten color
+     * <Box borderTopWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray800></Box>
+     * <Box borderRightWarmGray800--T20></Box> // transparentize color
+     * <Box borderRightWarmGray800--O20></Box> // opacify color
+     * <Box borderRightWarmGray800--L20></Box> // lighten color
+     * <Box borderRightWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray800></Box>
+     * <Box borderBottomWarmGray800--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray800--O20></Box> // opacify color
+     * <Box borderBottomWarmGray800--L20></Box> // lighten color
+     * <Box borderBottomWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray800></Box>
+     * <Box borderLeftWarmGray800--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray800--O20></Box> // opacify color
+     * <Box borderLeftWarmGray800--L20></Box> // lighten color
+     * <Box borderLeftWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray800?: ResponsiveBoolean
+    /**
+     * Set border color to warmGray900
+     * ```css
+     * { border-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderWarmGray900></Box>
+     * <Box borderWarmGray900--T20></Box> // transparentize color
+     * <Box borderWarmGray900--O20></Box> // opacify color
+     * <Box borderWarmGray900--L20></Box> // lighten color
+     * <Box borderWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderWarmGray900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopWarmGray900></Box>
+     * <Box borderTopWarmGray900--T20></Box> // transparentize color
+     * <Box borderTopWarmGray900--O20></Box> // opacify color
+     * <Box borderTopWarmGray900--L20></Box> // lighten color
+     * <Box borderTopWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopWarmGray900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightWarmGray900></Box>
+     * <Box borderRightWarmGray900--T20></Box> // transparentize color
+     * <Box borderRightWarmGray900--O20></Box> // opacify color
+     * <Box borderRightWarmGray900--L20></Box> // lighten color
+     * <Box borderRightWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightWarmGray900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomWarmGray900></Box>
+     * <Box borderBottomWarmGray900--T20></Box> // transparentize color
+     * <Box borderBottomWarmGray900--O20></Box> // opacify color
+     * <Box borderBottomWarmGray900--L20></Box> // lighten color
+     * <Box borderBottomWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomWarmGray900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftWarmGray900></Box>
+     * <Box borderLeftWarmGray900--T20></Box> // transparentize color
+     * <Box borderLeftWarmGray900--O20></Box> // opacify color
+     * <Box borderLeftWarmGray900--L20></Box> // lighten color
+     * <Box borderLeftWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftWarmGray900?: ResponsiveBoolean
     /**
      * Set border color to trueGray50
      * ```css
@@ -13262,5 +17182,1605 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
      */
     borderLeftGray900?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray50
+     * ```css
+     * { border-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray50></Box>
+     * <Box borderCoolGray50--T20></Box> // transparentize color
+     * <Box borderCoolGray50--O20></Box> // opacify color
+     * <Box borderCoolGray50--L20></Box> // lighten color
+     * <Box borderCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray50></Box>
+     * <Box borderTopCoolGray50--T20></Box> // transparentize color
+     * <Box borderTopCoolGray50--O20></Box> // opacify color
+     * <Box borderTopCoolGray50--L20></Box> // lighten color
+     * <Box borderTopCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray50></Box>
+     * <Box borderRightCoolGray50--T20></Box> // transparentize color
+     * <Box borderRightCoolGray50--O20></Box> // opacify color
+     * <Box borderRightCoolGray50--L20></Box> // lighten color
+     * <Box borderRightCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray50></Box>
+     * <Box borderBottomCoolGray50--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray50--O20></Box> // opacify color
+     * <Box borderBottomCoolGray50--L20></Box> // lighten color
+     * <Box borderBottomCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray50></Box>
+     * <Box borderLeftCoolGray50--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray50--O20></Box> // opacify color
+     * <Box borderLeftCoolGray50--L20></Box> // lighten color
+     * <Box borderLeftCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray50?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray100
+     * ```css
+     * { border-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray100></Box>
+     * <Box borderCoolGray100--T20></Box> // transparentize color
+     * <Box borderCoolGray100--O20></Box> // opacify color
+     * <Box borderCoolGray100--L20></Box> // lighten color
+     * <Box borderCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray100></Box>
+     * <Box borderTopCoolGray100--T20></Box> // transparentize color
+     * <Box borderTopCoolGray100--O20></Box> // opacify color
+     * <Box borderTopCoolGray100--L20></Box> // lighten color
+     * <Box borderTopCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray100></Box>
+     * <Box borderRightCoolGray100--T20></Box> // transparentize color
+     * <Box borderRightCoolGray100--O20></Box> // opacify color
+     * <Box borderRightCoolGray100--L20></Box> // lighten color
+     * <Box borderRightCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray100></Box>
+     * <Box borderBottomCoolGray100--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray100--O20></Box> // opacify color
+     * <Box borderBottomCoolGray100--L20></Box> // lighten color
+     * <Box borderBottomCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray100></Box>
+     * <Box borderLeftCoolGray100--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray100--O20></Box> // opacify color
+     * <Box borderLeftCoolGray100--L20></Box> // lighten color
+     * <Box borderLeftCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray100?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray200
+     * ```css
+     * { border-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray200></Box>
+     * <Box borderCoolGray200--T20></Box> // transparentize color
+     * <Box borderCoolGray200--O20></Box> // opacify color
+     * <Box borderCoolGray200--L20></Box> // lighten color
+     * <Box borderCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray200></Box>
+     * <Box borderTopCoolGray200--T20></Box> // transparentize color
+     * <Box borderTopCoolGray200--O20></Box> // opacify color
+     * <Box borderTopCoolGray200--L20></Box> // lighten color
+     * <Box borderTopCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray200></Box>
+     * <Box borderRightCoolGray200--T20></Box> // transparentize color
+     * <Box borderRightCoolGray200--O20></Box> // opacify color
+     * <Box borderRightCoolGray200--L20></Box> // lighten color
+     * <Box borderRightCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray200></Box>
+     * <Box borderBottomCoolGray200--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray200--O20></Box> // opacify color
+     * <Box borderBottomCoolGray200--L20></Box> // lighten color
+     * <Box borderBottomCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray200></Box>
+     * <Box borderLeftCoolGray200--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray200--O20></Box> // opacify color
+     * <Box borderLeftCoolGray200--L20></Box> // lighten color
+     * <Box borderLeftCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray200?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray300
+     * ```css
+     * { border-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray300></Box>
+     * <Box borderCoolGray300--T20></Box> // transparentize color
+     * <Box borderCoolGray300--O20></Box> // opacify color
+     * <Box borderCoolGray300--L20></Box> // lighten color
+     * <Box borderCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray300></Box>
+     * <Box borderTopCoolGray300--T20></Box> // transparentize color
+     * <Box borderTopCoolGray300--O20></Box> // opacify color
+     * <Box borderTopCoolGray300--L20></Box> // lighten color
+     * <Box borderTopCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray300></Box>
+     * <Box borderRightCoolGray300--T20></Box> // transparentize color
+     * <Box borderRightCoolGray300--O20></Box> // opacify color
+     * <Box borderRightCoolGray300--L20></Box> // lighten color
+     * <Box borderRightCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray300></Box>
+     * <Box borderBottomCoolGray300--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray300--O20></Box> // opacify color
+     * <Box borderBottomCoolGray300--L20></Box> // lighten color
+     * <Box borderBottomCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray300></Box>
+     * <Box borderLeftCoolGray300--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray300--O20></Box> // opacify color
+     * <Box borderLeftCoolGray300--L20></Box> // lighten color
+     * <Box borderLeftCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray300?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray400
+     * ```css
+     * { border-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray400></Box>
+     * <Box borderCoolGray400--T20></Box> // transparentize color
+     * <Box borderCoolGray400--O20></Box> // opacify color
+     * <Box borderCoolGray400--L20></Box> // lighten color
+     * <Box borderCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray400></Box>
+     * <Box borderTopCoolGray400--T20></Box> // transparentize color
+     * <Box borderTopCoolGray400--O20></Box> // opacify color
+     * <Box borderTopCoolGray400--L20></Box> // lighten color
+     * <Box borderTopCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray400></Box>
+     * <Box borderRightCoolGray400--T20></Box> // transparentize color
+     * <Box borderRightCoolGray400--O20></Box> // opacify color
+     * <Box borderRightCoolGray400--L20></Box> // lighten color
+     * <Box borderRightCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray400></Box>
+     * <Box borderBottomCoolGray400--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray400--O20></Box> // opacify color
+     * <Box borderBottomCoolGray400--L20></Box> // lighten color
+     * <Box borderBottomCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray400></Box>
+     * <Box borderLeftCoolGray400--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray400--O20></Box> // opacify color
+     * <Box borderLeftCoolGray400--L20></Box> // lighten color
+     * <Box borderLeftCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray400?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray500
+     * ```css
+     * { border-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray500></Box>
+     * <Box borderCoolGray500--T20></Box> // transparentize color
+     * <Box borderCoolGray500--O20></Box> // opacify color
+     * <Box borderCoolGray500--L20></Box> // lighten color
+     * <Box borderCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray500></Box>
+     * <Box borderTopCoolGray500--T20></Box> // transparentize color
+     * <Box borderTopCoolGray500--O20></Box> // opacify color
+     * <Box borderTopCoolGray500--L20></Box> // lighten color
+     * <Box borderTopCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray500></Box>
+     * <Box borderRightCoolGray500--T20></Box> // transparentize color
+     * <Box borderRightCoolGray500--O20></Box> // opacify color
+     * <Box borderRightCoolGray500--L20></Box> // lighten color
+     * <Box borderRightCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray500></Box>
+     * <Box borderBottomCoolGray500--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray500--O20></Box> // opacify color
+     * <Box borderBottomCoolGray500--L20></Box> // lighten color
+     * <Box borderBottomCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray500></Box>
+     * <Box borderLeftCoolGray500--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray500--O20></Box> // opacify color
+     * <Box borderLeftCoolGray500--L20></Box> // lighten color
+     * <Box borderLeftCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray500?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray600
+     * ```css
+     * { border-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray600></Box>
+     * <Box borderCoolGray600--T20></Box> // transparentize color
+     * <Box borderCoolGray600--O20></Box> // opacify color
+     * <Box borderCoolGray600--L20></Box> // lighten color
+     * <Box borderCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray600></Box>
+     * <Box borderTopCoolGray600--T20></Box> // transparentize color
+     * <Box borderTopCoolGray600--O20></Box> // opacify color
+     * <Box borderTopCoolGray600--L20></Box> // lighten color
+     * <Box borderTopCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray600></Box>
+     * <Box borderRightCoolGray600--T20></Box> // transparentize color
+     * <Box borderRightCoolGray600--O20></Box> // opacify color
+     * <Box borderRightCoolGray600--L20></Box> // lighten color
+     * <Box borderRightCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray600></Box>
+     * <Box borderBottomCoolGray600--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray600--O20></Box> // opacify color
+     * <Box borderBottomCoolGray600--L20></Box> // lighten color
+     * <Box borderBottomCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray600></Box>
+     * <Box borderLeftCoolGray600--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray600--O20></Box> // opacify color
+     * <Box borderLeftCoolGray600--L20></Box> // lighten color
+     * <Box borderLeftCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray600?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray700
+     * ```css
+     * { border-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray700></Box>
+     * <Box borderCoolGray700--T20></Box> // transparentize color
+     * <Box borderCoolGray700--O20></Box> // opacify color
+     * <Box borderCoolGray700--L20></Box> // lighten color
+     * <Box borderCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray700></Box>
+     * <Box borderTopCoolGray700--T20></Box> // transparentize color
+     * <Box borderTopCoolGray700--O20></Box> // opacify color
+     * <Box borderTopCoolGray700--L20></Box> // lighten color
+     * <Box borderTopCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray700></Box>
+     * <Box borderRightCoolGray700--T20></Box> // transparentize color
+     * <Box borderRightCoolGray700--O20></Box> // opacify color
+     * <Box borderRightCoolGray700--L20></Box> // lighten color
+     * <Box borderRightCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray700></Box>
+     * <Box borderBottomCoolGray700--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray700--O20></Box> // opacify color
+     * <Box borderBottomCoolGray700--L20></Box> // lighten color
+     * <Box borderBottomCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray700></Box>
+     * <Box borderLeftCoolGray700--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray700--O20></Box> // opacify color
+     * <Box borderLeftCoolGray700--L20></Box> // lighten color
+     * <Box borderLeftCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray700?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray800
+     * ```css
+     * { border-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray800></Box>
+     * <Box borderCoolGray800--T20></Box> // transparentize color
+     * <Box borderCoolGray800--O20></Box> // opacify color
+     * <Box borderCoolGray800--L20></Box> // lighten color
+     * <Box borderCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray800></Box>
+     * <Box borderTopCoolGray800--T20></Box> // transparentize color
+     * <Box borderTopCoolGray800--O20></Box> // opacify color
+     * <Box borderTopCoolGray800--L20></Box> // lighten color
+     * <Box borderTopCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray800></Box>
+     * <Box borderRightCoolGray800--T20></Box> // transparentize color
+     * <Box borderRightCoolGray800--O20></Box> // opacify color
+     * <Box borderRightCoolGray800--L20></Box> // lighten color
+     * <Box borderRightCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray800></Box>
+     * <Box borderBottomCoolGray800--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray800--O20></Box> // opacify color
+     * <Box borderBottomCoolGray800--L20></Box> // lighten color
+     * <Box borderBottomCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray800></Box>
+     * <Box borderLeftCoolGray800--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray800--O20></Box> // opacify color
+     * <Box borderLeftCoolGray800--L20></Box> // lighten color
+     * <Box borderLeftCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray800?: ResponsiveBoolean
+    /**
+     * Set border color to coolGray900
+     * ```css
+     * { border-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderCoolGray900></Box>
+     * <Box borderCoolGray900--T20></Box> // transparentize color
+     * <Box borderCoolGray900--O20></Box> // opacify color
+     * <Box borderCoolGray900--L20></Box> // lighten color
+     * <Box borderCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderCoolGray900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopCoolGray900></Box>
+     * <Box borderTopCoolGray900--T20></Box> // transparentize color
+     * <Box borderTopCoolGray900--O20></Box> // opacify color
+     * <Box borderTopCoolGray900--L20></Box> // lighten color
+     * <Box borderTopCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopCoolGray900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightCoolGray900></Box>
+     * <Box borderRightCoolGray900--T20></Box> // transparentize color
+     * <Box borderRightCoolGray900--O20></Box> // opacify color
+     * <Box borderRightCoolGray900--L20></Box> // lighten color
+     * <Box borderRightCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightCoolGray900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomCoolGray900></Box>
+     * <Box borderBottomCoolGray900--T20></Box> // transparentize color
+     * <Box borderBottomCoolGray900--O20></Box> // opacify color
+     * <Box borderBottomCoolGray900--L20></Box> // lighten color
+     * <Box borderBottomCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomCoolGray900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftCoolGray900></Box>
+     * <Box borderLeftCoolGray900--T20></Box> // transparentize color
+     * <Box borderLeftCoolGray900--O20></Box> // opacify color
+     * <Box borderLeftCoolGray900--L20></Box> // lighten color
+     * <Box borderLeftCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftCoolGray900?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray50
+     * ```css
+     * { border-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray50></Box>
+     * <Box borderBlueGray50--T20></Box> // transparentize color
+     * <Box borderBlueGray50--O20></Box> // opacify color
+     * <Box borderBlueGray50--L20></Box> // lighten color
+     * <Box borderBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray50?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray50></Box>
+     * <Box borderTopBlueGray50--T20></Box> // transparentize color
+     * <Box borderTopBlueGray50--O20></Box> // opacify color
+     * <Box borderTopBlueGray50--L20></Box> // lighten color
+     * <Box borderTopBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray50?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray50></Box>
+     * <Box borderRightBlueGray50--T20></Box> // transparentize color
+     * <Box borderRightBlueGray50--O20></Box> // opacify color
+     * <Box borderRightBlueGray50--L20></Box> // lighten color
+     * <Box borderRightBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray50?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray50></Box>
+     * <Box borderBottomBlueGray50--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray50--O20></Box> // opacify color
+     * <Box borderBottomBlueGray50--L20></Box> // lighten color
+     * <Box borderBottomBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray50?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray50></Box>
+     * <Box borderLeftBlueGray50--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray50--O20></Box> // opacify color
+     * <Box borderLeftBlueGray50--L20></Box> // lighten color
+     * <Box borderLeftBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray50?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray100
+     * ```css
+     * { border-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray100></Box>
+     * <Box borderBlueGray100--T20></Box> // transparentize color
+     * <Box borderBlueGray100--O20></Box> // opacify color
+     * <Box borderBlueGray100--L20></Box> // lighten color
+     * <Box borderBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray100?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray100></Box>
+     * <Box borderTopBlueGray100--T20></Box> // transparentize color
+     * <Box borderTopBlueGray100--O20></Box> // opacify color
+     * <Box borderTopBlueGray100--L20></Box> // lighten color
+     * <Box borderTopBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray100?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray100></Box>
+     * <Box borderRightBlueGray100--T20></Box> // transparentize color
+     * <Box borderRightBlueGray100--O20></Box> // opacify color
+     * <Box borderRightBlueGray100--L20></Box> // lighten color
+     * <Box borderRightBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray100?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray100></Box>
+     * <Box borderBottomBlueGray100--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray100--O20></Box> // opacify color
+     * <Box borderBottomBlueGray100--L20></Box> // lighten color
+     * <Box borderBottomBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray100?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray100></Box>
+     * <Box borderLeftBlueGray100--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray100--O20></Box> // opacify color
+     * <Box borderLeftBlueGray100--L20></Box> // lighten color
+     * <Box borderLeftBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray100?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray200
+     * ```css
+     * { border-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray200></Box>
+     * <Box borderBlueGray200--T20></Box> // transparentize color
+     * <Box borderBlueGray200--O20></Box> // opacify color
+     * <Box borderBlueGray200--L20></Box> // lighten color
+     * <Box borderBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray200?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray200></Box>
+     * <Box borderTopBlueGray200--T20></Box> // transparentize color
+     * <Box borderTopBlueGray200--O20></Box> // opacify color
+     * <Box borderTopBlueGray200--L20></Box> // lighten color
+     * <Box borderTopBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray200?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray200></Box>
+     * <Box borderRightBlueGray200--T20></Box> // transparentize color
+     * <Box borderRightBlueGray200--O20></Box> // opacify color
+     * <Box borderRightBlueGray200--L20></Box> // lighten color
+     * <Box borderRightBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray200?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray200></Box>
+     * <Box borderBottomBlueGray200--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray200--O20></Box> // opacify color
+     * <Box borderBottomBlueGray200--L20></Box> // lighten color
+     * <Box borderBottomBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray200?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray200></Box>
+     * <Box borderLeftBlueGray200--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray200--O20></Box> // opacify color
+     * <Box borderLeftBlueGray200--L20></Box> // lighten color
+     * <Box borderLeftBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray200?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray300
+     * ```css
+     * { border-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray300></Box>
+     * <Box borderBlueGray300--T20></Box> // transparentize color
+     * <Box borderBlueGray300--O20></Box> // opacify color
+     * <Box borderBlueGray300--L20></Box> // lighten color
+     * <Box borderBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray300?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray300></Box>
+     * <Box borderTopBlueGray300--T20></Box> // transparentize color
+     * <Box borderTopBlueGray300--O20></Box> // opacify color
+     * <Box borderTopBlueGray300--L20></Box> // lighten color
+     * <Box borderTopBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray300?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray300></Box>
+     * <Box borderRightBlueGray300--T20></Box> // transparentize color
+     * <Box borderRightBlueGray300--O20></Box> // opacify color
+     * <Box borderRightBlueGray300--L20></Box> // lighten color
+     * <Box borderRightBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray300?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray300></Box>
+     * <Box borderBottomBlueGray300--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray300--O20></Box> // opacify color
+     * <Box borderBottomBlueGray300--L20></Box> // lighten color
+     * <Box borderBottomBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray300?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray300></Box>
+     * <Box borderLeftBlueGray300--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray300--O20></Box> // opacify color
+     * <Box borderLeftBlueGray300--L20></Box> // lighten color
+     * <Box borderLeftBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray300?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray400
+     * ```css
+     * { border-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray400></Box>
+     * <Box borderBlueGray400--T20></Box> // transparentize color
+     * <Box borderBlueGray400--O20></Box> // opacify color
+     * <Box borderBlueGray400--L20></Box> // lighten color
+     * <Box borderBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray400?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray400></Box>
+     * <Box borderTopBlueGray400--T20></Box> // transparentize color
+     * <Box borderTopBlueGray400--O20></Box> // opacify color
+     * <Box borderTopBlueGray400--L20></Box> // lighten color
+     * <Box borderTopBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray400?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray400></Box>
+     * <Box borderRightBlueGray400--T20></Box> // transparentize color
+     * <Box borderRightBlueGray400--O20></Box> // opacify color
+     * <Box borderRightBlueGray400--L20></Box> // lighten color
+     * <Box borderRightBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray400?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray400></Box>
+     * <Box borderBottomBlueGray400--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray400--O20></Box> // opacify color
+     * <Box borderBottomBlueGray400--L20></Box> // lighten color
+     * <Box borderBottomBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray400?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray400></Box>
+     * <Box borderLeftBlueGray400--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray400--O20></Box> // opacify color
+     * <Box borderLeftBlueGray400--L20></Box> // lighten color
+     * <Box borderLeftBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray400?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray500
+     * ```css
+     * { border-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray500></Box>
+     * <Box borderBlueGray500--T20></Box> // transparentize color
+     * <Box borderBlueGray500--O20></Box> // opacify color
+     * <Box borderBlueGray500--L20></Box> // lighten color
+     * <Box borderBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray500?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray500></Box>
+     * <Box borderTopBlueGray500--T20></Box> // transparentize color
+     * <Box borderTopBlueGray500--O20></Box> // opacify color
+     * <Box borderTopBlueGray500--L20></Box> // lighten color
+     * <Box borderTopBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray500?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray500></Box>
+     * <Box borderRightBlueGray500--T20></Box> // transparentize color
+     * <Box borderRightBlueGray500--O20></Box> // opacify color
+     * <Box borderRightBlueGray500--L20></Box> // lighten color
+     * <Box borderRightBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray500?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray500></Box>
+     * <Box borderBottomBlueGray500--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray500--O20></Box> // opacify color
+     * <Box borderBottomBlueGray500--L20></Box> // lighten color
+     * <Box borderBottomBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray500?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray500></Box>
+     * <Box borderLeftBlueGray500--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray500--O20></Box> // opacify color
+     * <Box borderLeftBlueGray500--L20></Box> // lighten color
+     * <Box borderLeftBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray500?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray600
+     * ```css
+     * { border-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray600></Box>
+     * <Box borderBlueGray600--T20></Box> // transparentize color
+     * <Box borderBlueGray600--O20></Box> // opacify color
+     * <Box borderBlueGray600--L20></Box> // lighten color
+     * <Box borderBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray600?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray600></Box>
+     * <Box borderTopBlueGray600--T20></Box> // transparentize color
+     * <Box borderTopBlueGray600--O20></Box> // opacify color
+     * <Box borderTopBlueGray600--L20></Box> // lighten color
+     * <Box borderTopBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray600?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray600></Box>
+     * <Box borderRightBlueGray600--T20></Box> // transparentize color
+     * <Box borderRightBlueGray600--O20></Box> // opacify color
+     * <Box borderRightBlueGray600--L20></Box> // lighten color
+     * <Box borderRightBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray600?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray600></Box>
+     * <Box borderBottomBlueGray600--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray600--O20></Box> // opacify color
+     * <Box borderBottomBlueGray600--L20></Box> // lighten color
+     * <Box borderBottomBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray600?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray600></Box>
+     * <Box borderLeftBlueGray600--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray600--O20></Box> // opacify color
+     * <Box borderLeftBlueGray600--L20></Box> // lighten color
+     * <Box borderLeftBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray600?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray700
+     * ```css
+     * { border-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray700></Box>
+     * <Box borderBlueGray700--T20></Box> // transparentize color
+     * <Box borderBlueGray700--O20></Box> // opacify color
+     * <Box borderBlueGray700--L20></Box> // lighten color
+     * <Box borderBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray700?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray700></Box>
+     * <Box borderTopBlueGray700--T20></Box> // transparentize color
+     * <Box borderTopBlueGray700--O20></Box> // opacify color
+     * <Box borderTopBlueGray700--L20></Box> // lighten color
+     * <Box borderTopBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray700?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray700></Box>
+     * <Box borderRightBlueGray700--T20></Box> // transparentize color
+     * <Box borderRightBlueGray700--O20></Box> // opacify color
+     * <Box borderRightBlueGray700--L20></Box> // lighten color
+     * <Box borderRightBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray700?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray700></Box>
+     * <Box borderBottomBlueGray700--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray700--O20></Box> // opacify color
+     * <Box borderBottomBlueGray700--L20></Box> // lighten color
+     * <Box borderBottomBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray700?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray700></Box>
+     * <Box borderLeftBlueGray700--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray700--O20></Box> // opacify color
+     * <Box borderLeftBlueGray700--L20></Box> // lighten color
+     * <Box borderLeftBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray700?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray800
+     * ```css
+     * { border-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray800></Box>
+     * <Box borderBlueGray800--T20></Box> // transparentize color
+     * <Box borderBlueGray800--O20></Box> // opacify color
+     * <Box borderBlueGray800--L20></Box> // lighten color
+     * <Box borderBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray800?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray800></Box>
+     * <Box borderTopBlueGray800--T20></Box> // transparentize color
+     * <Box borderTopBlueGray800--O20></Box> // opacify color
+     * <Box borderTopBlueGray800--L20></Box> // lighten color
+     * <Box borderTopBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray800?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray800></Box>
+     * <Box borderRightBlueGray800--T20></Box> // transparentize color
+     * <Box borderRightBlueGray800--O20></Box> // opacify color
+     * <Box borderRightBlueGray800--L20></Box> // lighten color
+     * <Box borderRightBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray800?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray800></Box>
+     * <Box borderBottomBlueGray800--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray800--O20></Box> // opacify color
+     * <Box borderBottomBlueGray800--L20></Box> // lighten color
+     * <Box borderBottomBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray800?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray800></Box>
+     * <Box borderLeftBlueGray800--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray800--O20></Box> // opacify color
+     * <Box borderLeftBlueGray800--L20></Box> // lighten color
+     * <Box borderLeftBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray800?: ResponsiveBoolean
+    /**
+     * Set border color to blueGray900
+     * ```css
+     * { border-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBlueGray900></Box>
+     * <Box borderBlueGray900--T20></Box> // transparentize color
+     * <Box borderBlueGray900--O20></Box> // opacify color
+     * <Box borderBlueGray900--L20></Box> // lighten color
+     * <Box borderBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBlueGray900?: ResponsiveBoolean
+    /**
+     * Set border top color to ' + cur
+     * ```css
+     * { border-top-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderTopBlueGray900></Box>
+     * <Box borderTopBlueGray900--T20></Box> // transparentize color
+     * <Box borderTopBlueGray900--O20></Box> // opacify color
+     * <Box borderTopBlueGray900--L20></Box> // lighten color
+     * <Box borderTopBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderTopBlueGray900?: ResponsiveBoolean
+    /**
+     * Set border right color to ' + cur
+     * ```css
+     * { border-right-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderRightBlueGray900></Box>
+     * <Box borderRightBlueGray900--T20></Box> // transparentize color
+     * <Box borderRightBlueGray900--O20></Box> // opacify color
+     * <Box borderRightBlueGray900--L20></Box> // lighten color
+     * <Box borderRightBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderRightBlueGray900?: ResponsiveBoolean
+    /**
+     * Set border bottom color to ' + cur
+     * ```css
+     * { border-bottom-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderBottomBlueGray900></Box>
+     * <Box borderBottomBlueGray900--T20></Box> // transparentize color
+     * <Box borderBottomBlueGray900--O20></Box> // opacify color
+     * <Box borderBottomBlueGray900--L20></Box> // lighten color
+     * <Box borderBottomBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderBottomBlueGray900?: ResponsiveBoolean
+    /**
+     * Set border left color to ' + cur
+     * ```css
+     * { border-left-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box borderLeftBlueGray900></Box>
+     * <Box borderLeftBlueGray900--T20></Box> // transparentize color
+     * <Box borderLeftBlueGray900--O20></Box> // opacify color
+     * <Box borderLeftBlueGray900--L20></Box> // lighten color
+     * <Box borderLeftBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+     */
+    borderLeftBlueGray900?: ResponsiveBoolean
   }
 }

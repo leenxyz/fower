@@ -149,21 +149,9 @@ declare module '@fower/atomic-props' {
      */
     bgBlack?: ResponsiveBoolean
     /**
-     * Set background to brand
-     * ```css
-     * { background-color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBrand></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBrand?: ResponsiveBoolean
-    /**
      * Set background to brand50
      * ```css
-     * { background-color: #e6fcf5; }
+     * { background-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -175,7 +163,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand100
      * ```css
-     * { background-color: #c3fae8; }
+     * { background-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -187,7 +175,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand200
      * ```css
-     * { background-color: #96f2d7; }
+     * { background-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -199,7 +187,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand300
      * ```css
-     * { background-color: #63e6be; }
+     * { background-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -211,7 +199,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand400
      * ```css
-     * { background-color: #38d9a9; }
+     * { background-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -223,7 +211,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand500
      * ```css
-     * { background-color: #20c997; }
+     * { background-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -235,7 +223,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand600
      * ```css
-     * { background-color: #12b886; }
+     * { background-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -247,7 +235,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand700
      * ```css
-     * { background-color: #0ca678; }
+     * { background-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -259,7 +247,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand800
      * ```css
-     * { background-color: #099268; }
+     * { background-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -271,7 +259,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to brand900
      * ```css
-     * { background-color: #087f5b; }
+     * { background-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -281,9 +269,129 @@ declare module '@fower/atomic-props' {
      */
     bgBrand900?: ResponsiveBoolean
     /**
+     * Set background to rose50
+     * ```css
+     * { background-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose50?: ResponsiveBoolean
+    /**
+     * Set background to rose100
+     * ```css
+     * { background-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose100?: ResponsiveBoolean
+    /**
+     * Set background to rose200
+     * ```css
+     * { background-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose200?: ResponsiveBoolean
+    /**
+     * Set background to rose300
+     * ```css
+     * { background-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose300?: ResponsiveBoolean
+    /**
+     * Set background to rose400
+     * ```css
+     * { background-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose400?: ResponsiveBoolean
+    /**
+     * Set background to rose500
+     * ```css
+     * { background-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose500?: ResponsiveBoolean
+    /**
+     * Set background to rose600
+     * ```css
+     * { background-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose600?: ResponsiveBoolean
+    /**
+     * Set background to rose700
+     * ```css
+     * { background-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose700?: ResponsiveBoolean
+    /**
+     * Set background to rose800
+     * ```css
+     * { background-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose800?: ResponsiveBoolean
+    /**
+     * Set background to rose900
+     * ```css
+     * { background-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose900?: ResponsiveBoolean
+    /**
      * Set background to pink50
      * ```css
-     * { background-color: #fff0f6; }
+     * { background-color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -295,7 +403,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink100
      * ```css
-     * { background-color: #ffdeeb; }
+     * { background-color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -307,7 +415,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink200
      * ```css
-     * { background-color: #fcc2d7; }
+     * { background-color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -319,7 +427,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink300
      * ```css
-     * { background-color: #faa2c1; }
+     * { background-color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -331,7 +439,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink400
      * ```css
-     * { background-color: #f783ac; }
+     * { background-color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -343,7 +451,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink500
      * ```css
-     * { background-color: #f06595; }
+     * { background-color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -355,7 +463,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink600
      * ```css
-     * { background-color: #e64980; }
+     * { background-color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -367,7 +475,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink700
      * ```css
-     * { background-color: #d6336c; }
+     * { background-color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -379,7 +487,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink800
      * ```css
-     * { background-color: #c2255c; }
+     * { background-color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -391,7 +499,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to pink900
      * ```css
-     * { background-color: #a61e4d; }
+     * { background-color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -403,7 +511,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia50
      * ```css
-     * { background-color: #f8f0fc; }
+     * { background-color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -415,7 +523,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia100
      * ```css
-     * { background-color: #f3d9fa; }
+     * { background-color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -427,7 +535,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia200
      * ```css
-     * { background-color: #eebefa; }
+     * { background-color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -439,7 +547,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia300
      * ```css
-     * { background-color: #e599f7; }
+     * { background-color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -451,7 +559,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia400
      * ```css
-     * { background-color: #da77f2; }
+     * { background-color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -463,7 +571,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia500
      * ```css
-     * { background-color: #cc5de8; }
+     * { background-color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -475,7 +583,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia600
      * ```css
-     * { background-color: #be4bdb; }
+     * { background-color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -487,7 +595,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia700
      * ```css
-     * { background-color: #ae3ec9; }
+     * { background-color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -499,7 +607,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia800
      * ```css
-     * { background-color: #9c36b5; }
+     * { background-color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -511,7 +619,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to fuchsia900
      * ```css
-     * { background-color: #862e9c; }
+     * { background-color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -643,7 +751,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet50
      * ```css
-     * { background-color: #f3f0ff; }
+     * { background-color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -655,7 +763,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet100
      * ```css
-     * { background-color: #e5dbff; }
+     * { background-color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -667,7 +775,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet200
      * ```css
-     * { background-color: #d0bfff; }
+     * { background-color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -679,7 +787,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet300
      * ```css
-     * { background-color: #b197fc; }
+     * { background-color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -691,7 +799,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet400
      * ```css
-     * { background-color: #9775fa; }
+     * { background-color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -703,7 +811,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet500
      * ```css
-     * { background-color: #845ef7; }
+     * { background-color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -715,7 +823,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet600
      * ```css
-     * { background-color: #7950f2; }
+     * { background-color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -727,7 +835,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet700
      * ```css
-     * { background-color: #7048e8; }
+     * { background-color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -739,7 +847,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet800
      * ```css
-     * { background-color: #6741d9; }
+     * { background-color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -751,7 +859,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to violet900
      * ```css
-     * { background-color: #5f3dc4; }
+     * { background-color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -763,7 +871,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo50
      * ```css
-     * { background-color: #edf2ff; }
+     * { background-color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -775,7 +883,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo100
      * ```css
-     * { background-color: #dbe4ff; }
+     * { background-color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -787,7 +895,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo200
      * ```css
-     * { background-color: #bac8ff; }
+     * { background-color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -799,7 +907,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo300
      * ```css
-     * { background-color: #91a7ff; }
+     * { background-color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -811,7 +919,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo400
      * ```css
-     * { background-color: #748ffc; }
+     * { background-color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -823,7 +931,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo500
      * ```css
-     * { background-color: #5c7cfa; }
+     * { background-color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -835,7 +943,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo600
      * ```css
-     * { background-color: #4c6ef5; }
+     * { background-color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -847,7 +955,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo700
      * ```css
-     * { background-color: #4263eb; }
+     * { background-color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -859,7 +967,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo800
      * ```css
-     * { background-color: #3b5bdb; }
+     * { background-color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -871,7 +979,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to indigo900
      * ```css
-     * { background-color: #364fc7; }
+     * { background-color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -883,7 +991,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue50
      * ```css
-     * { background-color: #e7f5ff; }
+     * { background-color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -895,7 +1003,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue100
      * ```css
-     * { background-color: #d0ebff; }
+     * { background-color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -907,7 +1015,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue200
      * ```css
-     * { background-color: #a5d8ff; }
+     * { background-color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -919,7 +1027,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue300
      * ```css
-     * { background-color: #74c0fc; }
+     * { background-color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -931,7 +1039,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue400
      * ```css
-     * { background-color: #4dabf7; }
+     * { background-color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -943,7 +1051,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue500
      * ```css
-     * { background-color: #339af0; }
+     * { background-color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -955,7 +1063,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue600
      * ```css
-     * { background-color: #228be6; }
+     * { background-color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -967,7 +1075,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue700
      * ```css
-     * { background-color: #1c7ed6; }
+     * { background-color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -979,7 +1087,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue800
      * ```css
-     * { background-color: #1971c2; }
+     * { background-color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -991,7 +1099,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to blue900
      * ```css
-     * { background-color: #1864ab; }
+     * { background-color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1001,9 +1109,129 @@ declare module '@fower/atomic-props' {
      */
     bgBlue900?: ResponsiveBoolean
     /**
+     * Set background to lightBlue50
+     * ```css
+     * { background-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue50?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue100
+     * ```css
+     * { background-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue100?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue200
+     * ```css
+     * { background-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue200?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue300
+     * ```css
+     * { background-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue300?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue400
+     * ```css
+     * { background-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue400?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue500
+     * ```css
+     * { background-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue500?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue600
+     * ```css
+     * { background-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue600?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue700
+     * ```css
+     * { background-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue700?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue800
+     * ```css
+     * { background-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue800?: ResponsiveBoolean
+    /**
+     * Set background to lightBlue900
+     * ```css
+     * { background-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLightBlue900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLightBlue900?: ResponsiveBoolean
+    /**
      * Set background to cyan50
      * ```css
-     * { background-color: #e3fafc; }
+     * { background-color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -1015,7 +1243,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan100
      * ```css
-     * { background-color: #c5f6fa; }
+     * { background-color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -1027,7 +1255,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan200
      * ```css
-     * { background-color: #99e9f2; }
+     * { background-color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -1039,7 +1267,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan300
      * ```css
-     * { background-color: #66d9e8; }
+     * { background-color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -1051,7 +1279,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan400
      * ```css
-     * { background-color: #3bc9db; }
+     * { background-color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -1063,7 +1291,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan500
      * ```css
-     * { background-color: #22b8cf; }
+     * { background-color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -1075,7 +1303,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan600
      * ```css
-     * { background-color: #15aabf; }
+     * { background-color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -1087,7 +1315,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan700
      * ```css
-     * { background-color: #1098ad; }
+     * { background-color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -1099,7 +1327,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan800
      * ```css
-     * { background-color: #0c8599; }
+     * { background-color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -1111,7 +1339,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to cyan900
      * ```css
-     * { background-color: #0b7285; }
+     * { background-color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -1123,7 +1351,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal50
      * ```css
-     * { background-color: #e6fcf5; }
+     * { background-color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -1135,7 +1363,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal100
      * ```css
-     * { background-color: #c3fae8; }
+     * { background-color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -1147,7 +1375,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal200
      * ```css
-     * { background-color: #96f2d7; }
+     * { background-color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -1159,7 +1387,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal300
      * ```css
-     * { background-color: #63e6be; }
+     * { background-color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -1171,7 +1399,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal400
      * ```css
-     * { background-color: #38d9a9; }
+     * { background-color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -1183,7 +1411,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal500
      * ```css
-     * { background-color: #20c997; }
+     * { background-color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -1195,7 +1423,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal600
      * ```css
-     * { background-color: #12b886; }
+     * { background-color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -1207,7 +1435,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal700
      * ```css
-     * { background-color: #0ca678; }
+     * { background-color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -1219,7 +1447,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal800
      * ```css
-     * { background-color: #099268; }
+     * { background-color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -1231,7 +1459,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to teal900
      * ```css
-     * { background-color: #087f5b; }
+     * { background-color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -1241,9 +1469,129 @@ declare module '@fower/atomic-props' {
      */
     bgTeal900?: ResponsiveBoolean
     /**
+     * Set background to emerald50
+     * ```css
+     * { background-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald50?: ResponsiveBoolean
+    /**
+     * Set background to emerald100
+     * ```css
+     * { background-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald100?: ResponsiveBoolean
+    /**
+     * Set background to emerald200
+     * ```css
+     * { background-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald200?: ResponsiveBoolean
+    /**
+     * Set background to emerald300
+     * ```css
+     * { background-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald300?: ResponsiveBoolean
+    /**
+     * Set background to emerald400
+     * ```css
+     * { background-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald400?: ResponsiveBoolean
+    /**
+     * Set background to emerald500
+     * ```css
+     * { background-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald500?: ResponsiveBoolean
+    /**
+     * Set background to emerald600
+     * ```css
+     * { background-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald600?: ResponsiveBoolean
+    /**
+     * Set background to emerald700
+     * ```css
+     * { background-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald700?: ResponsiveBoolean
+    /**
+     * Set background to emerald800
+     * ```css
+     * { background-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald800?: ResponsiveBoolean
+    /**
+     * Set background to emerald900
+     * ```css
+     * { background-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald900?: ResponsiveBoolean
+    /**
      * Set background to green50
      * ```css
-     * { background-color: #ebfbee; }
+     * { background-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -1255,7 +1603,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green100
      * ```css
-     * { background-color: #d3f9d8; }
+     * { background-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -1267,7 +1615,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green200
      * ```css
-     * { background-color: #b2f2bb; }
+     * { background-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -1279,7 +1627,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green300
      * ```css
-     * { background-color: #8ce99a; }
+     * { background-color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -1291,7 +1639,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green400
      * ```css
-     * { background-color: #69db7c; }
+     * { background-color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -1303,7 +1651,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green500
      * ```css
-     * { background-color: #51cf66; }
+     * { background-color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -1315,7 +1663,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green600
      * ```css
-     * { background-color: #40c057; }
+     * { background-color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -1327,7 +1675,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green700
      * ```css
-     * { background-color: #37b24d; }
+     * { background-color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -1339,7 +1687,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green800
      * ```css
-     * { background-color: #2f9e44; }
+     * { background-color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -1351,7 +1699,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to green900
      * ```css
-     * { background-color: #2b8a3e; }
+     * { background-color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -1363,7 +1711,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime50
      * ```css
-     * { background-color: #f4fce3; }
+     * { background-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -1375,7 +1723,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime100
      * ```css
-     * { background-color: #e9fac8; }
+     * { background-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -1387,7 +1735,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime200
      * ```css
-     * { background-color: #d8f5a2; }
+     * { background-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -1399,7 +1747,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime300
      * ```css
-     * { background-color: #c0eb75; }
+     * { background-color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -1411,7 +1759,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime400
      * ```css
-     * { background-color: #a9e34b; }
+     * { background-color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -1423,7 +1771,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime500
      * ```css
-     * { background-color: #94d82d; }
+     * { background-color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -1435,7 +1783,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime600
      * ```css
-     * { background-color: #82c91e; }
+     * { background-color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -1447,7 +1795,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime700
      * ```css
-     * { background-color: #74b816; }
+     * { background-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -1459,7 +1807,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime800
      * ```css
-     * { background-color: #66a80f; }
+     * { background-color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -1471,7 +1819,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to lime900
      * ```css
-     * { background-color: #5c940d; }
+     * { background-color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -1483,7 +1831,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow50
      * ```css
-     * { background-color: #fff9db; }
+     * { background-color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -1495,7 +1843,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow100
      * ```css
-     * { background-color: #fff3bf; }
+     * { background-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -1507,7 +1855,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow200
      * ```css
-     * { background-color: #ffec99; }
+     * { background-color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -1519,7 +1867,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow300
      * ```css
-     * { background-color: #ffe066; }
+     * { background-color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -1531,7 +1879,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow400
      * ```css
-     * { background-color: #ffd43b; }
+     * { background-color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -1543,7 +1891,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow500
      * ```css
-     * { background-color: #fcc419; }
+     * { background-color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -1555,7 +1903,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow600
      * ```css
-     * { background-color: #fab005; }
+     * { background-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -1567,7 +1915,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow700
      * ```css
-     * { background-color: #f59f00; }
+     * { background-color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -1579,7 +1927,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow800
      * ```css
-     * { background-color: #f08c00; }
+     * { background-color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -1591,7 +1939,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to yellow900
      * ```css
-     * { background-color: #e67700; }
+     * { background-color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -1601,9 +1949,129 @@ declare module '@fower/atomic-props' {
      */
     bgYellow900?: ResponsiveBoolean
     /**
+     * Set background to amber50
+     * ```css
+     * { background-color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber50?: ResponsiveBoolean
+    /**
+     * Set background to amber100
+     * ```css
+     * { background-color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber100?: ResponsiveBoolean
+    /**
+     * Set background to amber200
+     * ```css
+     * { background-color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber200?: ResponsiveBoolean
+    /**
+     * Set background to amber300
+     * ```css
+     * { background-color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber300?: ResponsiveBoolean
+    /**
+     * Set background to amber400
+     * ```css
+     * { background-color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber400?: ResponsiveBoolean
+    /**
+     * Set background to amber500
+     * ```css
+     * { background-color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber500?: ResponsiveBoolean
+    /**
+     * Set background to amber600
+     * ```css
+     * { background-color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber600?: ResponsiveBoolean
+    /**
+     * Set background to amber700
+     * ```css
+     * { background-color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber700?: ResponsiveBoolean
+    /**
+     * Set background to amber800
+     * ```css
+     * { background-color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber800?: ResponsiveBoolean
+    /**
+     * Set background to amber900
+     * ```css
+     * { background-color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber900?: ResponsiveBoolean
+    /**
      * Set background to orange50
      * ```css
-     * { background-color: #fff4e6; }
+     * { background-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -1615,7 +2083,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange100
      * ```css
-     * { background-color: #ffe8cc; }
+     * { background-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -1627,7 +2095,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange200
      * ```css
-     * { background-color: #ffd8a8; }
+     * { background-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -1639,7 +2107,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange300
      * ```css
-     * { background-color: #ffc078; }
+     * { background-color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -1651,7 +2119,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange400
      * ```css
-     * { background-color: #ffa94d; }
+     * { background-color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -1663,7 +2131,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange500
      * ```css
-     * { background-color: #ff922b; }
+     * { background-color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -1675,7 +2143,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange600
      * ```css
-     * { background-color: #fd7e14; }
+     * { background-color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -1687,7 +2155,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange700
      * ```css
-     * { background-color: #f76707; }
+     * { background-color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -1699,7 +2167,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange800
      * ```css
-     * { background-color: #e8590c; }
+     * { background-color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -1711,7 +2179,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to orange900
      * ```css
-     * { background-color: #d9480f; }
+     * { background-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -1723,7 +2191,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red50
      * ```css
-     * { background-color: #fff5f5; }
+     * { background-color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -1735,7 +2203,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red100
      * ```css
-     * { background-color: #ffe3e3; }
+     * { background-color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -1747,7 +2215,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red200
      * ```css
-     * { background-color: #ffc9c9; }
+     * { background-color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -1759,7 +2227,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red300
      * ```css
-     * { background-color: #ffa8a8; }
+     * { background-color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -1771,7 +2239,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red400
      * ```css
-     * { background-color: #ff8787; }
+     * { background-color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -1783,7 +2251,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red500
      * ```css
-     * { background-color: #ff6b6b; }
+     * { background-color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -1795,7 +2263,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red600
      * ```css
-     * { background-color: #fa5252; }
+     * { background-color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -1807,7 +2275,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red700
      * ```css
-     * { background-color: #f03e3e; }
+     * { background-color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -1819,7 +2287,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red800
      * ```css
-     * { background-color: #e03131; }
+     * { background-color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -1831,7 +2299,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set background to red900
      * ```css
-     * { background-color: #c92a2a; }
+     * { background-color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -1840,6 +2308,126 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgRed900?: ResponsiveBoolean
+    /**
+     * Set background to warmGray50
+     * ```css
+     * { background-color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray50?: ResponsiveBoolean
+    /**
+     * Set background to warmGray100
+     * ```css
+     * { background-color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray100?: ResponsiveBoolean
+    /**
+     * Set background to warmGray200
+     * ```css
+     * { background-color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray200?: ResponsiveBoolean
+    /**
+     * Set background to warmGray300
+     * ```css
+     * { background-color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray300?: ResponsiveBoolean
+    /**
+     * Set background to warmGray400
+     * ```css
+     * { background-color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray400?: ResponsiveBoolean
+    /**
+     * Set background to warmGray500
+     * ```css
+     * { background-color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray500?: ResponsiveBoolean
+    /**
+     * Set background to warmGray600
+     * ```css
+     * { background-color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray600?: ResponsiveBoolean
+    /**
+     * Set background to warmGray700
+     * ```css
+     * { background-color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray700?: ResponsiveBoolean
+    /**
+     * Set background to warmGray800
+     * ```css
+     * { background-color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray800?: ResponsiveBoolean
+    /**
+     * Set background to warmGray900
+     * ```css
+     * { background-color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgWarmGray900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgWarmGray900?: ResponsiveBoolean
     /**
      * Set background to trueGray50
      * ```css
@@ -2080,5 +2668,245 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgGray900?: ResponsiveBoolean
+    /**
+     * Set background to coolGray50
+     * ```css
+     * { background-color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray50?: ResponsiveBoolean
+    /**
+     * Set background to coolGray100
+     * ```css
+     * { background-color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray100?: ResponsiveBoolean
+    /**
+     * Set background to coolGray200
+     * ```css
+     * { background-color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray200?: ResponsiveBoolean
+    /**
+     * Set background to coolGray300
+     * ```css
+     * { background-color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray300?: ResponsiveBoolean
+    /**
+     * Set background to coolGray400
+     * ```css
+     * { background-color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray400?: ResponsiveBoolean
+    /**
+     * Set background to coolGray500
+     * ```css
+     * { background-color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray500?: ResponsiveBoolean
+    /**
+     * Set background to coolGray600
+     * ```css
+     * { background-color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray600?: ResponsiveBoolean
+    /**
+     * Set background to coolGray700
+     * ```css
+     * { background-color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray700?: ResponsiveBoolean
+    /**
+     * Set background to coolGray800
+     * ```css
+     * { background-color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray800?: ResponsiveBoolean
+    /**
+     * Set background to coolGray900
+     * ```css
+     * { background-color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCoolGray900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCoolGray900?: ResponsiveBoolean
+    /**
+     * Set background to blueGray50
+     * ```css
+     * { background-color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray50?: ResponsiveBoolean
+    /**
+     * Set background to blueGray100
+     * ```css
+     * { background-color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray100?: ResponsiveBoolean
+    /**
+     * Set background to blueGray200
+     * ```css
+     * { background-color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray200?: ResponsiveBoolean
+    /**
+     * Set background to blueGray300
+     * ```css
+     * { background-color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray300?: ResponsiveBoolean
+    /**
+     * Set background to blueGray400
+     * ```css
+     * { background-color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray400?: ResponsiveBoolean
+    /**
+     * Set background to blueGray500
+     * ```css
+     * { background-color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray500?: ResponsiveBoolean
+    /**
+     * Set background to blueGray600
+     * ```css
+     * { background-color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray600?: ResponsiveBoolean
+    /**
+     * Set background to blueGray700
+     * ```css
+     * { background-color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray700?: ResponsiveBoolean
+    /**
+     * Set background to blueGray800
+     * ```css
+     * { background-color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray800?: ResponsiveBoolean
+    /**
+     * Set background to blueGray900
+     * ```css
+     * { background-color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlueGray900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlueGray900?: ResponsiveBoolean
   }
 }

@@ -31,6 +31,7 @@
     "test": "lerna run --parallel --stream test",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "publish": "lerna publish --force-publish=*",
+    "postbuild": "npm run build:types",
     "prepare": "husky install"
   },
   "eslintConfig": {

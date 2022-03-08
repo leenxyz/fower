@@ -58,21 +58,6 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
-     * <Box ringBrand></Box> // default with is 1
-     * <Box ringBrand-2></Box> // ring with is 2
-     * <Box ringBrand--T20></Box> // transparentize color
-     * <Box ringBrand--O20></Box> // opacify color
-     * <Box ringBrand--L20></Box> // lighten color
-     * <Box ringBrand--D20></Box> // darken color
-     * <Box ringBrand-2--T20></Box>
-     * ```
-     * @see https://fower.vercel.app/docs/ring
-     */
-    ringBrand?: ResponsiveBoolean
-    /**
-     * Set ring color and ring width
-     * @example
-     * ```tsx
      * <Box ringBrand50></Box> // default with is 1
      * <Box ringBrand50-2></Box> // ring with is 2
      * <Box ringBrand50--T20></Box> // transparentize color
@@ -219,6 +204,156 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringBrand900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose50></Box> // default with is 1
+     * <Box ringRose50-2></Box> // ring with is 2
+     * <Box ringRose50--T20></Box> // transparentize color
+     * <Box ringRose50--O20></Box> // opacify color
+     * <Box ringRose50--L20></Box> // lighten color
+     * <Box ringRose50--D20></Box> // darken color
+     * <Box ringRose50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose100></Box> // default with is 1
+     * <Box ringRose100-2></Box> // ring with is 2
+     * <Box ringRose100--T20></Box> // transparentize color
+     * <Box ringRose100--O20></Box> // opacify color
+     * <Box ringRose100--L20></Box> // lighten color
+     * <Box ringRose100--D20></Box> // darken color
+     * <Box ringRose100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose200></Box> // default with is 1
+     * <Box ringRose200-2></Box> // ring with is 2
+     * <Box ringRose200--T20></Box> // transparentize color
+     * <Box ringRose200--O20></Box> // opacify color
+     * <Box ringRose200--L20></Box> // lighten color
+     * <Box ringRose200--D20></Box> // darken color
+     * <Box ringRose200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose300></Box> // default with is 1
+     * <Box ringRose300-2></Box> // ring with is 2
+     * <Box ringRose300--T20></Box> // transparentize color
+     * <Box ringRose300--O20></Box> // opacify color
+     * <Box ringRose300--L20></Box> // lighten color
+     * <Box ringRose300--D20></Box> // darken color
+     * <Box ringRose300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose400></Box> // default with is 1
+     * <Box ringRose400-2></Box> // ring with is 2
+     * <Box ringRose400--T20></Box> // transparentize color
+     * <Box ringRose400--O20></Box> // opacify color
+     * <Box ringRose400--L20></Box> // lighten color
+     * <Box ringRose400--D20></Box> // darken color
+     * <Box ringRose400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose500></Box> // default with is 1
+     * <Box ringRose500-2></Box> // ring with is 2
+     * <Box ringRose500--T20></Box> // transparentize color
+     * <Box ringRose500--O20></Box> // opacify color
+     * <Box ringRose500--L20></Box> // lighten color
+     * <Box ringRose500--D20></Box> // darken color
+     * <Box ringRose500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose600></Box> // default with is 1
+     * <Box ringRose600-2></Box> // ring with is 2
+     * <Box ringRose600--T20></Box> // transparentize color
+     * <Box ringRose600--O20></Box> // opacify color
+     * <Box ringRose600--L20></Box> // lighten color
+     * <Box ringRose600--D20></Box> // darken color
+     * <Box ringRose600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose700></Box> // default with is 1
+     * <Box ringRose700-2></Box> // ring with is 2
+     * <Box ringRose700--T20></Box> // transparentize color
+     * <Box ringRose700--O20></Box> // opacify color
+     * <Box ringRose700--L20></Box> // lighten color
+     * <Box ringRose700--D20></Box> // darken color
+     * <Box ringRose700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose800></Box> // default with is 1
+     * <Box ringRose800-2></Box> // ring with is 2
+     * <Box ringRose800--T20></Box> // transparentize color
+     * <Box ringRose800--O20></Box> // opacify color
+     * <Box ringRose800--L20></Box> // lighten color
+     * <Box ringRose800--D20></Box> // darken color
+     * <Box ringRose800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose900></Box> // default with is 1
+     * <Box ringRose900-2></Box> // ring with is 2
+     * <Box ringRose900--T20></Box> // transparentize color
+     * <Box ringRose900--O20></Box> // opacify color
+     * <Box ringRose900--L20></Box> // lighten color
+     * <Box ringRose900--D20></Box> // darken color
+     * <Box ringRose900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose900?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -1123,6 +1258,156 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringLightBlue50></Box> // default with is 1
+     * <Box ringLightBlue50-2></Box> // ring with is 2
+     * <Box ringLightBlue50--T20></Box> // transparentize color
+     * <Box ringLightBlue50--O20></Box> // opacify color
+     * <Box ringLightBlue50--L20></Box> // lighten color
+     * <Box ringLightBlue50--D20></Box> // darken color
+     * <Box ringLightBlue50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue100></Box> // default with is 1
+     * <Box ringLightBlue100-2></Box> // ring with is 2
+     * <Box ringLightBlue100--T20></Box> // transparentize color
+     * <Box ringLightBlue100--O20></Box> // opacify color
+     * <Box ringLightBlue100--L20></Box> // lighten color
+     * <Box ringLightBlue100--D20></Box> // darken color
+     * <Box ringLightBlue100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue200></Box> // default with is 1
+     * <Box ringLightBlue200-2></Box> // ring with is 2
+     * <Box ringLightBlue200--T20></Box> // transparentize color
+     * <Box ringLightBlue200--O20></Box> // opacify color
+     * <Box ringLightBlue200--L20></Box> // lighten color
+     * <Box ringLightBlue200--D20></Box> // darken color
+     * <Box ringLightBlue200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue300></Box> // default with is 1
+     * <Box ringLightBlue300-2></Box> // ring with is 2
+     * <Box ringLightBlue300--T20></Box> // transparentize color
+     * <Box ringLightBlue300--O20></Box> // opacify color
+     * <Box ringLightBlue300--L20></Box> // lighten color
+     * <Box ringLightBlue300--D20></Box> // darken color
+     * <Box ringLightBlue300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue400></Box> // default with is 1
+     * <Box ringLightBlue400-2></Box> // ring with is 2
+     * <Box ringLightBlue400--T20></Box> // transparentize color
+     * <Box ringLightBlue400--O20></Box> // opacify color
+     * <Box ringLightBlue400--L20></Box> // lighten color
+     * <Box ringLightBlue400--D20></Box> // darken color
+     * <Box ringLightBlue400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue500></Box> // default with is 1
+     * <Box ringLightBlue500-2></Box> // ring with is 2
+     * <Box ringLightBlue500--T20></Box> // transparentize color
+     * <Box ringLightBlue500--O20></Box> // opacify color
+     * <Box ringLightBlue500--L20></Box> // lighten color
+     * <Box ringLightBlue500--D20></Box> // darken color
+     * <Box ringLightBlue500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue600></Box> // default with is 1
+     * <Box ringLightBlue600-2></Box> // ring with is 2
+     * <Box ringLightBlue600--T20></Box> // transparentize color
+     * <Box ringLightBlue600--O20></Box> // opacify color
+     * <Box ringLightBlue600--L20></Box> // lighten color
+     * <Box ringLightBlue600--D20></Box> // darken color
+     * <Box ringLightBlue600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue700></Box> // default with is 1
+     * <Box ringLightBlue700-2></Box> // ring with is 2
+     * <Box ringLightBlue700--T20></Box> // transparentize color
+     * <Box ringLightBlue700--O20></Box> // opacify color
+     * <Box ringLightBlue700--L20></Box> // lighten color
+     * <Box ringLightBlue700--D20></Box> // darken color
+     * <Box ringLightBlue700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue800></Box> // default with is 1
+     * <Box ringLightBlue800-2></Box> // ring with is 2
+     * <Box ringLightBlue800--T20></Box> // transparentize color
+     * <Box ringLightBlue800--O20></Box> // opacify color
+     * <Box ringLightBlue800--L20></Box> // lighten color
+     * <Box ringLightBlue800--D20></Box> // darken color
+     * <Box ringLightBlue800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringLightBlue900></Box> // default with is 1
+     * <Box ringLightBlue900-2></Box> // ring with is 2
+     * <Box ringLightBlue900--T20></Box> // transparentize color
+     * <Box ringLightBlue900--O20></Box> // opacify color
+     * <Box ringLightBlue900--L20></Box> // lighten color
+     * <Box ringLightBlue900--D20></Box> // darken color
+     * <Box ringLightBlue900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLightBlue900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringCyan50></Box> // default with is 1
      * <Box ringCyan50-2></Box> // ring with is 2
      * <Box ringCyan50--T20></Box> // transparentize color
@@ -1419,6 +1704,156 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringTeal900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald50></Box> // default with is 1
+     * <Box ringEmerald50-2></Box> // ring with is 2
+     * <Box ringEmerald50--T20></Box> // transparentize color
+     * <Box ringEmerald50--O20></Box> // opacify color
+     * <Box ringEmerald50--L20></Box> // lighten color
+     * <Box ringEmerald50--D20></Box> // darken color
+     * <Box ringEmerald50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald100></Box> // default with is 1
+     * <Box ringEmerald100-2></Box> // ring with is 2
+     * <Box ringEmerald100--T20></Box> // transparentize color
+     * <Box ringEmerald100--O20></Box> // opacify color
+     * <Box ringEmerald100--L20></Box> // lighten color
+     * <Box ringEmerald100--D20></Box> // darken color
+     * <Box ringEmerald100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald200></Box> // default with is 1
+     * <Box ringEmerald200-2></Box> // ring with is 2
+     * <Box ringEmerald200--T20></Box> // transparentize color
+     * <Box ringEmerald200--O20></Box> // opacify color
+     * <Box ringEmerald200--L20></Box> // lighten color
+     * <Box ringEmerald200--D20></Box> // darken color
+     * <Box ringEmerald200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald300></Box> // default with is 1
+     * <Box ringEmerald300-2></Box> // ring with is 2
+     * <Box ringEmerald300--T20></Box> // transparentize color
+     * <Box ringEmerald300--O20></Box> // opacify color
+     * <Box ringEmerald300--L20></Box> // lighten color
+     * <Box ringEmerald300--D20></Box> // darken color
+     * <Box ringEmerald300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald400></Box> // default with is 1
+     * <Box ringEmerald400-2></Box> // ring with is 2
+     * <Box ringEmerald400--T20></Box> // transparentize color
+     * <Box ringEmerald400--O20></Box> // opacify color
+     * <Box ringEmerald400--L20></Box> // lighten color
+     * <Box ringEmerald400--D20></Box> // darken color
+     * <Box ringEmerald400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald500></Box> // default with is 1
+     * <Box ringEmerald500-2></Box> // ring with is 2
+     * <Box ringEmerald500--T20></Box> // transparentize color
+     * <Box ringEmerald500--O20></Box> // opacify color
+     * <Box ringEmerald500--L20></Box> // lighten color
+     * <Box ringEmerald500--D20></Box> // darken color
+     * <Box ringEmerald500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald600></Box> // default with is 1
+     * <Box ringEmerald600-2></Box> // ring with is 2
+     * <Box ringEmerald600--T20></Box> // transparentize color
+     * <Box ringEmerald600--O20></Box> // opacify color
+     * <Box ringEmerald600--L20></Box> // lighten color
+     * <Box ringEmerald600--D20></Box> // darken color
+     * <Box ringEmerald600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald700></Box> // default with is 1
+     * <Box ringEmerald700-2></Box> // ring with is 2
+     * <Box ringEmerald700--T20></Box> // transparentize color
+     * <Box ringEmerald700--O20></Box> // opacify color
+     * <Box ringEmerald700--L20></Box> // lighten color
+     * <Box ringEmerald700--D20></Box> // darken color
+     * <Box ringEmerald700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald800></Box> // default with is 1
+     * <Box ringEmerald800-2></Box> // ring with is 2
+     * <Box ringEmerald800--T20></Box> // transparentize color
+     * <Box ringEmerald800--O20></Box> // opacify color
+     * <Box ringEmerald800--L20></Box> // lighten color
+     * <Box ringEmerald800--D20></Box> // darken color
+     * <Box ringEmerald800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringEmerald900></Box> // default with is 1
+     * <Box ringEmerald900-2></Box> // ring with is 2
+     * <Box ringEmerald900--T20></Box> // transparentize color
+     * <Box ringEmerald900--O20></Box> // opacify color
+     * <Box ringEmerald900--L20></Box> // lighten color
+     * <Box ringEmerald900--D20></Box> // darken color
+     * <Box ringEmerald900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald900?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -1873,6 +2308,156 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringAmber50></Box> // default with is 1
+     * <Box ringAmber50-2></Box> // ring with is 2
+     * <Box ringAmber50--T20></Box> // transparentize color
+     * <Box ringAmber50--O20></Box> // opacify color
+     * <Box ringAmber50--L20></Box> // lighten color
+     * <Box ringAmber50--D20></Box> // darken color
+     * <Box ringAmber50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber100></Box> // default with is 1
+     * <Box ringAmber100-2></Box> // ring with is 2
+     * <Box ringAmber100--T20></Box> // transparentize color
+     * <Box ringAmber100--O20></Box> // opacify color
+     * <Box ringAmber100--L20></Box> // lighten color
+     * <Box ringAmber100--D20></Box> // darken color
+     * <Box ringAmber100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber200></Box> // default with is 1
+     * <Box ringAmber200-2></Box> // ring with is 2
+     * <Box ringAmber200--T20></Box> // transparentize color
+     * <Box ringAmber200--O20></Box> // opacify color
+     * <Box ringAmber200--L20></Box> // lighten color
+     * <Box ringAmber200--D20></Box> // darken color
+     * <Box ringAmber200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber300></Box> // default with is 1
+     * <Box ringAmber300-2></Box> // ring with is 2
+     * <Box ringAmber300--T20></Box> // transparentize color
+     * <Box ringAmber300--O20></Box> // opacify color
+     * <Box ringAmber300--L20></Box> // lighten color
+     * <Box ringAmber300--D20></Box> // darken color
+     * <Box ringAmber300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber400></Box> // default with is 1
+     * <Box ringAmber400-2></Box> // ring with is 2
+     * <Box ringAmber400--T20></Box> // transparentize color
+     * <Box ringAmber400--O20></Box> // opacify color
+     * <Box ringAmber400--L20></Box> // lighten color
+     * <Box ringAmber400--D20></Box> // darken color
+     * <Box ringAmber400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber500></Box> // default with is 1
+     * <Box ringAmber500-2></Box> // ring with is 2
+     * <Box ringAmber500--T20></Box> // transparentize color
+     * <Box ringAmber500--O20></Box> // opacify color
+     * <Box ringAmber500--L20></Box> // lighten color
+     * <Box ringAmber500--D20></Box> // darken color
+     * <Box ringAmber500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber600></Box> // default with is 1
+     * <Box ringAmber600-2></Box> // ring with is 2
+     * <Box ringAmber600--T20></Box> // transparentize color
+     * <Box ringAmber600--O20></Box> // opacify color
+     * <Box ringAmber600--L20></Box> // lighten color
+     * <Box ringAmber600--D20></Box> // darken color
+     * <Box ringAmber600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber700></Box> // default with is 1
+     * <Box ringAmber700-2></Box> // ring with is 2
+     * <Box ringAmber700--T20></Box> // transparentize color
+     * <Box ringAmber700--O20></Box> // opacify color
+     * <Box ringAmber700--L20></Box> // lighten color
+     * <Box ringAmber700--D20></Box> // darken color
+     * <Box ringAmber700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber800></Box> // default with is 1
+     * <Box ringAmber800-2></Box> // ring with is 2
+     * <Box ringAmber800--T20></Box> // transparentize color
+     * <Box ringAmber800--O20></Box> // opacify color
+     * <Box ringAmber800--L20></Box> // lighten color
+     * <Box ringAmber800--D20></Box> // darken color
+     * <Box ringAmber800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringAmber900></Box> // default with is 1
+     * <Box ringAmber900-2></Box> // ring with is 2
+     * <Box ringAmber900--T20></Box> // transparentize color
+     * <Box ringAmber900--O20></Box> // opacify color
+     * <Box ringAmber900--L20></Box> // lighten color
+     * <Box ringAmber900--D20></Box> // darken color
+     * <Box ringAmber900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringOrange50></Box> // default with is 1
      * <Box ringOrange50-2></Box> // ring with is 2
      * <Box ringOrange50--T20></Box> // transparentize color
@@ -2173,6 +2758,156 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringWarmGray50></Box> // default with is 1
+     * <Box ringWarmGray50-2></Box> // ring with is 2
+     * <Box ringWarmGray50--T20></Box> // transparentize color
+     * <Box ringWarmGray50--O20></Box> // opacify color
+     * <Box ringWarmGray50--L20></Box> // lighten color
+     * <Box ringWarmGray50--D20></Box> // darken color
+     * <Box ringWarmGray50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray100></Box> // default with is 1
+     * <Box ringWarmGray100-2></Box> // ring with is 2
+     * <Box ringWarmGray100--T20></Box> // transparentize color
+     * <Box ringWarmGray100--O20></Box> // opacify color
+     * <Box ringWarmGray100--L20></Box> // lighten color
+     * <Box ringWarmGray100--D20></Box> // darken color
+     * <Box ringWarmGray100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray200></Box> // default with is 1
+     * <Box ringWarmGray200-2></Box> // ring with is 2
+     * <Box ringWarmGray200--T20></Box> // transparentize color
+     * <Box ringWarmGray200--O20></Box> // opacify color
+     * <Box ringWarmGray200--L20></Box> // lighten color
+     * <Box ringWarmGray200--D20></Box> // darken color
+     * <Box ringWarmGray200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray300></Box> // default with is 1
+     * <Box ringWarmGray300-2></Box> // ring with is 2
+     * <Box ringWarmGray300--T20></Box> // transparentize color
+     * <Box ringWarmGray300--O20></Box> // opacify color
+     * <Box ringWarmGray300--L20></Box> // lighten color
+     * <Box ringWarmGray300--D20></Box> // darken color
+     * <Box ringWarmGray300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray400></Box> // default with is 1
+     * <Box ringWarmGray400-2></Box> // ring with is 2
+     * <Box ringWarmGray400--T20></Box> // transparentize color
+     * <Box ringWarmGray400--O20></Box> // opacify color
+     * <Box ringWarmGray400--L20></Box> // lighten color
+     * <Box ringWarmGray400--D20></Box> // darken color
+     * <Box ringWarmGray400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray500></Box> // default with is 1
+     * <Box ringWarmGray500-2></Box> // ring with is 2
+     * <Box ringWarmGray500--T20></Box> // transparentize color
+     * <Box ringWarmGray500--O20></Box> // opacify color
+     * <Box ringWarmGray500--L20></Box> // lighten color
+     * <Box ringWarmGray500--D20></Box> // darken color
+     * <Box ringWarmGray500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray600></Box> // default with is 1
+     * <Box ringWarmGray600-2></Box> // ring with is 2
+     * <Box ringWarmGray600--T20></Box> // transparentize color
+     * <Box ringWarmGray600--O20></Box> // opacify color
+     * <Box ringWarmGray600--L20></Box> // lighten color
+     * <Box ringWarmGray600--D20></Box> // darken color
+     * <Box ringWarmGray600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray700></Box> // default with is 1
+     * <Box ringWarmGray700-2></Box> // ring with is 2
+     * <Box ringWarmGray700--T20></Box> // transparentize color
+     * <Box ringWarmGray700--O20></Box> // opacify color
+     * <Box ringWarmGray700--L20></Box> // lighten color
+     * <Box ringWarmGray700--D20></Box> // darken color
+     * <Box ringWarmGray700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray800></Box> // default with is 1
+     * <Box ringWarmGray800-2></Box> // ring with is 2
+     * <Box ringWarmGray800--T20></Box> // transparentize color
+     * <Box ringWarmGray800--O20></Box> // opacify color
+     * <Box ringWarmGray800--L20></Box> // lighten color
+     * <Box ringWarmGray800--D20></Box> // darken color
+     * <Box ringWarmGray800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringWarmGray900></Box> // default with is 1
+     * <Box ringWarmGray900-2></Box> // ring with is 2
+     * <Box ringWarmGray900--T20></Box> // transparentize color
+     * <Box ringWarmGray900--O20></Box> // opacify color
+     * <Box ringWarmGray900--L20></Box> // lighten color
+     * <Box ringWarmGray900--D20></Box> // darken color
+     * <Box ringWarmGray900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringWarmGray900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringTrueGray50></Box> // default with is 1
      * <Box ringTrueGray50-2></Box> // ring with is 2
      * <Box ringTrueGray50--T20></Box> // transparentize color
@@ -2469,5 +3204,305 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringGray900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray50></Box> // default with is 1
+     * <Box ringCoolGray50-2></Box> // ring with is 2
+     * <Box ringCoolGray50--T20></Box> // transparentize color
+     * <Box ringCoolGray50--O20></Box> // opacify color
+     * <Box ringCoolGray50--L20></Box> // lighten color
+     * <Box ringCoolGray50--D20></Box> // darken color
+     * <Box ringCoolGray50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray100></Box> // default with is 1
+     * <Box ringCoolGray100-2></Box> // ring with is 2
+     * <Box ringCoolGray100--T20></Box> // transparentize color
+     * <Box ringCoolGray100--O20></Box> // opacify color
+     * <Box ringCoolGray100--L20></Box> // lighten color
+     * <Box ringCoolGray100--D20></Box> // darken color
+     * <Box ringCoolGray100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray200></Box> // default with is 1
+     * <Box ringCoolGray200-2></Box> // ring with is 2
+     * <Box ringCoolGray200--T20></Box> // transparentize color
+     * <Box ringCoolGray200--O20></Box> // opacify color
+     * <Box ringCoolGray200--L20></Box> // lighten color
+     * <Box ringCoolGray200--D20></Box> // darken color
+     * <Box ringCoolGray200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray300></Box> // default with is 1
+     * <Box ringCoolGray300-2></Box> // ring with is 2
+     * <Box ringCoolGray300--T20></Box> // transparentize color
+     * <Box ringCoolGray300--O20></Box> // opacify color
+     * <Box ringCoolGray300--L20></Box> // lighten color
+     * <Box ringCoolGray300--D20></Box> // darken color
+     * <Box ringCoolGray300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray400></Box> // default with is 1
+     * <Box ringCoolGray400-2></Box> // ring with is 2
+     * <Box ringCoolGray400--T20></Box> // transparentize color
+     * <Box ringCoolGray400--O20></Box> // opacify color
+     * <Box ringCoolGray400--L20></Box> // lighten color
+     * <Box ringCoolGray400--D20></Box> // darken color
+     * <Box ringCoolGray400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray500></Box> // default with is 1
+     * <Box ringCoolGray500-2></Box> // ring with is 2
+     * <Box ringCoolGray500--T20></Box> // transparentize color
+     * <Box ringCoolGray500--O20></Box> // opacify color
+     * <Box ringCoolGray500--L20></Box> // lighten color
+     * <Box ringCoolGray500--D20></Box> // darken color
+     * <Box ringCoolGray500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray600></Box> // default with is 1
+     * <Box ringCoolGray600-2></Box> // ring with is 2
+     * <Box ringCoolGray600--T20></Box> // transparentize color
+     * <Box ringCoolGray600--O20></Box> // opacify color
+     * <Box ringCoolGray600--L20></Box> // lighten color
+     * <Box ringCoolGray600--D20></Box> // darken color
+     * <Box ringCoolGray600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray700></Box> // default with is 1
+     * <Box ringCoolGray700-2></Box> // ring with is 2
+     * <Box ringCoolGray700--T20></Box> // transparentize color
+     * <Box ringCoolGray700--O20></Box> // opacify color
+     * <Box ringCoolGray700--L20></Box> // lighten color
+     * <Box ringCoolGray700--D20></Box> // darken color
+     * <Box ringCoolGray700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray800></Box> // default with is 1
+     * <Box ringCoolGray800-2></Box> // ring with is 2
+     * <Box ringCoolGray800--T20></Box> // transparentize color
+     * <Box ringCoolGray800--O20></Box> // opacify color
+     * <Box ringCoolGray800--L20></Box> // lighten color
+     * <Box ringCoolGray800--D20></Box> // darken color
+     * <Box ringCoolGray800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringCoolGray900></Box> // default with is 1
+     * <Box ringCoolGray900-2></Box> // ring with is 2
+     * <Box ringCoolGray900--T20></Box> // transparentize color
+     * <Box ringCoolGray900--O20></Box> // opacify color
+     * <Box ringCoolGray900--L20></Box> // lighten color
+     * <Box ringCoolGray900--D20></Box> // darken color
+     * <Box ringCoolGray900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCoolGray900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray50></Box> // default with is 1
+     * <Box ringBlueGray50-2></Box> // ring with is 2
+     * <Box ringBlueGray50--T20></Box> // transparentize color
+     * <Box ringBlueGray50--O20></Box> // opacify color
+     * <Box ringBlueGray50--L20></Box> // lighten color
+     * <Box ringBlueGray50--D20></Box> // darken color
+     * <Box ringBlueGray50-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray50?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray100></Box> // default with is 1
+     * <Box ringBlueGray100-2></Box> // ring with is 2
+     * <Box ringBlueGray100--T20></Box> // transparentize color
+     * <Box ringBlueGray100--O20></Box> // opacify color
+     * <Box ringBlueGray100--L20></Box> // lighten color
+     * <Box ringBlueGray100--D20></Box> // darken color
+     * <Box ringBlueGray100-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray100?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray200></Box> // default with is 1
+     * <Box ringBlueGray200-2></Box> // ring with is 2
+     * <Box ringBlueGray200--T20></Box> // transparentize color
+     * <Box ringBlueGray200--O20></Box> // opacify color
+     * <Box ringBlueGray200--L20></Box> // lighten color
+     * <Box ringBlueGray200--D20></Box> // darken color
+     * <Box ringBlueGray200-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray200?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray300></Box> // default with is 1
+     * <Box ringBlueGray300-2></Box> // ring with is 2
+     * <Box ringBlueGray300--T20></Box> // transparentize color
+     * <Box ringBlueGray300--O20></Box> // opacify color
+     * <Box ringBlueGray300--L20></Box> // lighten color
+     * <Box ringBlueGray300--D20></Box> // darken color
+     * <Box ringBlueGray300-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray300?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray400></Box> // default with is 1
+     * <Box ringBlueGray400-2></Box> // ring with is 2
+     * <Box ringBlueGray400--T20></Box> // transparentize color
+     * <Box ringBlueGray400--O20></Box> // opacify color
+     * <Box ringBlueGray400--L20></Box> // lighten color
+     * <Box ringBlueGray400--D20></Box> // darken color
+     * <Box ringBlueGray400-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray400?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray500></Box> // default with is 1
+     * <Box ringBlueGray500-2></Box> // ring with is 2
+     * <Box ringBlueGray500--T20></Box> // transparentize color
+     * <Box ringBlueGray500--O20></Box> // opacify color
+     * <Box ringBlueGray500--L20></Box> // lighten color
+     * <Box ringBlueGray500--D20></Box> // darken color
+     * <Box ringBlueGray500-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray500?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray600></Box> // default with is 1
+     * <Box ringBlueGray600-2></Box> // ring with is 2
+     * <Box ringBlueGray600--T20></Box> // transparentize color
+     * <Box ringBlueGray600--O20></Box> // opacify color
+     * <Box ringBlueGray600--L20></Box> // lighten color
+     * <Box ringBlueGray600--D20></Box> // darken color
+     * <Box ringBlueGray600-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray600?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray700></Box> // default with is 1
+     * <Box ringBlueGray700-2></Box> // ring with is 2
+     * <Box ringBlueGray700--T20></Box> // transparentize color
+     * <Box ringBlueGray700--O20></Box> // opacify color
+     * <Box ringBlueGray700--L20></Box> // lighten color
+     * <Box ringBlueGray700--D20></Box> // darken color
+     * <Box ringBlueGray700-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray700?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray800></Box> // default with is 1
+     * <Box ringBlueGray800-2></Box> // ring with is 2
+     * <Box ringBlueGray800--T20></Box> // transparentize color
+     * <Box ringBlueGray800--O20></Box> // opacify color
+     * <Box ringBlueGray800--L20></Box> // lighten color
+     * <Box ringBlueGray800--D20></Box> // darken color
+     * <Box ringBlueGray800-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray800?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringBlueGray900></Box> // default with is 1
+     * <Box ringBlueGray900-2></Box> // ring with is 2
+     * <Box ringBlueGray900--T20></Box> // transparentize color
+     * <Box ringBlueGray900--O20></Box> // opacify color
+     * <Box ringBlueGray900--L20></Box> // lighten color
+     * <Box ringBlueGray900--D20></Box> // darken color
+     * <Box ringBlueGray900-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlueGray900?: ResponsiveBoolean
   }
 }

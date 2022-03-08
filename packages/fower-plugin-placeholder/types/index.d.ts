@@ -40,19 +40,6 @@ declare module '@fower/atomic-props' {
      */
     placeholderBlack?: ResponsiveBoolean
     /**
-     * Set placeholder color to brand
-     * @example
-     * ```tsx
-     * <Box placeholderBrand></Box>
-     * <Box placeholderBrand--T20></Box> // transparentize color
-     * <Box placeholderBrand--O20></Box> // opacify color
-     * <Box placeholderBrand--L20></Box> // lighten color
-     * <Box placeholderBrand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
-     */
-    placeholderBrand?: ResponsiveBoolean
-    /**
      * Set placeholder color to brand50
      * @example
      * ```tsx
@@ -182,6 +169,136 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderBrand900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose50
+     * @example
+     * ```tsx
+     * <Box placeholderRose50></Box>
+     * <Box placeholderRose50--T20></Box> // transparentize color
+     * <Box placeholderRose50--O20></Box> // opacify color
+     * <Box placeholderRose50--L20></Box> // lighten color
+     * <Box placeholderRose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose100
+     * @example
+     * ```tsx
+     * <Box placeholderRose100></Box>
+     * <Box placeholderRose100--T20></Box> // transparentize color
+     * <Box placeholderRose100--O20></Box> // opacify color
+     * <Box placeholderRose100--L20></Box> // lighten color
+     * <Box placeholderRose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose200
+     * @example
+     * ```tsx
+     * <Box placeholderRose200></Box>
+     * <Box placeholderRose200--T20></Box> // transparentize color
+     * <Box placeholderRose200--O20></Box> // opacify color
+     * <Box placeholderRose200--L20></Box> // lighten color
+     * <Box placeholderRose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose300
+     * @example
+     * ```tsx
+     * <Box placeholderRose300></Box>
+     * <Box placeholderRose300--T20></Box> // transparentize color
+     * <Box placeholderRose300--O20></Box> // opacify color
+     * <Box placeholderRose300--L20></Box> // lighten color
+     * <Box placeholderRose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose400
+     * @example
+     * ```tsx
+     * <Box placeholderRose400></Box>
+     * <Box placeholderRose400--T20></Box> // transparentize color
+     * <Box placeholderRose400--O20></Box> // opacify color
+     * <Box placeholderRose400--L20></Box> // lighten color
+     * <Box placeholderRose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose500
+     * @example
+     * ```tsx
+     * <Box placeholderRose500></Box>
+     * <Box placeholderRose500--T20></Box> // transparentize color
+     * <Box placeholderRose500--O20></Box> // opacify color
+     * <Box placeholderRose500--L20></Box> // lighten color
+     * <Box placeholderRose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose600
+     * @example
+     * ```tsx
+     * <Box placeholderRose600></Box>
+     * <Box placeholderRose600--T20></Box> // transparentize color
+     * <Box placeholderRose600--O20></Box> // opacify color
+     * <Box placeholderRose600--L20></Box> // lighten color
+     * <Box placeholderRose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose700
+     * @example
+     * ```tsx
+     * <Box placeholderRose700></Box>
+     * <Box placeholderRose700--T20></Box> // transparentize color
+     * <Box placeholderRose700--O20></Box> // opacify color
+     * <Box placeholderRose700--L20></Box> // lighten color
+     * <Box placeholderRose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose800
+     * @example
+     * ```tsx
+     * <Box placeholderRose800></Box>
+     * <Box placeholderRose800--T20></Box> // transparentize color
+     * <Box placeholderRose800--O20></Box> // opacify color
+     * <Box placeholderRose800--L20></Box> // lighten color
+     * <Box placeholderRose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose900
+     * @example
+     * ```tsx
+     * <Box placeholderRose900></Box>
+     * <Box placeholderRose900--T20></Box> // transparentize color
+     * <Box placeholderRose900--O20></Box> // opacify color
+     * <Box placeholderRose900--L20></Box> // lighten color
+     * <Box placeholderRose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose900?: ResponsiveBoolean
     /**
      * Set placeholder color to pink50
      * @example
@@ -963,6 +1080,136 @@ declare module '@fower/atomic-props' {
      */
     placeholderBlue900?: ResponsiveBoolean
     /**
+     * Set placeholder color to lightBlue50
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue50></Box>
+     * <Box placeholderLightBlue50--T20></Box> // transparentize color
+     * <Box placeholderLightBlue50--O20></Box> // opacify color
+     * <Box placeholderLightBlue50--L20></Box> // lighten color
+     * <Box placeholderLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue100
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue100></Box>
+     * <Box placeholderLightBlue100--T20></Box> // transparentize color
+     * <Box placeholderLightBlue100--O20></Box> // opacify color
+     * <Box placeholderLightBlue100--L20></Box> // lighten color
+     * <Box placeholderLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue200
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue200></Box>
+     * <Box placeholderLightBlue200--T20></Box> // transparentize color
+     * <Box placeholderLightBlue200--O20></Box> // opacify color
+     * <Box placeholderLightBlue200--L20></Box> // lighten color
+     * <Box placeholderLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue300
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue300></Box>
+     * <Box placeholderLightBlue300--T20></Box> // transparentize color
+     * <Box placeholderLightBlue300--O20></Box> // opacify color
+     * <Box placeholderLightBlue300--L20></Box> // lighten color
+     * <Box placeholderLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue400
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue400></Box>
+     * <Box placeholderLightBlue400--T20></Box> // transparentize color
+     * <Box placeholderLightBlue400--O20></Box> // opacify color
+     * <Box placeholderLightBlue400--L20></Box> // lighten color
+     * <Box placeholderLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue500
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue500></Box>
+     * <Box placeholderLightBlue500--T20></Box> // transparentize color
+     * <Box placeholderLightBlue500--O20></Box> // opacify color
+     * <Box placeholderLightBlue500--L20></Box> // lighten color
+     * <Box placeholderLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue600
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue600></Box>
+     * <Box placeholderLightBlue600--T20></Box> // transparentize color
+     * <Box placeholderLightBlue600--O20></Box> // opacify color
+     * <Box placeholderLightBlue600--L20></Box> // lighten color
+     * <Box placeholderLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue700
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue700></Box>
+     * <Box placeholderLightBlue700--T20></Box> // transparentize color
+     * <Box placeholderLightBlue700--O20></Box> // opacify color
+     * <Box placeholderLightBlue700--L20></Box> // lighten color
+     * <Box placeholderLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue800
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue800></Box>
+     * <Box placeholderLightBlue800--T20></Box> // transparentize color
+     * <Box placeholderLightBlue800--O20></Box> // opacify color
+     * <Box placeholderLightBlue800--L20></Box> // lighten color
+     * <Box placeholderLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to lightBlue900
+     * @example
+     * ```tsx
+     * <Box placeholderLightBlue900></Box>
+     * <Box placeholderLightBlue900--T20></Box> // transparentize color
+     * <Box placeholderLightBlue900--O20></Box> // opacify color
+     * <Box placeholderLightBlue900--L20></Box> // lighten color
+     * <Box placeholderLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLightBlue900?: ResponsiveBoolean
+    /**
      * Set placeholder color to cyan50
      * @example
      * ```tsx
@@ -1222,6 +1469,136 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderTeal900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald50
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald50></Box>
+     * <Box placeholderEmerald50--T20></Box> // transparentize color
+     * <Box placeholderEmerald50--O20></Box> // opacify color
+     * <Box placeholderEmerald50--L20></Box> // lighten color
+     * <Box placeholderEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald100
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald100></Box>
+     * <Box placeholderEmerald100--T20></Box> // transparentize color
+     * <Box placeholderEmerald100--O20></Box> // opacify color
+     * <Box placeholderEmerald100--L20></Box> // lighten color
+     * <Box placeholderEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald200
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald200></Box>
+     * <Box placeholderEmerald200--T20></Box> // transparentize color
+     * <Box placeholderEmerald200--O20></Box> // opacify color
+     * <Box placeholderEmerald200--L20></Box> // lighten color
+     * <Box placeholderEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald300
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald300></Box>
+     * <Box placeholderEmerald300--T20></Box> // transparentize color
+     * <Box placeholderEmerald300--O20></Box> // opacify color
+     * <Box placeholderEmerald300--L20></Box> // lighten color
+     * <Box placeholderEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald400
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald400></Box>
+     * <Box placeholderEmerald400--T20></Box> // transparentize color
+     * <Box placeholderEmerald400--O20></Box> // opacify color
+     * <Box placeholderEmerald400--L20></Box> // lighten color
+     * <Box placeholderEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald500
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald500></Box>
+     * <Box placeholderEmerald500--T20></Box> // transparentize color
+     * <Box placeholderEmerald500--O20></Box> // opacify color
+     * <Box placeholderEmerald500--L20></Box> // lighten color
+     * <Box placeholderEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald600
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald600></Box>
+     * <Box placeholderEmerald600--T20></Box> // transparentize color
+     * <Box placeholderEmerald600--O20></Box> // opacify color
+     * <Box placeholderEmerald600--L20></Box> // lighten color
+     * <Box placeholderEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald700
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald700></Box>
+     * <Box placeholderEmerald700--T20></Box> // transparentize color
+     * <Box placeholderEmerald700--O20></Box> // opacify color
+     * <Box placeholderEmerald700--L20></Box> // lighten color
+     * <Box placeholderEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald800
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald800></Box>
+     * <Box placeholderEmerald800--T20></Box> // transparentize color
+     * <Box placeholderEmerald800--O20></Box> // opacify color
+     * <Box placeholderEmerald800--L20></Box> // lighten color
+     * <Box placeholderEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to emerald900
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald900></Box>
+     * <Box placeholderEmerald900--T20></Box> // transparentize color
+     * <Box placeholderEmerald900--O20></Box> // opacify color
+     * <Box placeholderEmerald900--L20></Box> // lighten color
+     * <Box placeholderEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald900?: ResponsiveBoolean
     /**
      * Set placeholder color to green50
      * @example
@@ -1613,6 +1990,136 @@ declare module '@fower/atomic-props' {
      */
     placeholderYellow900?: ResponsiveBoolean
     /**
+     * Set placeholder color to amber50
+     * @example
+     * ```tsx
+     * <Box placeholderAmber50></Box>
+     * <Box placeholderAmber50--T20></Box> // transparentize color
+     * <Box placeholderAmber50--O20></Box> // opacify color
+     * <Box placeholderAmber50--L20></Box> // lighten color
+     * <Box placeholderAmber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber100
+     * @example
+     * ```tsx
+     * <Box placeholderAmber100></Box>
+     * <Box placeholderAmber100--T20></Box> // transparentize color
+     * <Box placeholderAmber100--O20></Box> // opacify color
+     * <Box placeholderAmber100--L20></Box> // lighten color
+     * <Box placeholderAmber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber200
+     * @example
+     * ```tsx
+     * <Box placeholderAmber200></Box>
+     * <Box placeholderAmber200--T20></Box> // transparentize color
+     * <Box placeholderAmber200--O20></Box> // opacify color
+     * <Box placeholderAmber200--L20></Box> // lighten color
+     * <Box placeholderAmber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber300
+     * @example
+     * ```tsx
+     * <Box placeholderAmber300></Box>
+     * <Box placeholderAmber300--T20></Box> // transparentize color
+     * <Box placeholderAmber300--O20></Box> // opacify color
+     * <Box placeholderAmber300--L20></Box> // lighten color
+     * <Box placeholderAmber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber400
+     * @example
+     * ```tsx
+     * <Box placeholderAmber400></Box>
+     * <Box placeholderAmber400--T20></Box> // transparentize color
+     * <Box placeholderAmber400--O20></Box> // opacify color
+     * <Box placeholderAmber400--L20></Box> // lighten color
+     * <Box placeholderAmber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber500
+     * @example
+     * ```tsx
+     * <Box placeholderAmber500></Box>
+     * <Box placeholderAmber500--T20></Box> // transparentize color
+     * <Box placeholderAmber500--O20></Box> // opacify color
+     * <Box placeholderAmber500--L20></Box> // lighten color
+     * <Box placeholderAmber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber600
+     * @example
+     * ```tsx
+     * <Box placeholderAmber600></Box>
+     * <Box placeholderAmber600--T20></Box> // transparentize color
+     * <Box placeholderAmber600--O20></Box> // opacify color
+     * <Box placeholderAmber600--L20></Box> // lighten color
+     * <Box placeholderAmber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber700
+     * @example
+     * ```tsx
+     * <Box placeholderAmber700></Box>
+     * <Box placeholderAmber700--T20></Box> // transparentize color
+     * <Box placeholderAmber700--O20></Box> // opacify color
+     * <Box placeholderAmber700--L20></Box> // lighten color
+     * <Box placeholderAmber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber800
+     * @example
+     * ```tsx
+     * <Box placeholderAmber800></Box>
+     * <Box placeholderAmber800--T20></Box> // transparentize color
+     * <Box placeholderAmber800--O20></Box> // opacify color
+     * <Box placeholderAmber800--L20></Box> // lighten color
+     * <Box placeholderAmber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to amber900
+     * @example
+     * ```tsx
+     * <Box placeholderAmber900></Box>
+     * <Box placeholderAmber900--T20></Box> // transparentize color
+     * <Box placeholderAmber900--O20></Box> // opacify color
+     * <Box placeholderAmber900--L20></Box> // lighten color
+     * <Box placeholderAmber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber900?: ResponsiveBoolean
+    /**
      * Set placeholder color to orange50
      * @example
      * ```tsx
@@ -1873,6 +2380,136 @@ declare module '@fower/atomic-props' {
      */
     placeholderRed900?: ResponsiveBoolean
     /**
+     * Set placeholder color to warmGray50
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray50></Box>
+     * <Box placeholderWarmGray50--T20></Box> // transparentize color
+     * <Box placeholderWarmGray50--O20></Box> // opacify color
+     * <Box placeholderWarmGray50--L20></Box> // lighten color
+     * <Box placeholderWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray100
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray100></Box>
+     * <Box placeholderWarmGray100--T20></Box> // transparentize color
+     * <Box placeholderWarmGray100--O20></Box> // opacify color
+     * <Box placeholderWarmGray100--L20></Box> // lighten color
+     * <Box placeholderWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray200
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray200></Box>
+     * <Box placeholderWarmGray200--T20></Box> // transparentize color
+     * <Box placeholderWarmGray200--O20></Box> // opacify color
+     * <Box placeholderWarmGray200--L20></Box> // lighten color
+     * <Box placeholderWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray300
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray300></Box>
+     * <Box placeholderWarmGray300--T20></Box> // transparentize color
+     * <Box placeholderWarmGray300--O20></Box> // opacify color
+     * <Box placeholderWarmGray300--L20></Box> // lighten color
+     * <Box placeholderWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray400
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray400></Box>
+     * <Box placeholderWarmGray400--T20></Box> // transparentize color
+     * <Box placeholderWarmGray400--O20></Box> // opacify color
+     * <Box placeholderWarmGray400--L20></Box> // lighten color
+     * <Box placeholderWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray500
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray500></Box>
+     * <Box placeholderWarmGray500--T20></Box> // transparentize color
+     * <Box placeholderWarmGray500--O20></Box> // opacify color
+     * <Box placeholderWarmGray500--L20></Box> // lighten color
+     * <Box placeholderWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray600
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray600></Box>
+     * <Box placeholderWarmGray600--T20></Box> // transparentize color
+     * <Box placeholderWarmGray600--O20></Box> // opacify color
+     * <Box placeholderWarmGray600--L20></Box> // lighten color
+     * <Box placeholderWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray700
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray700></Box>
+     * <Box placeholderWarmGray700--T20></Box> // transparentize color
+     * <Box placeholderWarmGray700--O20></Box> // opacify color
+     * <Box placeholderWarmGray700--L20></Box> // lighten color
+     * <Box placeholderWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray800
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray800></Box>
+     * <Box placeholderWarmGray800--T20></Box> // transparentize color
+     * <Box placeholderWarmGray800--O20></Box> // opacify color
+     * <Box placeholderWarmGray800--L20></Box> // lighten color
+     * <Box placeholderWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to warmGray900
+     * @example
+     * ```tsx
+     * <Box placeholderWarmGray900></Box>
+     * <Box placeholderWarmGray900--T20></Box> // transparentize color
+     * <Box placeholderWarmGray900--O20></Box> // opacify color
+     * <Box placeholderWarmGray900--L20></Box> // lighten color
+     * <Box placeholderWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderWarmGray900?: ResponsiveBoolean
+    /**
      * Set placeholder color to trueGray50
      * @example
      * ```tsx
@@ -2132,5 +2769,265 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderGray900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray50
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray50></Box>
+     * <Box placeholderCoolGray50--T20></Box> // transparentize color
+     * <Box placeholderCoolGray50--O20></Box> // opacify color
+     * <Box placeholderCoolGray50--L20></Box> // lighten color
+     * <Box placeholderCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray100
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray100></Box>
+     * <Box placeholderCoolGray100--T20></Box> // transparentize color
+     * <Box placeholderCoolGray100--O20></Box> // opacify color
+     * <Box placeholderCoolGray100--L20></Box> // lighten color
+     * <Box placeholderCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray200
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray200></Box>
+     * <Box placeholderCoolGray200--T20></Box> // transparentize color
+     * <Box placeholderCoolGray200--O20></Box> // opacify color
+     * <Box placeholderCoolGray200--L20></Box> // lighten color
+     * <Box placeholderCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray300
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray300></Box>
+     * <Box placeholderCoolGray300--T20></Box> // transparentize color
+     * <Box placeholderCoolGray300--O20></Box> // opacify color
+     * <Box placeholderCoolGray300--L20></Box> // lighten color
+     * <Box placeholderCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray400
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray400></Box>
+     * <Box placeholderCoolGray400--T20></Box> // transparentize color
+     * <Box placeholderCoolGray400--O20></Box> // opacify color
+     * <Box placeholderCoolGray400--L20></Box> // lighten color
+     * <Box placeholderCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray500
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray500></Box>
+     * <Box placeholderCoolGray500--T20></Box> // transparentize color
+     * <Box placeholderCoolGray500--O20></Box> // opacify color
+     * <Box placeholderCoolGray500--L20></Box> // lighten color
+     * <Box placeholderCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray600
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray600></Box>
+     * <Box placeholderCoolGray600--T20></Box> // transparentize color
+     * <Box placeholderCoolGray600--O20></Box> // opacify color
+     * <Box placeholderCoolGray600--L20></Box> // lighten color
+     * <Box placeholderCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray700
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray700></Box>
+     * <Box placeholderCoolGray700--T20></Box> // transparentize color
+     * <Box placeholderCoolGray700--O20></Box> // opacify color
+     * <Box placeholderCoolGray700--L20></Box> // lighten color
+     * <Box placeholderCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray800
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray800></Box>
+     * <Box placeholderCoolGray800--T20></Box> // transparentize color
+     * <Box placeholderCoolGray800--O20></Box> // opacify color
+     * <Box placeholderCoolGray800--L20></Box> // lighten color
+     * <Box placeholderCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to coolGray900
+     * @example
+     * ```tsx
+     * <Box placeholderCoolGray900></Box>
+     * <Box placeholderCoolGray900--T20></Box> // transparentize color
+     * <Box placeholderCoolGray900--O20></Box> // opacify color
+     * <Box placeholderCoolGray900--L20></Box> // lighten color
+     * <Box placeholderCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCoolGray900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray50
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray50></Box>
+     * <Box placeholderBlueGray50--T20></Box> // transparentize color
+     * <Box placeholderBlueGray50--O20></Box> // opacify color
+     * <Box placeholderBlueGray50--L20></Box> // lighten color
+     * <Box placeholderBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray50?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray100
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray100></Box>
+     * <Box placeholderBlueGray100--T20></Box> // transparentize color
+     * <Box placeholderBlueGray100--O20></Box> // opacify color
+     * <Box placeholderBlueGray100--L20></Box> // lighten color
+     * <Box placeholderBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray100?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray200
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray200></Box>
+     * <Box placeholderBlueGray200--T20></Box> // transparentize color
+     * <Box placeholderBlueGray200--O20></Box> // opacify color
+     * <Box placeholderBlueGray200--L20></Box> // lighten color
+     * <Box placeholderBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray200?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray300
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray300></Box>
+     * <Box placeholderBlueGray300--T20></Box> // transparentize color
+     * <Box placeholderBlueGray300--O20></Box> // opacify color
+     * <Box placeholderBlueGray300--L20></Box> // lighten color
+     * <Box placeholderBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray300?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray400
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray400></Box>
+     * <Box placeholderBlueGray400--T20></Box> // transparentize color
+     * <Box placeholderBlueGray400--O20></Box> // opacify color
+     * <Box placeholderBlueGray400--L20></Box> // lighten color
+     * <Box placeholderBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray400?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray500
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray500></Box>
+     * <Box placeholderBlueGray500--T20></Box> // transparentize color
+     * <Box placeholderBlueGray500--O20></Box> // opacify color
+     * <Box placeholderBlueGray500--L20></Box> // lighten color
+     * <Box placeholderBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray500?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray600
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray600></Box>
+     * <Box placeholderBlueGray600--T20></Box> // transparentize color
+     * <Box placeholderBlueGray600--O20></Box> // opacify color
+     * <Box placeholderBlueGray600--L20></Box> // lighten color
+     * <Box placeholderBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray600?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray700
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray700></Box>
+     * <Box placeholderBlueGray700--T20></Box> // transparentize color
+     * <Box placeholderBlueGray700--O20></Box> // opacify color
+     * <Box placeholderBlueGray700--L20></Box> // lighten color
+     * <Box placeholderBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray700?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray800
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray800></Box>
+     * <Box placeholderBlueGray800--T20></Box> // transparentize color
+     * <Box placeholderBlueGray800--O20></Box> // opacify color
+     * <Box placeholderBlueGray800--L20></Box> // lighten color
+     * <Box placeholderBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray800?: ResponsiveBoolean
+    /**
+     * Set placeholder color to blueGray900
+     * @example
+     * ```tsx
+     * <Box placeholderBlueGray900></Box>
+     * <Box placeholderBlueGray900--T20></Box> // transparentize color
+     * <Box placeholderBlueGray900--O20></Box> // opacify color
+     * <Box placeholderBlueGray900--L20></Box> // lighten color
+     * <Box placeholderBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlueGray900?: ResponsiveBoolean
   }
 }

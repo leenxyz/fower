@@ -91,20 +91,6 @@ declare module '@fower/atomic-props' {
      */
     fillBlack?: ResponsiveBoolean
     /**
-     * Set fill to brand
-     * @example
-     * ```tsx
-     * <Box as="svg" fillBrand></Box>
-     * <Box as="svg" fillBrand--T20></Box> // transparentize color
-     * <Box as="svg" fillBrand--O20></Box> // opacify color
-     * <Box as="svg" fillBrand--L20></Box> // lighten color
-     * <Box as="svg" fillBrand--D20></Box> // darken color
-     * ```
-     * @see https://fower.vercel.app/docs/fill
-     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
-     */
-    fillBrand?: ResponsiveBoolean
-    /**
      * Set fill to brand50
      * @example
      * ```tsx
@@ -244,6 +230,146 @@ declare module '@fower/atomic-props' {
      * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
      */
     fillBrand900?: ResponsiveBoolean
+    /**
+     * Set fill to rose50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose50></Box>
+     * <Box as="svg" fillRose50--T20></Box> // transparentize color
+     * <Box as="svg" fillRose50--O20></Box> // opacify color
+     * <Box as="svg" fillRose50--L20></Box> // lighten color
+     * <Box as="svg" fillRose50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose50?: ResponsiveBoolean
+    /**
+     * Set fill to rose100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose100></Box>
+     * <Box as="svg" fillRose100--T20></Box> // transparentize color
+     * <Box as="svg" fillRose100--O20></Box> // opacify color
+     * <Box as="svg" fillRose100--L20></Box> // lighten color
+     * <Box as="svg" fillRose100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose100?: ResponsiveBoolean
+    /**
+     * Set fill to rose200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose200></Box>
+     * <Box as="svg" fillRose200--T20></Box> // transparentize color
+     * <Box as="svg" fillRose200--O20></Box> // opacify color
+     * <Box as="svg" fillRose200--L20></Box> // lighten color
+     * <Box as="svg" fillRose200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose200?: ResponsiveBoolean
+    /**
+     * Set fill to rose300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose300></Box>
+     * <Box as="svg" fillRose300--T20></Box> // transparentize color
+     * <Box as="svg" fillRose300--O20></Box> // opacify color
+     * <Box as="svg" fillRose300--L20></Box> // lighten color
+     * <Box as="svg" fillRose300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose300?: ResponsiveBoolean
+    /**
+     * Set fill to rose400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose400></Box>
+     * <Box as="svg" fillRose400--T20></Box> // transparentize color
+     * <Box as="svg" fillRose400--O20></Box> // opacify color
+     * <Box as="svg" fillRose400--L20></Box> // lighten color
+     * <Box as="svg" fillRose400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose400?: ResponsiveBoolean
+    /**
+     * Set fill to rose500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose500></Box>
+     * <Box as="svg" fillRose500--T20></Box> // transparentize color
+     * <Box as="svg" fillRose500--O20></Box> // opacify color
+     * <Box as="svg" fillRose500--L20></Box> // lighten color
+     * <Box as="svg" fillRose500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose500?: ResponsiveBoolean
+    /**
+     * Set fill to rose600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose600></Box>
+     * <Box as="svg" fillRose600--T20></Box> // transparentize color
+     * <Box as="svg" fillRose600--O20></Box> // opacify color
+     * <Box as="svg" fillRose600--L20></Box> // lighten color
+     * <Box as="svg" fillRose600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose600?: ResponsiveBoolean
+    /**
+     * Set fill to rose700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose700></Box>
+     * <Box as="svg" fillRose700--T20></Box> // transparentize color
+     * <Box as="svg" fillRose700--O20></Box> // opacify color
+     * <Box as="svg" fillRose700--L20></Box> // lighten color
+     * <Box as="svg" fillRose700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose700?: ResponsiveBoolean
+    /**
+     * Set fill to rose800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose800></Box>
+     * <Box as="svg" fillRose800--T20></Box> // transparentize color
+     * <Box as="svg" fillRose800--O20></Box> // opacify color
+     * <Box as="svg" fillRose800--L20></Box> // lighten color
+     * <Box as="svg" fillRose800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose800?: ResponsiveBoolean
+    /**
+     * Set fill to rose900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillRose900></Box>
+     * <Box as="svg" fillRose900--T20></Box> // transparentize color
+     * <Box as="svg" fillRose900--O20></Box> // opacify color
+     * <Box as="svg" fillRose900--L20></Box> // lighten color
+     * <Box as="svg" fillRose900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillRose900?: ResponsiveBoolean
     /**
      * Set fill to pink50
      * @example
@@ -1085,6 +1211,146 @@ declare module '@fower/atomic-props' {
      */
     fillBlue900?: ResponsiveBoolean
     /**
+     * Set fill to lightBlue50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue50></Box>
+     * <Box as="svg" fillLightBlue50--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue50--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue50--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue50?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue100></Box>
+     * <Box as="svg" fillLightBlue100--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue100--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue100--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue100?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue200></Box>
+     * <Box as="svg" fillLightBlue200--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue200--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue200--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue200?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue300></Box>
+     * <Box as="svg" fillLightBlue300--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue300--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue300--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue300?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue400></Box>
+     * <Box as="svg" fillLightBlue400--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue400--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue400--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue400?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue500></Box>
+     * <Box as="svg" fillLightBlue500--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue500--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue500--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue500?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue600></Box>
+     * <Box as="svg" fillLightBlue600--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue600--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue600--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue600?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue700></Box>
+     * <Box as="svg" fillLightBlue700--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue700--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue700--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue700?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue800></Box>
+     * <Box as="svg" fillLightBlue800--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue800--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue800--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue800?: ResponsiveBoolean
+    /**
+     * Set fill to lightBlue900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillLightBlue900></Box>
+     * <Box as="svg" fillLightBlue900--T20></Box> // transparentize color
+     * <Box as="svg" fillLightBlue900--O20></Box> // opacify color
+     * <Box as="svg" fillLightBlue900--L20></Box> // lighten color
+     * <Box as="svg" fillLightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillLightBlue900?: ResponsiveBoolean
+    /**
      * Set fill to cyan50
      * @example
      * ```tsx
@@ -1364,6 +1630,146 @@ declare module '@fower/atomic-props' {
      * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
      */
     fillTeal900?: ResponsiveBoolean
+    /**
+     * Set fill to emerald50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald50></Box>
+     * <Box as="svg" fillEmerald50--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald50--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald50--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald50?: ResponsiveBoolean
+    /**
+     * Set fill to emerald100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald100></Box>
+     * <Box as="svg" fillEmerald100--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald100--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald100--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald100?: ResponsiveBoolean
+    /**
+     * Set fill to emerald200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald200></Box>
+     * <Box as="svg" fillEmerald200--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald200--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald200--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald200?: ResponsiveBoolean
+    /**
+     * Set fill to emerald300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald300></Box>
+     * <Box as="svg" fillEmerald300--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald300--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald300--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald300?: ResponsiveBoolean
+    /**
+     * Set fill to emerald400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald400></Box>
+     * <Box as="svg" fillEmerald400--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald400--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald400--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald400?: ResponsiveBoolean
+    /**
+     * Set fill to emerald500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald500></Box>
+     * <Box as="svg" fillEmerald500--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald500--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald500--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald500?: ResponsiveBoolean
+    /**
+     * Set fill to emerald600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald600></Box>
+     * <Box as="svg" fillEmerald600--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald600--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald600--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald600?: ResponsiveBoolean
+    /**
+     * Set fill to emerald700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald700></Box>
+     * <Box as="svg" fillEmerald700--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald700--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald700--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald700?: ResponsiveBoolean
+    /**
+     * Set fill to emerald800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald800></Box>
+     * <Box as="svg" fillEmerald800--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald800--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald800--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald800?: ResponsiveBoolean
+    /**
+     * Set fill to emerald900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillEmerald900></Box>
+     * <Box as="svg" fillEmerald900--T20></Box> // transparentize color
+     * <Box as="svg" fillEmerald900--O20></Box> // opacify color
+     * <Box as="svg" fillEmerald900--L20></Box> // lighten color
+     * <Box as="svg" fillEmerald900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillEmerald900?: ResponsiveBoolean
     /**
      * Set fill to green50
      * @example
@@ -1785,6 +2191,146 @@ declare module '@fower/atomic-props' {
      */
     fillYellow900?: ResponsiveBoolean
     /**
+     * Set fill to amber50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber50></Box>
+     * <Box as="svg" fillAmber50--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber50--O20></Box> // opacify color
+     * <Box as="svg" fillAmber50--L20></Box> // lighten color
+     * <Box as="svg" fillAmber50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber50?: ResponsiveBoolean
+    /**
+     * Set fill to amber100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber100></Box>
+     * <Box as="svg" fillAmber100--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber100--O20></Box> // opacify color
+     * <Box as="svg" fillAmber100--L20></Box> // lighten color
+     * <Box as="svg" fillAmber100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber100?: ResponsiveBoolean
+    /**
+     * Set fill to amber200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber200></Box>
+     * <Box as="svg" fillAmber200--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber200--O20></Box> // opacify color
+     * <Box as="svg" fillAmber200--L20></Box> // lighten color
+     * <Box as="svg" fillAmber200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber200?: ResponsiveBoolean
+    /**
+     * Set fill to amber300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber300></Box>
+     * <Box as="svg" fillAmber300--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber300--O20></Box> // opacify color
+     * <Box as="svg" fillAmber300--L20></Box> // lighten color
+     * <Box as="svg" fillAmber300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber300?: ResponsiveBoolean
+    /**
+     * Set fill to amber400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber400></Box>
+     * <Box as="svg" fillAmber400--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber400--O20></Box> // opacify color
+     * <Box as="svg" fillAmber400--L20></Box> // lighten color
+     * <Box as="svg" fillAmber400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber400?: ResponsiveBoolean
+    /**
+     * Set fill to amber500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber500></Box>
+     * <Box as="svg" fillAmber500--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber500--O20></Box> // opacify color
+     * <Box as="svg" fillAmber500--L20></Box> // lighten color
+     * <Box as="svg" fillAmber500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber500?: ResponsiveBoolean
+    /**
+     * Set fill to amber600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber600></Box>
+     * <Box as="svg" fillAmber600--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber600--O20></Box> // opacify color
+     * <Box as="svg" fillAmber600--L20></Box> // lighten color
+     * <Box as="svg" fillAmber600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber600?: ResponsiveBoolean
+    /**
+     * Set fill to amber700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber700></Box>
+     * <Box as="svg" fillAmber700--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber700--O20></Box> // opacify color
+     * <Box as="svg" fillAmber700--L20></Box> // lighten color
+     * <Box as="svg" fillAmber700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber700?: ResponsiveBoolean
+    /**
+     * Set fill to amber800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber800></Box>
+     * <Box as="svg" fillAmber800--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber800--O20></Box> // opacify color
+     * <Box as="svg" fillAmber800--L20></Box> // lighten color
+     * <Box as="svg" fillAmber800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber800?: ResponsiveBoolean
+    /**
+     * Set fill to amber900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillAmber900></Box>
+     * <Box as="svg" fillAmber900--T20></Box> // transparentize color
+     * <Box as="svg" fillAmber900--O20></Box> // opacify color
+     * <Box as="svg" fillAmber900--L20></Box> // lighten color
+     * <Box as="svg" fillAmber900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillAmber900?: ResponsiveBoolean
+    /**
      * Set fill to orange50
      * @example
      * ```tsx
@@ -2065,6 +2611,146 @@ declare module '@fower/atomic-props' {
      */
     fillRed900?: ResponsiveBoolean
     /**
+     * Set fill to warmGray50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray50></Box>
+     * <Box as="svg" fillWarmGray50--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray50--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray50--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray50?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray100></Box>
+     * <Box as="svg" fillWarmGray100--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray100--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray100--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray100?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray200></Box>
+     * <Box as="svg" fillWarmGray200--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray200--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray200--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray200?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray300></Box>
+     * <Box as="svg" fillWarmGray300--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray300--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray300--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray300?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray400></Box>
+     * <Box as="svg" fillWarmGray400--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray400--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray400--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray400?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray500></Box>
+     * <Box as="svg" fillWarmGray500--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray500--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray500--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray500?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray600></Box>
+     * <Box as="svg" fillWarmGray600--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray600--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray600--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray600?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray700></Box>
+     * <Box as="svg" fillWarmGray700--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray700--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray700--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray700?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray800></Box>
+     * <Box as="svg" fillWarmGray800--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray800--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray800--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray800?: ResponsiveBoolean
+    /**
+     * Set fill to warmGray900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillWarmGray900></Box>
+     * <Box as="svg" fillWarmGray900--T20></Box> // transparentize color
+     * <Box as="svg" fillWarmGray900--O20></Box> // opacify color
+     * <Box as="svg" fillWarmGray900--L20></Box> // lighten color
+     * <Box as="svg" fillWarmGray900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillWarmGray900?: ResponsiveBoolean
+    /**
      * Set fill to trueGray50
      * @example
      * ```tsx
@@ -2344,5 +3030,285 @@ declare module '@fower/atomic-props' {
      * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
      */
     fillGray900?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray50></Box>
+     * <Box as="svg" fillCoolGray50--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray50--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray50--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray50?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray100></Box>
+     * <Box as="svg" fillCoolGray100--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray100--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray100--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray100?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray200></Box>
+     * <Box as="svg" fillCoolGray200--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray200--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray200--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray200?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray300></Box>
+     * <Box as="svg" fillCoolGray300--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray300--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray300--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray300?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray400></Box>
+     * <Box as="svg" fillCoolGray400--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray400--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray400--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray400?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray500></Box>
+     * <Box as="svg" fillCoolGray500--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray500--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray500--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray500?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray600></Box>
+     * <Box as="svg" fillCoolGray600--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray600--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray600--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray600?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray700></Box>
+     * <Box as="svg" fillCoolGray700--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray700--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray700--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray700?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray800></Box>
+     * <Box as="svg" fillCoolGray800--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray800--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray800--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray800?: ResponsiveBoolean
+    /**
+     * Set fill to coolGray900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillCoolGray900></Box>
+     * <Box as="svg" fillCoolGray900--T20></Box> // transparentize color
+     * <Box as="svg" fillCoolGray900--O20></Box> // opacify color
+     * <Box as="svg" fillCoolGray900--L20></Box> // lighten color
+     * <Box as="svg" fillCoolGray900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillCoolGray900?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray50
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray50></Box>
+     * <Box as="svg" fillBlueGray50--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray50--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray50--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray50--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray50?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray100
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray100></Box>
+     * <Box as="svg" fillBlueGray100--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray100--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray100--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray100--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray100?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray200
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray200></Box>
+     * <Box as="svg" fillBlueGray200--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray200--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray200--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray200--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray200?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray300
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray300></Box>
+     * <Box as="svg" fillBlueGray300--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray300--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray300--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray300--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray300?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray400
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray400></Box>
+     * <Box as="svg" fillBlueGray400--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray400--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray400--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray400--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray400?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray500
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray500></Box>
+     * <Box as="svg" fillBlueGray500--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray500--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray500--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray500--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray500?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray600
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray600></Box>
+     * <Box as="svg" fillBlueGray600--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray600--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray600--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray600--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray600?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray700
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray700></Box>
+     * <Box as="svg" fillBlueGray700--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray700--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray700--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray700--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray700?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray800
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray800></Box>
+     * <Box as="svg" fillBlueGray800--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray800--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray800--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray800--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray800?: ResponsiveBoolean
+    /**
+     * Set fill to blueGray900
+     * @example
+     * ```tsx
+     * <Box as="svg" fillBlueGray900></Box>
+     * <Box as="svg" fillBlueGray900--T20></Box> // transparentize color
+     * <Box as="svg" fillBlueGray900--O20></Box> // opacify color
+     * <Box as="svg" fillBlueGray900--L20></Box> // lighten color
+     * <Box as="svg" fillBlueGray900--D20></Box> // darken color
+     * ```
+     * @see https://fower.vercel.app/docs/fill
+     * https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill
+     */
+    fillBlueGray900?: ResponsiveBoolean
   }
 }

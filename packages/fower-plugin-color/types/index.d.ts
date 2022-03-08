@@ -66,25 +66,9 @@ declare module '@fower/atomic-props' {
      */
     black?: ResponsiveBoolean
     /**
-     * Set color to brand
-     * ```css
-     * { color: #20c997; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box brand></Box>
-     * <Box brand--T20></Box> // transparentize color
-     * <Box brand--O20></Box> // opacify color
-     * <Box brand--L20></Box> // lighten color
-     * <Box brand--D20></Box> // darken color
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
-     */
-    brand?: ResponsiveBoolean
-    /**
      * Set color to brand50
      * ```css
-     * { color: #e6fcf5; }
+     * { color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -100,7 +84,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand100
      * ```css
-     * { color: #c3fae8; }
+     * { color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -116,7 +100,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand200
      * ```css
-     * { color: #96f2d7; }
+     * { color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -132,7 +116,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand300
      * ```css
-     * { color: #63e6be; }
+     * { color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -148,7 +132,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand400
      * ```css
-     * { color: #38d9a9; }
+     * { color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -164,7 +148,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand500
      * ```css
-     * { color: #20c997; }
+     * { color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -180,7 +164,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand600
      * ```css
-     * { color: #12b886; }
+     * { color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -196,7 +180,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand700
      * ```css
-     * { color: #0ca678; }
+     * { color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -212,7 +196,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand800
      * ```css
-     * { color: #099268; }
+     * { color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -228,7 +212,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to brand900
      * ```css
-     * { color: #087f5b; }
+     * { color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -242,9 +226,169 @@ declare module '@fower/atomic-props' {
      */
     brand900?: ResponsiveBoolean
     /**
+     * Set color to rose50
+     * ```css
+     * { color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose50></Box>
+     * <Box rose50--T20></Box> // transparentize color
+     * <Box rose50--O20></Box> // opacify color
+     * <Box rose50--L20></Box> // lighten color
+     * <Box rose50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose50?: ResponsiveBoolean
+    /**
+     * Set color to rose100
+     * ```css
+     * { color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose100></Box>
+     * <Box rose100--T20></Box> // transparentize color
+     * <Box rose100--O20></Box> // opacify color
+     * <Box rose100--L20></Box> // lighten color
+     * <Box rose100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose100?: ResponsiveBoolean
+    /**
+     * Set color to rose200
+     * ```css
+     * { color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose200></Box>
+     * <Box rose200--T20></Box> // transparentize color
+     * <Box rose200--O20></Box> // opacify color
+     * <Box rose200--L20></Box> // lighten color
+     * <Box rose200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose200?: ResponsiveBoolean
+    /**
+     * Set color to rose300
+     * ```css
+     * { color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose300></Box>
+     * <Box rose300--T20></Box> // transparentize color
+     * <Box rose300--O20></Box> // opacify color
+     * <Box rose300--L20></Box> // lighten color
+     * <Box rose300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose300?: ResponsiveBoolean
+    /**
+     * Set color to rose400
+     * ```css
+     * { color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose400></Box>
+     * <Box rose400--T20></Box> // transparentize color
+     * <Box rose400--O20></Box> // opacify color
+     * <Box rose400--L20></Box> // lighten color
+     * <Box rose400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose400?: ResponsiveBoolean
+    /**
+     * Set color to rose500
+     * ```css
+     * { color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose500></Box>
+     * <Box rose500--T20></Box> // transparentize color
+     * <Box rose500--O20></Box> // opacify color
+     * <Box rose500--L20></Box> // lighten color
+     * <Box rose500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose500?: ResponsiveBoolean
+    /**
+     * Set color to rose600
+     * ```css
+     * { color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose600></Box>
+     * <Box rose600--T20></Box> // transparentize color
+     * <Box rose600--O20></Box> // opacify color
+     * <Box rose600--L20></Box> // lighten color
+     * <Box rose600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose600?: ResponsiveBoolean
+    /**
+     * Set color to rose700
+     * ```css
+     * { color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose700></Box>
+     * <Box rose700--T20></Box> // transparentize color
+     * <Box rose700--O20></Box> // opacify color
+     * <Box rose700--L20></Box> // lighten color
+     * <Box rose700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose700?: ResponsiveBoolean
+    /**
+     * Set color to rose800
+     * ```css
+     * { color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose800></Box>
+     * <Box rose800--T20></Box> // transparentize color
+     * <Box rose800--O20></Box> // opacify color
+     * <Box rose800--L20></Box> // lighten color
+     * <Box rose800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose800?: ResponsiveBoolean
+    /**
+     * Set color to rose900
+     * ```css
+     * { color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose900></Box>
+     * <Box rose900--T20></Box> // transparentize color
+     * <Box rose900--O20></Box> // opacify color
+     * <Box rose900--L20></Box> // lighten color
+     * <Box rose900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose900?: ResponsiveBoolean
+    /**
      * Set color to pink50
      * ```css
-     * { color: #fff0f6; }
+     * { color: #fdf2f8; }
      * ```
      * @example
      * ```tsx
@@ -260,7 +404,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink100
      * ```css
-     * { color: #ffdeeb; }
+     * { color: #fce7f3; }
      * ```
      * @example
      * ```tsx
@@ -276,7 +420,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink200
      * ```css
-     * { color: #fcc2d7; }
+     * { color: #fbcfe8; }
      * ```
      * @example
      * ```tsx
@@ -292,7 +436,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink300
      * ```css
-     * { color: #faa2c1; }
+     * { color: #f9a8d4; }
      * ```
      * @example
      * ```tsx
@@ -308,7 +452,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink400
      * ```css
-     * { color: #f783ac; }
+     * { color: #f472b6; }
      * ```
      * @example
      * ```tsx
@@ -324,7 +468,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink500
      * ```css
-     * { color: #f06595; }
+     * { color: #ec4899; }
      * ```
      * @example
      * ```tsx
@@ -340,7 +484,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink600
      * ```css
-     * { color: #e64980; }
+     * { color: #db2777; }
      * ```
      * @example
      * ```tsx
@@ -356,7 +500,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink700
      * ```css
-     * { color: #d6336c; }
+     * { color: #be185d; }
      * ```
      * @example
      * ```tsx
@@ -372,7 +516,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink800
      * ```css
-     * { color: #c2255c; }
+     * { color: #9d174d; }
      * ```
      * @example
      * ```tsx
@@ -388,7 +532,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to pink900
      * ```css
-     * { color: #a61e4d; }
+     * { color: #831843; }
      * ```
      * @example
      * ```tsx
@@ -404,7 +548,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia50
      * ```css
-     * { color: #f8f0fc; }
+     * { color: #fdf4ff; }
      * ```
      * @example
      * ```tsx
@@ -420,7 +564,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia100
      * ```css
-     * { color: #f3d9fa; }
+     * { color: #fae8ff; }
      * ```
      * @example
      * ```tsx
@@ -436,7 +580,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia200
      * ```css
-     * { color: #eebefa; }
+     * { color: #f5d0fe; }
      * ```
      * @example
      * ```tsx
@@ -452,7 +596,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia300
      * ```css
-     * { color: #e599f7; }
+     * { color: #f0abfc; }
      * ```
      * @example
      * ```tsx
@@ -468,7 +612,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia400
      * ```css
-     * { color: #da77f2; }
+     * { color: #e879f9; }
      * ```
      * @example
      * ```tsx
@@ -484,7 +628,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia500
      * ```css
-     * { color: #cc5de8; }
+     * { color: #d946ef; }
      * ```
      * @example
      * ```tsx
@@ -500,7 +644,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia600
      * ```css
-     * { color: #be4bdb; }
+     * { color: #c026d3; }
      * ```
      * @example
      * ```tsx
@@ -516,7 +660,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia700
      * ```css
-     * { color: #ae3ec9; }
+     * { color: #a21caf; }
      * ```
      * @example
      * ```tsx
@@ -532,7 +676,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia800
      * ```css
-     * { color: #9c36b5; }
+     * { color: #86198f; }
      * ```
      * @example
      * ```tsx
@@ -548,7 +692,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to fuchsia900
      * ```css
-     * { color: #862e9c; }
+     * { color: #701a75; }
      * ```
      * @example
      * ```tsx
@@ -724,7 +868,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet50
      * ```css
-     * { color: #f3f0ff; }
+     * { color: #f5f3ff; }
      * ```
      * @example
      * ```tsx
@@ -740,7 +884,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet100
      * ```css
-     * { color: #e5dbff; }
+     * { color: #ede9fe; }
      * ```
      * @example
      * ```tsx
@@ -756,7 +900,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet200
      * ```css
-     * { color: #d0bfff; }
+     * { color: #ddd6fe; }
      * ```
      * @example
      * ```tsx
@@ -772,7 +916,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet300
      * ```css
-     * { color: #b197fc; }
+     * { color: #c4b5fd; }
      * ```
      * @example
      * ```tsx
@@ -788,7 +932,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet400
      * ```css
-     * { color: #9775fa; }
+     * { color: #a78bfa; }
      * ```
      * @example
      * ```tsx
@@ -804,7 +948,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet500
      * ```css
-     * { color: #845ef7; }
+     * { color: #8b5cf6; }
      * ```
      * @example
      * ```tsx
@@ -820,7 +964,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet600
      * ```css
-     * { color: #7950f2; }
+     * { color: #7c3aed; }
      * ```
      * @example
      * ```tsx
@@ -836,7 +980,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet700
      * ```css
-     * { color: #7048e8; }
+     * { color: #6d28d9; }
      * ```
      * @example
      * ```tsx
@@ -852,7 +996,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet800
      * ```css
-     * { color: #6741d9; }
+     * { color: #5b21b6; }
      * ```
      * @example
      * ```tsx
@@ -868,7 +1012,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to violet900
      * ```css
-     * { color: #5f3dc4; }
+     * { color: #4c1d95; }
      * ```
      * @example
      * ```tsx
@@ -884,7 +1028,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo50
      * ```css
-     * { color: #edf2ff; }
+     * { color: #eef2ff; }
      * ```
      * @example
      * ```tsx
@@ -900,7 +1044,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo100
      * ```css
-     * { color: #dbe4ff; }
+     * { color: #e0e7ff; }
      * ```
      * @example
      * ```tsx
@@ -916,7 +1060,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo200
      * ```css
-     * { color: #bac8ff; }
+     * { color: #c7d2fe; }
      * ```
      * @example
      * ```tsx
@@ -932,7 +1076,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo300
      * ```css
-     * { color: #91a7ff; }
+     * { color: #a5b4fc; }
      * ```
      * @example
      * ```tsx
@@ -948,7 +1092,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo400
      * ```css
-     * { color: #748ffc; }
+     * { color: #818cf8; }
      * ```
      * @example
      * ```tsx
@@ -964,7 +1108,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo500
      * ```css
-     * { color: #5c7cfa; }
+     * { color: #6366f1; }
      * ```
      * @example
      * ```tsx
@@ -980,7 +1124,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo600
      * ```css
-     * { color: #4c6ef5; }
+     * { color: #4f46e5; }
      * ```
      * @example
      * ```tsx
@@ -996,7 +1140,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo700
      * ```css
-     * { color: #4263eb; }
+     * { color: #4338ca; }
      * ```
      * @example
      * ```tsx
@@ -1012,7 +1156,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo800
      * ```css
-     * { color: #3b5bdb; }
+     * { color: #3730a3; }
      * ```
      * @example
      * ```tsx
@@ -1028,7 +1172,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to indigo900
      * ```css
-     * { color: #364fc7; }
+     * { color: #312e81; }
      * ```
      * @example
      * ```tsx
@@ -1044,7 +1188,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue50
      * ```css
-     * { color: #e7f5ff; }
+     * { color: #eff6ff; }
      * ```
      * @example
      * ```tsx
@@ -1060,7 +1204,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue100
      * ```css
-     * { color: #d0ebff; }
+     * { color: #dbeafe; }
      * ```
      * @example
      * ```tsx
@@ -1076,7 +1220,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue200
      * ```css
-     * { color: #a5d8ff; }
+     * { color: #bfdbfe; }
      * ```
      * @example
      * ```tsx
@@ -1092,7 +1236,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue300
      * ```css
-     * { color: #74c0fc; }
+     * { color: #93c5fd; }
      * ```
      * @example
      * ```tsx
@@ -1108,7 +1252,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue400
      * ```css
-     * { color: #4dabf7; }
+     * { color: #60a5fa; }
      * ```
      * @example
      * ```tsx
@@ -1124,7 +1268,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue500
      * ```css
-     * { color: #339af0; }
+     * { color: #3b82f6; }
      * ```
      * @example
      * ```tsx
@@ -1140,7 +1284,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue600
      * ```css
-     * { color: #228be6; }
+     * { color: #2563eb; }
      * ```
      * @example
      * ```tsx
@@ -1156,7 +1300,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue700
      * ```css
-     * { color: #1c7ed6; }
+     * { color: #1d4ed8; }
      * ```
      * @example
      * ```tsx
@@ -1172,7 +1316,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue800
      * ```css
-     * { color: #1971c2; }
+     * { color: #1e40af; }
      * ```
      * @example
      * ```tsx
@@ -1188,7 +1332,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to blue900
      * ```css
-     * { color: #1864ab; }
+     * { color: #1e3a8a; }
      * ```
      * @example
      * ```tsx
@@ -1202,9 +1346,169 @@ declare module '@fower/atomic-props' {
      */
     blue900?: ResponsiveBoolean
     /**
+     * Set color to lightBlue50
+     * ```css
+     * { color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue50></Box>
+     * <Box lightBlue50--T20></Box> // transparentize color
+     * <Box lightBlue50--O20></Box> // opacify color
+     * <Box lightBlue50--L20></Box> // lighten color
+     * <Box lightBlue50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue50?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue100
+     * ```css
+     * { color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue100></Box>
+     * <Box lightBlue100--T20></Box> // transparentize color
+     * <Box lightBlue100--O20></Box> // opacify color
+     * <Box lightBlue100--L20></Box> // lighten color
+     * <Box lightBlue100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue100?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue200
+     * ```css
+     * { color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue200></Box>
+     * <Box lightBlue200--T20></Box> // transparentize color
+     * <Box lightBlue200--O20></Box> // opacify color
+     * <Box lightBlue200--L20></Box> // lighten color
+     * <Box lightBlue200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue200?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue300
+     * ```css
+     * { color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue300></Box>
+     * <Box lightBlue300--T20></Box> // transparentize color
+     * <Box lightBlue300--O20></Box> // opacify color
+     * <Box lightBlue300--L20></Box> // lighten color
+     * <Box lightBlue300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue300?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue400
+     * ```css
+     * { color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue400></Box>
+     * <Box lightBlue400--T20></Box> // transparentize color
+     * <Box lightBlue400--O20></Box> // opacify color
+     * <Box lightBlue400--L20></Box> // lighten color
+     * <Box lightBlue400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue400?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue500
+     * ```css
+     * { color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue500></Box>
+     * <Box lightBlue500--T20></Box> // transparentize color
+     * <Box lightBlue500--O20></Box> // opacify color
+     * <Box lightBlue500--L20></Box> // lighten color
+     * <Box lightBlue500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue500?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue600
+     * ```css
+     * { color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue600></Box>
+     * <Box lightBlue600--T20></Box> // transparentize color
+     * <Box lightBlue600--O20></Box> // opacify color
+     * <Box lightBlue600--L20></Box> // lighten color
+     * <Box lightBlue600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue600?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue700
+     * ```css
+     * { color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue700></Box>
+     * <Box lightBlue700--T20></Box> // transparentize color
+     * <Box lightBlue700--O20></Box> // opacify color
+     * <Box lightBlue700--L20></Box> // lighten color
+     * <Box lightBlue700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue700?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue800
+     * ```css
+     * { color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue800></Box>
+     * <Box lightBlue800--T20></Box> // transparentize color
+     * <Box lightBlue800--O20></Box> // opacify color
+     * <Box lightBlue800--L20></Box> // lighten color
+     * <Box lightBlue800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue800?: ResponsiveBoolean
+    /**
+     * Set color to lightBlue900
+     * ```css
+     * { color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lightBlue900></Box>
+     * <Box lightBlue900--T20></Box> // transparentize color
+     * <Box lightBlue900--O20></Box> // opacify color
+     * <Box lightBlue900--L20></Box> // lighten color
+     * <Box lightBlue900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lightBlue900?: ResponsiveBoolean
+    /**
      * Set color to cyan50
      * ```css
-     * { color: #e3fafc; }
+     * { color: #ecfeff; }
      * ```
      * @example
      * ```tsx
@@ -1220,7 +1524,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan100
      * ```css
-     * { color: #c5f6fa; }
+     * { color: #cffafe; }
      * ```
      * @example
      * ```tsx
@@ -1236,7 +1540,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan200
      * ```css
-     * { color: #99e9f2; }
+     * { color: #a5f3fc; }
      * ```
      * @example
      * ```tsx
@@ -1252,7 +1556,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan300
      * ```css
-     * { color: #66d9e8; }
+     * { color: #67e8f9; }
      * ```
      * @example
      * ```tsx
@@ -1268,7 +1572,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan400
      * ```css
-     * { color: #3bc9db; }
+     * { color: #22d3ee; }
      * ```
      * @example
      * ```tsx
@@ -1284,7 +1588,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan500
      * ```css
-     * { color: #22b8cf; }
+     * { color: #06b6d4; }
      * ```
      * @example
      * ```tsx
@@ -1300,7 +1604,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan600
      * ```css
-     * { color: #15aabf; }
+     * { color: #0891b2; }
      * ```
      * @example
      * ```tsx
@@ -1316,7 +1620,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan700
      * ```css
-     * { color: #1098ad; }
+     * { color: #0e7490; }
      * ```
      * @example
      * ```tsx
@@ -1332,7 +1636,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan800
      * ```css
-     * { color: #0c8599; }
+     * { color: #155e75; }
      * ```
      * @example
      * ```tsx
@@ -1348,7 +1652,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to cyan900
      * ```css
-     * { color: #0b7285; }
+     * { color: #164e63; }
      * ```
      * @example
      * ```tsx
@@ -1364,7 +1668,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal50
      * ```css
-     * { color: #e6fcf5; }
+     * { color: #f0fdfa; }
      * ```
      * @example
      * ```tsx
@@ -1380,7 +1684,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal100
      * ```css
-     * { color: #c3fae8; }
+     * { color: #ccfbf1; }
      * ```
      * @example
      * ```tsx
@@ -1396,7 +1700,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal200
      * ```css
-     * { color: #96f2d7; }
+     * { color: #99f6e4; }
      * ```
      * @example
      * ```tsx
@@ -1412,7 +1716,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal300
      * ```css
-     * { color: #63e6be; }
+     * { color: #5eead4; }
      * ```
      * @example
      * ```tsx
@@ -1428,7 +1732,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal400
      * ```css
-     * { color: #38d9a9; }
+     * { color: #2dd4bf; }
      * ```
      * @example
      * ```tsx
@@ -1444,7 +1748,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal500
      * ```css
-     * { color: #20c997; }
+     * { color: #14b8a6; }
      * ```
      * @example
      * ```tsx
@@ -1460,7 +1764,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal600
      * ```css
-     * { color: #12b886; }
+     * { color: #0d9488; }
      * ```
      * @example
      * ```tsx
@@ -1476,7 +1780,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal700
      * ```css
-     * { color: #0ca678; }
+     * { color: #0f766e; }
      * ```
      * @example
      * ```tsx
@@ -1492,7 +1796,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal800
      * ```css
-     * { color: #099268; }
+     * { color: #115e59; }
      * ```
      * @example
      * ```tsx
@@ -1508,7 +1812,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to teal900
      * ```css
-     * { color: #087f5b; }
+     * { color: #134e4a; }
      * ```
      * @example
      * ```tsx
@@ -1522,9 +1826,169 @@ declare module '@fower/atomic-props' {
      */
     teal900?: ResponsiveBoolean
     /**
+     * Set color to emerald50
+     * ```css
+     * { color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald50></Box>
+     * <Box emerald50--T20></Box> // transparentize color
+     * <Box emerald50--O20></Box> // opacify color
+     * <Box emerald50--L20></Box> // lighten color
+     * <Box emerald50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald50?: ResponsiveBoolean
+    /**
+     * Set color to emerald100
+     * ```css
+     * { color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald100></Box>
+     * <Box emerald100--T20></Box> // transparentize color
+     * <Box emerald100--O20></Box> // opacify color
+     * <Box emerald100--L20></Box> // lighten color
+     * <Box emerald100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald100?: ResponsiveBoolean
+    /**
+     * Set color to emerald200
+     * ```css
+     * { color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald200></Box>
+     * <Box emerald200--T20></Box> // transparentize color
+     * <Box emerald200--O20></Box> // opacify color
+     * <Box emerald200--L20></Box> // lighten color
+     * <Box emerald200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald200?: ResponsiveBoolean
+    /**
+     * Set color to emerald300
+     * ```css
+     * { color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald300></Box>
+     * <Box emerald300--T20></Box> // transparentize color
+     * <Box emerald300--O20></Box> // opacify color
+     * <Box emerald300--L20></Box> // lighten color
+     * <Box emerald300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald300?: ResponsiveBoolean
+    /**
+     * Set color to emerald400
+     * ```css
+     * { color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald400></Box>
+     * <Box emerald400--T20></Box> // transparentize color
+     * <Box emerald400--O20></Box> // opacify color
+     * <Box emerald400--L20></Box> // lighten color
+     * <Box emerald400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald400?: ResponsiveBoolean
+    /**
+     * Set color to emerald500
+     * ```css
+     * { color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald500></Box>
+     * <Box emerald500--T20></Box> // transparentize color
+     * <Box emerald500--O20></Box> // opacify color
+     * <Box emerald500--L20></Box> // lighten color
+     * <Box emerald500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald500?: ResponsiveBoolean
+    /**
+     * Set color to emerald600
+     * ```css
+     * { color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald600></Box>
+     * <Box emerald600--T20></Box> // transparentize color
+     * <Box emerald600--O20></Box> // opacify color
+     * <Box emerald600--L20></Box> // lighten color
+     * <Box emerald600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald600?: ResponsiveBoolean
+    /**
+     * Set color to emerald700
+     * ```css
+     * { color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald700></Box>
+     * <Box emerald700--T20></Box> // transparentize color
+     * <Box emerald700--O20></Box> // opacify color
+     * <Box emerald700--L20></Box> // lighten color
+     * <Box emerald700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald700?: ResponsiveBoolean
+    /**
+     * Set color to emerald800
+     * ```css
+     * { color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald800></Box>
+     * <Box emerald800--T20></Box> // transparentize color
+     * <Box emerald800--O20></Box> // opacify color
+     * <Box emerald800--L20></Box> // lighten color
+     * <Box emerald800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald800?: ResponsiveBoolean
+    /**
+     * Set color to emerald900
+     * ```css
+     * { color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald900></Box>
+     * <Box emerald900--T20></Box> // transparentize color
+     * <Box emerald900--O20></Box> // opacify color
+     * <Box emerald900--L20></Box> // lighten color
+     * <Box emerald900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald900?: ResponsiveBoolean
+    /**
      * Set color to green50
      * ```css
-     * { color: #ebfbee; }
+     * { color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
@@ -1540,7 +2004,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green100
      * ```css
-     * { color: #d3f9d8; }
+     * { color: #dcfce7; }
      * ```
      * @example
      * ```tsx
@@ -1556,7 +2020,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green200
      * ```css
-     * { color: #b2f2bb; }
+     * { color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
@@ -1572,7 +2036,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green300
      * ```css
-     * { color: #8ce99a; }
+     * { color: #86efac; }
      * ```
      * @example
      * ```tsx
@@ -1588,7 +2052,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green400
      * ```css
-     * { color: #69db7c; }
+     * { color: #4ade80; }
      * ```
      * @example
      * ```tsx
@@ -1604,7 +2068,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green500
      * ```css
-     * { color: #51cf66; }
+     * { color: #22c55e; }
      * ```
      * @example
      * ```tsx
@@ -1620,7 +2084,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green600
      * ```css
-     * { color: #40c057; }
+     * { color: #16a34a; }
      * ```
      * @example
      * ```tsx
@@ -1636,7 +2100,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green700
      * ```css
-     * { color: #37b24d; }
+     * { color: #15803d; }
      * ```
      * @example
      * ```tsx
@@ -1652,7 +2116,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green800
      * ```css
-     * { color: #2f9e44; }
+     * { color: #166534; }
      * ```
      * @example
      * ```tsx
@@ -1668,7 +2132,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to green900
      * ```css
-     * { color: #2b8a3e; }
+     * { color: #14532d; }
      * ```
      * @example
      * ```tsx
@@ -1684,7 +2148,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime50
      * ```css
-     * { color: #f4fce3; }
+     * { color: #f7fee7; }
      * ```
      * @example
      * ```tsx
@@ -1700,7 +2164,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime100
      * ```css
-     * { color: #e9fac8; }
+     * { color: #ecfccb; }
      * ```
      * @example
      * ```tsx
@@ -1716,7 +2180,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime200
      * ```css
-     * { color: #d8f5a2; }
+     * { color: #d9f99d; }
      * ```
      * @example
      * ```tsx
@@ -1732,7 +2196,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime300
      * ```css
-     * { color: #c0eb75; }
+     * { color: #bef264; }
      * ```
      * @example
      * ```tsx
@@ -1748,7 +2212,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime400
      * ```css
-     * { color: #a9e34b; }
+     * { color: #a3e635; }
      * ```
      * @example
      * ```tsx
@@ -1764,7 +2228,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime500
      * ```css
-     * { color: #94d82d; }
+     * { color: #84cc16; }
      * ```
      * @example
      * ```tsx
@@ -1780,7 +2244,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime600
      * ```css
-     * { color: #82c91e; }
+     * { color: #65a30d; }
      * ```
      * @example
      * ```tsx
@@ -1796,7 +2260,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime700
      * ```css
-     * { color: #74b816; }
+     * { color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
@@ -1812,7 +2276,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime800
      * ```css
-     * { color: #66a80f; }
+     * { color: #3f6212; }
      * ```
      * @example
      * ```tsx
@@ -1828,7 +2292,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to lime900
      * ```css
-     * { color: #5c940d; }
+     * { color: #365314; }
      * ```
      * @example
      * ```tsx
@@ -1844,7 +2308,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow50
      * ```css
-     * { color: #fff9db; }
+     * { color: #fefce8; }
      * ```
      * @example
      * ```tsx
@@ -1860,7 +2324,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow100
      * ```css
-     * { color: #fff3bf; }
+     * { color: #fef9c3; }
      * ```
      * @example
      * ```tsx
@@ -1876,7 +2340,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow200
      * ```css
-     * { color: #ffec99; }
+     * { color: #fef08a; }
      * ```
      * @example
      * ```tsx
@@ -1892,7 +2356,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow300
      * ```css
-     * { color: #ffe066; }
+     * { color: #fde047; }
      * ```
      * @example
      * ```tsx
@@ -1908,7 +2372,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow400
      * ```css
-     * { color: #ffd43b; }
+     * { color: #facc15; }
      * ```
      * @example
      * ```tsx
@@ -1924,7 +2388,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow500
      * ```css
-     * { color: #fcc419; }
+     * { color: #eab308; }
      * ```
      * @example
      * ```tsx
@@ -1940,7 +2404,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow600
      * ```css
-     * { color: #fab005; }
+     * { color: #ca8a04; }
      * ```
      * @example
      * ```tsx
@@ -1956,7 +2420,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow700
      * ```css
-     * { color: #f59f00; }
+     * { color: #a16207; }
      * ```
      * @example
      * ```tsx
@@ -1972,7 +2436,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow800
      * ```css
-     * { color: #f08c00; }
+     * { color: #854d0e; }
      * ```
      * @example
      * ```tsx
@@ -1988,7 +2452,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to yellow900
      * ```css
-     * { color: #e67700; }
+     * { color: #713f12; }
      * ```
      * @example
      * ```tsx
@@ -2002,9 +2466,169 @@ declare module '@fower/atomic-props' {
      */
     yellow900?: ResponsiveBoolean
     /**
+     * Set color to amber50
+     * ```css
+     * { color: #fffbeb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber50></Box>
+     * <Box amber50--T20></Box> // transparentize color
+     * <Box amber50--O20></Box> // opacify color
+     * <Box amber50--L20></Box> // lighten color
+     * <Box amber50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber50?: ResponsiveBoolean
+    /**
+     * Set color to amber100
+     * ```css
+     * { color: #fef3c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber100></Box>
+     * <Box amber100--T20></Box> // transparentize color
+     * <Box amber100--O20></Box> // opacify color
+     * <Box amber100--L20></Box> // lighten color
+     * <Box amber100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber100?: ResponsiveBoolean
+    /**
+     * Set color to amber200
+     * ```css
+     * { color: #fde68a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber200></Box>
+     * <Box amber200--T20></Box> // transparentize color
+     * <Box amber200--O20></Box> // opacify color
+     * <Box amber200--L20></Box> // lighten color
+     * <Box amber200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber200?: ResponsiveBoolean
+    /**
+     * Set color to amber300
+     * ```css
+     * { color: #fcd34d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber300></Box>
+     * <Box amber300--T20></Box> // transparentize color
+     * <Box amber300--O20></Box> // opacify color
+     * <Box amber300--L20></Box> // lighten color
+     * <Box amber300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber300?: ResponsiveBoolean
+    /**
+     * Set color to amber400
+     * ```css
+     * { color: #fbbf24; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber400></Box>
+     * <Box amber400--T20></Box> // transparentize color
+     * <Box amber400--O20></Box> // opacify color
+     * <Box amber400--L20></Box> // lighten color
+     * <Box amber400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber400?: ResponsiveBoolean
+    /**
+     * Set color to amber500
+     * ```css
+     * { color: #f59e0b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber500></Box>
+     * <Box amber500--T20></Box> // transparentize color
+     * <Box amber500--O20></Box> // opacify color
+     * <Box amber500--L20></Box> // lighten color
+     * <Box amber500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber500?: ResponsiveBoolean
+    /**
+     * Set color to amber600
+     * ```css
+     * { color: #d97706; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber600></Box>
+     * <Box amber600--T20></Box> // transparentize color
+     * <Box amber600--O20></Box> // opacify color
+     * <Box amber600--L20></Box> // lighten color
+     * <Box amber600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber600?: ResponsiveBoolean
+    /**
+     * Set color to amber700
+     * ```css
+     * { color: #b45309; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber700></Box>
+     * <Box amber700--T20></Box> // transparentize color
+     * <Box amber700--O20></Box> // opacify color
+     * <Box amber700--L20></Box> // lighten color
+     * <Box amber700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber700?: ResponsiveBoolean
+    /**
+     * Set color to amber800
+     * ```css
+     * { color: #92400e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber800></Box>
+     * <Box amber800--T20></Box> // transparentize color
+     * <Box amber800--O20></Box> // opacify color
+     * <Box amber800--L20></Box> // lighten color
+     * <Box amber800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber800?: ResponsiveBoolean
+    /**
+     * Set color to amber900
+     * ```css
+     * { color: #78350f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber900></Box>
+     * <Box amber900--T20></Box> // transparentize color
+     * <Box amber900--O20></Box> // opacify color
+     * <Box amber900--L20></Box> // lighten color
+     * <Box amber900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber900?: ResponsiveBoolean
+    /**
      * Set color to orange50
      * ```css
-     * { color: #fff4e6; }
+     * { color: #fff7ed; }
      * ```
      * @example
      * ```tsx
@@ -2020,7 +2644,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange100
      * ```css
-     * { color: #ffe8cc; }
+     * { color: #ffedd5; }
      * ```
      * @example
      * ```tsx
@@ -2036,7 +2660,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange200
      * ```css
-     * { color: #ffd8a8; }
+     * { color: #fed7aa; }
      * ```
      * @example
      * ```tsx
@@ -2052,7 +2676,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange300
      * ```css
-     * { color: #ffc078; }
+     * { color: #fdba74; }
      * ```
      * @example
      * ```tsx
@@ -2068,7 +2692,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange400
      * ```css
-     * { color: #ffa94d; }
+     * { color: #fb923c; }
      * ```
      * @example
      * ```tsx
@@ -2084,7 +2708,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange500
      * ```css
-     * { color: #ff922b; }
+     * { color: #f97316; }
      * ```
      * @example
      * ```tsx
@@ -2100,7 +2724,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange600
      * ```css
-     * { color: #fd7e14; }
+     * { color: #ea580c; }
      * ```
      * @example
      * ```tsx
@@ -2116,7 +2740,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange700
      * ```css
-     * { color: #f76707; }
+     * { color: #c2410c; }
      * ```
      * @example
      * ```tsx
@@ -2132,7 +2756,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange800
      * ```css
-     * { color: #e8590c; }
+     * { color: #9a3412; }
      * ```
      * @example
      * ```tsx
@@ -2148,7 +2772,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to orange900
      * ```css
-     * { color: #d9480f; }
+     * { color: #7c2d12; }
      * ```
      * @example
      * ```tsx
@@ -2164,7 +2788,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red50
      * ```css
-     * { color: #fff5f5; }
+     * { color: #fef2f2; }
      * ```
      * @example
      * ```tsx
@@ -2180,7 +2804,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red100
      * ```css
-     * { color: #ffe3e3; }
+     * { color: #fee2e2; }
      * ```
      * @example
      * ```tsx
@@ -2196,7 +2820,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red200
      * ```css
-     * { color: #ffc9c9; }
+     * { color: #fecaca; }
      * ```
      * @example
      * ```tsx
@@ -2212,7 +2836,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red300
      * ```css
-     * { color: #ffa8a8; }
+     * { color: #fca5a5; }
      * ```
      * @example
      * ```tsx
@@ -2228,7 +2852,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red400
      * ```css
-     * { color: #ff8787; }
+     * { color: #f87171; }
      * ```
      * @example
      * ```tsx
@@ -2244,7 +2868,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red500
      * ```css
-     * { color: #ff6b6b; }
+     * { color: #ef4444; }
      * ```
      * @example
      * ```tsx
@@ -2260,7 +2884,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red600
      * ```css
-     * { color: #fa5252; }
+     * { color: #dc2626; }
      * ```
      * @example
      * ```tsx
@@ -2276,7 +2900,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red700
      * ```css
-     * { color: #f03e3e; }
+     * { color: #b91c1c; }
      * ```
      * @example
      * ```tsx
@@ -2292,7 +2916,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red800
      * ```css
-     * { color: #e03131; }
+     * { color: #991b1b; }
      * ```
      * @example
      * ```tsx
@@ -2308,7 +2932,7 @@ declare module '@fower/atomic-props' {
     /**
      * Set color to red900
      * ```css
-     * { color: #c92a2a; }
+     * { color: #7f1d1d; }
      * ```
      * @example
      * ```tsx
@@ -2321,6 +2945,166 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     red900?: ResponsiveBoolean
+    /**
+     * Set color to warmGray50
+     * ```css
+     * { color: #fafaf9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray50></Box>
+     * <Box warmGray50--T20></Box> // transparentize color
+     * <Box warmGray50--O20></Box> // opacify color
+     * <Box warmGray50--L20></Box> // lighten color
+     * <Box warmGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray50?: ResponsiveBoolean
+    /**
+     * Set color to warmGray100
+     * ```css
+     * { color: #f5f5f4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray100></Box>
+     * <Box warmGray100--T20></Box> // transparentize color
+     * <Box warmGray100--O20></Box> // opacify color
+     * <Box warmGray100--L20></Box> // lighten color
+     * <Box warmGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray100?: ResponsiveBoolean
+    /**
+     * Set color to warmGray200
+     * ```css
+     * { color: #e7e5e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray200></Box>
+     * <Box warmGray200--T20></Box> // transparentize color
+     * <Box warmGray200--O20></Box> // opacify color
+     * <Box warmGray200--L20></Box> // lighten color
+     * <Box warmGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray200?: ResponsiveBoolean
+    /**
+     * Set color to warmGray300
+     * ```css
+     * { color: #d6d3d1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray300></Box>
+     * <Box warmGray300--T20></Box> // transparentize color
+     * <Box warmGray300--O20></Box> // opacify color
+     * <Box warmGray300--L20></Box> // lighten color
+     * <Box warmGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray300?: ResponsiveBoolean
+    /**
+     * Set color to warmGray400
+     * ```css
+     * { color: #a8a29e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray400></Box>
+     * <Box warmGray400--T20></Box> // transparentize color
+     * <Box warmGray400--O20></Box> // opacify color
+     * <Box warmGray400--L20></Box> // lighten color
+     * <Box warmGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray400?: ResponsiveBoolean
+    /**
+     * Set color to warmGray500
+     * ```css
+     * { color: #78716c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray500></Box>
+     * <Box warmGray500--T20></Box> // transparentize color
+     * <Box warmGray500--O20></Box> // opacify color
+     * <Box warmGray500--L20></Box> // lighten color
+     * <Box warmGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray500?: ResponsiveBoolean
+    /**
+     * Set color to warmGray600
+     * ```css
+     * { color: #57534e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray600></Box>
+     * <Box warmGray600--T20></Box> // transparentize color
+     * <Box warmGray600--O20></Box> // opacify color
+     * <Box warmGray600--L20></Box> // lighten color
+     * <Box warmGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray600?: ResponsiveBoolean
+    /**
+     * Set color to warmGray700
+     * ```css
+     * { color: #44403c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray700></Box>
+     * <Box warmGray700--T20></Box> // transparentize color
+     * <Box warmGray700--O20></Box> // opacify color
+     * <Box warmGray700--L20></Box> // lighten color
+     * <Box warmGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray700?: ResponsiveBoolean
+    /**
+     * Set color to warmGray800
+     * ```css
+     * { color: #292524; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray800></Box>
+     * <Box warmGray800--T20></Box> // transparentize color
+     * <Box warmGray800--O20></Box> // opacify color
+     * <Box warmGray800--L20></Box> // lighten color
+     * <Box warmGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray800?: ResponsiveBoolean
+    /**
+     * Set color to warmGray900
+     * ```css
+     * { color: #1c1917; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box warmGray900></Box>
+     * <Box warmGray900--T20></Box> // transparentize color
+     * <Box warmGray900--O20></Box> // opacify color
+     * <Box warmGray900--L20></Box> // lighten color
+     * <Box warmGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    warmGray900?: ResponsiveBoolean
     /**
      * Set color to trueGray50
      * ```css
@@ -2641,5 +3425,325 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     gray900?: ResponsiveBoolean
+    /**
+     * Set color to coolGray50
+     * ```css
+     * { color: #f9fafb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray50></Box>
+     * <Box coolGray50--T20></Box> // transparentize color
+     * <Box coolGray50--O20></Box> // opacify color
+     * <Box coolGray50--L20></Box> // lighten color
+     * <Box coolGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray50?: ResponsiveBoolean
+    /**
+     * Set color to coolGray100
+     * ```css
+     * { color: #f3f4f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray100></Box>
+     * <Box coolGray100--T20></Box> // transparentize color
+     * <Box coolGray100--O20></Box> // opacify color
+     * <Box coolGray100--L20></Box> // lighten color
+     * <Box coolGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray100?: ResponsiveBoolean
+    /**
+     * Set color to coolGray200
+     * ```css
+     * { color: #e5e7eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray200></Box>
+     * <Box coolGray200--T20></Box> // transparentize color
+     * <Box coolGray200--O20></Box> // opacify color
+     * <Box coolGray200--L20></Box> // lighten color
+     * <Box coolGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray200?: ResponsiveBoolean
+    /**
+     * Set color to coolGray300
+     * ```css
+     * { color: #d1d5db; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray300></Box>
+     * <Box coolGray300--T20></Box> // transparentize color
+     * <Box coolGray300--O20></Box> // opacify color
+     * <Box coolGray300--L20></Box> // lighten color
+     * <Box coolGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray300?: ResponsiveBoolean
+    /**
+     * Set color to coolGray400
+     * ```css
+     * { color: #9ca3af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray400></Box>
+     * <Box coolGray400--T20></Box> // transparentize color
+     * <Box coolGray400--O20></Box> // opacify color
+     * <Box coolGray400--L20></Box> // lighten color
+     * <Box coolGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray400?: ResponsiveBoolean
+    /**
+     * Set color to coolGray500
+     * ```css
+     * { color: #6b7280; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray500></Box>
+     * <Box coolGray500--T20></Box> // transparentize color
+     * <Box coolGray500--O20></Box> // opacify color
+     * <Box coolGray500--L20></Box> // lighten color
+     * <Box coolGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray500?: ResponsiveBoolean
+    /**
+     * Set color to coolGray600
+     * ```css
+     * { color: #4b5563; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray600></Box>
+     * <Box coolGray600--T20></Box> // transparentize color
+     * <Box coolGray600--O20></Box> // opacify color
+     * <Box coolGray600--L20></Box> // lighten color
+     * <Box coolGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray600?: ResponsiveBoolean
+    /**
+     * Set color to coolGray700
+     * ```css
+     * { color: #374151; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray700></Box>
+     * <Box coolGray700--T20></Box> // transparentize color
+     * <Box coolGray700--O20></Box> // opacify color
+     * <Box coolGray700--L20></Box> // lighten color
+     * <Box coolGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray700?: ResponsiveBoolean
+    /**
+     * Set color to coolGray800
+     * ```css
+     * { color: #1f2937; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray800></Box>
+     * <Box coolGray800--T20></Box> // transparentize color
+     * <Box coolGray800--O20></Box> // opacify color
+     * <Box coolGray800--L20></Box> // lighten color
+     * <Box coolGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray800?: ResponsiveBoolean
+    /**
+     * Set color to coolGray900
+     * ```css
+     * { color: #111827; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box coolGray900></Box>
+     * <Box coolGray900--T20></Box> // transparentize color
+     * <Box coolGray900--O20></Box> // opacify color
+     * <Box coolGray900--L20></Box> // lighten color
+     * <Box coolGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    coolGray900?: ResponsiveBoolean
+    /**
+     * Set color to blueGray50
+     * ```css
+     * { color: #f8fafc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray50></Box>
+     * <Box blueGray50--T20></Box> // transparentize color
+     * <Box blueGray50--O20></Box> // opacify color
+     * <Box blueGray50--L20></Box> // lighten color
+     * <Box blueGray50--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray50?: ResponsiveBoolean
+    /**
+     * Set color to blueGray100
+     * ```css
+     * { color: #f1f5f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray100></Box>
+     * <Box blueGray100--T20></Box> // transparentize color
+     * <Box blueGray100--O20></Box> // opacify color
+     * <Box blueGray100--L20></Box> // lighten color
+     * <Box blueGray100--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray100?: ResponsiveBoolean
+    /**
+     * Set color to blueGray200
+     * ```css
+     * { color: #e2e8f0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray200></Box>
+     * <Box blueGray200--T20></Box> // transparentize color
+     * <Box blueGray200--O20></Box> // opacify color
+     * <Box blueGray200--L20></Box> // lighten color
+     * <Box blueGray200--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray200?: ResponsiveBoolean
+    /**
+     * Set color to blueGray300
+     * ```css
+     * { color: #cbd5e1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray300></Box>
+     * <Box blueGray300--T20></Box> // transparentize color
+     * <Box blueGray300--O20></Box> // opacify color
+     * <Box blueGray300--L20></Box> // lighten color
+     * <Box blueGray300--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray300?: ResponsiveBoolean
+    /**
+     * Set color to blueGray400
+     * ```css
+     * { color: #94a3b8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray400></Box>
+     * <Box blueGray400--T20></Box> // transparentize color
+     * <Box blueGray400--O20></Box> // opacify color
+     * <Box blueGray400--L20></Box> // lighten color
+     * <Box blueGray400--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray400?: ResponsiveBoolean
+    /**
+     * Set color to blueGray500
+     * ```css
+     * { color: #64748b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray500></Box>
+     * <Box blueGray500--T20></Box> // transparentize color
+     * <Box blueGray500--O20></Box> // opacify color
+     * <Box blueGray500--L20></Box> // lighten color
+     * <Box blueGray500--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray500?: ResponsiveBoolean
+    /**
+     * Set color to blueGray600
+     * ```css
+     * { color: #475569; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray600></Box>
+     * <Box blueGray600--T20></Box> // transparentize color
+     * <Box blueGray600--O20></Box> // opacify color
+     * <Box blueGray600--L20></Box> // lighten color
+     * <Box blueGray600--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray600?: ResponsiveBoolean
+    /**
+     * Set color to blueGray700
+     * ```css
+     * { color: #334155; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray700></Box>
+     * <Box blueGray700--T20></Box> // transparentize color
+     * <Box blueGray700--O20></Box> // opacify color
+     * <Box blueGray700--L20></Box> // lighten color
+     * <Box blueGray700--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray700?: ResponsiveBoolean
+    /**
+     * Set color to blueGray800
+     * ```css
+     * { color: #1e293b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray800></Box>
+     * <Box blueGray800--T20></Box> // transparentize color
+     * <Box blueGray800--O20></Box> // opacify color
+     * <Box blueGray800--L20></Box> // lighten color
+     * <Box blueGray800--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray800?: ResponsiveBoolean
+    /**
+     * Set color to blueGray900
+     * ```css
+     * { color: #0f172a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blueGray900></Box>
+     * <Box blueGray900--T20></Box> // transparentize color
+     * <Box blueGray900--O20></Box> // opacify color
+     * <Box blueGray900--L20></Box> // lighten color
+     * <Box blueGray900--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blueGray900?: ResponsiveBoolean
   }
 }
