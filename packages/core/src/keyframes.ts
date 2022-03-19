@@ -12,7 +12,7 @@ type Input = Record<string, CSSProperties>
 export function keyframes(input: Input, name?: string): string {
   const content = Object.entries(input).reduce<string>((result, [key, value]) => {
     const str = Object.entries(value).reduce<string>((r, [k, v]) => {
-      return r + `${k}: ${v};`
+      return r + `${jsKeyToCssKey(k)}: ${v};`
     }, '')
     return result + `${jsKeyToCssKey(key)} {${str}}`
   }, '')
