@@ -40,7 +40,7 @@ export function fowerSveltePreprocess(): PreprocessorGroup {
     markup: async ({ filename, content }) => {
       let propList: any[] = []
 
-      if (filename.endsWith('@sapper/internal/App.svelte')) return { code: content }
+      if (filename?.endsWith('@sapper/internal/App.svelte')) return { code: content }
 
       const processor: any = posthtml([
         (tree) => {
