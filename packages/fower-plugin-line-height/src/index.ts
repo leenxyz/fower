@@ -6,13 +6,18 @@ export function isMatch(key: string) {
 }
 
 export function toStyle({ key, value, isValueProp }: Atom, parser: Parser): any {
-  if (isValueProp) return { lineHeight: value }
+  if (isValueProp) {
+    if (/^\d+$/.test(value)) return { lineHeight: Number(value) }
+    return { lineHeight: value }
+  }
 
   const lineHeights: any = parser.store.getTheme().lineHeights
   const type = key.replace(/^leading/, '')
   const presetValue = lineHeights[downFirst(type)]
 
   if (presetValue) return { lineHeight: presetValue }
+
+  if (/^\d+$/.test(value)) return { lineHeight: Number(value) }
 
   return { lineHeight: value }
 }
@@ -22,6 +27,7 @@ export default (): FowerPlugin => {
     isMatch,
     handleAtom(atom, parser) {
       atom.style = toStyle(atom, parser)
+      console.log('atom:', atom)
       return atom
     },
   }

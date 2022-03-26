@@ -4,8 +4,8 @@ export default function Demo() {
   return (
     <Box textXL>
       <Box leading-20>Lorem ipsum dolor sit amet...</Box>
-      <Box leading-3em>Lorem ipsum dolor sit amet...</Box>
-      <Box leading="1.5em">Lorem ipsum dolor sit amet...</Box>
+      {/* <Box leading-3em>Lorem ipsum dolor sit amet...</Box> */}
+      {/* <Box leading="1.5em">Lorem ipsum dolor sit amet...</Box> */}
     </Box>
   );
   return (
