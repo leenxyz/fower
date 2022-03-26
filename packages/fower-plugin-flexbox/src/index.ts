@@ -21,6 +21,10 @@ export function toStyle(atom: Atom) {
   const { key, value } = atom
   const style: any = {}
 
+  if (key === 'flex' && /^\d+/.test(value)) {
+    return { flex: Number(value) }
+  }
+
   if (wrapReg.test(key) && atom.isTruePropValue) {
     const postfix = key.replace(/^flex/, '')
     style.flexWrap = kebab(postfix).toLowerCase()
@@ -30,6 +34,7 @@ export function toStyle(atom: Atom) {
   if (isFlexProps(key)) {
     const shouldKebab = /^flex(Grow|Shrink|Basis|Wrap)$/i.test(key)
     const newKey = shouldKebab ? kebab(key.replace(/^flex/, 'flex-')) : key
+
     style[newKey] = value
   }
 
@@ -51,6 +56,7 @@ export default (): FowerPlugin => {
       } else {
         atom.style = toStyle(atom)
       }
+      console.log('atom:', atom)
 
       return atom
     },
