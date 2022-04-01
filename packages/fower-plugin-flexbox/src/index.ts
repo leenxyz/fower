@@ -56,7 +56,6 @@ export default (): FowerPlugin => {
       } else {
         atom.style = toStyle(atom)
       }
-      console.log('atom:', atom)
 
       return atom
     },
