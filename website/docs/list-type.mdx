@@ -5,13 +5,18 @@ title: List Type
 
 Use `h-{value}` props to controll element height.
 
-| Atomic Props | CSS Properties            |
-| ------------ | ------------------------- |
-| listNone     | list-style-type: none;    |
-| listDisc     | list-style-type: disc;    |
-| listDecimal  | list-style-type: decimal; |
-| listSquare   | list-style-type: square;  |
-| listCircle   | list-style-type: circle;  |
+| Atomic Props            | CSS Properties                          |
+| ----------------------- | --------------------------------------- |
+| listNone                | list-style-type: none;                  |
+| listDisc                | list-style-type: disc;                  |
+| listDecimal             | list-style-type: decimal;               |
+| listSquare              | list-style-type: square;                |
+| listCircle              | list-style-type: circle;                |
+| listTradChineseInformal | list-style-type: trad-chinese-informal; |
+| listLowerRoman          | list-style-type: lower-roman;           |
+| listUpperRoman          | list-style-type: upper-roman;           |
+| listLowerAlpha          | list-style-type: lower-alpha;           |
+| listUpperAlpha          | list-style-type: upper-alpha;           |
 
 ## Usage
 
@@ -50,6 +55,27 @@ Use `h-{value}` props to controll element height.
   <Box as="ul" listTradChineseInformal>
     <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
 
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listLowerRoman>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listUpperRoman>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listLowerAlpha>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
+  </Box>
+
+  <Box as="ul" listUpperAlpha>
+    <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
     <Box as="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit</Box>
   </Box>
 </Box>
