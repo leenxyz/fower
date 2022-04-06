@@ -27,7 +27,6 @@ export default (): FowerPlugin => {
     isMatch,
     handleAtom(atom, parser) {
       atom.style = toStyle(atom, parser)
-      console.log('atom:', atom)
       return atom
     },
   }
