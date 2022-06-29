@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-rounded",
-  "version": "1.71.0",
+  "version": "1.72.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-rounded.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.71.0",
-    "@fower/core": "^1.71.0",
-    "@fower/utils": "^1.71.0"
+    "@fower/atomic-props": "^1.72.0",
+    "@fower/core": "^1.72.0",
+    "@fower/utils": "^1.72.0"
   }
 }
