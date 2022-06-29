@@ -1,14 +1,14 @@
 {
-    "name": "@fower/atomic-props",
-    "version": "1.71.0",
-    "license": "MIT",
-    "main": "index.js",
-    "types": "index.d.ts",
-    "scripts": {
-        "build": "echo 'build'",
-        "test": "echo 'build:test'"
-    },
-    "dependencies": {
-        "csstype": "^3.0.8"
-    }
+  "name": "@fower/atomic-props",
+  "version": "1.71.0",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "echo 'build'",
+    "test": "echo 'build:test'"
+  },
+  "dependencies": {
+    "csstype": "^3.0.8"
+  }
 }
