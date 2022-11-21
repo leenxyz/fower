@@ -3,7 +3,7 @@ import { store, Parser, As } from '@fower/core'
 import { AtomicProps } from '@fower/atomic-props'
 
 export interface BoxComponent<T extends As, P = any> {
-  <AsType extends As = 'div'>(
+  <AsType extends As>(
     props: { as?: AsType } & P &
       Omit<ComponentProps<AsType>, keyof ComponentProps<T>> &
       Omit<ComponentProps<T>, keyof P | 'color'> &
