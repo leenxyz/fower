@@ -3,8 +3,8 @@
   "version": "1.74.0",
   "private": true,
   "dependencies": {
-    "@fower/babel-preset-fower": "^1.74.0",
-    "@fower/react": "^1.74.0",
+    "@fower/babel-preset-fower": "^1.75.0",
+    "@fower/react": "^1.75.0",
     "cra-template-typescript": "1.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
