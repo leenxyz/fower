@@ -1,7 +1,7 @@
 {
   "name": "example-svelte-webpack",
   "description": "example-svelte-webpack",
-  "version": "1.74.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "sapper dev",

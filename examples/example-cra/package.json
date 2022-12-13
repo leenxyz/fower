@@ -1,6 +1,6 @@
 {
   "name": "example-cra",
-  "version": "1.74.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fower/babel-preset-fower": "^1.75.0",

@@ -1,6 +1,6 @@
 {
   "name": "example-svelte-rollup",
-  "version": "1.74.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "echo",

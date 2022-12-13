@@ -1,6 +1,6 @@
 {
   "name": "@fower/example-react-ssr",
-  "version": "1.74.0",
+  "version": "1.0.0",
   "description": "",
   "private": true,
   "main": "index.js",

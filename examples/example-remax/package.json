@@ -1,7 +1,7 @@
 {
   "name": "@fower/example-remax",
   "private": true,
-  "version": "1.74.0",
+  "version": "1.0.0",
   "description": "Remax Project With TypeScript",
   "main": "index.js",
   "keywords": [],
