@@ -269,1925 +269,605 @@ declare module '@fower/atomic-props' {
      */
     bgBrand900?: ResponsiveBoolean
     /**
-     * Set background to rose50
+     * Set background to slate50
      * ```css
-     * { background-color: #fff1f2; }
+     * { background-color: #f8fafc; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose50></Box>
+     * <Box bgSlate50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose50?: ResponsiveBoolean
+    bgSlate50?: ResponsiveBoolean
     /**
-     * Set background to rose100
+     * Set background to slate100
      * ```css
-     * { background-color: #ffe4e6; }
+     * { background-color: #f1f5f9; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose100></Box>
+     * <Box bgSlate100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose100?: ResponsiveBoolean
+    bgSlate100?: ResponsiveBoolean
     /**
-     * Set background to rose200
+     * Set background to slate200
      * ```css
-     * { background-color: #fecdd3; }
+     * { background-color: #e2e8f0; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose200></Box>
+     * <Box bgSlate200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose200?: ResponsiveBoolean
+    bgSlate200?: ResponsiveBoolean
     /**
-     * Set background to rose300
+     * Set background to slate300
      * ```css
-     * { background-color: #fda4af; }
+     * { background-color: #cbd5e1; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose300></Box>
+     * <Box bgSlate300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose300?: ResponsiveBoolean
+    bgSlate300?: ResponsiveBoolean
     /**
-     * Set background to rose400
+     * Set background to slate400
      * ```css
-     * { background-color: #fb7185; }
+     * { background-color: #94a3b8; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose400></Box>
+     * <Box bgSlate400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose400?: ResponsiveBoolean
+    bgSlate400?: ResponsiveBoolean
     /**
-     * Set background to rose500
+     * Set background to slate500
      * ```css
-     * { background-color: #f43f5e; }
+     * { background-color: #64748b; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose500></Box>
+     * <Box bgSlate500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose500?: ResponsiveBoolean
+    bgSlate500?: ResponsiveBoolean
     /**
-     * Set background to rose600
+     * Set background to slate600
      * ```css
-     * { background-color: #e11d48; }
+     * { background-color: #475569; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose600></Box>
+     * <Box bgSlate600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose600?: ResponsiveBoolean
+    bgSlate600?: ResponsiveBoolean
     /**
-     * Set background to rose700
+     * Set background to slate700
      * ```css
-     * { background-color: #be123c; }
+     * { background-color: #334155; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose700></Box>
+     * <Box bgSlate700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose700?: ResponsiveBoolean
+    bgSlate700?: ResponsiveBoolean
     /**
-     * Set background to rose800
+     * Set background to slate800
      * ```css
-     * { background-color: #9f1239; }
+     * { background-color: #1e293b; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose800></Box>
+     * <Box bgSlate800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose800?: ResponsiveBoolean
+    bgSlate800?: ResponsiveBoolean
     /**
-     * Set background to rose900
+     * Set background to slate900
      * ```css
-     * { background-color: #881337; }
+     * { background-color: #0f172a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgRose900></Box>
+     * <Box bgSlate900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgRose900?: ResponsiveBoolean
+    bgSlate900?: ResponsiveBoolean
     /**
-     * Set background to pink50
+     * Set background to gray50
      * ```css
-     * { background-color: #fdf2f8; }
+     * { background-color: #f9fafb; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink50></Box>
+     * <Box bgGray50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink50?: ResponsiveBoolean
+    bgGray50?: ResponsiveBoolean
     /**
-     * Set background to pink100
+     * Set background to gray100
      * ```css
-     * { background-color: #fce7f3; }
+     * { background-color: #f3f4f6; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink100></Box>
+     * <Box bgGray100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink100?: ResponsiveBoolean
+    bgGray100?: ResponsiveBoolean
     /**
-     * Set background to pink200
+     * Set background to gray200
      * ```css
-     * { background-color: #fbcfe8; }
+     * { background-color: #e5e7eb; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink200></Box>
+     * <Box bgGray200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink200?: ResponsiveBoolean
+    bgGray200?: ResponsiveBoolean
     /**
-     * Set background to pink300
+     * Set background to gray300
      * ```css
-     * { background-color: #f9a8d4; }
+     * { background-color: #d1d5db; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink300></Box>
+     * <Box bgGray300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink300?: ResponsiveBoolean
+    bgGray300?: ResponsiveBoolean
     /**
-     * Set background to pink400
+     * Set background to gray400
      * ```css
-     * { background-color: #f472b6; }
+     * { background-color: #9ca3af; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink400></Box>
+     * <Box bgGray400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink400?: ResponsiveBoolean
+    bgGray400?: ResponsiveBoolean
     /**
-     * Set background to pink500
+     * Set background to gray500
      * ```css
-     * { background-color: #ec4899; }
+     * { background-color: #6b7280; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink500></Box>
+     * <Box bgGray500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink500?: ResponsiveBoolean
+    bgGray500?: ResponsiveBoolean
     /**
-     * Set background to pink600
+     * Set background to gray600
      * ```css
-     * { background-color: #db2777; }
+     * { background-color: #4b5563; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink600></Box>
+     * <Box bgGray600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink600?: ResponsiveBoolean
+    bgGray600?: ResponsiveBoolean
     /**
-     * Set background to pink700
+     * Set background to gray700
      * ```css
-     * { background-color: #be185d; }
+     * { background-color: #374151; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink700></Box>
+     * <Box bgGray700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink700?: ResponsiveBoolean
+    bgGray700?: ResponsiveBoolean
     /**
-     * Set background to pink800
+     * Set background to gray800
      * ```css
-     * { background-color: #9d174d; }
+     * { background-color: #1f2937; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink800></Box>
+     * <Box bgGray800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink800?: ResponsiveBoolean
+    bgGray800?: ResponsiveBoolean
     /**
-     * Set background to pink900
+     * Set background to gray900
      * ```css
-     * { background-color: #831843; }
+     * { background-color: #111827; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPink900></Box>
+     * <Box bgGray900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPink900?: ResponsiveBoolean
+    bgGray900?: ResponsiveBoolean
     /**
-     * Set background to fuchsia50
+     * Set background to zinc50
      * ```css
-     * { background-color: #fdf4ff; }
+     * { background-color: #fafafa; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia50></Box>
+     * <Box bgZinc50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia50?: ResponsiveBoolean
+    bgZinc50?: ResponsiveBoolean
     /**
-     * Set background to fuchsia100
+     * Set background to zinc100
      * ```css
-     * { background-color: #fae8ff; }
+     * { background-color: #f4f4f5; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia100></Box>
+     * <Box bgZinc100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia100?: ResponsiveBoolean
+    bgZinc100?: ResponsiveBoolean
     /**
-     * Set background to fuchsia200
+     * Set background to zinc200
      * ```css
-     * { background-color: #f5d0fe; }
+     * { background-color: #e4e4e7; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia200></Box>
+     * <Box bgZinc200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia200?: ResponsiveBoolean
+    bgZinc200?: ResponsiveBoolean
     /**
-     * Set background to fuchsia300
+     * Set background to zinc300
      * ```css
-     * { background-color: #f0abfc; }
+     * { background-color: #d4d4d8; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia300></Box>
+     * <Box bgZinc300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia300?: ResponsiveBoolean
+    bgZinc300?: ResponsiveBoolean
     /**
-     * Set background to fuchsia400
+     * Set background to zinc400
      * ```css
-     * { background-color: #e879f9; }
+     * { background-color: #a1a1aa; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia400></Box>
+     * <Box bgZinc400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia400?: ResponsiveBoolean
+    bgZinc400?: ResponsiveBoolean
     /**
-     * Set background to fuchsia500
+     * Set background to zinc500
      * ```css
-     * { background-color: #d946ef; }
+     * { background-color: #71717a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia500></Box>
+     * <Box bgZinc500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia500?: ResponsiveBoolean
+    bgZinc500?: ResponsiveBoolean
     /**
-     * Set background to fuchsia600
+     * Set background to zinc600
      * ```css
-     * { background-color: #c026d3; }
+     * { background-color: #52525b; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia600></Box>
+     * <Box bgZinc600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia600?: ResponsiveBoolean
+    bgZinc600?: ResponsiveBoolean
     /**
-     * Set background to fuchsia700
+     * Set background to zinc700
      * ```css
-     * { background-color: #a21caf; }
+     * { background-color: #3f3f46; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia700></Box>
+     * <Box bgZinc700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia700?: ResponsiveBoolean
+    bgZinc700?: ResponsiveBoolean
     /**
-     * Set background to fuchsia800
+     * Set background to zinc800
      * ```css
-     * { background-color: #86198f; }
+     * { background-color: #27272a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia800></Box>
+     * <Box bgZinc800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia800?: ResponsiveBoolean
+    bgZinc800?: ResponsiveBoolean
     /**
-     * Set background to fuchsia900
+     * Set background to zinc900
      * ```css
-     * { background-color: #701a75; }
+     * { background-color: #18181b; }
      * ```
      * @example
      * ```tsx
-     * <Box bgFuchsia900></Box>
+     * <Box bgZinc900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgFuchsia900?: ResponsiveBoolean
+    bgZinc900?: ResponsiveBoolean
     /**
-     * Set background to purple50
+     * Set background to neutral50
      * ```css
-     * { background-color: #faf5ff; }
+     * { background-color: #fafafa; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple50></Box>
+     * <Box bgNeutral50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple50?: ResponsiveBoolean
+    bgNeutral50?: ResponsiveBoolean
     /**
-     * Set background to purple100
+     * Set background to neutral100
      * ```css
-     * { background-color: #f3e8ff; }
+     * { background-color: #f5f5f5; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple100></Box>
+     * <Box bgNeutral100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple100?: ResponsiveBoolean
+    bgNeutral100?: ResponsiveBoolean
     /**
-     * Set background to purple200
+     * Set background to neutral200
      * ```css
-     * { background-color: #e9d5ff; }
+     * { background-color: #e5e5e5; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple200></Box>
+     * <Box bgNeutral200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple200?: ResponsiveBoolean
+    bgNeutral200?: ResponsiveBoolean
     /**
-     * Set background to purple300
+     * Set background to neutral300
      * ```css
-     * { background-color: #d8b4fe; }
+     * { background-color: #d4d4d4; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple300></Box>
+     * <Box bgNeutral300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple300?: ResponsiveBoolean
+    bgNeutral300?: ResponsiveBoolean
     /**
-     * Set background to purple400
+     * Set background to neutral400
      * ```css
-     * { background-color: #c084fc; }
+     * { background-color: #a3a3a3; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple400></Box>
+     * <Box bgNeutral400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple400?: ResponsiveBoolean
+    bgNeutral400?: ResponsiveBoolean
     /**
-     * Set background to purple500
+     * Set background to neutral500
      * ```css
-     * { background-color: #a855f7; }
+     * { background-color: #737373; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple500></Box>
+     * <Box bgNeutral500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple500?: ResponsiveBoolean
+    bgNeutral500?: ResponsiveBoolean
     /**
-     * Set background to purple600
+     * Set background to neutral600
      * ```css
-     * { background-color: #9333ea; }
+     * { background-color: #525252; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple600></Box>
+     * <Box bgNeutral600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple600?: ResponsiveBoolean
+    bgNeutral600?: ResponsiveBoolean
     /**
-     * Set background to purple700
+     * Set background to neutral700
      * ```css
-     * { background-color: #7e22ce; }
+     * { background-color: #404040; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple700></Box>
+     * <Box bgNeutral700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple700?: ResponsiveBoolean
+    bgNeutral700?: ResponsiveBoolean
     /**
-     * Set background to purple800
+     * Set background to neutral800
      * ```css
-     * { background-color: #6b21a8; }
+     * { background-color: #262626; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple800></Box>
+     * <Box bgNeutral800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple800?: ResponsiveBoolean
+    bgNeutral800?: ResponsiveBoolean
     /**
-     * Set background to purple900
+     * Set background to neutral900
      * ```css
-     * { background-color: #581c87; }
+     * { background-color: #171717; }
      * ```
      * @example
      * ```tsx
-     * <Box bgPurple900></Box>
+     * <Box bgNeutral900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgPurple900?: ResponsiveBoolean
+    bgNeutral900?: ResponsiveBoolean
     /**
-     * Set background to violet50
+     * Set background to stone50
      * ```css
-     * { background-color: #f5f3ff; }
+     * { background-color: #fafaf9; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet50></Box>
+     * <Box bgStone50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet50?: ResponsiveBoolean
+    bgStone50?: ResponsiveBoolean
     /**
-     * Set background to violet100
+     * Set background to stone100
      * ```css
-     * { background-color: #ede9fe; }
+     * { background-color: #f5f5f4; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet100></Box>
+     * <Box bgStone100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet100?: ResponsiveBoolean
+    bgStone100?: ResponsiveBoolean
     /**
-     * Set background to violet200
+     * Set background to stone200
      * ```css
-     * { background-color: #ddd6fe; }
+     * { background-color: #e7e5e4; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet200></Box>
+     * <Box bgStone200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet200?: ResponsiveBoolean
+    bgStone200?: ResponsiveBoolean
     /**
-     * Set background to violet300
+     * Set background to stone300
      * ```css
-     * { background-color: #c4b5fd; }
+     * { background-color: #d6d3d1; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet300></Box>
+     * <Box bgStone300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet300?: ResponsiveBoolean
+    bgStone300?: ResponsiveBoolean
     /**
-     * Set background to violet400
+     * Set background to stone400
      * ```css
-     * { background-color: #a78bfa; }
+     * { background-color: #a8a29e; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet400></Box>
+     * <Box bgStone400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet400?: ResponsiveBoolean
+    bgStone400?: ResponsiveBoolean
     /**
-     * Set background to violet500
+     * Set background to stone500
      * ```css
-     * { background-color: #8b5cf6; }
+     * { background-color: #78716c; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet500></Box>
+     * <Box bgStone500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet500?: ResponsiveBoolean
+    bgStone500?: ResponsiveBoolean
     /**
-     * Set background to violet600
+     * Set background to stone600
      * ```css
-     * { background-color: #7c3aed; }
+     * { background-color: #57534e; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet600></Box>
+     * <Box bgStone600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet600?: ResponsiveBoolean
+    bgStone600?: ResponsiveBoolean
     /**
-     * Set background to violet700
+     * Set background to stone700
      * ```css
-     * { background-color: #6d28d9; }
+     * { background-color: #44403c; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet700></Box>
+     * <Box bgStone700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet700?: ResponsiveBoolean
+    bgStone700?: ResponsiveBoolean
     /**
-     * Set background to violet800
+     * Set background to stone800
      * ```css
-     * { background-color: #5b21b6; }
+     * { background-color: #292524; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet800></Box>
+     * <Box bgStone800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet800?: ResponsiveBoolean
+    bgStone800?: ResponsiveBoolean
     /**
-     * Set background to violet900
+     * Set background to stone900
      * ```css
-     * { background-color: #4c1d95; }
+     * { background-color: #1c1917; }
      * ```
      * @example
      * ```tsx
-     * <Box bgViolet900></Box>
+     * <Box bgStone900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgViolet900?: ResponsiveBoolean
-    /**
-     * Set background to indigo50
-     * ```css
-     * { background-color: #eef2ff; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo50?: ResponsiveBoolean
-    /**
-     * Set background to indigo100
-     * ```css
-     * { background-color: #e0e7ff; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo100?: ResponsiveBoolean
-    /**
-     * Set background to indigo200
-     * ```css
-     * { background-color: #c7d2fe; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo200?: ResponsiveBoolean
-    /**
-     * Set background to indigo300
-     * ```css
-     * { background-color: #a5b4fc; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo300?: ResponsiveBoolean
-    /**
-     * Set background to indigo400
-     * ```css
-     * { background-color: #818cf8; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo400?: ResponsiveBoolean
-    /**
-     * Set background to indigo500
-     * ```css
-     * { background-color: #6366f1; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo500?: ResponsiveBoolean
-    /**
-     * Set background to indigo600
-     * ```css
-     * { background-color: #4f46e5; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo600?: ResponsiveBoolean
-    /**
-     * Set background to indigo700
-     * ```css
-     * { background-color: #4338ca; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo700?: ResponsiveBoolean
-    /**
-     * Set background to indigo800
-     * ```css
-     * { background-color: #3730a3; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo800?: ResponsiveBoolean
-    /**
-     * Set background to indigo900
-     * ```css
-     * { background-color: #312e81; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgIndigo900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgIndigo900?: ResponsiveBoolean
-    /**
-     * Set background to blue50
-     * ```css
-     * { background-color: #eff6ff; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue50?: ResponsiveBoolean
-    /**
-     * Set background to blue100
-     * ```css
-     * { background-color: #dbeafe; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue100?: ResponsiveBoolean
-    /**
-     * Set background to blue200
-     * ```css
-     * { background-color: #bfdbfe; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue200?: ResponsiveBoolean
-    /**
-     * Set background to blue300
-     * ```css
-     * { background-color: #93c5fd; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue300?: ResponsiveBoolean
-    /**
-     * Set background to blue400
-     * ```css
-     * { background-color: #60a5fa; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue400?: ResponsiveBoolean
-    /**
-     * Set background to blue500
-     * ```css
-     * { background-color: #3b82f6; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue500?: ResponsiveBoolean
-    /**
-     * Set background to blue600
-     * ```css
-     * { background-color: #2563eb; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue600?: ResponsiveBoolean
-    /**
-     * Set background to blue700
-     * ```css
-     * { background-color: #1d4ed8; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue700?: ResponsiveBoolean
-    /**
-     * Set background to blue800
-     * ```css
-     * { background-color: #1e40af; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue800?: ResponsiveBoolean
-    /**
-     * Set background to blue900
-     * ```css
-     * { background-color: #1e3a8a; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgBlue900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgBlue900?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue50
-     * ```css
-     * { background-color: #f0f9ff; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue50?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue100
-     * ```css
-     * { background-color: #e0f2fe; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue100?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue200
-     * ```css
-     * { background-color: #bae6fd; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue200?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue300
-     * ```css
-     * { background-color: #7dd3fc; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue300?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue400
-     * ```css
-     * { background-color: #38bdf8; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue400?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue500
-     * ```css
-     * { background-color: #0ea5e9; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue500?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue600
-     * ```css
-     * { background-color: #0284c7; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue600?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue700
-     * ```css
-     * { background-color: #0369a1; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue700?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue800
-     * ```css
-     * { background-color: #075985; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue800?: ResponsiveBoolean
-    /**
-     * Set background to lightBlue900
-     * ```css
-     * { background-color: #0c4a6e; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLightBlue900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLightBlue900?: ResponsiveBoolean
-    /**
-     * Set background to cyan50
-     * ```css
-     * { background-color: #ecfeff; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan50?: ResponsiveBoolean
-    /**
-     * Set background to cyan100
-     * ```css
-     * { background-color: #cffafe; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan100?: ResponsiveBoolean
-    /**
-     * Set background to cyan200
-     * ```css
-     * { background-color: #a5f3fc; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan200?: ResponsiveBoolean
-    /**
-     * Set background to cyan300
-     * ```css
-     * { background-color: #67e8f9; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan300?: ResponsiveBoolean
-    /**
-     * Set background to cyan400
-     * ```css
-     * { background-color: #22d3ee; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan400?: ResponsiveBoolean
-    /**
-     * Set background to cyan500
-     * ```css
-     * { background-color: #06b6d4; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan500?: ResponsiveBoolean
-    /**
-     * Set background to cyan600
-     * ```css
-     * { background-color: #0891b2; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan600?: ResponsiveBoolean
-    /**
-     * Set background to cyan700
-     * ```css
-     * { background-color: #0e7490; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan700?: ResponsiveBoolean
-    /**
-     * Set background to cyan800
-     * ```css
-     * { background-color: #155e75; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan800?: ResponsiveBoolean
-    /**
-     * Set background to cyan900
-     * ```css
-     * { background-color: #164e63; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgCyan900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgCyan900?: ResponsiveBoolean
-    /**
-     * Set background to teal50
-     * ```css
-     * { background-color: #f0fdfa; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal50?: ResponsiveBoolean
-    /**
-     * Set background to teal100
-     * ```css
-     * { background-color: #ccfbf1; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal100?: ResponsiveBoolean
-    /**
-     * Set background to teal200
-     * ```css
-     * { background-color: #99f6e4; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal200?: ResponsiveBoolean
-    /**
-     * Set background to teal300
-     * ```css
-     * { background-color: #5eead4; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal300?: ResponsiveBoolean
-    /**
-     * Set background to teal400
-     * ```css
-     * { background-color: #2dd4bf; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal400?: ResponsiveBoolean
-    /**
-     * Set background to teal500
-     * ```css
-     * { background-color: #14b8a6; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal500?: ResponsiveBoolean
-    /**
-     * Set background to teal600
-     * ```css
-     * { background-color: #0d9488; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal600?: ResponsiveBoolean
-    /**
-     * Set background to teal700
-     * ```css
-     * { background-color: #0f766e; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal700?: ResponsiveBoolean
-    /**
-     * Set background to teal800
-     * ```css
-     * { background-color: #115e59; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal800?: ResponsiveBoolean
-    /**
-     * Set background to teal900
-     * ```css
-     * { background-color: #134e4a; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgTeal900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgTeal900?: ResponsiveBoolean
-    /**
-     * Set background to emerald50
-     * ```css
-     * { background-color: #ecfdf5; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald50?: ResponsiveBoolean
-    /**
-     * Set background to emerald100
-     * ```css
-     * { background-color: #d1fae5; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald100?: ResponsiveBoolean
-    /**
-     * Set background to emerald200
-     * ```css
-     * { background-color: #a7f3d0; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald200?: ResponsiveBoolean
-    /**
-     * Set background to emerald300
-     * ```css
-     * { background-color: #6ee7b7; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald300?: ResponsiveBoolean
-    /**
-     * Set background to emerald400
-     * ```css
-     * { background-color: #34d399; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald400?: ResponsiveBoolean
-    /**
-     * Set background to emerald500
-     * ```css
-     * { background-color: #10b981; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald500?: ResponsiveBoolean
-    /**
-     * Set background to emerald600
-     * ```css
-     * { background-color: #059669; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald600?: ResponsiveBoolean
-    /**
-     * Set background to emerald700
-     * ```css
-     * { background-color: #047857; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald700?: ResponsiveBoolean
-    /**
-     * Set background to emerald800
-     * ```css
-     * { background-color: #065f46; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald800?: ResponsiveBoolean
-    /**
-     * Set background to emerald900
-     * ```css
-     * { background-color: #064e3b; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgEmerald900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgEmerald900?: ResponsiveBoolean
-    /**
-     * Set background to green50
-     * ```css
-     * { background-color: #f0fdf4; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen50?: ResponsiveBoolean
-    /**
-     * Set background to green100
-     * ```css
-     * { background-color: #dcfce7; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen100?: ResponsiveBoolean
-    /**
-     * Set background to green200
-     * ```css
-     * { background-color: #bbf7d0; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen200?: ResponsiveBoolean
-    /**
-     * Set background to green300
-     * ```css
-     * { background-color: #86efac; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen300?: ResponsiveBoolean
-    /**
-     * Set background to green400
-     * ```css
-     * { background-color: #4ade80; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen400?: ResponsiveBoolean
-    /**
-     * Set background to green500
-     * ```css
-     * { background-color: #22c55e; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen500?: ResponsiveBoolean
-    /**
-     * Set background to green600
-     * ```css
-     * { background-color: #16a34a; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen600?: ResponsiveBoolean
-    /**
-     * Set background to green700
-     * ```css
-     * { background-color: #15803d; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen700?: ResponsiveBoolean
-    /**
-     * Set background to green800
-     * ```css
-     * { background-color: #166534; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen800?: ResponsiveBoolean
-    /**
-     * Set background to green900
-     * ```css
-     * { background-color: #14532d; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgGreen900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgGreen900?: ResponsiveBoolean
-    /**
-     * Set background to lime50
-     * ```css
-     * { background-color: #f7fee7; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime50?: ResponsiveBoolean
-    /**
-     * Set background to lime100
-     * ```css
-     * { background-color: #ecfccb; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime100?: ResponsiveBoolean
-    /**
-     * Set background to lime200
-     * ```css
-     * { background-color: #d9f99d; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime200?: ResponsiveBoolean
-    /**
-     * Set background to lime300
-     * ```css
-     * { background-color: #bef264; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime300?: ResponsiveBoolean
-    /**
-     * Set background to lime400
-     * ```css
-     * { background-color: #a3e635; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime400?: ResponsiveBoolean
-    /**
-     * Set background to lime500
-     * ```css
-     * { background-color: #84cc16; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime500?: ResponsiveBoolean
-    /**
-     * Set background to lime600
-     * ```css
-     * { background-color: #65a30d; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime600?: ResponsiveBoolean
-    /**
-     * Set background to lime700
-     * ```css
-     * { background-color: #4d7c0f; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime700?: ResponsiveBoolean
-    /**
-     * Set background to lime800
-     * ```css
-     * { background-color: #3f6212; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime800?: ResponsiveBoolean
-    /**
-     * Set background to lime900
-     * ```css
-     * { background-color: #365314; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgLime900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgLime900?: ResponsiveBoolean
-    /**
-     * Set background to yellow50
-     * ```css
-     * { background-color: #fefce8; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow50?: ResponsiveBoolean
-    /**
-     * Set background to yellow100
-     * ```css
-     * { background-color: #fef9c3; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow100?: ResponsiveBoolean
-    /**
-     * Set background to yellow200
-     * ```css
-     * { background-color: #fef08a; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow200?: ResponsiveBoolean
-    /**
-     * Set background to yellow300
-     * ```css
-     * { background-color: #fde047; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow300?: ResponsiveBoolean
-    /**
-     * Set background to yellow400
-     * ```css
-     * { background-color: #facc15; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow400?: ResponsiveBoolean
-    /**
-     * Set background to yellow500
-     * ```css
-     * { background-color: #eab308; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow500?: ResponsiveBoolean
-    /**
-     * Set background to yellow600
-     * ```css
-     * { background-color: #ca8a04; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow600?: ResponsiveBoolean
-    /**
-     * Set background to yellow700
-     * ```css
-     * { background-color: #a16207; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow700?: ResponsiveBoolean
-    /**
-     * Set background to yellow800
-     * ```css
-     * { background-color: #854d0e; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow800?: ResponsiveBoolean
-    /**
-     * Set background to yellow900
-     * ```css
-     * { background-color: #713f12; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgYellow900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgYellow900?: ResponsiveBoolean
-    /**
-     * Set background to amber50
-     * ```css
-     * { background-color: #fffbeb; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber50?: ResponsiveBoolean
-    /**
-     * Set background to amber100
-     * ```css
-     * { background-color: #fef3c7; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber100?: ResponsiveBoolean
-    /**
-     * Set background to amber200
-     * ```css
-     * { background-color: #fde68a; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber200?: ResponsiveBoolean
-    /**
-     * Set background to amber300
-     * ```css
-     * { background-color: #fcd34d; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber300?: ResponsiveBoolean
-    /**
-     * Set background to amber400
-     * ```css
-     * { background-color: #fbbf24; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber400?: ResponsiveBoolean
-    /**
-     * Set background to amber500
-     * ```css
-     * { background-color: #f59e0b; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber500?: ResponsiveBoolean
-    /**
-     * Set background to amber600
-     * ```css
-     * { background-color: #d97706; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber600?: ResponsiveBoolean
-    /**
-     * Set background to amber700
-     * ```css
-     * { background-color: #b45309; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber700?: ResponsiveBoolean
-    /**
-     * Set background to amber800
-     * ```css
-     * { background-color: #92400e; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber800?: ResponsiveBoolean
-    /**
-     * Set background to amber900
-     * ```css
-     * { background-color: #78350f; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgAmber900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgAmber900?: ResponsiveBoolean
-    /**
-     * Set background to orange50
-     * ```css
-     * { background-color: #fff7ed; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange50></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange50?: ResponsiveBoolean
-    /**
-     * Set background to orange100
-     * ```css
-     * { background-color: #ffedd5; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange100></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange100?: ResponsiveBoolean
-    /**
-     * Set background to orange200
-     * ```css
-     * { background-color: #fed7aa; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange200></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange200?: ResponsiveBoolean
-    /**
-     * Set background to orange300
-     * ```css
-     * { background-color: #fdba74; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange300></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange300?: ResponsiveBoolean
-    /**
-     * Set background to orange400
-     * ```css
-     * { background-color: #fb923c; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange400></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange400?: ResponsiveBoolean
-    /**
-     * Set background to orange500
-     * ```css
-     * { background-color: #f97316; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange500></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange500?: ResponsiveBoolean
-    /**
-     * Set background to orange600
-     * ```css
-     * { background-color: #ea580c; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange600></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange600?: ResponsiveBoolean
-    /**
-     * Set background to orange700
-     * ```css
-     * { background-color: #c2410c; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange700></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange700?: ResponsiveBoolean
-    /**
-     * Set background to orange800
-     * ```css
-     * { background-color: #9a3412; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange800></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange800?: ResponsiveBoolean
-    /**
-     * Set background to orange900
-     * ```css
-     * { background-color: #7c2d12; }
-     * ```
-     * @example
-     * ```tsx
-     * <Box bgOrange900></Box>
-     * ```
-     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
-     */
-    bgOrange900?: ResponsiveBoolean
+    bgStone900?: ResponsiveBoolean
     /**
      * Set background to red50
      * ```css
@@ -2309,604 +989,1924 @@ declare module '@fower/atomic-props' {
      */
     bgRed900?: ResponsiveBoolean
     /**
-     * Set background to warmGray50
+     * Set background to orange50
      * ```css
-     * { background-color: #fafaf9; }
+     * { background-color: #fff7ed; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray50></Box>
+     * <Box bgOrange50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray50?: ResponsiveBoolean
+    bgOrange50?: ResponsiveBoolean
     /**
-     * Set background to warmGray100
+     * Set background to orange100
      * ```css
-     * { background-color: #f5f5f4; }
+     * { background-color: #ffedd5; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray100></Box>
+     * <Box bgOrange100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray100?: ResponsiveBoolean
+    bgOrange100?: ResponsiveBoolean
     /**
-     * Set background to warmGray200
+     * Set background to orange200
      * ```css
-     * { background-color: #e7e5e4; }
+     * { background-color: #fed7aa; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray200></Box>
+     * <Box bgOrange200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray200?: ResponsiveBoolean
+    bgOrange200?: ResponsiveBoolean
     /**
-     * Set background to warmGray300
+     * Set background to orange300
      * ```css
-     * { background-color: #d6d3d1; }
+     * { background-color: #fdba74; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray300></Box>
+     * <Box bgOrange300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray300?: ResponsiveBoolean
+    bgOrange300?: ResponsiveBoolean
     /**
-     * Set background to warmGray400
+     * Set background to orange400
      * ```css
-     * { background-color: #a8a29e; }
+     * { background-color: #fb923c; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray400></Box>
+     * <Box bgOrange400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray400?: ResponsiveBoolean
+    bgOrange400?: ResponsiveBoolean
     /**
-     * Set background to warmGray500
+     * Set background to orange500
      * ```css
-     * { background-color: #78716c; }
+     * { background-color: #f97316; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray500></Box>
+     * <Box bgOrange500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray500?: ResponsiveBoolean
+    bgOrange500?: ResponsiveBoolean
     /**
-     * Set background to warmGray600
+     * Set background to orange600
      * ```css
-     * { background-color: #57534e; }
+     * { background-color: #ea580c; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray600></Box>
+     * <Box bgOrange600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray600?: ResponsiveBoolean
+    bgOrange600?: ResponsiveBoolean
     /**
-     * Set background to warmGray700
+     * Set background to orange700
      * ```css
-     * { background-color: #44403c; }
+     * { background-color: #c2410c; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray700></Box>
+     * <Box bgOrange700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray700?: ResponsiveBoolean
+    bgOrange700?: ResponsiveBoolean
     /**
-     * Set background to warmGray800
+     * Set background to orange800
      * ```css
-     * { background-color: #292524; }
+     * { background-color: #9a3412; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray800></Box>
+     * <Box bgOrange800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray800?: ResponsiveBoolean
+    bgOrange800?: ResponsiveBoolean
     /**
-     * Set background to warmGray900
+     * Set background to orange900
      * ```css
-     * { background-color: #1c1917; }
+     * { background-color: #7c2d12; }
      * ```
      * @example
      * ```tsx
-     * <Box bgWarmGray900></Box>
+     * <Box bgOrange900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgWarmGray900?: ResponsiveBoolean
+    bgOrange900?: ResponsiveBoolean
     /**
-     * Set background to trueGray50
+     * Set background to amber50
      * ```css
-     * { background-color: #fafafa; }
+     * { background-color: #fffbeb; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray50></Box>
+     * <Box bgAmber50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray50?: ResponsiveBoolean
+    bgAmber50?: ResponsiveBoolean
     /**
-     * Set background to trueGray100
+     * Set background to amber100
      * ```css
-     * { background-color: #f5f5f5; }
+     * { background-color: #fef3c7; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray100></Box>
+     * <Box bgAmber100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray100?: ResponsiveBoolean
+    bgAmber100?: ResponsiveBoolean
     /**
-     * Set background to trueGray200
+     * Set background to amber200
      * ```css
-     * { background-color: #e5e5e5; }
+     * { background-color: #fde68a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray200></Box>
+     * <Box bgAmber200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray200?: ResponsiveBoolean
+    bgAmber200?: ResponsiveBoolean
     /**
-     * Set background to trueGray300
+     * Set background to amber300
      * ```css
-     * { background-color: #d4d4d4; }
+     * { background-color: #fcd34d; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray300></Box>
+     * <Box bgAmber300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray300?: ResponsiveBoolean
+    bgAmber300?: ResponsiveBoolean
     /**
-     * Set background to trueGray400
+     * Set background to amber400
      * ```css
-     * { background-color: #a3a3a3; }
+     * { background-color: #fbbf24; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray400></Box>
+     * <Box bgAmber400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray400?: ResponsiveBoolean
+    bgAmber400?: ResponsiveBoolean
     /**
-     * Set background to trueGray500
+     * Set background to amber500
      * ```css
-     * { background-color: #737373; }
+     * { background-color: #f59e0b; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray500></Box>
+     * <Box bgAmber500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray500?: ResponsiveBoolean
+    bgAmber500?: ResponsiveBoolean
     /**
-     * Set background to trueGray600
+     * Set background to amber600
      * ```css
-     * { background-color: #525252; }
+     * { background-color: #d97706; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray600></Box>
+     * <Box bgAmber600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray600?: ResponsiveBoolean
+    bgAmber600?: ResponsiveBoolean
     /**
-     * Set background to trueGray700
+     * Set background to amber700
      * ```css
-     * { background-color: #404040; }
+     * { background-color: #b45309; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray700></Box>
+     * <Box bgAmber700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray700?: ResponsiveBoolean
+    bgAmber700?: ResponsiveBoolean
     /**
-     * Set background to trueGray800
+     * Set background to amber800
      * ```css
-     * { background-color: #262626; }
+     * { background-color: #92400e; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray800></Box>
+     * <Box bgAmber800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray800?: ResponsiveBoolean
+    bgAmber800?: ResponsiveBoolean
     /**
-     * Set background to trueGray900
+     * Set background to amber900
      * ```css
-     * { background-color: #171717; }
+     * { background-color: #78350f; }
      * ```
      * @example
      * ```tsx
-     * <Box bgTrueGray900></Box>
+     * <Box bgAmber900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgTrueGray900?: ResponsiveBoolean
+    bgAmber900?: ResponsiveBoolean
     /**
-     * Set background to gray50
+     * Set background to yellow50
      * ```css
-     * { background-color: #fafafa; }
+     * { background-color: #fefce8; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray50></Box>
+     * <Box bgYellow50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray50?: ResponsiveBoolean
+    bgYellow50?: ResponsiveBoolean
     /**
-     * Set background to gray100
+     * Set background to yellow100
      * ```css
-     * { background-color: #f4f4f5; }
+     * { background-color: #fef9c3; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray100></Box>
+     * <Box bgYellow100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray100?: ResponsiveBoolean
+    bgYellow100?: ResponsiveBoolean
     /**
-     * Set background to gray200
+     * Set background to yellow200
      * ```css
-     * { background-color: #e4e4e7; }
+     * { background-color: #fef08a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray200></Box>
+     * <Box bgYellow200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray200?: ResponsiveBoolean
+    bgYellow200?: ResponsiveBoolean
     /**
-     * Set background to gray300
+     * Set background to yellow300
      * ```css
-     * { background-color: #d4d4d8; }
+     * { background-color: #fde047; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray300></Box>
+     * <Box bgYellow300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray300?: ResponsiveBoolean
+    bgYellow300?: ResponsiveBoolean
     /**
-     * Set background to gray400
+     * Set background to yellow400
      * ```css
-     * { background-color: #a1a1aa; }
+     * { background-color: #facc15; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray400></Box>
+     * <Box bgYellow400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray400?: ResponsiveBoolean
+    bgYellow400?: ResponsiveBoolean
     /**
-     * Set background to gray500
+     * Set background to yellow500
      * ```css
-     * { background-color: #71717a; }
+     * { background-color: #eab308; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray500></Box>
+     * <Box bgYellow500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray500?: ResponsiveBoolean
+    bgYellow500?: ResponsiveBoolean
     /**
-     * Set background to gray600
+     * Set background to yellow600
      * ```css
-     * { background-color: #52525b; }
+     * { background-color: #ca8a04; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray600></Box>
+     * <Box bgYellow600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray600?: ResponsiveBoolean
+    bgYellow600?: ResponsiveBoolean
     /**
-     * Set background to gray700
+     * Set background to yellow700
      * ```css
-     * { background-color: #3f3f46; }
+     * { background-color: #a16207; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray700></Box>
+     * <Box bgYellow700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray700?: ResponsiveBoolean
+    bgYellow700?: ResponsiveBoolean
     /**
-     * Set background to gray800
+     * Set background to yellow800
      * ```css
-     * { background-color: #27272a; }
+     * { background-color: #854d0e; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray800></Box>
+     * <Box bgYellow800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray800?: ResponsiveBoolean
+    bgYellow800?: ResponsiveBoolean
     /**
-     * Set background to gray900
+     * Set background to yellow900
      * ```css
-     * { background-color: #18181b; }
+     * { background-color: #713f12; }
      * ```
      * @example
      * ```tsx
-     * <Box bgGray900></Box>
+     * <Box bgYellow900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgGray900?: ResponsiveBoolean
+    bgYellow900?: ResponsiveBoolean
     /**
-     * Set background to coolGray50
+     * Set background to lime50
      * ```css
-     * { background-color: #f9fafb; }
+     * { background-color: #f7fee7; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray50></Box>
+     * <Box bgLime50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray50?: ResponsiveBoolean
+    bgLime50?: ResponsiveBoolean
     /**
-     * Set background to coolGray100
+     * Set background to lime100
      * ```css
-     * { background-color: #f3f4f6; }
+     * { background-color: #ecfccb; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray100></Box>
+     * <Box bgLime100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray100?: ResponsiveBoolean
+    bgLime100?: ResponsiveBoolean
     /**
-     * Set background to coolGray200
+     * Set background to lime200
      * ```css
-     * { background-color: #e5e7eb; }
+     * { background-color: #d9f99d; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray200></Box>
+     * <Box bgLime200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray200?: ResponsiveBoolean
+    bgLime200?: ResponsiveBoolean
     /**
-     * Set background to coolGray300
+     * Set background to lime300
      * ```css
-     * { background-color: #d1d5db; }
+     * { background-color: #bef264; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray300></Box>
+     * <Box bgLime300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray300?: ResponsiveBoolean
+    bgLime300?: ResponsiveBoolean
     /**
-     * Set background to coolGray400
+     * Set background to lime400
      * ```css
-     * { background-color: #9ca3af; }
+     * { background-color: #a3e635; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray400></Box>
+     * <Box bgLime400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray400?: ResponsiveBoolean
+    bgLime400?: ResponsiveBoolean
     /**
-     * Set background to coolGray500
+     * Set background to lime500
      * ```css
-     * { background-color: #6b7280; }
+     * { background-color: #84cc16; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray500></Box>
+     * <Box bgLime500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray500?: ResponsiveBoolean
+    bgLime500?: ResponsiveBoolean
     /**
-     * Set background to coolGray600
+     * Set background to lime600
      * ```css
-     * { background-color: #4b5563; }
+     * { background-color: #65a30d; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray600></Box>
+     * <Box bgLime600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray600?: ResponsiveBoolean
+    bgLime600?: ResponsiveBoolean
     /**
-     * Set background to coolGray700
+     * Set background to lime700
      * ```css
-     * { background-color: #374151; }
+     * { background-color: #4d7c0f; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray700></Box>
+     * <Box bgLime700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray700?: ResponsiveBoolean
+    bgLime700?: ResponsiveBoolean
     /**
-     * Set background to coolGray800
+     * Set background to lime800
      * ```css
-     * { background-color: #1f2937; }
+     * { background-color: #3f6212; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray800></Box>
+     * <Box bgLime800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray800?: ResponsiveBoolean
+    bgLime800?: ResponsiveBoolean
     /**
-     * Set background to coolGray900
+     * Set background to lime900
      * ```css
-     * { background-color: #111827; }
+     * { background-color: #365314; }
      * ```
      * @example
      * ```tsx
-     * <Box bgCoolGray900></Box>
+     * <Box bgLime900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgCoolGray900?: ResponsiveBoolean
+    bgLime900?: ResponsiveBoolean
     /**
-     * Set background to blueGray50
+     * Set background to green50
      * ```css
-     * { background-color: #f8fafc; }
+     * { background-color: #f0fdf4; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray50></Box>
+     * <Box bgGreen50></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray50?: ResponsiveBoolean
+    bgGreen50?: ResponsiveBoolean
     /**
-     * Set background to blueGray100
+     * Set background to green100
      * ```css
-     * { background-color: #f1f5f9; }
+     * { background-color: #dcfce7; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray100></Box>
+     * <Box bgGreen100></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray100?: ResponsiveBoolean
+    bgGreen100?: ResponsiveBoolean
     /**
-     * Set background to blueGray200
+     * Set background to green200
      * ```css
-     * { background-color: #e2e8f0; }
+     * { background-color: #bbf7d0; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray200></Box>
+     * <Box bgGreen200></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray200?: ResponsiveBoolean
+    bgGreen200?: ResponsiveBoolean
     /**
-     * Set background to blueGray300
+     * Set background to green300
      * ```css
-     * { background-color: #cbd5e1; }
+     * { background-color: #86efac; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray300></Box>
+     * <Box bgGreen300></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray300?: ResponsiveBoolean
+    bgGreen300?: ResponsiveBoolean
     /**
-     * Set background to blueGray400
+     * Set background to green400
      * ```css
-     * { background-color: #94a3b8; }
+     * { background-color: #4ade80; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray400></Box>
+     * <Box bgGreen400></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray400?: ResponsiveBoolean
+    bgGreen400?: ResponsiveBoolean
     /**
-     * Set background to blueGray500
+     * Set background to green500
      * ```css
-     * { background-color: #64748b; }
+     * { background-color: #22c55e; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray500></Box>
+     * <Box bgGreen500></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray500?: ResponsiveBoolean
+    bgGreen500?: ResponsiveBoolean
     /**
-     * Set background to blueGray600
+     * Set background to green600
      * ```css
-     * { background-color: #475569; }
+     * { background-color: #16a34a; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray600></Box>
+     * <Box bgGreen600></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray600?: ResponsiveBoolean
+    bgGreen600?: ResponsiveBoolean
     /**
-     * Set background to blueGray700
+     * Set background to green700
      * ```css
-     * { background-color: #334155; }
+     * { background-color: #15803d; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray700></Box>
+     * <Box bgGreen700></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray700?: ResponsiveBoolean
+    bgGreen700?: ResponsiveBoolean
     /**
-     * Set background to blueGray800
+     * Set background to green800
      * ```css
-     * { background-color: #1e293b; }
+     * { background-color: #166534; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray800></Box>
+     * <Box bgGreen800></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray800?: ResponsiveBoolean
+    bgGreen800?: ResponsiveBoolean
     /**
-     * Set background to blueGray900
+     * Set background to green900
      * ```css
-     * { background-color: #0f172a; }
+     * { background-color: #14532d; }
      * ```
      * @example
      * ```tsx
-     * <Box bgBlueGray900></Box>
+     * <Box bgGreen900></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
-    bgBlueGray900?: ResponsiveBoolean
+    bgGreen900?: ResponsiveBoolean
+    /**
+     * Set background to emerald50
+     * ```css
+     * { background-color: #ecfdf5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald50?: ResponsiveBoolean
+    /**
+     * Set background to emerald100
+     * ```css
+     * { background-color: #d1fae5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald100?: ResponsiveBoolean
+    /**
+     * Set background to emerald200
+     * ```css
+     * { background-color: #a7f3d0; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald200?: ResponsiveBoolean
+    /**
+     * Set background to emerald300
+     * ```css
+     * { background-color: #6ee7b7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald300?: ResponsiveBoolean
+    /**
+     * Set background to emerald400
+     * ```css
+     * { background-color: #34d399; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald400?: ResponsiveBoolean
+    /**
+     * Set background to emerald500
+     * ```css
+     * { background-color: #10b981; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald500?: ResponsiveBoolean
+    /**
+     * Set background to emerald600
+     * ```css
+     * { background-color: #059669; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald600?: ResponsiveBoolean
+    /**
+     * Set background to emerald700
+     * ```css
+     * { background-color: #047857; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald700?: ResponsiveBoolean
+    /**
+     * Set background to emerald800
+     * ```css
+     * { background-color: #065f46; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald800?: ResponsiveBoolean
+    /**
+     * Set background to emerald900
+     * ```css
+     * { background-color: #064e3b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald900?: ResponsiveBoolean
+    /**
+     * Set background to teal50
+     * ```css
+     * { background-color: #f0fdfa; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal50?: ResponsiveBoolean
+    /**
+     * Set background to teal100
+     * ```css
+     * { background-color: #ccfbf1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal100?: ResponsiveBoolean
+    /**
+     * Set background to teal200
+     * ```css
+     * { background-color: #99f6e4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal200?: ResponsiveBoolean
+    /**
+     * Set background to teal300
+     * ```css
+     * { background-color: #5eead4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal300?: ResponsiveBoolean
+    /**
+     * Set background to teal400
+     * ```css
+     * { background-color: #2dd4bf; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal400?: ResponsiveBoolean
+    /**
+     * Set background to teal500
+     * ```css
+     * { background-color: #14b8a6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal500?: ResponsiveBoolean
+    /**
+     * Set background to teal600
+     * ```css
+     * { background-color: #0d9488; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal600?: ResponsiveBoolean
+    /**
+     * Set background to teal700
+     * ```css
+     * { background-color: #0f766e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal700?: ResponsiveBoolean
+    /**
+     * Set background to teal800
+     * ```css
+     * { background-color: #115e59; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal800?: ResponsiveBoolean
+    /**
+     * Set background to teal900
+     * ```css
+     * { background-color: #134e4a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal900?: ResponsiveBoolean
+    /**
+     * Set background to cyan50
+     * ```css
+     * { background-color: #ecfeff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan50?: ResponsiveBoolean
+    /**
+     * Set background to cyan100
+     * ```css
+     * { background-color: #cffafe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan100?: ResponsiveBoolean
+    /**
+     * Set background to cyan200
+     * ```css
+     * { background-color: #a5f3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan200?: ResponsiveBoolean
+    /**
+     * Set background to cyan300
+     * ```css
+     * { background-color: #67e8f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan300?: ResponsiveBoolean
+    /**
+     * Set background to cyan400
+     * ```css
+     * { background-color: #22d3ee; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan400?: ResponsiveBoolean
+    /**
+     * Set background to cyan500
+     * ```css
+     * { background-color: #06b6d4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan500?: ResponsiveBoolean
+    /**
+     * Set background to cyan600
+     * ```css
+     * { background-color: #0891b2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan600?: ResponsiveBoolean
+    /**
+     * Set background to cyan700
+     * ```css
+     * { background-color: #0e7490; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan700?: ResponsiveBoolean
+    /**
+     * Set background to cyan800
+     * ```css
+     * { background-color: #155e75; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan800?: ResponsiveBoolean
+    /**
+     * Set background to cyan900
+     * ```css
+     * { background-color: #164e63; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan900?: ResponsiveBoolean
+    /**
+     * Set background to sky50
+     * ```css
+     * { background-color: #f0f9ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky50?: ResponsiveBoolean
+    /**
+     * Set background to sky100
+     * ```css
+     * { background-color: #e0f2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky100?: ResponsiveBoolean
+    /**
+     * Set background to sky200
+     * ```css
+     * { background-color: #bae6fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky200?: ResponsiveBoolean
+    /**
+     * Set background to sky300
+     * ```css
+     * { background-color: #7dd3fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky300?: ResponsiveBoolean
+    /**
+     * Set background to sky400
+     * ```css
+     * { background-color: #38bdf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky400?: ResponsiveBoolean
+    /**
+     * Set background to sky500
+     * ```css
+     * { background-color: #0ea5e9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky500?: ResponsiveBoolean
+    /**
+     * Set background to sky600
+     * ```css
+     * { background-color: #0284c7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky600?: ResponsiveBoolean
+    /**
+     * Set background to sky700
+     * ```css
+     * { background-color: #0369a1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky700?: ResponsiveBoolean
+    /**
+     * Set background to sky800
+     * ```css
+     * { background-color: #075985; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky800?: ResponsiveBoolean
+    /**
+     * Set background to sky900
+     * ```css
+     * { background-color: #0c4a6e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky900?: ResponsiveBoolean
+    /**
+     * Set background to blue50
+     * ```css
+     * { background-color: #eff6ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue50?: ResponsiveBoolean
+    /**
+     * Set background to blue100
+     * ```css
+     * { background-color: #dbeafe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue100?: ResponsiveBoolean
+    /**
+     * Set background to blue200
+     * ```css
+     * { background-color: #bfdbfe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue200?: ResponsiveBoolean
+    /**
+     * Set background to blue300
+     * ```css
+     * { background-color: #93c5fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue300?: ResponsiveBoolean
+    /**
+     * Set background to blue400
+     * ```css
+     * { background-color: #60a5fa; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue400?: ResponsiveBoolean
+    /**
+     * Set background to blue500
+     * ```css
+     * { background-color: #3b82f6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue500?: ResponsiveBoolean
+    /**
+     * Set background to blue600
+     * ```css
+     * { background-color: #2563eb; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue600?: ResponsiveBoolean
+    /**
+     * Set background to blue700
+     * ```css
+     * { background-color: #1d4ed8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue700?: ResponsiveBoolean
+    /**
+     * Set background to blue800
+     * ```css
+     * { background-color: #1e40af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue800?: ResponsiveBoolean
+    /**
+     * Set background to blue900
+     * ```css
+     * { background-color: #1e3a8a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue900?: ResponsiveBoolean
+    /**
+     * Set background to indigo50
+     * ```css
+     * { background-color: #eef2ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo50?: ResponsiveBoolean
+    /**
+     * Set background to indigo100
+     * ```css
+     * { background-color: #e0e7ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo100?: ResponsiveBoolean
+    /**
+     * Set background to indigo200
+     * ```css
+     * { background-color: #c7d2fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo200?: ResponsiveBoolean
+    /**
+     * Set background to indigo300
+     * ```css
+     * { background-color: #a5b4fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo300?: ResponsiveBoolean
+    /**
+     * Set background to indigo400
+     * ```css
+     * { background-color: #818cf8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo400?: ResponsiveBoolean
+    /**
+     * Set background to indigo500
+     * ```css
+     * { background-color: #6366f1; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo500?: ResponsiveBoolean
+    /**
+     * Set background to indigo600
+     * ```css
+     * { background-color: #4f46e5; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo600?: ResponsiveBoolean
+    /**
+     * Set background to indigo700
+     * ```css
+     * { background-color: #4338ca; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo700?: ResponsiveBoolean
+    /**
+     * Set background to indigo800
+     * ```css
+     * { background-color: #3730a3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo800?: ResponsiveBoolean
+    /**
+     * Set background to indigo900
+     * ```css
+     * { background-color: #312e81; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo900?: ResponsiveBoolean
+    /**
+     * Set background to violet50
+     * ```css
+     * { background-color: #f5f3ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet50?: ResponsiveBoolean
+    /**
+     * Set background to violet100
+     * ```css
+     * { background-color: #ede9fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet100?: ResponsiveBoolean
+    /**
+     * Set background to violet200
+     * ```css
+     * { background-color: #ddd6fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet200?: ResponsiveBoolean
+    /**
+     * Set background to violet300
+     * ```css
+     * { background-color: #c4b5fd; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet300?: ResponsiveBoolean
+    /**
+     * Set background to violet400
+     * ```css
+     * { background-color: #a78bfa; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet400?: ResponsiveBoolean
+    /**
+     * Set background to violet500
+     * ```css
+     * { background-color: #8b5cf6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet500?: ResponsiveBoolean
+    /**
+     * Set background to violet600
+     * ```css
+     * { background-color: #7c3aed; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet600?: ResponsiveBoolean
+    /**
+     * Set background to violet700
+     * ```css
+     * { background-color: #6d28d9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet700?: ResponsiveBoolean
+    /**
+     * Set background to violet800
+     * ```css
+     * { background-color: #5b21b6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet800?: ResponsiveBoolean
+    /**
+     * Set background to violet900
+     * ```css
+     * { background-color: #4c1d95; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet900?: ResponsiveBoolean
+    /**
+     * Set background to purple50
+     * ```css
+     * { background-color: #faf5ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple50?: ResponsiveBoolean
+    /**
+     * Set background to purple100
+     * ```css
+     * { background-color: #f3e8ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple100?: ResponsiveBoolean
+    /**
+     * Set background to purple200
+     * ```css
+     * { background-color: #e9d5ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple200?: ResponsiveBoolean
+    /**
+     * Set background to purple300
+     * ```css
+     * { background-color: #d8b4fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple300?: ResponsiveBoolean
+    /**
+     * Set background to purple400
+     * ```css
+     * { background-color: #c084fc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple400?: ResponsiveBoolean
+    /**
+     * Set background to purple500
+     * ```css
+     * { background-color: #a855f7; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple500?: ResponsiveBoolean
+    /**
+     * Set background to purple600
+     * ```css
+     * { background-color: #9333ea; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple600?: ResponsiveBoolean
+    /**
+     * Set background to purple700
+     * ```css
+     * { background-color: #7e22ce; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple700?: ResponsiveBoolean
+    /**
+     * Set background to purple800
+     * ```css
+     * { background-color: #6b21a8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple800?: ResponsiveBoolean
+    /**
+     * Set background to purple900
+     * ```css
+     * { background-color: #581c87; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple900?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia50
+     * ```css
+     * { background-color: #fdf4ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia50?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia100
+     * ```css
+     * { background-color: #fae8ff; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia100?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia200
+     * ```css
+     * { background-color: #f5d0fe; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia200?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia300
+     * ```css
+     * { background-color: #f0abfc; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia300?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia400
+     * ```css
+     * { background-color: #e879f9; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia400?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia500
+     * ```css
+     * { background-color: #d946ef; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia500?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia600
+     * ```css
+     * { background-color: #c026d3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia600?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia700
+     * ```css
+     * { background-color: #a21caf; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia700?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia800
+     * ```css
+     * { background-color: #86198f; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia800?: ResponsiveBoolean
+    /**
+     * Set background to fuchsia900
+     * ```css
+     * { background-color: #701a75; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia900?: ResponsiveBoolean
+    /**
+     * Set background to pink50
+     * ```css
+     * { background-color: #fdf2f8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink50?: ResponsiveBoolean
+    /**
+     * Set background to pink100
+     * ```css
+     * { background-color: #fce7f3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink100?: ResponsiveBoolean
+    /**
+     * Set background to pink200
+     * ```css
+     * { background-color: #fbcfe8; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink200?: ResponsiveBoolean
+    /**
+     * Set background to pink300
+     * ```css
+     * { background-color: #f9a8d4; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink300?: ResponsiveBoolean
+    /**
+     * Set background to pink400
+     * ```css
+     * { background-color: #f472b6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink400?: ResponsiveBoolean
+    /**
+     * Set background to pink500
+     * ```css
+     * { background-color: #ec4899; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink500?: ResponsiveBoolean
+    /**
+     * Set background to pink600
+     * ```css
+     * { background-color: #db2777; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink600?: ResponsiveBoolean
+    /**
+     * Set background to pink700
+     * ```css
+     * { background-color: #be185d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink700?: ResponsiveBoolean
+    /**
+     * Set background to pink800
+     * ```css
+     * { background-color: #9d174d; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink800?: ResponsiveBoolean
+    /**
+     * Set background to pink900
+     * ```css
+     * { background-color: #831843; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink900?: ResponsiveBoolean
+    /**
+     * Set background to rose50
+     * ```css
+     * { background-color: #fff1f2; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose50></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose50?: ResponsiveBoolean
+    /**
+     * Set background to rose100
+     * ```css
+     * { background-color: #ffe4e6; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose100></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose100?: ResponsiveBoolean
+    /**
+     * Set background to rose200
+     * ```css
+     * { background-color: #fecdd3; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose200></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose200?: ResponsiveBoolean
+    /**
+     * Set background to rose300
+     * ```css
+     * { background-color: #fda4af; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose300></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose300?: ResponsiveBoolean
+    /**
+     * Set background to rose400
+     * ```css
+     * { background-color: #fb7185; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose400></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose400?: ResponsiveBoolean
+    /**
+     * Set background to rose500
+     * ```css
+     * { background-color: #f43f5e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose500></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose500?: ResponsiveBoolean
+    /**
+     * Set background to rose600
+     * ```css
+     * { background-color: #e11d48; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose600></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose600?: ResponsiveBoolean
+    /**
+     * Set background to rose700
+     * ```css
+     * { background-color: #be123c; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose700></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose700?: ResponsiveBoolean
+    /**
+     * Set background to rose800
+     * ```css
+     * { background-color: #9f1239; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose800></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose800?: ResponsiveBoolean
+    /**
+     * Set background to rose900
+     * ```css
+     * { background-color: #881337; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose900></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose900?: ResponsiveBoolean
   }
 }
