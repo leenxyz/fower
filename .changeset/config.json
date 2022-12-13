@@ -1,0 +1,27 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "master",
+  "updateInternalDependencies": "patch",
+  "ignore": [
+    "examplereactnative",
+    "examplereactnative",
+    "example-cra",
+    "example-nextjs",
+    "example-svelte-rollup",
+    "example-svelte-webpack",
+    "example-taro",
+    "example-vue-vite",
+    "@fower/example-react",
+    "@fower/example-react-native-expo",
+    "@fower/example-react-ssr",
+    "@fower/example-remax",
+    "@fower/example-uniapp",
+    "@fower/example-vue",
+    "@fower/website"
+  ]
+}
