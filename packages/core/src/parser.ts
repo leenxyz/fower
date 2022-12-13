@@ -264,10 +264,11 @@ export class Parser {
 
   autoDarkMode() {
     for (const atom of this.atoms) {
-      const find = this.atoms.find((i) => colorKeys.includes(i.type) && i.meta.mode === 'dark')
-      if (find) continue
+      // 这些不需要自动 dark mode
+      if (!atom.isValid || atom.meta?.mode === 'dark' || !colorKeys.includes(atom.type)) continue
 
       const darkAtom = this.getAutoDarkModeAtom(atom)
+
       if (!darkAtom) continue
 
       const cachedAtom = store.atomCache.get(darkAtom.id)
@@ -379,11 +380,18 @@ export class Parser {
         modeAtom.style[styleKey as 'color'] = colorValue
 
         if (ssrAtomIds.includes(modeAtom.id)) modeAtom.inserted = true
+
         this.atoms.push(modeAtom)
       }
     }
 
     if (ssrAtomIds.includes(atom.id)) atom.inserted = true
+
+    if (atom.type === 'color' && atom.meta?.mode !== 'dark') {
+      const index = this.atoms.findIndex((i) => i.type === 'color' && i.meta?.mode !== 'dark')
+      if (index > -1) this.atoms[index].isValid = false
+    }
+
     this.atoms.push(atom)
   }
 
@@ -665,8 +673,6 @@ export class Parser {
 
       rules.push(rule)
     }
-
-    // console.log('this.atoms---', this.atoms)
 
     return rules
   }
