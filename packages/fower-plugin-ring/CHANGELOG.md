@@ -1,5 +1,16 @@
 # fower-plugin-ring
 
+## 1.75.3
+
+### Patch Changes
+
+- fix auto dark mode
+- Updated dependencies
+  - @fower/atomic-props@1.75.3
+  - @fower/color-helper@1.75.3
+  - @fower/core@1.75.3
+  - @fower/utils@1.75.3
+
 ## 1.75.2
 
 ### Patch Changes

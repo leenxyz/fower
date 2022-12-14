@@ -1,5 +1,11 @@
 # @fower/atomic-props
 
+## 1.75.3
+
+### Patch Changes
+
+- fix auto dark mode
+
 ## 1.75.2
 
 ### Patch Changes

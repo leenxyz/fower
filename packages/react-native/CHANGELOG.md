@@ -1,5 +1,15 @@
 # @fower/react-native
 
+## 1.75.3
+
+### Patch Changes
+
+- fix auto dark mode
+- Updated dependencies
+  - @fower/core@1.75.3
+  - @fower/preset-react-native@1.75.3
+  - @fower/styled@1.75.3
+
 ## 1.75.2
 
 ### Patch Changes
