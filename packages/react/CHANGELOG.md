@@ -1,5 +1,18 @@
 # @fower/react
 
+## 1.75.4
+
+### Patch Changes
+
+- improve for auto dark mode
+- Updated dependencies
+  - @fower/atomic-props@1.75.4
+  - @fower/core@1.75.4
+  - @fower/css-object-processor@1.75.4
+  - @fower/preset-web@1.75.4
+  - @fower/styled@1.75.4
+  - @fower/utils@1.75.4
+
 ## 1.75.3
 
 ### Patch Changes

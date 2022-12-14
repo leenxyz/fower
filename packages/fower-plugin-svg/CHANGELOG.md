@@ -1,5 +1,15 @@
 # fower-plugin-svg
 
+## 1.75.4
+
+### Patch Changes
+
+- improve for auto dark mode
+- Updated dependencies
+  - @fower/atomic-props@1.75.4
+  - @fower/core@1.75.4
+  - @fower/utils@1.75.4
+
 ## 1.75.3
 
 ### Patch Changes

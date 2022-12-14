@@ -1,6 +1,6 @@
 {
   "name": "@fower/core",
-  "version": "1.75.3",
+  "version": "1.75.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,10 +22,10 @@
   "author": "forsigner",
   "module": "dist/core.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.75.3",
-    "@fower/color-helper": "^1.75.3",
-    "@fower/css-object-processor": "^1.75.3",
-    "@fower/utils": "^1.75.3",
+    "@fower/atomic-props": "^1.75.4",
+    "@fower/color-helper": "^1.75.4",
+    "@fower/css-object-processor": "^1.75.4",
+    "@fower/utils": "^1.75.4",
     "deepmerge": "^4.2.2",
     "string-hash": "^1.1.3"
   }

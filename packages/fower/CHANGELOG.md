@@ -1,5 +1,13 @@
 # fower
 
+## 1.75.4
+
+### Patch Changes
+
+- improve for auto dark mode
+- Updated dependencies
+  - @fower/core@1.75.4
+
 ## 1.75.3
 
 ### Patch Changes
