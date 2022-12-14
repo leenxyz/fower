@@ -387,9 +387,25 @@ export class Parser {
 
     if (ssrAtomIds.includes(atom.id)) atom.inserted = true
 
-    if (atom.type === 'color' && atom.meta?.mode !== 'dark') {
-      const index = this.atoms.findIndex((i) => i.type === 'color' && i.meta?.mode !== 'dark')
-      if (index > -1) this.atoms[index].isValid = false
+    /**
+     * 处理颜色覆盖, 如:
+     * 1. <Box red500 green500/>
+     * 2. <Box red500 green500--hover/>
+     */
+    if (store.config.mode?.autoDarkMode?.enabled) {
+      if (atom.type === 'color' && atom.meta?.mode !== 'dark') {
+        const index = this.atoms.findIndex(
+          (i) => i.type === 'color' && i.meta?.mode !== 'dark' && Reflect.has(atom, 'pseudo'),
+        )
+
+        // 被覆盖的颜色设置为 isValid=false, 并且使用 copy 为新的 atom
+        if (index > -1) {
+          this.atoms[index] = {
+            ...atom,
+            isValid: false,
+          } as Atom
+        }
+      }
     }
 
     this.atoms.push(atom)
