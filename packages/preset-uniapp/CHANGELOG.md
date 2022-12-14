@@ -1,5 +1,47 @@
 # @fower/preset-uniapp
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+- Updated dependencies
+  - @fower/colors@1.75.5
+  - @fower/core@1.75.5
+  - fower-plugin-background@1.75.5
+  - fower-plugin-border@1.75.5
+  - fower-plugin-box-alignment@1.75.5
+  - fower-plugin-box-sizing@1.75.5
+  - fower-plugin-color@1.75.5
+  - fower-plugin-cursor@1.75.5
+  - fower-plugin-debug@1.75.5
+  - fower-plugin-display@1.75.5
+  - fower-plugin-flexbox@1.75.5
+  - fower-plugin-font-family@1.75.5
+  - fower-plugin-font-style@1.75.5
+  - fower-plugin-font-weight@1.75.5
+  - fower-plugin-gradient@1.75.5
+  - fower-plugin-grid@1.75.5
+  - fower-plugin-layout@1.75.5
+  - fower-plugin-line-height@1.75.5
+  - fower-plugin-margin@1.75.5
+  - fower-plugin-opacity@1.75.5
+  - fower-plugin-outline@1.75.5
+  - fower-plugin-overflow@1.75.5
+  - fower-plugin-padding@1.75.5
+  - fower-plugin-position@1.75.5
+  - fower-plugin-rounded@1.75.5
+  - fower-plugin-shadow@1.75.5
+  - fower-plugin-size@1.75.5
+  - fower-plugin-space@1.75.5
+  - fower-plugin-text-align@1.75.5
+  - fower-plugin-text-decoration@1.75.5
+  - fower-plugin-text-overflow@1.75.5
+  - fower-plugin-text-size@1.75.5
+  - fower-plugin-text-transform@1.75.5
+  - fower-plugin-visibility@1.75.5
+  - fower-plugin-z-index@1.75.5
+
 ## 1.75.4
 
 ### Patch Changes

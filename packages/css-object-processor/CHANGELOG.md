@@ -1,5 +1,13 @@
 # @fower/css-object-processor
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+- Updated dependencies
+  - @fower/utils@1.75.5
+
 ## 1.75.4
 
 ### Patch Changes

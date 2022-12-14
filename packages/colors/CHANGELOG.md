@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+
 ## 1.75.4
 
 ### Patch Changes

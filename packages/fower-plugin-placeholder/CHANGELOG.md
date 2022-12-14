@@ -1,5 +1,16 @@
 # fower-plugin-placeholder
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+- Updated dependencies
+  - @fower/atomic-props@1.75.5
+  - @fower/color-helper@1.75.5
+  - @fower/core@1.75.5
+  - @fower/utils@1.75.5
+
 ## 1.75.4
 
 ### Patch Changes

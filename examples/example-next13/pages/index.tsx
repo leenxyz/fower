@@ -5,13 +5,16 @@ setConfig({
   mode: {
     autoDarkMode: {
       enabled: true,
+      mappings: {
+        bgWhite: 'red500',
+      },
     },
   },
 })
 
 export default function Home() {
   return (
-    <Box gray600 gray400--dark textLG>
+    <Box p10 black bgWhite>
       fooo
     </Box>
   )

@@ -1,5 +1,15 @@
 # @fower/taro
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+- Updated dependencies
+  - @fower/core@1.75.5
+  - @fower/preset-taro@1.75.5
+  - @fower/styled@1.75.5
+
 ## 1.75.4
 
 ### Patch Changes

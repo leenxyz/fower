@@ -1,5 +1,13 @@
 # @fower/uni-template-compiler
 
+## 1.75.5
+
+### Patch Changes
+
+- improve auto darkmode
+- Updated dependencies
+  - @fower/preset-uniapp@1.75.5
+
 ## 1.75.4
 
 ### Patch Changes

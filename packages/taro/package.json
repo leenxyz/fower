@@ -1,6 +1,6 @@
 {
   "name": "@fower/taro",
-  "version": "1.75.4",
+  "version": "1.75.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -19,9 +19,9 @@
   "author": "forsigner",
   "module": "dist/taro.esm.js",
   "dependencies": {
-    "@fower/core": "^1.75.4",
-    "@fower/preset-taro": "^1.75.4",
-    "@fower/styled": "^1.75.4"
+    "@fower/core": "^1.75.5",
+    "@fower/preset-taro": "^1.75.5",
+    "@fower/styled": "^1.75.5"
   },
   "devDependencies": {
     "@tarojs/components": "^3.4.1"

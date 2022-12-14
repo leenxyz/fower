@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
-    "@fower/react": "^1.75.4",
+    "@fower/react": "^1.75.5",
     "next": "^11.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
