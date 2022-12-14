@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-font-weight",
-  "version": "1.75.6",
+  "version": "1.75.7",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-font-weight.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.75.6",
-    "@fower/core": "^1.75.6",
-    "@fower/utils": "^1.75.6"
+    "@fower/atomic-props": "^1.75.7",
+    "@fower/core": "^1.75.7",
+    "@fower/utils": "^1.75.7"
   }
 }

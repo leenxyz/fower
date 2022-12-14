@@ -1,5 +1,11 @@
 # @fower/vue-template-compiler
 
+## 1.75.7
+
+### Patch Changes
+
+- fix auto dark mode
+
 ## 1.75.6
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@fower/vue-template-compiler",
-  "version": "1.75.6",
+  "version": "1.75.7",
   "license": "MIT",
   "main": "index.js",
   "files": [

@@ -13,7 +13,7 @@
     "build:prod": "cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
-    "@fower/remax": "^1.75.6",
+    "@fower/remax": "^1.75.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "remax": "^2.15.12"

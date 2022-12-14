@@ -1,6 +1,6 @@
 {
   "name": "@fower/utils",
-  "version": "1.75.6",
+  "version": "1.75.7",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
