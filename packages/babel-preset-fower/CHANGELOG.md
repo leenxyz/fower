@@ -1,5 +1,14 @@
 # @fower/babel-preset-fower
 
+## 1.75.6
+
+### Patch Changes
+
+- improve mappings in auto dark mode
+- Updated dependencies
+  - @fower/react@1.75.6
+  - @fower/utils@1.75.6
+
 ## 1.75.5
 
 ### Patch Changes

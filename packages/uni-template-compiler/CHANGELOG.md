@@ -1,5 +1,13 @@
 # @fower/uni-template-compiler
 
+## 1.75.6
+
+### Patch Changes
+
+- improve mappings in auto dark mode
+- Updated dependencies
+  - @fower/preset-uniapp@1.75.6
+
 ## 1.75.5
 
 ### Patch Changes

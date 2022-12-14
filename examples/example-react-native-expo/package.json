@@ -12,7 +12,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@fower/react-native": "^1.75.5",
+    "@fower/react-native": "^1.75.6",
     "expo": "~41.0.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",

@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.75.6
+
+### Patch Changes
+
+- improve mappings in auto dark mode
+
 ## 1.75.5
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-position",
-  "version": "1.75.5",
+  "version": "1.75.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-position.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.75.5",
-    "@fower/core": "^1.75.5",
-    "@fower/utils": "^1.75.5"
+    "@fower/atomic-props": "^1.75.6",
+    "@fower/core": "^1.75.6",
+    "@fower/utils": "^1.75.6"
   }
 }

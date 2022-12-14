@@ -1,5 +1,13 @@
 # @fower/css-object-processor
 
+## 1.75.6
+
+### Patch Changes
+
+- improve mappings in auto dark mode
+- Updated dependencies
+  - @fower/utils@1.75.6
+
 ## 1.75.5
 
 ### Patch Changes

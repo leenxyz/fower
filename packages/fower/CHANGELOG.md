@@ -1,5 +1,13 @@
 # fower
 
+## 1.75.6
+
+### Patch Changes
+
+- improve mappings in auto dark mode
+- Updated dependencies
+  - @fower/core@1.75.6
+
 ## 1.75.5
 
 ### Patch Changes
