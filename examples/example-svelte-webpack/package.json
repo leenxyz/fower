@@ -11,7 +11,7 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
-    "@fower/svelte-preprocess": "^1.75.1",
+    "@fower/svelte-preprocess": "^1.75.2",
     "compression": "^1.7.1",
     "polka": "0.5.2",
     "sirv": "^1.0.0"

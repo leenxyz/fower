@@ -1,6 +1,6 @@
 {
   "name": "fower",
-  "version": "1.75.1",
+  "version": "1.75.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,6 +21,6 @@
   "author": "forsigner",
   "module": "dist/fower.esm.js",
   "dependencies": {
-    "@fower/core": "^1.75.1"
+    "@fower/core": "^1.75.2"
   }
 }

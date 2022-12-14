@@ -9,7 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@fower/vue": "^1.75.1",
+    "@fower/vue": "^1.75.2",
     "vue": "^3.0.5"
   },
   "devDependencies": {

@@ -1,5 +1,15 @@
 # @fower/remax
 
+## 1.75.2
+
+### Patch Changes
+
+- improve auto dark mode
+- Updated dependencies
+  - @fower/core@1.75.2
+  - @fower/preset-remax@1.75.2
+  - @fower/styled@1.75.2
+
 ## 1.75.1
 
 ### Patch Changes

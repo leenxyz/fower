@@ -1,5 +1,11 @@
 # @fower/color-helper
 
+## 1.75.2
+
+### Patch Changes
+
+- improve auto dark mode
+
 ## 1.75.1
 
 ### Patch Changes

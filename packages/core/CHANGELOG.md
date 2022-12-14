@@ -1,5 +1,16 @@
 # @fower/core
 
+## 1.75.2
+
+### Patch Changes
+
+- improve auto dark mode
+- Updated dependencies
+  - @fower/atomic-props@1.75.2
+  - @fower/color-helper@1.75.2
+  - @fower/css-object-processor@1.75.2
+  - @fower/utils@1.75.2
+
 ## 1.75.1
 
 ### Patch Changes
