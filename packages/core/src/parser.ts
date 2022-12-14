@@ -223,7 +223,9 @@ export class Parser {
     // is disable, eg: { red200: false}
     if (mappings[colorName] === false) return null
 
-    if (mappings[colorName]) {
+    if (mappings[atom.propKey]) {
+      darkColor = mappings[atom.propKey]
+    } else if (mappings[colorName]) {
       darkColor = mappings[colorName]
     } else {
       darkColor = colorName.replace(scale, mappings[scale])
