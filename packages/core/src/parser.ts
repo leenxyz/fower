@@ -268,7 +268,7 @@ export class Parser {
       if (!atom.isValid || atom.meta?.mode === 'dark' || !colorKeys.includes(atom.type)) continue
 
       // 已经存在 dark mode 的样式，不需要自动生成
-      const find = this.atoms.find((i) => colorKeys.includes(atom.type) && i.meta.mode === 'dark')
+      const find = this.atoms.find((i) => atom.type === i.type && i.meta.mode === 'dark')
       if (find) continue
 
       const darkAtom = this.getAutoDarkModeAtom(atom)
@@ -694,7 +694,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms:', this.atoms)
+    console.log('this.atoms:', this.atoms)
 
     return rules
   }

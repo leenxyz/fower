@@ -16,7 +16,8 @@ class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html className="dark">
+      {/* <Html> */}
         <Head>
           <style data-fower={getAtomIds()} dangerouslySetInnerHTML={{ __html: getCssString() }} />
         </Head>

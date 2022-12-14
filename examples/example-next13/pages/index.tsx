@@ -11,6 +11,23 @@ setConfig({
 
 export default function Home() {
   return (
+    <Box bgGray100 black>
+      foooooo
+    </Box>
+  )
+
+  return (
+    <Box mb-40 text7XL text6XL--sm text9XL--md fontBlack textCenter leading="1.2em">
+      <Box inlineFlex bgGradientX={['green500', 'blue500']} bgClipText transparent>
+        foo
+      </Box>
+
+      <Box bgGradientX={['blue500', 'purple500']} bgClipText transparent>
+        bar
+      </Box>
+    </Box>
+  )
+  return (
     <Box bgRed300--T20 bgGray900--dark>
       xxx
     </Box>
