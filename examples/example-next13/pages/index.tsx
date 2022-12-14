@@ -11,6 +11,12 @@ setConfig({
 
 export default function Home() {
   return (
+    <Box gray600 gray400--dark textLG>
+      fooo
+    </Box>
+  )
+
+  return (
     <Box bgGray100 black>
       foooooo
     </Box>
