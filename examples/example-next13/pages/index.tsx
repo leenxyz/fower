@@ -11,6 +11,11 @@ setConfig({
 
 export default function Home() {
   return (
+    <Box bgRed300--T20 bgGray900--dark>
+      xxx
+    </Box>
+  )
+  return (
     <Box>
       <Box black>xxxxx</Box>
 
