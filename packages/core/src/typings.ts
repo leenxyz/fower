@@ -272,12 +272,12 @@ export interface Theme {
   radii: {
     none: number | string
 
-    tiny: number | string
-    small: number | string
-    medium: number | string
-    large: number | string
-    huge: number | string
-    gigantic: number | string
+    sm: number | string
+    md: number | string
+    lg: number | string
+    xl: number | string
+    '2xl': number | string
+    '3xl': number | string
 
     full: number | string
   }

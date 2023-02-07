@@ -28,22 +28,22 @@ export function isMatch(key: string) {
  */
 export function toStyle(atomKey: string, value: any, parser: Parser) {
   let style: any = {}
-  const radii: any = parser.config.theme.radii || {}
+  const radii = parser.config.theme.radii || {}
   const radiiKeys = Object.keys(radii) || []
   const presetReg = new RegExp(`(${radiiKeys.join('|')})$`, 'i')
 
   if (atomKey === 'rounded') {
     const isDefault = typeof value === 'boolean'
     return {
-      borderRadius: isDefault ? radii.medium : value,
+      borderRadius: isDefault ? radii.md : value,
     }
   }
 
-  //  roundedNone|roundedSmall|roundedLarge|roundedHuge...
+  //  roundedNone|roundedMD|roundedLG|rounded2XL...
   if (presetReg.test(atomKey)) {
-    const [themeKey] = atomKey.match(presetReg) || []
+    const [themeKey = ''] = atomKey.match(presetReg) || []
 
-    const roundedValue = radii[themeKey.toLowerCase()]
+    const roundedValue = (radii as any)[themeKey.toLowerCase()]
 
     if (themeKey && typeof roundedValue === 'number') {
       const key = atomKey.replace(themeKey, '')

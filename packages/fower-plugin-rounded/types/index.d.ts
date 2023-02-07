@@ -45,11 +45,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTiny></Box>
+     * <Box roundedSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTiny?: ResponsiveBoolean
+    roundedSM?: ResponsiveBoolean
     /**
      * set border-radius to 4
      * ```css
@@ -59,11 +59,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedSmall></Box>
+     * <Box roundedMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedSmall?: ResponsiveBoolean
+    roundedMD?: ResponsiveBoolean
     /**
      * set border-radius to 6
      * ```css
@@ -73,11 +73,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedMedium></Box>
+     * <Box roundedLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedMedium?: ResponsiveBoolean
+    roundedLG?: ResponsiveBoolean
     /**
      * set border-radius to 8
      * ```css
@@ -87,11 +87,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLarge></Box>
+     * <Box roundedXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLarge?: ResponsiveBoolean
+    roundedXL?: ResponsiveBoolean
     /**
      * set border-radius to 12
      * ```css
@@ -101,11 +101,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedHuge></Box>
+     * <Box rounded2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedHuge?: ResponsiveBoolean
+    rounded2XL?: ResponsiveBoolean
     /**
      * set border-radius to 16
      * ```css
@@ -115,11 +115,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedGigantic></Box>
+     * <Box rounded3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedGigantic?: ResponsiveBoolean
+    rounded3XL?: ResponsiveBoolean
     /**
      * set border-radius to 9999
      * ```css
@@ -178,11 +178,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopTiny></Box>
+     * <Box roundedTopSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopTiny?: ResponsiveBoolean
+    roundedTopSM?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 4
      * ```css
@@ -193,11 +193,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopSmall></Box>
+     * <Box roundedTopMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopSmall?: ResponsiveBoolean
+    roundedTopMD?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 6
      * ```css
@@ -208,11 +208,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopMedium></Box>
+     * <Box roundedTopLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopMedium?: ResponsiveBoolean
+    roundedTopLG?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 8
      * ```css
@@ -223,11 +223,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLarge></Box>
+     * <Box roundedTopXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLarge?: ResponsiveBoolean
+    roundedTopXL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 12
      * ```css
@@ -238,11 +238,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopHuge></Box>
+     * <Box roundedTop2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopHuge?: ResponsiveBoolean
+    roundedTop2XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 16
      * ```css
@@ -253,11 +253,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopGigantic></Box>
+     * <Box roundedTop3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopGigantic?: ResponsiveBoolean
+    roundedTop3XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-top-right-radius to 9999
      * ```css
@@ -317,11 +317,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightTiny></Box>
+     * <Box roundedRightSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightTiny?: ResponsiveBoolean
+    roundedRightSM?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 4
      * ```css
@@ -332,11 +332,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightSmall></Box>
+     * <Box roundedRightMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightSmall?: ResponsiveBoolean
+    roundedRightMD?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 6
      * ```css
@@ -347,11 +347,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightMedium></Box>
+     * <Box roundedRightLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightMedium?: ResponsiveBoolean
+    roundedRightLG?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 8
      * ```css
@@ -362,11 +362,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightLarge></Box>
+     * <Box roundedRightXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightLarge?: ResponsiveBoolean
+    roundedRightXL?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 12
      * ```css
@@ -377,11 +377,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightHuge></Box>
+     * <Box roundedRight2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightHuge?: ResponsiveBoolean
+    roundedRight2XL?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 16
      * ```css
@@ -392,11 +392,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedRightGigantic></Box>
+     * <Box roundedRight3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedRightGigantic?: ResponsiveBoolean
+    roundedRight3XL?: ResponsiveBoolean
     /**
      * set border-top-right-radius border-bottom-right-radius to 9999
      * ```css
@@ -456,11 +456,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomTiny></Box>
+     * <Box roundedBottomSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomTiny?: ResponsiveBoolean
+    roundedBottomSM?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 4
      * ```css
@@ -471,11 +471,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomSmall></Box>
+     * <Box roundedBottomMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomSmall?: ResponsiveBoolean
+    roundedBottomMD?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 6
      * ```css
@@ -486,11 +486,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomMedium></Box>
+     * <Box roundedBottomLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomMedium?: ResponsiveBoolean
+    roundedBottomLG?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 8
      * ```css
@@ -501,11 +501,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLarge></Box>
+     * <Box roundedBottomXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLarge?: ResponsiveBoolean
+    roundedBottomXL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 12
      * ```css
@@ -516,11 +516,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomHuge></Box>
+     * <Box roundedBottom2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomHuge?: ResponsiveBoolean
+    roundedBottom2XL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 16
      * ```css
@@ -531,11 +531,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomGigantic></Box>
+     * <Box roundedBottom3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomGigantic?: ResponsiveBoolean
+    roundedBottom3XL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius border-bottom-right-radius to 9999
      * ```css
@@ -595,11 +595,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftTiny></Box>
+     * <Box roundedLeftSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftTiny?: ResponsiveBoolean
+    roundedLeftSM?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 4
      * ```css
@@ -610,11 +610,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftSmall></Box>
+     * <Box roundedLeftMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftSmall?: ResponsiveBoolean
+    roundedLeftMD?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 6
      * ```css
@@ -625,11 +625,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftMedium></Box>
+     * <Box roundedLeftLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftMedium?: ResponsiveBoolean
+    roundedLeftLG?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 8
      * ```css
@@ -640,11 +640,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftLarge></Box>
+     * <Box roundedLeftXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftLarge?: ResponsiveBoolean
+    roundedLeftXL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 12
      * ```css
@@ -655,11 +655,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftHuge></Box>
+     * <Box roundedLeft2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftHuge?: ResponsiveBoolean
+    roundedLeft2XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 16
      * ```css
@@ -670,11 +670,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedLeftGigantic></Box>
+     * <Box roundedLeft3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedLeftGigantic?: ResponsiveBoolean
+    roundedLeft3XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius border-bottom-left-radius to 9999
      * ```css
@@ -731,11 +731,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftTiny></Box>
+     * <Box roundedTopLeftSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftTiny?: ResponsiveBoolean
+    roundedTopLeftSM?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 4
      * ```css
@@ -745,11 +745,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftSmall></Box>
+     * <Box roundedTopLeftMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftSmall?: ResponsiveBoolean
+    roundedTopLeftMD?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 6
      * ```css
@@ -759,11 +759,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftMedium></Box>
+     * <Box roundedTopLeftLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftMedium?: ResponsiveBoolean
+    roundedTopLeftLG?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 8
      * ```css
@@ -773,11 +773,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftLarge></Box>
+     * <Box roundedTopLeftXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftLarge?: ResponsiveBoolean
+    roundedTopLeftXL?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 12
      * ```css
@@ -787,11 +787,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftHuge></Box>
+     * <Box roundedTopLeft2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftHuge?: ResponsiveBoolean
+    roundedTopLeft2XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 16
      * ```css
@@ -801,11 +801,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopLeftGigantic></Box>
+     * <Box roundedTopLeft3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopLeftGigantic?: ResponsiveBoolean
+    roundedTopLeft3XL?: ResponsiveBoolean
     /**
      * set border-top-left-radius to 9999
      * ```css
@@ -861,11 +861,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightTiny></Box>
+     * <Box roundedTopRightSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightTiny?: ResponsiveBoolean
+    roundedTopRightSM?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 4
      * ```css
@@ -875,11 +875,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightSmall></Box>
+     * <Box roundedTopRightMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightSmall?: ResponsiveBoolean
+    roundedTopRightMD?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 6
      * ```css
@@ -889,11 +889,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightMedium></Box>
+     * <Box roundedTopRightLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightMedium?: ResponsiveBoolean
+    roundedTopRightLG?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 8
      * ```css
@@ -903,11 +903,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightLarge></Box>
+     * <Box roundedTopRightXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightLarge?: ResponsiveBoolean
+    roundedTopRightXL?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 12
      * ```css
@@ -917,11 +917,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightHuge></Box>
+     * <Box roundedTopRight2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightHuge?: ResponsiveBoolean
+    roundedTopRight2XL?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 16
      * ```css
@@ -931,11 +931,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedTopRightGigantic></Box>
+     * <Box roundedTopRight3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedTopRightGigantic?: ResponsiveBoolean
+    roundedTopRight3XL?: ResponsiveBoolean
     /**
      * set border-top-right-radius to 9999
      * ```css
@@ -991,11 +991,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftTiny></Box>
+     * <Box roundedBottomLeftSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftTiny?: ResponsiveBoolean
+    roundedBottomLeftSM?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 4
      * ```css
@@ -1005,11 +1005,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftSmall></Box>
+     * <Box roundedBottomLeftMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftSmall?: ResponsiveBoolean
+    roundedBottomLeftMD?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 6
      * ```css
@@ -1019,11 +1019,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftMedium></Box>
+     * <Box roundedBottomLeftLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftMedium?: ResponsiveBoolean
+    roundedBottomLeftLG?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 8
      * ```css
@@ -1033,11 +1033,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftLarge></Box>
+     * <Box roundedBottomLeftXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftLarge?: ResponsiveBoolean
+    roundedBottomLeftXL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 12
      * ```css
@@ -1047,11 +1047,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftHuge></Box>
+     * <Box roundedBottomLeft2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftHuge?: ResponsiveBoolean
+    roundedBottomLeft2XL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 16
      * ```css
@@ -1061,11 +1061,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomLeftGigantic></Box>
+     * <Box roundedBottomLeft3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomLeftGigantic?: ResponsiveBoolean
+    roundedBottomLeft3XL?: ResponsiveBoolean
     /**
      * set border-bottom-left-radius to 9999
      * ```css
@@ -1121,11 +1121,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightTiny></Box>
+     * <Box roundedBottomRightSM></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightTiny?: ResponsiveBoolean
+    roundedBottomRightSM?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 4
      * ```css
@@ -1135,11 +1135,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightSmall></Box>
+     * <Box roundedBottomRightMD></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightSmall?: ResponsiveBoolean
+    roundedBottomRightMD?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 6
      * ```css
@@ -1149,11 +1149,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightMedium></Box>
+     * <Box roundedBottomRightLG></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightMedium?: ResponsiveBoolean
+    roundedBottomRightLG?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 8
      * ```css
@@ -1163,11 +1163,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightLarge></Box>
+     * <Box roundedBottomRightXL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightLarge?: ResponsiveBoolean
+    roundedBottomRightXL?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 12
      * ```css
@@ -1177,11 +1177,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightHuge></Box>
+     * <Box roundedBottomRight2XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightHuge?: ResponsiveBoolean
+    roundedBottomRight2XL?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 16
      * ```css
@@ -1191,11 +1191,11 @@ declare module '@fower/atomic-props' {
      * ```
      * @example
      * ```tsx
-     * <Box roundedBottomRightGigantic></Box>
+     * <Box roundedBottomRight3XL></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
      */
-    roundedBottomRightGigantic?: ResponsiveBoolean
+    roundedBottomRight3XL?: ResponsiveBoolean
     /**
      * set border-bottom-right-radius to 9999
      * ```css

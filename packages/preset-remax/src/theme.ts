@@ -65,12 +65,12 @@ export const theme: Partial<Theme> = {
   },
   radii: {
     none: 0,
-    tiny: 2,
-    small: 4,
-    medium: 6,
-    large: 8,
-    huge: 12,
-    gigantic: 16,
+    sm: 2,
+    md: 4,
+    lg: 6,
+    xl: 8,
+    '2xl': 12,
+    '3xl': 16,
     full: 9999,
   },
   shadows: {

@@ -48,17 +48,22 @@ const props = atoms.reduce((result, { alias, properties }) => {
   const items = entries.reduce((r, item, index) => {
     const [spaceKey, value] = item
     const getItem = (isBase = false) => {
-      let examples = isBase
-        ? [
-            `<Box ${alias}-4></Box>`,
-            `<Box ${alias}-1rem></Box>`,
-            `<Box ${alias}-8px></Box>`,
-            `<Box ${alias}={8}></Box>`,
-            `<Box ${alias}={a + b}></Box>`,
-          ]
-        : [`<Box ${alias + upFirst(spaceKey)}></Box>`]
+
+      const isSpecialKey = ['full', 'none'].includes(spaceKey)
+      const postfix = isSpecialKey ? upFirst(spaceKey) : spaceKey.toUpperCase()
+
+      const baseExample = [
+        `<Box ${alias}-4></Box>`,
+        `<Box ${alias}-1rem></Box>`,
+        `<Box ${alias}-8px></Box>`,
+        `<Box ${alias}={8}></Box>`,
+        `<Box ${alias}={a + b}></Box>`
+      ]
+
+      let examples = isBase ? baseExample : [`<Box ${alias + postfix}></Box>`]
+
       return {
-        name: isBase ? `${alias}?` : alias + upFirst(spaceKey) + '?',
+        name: isBase ? `${alias}?` : alias + postfix + '?',
         type: isBase
           ? `ResponsiveValue<string|number${alias === 'rounded' ? '|boolean' : ''}>`
           : 'ResponsiveBoolean',

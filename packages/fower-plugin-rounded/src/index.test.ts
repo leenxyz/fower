@@ -32,31 +32,42 @@ test('rounded', () => {
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['medium'])
+  expect(atom.style.borderRadius).toEqual(store.theme.radii['md'])
 })
 
 test('roundedMedium', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'roundedMedium',
+      propKey: 'roundedMD',
       propValue: true,
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['medium'])
+  expect(atom.style.borderRadius).toEqual(store.theme.radii['md'])
+})
+
+test('roundedFull', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'roundedFull',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.borderRadius).toEqual(store.theme.radii.full)
 })
 
 test('roundedTopMedium', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'roundedTopMedium',
+      propKey: 'roundedTopMD',
       propValue: true,
     }),
     parser,
   )
 
-  expect(atom.style.borderTopLeftRadius).toEqual(store.theme.radii['medium'])
-  expect(atom.style.borderTopRightRadius).toEqual(store.theme.radii['medium'])
+  expect(atom.style.borderTopLeftRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderTopRightRadius).toEqual(store.theme.radii['md'])
 })
 
 test('roundedTopRight={8}', () => {
