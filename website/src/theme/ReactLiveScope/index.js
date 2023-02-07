@@ -84,7 +84,7 @@ setTheme({
     body: 14,
   },
   shadows: {
-    '3xl': '0 32px 64px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0,0,0,0.02)',
+    '4xl': '0 32px 64px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0,0,0,0.02)',
   },
   colors: {
     brandLight: '#e0f2fe',

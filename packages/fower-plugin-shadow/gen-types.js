@@ -30,8 +30,10 @@ const typingModule = sourceFile.addModule({
 const entries = Object.entries(presetWeb?.theme?.shadows || {})
 
 const properties = entries.map(([key, value]) => {
+  const isSpecialKeys = ['inner', 'outline', 'none'].includes(key)
+  const postfix = isSpecialKeys ? upFirst(key) : key.toUpperCase()
   return {
-    name: 'shadow' + upFirst(key) + '?',
+    name: 'shadow' + postfix + '?',
     type: 'ResponsiveBoolean',
     docs: [
       {

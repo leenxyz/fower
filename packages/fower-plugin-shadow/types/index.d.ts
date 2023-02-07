@@ -19,77 +19,77 @@ declare module '@fower/atomic-props' {
      */
     shadow?: ResponsiveValue<string | boolean>
     /**
-     * set box shadow to tiny
+     * set box shadow to sm
      * ```css
      * { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowTiny></Box>
+     * <Box shadowSm></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowTiny?: ResponsiveBoolean
+    shadowSM?: ResponsiveBoolean
     /**
-     * set box shadow to small
+     * set box shadow to md
      * ```css
      * { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowSmall></Box>
+     * <Box shadowMd></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowSmall?: ResponsiveBoolean
+    shadowMD?: ResponsiveBoolean
     /**
-     * set box shadow to medium
+     * set box shadow to lg
      * ```css
      * { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowMedium></Box>
+     * <Box shadowLg></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowMedium?: ResponsiveBoolean
+    shadowLG?: ResponsiveBoolean
     /**
-     * set box shadow to large
+     * set box shadow to xl
      * ```css
      * { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowLarge></Box>
+     * <Box shadowXl></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowLarge?: ResponsiveBoolean
+    shadowXL?: ResponsiveBoolean
     /**
-     * set box shadow to huge
+     * set box shadow to 2xl
      * ```css
      * { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowHuge></Box>
+     * <Box shadow2xl></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowHuge?: ResponsiveBoolean
+    shadow2XL?: ResponsiveBoolean
     /**
-     * set box shadow to gigantic
+     * set box shadow to 3xl
      * ```css
      * { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);}
      * ```
      * @example
      * ```tsx
-     * <Box shadowGigantic></Box>
+     * <Box shadow3xl></Box>
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
      */
-    shadowGigantic?: ResponsiveBoolean
+    shadow3XL?: ResponsiveBoolean
     /**
      * set box shadow to inner
      * ```css

@@ -9,7 +9,7 @@ export function toStyle({ key, value, isValueProp }: Atom, parser: Parser) {
   const styleValue = key.replace('shadow', '')
   const shadowSize = styleValue.toLowerCase()
   const shadows: any = parser.config.theme.shadows
-  const shadowValue = shadows[shadowSize || 'medium']
+  const shadowValue = shadows[shadowSize || 'md']
   return { boxShadow: shadowValue }
 }
 

@@ -31,16 +31,27 @@ test('shadow', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows['medium'])
+  expect(atom.style.boxShadow).toEqual(store.theme.shadows.md)
 })
 
-test('shadowMedium', () => {
+test('shadowMD', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'shadowMedium',
+      propKey: 'shadowMD',
       propValue: true,
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows['medium'])
+  expect(atom.style.boxShadow).toEqual(store.theme.shadows.md)
+})
+
+test('shadowNone', () => {
+  const atom = handleAtom!(
+    new Atom({
+      propKey: 'shadowNone',
+      propValue: true,
+    }),
+    parser,
+  )
+  expect(atom.style.boxShadow).toEqual(store.theme.shadows.none)
 })
