@@ -19,9 +19,9 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@fower/core": "^1.75.7",
-    "@fower/preset-web": "^1.75.7",
-    "@fower/svelte-preprocess": "^1.75.7",
+    "@fower/core": "^1.76.0",
+    "@fower/preset-web": "^1.76.0",
+    "@fower/svelte-preprocess": "^1.76.0",
     "posthtml": "^0.15.2",
     "sirv-cli": "^1.0.0"
   }

@@ -1,5 +1,16 @@
 # @fower/css-object-processor
 
+## 1.76.0
+
+### Minor Changes
+
+- improve rounded and shadow
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/utils@1.76.0
+
 ## 1.75.7
 
 ### Patch Changes

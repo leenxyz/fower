@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.76.0
+
+### Minor Changes
+
+- improve rounded and shadow
+
 ## 1.75.7
 
 ### Patch Changes

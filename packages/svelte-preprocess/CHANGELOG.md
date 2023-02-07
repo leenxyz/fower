@@ -1,5 +1,17 @@
 # @fower/svelte-preprocess
 
+## 1.76.0
+
+### Minor Changes
+
+- improve rounded and shadow
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.76.0
+  - @fower/preset-web@1.76.0
+
 ## 1.75.7
 
 ### Patch Changes
