@@ -7,7 +7,7 @@ import { Box, useMode } from '@fower/react'
 const Heading = styled('h2', { lineHeight: '1em' })
 const Button = styled(
   'button',
-  'bgBrand',
+  'bgBrand500',
   'rounded',
   'outlineNone',
   'white',

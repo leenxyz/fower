@@ -29,7 +29,7 @@ export default () => {
   // );
 
   return (
-    <Box h-400 roundedLarge bgGray100--L2 p4>
+    <Box h-400 roundedLG bgGray100--L2 p4>
       {/* <Box red600>40 Lorem ipsum dolor sit amet</Box> */}
       <Box column toCenter spaceY3 gray800 textCenter>
         <Box

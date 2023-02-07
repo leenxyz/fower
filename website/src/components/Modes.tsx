@@ -22,7 +22,7 @@ export const Modes = () => {
     document.documentElement.classList.remove(...modes.filter((i) => i !== mode))
   }
   return (
-    <Box h-200 roundedLarge p4 column toCenter spaceY3>
+    <Box h-200 roundedLG p4 column toCenter spaceY3>
       <Box text2XL red400--red blue400--blue text6XL--large>
         Multiple theme mode
       </Box>

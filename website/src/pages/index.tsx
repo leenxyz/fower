@@ -137,7 +137,7 @@ function CodePreview({ title, subject, description, link, code, tags = [] }) {
           Learn more {subject}
         </Box>
       </Box>
-      <Box overflow="hidden" roundedHuge flex={1} textSM>
+      <Box overflow="hidden" rounded2XL flex={1} textSM>
         <LiveProvider code={code} scope={{ Box }} theme={theme}>
           <LivePreview style={{ width: '100%' }} />
           <LiveEditor
@@ -162,17 +162,16 @@ function Home() {
               A utility-first CSS in JS library for rapid UI development
             </Box>
             <Box text2XL textLeft py2>
-              <Translate id="home.subtitle" description="The homepage welcome message">
-                Get Started
-              </Translate>
+              <Translate id="home.subtitle" description="The homepage welcome message"></Translate>
             </Box>
 
             <Box className={styles.wrapLink} spaceX2>
               <Link
+                style={{ background: 'black', cursor: 'pointer' }}
                 className={clsx(
                   'button button--lg',
                   styles.getStarted,
-                  css('roundedFull', 'bgBlack', 'bgTrueGray800', 'py3', 'borderNone'),
+                  css('roundedFull', 'py3', 'borderNone'),
                 )}
                 to={useBaseUrl('docs/about')}
               >

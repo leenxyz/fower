@@ -5,37 +5,37 @@ title: Shadow
 
 Use `shadow{SIZE}` Atomic Props controll element's shadow.
 
-| Atomic Props   | CSS Properties         |
-| -------------- | ---------------------- |
-| shadowTiny     | box-shadow: {tiny}     |
-| shadowSmall    | box-shadow: {small}    |
-| shadowMedium   | box-shadow: {medium}   |
-| shadowLarge    | box-shadow: {large}    |
-| shadowHuge     | box-shadow: {huge}     |
-| shadowGigantic | box-shadow: {gigantic} |
-| shadow={value} | box-shadow: {value}    |
+| Atomic Props   | CSS Properties      |
+| -------------- | ------------------- |
+| shadowSM       | box-shadow: {sm}    |
+| shadowMD       | box-shadow: {md}    |
+| shadowLG       | box-shadow: {lg}    |
+| shadowXL       | box-shadow: {xl}    |
+| shadow2XL      | box-shadow: {2xl}   |
+| shadow3XL      | box-shadow: {3xl}   |
+| shadow={value} | box-shadow: {value} |
 
 ## Usage
 
 ```jsx live
 <Box bgGray100 p-20 toCenterX toBetween>
-  <Box toCenter square-60 bgWhite shadowTiny>
-    tiny
+  <Box toCenter square-60 bgWhite shadowSM>
+    sm
   </Box>
-  <Box toCenter square-80 bgWhite bgWhite shadowSmall>
-    small
+  <Box toCenter square-80 bgWhite bgWhite shadowMD>
+    md
   </Box>
-  <Box toCenter square-80 bgWhite shadow>
-    medium (default)
+  <Box toCenter square-80 bgWhite shadowLG>
+    lg
   </Box>
-  <Box toCenter square-90 bgWhite shadowLarge>
-    large
+  <Box toCenter square-90 bgWhite shadowXL>
+    xl
   </Box>
-  <Box toCenter square-100 bgWhite shadowHuge>
-    huge
+  <Box toCenter square-100 bgWhite shadow2XL>
+    2xl
   </Box>
-  <Box toCenter square-110 bgWhite shadowGigantic>
-    gigantic
+  <Box toCenter square-110 bgWhite shadow3XL>
+    3xl
   </Box>
 </Box>
 ```

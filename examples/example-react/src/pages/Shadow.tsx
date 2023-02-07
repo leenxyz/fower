@@ -8,28 +8,24 @@ export default () => {
       </Box>
 
       <Box py-50 row toEvenly flexWrap>
-        <Box bgWhite square-128 rounded-4 toCenter shadowTiny>
-          shadowTiny
+        <Box bgWhite square-128 rounded-4 toCenter shadowSM>
+          shadow small
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadow>
-          Base
+        <Box bgWhite square-128 rounded-4 toCenter shadowMD>
+          shadowMD
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowMedium>
-          shadowMedium
+        <Box bgWhite square-128 rounded-4 toCenter shadowLG>
+          shadowLG
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowLarge>
-          shadowLarge
+        <Box bgWhite square-128 rounded-4 toCenter shadowXL>
+          shadowXL
         </Box>
 
-        <Box bgWhite square-128 rounded-4 toCenter shadowHuge>
-          shadowHuge
-        </Box>
-
-        <Box bgWhite square-128 rounded-4 toCenter shadowGigantic>
-          shadowGigantic
+        <Box bgWhite square-128 rounded-4 toCenter shadow2XL>
+          shadow2XL
         </Box>
 
         <Box bgWhite square-128 rounded-4 toCenter shadowInner>

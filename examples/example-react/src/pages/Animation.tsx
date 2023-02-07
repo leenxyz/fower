@@ -7,7 +7,7 @@ export default () => {
       <Box
         animateSpin
         square20
-        roundedHuge
+        rounded2XL
         bgGradientX={['red400', 'orange400']}
       />
 

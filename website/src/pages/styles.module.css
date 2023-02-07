@@ -26,7 +26,6 @@
   padding: 60px 0 !important;
 }
 
-
 .red {
   /* color: #fc8181; */
   color: #25c2a0;
@@ -36,7 +35,6 @@
   /* color: var(--ifm-color-primary); */
   color: #61dafb;
 }
-
 
 .wrapLink {
   display: flex;

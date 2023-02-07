@@ -26,7 +26,7 @@ export default () => {
         Background
       </Box>
 
-      <Box textXL bgBrand bgBrand100--hover white>
+      <Box textXL bgBrand500 bgBrand100--hover white>
         bgBrand
       </Box>
 
