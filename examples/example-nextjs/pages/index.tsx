@@ -1,17 +1,54 @@
 import { Box } from '@fower/react'
-import React from 'react'
+import { setConfig } from '@fower/core'
 import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
+setConfig({
+  mode: {
+    autoDarkMode: {
+      enabled: true,
+      mappings: {
+        bgWhite: 'red500',
+      },
+    },
+  },
+})
+
 export default function Home() {
   // return (
-  //   <Box toCenter>
-  //     <Box bgYellow400 p4>
-  //       a
+  //   <Box gray100--dark>
+  //     <Box gray800 red500 green600--hover>
+  //       go
   //     </Box>
-  //     <Box bgGreen500 p4>
-  //       b
+  //   </Box>
+  // )
+
+  // return (
+  //   <Box p10 bgWhite black white--dark--hover>
+  //     fooo
+  //   </Box>
+  // )
+
+  // return (
+  //   <Box bgGray100 black>
+  //     foooooo
+  //   </Box>
+  // )
+
+  // return (
+  //   <Box mb-40 text7XL text6XL--sm text9XL--md fontBlack textCenter leading="1.2em">
+  //     <Box inlineFlex bgGradientX={['green500', 'blue500']} bgClipText transparent>
+  //       foo
   //     </Box>
+
+  //     <Box bgGradientX={['blue500', 'purple500']} bgClipText transparent>
+  //       bar
+  //     </Box>
+  //   </Box>
+  // )
+  // return (
+  //   <Box black bgRed300--T20 bgGray900--dark>
+  //     xxx
   //   </Box>
   // )
   return (
@@ -44,5 +81,6 @@ export default function Home() {
         </Box>
       </Box>
     </Box>
+
   )
 }

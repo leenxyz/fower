@@ -1,22 +1,26 @@
-/* @media (min-width: 1024px) {
-  .sm.md.lg.text8XL--lg {
-    font-size: 96px;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@media (min-width: 640px) {
-  .sm.textXL--sm {
-    font-size: 20px;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-
-.textSM {
-  font-size: 14px;
+* {
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .sm.md.text4XL--md {
-    font-size: 36px;
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
   }
-} */
+  body {
+    color: white;
+    background: black;
+  }
+}
