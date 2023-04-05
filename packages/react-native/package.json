@@ -27,6 +27,6 @@
     "@fower/styled": "^1.76.0"
   },
   "devDependencies": {
-    "@types/react-native": "^0.64.4"
+    "@types/react-native": "^0.71.5"
   }
 }
