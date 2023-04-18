@@ -1,8 +1,0 @@
-node_modules
-client/out
-client/node_modules
-server/out
-server/node_modules
-
-package-lock.json
-yarn.lock

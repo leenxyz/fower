@@ -11,15 +11,7 @@
     ],
     "nohoist": [
       "**/html-minifier-terser",
-      "**/svelte/**",
-      "**/sapper/**",
-      "**/@sapper/**",
-      "**/@dcloudio/**",
       "**/@tarojs/**",
-      "**/@vue/cli-service",
-      "**/@vitejs/**",
-      "**/@vue/**",
-      "**/vite",
       "**/example-react-native-expo/*",
       "**/ExampleReactNative/**"
     ]
