@@ -9,20 +9,13 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "examplereactnative",
-    "examplereactnative",
     "example-cra",
     "example-nextjs",
-    "example-next13",
-    "example-svelte-rollup",
-    "example-svelte-webpack",
     "example-taro",
-    "example-vue-vite",
     "@fower/example-react",
     "@fower/example-react-native-expo",
     "@fower/example-react-ssr",
     "@fower/example-remax",
-    "@fower/example-uniapp",
-    "@fower/example-vue",
     "@fower/website"
   ]
 }
