@@ -4,6 +4,7 @@ import { setConfig } from '@fower/core'
 import '@fower/react'
 
 setConfig({
+  prefix: 'ai-c-',
   mode: {
     autoDarkMode: {
       enabled: true,

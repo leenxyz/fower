@@ -3,25 +3,17 @@ import { setConfig } from '@fower/core'
 import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
-setConfig({
-  mode: {
-    autoDarkMode: {
-      enabled: true,
-      mappings: {
-        bgWhite: 'red500',
-      },
-    },
-  },
-})
-
 export default function Home() {
-  // return (
-  //   <Box gray100--dark>
-  //     <Box gray800 red500 green600--hover>
-  //       go
-  //     </Box>
-  //   </Box>
-  // )
+  return (
+    <Box bgGreen200 toCenterY toBetween>
+      <Box gray800 red500 green600--hover>
+        AA
+      </Box>
+      <Box gray800 red500 green600--hover>
+        AA
+      </Box>
+    </Box>
+  )
 
   // return (
   //   <Box p10 bgWhite black white--dark--hover>
@@ -81,6 +73,5 @@ export default function Home() {
         </Box>
       </Box>
     </Box>
-
   )
 }
