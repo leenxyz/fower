@@ -22,9 +22,9 @@
   "author": "forsigner",
   "module": "dist/fower-plugin-gradient.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.77.0",
-    "@fower/core": "^1.77.0",
-    "@fower/utils": "^1.77.0",
-    "csstype": "^3.0.8"
+    "@fower/atomic-props": "workspace:*",
+    "@fower/core": "workspace:*",
+    "@fower/utils": "workspace:*",
+    "csstype": "^3.1.2"
   }
 }

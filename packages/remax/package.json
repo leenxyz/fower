@@ -19,9 +19,9 @@
   "author": "forsigner",
   "module": "dist/remax.esm.js",
   "dependencies": {
-    "@fower/core": "^1.77.0",
-    "@fower/preset-remax": "^1.77.0",
-    "@fower/styled": "^1.77.0"
+    "@fower/core": "workspace:*",
+    "@fower/preset-remax": "workspace:*",
+    "@fower/styled": "workspace:*"
   },
   "devDependencies": {
     "remax": "^2.13.1"

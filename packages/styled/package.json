@@ -24,9 +24,9 @@
     "@types/hoist-non-react-statics": "^3.3.1"
   },
   "dependencies": {
-    "@fower/atomic-props": "^1.77.0",
-    "@fower/core": "^1.77.0",
-    "@fower/utils": "^1.77.0",
+    "@fower/atomic-props": "workspace:*",
+    "@fower/core": "workspace:*",
+    "@fower/utils": "workspace:*",
     "hoist-non-react-statics": "^3.3.2"
   }
 }

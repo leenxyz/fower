@@ -19,11 +19,11 @@
   "author": "forsigner",
   "module": "dist/react.esm.js",
   "dependencies": {
-    "@fower/atomic-props": "^1.77.0",
-    "@fower/core": "^1.77.0",
-    "@fower/css-object-processor": "^1.77.0",
-    "@fower/preset-web": "^1.77.0",
-    "@fower/styled": "^1.77.0",
-    "@fower/utils": "^1.77.0"
+    "@fower/atomic-props": "workspace:*",
+    "@fower/core": "workspace:*",
+    "@fower/css-object-processor": "workspace:*",
+    "@fower/preset-web": "workspace:*",
+    "@fower/styled": "workspace:*",
+    "@fower/utils": "workspace:*"
   }
 }
