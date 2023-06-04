@@ -1,5 +1,11 @@
 # @fower/utils
 
+## 1.79.0
+
+### Minor Changes
+
+- create gap plugin
+
 ## 1.78.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-layout",
-  "version": "1.78.0",
+  "version": "1.79.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",

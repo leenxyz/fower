@@ -1,5 +1,17 @@
 # @fower/babel-preset-fower
 
+## 1.79.0
+
+### Minor Changes
+
+- create gap plugin
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/react@1.79.0
+  - @fower/utils@1.79.0
+
 ## 1.78.0
 
 ### Minor Changes
