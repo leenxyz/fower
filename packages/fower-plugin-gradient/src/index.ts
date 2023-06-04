@@ -20,7 +20,7 @@ export default (): FowerPlugin => {
 
       if (!Array.isArray(value)) return atom
 
-      const stops = value.map((i: keyof typeof colors) => colors[i] || i).join(',')
+      const stops = value.map((i: keyof typeof colors) => colors[i] || i).join(', ')
 
       atom.style = {
         backgroundImage: `linear-gradient(to ${direction}, ${stops})`,

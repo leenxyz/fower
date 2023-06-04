@@ -100,7 +100,7 @@ test('borderTopRed400', () => {
     }),
     parser,
   )
-  expect(atom.style.borderTopColor).toEqual('#ff8787')
+  expect(atom.style.borderTopColor).toEqual('#f87171')
 })
 
 test('borderDashed', () => {

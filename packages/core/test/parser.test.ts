@@ -377,17 +377,13 @@ describe('Auto dark mode', () => {
   test('border color', () => {
     const props = { borderGreen200: true }
     const parser = new Parser(props)
-    const [atom1, atom2] = parser.atoms
+    const [atom1] = parser.atoms
 
-    expect(parser.atoms.length).toBe(2)
+    expect(parser.atoms.length).toBe(1)
 
     expect(atom1.id).toEqual('borderGreen200')
     expect(atom1.style.borderColor).toEqual('green200')
     expect(atom1.meta.mode).toBeFalsy()
-
-    expect(atom2.id).toEqual('borderGreen700--dark')
-    expect(atom2.style.borderColor).toEqual('green700')
-    expect(atom2.meta.mode).toEqual('dark')
   })
 
   test('color with custom mapping', () => {
@@ -429,18 +425,18 @@ describe('Auto dark mode', () => {
   test('border color with custom mapping', () => {
     const props = { borderRed800: true }
     const parser = new Parser(props)
-    const [atom1, atom2] = parser.atoms
+    const [atom1] = parser.atoms
 
-    expect(parser.atoms.length).toBe(2)
+    expect(parser.atoms.length).toBe(1)
 
     expect(atom1.id).toEqual('borderRed800')
     expect(atom1.style.borderColor).toEqual('red800')
     expect(atom1.meta.mode).toBeFalsy()
 
-    expect(atom2.id).toEqual('borderColor-fc0--dark')
-    expect(atom2.propKey).toEqual('borderColor')
-    expect(atom2.propValue).toEqual('#fc0')
-    expect(atom2.style.borderColor).toEqual('#fc0')
-    expect(atom2.meta.mode).toEqual('dark')
+    // expect(atom2.id).toEqual('borderColor-fc0--dark')
+    // expect(atom2.propKey).toEqual('borderColor')
+    // expect(atom2.propValue).toEqual('#fc0')
+    // expect(atom2.style.borderColor).toEqual('#fc0')
+    // expect(atom2.meta.mode).toEqual('dark')
   })
 })

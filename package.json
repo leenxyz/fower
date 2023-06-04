@@ -43,6 +43,7 @@
   "devDependencies": {
     "@fower/preset-web": "workspace:*",
     "@fower/colors": "workspace:*",
+    "@fower/core": "workspace:*",
     "@fower/utils": "workspace:*",
     "@types/react": "^18.2.8",
     "csstype": "^3.1.2",

@@ -6,26 +6,25 @@ const parser = {} as Parser
 
 test('isMatch', () => {
   expect(isMatch!('gap')).toEqual(true)
-  expect(isMatch!('rowGap')).toEqual(true)
-  expect(isMatch!('columnGap')).toEqual(true)
-  expect(isMatch!('gridTemplateColumns')).toEqual(true)
+  expect(isMatch!('gapX')).toEqual(true)
+  expect(isMatch!('gapY')).toEqual(true)
 })
 
-test('rowGap={8}', () => {
+test('gap={8}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'rowGap',
+      propKey: 'gap',
       propValue: 8,
     }),
     parser,
   )
-  expect(atom.style.rowGap).toEqual(8)
+  expect(atom.style.gap).toEqual(8)
 })
 
-test('columnGap={8}', () => {
+test('gapX={8}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'columnGap',
+      propKey: 'gapX',
       propValue: 8,
     }),
     parser,
@@ -33,13 +32,13 @@ test('columnGap={8}', () => {
   expect(atom.style.columnGap).toEqual(8)
 })
 
-test('gridTemplateColumns={4}', () => {
+test('gapY={8}', () => {
   const atom = handleAtom!(
     new Atom({
-      propKey: 'gridTemplateColumns',
-      propValue: 4,
+      propKey: 'gapY',
+      propValue: 8,
     }),
     parser,
   )
-  expect(atom.style.gridTemplateColumns).toEqual('repeat(4, minmax(0px, 1fr))')
+  expect(atom.style.rowGap).toEqual(8)
 })

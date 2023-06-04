@@ -53,7 +53,7 @@ test('flex="10', () => {
     }),
     parser,
   )
-  expect(atom.style.flex).toEqual('10')
+  expect(atom.style.flex).toEqual(10)
 })
 
 test('flexNone', () => {

@@ -22,7 +22,7 @@ test('bgGradientX', () => {
     }),
     parser,
   )
-  expect(atom.style.backgroundImage).toEqual('linear-gradient(to right, #ff8787,#ffd43b)')
+  expect(atom.style.backgroundImage).toEqual('linear-gradient(to right, #f87171, #facc15)')
 })
 
 test('bgGradientX', () => {
@@ -33,7 +33,7 @@ test('bgGradientX', () => {
     }),
     parser,
   )
-  expect(atom.style.backgroundImage).toEqual('linear-gradient(to bottom, #ff8787,#ffd43b)')
+  expect(atom.style.backgroundImage).toEqual('linear-gradient(to bottom, #f87171, #facc15)')
 })
 
 test('invalid propValue', () => {

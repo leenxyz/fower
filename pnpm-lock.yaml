@@ -20,6 +20,9 @@ importers:
       '@fower/colors':
         specifier: workspace:*
         version: link:packages/colors
+      '@fower/core':
+        specifier: workspace:*
+        version: link:packages/core
       '@fower/preset-web':
         specifier: workspace:*
         version: link:packages/preset-web

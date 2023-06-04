@@ -69,7 +69,7 @@ test('ringRed100-1--D10', () => {
     parser,
   )
   expect(atom.meta.colorPostfix).toEqual('D10')
-  expect(atom.style.boxShadow).toEqual(`0 0 0 1px #e5c9c9`)
+  expect(atom.style.boxShadow).toEqual(`0 0 0 1px #e4c8c8`)
 })
 
 test('Invalid color: ringFoo200-2', () => {
