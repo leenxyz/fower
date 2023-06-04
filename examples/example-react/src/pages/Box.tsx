@@ -14,7 +14,7 @@ const Button = (props: { bar: string }) => {
 
 export default () => {
   return (
-    <Box>
+    <Box gapX3>
       <Tag></Tag>
       <Box>basic box</Box>
       <Box as={Button} bar="bar"></Box>
