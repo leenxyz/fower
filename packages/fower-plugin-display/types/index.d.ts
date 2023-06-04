@@ -60,6 +60,19 @@ declare module '@fower/atomic-props' {
      */
     inlineFlex?: ResponsiveBoolean
     /**
+     * Set display to inline-grid
+     * ```css
+     * { display: inline-grid; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box inlineGrid></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/display
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/display
+     */
+    inlineGrid?: ResponsiveBoolean
+    /**
      * Set display to block
      * ```css
      * { display: block; }

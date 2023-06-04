@@ -2,7 +2,8 @@ import { FowerPlugin } from '@fower/core'
 import { kebab } from '@fower/utils'
 
 export function isDisplayKey(key: string) {
-  return /^(hidden|inline|inlineBlock|inlineFlex|block|grid|table)$|^display$/gi.test(key)
+  const reg = /^(hidden|inline|inlineBlock|inlineGrid|inlineFlex|block|grid|table)$|^display$/gi
+  return reg.test(key)
 }
 
 export function toStyle(key: string, value: any): any {

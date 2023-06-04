@@ -65,7 +65,9 @@ const commonProps = commons.map((item) => {
   }
 })
 
-const props = ['inline', 'inlineBlock', 'inlineFlex', 'block', 'grid', 'table', 'hidden'].map(
+const list = ['inline', 'inlineBlock', 'inlineFlex', 'inlineGrid', 'block', 'grid', 'table', 'hidden']
+
+const props = list.map(
   (name) => ({
     name: name + '?',
     type: `ResponsiveBoolean`,
