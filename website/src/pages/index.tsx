@@ -6,12 +6,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 import Translate from '@docusaurus/Translate'
-import { Box } from '@fower/react'
+import { Box, css } from '@fower/react'
 import theme from 'prism-react-renderer/themes/duotoneDark'
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { HomeDemo } from '../components/HomeDemo'
-import { css } from '@fower/core'
 
 const features = [
   {

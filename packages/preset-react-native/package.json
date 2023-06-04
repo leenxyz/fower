@@ -35,6 +35,7 @@
     "fower-plugin-font-family": "workspace:*",
     "fower-plugin-font-style": "workspace:*",
     "fower-plugin-font-weight": "workspace:*",
+    "fower-plugin-gap": "workspace:*",
     "fower-plugin-grid": "workspace:*",
     "fower-plugin-layout": "workspace:*",
     "fower-plugin-line-height": "workspace:*",

@@ -1,5 +1,5 @@
 {
-  "name": "fower-plugin-grid",
+  "name": "fower-plugin-gap",
   "version": "1.78.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "tsdx watch --verbose",
+    "build:types": "node gen-types.js",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch",
@@ -20,7 +21,7 @@
     "lint": "tsdx lint"
   },
   "author": "forsigner",
-  "module": "dist/fower-plugin-grid.esm.js",
+  "module": "dist/fower-plugin-gap.esm.js",
   "dependencies": {
     "@fower/atomic-props": "workspace:*",
     "@fower/core": "workspace:*",

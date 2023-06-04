@@ -9,6 +9,7 @@
 /// <reference types="fower-plugin-container" />
 /// <reference types="fower-plugin-display" />
 /// <reference types="fower-plugin-flexbox" />
+/// <reference types="fower-plugin-gap" />
 /// <reference types="fower-plugin-grid" />
 /// <reference types="fower-plugin-gradient" />
 /// <reference types="fower-plugin-layout" />

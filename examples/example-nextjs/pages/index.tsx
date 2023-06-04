@@ -4,12 +4,12 @@ import { Colors } from '../components/Colors'
 
 export default function Home() {
   return (
-    <Box bgGreen200 toCenterY toBetween>
+    <Box bgGreen200 toCenterX gapX={[30, 50, 60, 100, 200]}>
       <Box gray800 red500 green600--hover>
         AA
       </Box>
       <Box gray800 red500 green600--hover>
-        AA
+        BB
       </Box>
     </Box>
   )

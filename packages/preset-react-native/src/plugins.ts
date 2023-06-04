@@ -3,6 +3,7 @@ import border from 'fower-plugin-border'
 import flexItem from 'fower-plugin-box-alignment'
 import color from 'fower-plugin-color'
 import display from 'fower-plugin-display'
+import gap from 'fower-plugin-gap'
 import grid from 'fower-plugin-grid'
 import flexBox from 'fower-plugin-flexbox'
 import layout from 'fower-plugin-layout'
@@ -28,6 +29,7 @@ export const plugins = [
   color(),
   display(),
   flexBox(),
+  gap(),
   grid(),
   flexItem(),
   layout(),

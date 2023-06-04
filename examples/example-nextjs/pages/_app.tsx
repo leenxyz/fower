@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { setConfig } from '@fower/react'
 
 setConfig({
-  prefix: 'ai-c-',
+  // prefix: 'ai-c-',
   mode: {
     autoDarkMode: {
       enabled: true,
