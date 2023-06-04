@@ -1,5 +1,11 @@
 # @fower/utils
 
+## 1.79.2
+
+### Patch Changes
+
+- fix types
+
 ## 1.79.1
 
 ### Patch Changes

@@ -1,5 +1,48 @@
 # @fower/preset-uniapp
 
+## 1.79.2
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @fower/colors@1.79.2
+  - @fower/core@1.79.2
+  - fower-plugin-background@1.79.2
+  - fower-plugin-border@1.79.2
+  - fower-plugin-box-alignment@1.79.2
+  - fower-plugin-box-sizing@1.79.2
+  - fower-plugin-color@1.79.2
+  - fower-plugin-cursor@1.79.2
+  - fower-plugin-debug@1.79.2
+  - fower-plugin-display@1.79.2
+  - fower-plugin-flexbox@1.79.2
+  - fower-plugin-font-family@1.79.2
+  - fower-plugin-font-style@1.79.2
+  - fower-plugin-font-weight@1.79.2
+  - fower-plugin-gap@1.79.2
+  - fower-plugin-gradient@1.79.2
+  - fower-plugin-grid@1.79.2
+  - fower-plugin-layout@1.79.2
+  - fower-plugin-line-height@1.79.2
+  - fower-plugin-margin@1.79.2
+  - fower-plugin-opacity@1.79.2
+  - fower-plugin-outline@1.79.2
+  - fower-plugin-overflow@1.79.2
+  - fower-plugin-padding@1.79.2
+  - fower-plugin-position@1.79.2
+  - fower-plugin-rounded@1.79.2
+  - fower-plugin-shadow@1.79.2
+  - fower-plugin-size@1.79.2
+  - fower-plugin-space@1.79.2
+  - fower-plugin-text-align@1.79.2
+  - fower-plugin-text-decoration@1.79.2
+  - fower-plugin-text-overflow@1.79.2
+  - fower-plugin-text-size@1.79.2
+  - fower-plugin-text-transform@1.79.2
+  - fower-plugin-visibility@1.79.2
+  - fower-plugin-z-index@1.79.2
+
 ## 1.79.1
 
 ### Patch Changes

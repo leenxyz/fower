@@ -1,5 +1,15 @@
 # fower-plugin-line-height
 
+## 1.79.2
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @fower/atomic-props@1.79.2
+  - @fower/core@1.79.2
+  - @fower/utils@1.79.2
+
 ## 1.79.1
 
 ### Patch Changes

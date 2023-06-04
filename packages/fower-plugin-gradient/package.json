@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-gradient",
-  "version": "1.79.1",
+  "version": "1.79.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",

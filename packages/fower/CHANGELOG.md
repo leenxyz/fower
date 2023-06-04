@@ -1,5 +1,13 @@
 # fower
 
+## 1.79.2
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @fower/core@1.79.2
+
 ## 1.79.1
 
 ### Patch Changes
