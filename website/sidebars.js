@@ -1,4 +1,18 @@
-module.exports = {
+/**
+ * Creating a sidebar enables you to:
+ - create an ordered group of docs
+ - render a sidebar for each doc of that group
+ - provide next/previous navigation
+
+ The sidebars can be generated from the filesystem, or explicitly defined here.
+
+ Create as many sidebars as you want.
+ */
+
+// @ts-check
+
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
   docs: [
     {
       type: 'category',
@@ -10,13 +24,13 @@ module.exports = {
       label: 'Getting Started',
       items: [
         'use-with-react',
-        'use-with-vue',
-        'use-with-svelte',
+        // 'use-with-vue',
+        // 'use-with-svelte',
         'use-with-rn',
         'use-with-taro',
-        'use-with-uniapp',
+        // 'use-with-uniapp',
         'use-with-remax',
-        'use-with-vanilla',
+        // 'use-with-vanilla',
       ],
     },
     {
@@ -91,10 +105,10 @@ module.exports = {
   ],
 
   api: [
+    'packages/react',
     'packages/core',
     'packages/styled',
-    'packages/react',
-    'packages/vue',
+    // 'packages/vue',
     'packages/react-native',
     'packages/taro',
     'packages/types',
@@ -195,11 +209,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '',
-      items: [],
-    },
-    {
-      type: 'category',
       label: 'Grid',
       items: ['grid-template-columns', 'gap'],
     },
@@ -250,4 +259,7 @@ module.exports = {
       items: ['fill', 'stroke', 'stroke-width'],
     },
   ],
-}
+
+};
+
+module.exports = sidebars;

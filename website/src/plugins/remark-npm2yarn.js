@@ -8,11 +8,12 @@
 const npmToYarn = require('npm-to-yarn')
 
 // E.g. global install: 'npm i' -> 'yarn'
-const convertNpmToYarn = (npmCode) => npmToYarn(npmCode, 'yarn')
+const convertNpmToYarn = (npmCode, type = 'yarn') => npmToYarn(npmCode, type)
 
 const transformNode = (node) => {
   const npmCode = node.value
   const yarnCode = convertNpmToYarn(node.value)
+  const pnpmCode = convertNpmToYarn(node.value, 'pnpm')
   return [
     {
       type: 'jsx',
@@ -20,7 +21,8 @@ const transformNode = (node) => {
         `<Tabs groupId="npm2yarn" defaultValue="npm" ` +
         `values={[
     { label: 'npm', value: 'npm', },
-    { label: 'Yarn', value: 'yarn', },
+    { label: 'yarn', value: 'yarn', },
+    { label: 'pnpm', value: 'pnpm', },
   ]}
 >
 <TabItem value="npm">`,
@@ -38,6 +40,15 @@ const transformNode = (node) => {
       type: node.type,
       lang: node.lang,
       value: yarnCode,
+    },
+    {
+      type: 'jsx',
+      value: '</TabItem>\n<TabItem value="pnpm">',
+    },
+    {
+      type: node.type,
+      lang: node.lang,
+      value: pnpmCode,
     },
     {
       type: 'jsx',

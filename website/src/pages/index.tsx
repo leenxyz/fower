@@ -7,9 +7,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import styles from './styles.module.css'
 import Translate from '@docusaurus/Translate'
 import { Box, css } from '@fower/react'
-import theme from 'prism-react-renderer/themes/duotoneDark'
-
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { HomeDemo } from '../components/HomeDemo'
 
 const features = [
@@ -115,43 +112,8 @@ const previews = [
   },
 ]
 
-function CodePreview({ title, subject, description, link, code, tags = [] }) {
-  return (
-    <Box toBetween className={styles.container} spaceX4>
-      <Box textLeft flex-1>
-        <Box as="h2" toLeft text6XL leadingNone>
-          {title}
-        </Box>
-        <Box toLeft spaceX2>
-          {tags.map((tag, i) => (
-            <Box key={i} bgBlack white px2 py1 textSM>
-              {tag}
-            </Box>
-          ))}
-        </Box>
-        <Box my3 textLG>
-          {description}
-        </Box>
-        <Box as="a" href={link} pink600>
-          Learn more {subject}
-        </Box>
-      </Box>
-      <Box overflow="hidden" rounded2XL flex={1} textSM>
-        <LiveProvider code={code} scope={{ Box }} theme={theme}>
-          <LivePreview style={{ width: '100%' }} />
-          <LiveEditor
-            style={{ fontFamily: 'system-ui,Untitled Sans, -apple-system, system-ui, sans-serif' }}
-          />
-          <LiveError />
-        </LiveProvider>
-      </Box>
-    </Box>
-  )
-}
-
 function Home() {
-  const context = useDocusaurusContext()
-  const { siteConfig = {}, tagline } = context
+  const { siteConfig = {}, tagline } = useDocusaurusContext()
   return (
     <Layout title={tagline} description={tagline}>
       <div className={styles.container}>
@@ -161,7 +123,9 @@ function Home() {
               A utility-first CSS in JS library for rapid UI development
             </Box>
             <Box text2XL textLeft py2>
-              <Translate id="home.subtitle" description="The homepage welcome message"></Translate>
+              <Translate id="home.subtitle" description="The homepage welcome message">
+                Fower
+              </Translate>
             </Box>
 
             <Box className={styles.wrapLink} spaceX2>
@@ -172,7 +136,7 @@ function Home() {
                   styles.getStarted,
                   css('roundedFull', 'py3', 'borderNone'),
                 )}
-                to={useBaseUrl('docs/about')}
+                to={useBaseUrl('docs/use-with-react')}
               >
                 Get Started
               </Link>
@@ -204,12 +168,6 @@ function Home() {
           </div>
         )}
       </main>
-
-      {/* <Box>
-        {previews.map((item, i) => (
-          <CodePreview key={i} {...item}></CodePreview>
-        ))}
-      </Box> */}
     </Layout>
   )
 }

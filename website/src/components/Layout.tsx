@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Box } from '@fower/react'
-import { styled } from '@fower/styled'
+import { styled } from '@fower/react'
 
 interface Props {
   className?: string
