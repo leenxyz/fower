@@ -60,9 +60,9 @@
     "ts-jest": "^26.5.4",
     "ts-morph": "^11.0.3",
     "tsdx": "^0.14.1",
-    "tslib": "^2.4.1",
+    "tslib": "^2.5.3",
     "turbo": "latest",
-    "typescript": "^4.9.4"
+    "typescript": "^5.1.3"
   },
   "dependencies": {},
   "packageManager": "pnpm@8.4.0"

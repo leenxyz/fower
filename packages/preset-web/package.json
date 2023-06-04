@@ -4,6 +4,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
+  "author": "forsigner",
+  "module": "dist/preset-web.esm.js",
   "files": [
     "dist",
     "types"
@@ -19,8 +21,6 @@
     "test:cov": "tsdx test --coverage --passWithNoTests",
     "lint": "tsdx lint"
   },
-  "author": "forsigner",
-  "module": "dist/preset-web.esm.js",
   "dependencies": {
     "@fower/atomic-props": "workspace:*",
     "@fower/colors": "workspace:*",

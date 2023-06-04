@@ -1,6 +1,7 @@
 import React from 'react'
 import { setConfig, styleSheet, store } from '@fower/core'
 import presetWeb from '@fower/preset-web'
+import '@fower/atomic-props'
 
 setConfig(presetWeb)
 
@@ -11,6 +12,7 @@ export * from '@fower/styled'
 export * from './jsx'
 export * from './Box'
 export * from './useMode'
+
 export { getAtomIds }
 
 export function getCssString() {
