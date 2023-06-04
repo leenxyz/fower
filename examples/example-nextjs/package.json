@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fower/react": "*",
-    "@types/node": "^18.11.14",
+    "@fower/react": "workspace:*",
+    "@types/node": "^20.2.5",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "eslint": "^8.29.0",

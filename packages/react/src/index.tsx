@@ -7,6 +7,8 @@ setConfig(presetWeb)
 
 const getAtomIds = store.getAtomIds
 
+export * from '@fower/core'
+export * from '@fower/styled'
 export * from './jsx'
 export * from './Box'
 export * from './useMode'

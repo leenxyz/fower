@@ -15,6 +15,7 @@
     "prepare": "husky install",
     "changeset": "changeset",
     "version": "changeset version",
+    "publish": "pnpm publish -r",
     "release": "changeset publish"
   },
   "eslintConfig": {

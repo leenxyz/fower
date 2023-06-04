@@ -1,5 +1,4 @@
 import { Box } from '@fower/react';
-import { keyframes } from '@fower/core';
 
 export default () => {
   return (

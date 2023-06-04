@@ -89,7 +89,7 @@ export function argsToProps(args: any[], objectPropKey = 'css') {
 
     if (typeof cur !== 'object') return result
 
-    // hanlde array like ['toCenter', 'px-8', 'mb2']
+    // handle array like ['toCenter', 'px-8', 'mb2']
     if (Array.isArray(cur)) {
       for (const key of cur) {
         result[key] = true

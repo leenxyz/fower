@@ -1,5 +1,4 @@
 import { Box } from '@fower/react'
-import { setConfig } from '@fower/core'
 import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
