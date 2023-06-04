@@ -14,7 +14,6 @@
     "example-taro",
     "@fower/example-react",
     "@fower/example-react-native-expo",
-    "@fower/example-react-ssr",
     "@fower/example-remax",
     "@fower/website"
   ]

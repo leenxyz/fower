@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.78.0
+
+### Minor Changes
+
+- use pnpm
+
 ## 1.77.0
 
 ### Minor Changes

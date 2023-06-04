@@ -1,5 +1,18 @@
 # fower-plugin-cursor
 
+## 1.78.0
+
+### Minor Changes
+
+- use pnpm
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@1.78.0
+  - @fower/core@1.78.0
+  - @fower/utils@1.78.0
+
 ## 1.77.0
 
 ### Minor Changes

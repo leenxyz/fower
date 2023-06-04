@@ -1,5 +1,18 @@
 # @fower/taro
 
+## 1.78.0
+
+### Minor Changes
+
+- use pnpm
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.78.0
+  - @fower/preset-taro@1.78.0
+  - @fower/styled@1.78.0
+
 ## 1.77.0
 
 ### Minor Changes
