@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.79.1
+
+### Patch Changes
+
+- upgrade typescript
+
 ## 1.79.0
 
 ### Minor Changes

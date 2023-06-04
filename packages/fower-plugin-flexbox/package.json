@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-flexbox",
-  "version": "1.79.0",
+  "version": "1.79.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",

@@ -1,5 +1,16 @@
 # @fower/core
 
+## 1.79.1
+
+### Patch Changes
+
+- upgrade typescript
+- Updated dependencies
+  - @fower/atomic-props@1.79.1
+  - @fower/color-helper@1.79.1
+  - @fower/css-object-processor@1.79.1
+  - @fower/utils@1.79.1
+
 ## 1.79.0
 
 ### Minor Changes
