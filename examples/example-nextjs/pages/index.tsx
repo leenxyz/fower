@@ -2,12 +2,6 @@ import { Box } from '@fower/react'
 import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
-declare module '@fower/atomic-props' {
-  export interface AtomicProps {
-    foo?: string
-  }
-}
-
 export default function Home() {
   return (
     <Box bgGreen200 toCenterX gapX={[30, 50, 60, 100, 200]}>
