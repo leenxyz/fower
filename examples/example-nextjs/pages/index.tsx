@@ -2,10 +2,13 @@ import { Box } from '@fower/react'
 import { DarkModeToggle } from '../components/DarkModeToggle'
 import { Colors } from '../components/Colors'
 
+import { FowerHTMLProps, AtomicProps } from '@fower/react'
+import { forwardRef } from 'react'
+
 export default function Home() {
   return (
     <Box bgGreen200 toCenterX gapX={[30, 50, 60, 100, 200]}>
-      <Box gray800 red500 green600--hover>
+      <Box as="button" ref={{} as any} gray800 red500 green600--hover>
         AA
       </Box>
       <Box gray800 red500 green600--hover>

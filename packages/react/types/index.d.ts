@@ -1,7 +1,7 @@
 /// <reference types="@fower/preset-web" />
 import React from 'react'
-import '@fower/atomic-props'
 declare const getAtomIds: () => string[]
+export { AtomicProps } from '@fower/atomic-props'
 export * from '@fower/core'
 export * from '@fower/styled'
 export * from '../dist/jsx'
