@@ -6,6 +6,7 @@ setConfig(presetWeb)
 
 const getAtomIds = store.getAtomIds
 
+export { AtomicProps, ModeType } from '@fower/atomic-props'
 export * from '@fower/core'
 export * from '@fower/styled'
 export * from './jsx'
