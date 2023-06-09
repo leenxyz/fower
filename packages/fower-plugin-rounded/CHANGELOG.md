@@ -1,5 +1,15 @@
 # fower-plugin-rounded
 
+## 1.79.3
+
+### Patch Changes
+
+- improve types
+- Updated dependencies
+  - @fower/atomic-props@1.79.3
+  - @fower/core@1.79.3
+  - @fower/utils@1.79.3
+
 ## 1.79.2
 
 ### Patch Changes

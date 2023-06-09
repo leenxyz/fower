@@ -1,5 +1,11 @@
 # @fower/atomic-props
 
+## 1.79.3
+
+### Patch Changes
+
+- improve types
+
 ## 1.79.2
 
 ### Patch Changes

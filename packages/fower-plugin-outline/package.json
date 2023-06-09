@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-outline",
-  "version": "1.79.2",
+  "version": "1.79.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
