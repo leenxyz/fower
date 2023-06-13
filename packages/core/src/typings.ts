@@ -4,7 +4,7 @@ import type { Parser } from './parser'
 import * as CSS from 'csstype'
 import React from 'react'
 
-export type ComponentProps<T extends As> = Omit<React.ComponentProps<T>, 'ref'> & {
+export type ComponentProps<T extends As> = React.ComponentProps<T> & {
   as?: As
 }
 
