@@ -1,5 +1,15 @@
 # fower-plugin-debug
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/atomic-props@1.79.4
+  - @fower/core@1.79.4
+  - @fower/utils@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

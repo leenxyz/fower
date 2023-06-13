@@ -1,5 +1,60 @@
 # @fower/preset-web
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/atomic-props@1.79.4
+  - @fower/colors@1.79.4
+  - @fower/core@1.79.4
+  - fower-plugin-animation@1.79.4
+  - fower-plugin-appearance@1.79.4
+  - fower-plugin-background@1.79.4
+  - fower-plugin-border@1.79.4
+  - fower-plugin-box-alignment@1.79.4
+  - fower-plugin-box-sizing@1.79.4
+  - fower-plugin-color@1.79.4
+  - fower-plugin-container@1.79.4
+  - fower-plugin-cursor@1.79.4
+  - fower-plugin-debug@1.79.4
+  - fower-plugin-display@1.79.4
+  - fower-plugin-flexbox@1.79.4
+  - fower-plugin-font-family@1.79.4
+  - fower-plugin-font-style@1.79.4
+  - fower-plugin-font-weight@1.79.4
+  - fower-plugin-gap@1.79.4
+  - fower-plugin-gradient@1.79.4
+  - fower-plugin-grid@1.79.4
+  - fower-plugin-layout@1.79.4
+  - fower-plugin-line-height@1.79.4
+  - fower-plugin-list@1.79.4
+  - fower-plugin-margin@1.79.4
+  - fower-plugin-opacity@1.79.4
+  - fower-plugin-outline@1.79.4
+  - fower-plugin-overflow@1.79.4
+  - fower-plugin-padding@1.79.4
+  - fower-plugin-placeholder@1.79.4
+  - fower-plugin-position@1.79.4
+  - fower-plugin-ring@1.79.4
+  - fower-plugin-rounded@1.79.4
+  - fower-plugin-shadow@1.79.4
+  - fower-plugin-size@1.79.4
+  - fower-plugin-space@1.79.4
+  - fower-plugin-svg@1.79.4
+  - fower-plugin-text-align@1.79.4
+  - fower-plugin-text-decoration@1.79.4
+  - fower-plugin-text-overflow@1.79.4
+  - fower-plugin-text-size@1.79.4
+  - fower-plugin-text-transform@1.79.4
+  - fower-plugin-transform@1.79.4
+  - fower-plugin-transition@1.79.4
+  - fower-plugin-user-select@1.79.4
+  - fower-plugin-visibility@1.79.4
+  - fower-plugin-word-break@1.79.4
+  - fower-plugin-z-index@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

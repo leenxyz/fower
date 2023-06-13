@@ -1,5 +1,13 @@
 # @fower/css-object-processor
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/utils@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

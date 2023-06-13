@@ -1,5 +1,14 @@
 # @fower/babel-preset-fower
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/react@1.79.4
+  - @fower/utils@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

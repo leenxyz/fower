@@ -1,5 +1,18 @@
 # @fower/react
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/atomic-props@1.79.4
+  - @fower/core@1.79.4
+  - @fower/css-object-processor@1.79.4
+  - @fower/preset-web@1.79.4
+  - @fower/styled@1.79.4
+  - @fower/utils@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

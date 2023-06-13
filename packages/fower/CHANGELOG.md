@@ -1,5 +1,13 @@
 # fower
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/core@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes

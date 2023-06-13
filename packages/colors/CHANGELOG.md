@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+
 ## 1.79.3
 
 ### Patch Changes

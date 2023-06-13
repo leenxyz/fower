@@ -1,5 +1,15 @@
 # @fower/taro
 
+## 1.79.4
+
+### Patch Changes
+
+- fix ref
+- Updated dependencies
+  - @fower/core@1.79.4
+  - @fower/preset-taro@1.79.4
+  - @fower/styled@1.79.4
+
 ## 1.79.3
 
 ### Patch Changes
