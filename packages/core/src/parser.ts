@@ -707,7 +707,6 @@ export class Parser {
     }
 
     // console.log('this.atoms:', this.atoms)
-
     return rules
   }
 

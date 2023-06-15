@@ -14,6 +14,10 @@ function isWidthType(value: any) {
   return /^\d(px|rem|em|vh|vw)?$/.test(String(value))
 }
 
+export function isBorderColor(key: string) {
+  return /^border.+\d+$/i.test(key)
+}
+
 function toStyle({ key, value }: Atom, parser: Parser) {
   if (key === 'border') {
     if (typeof value === 'boolean') return { borderWidth: 1 }
@@ -65,6 +69,9 @@ export default (): FowerPlugin => {
     isMatch,
     handleAtom(atom, parser) {
       atom.style = toStyle(atom, parser)
+      if (isBorderColor(atom.key)) {
+        atom.type = 'borderColor'
+      }
       return atom
     },
   }
