@@ -1,5 +1,18 @@
 # fower-plugin-text-size
 
+## 1.80.0
+
+### Minor Changes
+
+- improve dark mode
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@1.80.0
+  - @fower/core@1.80.0
+  - @fower/utils@1.80.0
+
 ## 1.79.4
 
 ### Patch Changes

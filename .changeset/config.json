@@ -9,10 +9,8 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "examplereactnative",
-    "example-cra",
     "example-nextjs",
     "example-taro",
-    "@fower/example-react",
     "@fower/example-react-native-expo",
     "@fower/example-remax",
     "@fower/website"

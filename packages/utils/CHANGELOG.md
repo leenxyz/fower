@@ -1,5 +1,11 @@
 # @fower/utils
 
+## 1.80.0
+
+### Minor Changes
+
+- improve dark mode
+
 ## 1.79.4
 
 ### Patch Changes

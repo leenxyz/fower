@@ -1,6 +1,6 @@
 {
   "name": "fower",
-  "version": "1.79.4",
+  "version": "1.80.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

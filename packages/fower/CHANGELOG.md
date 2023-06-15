@@ -1,5 +1,16 @@
 # fower
 
+## 1.80.0
+
+### Minor Changes
+
+- improve dark mode
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.80.0
+
 ## 1.79.4
 
 ### Patch Changes
