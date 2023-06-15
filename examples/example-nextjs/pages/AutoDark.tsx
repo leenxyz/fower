@@ -1,6 +1,6 @@
-import { Box } from '@fower/react';
-import { setConfig } from '@fower/core';
-import { useState } from 'react';
+import { Box } from '@fower/react'
+import { setConfig } from '@fower/core'
+import { useState } from 'react'
 
 setConfig({
   mode: {
@@ -8,17 +8,17 @@ setConfig({
       enabled: true,
     },
   },
-});
+})
 
-export default () => {
-  const [mode, setMode] = useState('Light');
+export default function App() {
+  const [mode, setMode] = useState('Light')
   function toggleMode() {
     if (mode === 'Dark') {
-      setMode('Light');
-      document.documentElement.classList.remove('dark');
+      setMode('Light')
+      document.documentElement.classList.remove('dark')
     } else {
-      setMode('Dark');
-      document.documentElement.classList.add('dark');
+      setMode('Dark')
+      document.documentElement.classList.add('dark')
     }
   }
   // return (
@@ -51,10 +51,9 @@ export default () => {
           Powerful Theme Mode
         </Box> */}
         <Box textSM border p4 borderGray300--T4>
-          Not only color mode, theme mode any thing: size, padding, margin,
-          rounded...
+          Not only color mode, theme mode any thing: size, padding, margin, rounded...
         </Box>
       </Box>
     </Box>
-  );
-};
+  )
+}

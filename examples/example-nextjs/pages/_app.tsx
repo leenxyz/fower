@@ -4,7 +4,9 @@ import type { AppProps } from 'next/app'
 
 setConfig({
   // prefix: 'ai-c-',
+
   mode: {
+    currentMode: 'dark',
     autoDarkMode: {
       enabled: true,
     },

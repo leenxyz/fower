@@ -1,6 +1,20 @@
-import { Box } from '@fower/react';
+import { Box } from '@fower/react'
 
-export default () => {
+export default function App() {
+  return (
+    <Box style={{ padding: 100, background: 'black' }}>
+      <Box
+        style={{
+          padding: 100,
+        }}
+        border
+        borderGray100
+        // borderGray800--dark
+      >
+        FOOO
+      </Box>
+    </Box>
+  )
   return (
     <Box>
       <Box text3XL fontBold>
@@ -58,5 +72,5 @@ export default () => {
         trueGray500
       </Box>
     </Box>
-  );
-};
+  )
+}
