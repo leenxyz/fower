@@ -1,25 +1,12 @@
-import { Box } from '@fower/react';
+import { Box } from '@fower/react'
 
-export default () => {
+export default function App() {
   return (
     <Box toCenter column spaceY-100>
-      <Box
-        animateSpin
-        square20
-        rounded2XL
-        bgGradientX={['red400', 'orange400']}
-      />
+      <Box animateSpin square20 rounded2XL bgGradientX={['red400', 'orange400']} />
 
       <Box flex square3 relative>
-        <Box
-          animatePing
-          absolute
-          inlineFlex
-          w-100p
-          h-100p
-          roundedFull
-          bgGreen400--O75
-        ></Box>
+        <Box animatePing absolute inlineFlex w-100p h-100p roundedFull bgGreen400--O75></Box>
         <Box
           relative
           inlineFlex
@@ -45,5 +32,5 @@ export default () => {
 
       <Box circle20 bgOrange400 animateBounce></Box>
     </Box>
-  );
-};
+  )
+}
