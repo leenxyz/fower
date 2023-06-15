@@ -24,11 +24,8 @@ const sidebars = {
       label: 'Getting Started',
       items: [
         'use-with-react',
-        // 'use-with-vue',
-        // 'use-with-svelte',
         'use-with-rn',
         'use-with-taro',
-        // 'use-with-uniapp',
         'use-with-remax',
         // 'use-with-vanilla',
       ],
