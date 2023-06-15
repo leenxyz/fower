@@ -39,6 +39,8 @@ export class Atom {
     // shallow clone it
     this.meta = { ...options.meta } || {}
 
+    this.type = options.type || ''
+
     this.preprocessAtom()
   }
 

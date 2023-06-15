@@ -561,7 +561,10 @@ export interface Options {
   propValue?: any
 
   key?: string
+
   value?: any
+
+  type?: string
 
   meta?: Meta
 

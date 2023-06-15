@@ -237,10 +237,13 @@ export class Parser {
     if (colors[darkColor]) {
       if (isColor) {
         options.propKey = darkColor
+        options.type = 'color'
       } else if (isBgColor) {
         options.propKey = `bg${upFirst(darkColor)}`
+        options.type = 'backgroundColor'
       } else if (isBorderColor) {
         options.propKey = `border${upFirst(darkColor)}`
+        options.type = 'borderColor'
       }
       options.propValue = true
     } else {
