@@ -1,5 +1,18 @@
 # @fower/react-native
 
+## 1.81.0
+
+### Minor Changes
+
+- improve dark mode in nested props
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.81.0
+  - @fower/preset-react-native@1.81.0
+  - @fower/styled@1.81.0
+
 ## 1.80.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @fower/color-helper
 
+## 1.81.0
+
+### Minor Changes
+
+- improve dark mode in nested props
+
 ## 1.80.0
 
 ### Minor Changes

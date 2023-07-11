@@ -1,5 +1,16 @@
 # @fower/css-object-processor
 
+## 1.81.0
+
+### Minor Changes
+
+- improve dark mode in nested props
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/utils@1.81.0
+
 ## 1.80.0
 
 ### Minor Changes

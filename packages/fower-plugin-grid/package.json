@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-grid",
-  "version": "1.80.0",
+  "version": "1.81.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
