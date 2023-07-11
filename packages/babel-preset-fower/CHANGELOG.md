@@ -1,5 +1,17 @@
 # @fower/babel-preset-fower
 
+## 1.82.0
+
+### Minor Changes
+
+- improve function type prop
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/react@1.82.0
+  - @fower/utils@1.82.0
+
 ## 1.81.0
 
 ### Minor Changes

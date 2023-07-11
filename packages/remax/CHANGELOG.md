@@ -1,5 +1,18 @@
 # @fower/remax
 
+## 1.82.0
+
+### Minor Changes
+
+- improve function type prop
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.82.0
+  - @fower/preset-remax@1.82.0
+  - @fower/styled@1.82.0
+
 ## 1.81.0
 
 ### Minor Changes

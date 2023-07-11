@@ -1,5 +1,11 @@
 # @fower/atomic-props
 
+## 1.82.0
+
+### Minor Changes
+
+- improve function type prop
+
 ## 1.81.0
 
 ### Minor Changes
