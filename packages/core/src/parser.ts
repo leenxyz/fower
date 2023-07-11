@@ -269,12 +269,16 @@ export class Parser {
 
   createAutoDarkModeAtom() {
     for (const atom of this.atoms) {
-      // 这些不需要自动 dark mode
+      // no need auto dark mode
       if (!atom.isValid || atom.meta?.mode === 'dark' || !colorKeys.includes(atom.type)) continue
 
       // 已经存在 dark mode 的样式，不需要自动生成
       const find = this.atoms.find(
-        (i) => atom.type === i.type && i.meta.mode === 'dark' && !Reflect.has(i.meta, 'pseudo'),
+        (i) =>
+          atom.type === i.type &&
+          i.meta.mode === 'dark' &&
+          !Reflect.has(i.meta, 'pseudo') &&
+          !Reflect.has(i.meta, 'childSelector'),
       )
 
       if (find) continue
@@ -295,7 +299,7 @@ export class Parser {
 
   /**
    * Get final css value
-   * @param key css key, eg: font-szie, padding-top
+   * @param key css key, eg: font-size, padding-top
    * @param value css value
    * @returns
    */
@@ -400,7 +404,7 @@ export class Parser {
     if (ssrAtomIds.includes(atom.id)) atom.inserted = true
 
     /**
-     * 处理颜色覆盖, 如:
+     * handle color overwrite
      * 1. <Box red500 green500/>
      * 2. <Box red500 green500--hover/>
      */
@@ -411,7 +415,11 @@ export class Parser {
         !Reflect.has(atom.meta, 'pseudo')
       ) {
         const index = this.atoms.findIndex(
-          (i) => i.type === 'color' && i.meta?.mode !== 'dark' && !Reflect.has(atom.meta, 'pseudo'),
+          (i) =>
+            i.type === 'color' &&
+            i.meta?.mode !== 'dark' &&
+            !Reflect.has(atom.meta, 'childSelector') &&
+            !Reflect.has(atom.meta, 'pseudo'),
         )
 
         // 被覆盖的颜色设置为 isValid=false, 并且使用 copy 为新的 atom
@@ -633,6 +641,7 @@ export class Parser {
       }, {})
       return { ...result, ...style }
     }, {})
+
     return style
   }
 
@@ -736,6 +745,7 @@ export class Parser {
 
   insertRules() {
     const rules = this.toRules()
+
     styleSheet.insertStyles(rules)
   }
 }

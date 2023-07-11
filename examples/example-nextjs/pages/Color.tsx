@@ -2,20 +2,6 @@ import { Box } from '@fower/react'
 
 export default function App() {
   return (
-    <Box style={{ padding: 100, background: 'black' }}>
-      <Box
-        style={{
-          padding: 100,
-        }}
-        border
-        borderGray100
-        // borderGray800--dark
-      >
-        FOOO
-      </Box>
-    </Box>
-  )
-  return (
     <Box>
       <Box text3XL fontBold>
         Color
@@ -68,7 +54,7 @@ export default function App() {
       <Box textXL red500 green500--active>
         green500--active
       </Box>
-      <Box textXL trueGray500>
+      <Box textXL gray500>
         trueGray500
       </Box>
     </Box>
