@@ -467,8 +467,10 @@ export class Parser {
       // why set id here? because of function prop Value
       if (!atom.id) atom.setId()
 
-      // 处理函数 props
-      if (typeof atom.value === 'function') atom.value = atom.value()
+      // console.log('props', this.props)
+
+      // handle function type props
+      if (typeof atom.value === 'function') atom.value = atom.value(this.props)
 
       if (plugin.beforeHandleAtom) {
         atom = plugin.beforeHandleAtom(atom, this)
@@ -483,7 +485,10 @@ export class Parser {
     const cachedAtom = store.atomCache.get(atom.id)
 
     if (cachedAtom) {
-      cachedAtom.propKeys.push(atom.propKey)
+      if (!cachedAtom.propKeys.includes(atom.propKey)) {
+        cachedAtom.propKeys.push(atom.propKey)
+      }
+
       this.addAtom(cachedAtom)
       throw new Error('atom is cached, add to this.atoms directly, no need to mutate')
     }
@@ -715,7 +720,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    // console.log('this.atoms:', this.atoms)
+    console.log('this.atoms:', this.atoms)
     return rules
   }
 

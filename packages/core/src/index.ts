@@ -16,7 +16,7 @@ injectGlobalStyle({
   '*, ::before, ::after': {
     borderWidth: 0,
     borderStyle: 'solid',
-    borderColor: '#d4d4d4',
+    borderColor: '#e5e5e5',
     boxSizing: 'border-box',
   },
 })

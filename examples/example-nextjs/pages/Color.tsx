@@ -2,6 +2,51 @@ import { Box } from '@fower/react'
 
 export default function App() {
   return (
+    <Box
+    // css={{
+    //   '.TabsTrigger': {
+    //     blue300: true,
+    //   },
+
+    //   ".TabsTrigger[data-state='active']": {
+    //     green300: true,
+    //   },
+    // }}
+    >
+      <Box
+        data-state="active"
+        className="TabsTrigger"
+        color={(props) => {
+          // console.log('is:', props['data-state'] === 'active')
+          return props['data-state'] === 'active' ? 'red200' : 'gray300'
+        }}
+      >
+        AAA
+      </Box>
+      <Box
+        data-state="inactive"
+        className="TabsTrigger"
+        color={(props) => {
+          // console.log('is:', props['data-state'] === 'active')
+          return props['data-state'] === 'active' ? 'red200' : 'gray300'
+        }}
+      >
+        BBB
+      </Box>
+      {/* <Box
+        data-state="inactive"
+        className="TabsTrigger"
+        color={(props) => {
+          console.log('is:', props['data-state'] === 'active')
+          return props['data-state'] === 'active' ? 'red200' : 'gray300'
+        }}
+      >
+        CCC
+      </Box> */}
+    </Box>
+  )
+
+  return (
     <Box>
       <Box text3XL fontBold>
         Color

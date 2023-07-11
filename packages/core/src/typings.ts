@@ -15,8 +15,8 @@ export type Preset = Partial<Configuration>
 export type ResponsiveValue<T = any> =
   | [T | false, ...(T | false)[]]
   | (T | false)
-  | (() => [T | false, ...(T | false)[]])
-  | (() => T | false)
+  | ((props: any) => [T | false, ...(T | false)[]])
+  | ((props: any) => T | false)
 
 export type ResponsiveBoolean = ResponsiveValue<boolean> | boolean
 

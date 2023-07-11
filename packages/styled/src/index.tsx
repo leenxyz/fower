@@ -46,7 +46,7 @@ export function styled<C extends keyof JSX.IntrinsicElements | ElementType>(
 > {
   if (!component) return null as any
 
-  const StyledComponent = forwardRef((props = {}, ref) => {
+  const StyledComponent: any = forwardRef((props = {}, ref) => {
     const { inline } = store.config
     const prepareProps = { ...argsToProps(args, store.config?.objectPropKeys?.[0]), ...props }
 

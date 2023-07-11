@@ -8,7 +8,7 @@ setConfig({
   mode: {
     currentMode: 'dark',
     autoDarkMode: {
-      enabled: true,
+      enabled: false,
     },
   },
 })
