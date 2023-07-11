@@ -170,7 +170,7 @@ export class Parser {
       if (composition) {
         this.parseObjectProp(composition, {})
 
-        const atom = new Atom({ propKey, propValue })
+        const atom = new Atom({ propKey, propValue, props: this.props })
         atom.handled = true
         atom.style = {}
         this.addAtom(atom)
@@ -178,7 +178,7 @@ export class Parser {
       }
 
       // common props
-      let atom = new Atom({ propKey, propValue }, false)
+      let atom = new Atom({ propKey, propValue, props: this.props }, false)
 
       try {
         this.mutateAtom(atom)
@@ -263,6 +263,7 @@ export class Parser {
 
     return new Atom({
       ...options,
+      props: this.props,
       meta: { ...atom.meta, mode: 'dark' },
     })
   }
@@ -366,6 +367,8 @@ export class Parser {
   }
 
   addAtom(atom: Atom) {
+    atom.props = this.props
+
     if (!atom.id) atom.setId()
 
     // if not cached, let's cache it
@@ -467,8 +470,6 @@ export class Parser {
       // why set id here? because of function prop Value
       if (!atom.id) atom.setId()
 
-      // console.log('props', this.props)
-
       // handle function type props
       if (typeof atom.value === 'function') atom.value = atom.value(this.props)
 
@@ -535,6 +536,7 @@ export class Parser {
       const option: Options = {
         propKey,
         propValue,
+        props: this.props,
         meta: { ...meta },
       }
 
@@ -720,7 +722,7 @@ export class Parser {
       rules.push(rule)
     }
 
-    console.log('this.atoms:', this.atoms)
+    // console.log('this.atoms:', this.atoms)
     return rules
   }
 

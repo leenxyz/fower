@@ -558,6 +558,7 @@ export interface Meta {
 }
 export interface Options {
   propKey: 'css' | 'debug' | ({} & string)
+
   propValue?: any
 
   key?: string
@@ -571,4 +572,6 @@ export interface Options {
   style?: any
 
   handled?: boolean
+
+  props?: any
 }

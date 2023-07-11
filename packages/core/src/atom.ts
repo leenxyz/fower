@@ -31,6 +31,8 @@ export class Atom {
 
     this.style = options.style || {}
 
+    this.props = options.props || {}
+
     this.handled = this.getInitialHandled()
     this.isValid = this.getIsValid()
 
@@ -104,6 +106,8 @@ export class Atom {
    */
   readonly propValue: any
 
+  props: any = {}
+
   /**
    * all propKeys for this atom
    */
@@ -161,7 +165,7 @@ export class Atom {
     const { pseudoPrefix, childSelector, important, ...rest } = meta
     const values = Object.values(rest).sort()
     if (important) values.push('i')
-    let id: string
+    let id: string = ''
 
     // is global style
     if (meta.global) {
@@ -175,9 +179,8 @@ export class Atom {
     } else if (Array.isArray(value)) {
       const valueStr = value.join('-')
       id = `${key}-${valueStr}`
-      // } else if (typeof value === 'function') {
-      //   const valueStr = hash(value.toString())
-      //   id = `${key}-${valueStr}`
+    } else if (typeof value === 'function') {
+      id = `${key}-${value(this.props)}`
     } else {
       id = `${key}-${String(value)}`
     }
