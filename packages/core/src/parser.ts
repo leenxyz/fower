@@ -514,11 +514,13 @@ export class Parser {
       const prop = `${propKey}${i === 0 ? '' : '--' + keys[i - 1]}`
       return { ...result, [prop]: cur }
     }, {})
+
     this.parseObjectProp(obj)
   }
 
   parseObjectProp(propValue: any, meta = {}) {
-    const parsed = parse(propValue)
+    const { breakpoints } = this.config.theme
+    const parsed = parse(propValue, breakpoints)
 
     for (const { selector, selectorType, style } of parsed) {
       const entries = Object.entries(style)
@@ -534,7 +536,7 @@ export class Parser {
         meta: { ...meta },
       }
 
-      // 对于正常的css属性，例如 vertical-align，设置 style
+      // for style props
       if (style && Object.keys(style).length) {
         option.style = style
       }
@@ -688,7 +690,6 @@ export class Parser {
       let selector = meta.global ? meta.global : `.${className}`
 
       if (mode) selector = `.${classPrefix}${mode} ${selector}`
-      if (childSelector) selector = `${selector} ${childSelector}`
 
       if (siblingSelector) {
         selector = `${selector}${siblingSelector}`
@@ -704,14 +705,27 @@ export class Parser {
       }
 
       // TODO: need refactor
-      if (breakpoint) {
-        const keys = breakpointKeys.slice(0, breakpointKeys.indexOf(breakpoint) + 1)
-        selector = selector + '.' + keys.map((i) => `r-${i}`).join('.')
+      if (childSelector) {
+        if (breakpoint) {
+          const keys = breakpointKeys.slice(0, breakpointKeys.indexOf(breakpoint) + 1)
+
+          selector = selector + '.' + keys.map((i) => `r-${i}`).join('.') + ` ${childSelector}`
+        } else {
+          selector = `${selector} ${childSelector}`
+        }
+      } else {
+        if (breakpoint) {
+          const keys = breakpointKeys.slice(0, breakpointKeys.indexOf(breakpoint) + 1)
+
+          selector = selector + '.' + keys.map((i) => `r-${i}`).join('.')
+        }
       }
 
       rule = `${selector} { ${this.styleToString(style, atom.meta)} }`
 
-      if (breakpoint) rule = this.makeResponsiveStyle(breakpoint, rule)
+      if (breakpoint) {
+        rule = this.makeResponsiveStyle(breakpoint, rule)
+      }
 
       rules.push(rule)
     }

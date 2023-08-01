@@ -22,43 +22,53 @@ function isPseudo(key: string) {
   return /^::?.+/.test(key)
 }
 
-export function flatten(cssObj: CSSObject): FlattenItem[] {
-  // false value
-  if (!cssObj) return cssObj
-
-  //  not object, just css primitive value like '10px', 'red
-  if (typeof cssObj !== 'object') {
-    return typeof cssObj === 'function' ? (cssObj as any)() : cssObj
-  }
-
-  // responsive value
-  if (Array.isArray(cssObj)) return cssObj
+export function flatten(cssObj: CSSObject, breakpoints?: any, prefix?: any): FlattenItem[] {
+  let result: FlattenItem[] = []
 
   /** is plain object */
   const keys = Object.keys(cssObj)
 
-  // 遍历第一层
-  return keys.reduce<FlattenItem[]>((result, key) => {
-    // 第一层值
+  for (const key of keys) {
     const value = (cssObj as any)[key]
 
-    const flattenResult = flatten(value)
+    if (typeof value !== 'object') {
+      const next = prefix ? [prefix, { [key]: value }] : [{ [key]: value }]
+      result.push(next)
 
-    /** primitive value */
-    if (!Array.isArray(flattenResult)) {
-      return [...result, [{ [key]: flattenResult }]]
+      continue
     }
 
-    return flattenResult.reduce<FlattenItem[]>((r, cur) => {
-      return [...r, [key, ...cur]]
-    }, result)
-  }, [])
+    if (Array.isArray(value)) {
+      if (breakpoints) {
+        const pointKeys = Object.keys(breakpoints)
+        const obj = value.reduce<any>((result, cur, i) => {
+          const prop = `${key}${i === 0 ? '' : '--' + pointKeys[i - 1]}`
+          return { ...result, [prop]: cur }
+        }, {})
+
+        result = [...result, ...flatten(obj, breakpoints, prefix)]
+
+        continue
+      }
+
+      result.push([{ [key]: value }])
+      continue
+    }
+
+    result = [...result, ...flatten(value, breakpoints, key)]
+  }
+
+  return result
 }
 
-export function parse(cssObj: CSSObject): ParsedItem[] {
-  const flattenItems = flatten(cssObj)
+export function parse(cssObj: CSSObject, breakpoints?: any): ParsedItem[] {
+  breakpoints
+  const flattenItems = flatten(cssObj, breakpoints, null)
+
   const paths = flattenItems.reduce<ParsedItem[]>((result, item) => {
     const style = item.pop() as Dict
+    // const style = item[item.length - 1] as any
+
     let selector = item
       .reduce<string>((r, cur) => {
         return isPseudo(cur as string) ? `${r}${cur}` : `${r} ${cur}`
@@ -75,6 +85,8 @@ export function parse(cssObj: CSSObject): ParsedItem[] {
 
     return [...result, { selector, style, selectorType }]
   }, [])
+
+  // console.log('flattenItems=========:', flattenItems, 'paths:', paths)
 
   return paths
 }

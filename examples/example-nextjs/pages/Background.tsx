@@ -1,11 +1,38 @@
 import { Box } from '@fower/react'
 import { css, isAtomicArgsValid } from '@fower/core'
+import { ClientOnly } from './ClientOnly'
 
 export default function App() {
   return (
-    <Box className="bgRed500 flex" p4 bgGreen100>
-      Hello world
-    </Box>
+    <ClientOnly>
+      <Box
+        className="bgRed500 flex"
+        style={{ background: '#ddd', display: 'inline-flex' }}
+        // p4
+        // bgGreen100
+        // inlineFlex
+        // p={[100, 200]}
+        css={{
+          // padding: [30, 60],
+          // fontBold: '800',
+          // fontSize: 30,
+          p: [10, 40, 100],
+          // padding: [100, 200, 300],
+          // margin: 30,
+          // p: 1,
+          '.hello': {
+            // fontSize: 80,
+            p: [20, 60, 120],
+            // color: ['red500', 'yellow500', 'blue500'],
+          },
+        }}
+      >
+        <div className="hello" style={{ background: 'green', display: 'inline-flex' }}>
+          Hello world
+        </div>
+        <div>Hello world</div>
+      </Box>
+    </ClientOnly>
   )
   return (
     <Box>
@@ -93,3 +120,23 @@ export default function App() {
     </Box>
   )
 }
+
+const a = [
+  [
+    {
+      p: 1,
+    },
+  ],
+  [
+    '.hello',
+    {
+      color: 'red500',
+    },
+  ],
+  [
+    '.hello',
+    {
+      fontSize: 20,
+    },
+  ],
+]
