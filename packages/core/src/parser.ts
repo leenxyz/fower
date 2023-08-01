@@ -343,6 +343,9 @@ export class Parser {
   styleToString(style: Dict, meta: Atom['meta']) {
     const { important, colorPostfix } = meta
     return Object.entries(style).reduce<string>((r, [key, value]) => {
+      // remove --sm,--md,--lg,--xl postfix
+      key = key.replace(/\-\-.+/, '')
+
       const cssKey = jsKeyToCssKey(key)
       const postfix = important ? ' !important' : ''
       const colors: any = store.theme.colors
