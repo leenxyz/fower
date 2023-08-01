@@ -15,7 +15,7 @@ A utility-first CSS in JS library for rapid UI development.
 
 ## Documentation
 
-Documentation website: [fower.vercel.app](https://fower.vercel.app/) | [English](https://fower.vercel.app/) | [中文](https://fower.vercel.app/zh-cn/)
+Documentation website: [fower.vercel.app](https://fower.vercel.app/)
 
 ## Development
 

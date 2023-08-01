@@ -1,7 +1,12 @@
-import { Box } from '@fower/react';
-import { css, isAtomicArgsValid } from '@fower/core';
+import { Box } from '@fower/react'
+import { css, isAtomicArgsValid } from '@fower/core'
 
-export default () => {
+export default function App() {
+  return (
+    <Box className="bgRed500 flex" p4 bgGreen100>
+      Hello world
+    </Box>
+  )
   return (
     <Box>
       <Box>
@@ -86,5 +91,5 @@ export default () => {
         bg--hover="#000"
       </Box>
     </Box>
-  );
-};
+  )
+}

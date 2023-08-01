@@ -1,6 +1,6 @@
-import { Box } from '@fower/react';
+import { Box } from '@fower/react'
 
-export default () => {
+export default function App() {
   return (
     <Box>
       <Box as="h2">Row</Box>
@@ -17,7 +17,14 @@ export default () => {
       </Box>
 
       <Box as="h2">Column</Box>
-      <Box spaceY3 column>
+      <Box
+        spaceY3
+        column
+        css={{
+          //
+          gridAutoColumns: '1fr 1fr 1fr 1fr 1fr 1fr',
+        }}
+      >
         <Box bgOrange400 p6>
           A
         </Box>
@@ -74,8 +81,8 @@ export default () => {
           Medium length
         </Box>
         <Box bgOrange400 p4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ad
-          labore ipsam, aut rem quo repellat esse tempore id, quidem
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ad labore ipsam, aut rem quo
+          repellat esse tempore id, quidem
         </Box>
       </Box>
 
@@ -157,5 +164,5 @@ export default () => {
         <Box bgOrange400 m2 p4 w-300></Box>
       </Box>
     </Box>
-  );
-};
+  )
+}

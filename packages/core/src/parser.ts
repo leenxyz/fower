@@ -110,12 +110,6 @@ export class Parser {
       }
     }
 
-    if (props?.className) {
-      for (const item of props.className.split(/\s+/)) {
-        entries.push([item, true])
-      }
-    }
-
     // traverse Props
     for (let [propKey, propValue] of entries) {
       // the prop should be excluded by user setting
