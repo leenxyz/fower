@@ -1,5 +1,19 @@
 # fower-plugin-color
 
+## 1.83.0
+
+### Minor Changes
+
+- improve css props
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@1.83.0
+  - @fower/color-helper@1.83.0
+  - @fower/core@1.83.0
+  - @fower/utils@1.83.0
+
 ## 1.82.0
 
 ### Minor Changes

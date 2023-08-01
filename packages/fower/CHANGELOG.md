@@ -1,5 +1,16 @@
 # fower
 
+## 1.83.0
+
+### Minor Changes
+
+- improve css props
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.83.0
+
 ## 1.82.0
 
 ### Minor Changes

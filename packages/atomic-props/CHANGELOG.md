@@ -1,5 +1,11 @@
 # @fower/atomic-props
 
+## 1.83.0
+
+### Minor Changes
+
+- improve css props
+
 ## 1.82.0
 
 ### Minor Changes

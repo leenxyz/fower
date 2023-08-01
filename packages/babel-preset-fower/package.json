@@ -1,6 +1,6 @@
 {
   "name": "@fower/babel-preset-fower",
-  "version": "1.82.0",
+  "version": "1.83.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
