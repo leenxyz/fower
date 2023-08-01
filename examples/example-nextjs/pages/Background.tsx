@@ -13,18 +13,20 @@ export default function App() {
         // inlineFlex
         // p={[100, 200]}
         css={{
-          // padding: [30, 60],
+          columnCount: [2, 4],
           // fontBold: '800',
           // fontSize: 30,
-          p: [10, 40, 100],
-          // padding: [100, 200, 300],
-          // margin: 30,
-          // p: 1,
-          '.hello': {
-            // fontSize: 80,
-            p: [20, 60, 120],
-            // color: ['red500', 'yellow500', 'blue500'],
-          },
+          // p: [10, 40, 100],
+          m: 0,
+          // padding: [10, 40, 100],
+          borderSpacing: [1],
+          // borderRightStyle: [10],
+          margin: 30,
+          // '.hello': {
+          //   fontSize: 80,
+          //   p: [20, 60, 120],
+          //   color: ['red500', 'yellow500', 'blue500'],
+          // },
         }}
       >
         <div className="hello" style={{ background: 'green', display: 'inline-flex' }}>

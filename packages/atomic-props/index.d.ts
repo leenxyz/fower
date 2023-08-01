@@ -1,4 +1,5 @@
 import * as CSS from 'csstype'
+import { Properties } from './csstype'
 
 // tslint:disable-next-line:export-just-namespace
 export = FowerTypes
@@ -8,7 +9,7 @@ declare namespace FowerTypes {
   type ModeType = 'light' | 'dark' | ({} & string)
   interface FowerCSSProperties
     extends AtomicProps,
-      Omit<CSS.Properties<string | number>, keyof FowerTypes.AtomicProps> {}
+      Omit<Properties<string | number>, keyof FowerTypes.AtomicProps> {}
 
   type CSSObject<T = any> =
     | (FowerCSSProperties & PseudosObject)
