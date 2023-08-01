@@ -8,7 +8,7 @@ declare namespace FowerTypes {
   type ModeType = 'light' | 'dark' | ({} & string)
   interface FowerCSSProperties
     extends AtomicProps,
-      Omit<CSS.Properties, keyof FowerTypes.AtomicProps> {}
+      Omit<CSS.Properties<string | number>, keyof FowerTypes.AtomicProps> {}
 
   type CSSObject<T = any> =
     | (FowerCSSProperties & PseudosObject)
