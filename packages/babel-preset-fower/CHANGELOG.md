@@ -1,5 +1,17 @@
 # @fower/babel-preset-fower
 
+## 1.84.0
+
+### Minor Changes
+
+- improve color types
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/react@1.84.0
+  - @fower/utils@1.84.0
+
 ## 1.83.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @fower/colors
 
+## 1.84.0
+
+### Minor Changes
+
+- improve color types
+
 ## 1.83.0
 
 ### Minor Changes

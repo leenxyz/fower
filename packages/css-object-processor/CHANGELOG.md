@@ -1,5 +1,16 @@
 # @fower/css-object-processor
 
+## 1.84.0
+
+### Minor Changes
+
+- improve color types
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/utils@1.84.0
+
 ## 1.83.0
 
 ### Minor Changes

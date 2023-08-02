@@ -1,5 +1,21 @@
 # @fower/react
 
+## 1.84.0
+
+### Minor Changes
+
+- improve color types
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@1.84.0
+  - @fower/core@1.84.0
+  - @fower/css-object-processor@1.84.0
+  - @fower/preset-web@1.84.0
+  - @fower/styled@1.84.0
+  - @fower/utils@1.84.0
+
 ## 1.83.0
 
 ### Minor Changes
