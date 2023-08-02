@@ -13,6 +13,7 @@ export const colors: any = {
   brand700: '#1d4ed8',
   brand800: '#1e40af',
   brand900: '#1e3a8a',
+  brand950: '#11118a',
 
   slate50: '#f8fafc',
   slate100: '#f1f5f9',
@@ -24,6 +25,7 @@ export const colors: any = {
   slate700: '#334155',
   slate800: '#1e293b',
   slate900: '#0f172a',
+  slate950: '#020617',
 
   gray50: '#f9fafb',
   gray100: '#f3f4f6',
@@ -35,6 +37,7 @@ export const colors: any = {
   gray700: '#374151',
   gray800: '#1f2937',
   gray900: '#111827',
+  gray950: '#030712',
 
   zinc50: '#fafafa',
   zinc100: '#f4f4f5',
@@ -46,6 +49,7 @@ export const colors: any = {
   zinc700: '#3f3f46',
   zinc800: '#27272a',
   zinc900: '#18181b',
+  zinc950: '#09090b',
 
   neutral50: '#fafafa',
   neutral100: '#f5f5f5',
@@ -57,6 +61,7 @@ export const colors: any = {
   neutral700: '#404040',
   neutral800: '#262626',
   neutral900: '#171717',
+  neutral950: '#0a0a0a',
 
   stone50: '#fafaf9',
   stone100: '#f5f5f4',
@@ -68,6 +73,7 @@ export const colors: any = {
   stone700: '#44403c',
   stone800: '#292524',
   stone900: '#1c1917',
+  stone950: '#0c0a09',
 
   red50: '#fef2f2',
   red100: '#fee2e2',
@@ -79,6 +85,7 @@ export const colors: any = {
   red700: '#b91c1c',
   red800: '#991b1b',
   red900: '#7f1d1d',
+  red950: '#450a0a',
 
   orange50: '#fff7ed',
   orange100: '#ffedd5',
@@ -90,6 +97,7 @@ export const colors: any = {
   orange700: '#c2410c',
   orange800: '#9a3412',
   orange900: '#7c2d12',
+  orange950: '#431407',
 
   amber50: '#fffbeb',
   amber100: '#fef3c7',
@@ -101,6 +109,7 @@ export const colors: any = {
   amber700: '#b45309',
   amber800: '#92400e',
   amber900: '#78350f',
+  amber950: '#451a03',
 
   yellow50: '#fefce8',
   yellow100: '#fef9c3',
@@ -112,6 +121,7 @@ export const colors: any = {
   yellow700: '#a16207',
   yellow800: '#854d0e',
   yellow900: '#713f12',
+  yellow950: '#422006',
 
   lime50: '#f7fee7',
   lime100: '#ecfccb',
@@ -123,6 +133,7 @@ export const colors: any = {
   lime700: '#4d7c0f',
   lime800: '#3f6212',
   lime900: '#365314',
+  lime950: '#1a2e05',
 
   green50: '#f0fdf4',
   green100: '#dcfce7',
@@ -134,6 +145,7 @@ export const colors: any = {
   green700: '#15803d',
   green800: '#166534',
   green900: '#14532d',
+  green950: '#052e16',
 
   emerald50: '#ecfdf5',
   emerald100: '#d1fae5',
@@ -145,6 +157,7 @@ export const colors: any = {
   emerald700: '#047857',
   emerald800: '#065f46',
   emerald900: '#064e3b',
+  emerald950: '#022c22',
 
   teal50: '#f0fdfa',
   teal100: '#ccfbf1',
@@ -156,6 +169,7 @@ export const colors: any = {
   teal700: '#0f766e',
   teal800: '#115e59',
   teal900: '#134e4a',
+  teal950: '#042f2e',
 
   cyan50: '#ecfeff',
   cyan100: '#cffafe',
@@ -167,6 +181,7 @@ export const colors: any = {
   cyan700: '#0e7490',
   cyan800: '#155e75',
   cyan900: '#164e63',
+  cyan950: '#083344',
 
   sky50: '#f0f9ff',
   sky100: '#e0f2fe',
@@ -178,6 +193,7 @@ export const colors: any = {
   sky700: '#0369a1',
   sky800: '#075985',
   sky900: '#0c4a6e',
+  sky950: '#082f49',
 
   blue50: '#eff6ff',
   blue100: '#dbeafe',
@@ -189,6 +205,7 @@ export const colors: any = {
   blue700: '#1d4ed8',
   blue800: '#1e40af',
   blue900: '#1e3a8a',
+  blue950: '#172554',
 
   indigo50: '#eef2ff',
   indigo100: '#e0e7ff',
@@ -200,6 +217,7 @@ export const colors: any = {
   indigo700: '#4338ca',
   indigo800: '#3730a3',
   indigo900: '#312e81',
+  indigo950: '#1e1b4b',
 
   violet50: '#f5f3ff',
   violet100: '#ede9fe',
@@ -211,6 +229,7 @@ export const colors: any = {
   violet700: '#6d28d9',
   violet800: '#5b21b6',
   violet900: '#4c1d95',
+  violet950: '#2e1065',
 
   purple50: '#faf5ff',
   purple100: '#f3e8ff',
@@ -222,6 +241,7 @@ export const colors: any = {
   purple700: '#7e22ce',
   purple800: '#6b21a8',
   purple900: '#581c87',
+  purple950: '#3b0764',
 
   fuchsia50: '#fdf4ff',
   fuchsia100: '#fae8ff',
@@ -233,6 +253,7 @@ export const colors: any = {
   fuchsia700: '#a21caf',
   fuchsia800: '#86198f',
   fuchsia900: '#701a75',
+  fuchsia950: '#4a044e',
 
   pink50: '#fdf2f8',
   pink100: '#fce7f3',
@@ -244,6 +265,7 @@ export const colors: any = {
   pink700: '#be185d',
   pink800: '#9d174d',
   pink900: '#831843',
+  pink950: '#500724',
 
   rose50: '#fff1f2',
   rose100: '#ffe4e6',
@@ -255,4 +277,5 @@ export const colors: any = {
   rose700: '#be123c',
   rose800: '#9f1239',
   rose900: '#881337',
+  rose950: '#4c0519',
 }
