@@ -170,6 +170,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderBrand900?: ResponsiveBoolean
     /**
+     * Set placeholder color to brand950
+     * @example
+     * ```tsx
+     * <Box placeholderBrand950></Box>
+     * <Box placeholderBrand950--T20></Box> // transparentize color
+     * <Box placeholderBrand950--O20></Box> // opacify color
+     * <Box placeholderBrand950--L20></Box> // lighten color
+     * <Box placeholderBrand950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBrand950?: ResponsiveBoolean
+    /**
      * Set placeholder color to slate50
      * @example
      * ```tsx
@@ -299,6 +312,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderSlate900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to slate950
+     * @example
+     * ```tsx
+     * <Box placeholderSlate950></Box>
+     * <Box placeholderSlate950--T20></Box> // transparentize color
+     * <Box placeholderSlate950--O20></Box> // opacify color
+     * <Box placeholderSlate950--L20></Box> // lighten color
+     * <Box placeholderSlate950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderSlate950?: ResponsiveBoolean
     /**
      * Set placeholder color to gray50
      * @example
@@ -430,6 +456,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderGray900?: ResponsiveBoolean
     /**
+     * Set placeholder color to gray950
+     * @example
+     * ```tsx
+     * <Box placeholderGray950></Box>
+     * <Box placeholderGray950--T20></Box> // transparentize color
+     * <Box placeholderGray950--O20></Box> // opacify color
+     * <Box placeholderGray950--L20></Box> // lighten color
+     * <Box placeholderGray950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderGray950?: ResponsiveBoolean
+    /**
      * Set placeholder color to zinc50
      * @example
      * ```tsx
@@ -559,6 +598,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderZinc900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to zinc950
+     * @example
+     * ```tsx
+     * <Box placeholderZinc950></Box>
+     * <Box placeholderZinc950--T20></Box> // transparentize color
+     * <Box placeholderZinc950--O20></Box> // opacify color
+     * <Box placeholderZinc950--L20></Box> // lighten color
+     * <Box placeholderZinc950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderZinc950?: ResponsiveBoolean
     /**
      * Set placeholder color to neutral50
      * @example
@@ -690,6 +742,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderNeutral900?: ResponsiveBoolean
     /**
+     * Set placeholder color to neutral950
+     * @example
+     * ```tsx
+     * <Box placeholderNeutral950></Box>
+     * <Box placeholderNeutral950--T20></Box> // transparentize color
+     * <Box placeholderNeutral950--O20></Box> // opacify color
+     * <Box placeholderNeutral950--L20></Box> // lighten color
+     * <Box placeholderNeutral950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderNeutral950?: ResponsiveBoolean
+    /**
      * Set placeholder color to stone50
      * @example
      * ```tsx
@@ -819,6 +884,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderStone900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to stone950
+     * @example
+     * ```tsx
+     * <Box placeholderStone950></Box>
+     * <Box placeholderStone950--T20></Box> // transparentize color
+     * <Box placeholderStone950--O20></Box> // opacify color
+     * <Box placeholderStone950--L20></Box> // lighten color
+     * <Box placeholderStone950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderStone950?: ResponsiveBoolean
     /**
      * Set placeholder color to red50
      * @example
@@ -950,6 +1028,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderRed900?: ResponsiveBoolean
     /**
+     * Set placeholder color to red950
+     * @example
+     * ```tsx
+     * <Box placeholderRed950></Box>
+     * <Box placeholderRed950--T20></Box> // transparentize color
+     * <Box placeholderRed950--O20></Box> // opacify color
+     * <Box placeholderRed950--L20></Box> // lighten color
+     * <Box placeholderRed950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRed950?: ResponsiveBoolean
+    /**
      * Set placeholder color to orange50
      * @example
      * ```tsx
@@ -1079,6 +1170,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderOrange900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to orange950
+     * @example
+     * ```tsx
+     * <Box placeholderOrange950></Box>
+     * <Box placeholderOrange950--T20></Box> // transparentize color
+     * <Box placeholderOrange950--O20></Box> // opacify color
+     * <Box placeholderOrange950--L20></Box> // lighten color
+     * <Box placeholderOrange950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderOrange950?: ResponsiveBoolean
     /**
      * Set placeholder color to amber50
      * @example
@@ -1210,6 +1314,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderAmber900?: ResponsiveBoolean
     /**
+     * Set placeholder color to amber950
+     * @example
+     * ```tsx
+     * <Box placeholderAmber950></Box>
+     * <Box placeholderAmber950--T20></Box> // transparentize color
+     * <Box placeholderAmber950--O20></Box> // opacify color
+     * <Box placeholderAmber950--L20></Box> // lighten color
+     * <Box placeholderAmber950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderAmber950?: ResponsiveBoolean
+    /**
      * Set placeholder color to yellow50
      * @example
      * ```tsx
@@ -1339,6 +1456,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderYellow900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to yellow950
+     * @example
+     * ```tsx
+     * <Box placeholderYellow950></Box>
+     * <Box placeholderYellow950--T20></Box> // transparentize color
+     * <Box placeholderYellow950--O20></Box> // opacify color
+     * <Box placeholderYellow950--L20></Box> // lighten color
+     * <Box placeholderYellow950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderYellow950?: ResponsiveBoolean
     /**
      * Set placeholder color to lime50
      * @example
@@ -1470,6 +1600,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderLime900?: ResponsiveBoolean
     /**
+     * Set placeholder color to lime950
+     * @example
+     * ```tsx
+     * <Box placeholderLime950></Box>
+     * <Box placeholderLime950--T20></Box> // transparentize color
+     * <Box placeholderLime950--O20></Box> // opacify color
+     * <Box placeholderLime950--L20></Box> // lighten color
+     * <Box placeholderLime950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderLime950?: ResponsiveBoolean
+    /**
      * Set placeholder color to green50
      * @example
      * ```tsx
@@ -1599,6 +1742,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderGreen900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to green950
+     * @example
+     * ```tsx
+     * <Box placeholderGreen950></Box>
+     * <Box placeholderGreen950--T20></Box> // transparentize color
+     * <Box placeholderGreen950--O20></Box> // opacify color
+     * <Box placeholderGreen950--L20></Box> // lighten color
+     * <Box placeholderGreen950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderGreen950?: ResponsiveBoolean
     /**
      * Set placeholder color to emerald50
      * @example
@@ -1730,6 +1886,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderEmerald900?: ResponsiveBoolean
     /**
+     * Set placeholder color to emerald950
+     * @example
+     * ```tsx
+     * <Box placeholderEmerald950></Box>
+     * <Box placeholderEmerald950--T20></Box> // transparentize color
+     * <Box placeholderEmerald950--O20></Box> // opacify color
+     * <Box placeholderEmerald950--L20></Box> // lighten color
+     * <Box placeholderEmerald950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderEmerald950?: ResponsiveBoolean
+    /**
      * Set placeholder color to teal50
      * @example
      * ```tsx
@@ -1859,6 +2028,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderTeal900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to teal950
+     * @example
+     * ```tsx
+     * <Box placeholderTeal950></Box>
+     * <Box placeholderTeal950--T20></Box> // transparentize color
+     * <Box placeholderTeal950--O20></Box> // opacify color
+     * <Box placeholderTeal950--L20></Box> // lighten color
+     * <Box placeholderTeal950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderTeal950?: ResponsiveBoolean
     /**
      * Set placeholder color to cyan50
      * @example
@@ -1990,6 +2172,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderCyan900?: ResponsiveBoolean
     /**
+     * Set placeholder color to cyan950
+     * @example
+     * ```tsx
+     * <Box placeholderCyan950></Box>
+     * <Box placeholderCyan950--T20></Box> // transparentize color
+     * <Box placeholderCyan950--O20></Box> // opacify color
+     * <Box placeholderCyan950--L20></Box> // lighten color
+     * <Box placeholderCyan950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderCyan950?: ResponsiveBoolean
+    /**
      * Set placeholder color to sky50
      * @example
      * ```tsx
@@ -2119,6 +2314,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderSky900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to sky950
+     * @example
+     * ```tsx
+     * <Box placeholderSky950></Box>
+     * <Box placeholderSky950--T20></Box> // transparentize color
+     * <Box placeholderSky950--O20></Box> // opacify color
+     * <Box placeholderSky950--L20></Box> // lighten color
+     * <Box placeholderSky950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderSky950?: ResponsiveBoolean
     /**
      * Set placeholder color to blue50
      * @example
@@ -2250,6 +2458,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderBlue900?: ResponsiveBoolean
     /**
+     * Set placeholder color to blue950
+     * @example
+     * ```tsx
+     * <Box placeholderBlue950></Box>
+     * <Box placeholderBlue950--T20></Box> // transparentize color
+     * <Box placeholderBlue950--O20></Box> // opacify color
+     * <Box placeholderBlue950--L20></Box> // lighten color
+     * <Box placeholderBlue950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderBlue950?: ResponsiveBoolean
+    /**
      * Set placeholder color to indigo50
      * @example
      * ```tsx
@@ -2379,6 +2600,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderIndigo900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to indigo950
+     * @example
+     * ```tsx
+     * <Box placeholderIndigo950></Box>
+     * <Box placeholderIndigo950--T20></Box> // transparentize color
+     * <Box placeholderIndigo950--O20></Box> // opacify color
+     * <Box placeholderIndigo950--L20></Box> // lighten color
+     * <Box placeholderIndigo950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderIndigo950?: ResponsiveBoolean
     /**
      * Set placeholder color to violet50
      * @example
@@ -2510,6 +2744,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderViolet900?: ResponsiveBoolean
     /**
+     * Set placeholder color to violet950
+     * @example
+     * ```tsx
+     * <Box placeholderViolet950></Box>
+     * <Box placeholderViolet950--T20></Box> // transparentize color
+     * <Box placeholderViolet950--O20></Box> // opacify color
+     * <Box placeholderViolet950--L20></Box> // lighten color
+     * <Box placeholderViolet950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderViolet950?: ResponsiveBoolean
+    /**
      * Set placeholder color to purple50
      * @example
      * ```tsx
@@ -2639,6 +2886,19 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderPurple900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to purple950
+     * @example
+     * ```tsx
+     * <Box placeholderPurple950></Box>
+     * <Box placeholderPurple950--T20></Box> // transparentize color
+     * <Box placeholderPurple950--O20></Box> // opacify color
+     * <Box placeholderPurple950--L20></Box> // lighten color
+     * <Box placeholderPurple950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderPurple950?: ResponsiveBoolean
     /**
      * Set placeholder color to fuchsia50
      * @example
@@ -2770,6 +3030,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderFuchsia900?: ResponsiveBoolean
     /**
+     * Set placeholder color to fuchsia950
+     * @example
+     * ```tsx
+     * <Box placeholderFuchsia950></Box>
+     * <Box placeholderFuchsia950--T20></Box> // transparentize color
+     * <Box placeholderFuchsia950--O20></Box> // opacify color
+     * <Box placeholderFuchsia950--L20></Box> // lighten color
+     * <Box placeholderFuchsia950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderFuchsia950?: ResponsiveBoolean
+    /**
      * Set placeholder color to pink50
      * @example
      * ```tsx
@@ -2900,6 +3173,19 @@ declare module '@fower/atomic-props' {
      */
     placeholderPink900?: ResponsiveBoolean
     /**
+     * Set placeholder color to pink950
+     * @example
+     * ```tsx
+     * <Box placeholderPink950></Box>
+     * <Box placeholderPink950--T20></Box> // transparentize color
+     * <Box placeholderPink950--O20></Box> // opacify color
+     * <Box placeholderPink950--L20></Box> // lighten color
+     * <Box placeholderPink950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderPink950?: ResponsiveBoolean
+    /**
      * Set placeholder color to rose50
      * @example
      * ```tsx
@@ -3029,5 +3315,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
      */
     placeholderRose900?: ResponsiveBoolean
+    /**
+     * Set placeholder color to rose950
+     * @example
+     * ```tsx
+     * <Box placeholderRose950></Box>
+     * <Box placeholderRose950--T20></Box> // transparentize color
+     * <Box placeholderRose950--O20></Box> // opacify color
+     * <Box placeholderRose950--L20></Box> // lighten color
+     * <Box placeholderRose950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder
+     */
+    placeholderRose950?: ResponsiveBoolean
   }
 }

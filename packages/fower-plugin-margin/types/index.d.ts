@@ -1,4 +1,4 @@
-import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from '@fower/core'
+import { FowerPlugin, ResponsiveValue, ResponsiveBoolean } from "@fower/core"
 declare const _default: () => FowerPlugin
 export default _default
 
@@ -21,7 +21,7 @@ declare module '@fower/atomic-props' {
      * ```
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/margin
      */
-    m?: ResponsiveValue<number | string>
+    m?: ResponsiveValue<string | number>
     /**
      * set margin to 0
      * ```css

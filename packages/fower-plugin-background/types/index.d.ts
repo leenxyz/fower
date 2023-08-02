@@ -269,6 +269,18 @@ declare module '@fower/atomic-props' {
      */
     bgBrand900?: ResponsiveBoolean
     /**
+     * Set background to brand950
+     * ```css
+     * { background-color: #11118a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBrand950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBrand950?: ResponsiveBoolean
+    /**
      * Set background to slate50
      * ```css
      * { background-color: #f8fafc; }
@@ -388,6 +400,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgSlate900?: ResponsiveBoolean
+    /**
+     * Set background to slate950
+     * ```css
+     * { background-color: #020617; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSlate950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSlate950?: ResponsiveBoolean
     /**
      * Set background to gray50
      * ```css
@@ -509,6 +533,18 @@ declare module '@fower/atomic-props' {
      */
     bgGray900?: ResponsiveBoolean
     /**
+     * Set background to gray950
+     * ```css
+     * { background-color: #030712; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgGray950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgGray950?: ResponsiveBoolean
+    /**
      * Set background to zinc50
      * ```css
      * { background-color: #fafafa; }
@@ -628,6 +664,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgZinc900?: ResponsiveBoolean
+    /**
+     * Set background to zinc950
+     * ```css
+     * { background-color: #09090b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgZinc950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgZinc950?: ResponsiveBoolean
     /**
      * Set background to neutral50
      * ```css
@@ -749,6 +797,18 @@ declare module '@fower/atomic-props' {
      */
     bgNeutral900?: ResponsiveBoolean
     /**
+     * Set background to neutral950
+     * ```css
+     * { background-color: #0a0a0a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgNeutral950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgNeutral950?: ResponsiveBoolean
+    /**
      * Set background to stone50
      * ```css
      * { background-color: #fafaf9; }
@@ -868,6 +928,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgStone900?: ResponsiveBoolean
+    /**
+     * Set background to stone950
+     * ```css
+     * { background-color: #0c0a09; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgStone950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgStone950?: ResponsiveBoolean
     /**
      * Set background to red50
      * ```css
@@ -989,6 +1061,18 @@ declare module '@fower/atomic-props' {
      */
     bgRed900?: ResponsiveBoolean
     /**
+     * Set background to red950
+     * ```css
+     * { background-color: #450a0a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRed950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRed950?: ResponsiveBoolean
+    /**
      * Set background to orange50
      * ```css
      * { background-color: #fff7ed; }
@@ -1108,6 +1192,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgOrange900?: ResponsiveBoolean
+    /**
+     * Set background to orange950
+     * ```css
+     * { background-color: #431407; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgOrange950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgOrange950?: ResponsiveBoolean
     /**
      * Set background to amber50
      * ```css
@@ -1229,6 +1325,18 @@ declare module '@fower/atomic-props' {
      */
     bgAmber900?: ResponsiveBoolean
     /**
+     * Set background to amber950
+     * ```css
+     * { background-color: #451a03; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgAmber950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgAmber950?: ResponsiveBoolean
+    /**
      * Set background to yellow50
      * ```css
      * { background-color: #fefce8; }
@@ -1348,6 +1456,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgYellow900?: ResponsiveBoolean
+    /**
+     * Set background to yellow950
+     * ```css
+     * { background-color: #422006; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgYellow950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgYellow950?: ResponsiveBoolean
     /**
      * Set background to lime50
      * ```css
@@ -1469,6 +1589,18 @@ declare module '@fower/atomic-props' {
      */
     bgLime900?: ResponsiveBoolean
     /**
+     * Set background to lime950
+     * ```css
+     * { background-color: #1a2e05; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgLime950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgLime950?: ResponsiveBoolean
+    /**
      * Set background to green50
      * ```css
      * { background-color: #f0fdf4; }
@@ -1588,6 +1720,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgGreen900?: ResponsiveBoolean
+    /**
+     * Set background to green950
+     * ```css
+     * { background-color: #052e16; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgGreen950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgGreen950?: ResponsiveBoolean
     /**
      * Set background to emerald50
      * ```css
@@ -1709,6 +1853,18 @@ declare module '@fower/atomic-props' {
      */
     bgEmerald900?: ResponsiveBoolean
     /**
+     * Set background to emerald950
+     * ```css
+     * { background-color: #022c22; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgEmerald950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgEmerald950?: ResponsiveBoolean
+    /**
      * Set background to teal50
      * ```css
      * { background-color: #f0fdfa; }
@@ -1828,6 +1984,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgTeal900?: ResponsiveBoolean
+    /**
+     * Set background to teal950
+     * ```css
+     * { background-color: #042f2e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgTeal950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgTeal950?: ResponsiveBoolean
     /**
      * Set background to cyan50
      * ```css
@@ -1949,6 +2117,18 @@ declare module '@fower/atomic-props' {
      */
     bgCyan900?: ResponsiveBoolean
     /**
+     * Set background to cyan950
+     * ```css
+     * { background-color: #083344; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgCyan950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgCyan950?: ResponsiveBoolean
+    /**
      * Set background to sky50
      * ```css
      * { background-color: #f0f9ff; }
@@ -2068,6 +2248,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgSky900?: ResponsiveBoolean
+    /**
+     * Set background to sky950
+     * ```css
+     * { background-color: #082f49; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgSky950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgSky950?: ResponsiveBoolean
     /**
      * Set background to blue50
      * ```css
@@ -2189,6 +2381,18 @@ declare module '@fower/atomic-props' {
      */
     bgBlue900?: ResponsiveBoolean
     /**
+     * Set background to blue950
+     * ```css
+     * { background-color: #172554; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgBlue950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgBlue950?: ResponsiveBoolean
+    /**
      * Set background to indigo50
      * ```css
      * { background-color: #eef2ff; }
@@ -2308,6 +2512,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgIndigo900?: ResponsiveBoolean
+    /**
+     * Set background to indigo950
+     * ```css
+     * { background-color: #1e1b4b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgIndigo950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgIndigo950?: ResponsiveBoolean
     /**
      * Set background to violet50
      * ```css
@@ -2429,6 +2645,18 @@ declare module '@fower/atomic-props' {
      */
     bgViolet900?: ResponsiveBoolean
     /**
+     * Set background to violet950
+     * ```css
+     * { background-color: #2e1065; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgViolet950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgViolet950?: ResponsiveBoolean
+    /**
      * Set background to purple50
      * ```css
      * { background-color: #faf5ff; }
@@ -2548,6 +2776,18 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgPurple900?: ResponsiveBoolean
+    /**
+     * Set background to purple950
+     * ```css
+     * { background-color: #3b0764; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPurple950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPurple950?: ResponsiveBoolean
     /**
      * Set background to fuchsia50
      * ```css
@@ -2669,6 +2909,18 @@ declare module '@fower/atomic-props' {
      */
     bgFuchsia900?: ResponsiveBoolean
     /**
+     * Set background to fuchsia950
+     * ```css
+     * { background-color: #4a044e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgFuchsia950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgFuchsia950?: ResponsiveBoolean
+    /**
      * Set background to pink50
      * ```css
      * { background-color: #fdf2f8; }
@@ -2789,6 +3041,18 @@ declare module '@fower/atomic-props' {
      */
     bgPink900?: ResponsiveBoolean
     /**
+     * Set background to pink950
+     * ```css
+     * { background-color: #500724; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgPink950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgPink950?: ResponsiveBoolean
+    /**
      * Set background to rose50
      * ```css
      * { background-color: #fff1f2; }
@@ -2908,5 +3172,17 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
      */
     bgRose900?: ResponsiveBoolean
+    /**
+     * Set background to rose950
+     * ```css
+     * { background-color: #4c0519; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box bgRose950></Box>
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+     */
+    bgRose950?: ResponsiveBoolean
   }
 }

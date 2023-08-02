@@ -226,6 +226,22 @@ declare module '@fower/atomic-props' {
      */
     brand900?: ResponsiveBoolean
     /**
+     * Set color to brand950
+     * ```css
+     * { color: #11118a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box brand950></Box>
+     * <Box brand950--T20></Box> // transparentize color
+     * <Box brand950--O20></Box> // opacify color
+     * <Box brand950--L20></Box> // lighten color
+     * <Box brand950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    brand950?: ResponsiveBoolean
+    /**
      * Set color to slate50
      * ```css
      * { color: #f8fafc; }
@@ -385,6 +401,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     slate900?: ResponsiveBoolean
+    /**
+     * Set color to slate950
+     * ```css
+     * { color: #020617; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box slate950></Box>
+     * <Box slate950--T20></Box> // transparentize color
+     * <Box slate950--O20></Box> // opacify color
+     * <Box slate950--L20></Box> // lighten color
+     * <Box slate950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    slate950?: ResponsiveBoolean
     /**
      * Set color to gray50
      * ```css
@@ -546,6 +578,22 @@ declare module '@fower/atomic-props' {
      */
     gray900?: ResponsiveBoolean
     /**
+     * Set color to gray950
+     * ```css
+     * { color: #030712; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box gray950></Box>
+     * <Box gray950--T20></Box> // transparentize color
+     * <Box gray950--O20></Box> // opacify color
+     * <Box gray950--L20></Box> // lighten color
+     * <Box gray950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    gray950?: ResponsiveBoolean
+    /**
      * Set color to zinc50
      * ```css
      * { color: #fafafa; }
@@ -705,6 +753,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     zinc900?: ResponsiveBoolean
+    /**
+     * Set color to zinc950
+     * ```css
+     * { color: #09090b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box zinc950></Box>
+     * <Box zinc950--T20></Box> // transparentize color
+     * <Box zinc950--O20></Box> // opacify color
+     * <Box zinc950--L20></Box> // lighten color
+     * <Box zinc950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    zinc950?: ResponsiveBoolean
     /**
      * Set color to neutral50
      * ```css
@@ -866,6 +930,22 @@ declare module '@fower/atomic-props' {
      */
     neutral900?: ResponsiveBoolean
     /**
+     * Set color to neutral950
+     * ```css
+     * { color: #0a0a0a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box neutral950></Box>
+     * <Box neutral950--T20></Box> // transparentize color
+     * <Box neutral950--O20></Box> // opacify color
+     * <Box neutral950--L20></Box> // lighten color
+     * <Box neutral950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    neutral950?: ResponsiveBoolean
+    /**
      * Set color to stone50
      * ```css
      * { color: #fafaf9; }
@@ -1025,6 +1105,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     stone900?: ResponsiveBoolean
+    /**
+     * Set color to stone950
+     * ```css
+     * { color: #0c0a09; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box stone950></Box>
+     * <Box stone950--T20></Box> // transparentize color
+     * <Box stone950--O20></Box> // opacify color
+     * <Box stone950--L20></Box> // lighten color
+     * <Box stone950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    stone950?: ResponsiveBoolean
     /**
      * Set color to red50
      * ```css
@@ -1186,6 +1282,22 @@ declare module '@fower/atomic-props' {
      */
     red900?: ResponsiveBoolean
     /**
+     * Set color to red950
+     * ```css
+     * { color: #450a0a; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box red950></Box>
+     * <Box red950--T20></Box> // transparentize color
+     * <Box red950--O20></Box> // opacify color
+     * <Box red950--L20></Box> // lighten color
+     * <Box red950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    red950?: ResponsiveBoolean
+    /**
      * Set color to orange50
      * ```css
      * { color: #fff7ed; }
@@ -1345,6 +1457,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     orange900?: ResponsiveBoolean
+    /**
+     * Set color to orange950
+     * ```css
+     * { color: #431407; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box orange950></Box>
+     * <Box orange950--T20></Box> // transparentize color
+     * <Box orange950--O20></Box> // opacify color
+     * <Box orange950--L20></Box> // lighten color
+     * <Box orange950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    orange950?: ResponsiveBoolean
     /**
      * Set color to amber50
      * ```css
@@ -1506,6 +1634,22 @@ declare module '@fower/atomic-props' {
      */
     amber900?: ResponsiveBoolean
     /**
+     * Set color to amber950
+     * ```css
+     * { color: #451a03; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box amber950></Box>
+     * <Box amber950--T20></Box> // transparentize color
+     * <Box amber950--O20></Box> // opacify color
+     * <Box amber950--L20></Box> // lighten color
+     * <Box amber950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    amber950?: ResponsiveBoolean
+    /**
      * Set color to yellow50
      * ```css
      * { color: #fefce8; }
@@ -1665,6 +1809,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     yellow900?: ResponsiveBoolean
+    /**
+     * Set color to yellow950
+     * ```css
+     * { color: #422006; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box yellow950></Box>
+     * <Box yellow950--T20></Box> // transparentize color
+     * <Box yellow950--O20></Box> // opacify color
+     * <Box yellow950--L20></Box> // lighten color
+     * <Box yellow950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    yellow950?: ResponsiveBoolean
     /**
      * Set color to lime50
      * ```css
@@ -1826,6 +1986,22 @@ declare module '@fower/atomic-props' {
      */
     lime900?: ResponsiveBoolean
     /**
+     * Set color to lime950
+     * ```css
+     * { color: #1a2e05; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box lime950></Box>
+     * <Box lime950--T20></Box> // transparentize color
+     * <Box lime950--O20></Box> // opacify color
+     * <Box lime950--L20></Box> // lighten color
+     * <Box lime950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    lime950?: ResponsiveBoolean
+    /**
      * Set color to green50
      * ```css
      * { color: #f0fdf4; }
@@ -1985,6 +2161,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     green900?: ResponsiveBoolean
+    /**
+     * Set color to green950
+     * ```css
+     * { color: #052e16; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box green950></Box>
+     * <Box green950--T20></Box> // transparentize color
+     * <Box green950--O20></Box> // opacify color
+     * <Box green950--L20></Box> // lighten color
+     * <Box green950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    green950?: ResponsiveBoolean
     /**
      * Set color to emerald50
      * ```css
@@ -2146,6 +2338,22 @@ declare module '@fower/atomic-props' {
      */
     emerald900?: ResponsiveBoolean
     /**
+     * Set color to emerald950
+     * ```css
+     * { color: #022c22; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box emerald950></Box>
+     * <Box emerald950--T20></Box> // transparentize color
+     * <Box emerald950--O20></Box> // opacify color
+     * <Box emerald950--L20></Box> // lighten color
+     * <Box emerald950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    emerald950?: ResponsiveBoolean
+    /**
      * Set color to teal50
      * ```css
      * { color: #f0fdfa; }
@@ -2305,6 +2513,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     teal900?: ResponsiveBoolean
+    /**
+     * Set color to teal950
+     * ```css
+     * { color: #042f2e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box teal950></Box>
+     * <Box teal950--T20></Box> // transparentize color
+     * <Box teal950--O20></Box> // opacify color
+     * <Box teal950--L20></Box> // lighten color
+     * <Box teal950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    teal950?: ResponsiveBoolean
     /**
      * Set color to cyan50
      * ```css
@@ -2466,6 +2690,22 @@ declare module '@fower/atomic-props' {
      */
     cyan900?: ResponsiveBoolean
     /**
+     * Set color to cyan950
+     * ```css
+     * { color: #083344; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box cyan950></Box>
+     * <Box cyan950--T20></Box> // transparentize color
+     * <Box cyan950--O20></Box> // opacify color
+     * <Box cyan950--L20></Box> // lighten color
+     * <Box cyan950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    cyan950?: ResponsiveBoolean
+    /**
      * Set color to sky50
      * ```css
      * { color: #f0f9ff; }
@@ -2625,6 +2865,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     sky900?: ResponsiveBoolean
+    /**
+     * Set color to sky950
+     * ```css
+     * { color: #082f49; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box sky950></Box>
+     * <Box sky950--T20></Box> // transparentize color
+     * <Box sky950--O20></Box> // opacify color
+     * <Box sky950--L20></Box> // lighten color
+     * <Box sky950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    sky950?: ResponsiveBoolean
     /**
      * Set color to blue50
      * ```css
@@ -2786,6 +3042,22 @@ declare module '@fower/atomic-props' {
      */
     blue900?: ResponsiveBoolean
     /**
+     * Set color to blue950
+     * ```css
+     * { color: #172554; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box blue950></Box>
+     * <Box blue950--T20></Box> // transparentize color
+     * <Box blue950--O20></Box> // opacify color
+     * <Box blue950--L20></Box> // lighten color
+     * <Box blue950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    blue950?: ResponsiveBoolean
+    /**
      * Set color to indigo50
      * ```css
      * { color: #eef2ff; }
@@ -2945,6 +3217,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     indigo900?: ResponsiveBoolean
+    /**
+     * Set color to indigo950
+     * ```css
+     * { color: #1e1b4b; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box indigo950></Box>
+     * <Box indigo950--T20></Box> // transparentize color
+     * <Box indigo950--O20></Box> // opacify color
+     * <Box indigo950--L20></Box> // lighten color
+     * <Box indigo950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    indigo950?: ResponsiveBoolean
     /**
      * Set color to violet50
      * ```css
@@ -3106,6 +3394,22 @@ declare module '@fower/atomic-props' {
      */
     violet900?: ResponsiveBoolean
     /**
+     * Set color to violet950
+     * ```css
+     * { color: #2e1065; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box violet950></Box>
+     * <Box violet950--T20></Box> // transparentize color
+     * <Box violet950--O20></Box> // opacify color
+     * <Box violet950--L20></Box> // lighten color
+     * <Box violet950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    violet950?: ResponsiveBoolean
+    /**
      * Set color to purple50
      * ```css
      * { color: #faf5ff; }
@@ -3265,6 +3569,22 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     purple900?: ResponsiveBoolean
+    /**
+     * Set color to purple950
+     * ```css
+     * { color: #3b0764; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box purple950></Box>
+     * <Box purple950--T20></Box> // transparentize color
+     * <Box purple950--O20></Box> // opacify color
+     * <Box purple950--L20></Box> // lighten color
+     * <Box purple950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    purple950?: ResponsiveBoolean
     /**
      * Set color to fuchsia50
      * ```css
@@ -3426,6 +3746,22 @@ declare module '@fower/atomic-props' {
      */
     fuchsia900?: ResponsiveBoolean
     /**
+     * Set color to fuchsia950
+     * ```css
+     * { color: #4a044e; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box fuchsia950></Box>
+     * <Box fuchsia950--T20></Box> // transparentize color
+     * <Box fuchsia950--O20></Box> // opacify color
+     * <Box fuchsia950--L20></Box> // lighten color
+     * <Box fuchsia950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    fuchsia950?: ResponsiveBoolean
+    /**
      * Set color to pink50
      * ```css
      * { color: #fdf2f8; }
@@ -3586,6 +3922,22 @@ declare module '@fower/atomic-props' {
      */
     pink900?: ResponsiveBoolean
     /**
+     * Set color to pink950
+     * ```css
+     * { color: #500724; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box pink950></Box>
+     * <Box pink950--T20></Box> // transparentize color
+     * <Box pink950--O20></Box> // opacify color
+     * <Box pink950--L20></Box> // lighten color
+     * <Box pink950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    pink950?: ResponsiveBoolean
+    /**
      * Set color to rose50
      * ```css
      * { color: #fff1f2; }
@@ -3745,5 +4097,21 @@ declare module '@fower/atomic-props' {
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
      */
     rose900?: ResponsiveBoolean
+    /**
+     * Set color to rose950
+     * ```css
+     * { color: #4c0519; }
+     * ```
+     * @example
+     * ```tsx
+     * <Box rose950></Box>
+     * <Box rose950--T20></Box> // transparentize color
+     * <Box rose950--O20></Box> // opacify color
+     * <Box rose950--L20></Box> // lighten color
+     * <Box rose950--D20></Box> // darken color
+     * ```
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+     */
+    rose950?: ResponsiveBoolean
   }
 }

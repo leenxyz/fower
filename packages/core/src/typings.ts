@@ -299,7 +299,6 @@ export interface Colors {
   black: string
   white: string
 
-  brand: string
   brand50: string
   brand100: string
   brand200: string
@@ -310,17 +309,235 @@ export interface Colors {
   brand700: string
   brand800: string
   brand900: string
+  brand950: string
 
-  pink50: string
-  pink100: string
-  pink200: string
-  pink300: string
-  pink400: string
-  pink500: string
-  pink600: string
-  pink700: string
-  pink800: string
-  pink900: string
+  slate50: string
+  slate100: string
+  slate200: string
+  slate300: string
+  slate400: string
+  slate500: string
+  slate600: string
+  slate700: string
+  slate800: string
+  slate900: string
+  slate950: string
+
+  gray50: string
+  gray100: string
+  gray200: string
+  gray300: string
+  gray400: string
+  gray500: string
+  gray600: string
+  gray700: string
+  gray800: string
+  gray900: string
+  gray950: string
+
+  zinc50: string
+  zinc100: string
+  zinc200: string
+  zinc300: string
+  zinc400: string
+  zinc500: string
+  zinc600: string
+  zinc700: string
+  zinc800: string
+  zinc900: string
+  zinc950: string
+
+  neutral50: string
+  neutral100: string
+  neutral200: string
+  neutral300: string
+  neutral400: string
+  neutral500: string
+  neutral600: string
+  neutral700: string
+  neutral800: string
+  neutral900: string
+  neutral950: string
+
+  stone50: string
+  stone100: string
+  stone200: string
+  stone300: string
+  stone400: string
+  stone500: string
+  stone600: string
+  stone700: string
+  stone800: string
+  stone900: string
+  stone950: string
+
+  red50: string
+  red100: string
+  red200: string
+  red300: string
+  red400: string
+  red500: string
+  red600: string
+  red700: string
+  red800: string
+  red900: string
+  red950: string
+
+  orange50: string
+  orange100: string
+  orange200: string
+  orange300: string
+  orange400: string
+  orange500: string
+  orange600: string
+  orange700: string
+  orange800: string
+  orange900: string
+  orange950: string
+
+  amber50: string
+  amber100: string
+  amber200: string
+  amber300: string
+  amber400: string
+  amber500: string
+  amber600: string
+  amber700: string
+  amber800: string
+  amber900: string
+  amber950: string
+
+  yellow50: string
+  yellow100: string
+  yellow200: string
+  yellow300: string
+  yellow400: string
+  yellow500: string
+  yellow600: string
+  yellow700: string
+  yellow800: string
+  yellow900: string
+  yellow950: string
+
+  lime50: string
+  lime100: string
+  lime200: string
+  lime300: string
+  lime400: string
+  lime500: string
+  lime600: string
+  lime700: string
+  lime800: string
+  lime900: string
+  lime950: string
+
+  green50: string
+  green100: string
+  green200: string
+  green300: string
+  green400: string
+  green500: string
+  green600: string
+  green700: string
+  green800: string
+  green900: string
+  green950: string
+
+  emerald50: string
+  emerald100: string
+  emerald200: string
+  emerald300: string
+  emerald400: string
+  emerald500: string
+  emerald600: string
+  emerald700: string
+  emerald800: string
+  emerald900: string
+  emerald950: string
+
+  teal50: string
+  teal100: string
+  teal200: string
+  teal300: string
+  teal400: string
+  teal500: string
+  teal600: string
+  teal700: string
+  teal800: string
+  teal900: string
+  teal950: string
+
+  cyan50: string
+  cyan100: string
+  cyan200: string
+  cyan300: string
+  cyan400: string
+  cyan500: string
+  cyan600: string
+  cyan700: string
+  cyan800: string
+  cyan900: string
+  cyan950: string
+
+  sky50: string
+  sky100: string
+  sky200: string
+  sky300: string
+  sky400: string
+  sky500: string
+  sky600: string
+  sky700: string
+  sky800: string
+  sky900: string
+  sky950: string
+
+  blue50: string
+  blue100: string
+  blue200: string
+  blue300: string
+  blue400: string
+  blue500: string
+  blue600: string
+  blue700: string
+  blue800: string
+  blue900: string
+  blue950: string
+
+  indigo50: string
+  indigo100: string
+  indigo200: string
+  indigo300: string
+  indigo400: string
+  indigo500: string
+  indigo600: string
+  indigo700: string
+  indigo800: string
+  indigo900: string
+  indigo950: string
+
+  violet50: string
+  violet100: string
+  violet200: string
+  violet300: string
+  violet400: string
+  violet500: string
+  violet600: string
+  violet700: string
+  violet800: string
+  violet900: string
+  violet950: string
+
+  purple50: string
+  purple100: string
+  purple200: string
+  purple300: string
+  purple400: string
+  purple500: string
+  purple600: string
+  purple700: string
+  purple800: string
+  purple900: string
+  purple950: string
 
   fuchsia50: string
   fuchsia100: string
@@ -332,149 +549,31 @@ export interface Colors {
   fuchsia700: string
   fuchsia800: string
   fuchsia900: string
+  fuchsia950: string
 
-  purple50: string // '#faf5ff'
-  purple100: string // '#f3e8ff'
-  purple200: string // '#e9d5ff'
-  purple300: string // '#d8b4fe'
-  purple400: string // '#c084fc'
-  purple500: string // '#a855f7'
-  purple600: string // '#9333ea'
-  purple700: string // '#7e22ce'
-  purple800: string // '#6b21a8'
-  purple900: string // '#581c87'
+  pink50: string
+  pink100: string
+  pink200: string
+  pink300: string
+  pink400: string
+  pink500: string
+  pink600: string
+  pink700: string
+  pink800: string
+  pink900: string
+  pink950: string
 
-  violet50: string // '#f5f3ff'
-  violet100: string // '#ede9fe'
-  violet200: string // '#ddd6fe'
-  violet300: string // '#c4b5fd'
-  violet400: string // '#a78bfa'
-  violet500: string // '#8b5cf6'
-  violet600: string // '#7c3aed'
-  violet700: string // '#6d28d9'
-  violet800: string // '#5b21b6'
-  violet900: string // '#4c1d95'
-
-  indigo50: string // '#eef2ff'
-  indigo100: string // '#e0e7ff'
-  indigo200: string // '#c7d2fe'
-  indigo300: string // '#a5b4fc'
-  indigo400: string // '#818cf8'
-  indigo500: string // '#6366f1'
-  indigo600: string // '#4f46e5'
-  indigo700: string // '#4338ca'
-  indigo800: string // '#3730a3'
-  indigo900: string // '#312e81'
-
-  blue50: string // '#eff6ff'
-  blue100: string // '#dbeafe'
-  blue200: string // '#bfdbfe'
-  blue300: string // '#93c5fd'
-  blue400: string // '#60a5fa'
-  blue500: string // '#3b82f6'
-  blue600: string // '#2563eb'
-  blue700: string // '#1d4ed8'
-  blue800: string // '#1e40af'
-  blue900: string // '#1e3a8a'
-
-  cyan50: string // '#ecfeff'
-  cyan100: string // '#cffafe'
-  cyan200: string // '#a5f3fc'
-  cyan300: string // '#67e8f9'
-  cyan400: string // '#22d3ee'
-  cyan500: string // '#06b6d4'
-  cyan600: string // '#0891b2'
-  cyan700: string // '#0e7490'
-  cyan800: string // '#155e75'
-  cyan900: string // '#164e63'
-
-  teal50: string // '#f0fdfa'
-  teal100: string // '#ccfbf1'
-  teal200: string // '#99f6e4'
-  teal300: string // '#5eead4'
-  teal400: string // '#2dd4bf'
-  teal500: string // '#14b8a6'
-  teal600: string // '#0d9488'
-  teal700: string // '#0f766e'
-  teal800: string // '#115e59'
-  teal900: string // '#134e4a'
-
-  green50: string // '#f0fdf4'
-  green100: string // '#dcfce7'
-  green200: string // '#bbf7d0'
-  green300: string // '#86efac'
-  green400: string // '#4ade80'
-  green500: string // '#22c55e'
-  green600: string // '#16a34a'
-  green700: string // '#15803d'
-  green800: string // '#166534'
-  green900: string // '#14532d'
-
-  lime50: string // '#f7fee7'
-  lime100: string // '#ecfccb'
-  lime200: string // '#d9f99d'
-  lime300: string // '#bef264'
-  lime400: string // '#a3e635'
-  lime500: string // '#84cc16'
-  lime600: string // '#65a30d'
-  lime700: string // '#4d7c0f'
-  lime800: string // '#3f6212'
-  lime900: string // '#365314'
-
-  yellow50: string // '#fefce8'
-  yellow100: string // '#fef9c3'
-  yellow200: string // '#fef08a'
-  yellow300: string // '#fde047'
-  yellow400: string // '#facc15'
-  yellow500: string // '#eab308'
-  yellow600: string // '#ca8a04'
-  yellow700: string // '#a16207'
-  yellow800: string // '#854d0e'
-  yellow900: string // '#713f12'
-
-  orange50: string // '#fff7ed'
-  orange100: string // '#ffedd5'
-  orange200: string // '#fed7aa'
-  orange300: string // '#fdba74'
-  orange400: string // '#fb923c'
-  orange500: string // '#f97316'
-  orange600: string // '#ea580c'
-  orange700: string // '#c2410c'
-  orange800: string // '#9a3412'
-  orange900: string // '#7c2d12'
-
-  red50: string // '#fef2f2'
-  red100: string // '#fee2e2'
-  red200: string // '#fecaca'
-  red300: string // '#fca5a5'
-  red400: string // '#f87171'
-  red500: string // '#ef4444'
-  red600: string // '#dc2626'
-  red700: string // '#b91c1c'
-  red800: string // '#991b1b'
-  red900: string // '#7f1d1d'
-
-  trueGray50: string // '#fafafa'
-  trueGray100: string // '#f5f5f5'
-  trueGray200: string // '#e5e5e5'
-  trueGray300: string // '#d4d4d4'
-  trueGray400: string // '#a3a3a3'
-  trueGray500: string // '#737373'
-  trueGray600: string // '#525252'
-  trueGray700: string // '#404040'
-  trueGray800: string // '#262626'
-  trueGray900: string // '#171717'
-
-  gray50: string // '#fafafa'
-  gray100: string // '#f4f4f5'
-  gray200: string // '#e4e4e7'
-  gray300: string // '#d4d4d8'
-  gray400: string // '#a1a1aa'
-  gray500: string // '#71717a'
-  gray600: string // '#52525b'
-  gray700: string // '#3f3f46'
-  gray800: string // '#27272a'
-  gray900: string // '#18181b'
+  rose50: string
+  rose100: string
+  rose200: string
+  rose300: string
+  rose400: string
+  rose500: string
+  rose600: string
+  rose700: string
+  rose800: string
+  rose900: string
+  rose950: string
 }
 
 export interface Meta {

@@ -208,6 +208,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringBrand950></Box> // default with is 1
+     * <Box ringBrand950-2></Box> // ring with is 2
+     * <Box ringBrand950--T20></Box> // transparentize color
+     * <Box ringBrand950--O20></Box> // opacify color
+     * <Box ringBrand950--L20></Box> // lighten color
+     * <Box ringBrand950--D20></Box> // darken color
+     * <Box ringBrand950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBrand950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringSlate50></Box> // default with is 1
      * <Box ringSlate50-2></Box> // ring with is 2
      * <Box ringSlate50--T20></Box> // transparentize color
@@ -354,6 +369,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringSlate900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringSlate950></Box> // default with is 1
+     * <Box ringSlate950-2></Box> // ring with is 2
+     * <Box ringSlate950--T20></Box> // transparentize color
+     * <Box ringSlate950--O20></Box> // opacify color
+     * <Box ringSlate950--L20></Box> // lighten color
+     * <Box ringSlate950--D20></Box> // darken color
+     * <Box ringSlate950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringSlate950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -508,6 +538,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringGray950></Box> // default with is 1
+     * <Box ringGray950-2></Box> // ring with is 2
+     * <Box ringGray950--T20></Box> // transparentize color
+     * <Box ringGray950--O20></Box> // opacify color
+     * <Box ringGray950--L20></Box> // lighten color
+     * <Box ringGray950--D20></Box> // darken color
+     * <Box ringGray950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringGray950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringZinc50></Box> // default with is 1
      * <Box ringZinc50-2></Box> // ring with is 2
      * <Box ringZinc50--T20></Box> // transparentize color
@@ -654,6 +699,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringZinc900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringZinc950></Box> // default with is 1
+     * <Box ringZinc950-2></Box> // ring with is 2
+     * <Box ringZinc950--T20></Box> // transparentize color
+     * <Box ringZinc950--O20></Box> // opacify color
+     * <Box ringZinc950--L20></Box> // lighten color
+     * <Box ringZinc950--D20></Box> // darken color
+     * <Box ringZinc950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringZinc950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -808,6 +868,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringNeutral950></Box> // default with is 1
+     * <Box ringNeutral950-2></Box> // ring with is 2
+     * <Box ringNeutral950--T20></Box> // transparentize color
+     * <Box ringNeutral950--O20></Box> // opacify color
+     * <Box ringNeutral950--L20></Box> // lighten color
+     * <Box ringNeutral950--D20></Box> // darken color
+     * <Box ringNeutral950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringNeutral950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringStone50></Box> // default with is 1
      * <Box ringStone50-2></Box> // ring with is 2
      * <Box ringStone50--T20></Box> // transparentize color
@@ -954,6 +1029,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringStone900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringStone950></Box> // default with is 1
+     * <Box ringStone950-2></Box> // ring with is 2
+     * <Box ringStone950--T20></Box> // transparentize color
+     * <Box ringStone950--O20></Box> // opacify color
+     * <Box ringStone950--L20></Box> // lighten color
+     * <Box ringStone950--D20></Box> // darken color
+     * <Box ringStone950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringStone950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -1108,6 +1198,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringRed950></Box> // default with is 1
+     * <Box ringRed950-2></Box> // ring with is 2
+     * <Box ringRed950--T20></Box> // transparentize color
+     * <Box ringRed950--O20></Box> // opacify color
+     * <Box ringRed950--L20></Box> // lighten color
+     * <Box ringRed950--D20></Box> // darken color
+     * <Box ringRed950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRed950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringOrange50></Box> // default with is 1
      * <Box ringOrange50-2></Box> // ring with is 2
      * <Box ringOrange50--T20></Box> // transparentize color
@@ -1254,6 +1359,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringOrange900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringOrange950></Box> // default with is 1
+     * <Box ringOrange950-2></Box> // ring with is 2
+     * <Box ringOrange950--T20></Box> // transparentize color
+     * <Box ringOrange950--O20></Box> // opacify color
+     * <Box ringOrange950--L20></Box> // lighten color
+     * <Box ringOrange950--D20></Box> // darken color
+     * <Box ringOrange950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringOrange950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -1408,6 +1528,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringAmber950></Box> // default with is 1
+     * <Box ringAmber950-2></Box> // ring with is 2
+     * <Box ringAmber950--T20></Box> // transparentize color
+     * <Box ringAmber950--O20></Box> // opacify color
+     * <Box ringAmber950--L20></Box> // lighten color
+     * <Box ringAmber950--D20></Box> // darken color
+     * <Box ringAmber950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringAmber950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringYellow50></Box> // default with is 1
      * <Box ringYellow50-2></Box> // ring with is 2
      * <Box ringYellow50--T20></Box> // transparentize color
@@ -1554,6 +1689,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringYellow900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringYellow950></Box> // default with is 1
+     * <Box ringYellow950-2></Box> // ring with is 2
+     * <Box ringYellow950--T20></Box> // transparentize color
+     * <Box ringYellow950--O20></Box> // opacify color
+     * <Box ringYellow950--L20></Box> // lighten color
+     * <Box ringYellow950--D20></Box> // darken color
+     * <Box ringYellow950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringYellow950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -1708,6 +1858,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringLime950></Box> // default with is 1
+     * <Box ringLime950-2></Box> // ring with is 2
+     * <Box ringLime950--T20></Box> // transparentize color
+     * <Box ringLime950--O20></Box> // opacify color
+     * <Box ringLime950--L20></Box> // lighten color
+     * <Box ringLime950--D20></Box> // darken color
+     * <Box ringLime950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringLime950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringGreen50></Box> // default with is 1
      * <Box ringGreen50-2></Box> // ring with is 2
      * <Box ringGreen50--T20></Box> // transparentize color
@@ -1854,6 +2019,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringGreen900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringGreen950></Box> // default with is 1
+     * <Box ringGreen950-2></Box> // ring with is 2
+     * <Box ringGreen950--T20></Box> // transparentize color
+     * <Box ringGreen950--O20></Box> // opacify color
+     * <Box ringGreen950--L20></Box> // lighten color
+     * <Box ringGreen950--D20></Box> // darken color
+     * <Box ringGreen950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringGreen950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -2008,6 +2188,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringEmerald950></Box> // default with is 1
+     * <Box ringEmerald950-2></Box> // ring with is 2
+     * <Box ringEmerald950--T20></Box> // transparentize color
+     * <Box ringEmerald950--O20></Box> // opacify color
+     * <Box ringEmerald950--L20></Box> // lighten color
+     * <Box ringEmerald950--D20></Box> // darken color
+     * <Box ringEmerald950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringEmerald950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringTeal50></Box> // default with is 1
      * <Box ringTeal50-2></Box> // ring with is 2
      * <Box ringTeal50--T20></Box> // transparentize color
@@ -2154,6 +2349,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringTeal900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringTeal950></Box> // default with is 1
+     * <Box ringTeal950-2></Box> // ring with is 2
+     * <Box ringTeal950--T20></Box> // transparentize color
+     * <Box ringTeal950--O20></Box> // opacify color
+     * <Box ringTeal950--L20></Box> // lighten color
+     * <Box ringTeal950--D20></Box> // darken color
+     * <Box ringTeal950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringTeal950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -2308,6 +2518,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringCyan950></Box> // default with is 1
+     * <Box ringCyan950-2></Box> // ring with is 2
+     * <Box ringCyan950--T20></Box> // transparentize color
+     * <Box ringCyan950--O20></Box> // opacify color
+     * <Box ringCyan950--L20></Box> // lighten color
+     * <Box ringCyan950--D20></Box> // darken color
+     * <Box ringCyan950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringCyan950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringSky50></Box> // default with is 1
      * <Box ringSky50-2></Box> // ring with is 2
      * <Box ringSky50--T20></Box> // transparentize color
@@ -2454,6 +2679,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringSky900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringSky950></Box> // default with is 1
+     * <Box ringSky950-2></Box> // ring with is 2
+     * <Box ringSky950--T20></Box> // transparentize color
+     * <Box ringSky950--O20></Box> // opacify color
+     * <Box ringSky950--L20></Box> // lighten color
+     * <Box ringSky950--D20></Box> // darken color
+     * <Box ringSky950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringSky950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -2608,6 +2848,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringBlue950></Box> // default with is 1
+     * <Box ringBlue950-2></Box> // ring with is 2
+     * <Box ringBlue950--T20></Box> // transparentize color
+     * <Box ringBlue950--O20></Box> // opacify color
+     * <Box ringBlue950--L20></Box> // lighten color
+     * <Box ringBlue950--D20></Box> // darken color
+     * <Box ringBlue950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringBlue950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringIndigo50></Box> // default with is 1
      * <Box ringIndigo50-2></Box> // ring with is 2
      * <Box ringIndigo50--T20></Box> // transparentize color
@@ -2754,6 +3009,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringIndigo900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringIndigo950></Box> // default with is 1
+     * <Box ringIndigo950-2></Box> // ring with is 2
+     * <Box ringIndigo950--T20></Box> // transparentize color
+     * <Box ringIndigo950--O20></Box> // opacify color
+     * <Box ringIndigo950--L20></Box> // lighten color
+     * <Box ringIndigo950--D20></Box> // darken color
+     * <Box ringIndigo950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringIndigo950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -2908,6 +3178,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringViolet950></Box> // default with is 1
+     * <Box ringViolet950-2></Box> // ring with is 2
+     * <Box ringViolet950--T20></Box> // transparentize color
+     * <Box ringViolet950--O20></Box> // opacify color
+     * <Box ringViolet950--L20></Box> // lighten color
+     * <Box ringViolet950--D20></Box> // darken color
+     * <Box ringViolet950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringViolet950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringPurple50></Box> // default with is 1
      * <Box ringPurple50-2></Box> // ring with is 2
      * <Box ringPurple50--T20></Box> // transparentize color
@@ -3054,6 +3339,21 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringPurple900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringPurple950></Box> // default with is 1
+     * <Box ringPurple950-2></Box> // ring with is 2
+     * <Box ringPurple950--T20></Box> // transparentize color
+     * <Box ringPurple950--O20></Box> // opacify color
+     * <Box ringPurple950--L20></Box> // lighten color
+     * <Box ringPurple950--D20></Box> // darken color
+     * <Box ringPurple950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringPurple950?: ResponsiveBoolean
     /**
      * Set ring color and ring width
      * @example
@@ -3208,6 +3508,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringFuchsia950></Box> // default with is 1
+     * <Box ringFuchsia950-2></Box> // ring with is 2
+     * <Box ringFuchsia950--T20></Box> // transparentize color
+     * <Box ringFuchsia950--O20></Box> // opacify color
+     * <Box ringFuchsia950--L20></Box> // lighten color
+     * <Box ringFuchsia950--D20></Box> // darken color
+     * <Box ringFuchsia950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringFuchsia950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringPink50></Box> // default with is 1
      * <Box ringPink50-2></Box> // ring with is 2
      * <Box ringPink50--T20></Box> // transparentize color
@@ -3358,6 +3673,21 @@ declare module '@fower/atomic-props' {
      * Set ring color and ring width
      * @example
      * ```tsx
+     * <Box ringPink950></Box> // default with is 1
+     * <Box ringPink950-2></Box> // ring with is 2
+     * <Box ringPink950--T20></Box> // transparentize color
+     * <Box ringPink950--O20></Box> // opacify color
+     * <Box ringPink950--L20></Box> // lighten color
+     * <Box ringPink950--D20></Box> // darken color
+     * <Box ringPink950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringPink950?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
      * <Box ringRose50></Box> // default with is 1
      * <Box ringRose50-2></Box> // ring with is 2
      * <Box ringRose50--T20></Box> // transparentize color
@@ -3504,5 +3834,20 @@ declare module '@fower/atomic-props' {
      * @see https://fower.vercel.app/docs/ring
      */
     ringRose900?: ResponsiveBoolean
+    /**
+     * Set ring color and ring width
+     * @example
+     * ```tsx
+     * <Box ringRose950></Box> // default with is 1
+     * <Box ringRose950-2></Box> // ring with is 2
+     * <Box ringRose950--T20></Box> // transparentize color
+     * <Box ringRose950--O20></Box> // opacify color
+     * <Box ringRose950--L20></Box> // lighten color
+     * <Box ringRose950--D20></Box> // darken color
+     * <Box ringRose950-2--T20></Box>
+     * ```
+     * @see https://fower.vercel.app/docs/ring
+     */
+    ringRose950?: ResponsiveBoolean
   }
 }
