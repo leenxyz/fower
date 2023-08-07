@@ -1,5 +1,16 @@
 # fower
 
+## 1.85.0
+
+### Minor Changes
+
+- support function type css props
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.85.0
+
 ## 1.84.0
 
 ### Minor Changes

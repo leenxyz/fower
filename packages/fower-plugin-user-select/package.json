@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-user-select",
-  "version": "1.84.0",
+  "version": "1.85.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",

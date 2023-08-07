@@ -1,5 +1,11 @@
 # @fower/utils
 
+## 1.85.0
+
+### Minor Changes
+
+- support function type css props
+
 ## 1.84.0
 
 ### Minor Changes
