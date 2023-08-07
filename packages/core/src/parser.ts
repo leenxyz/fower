@@ -522,6 +522,7 @@ export class Parser {
   }
 
   parseObjectProp(propValue: any, meta = {}) {
+    propValue = typeof propValue === 'function' ? propValue(this.props) : propValue
     const { breakpoints } = this.config.theme
     const parsed = parse(propValue, breakpoints)
 

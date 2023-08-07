@@ -80,7 +80,7 @@ declare namespace FowerTypes {
     excludedProps?: string[]
 
     /**
-     * CSS
+     * CSS Props
      *
      * Like style prop, but you can do more.
      *
@@ -108,6 +108,6 @@ declare namespace FowerTypes {
      * }></Box>
      * ```
      */
-    css?: CSSObject
+    css?: ((props: any) => CSSObject) | CSSObject
   }
 }

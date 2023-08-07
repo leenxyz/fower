@@ -6,27 +6,26 @@ export default function App() {
   return (
     <ClientOnly>
       <Box
+        data-state="checked"
         className="bgRed500 flex"
         style={{ background: '#ddd', display: 'inline-flex' }}
         // p4
         // bgGreen100
         // inlineFlex
         // p={[100, 200]}
-        css={{
-          columnCount: [2, 4],
-          // fontBold: '800',
-          // fontSize: 30,
-          // p: [10, 40, 100],
-          m: 0,
-          // padding: [10, 40, 100],
-          borderSpacing: [1],
-          // borderRightStyle: [10],
-          margin: 30,
-          // '.hello': {
-          //   fontSize: 80,
-          //   p: [20, 60, 120],
-          //   color: ['red500', 'yellow500', 'blue500'],
-          // },
+        css={(props) => {
+          console.log('props:', props)
+          return {
+            columnCount: [2, 4],
+            fontBold: '800',
+            // fontSize: 30,
+            p: [10, 40, 100],
+            m: 0,
+            // padding: [10, 40, 100],
+            // borderSpacing: [1],
+            // borderRightStyle: [10],
+            margin: 30,
+          }
         }}
       >
         <div className="hello" style={{ background: 'green', display: 'inline-flex' }}>
