@@ -98,6 +98,7 @@ export function argsToProps(args: any[], objectPropKey = 'css') {
       // not array, set to objectPropKey
       result[objectPropKey] = { ...(result[objectPropKey] || {}), ...cur }
     }
+
     return result
   }, {} as any)
 }

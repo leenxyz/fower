@@ -1,38 +1,37 @@
-import { Box } from '@fower/react'
-import { css, isAtomicArgsValid } from '@fower/core'
+import { Box, styled } from '@fower/react'
 import { ClientOnly } from './ClientOnly'
 
+const StyledDiv = styled(
+  'div',
+  [
+    'text3XL',
+    // 'fontBold',
+  ],
+  {
+    fontBold: true,
+  },
+)
 export default function App() {
   return (
     <ClientOnly>
       <Box
         data-state="checked"
         className="bgRed500 flex"
-        style={{ background: '#ddd', display: 'inline-flex' }}
-        // p4
-        // bgGreen100
-        // inlineFlex
-        // p={[100, 200]}
-        css={(props) => {
-          console.log('props:', props)
-          return {
-            columnCount: [2, 4],
-            fontBold: '800',
-            // fontSize: 30,
-            p: [10, 40, 100],
-            m: 0,
-            // padding: [10, 40, 100],
-            // borderSpacing: [1],
-            // borderRightStyle: [10],
-            margin: 30,
-          }
+        brandDark
+        fillBrandDark
+        css={() => {
+          return { bg: ['red300'] }
         }}
       >
-        <div className="hello" style={{ background: 'green', display: 'inline-flex' }}>
-          Hello world
-        </div>
-        <div>Hello world</div>
+        fooooo
       </Box>
+      <StyledDiv
+        css={{
+          color: 'red500',
+        }}
+      >
+        Styled
+      </StyledDiv>
     </ClientOnly>
   )
   return (
