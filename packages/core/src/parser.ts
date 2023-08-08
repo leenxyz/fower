@@ -1,10 +1,4 @@
-import { Atom, Options } from './atom'
-import { store } from './store'
 import { upFirst } from '@fower/utils'
-import { formatColor } from '@fower/color-helper'
-import { styleSheet } from './sheet'
-import { Props } from './typings'
-import { parse } from '@fower/css-object-processor'
 import {
   isEmptyObj,
   objectToClassName,
@@ -12,6 +6,12 @@ import {
   isPercentNumber,
   isNumber,
 } from '@fower/utils'
+import { parse } from '@fower/css-object-processor'
+import { formatColor } from '@fower/color-helper'
+import { store } from './store'
+import { Atom, Options } from './atom'
+import { styleSheet } from './sheet'
+import { Props } from './typings'
 import { isUnitProp } from './isUnitProp'
 
 type Dict = Record<string, any>
@@ -94,13 +94,6 @@ export class Parser {
   traverseProps(props: Props): void {
     if (isEmptyObj(props)) return
 
-    const { pseudos = [], theme, mode } = this.config
-    const { modeList } = mode
-    const breakpoints: any = theme.breakpoints || {}
-    const breakpointKeys = Object.keys(breakpoints)
-    const modeKeys: string[] = modeList || []
-    const pseudoKeys: string[] = pseudos
-
     const { excludedProps = [] } = props
     const entries = Object.entries<any>(props)
 
@@ -123,30 +116,6 @@ export class Parser {
       if (this.config.objectPropKeys?.includes(propKey)) {
         this.parseObjectProp(propValue, {})
         continue
-      }
-
-      /** handle _hover, _sm, _dark... */
-      if (propKey.startsWith('_')) {
-        const postfix = propKey.replace(/^_/, '')
-        const obj = Array.isArray(propValue)
-          ? propValue.reduce<any>((r, cur) => ({ ...r, [cur]: true }), {})
-          : propValue
-
-        if (modeKeys.includes(postfix)) {
-          this.parseObjectProp(obj, { mode: postfix })
-          continue
-        }
-        if (breakpointKeys.includes(postfix)) {
-          this.parseObjectProp(obj, { breakpoint: breakpoints[postfix] })
-          continue
-        }
-        if (pseudoKeys.includes(postfix)) {
-          this.parseObjectProp(obj, {
-            pseudoPrefix: ':',
-            pseudo: postfix,
-          })
-          continue
-        }
       }
 
       if (Array.isArray(propValue)) {
@@ -567,7 +536,7 @@ export class Parser {
         continue
       }
 
-      // not match atomic props rule, 说明是非原子属性
+      // not match atomic props rule
       if (!atom.style || !Object.keys(atom.style).length) {
         atom.handled = true
       }
