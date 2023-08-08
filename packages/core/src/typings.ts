@@ -2,6 +2,7 @@ import { AtomicProps } from '@fower/atomic-props'
 import type { Atom } from './atom'
 import type { Parser } from './parser'
 import * as CSS from 'csstype'
+import { Properties } from './csstype'
 import React from 'react'
 
 export type ComponentProps<T extends As> = React.ComponentProps<T> & {
@@ -32,11 +33,11 @@ export type As = React.ElementType | React.ComponentType
 
 export type GroupedAtomicProps = AtomicProps | (keyof AtomicProps)[]
 
-export interface FowerCSSProperties extends AtomicProps, Omit<CSS.Properties, keyof AtomicProps> {}
+export interface FowerCSSProperties extends AtomicProps, Omit<Properties, keyof AtomicProps> {}
 
 export type PseudosObject = { [P in CSS.Pseudos]?: FowerCSSProperties }
 
-export type AtomicKey = keyof Omit<AtomicProps, keyof PostfixAtomicProps> | ({} & string)
+export type AtomicKey = keyof AtomicProps | ({} & string)
 
 export type AtomicArray = AtomicKey[]
 
@@ -49,7 +50,7 @@ export type CSSObject<T = any> =
   | {
       [K in keyof T]?: T[K] extends object
         ? CSSObject<T[K]>
-        : FowerCSSProperties | number | string | boolean
+        : FowerCSSProperties | number | string | boolean | (() => any)
     }
 
 export interface FowerPlugin {
@@ -77,35 +78,6 @@ export interface FowerPlugin {
    * @param parser
    */
   afterAtomStyleCreate?(parser: Parser): void
-}
-
-export interface PostfixAtomicProps {
-  _sm?: GroupedAtomicProps
-  _md?: GroupedAtomicProps
-  _lg?: GroupedAtomicProps
-  _xl?: GroupedAtomicProps
-  _2xl?: GroupedAtomicProps
-
-  _dark?: GroupedAtomicProps
-
-  _active?: GroupedAtomicProps
-  _checked?: GroupedAtomicProps
-  _disabled?: GroupedAtomicProps
-  _enabled?: GroupedAtomicProps
-  _default?: GroupedAtomicProps
-  _empty?: GroupedAtomicProps
-  _focus?: GroupedAtomicProps
-  _focusWithin?: GroupedAtomicProps
-  _invalid?: GroupedAtomicProps
-  _hover?: GroupedAtomicProps
-  _link?: GroupedAtomicProps
-  _visited?: GroupedAtomicProps
-  _firstChild?: GroupedAtomicProps
-  _lastChild?: GroupedAtomicProps
-  _after?: GroupedAtomicProps
-  _before?: GroupedAtomicProps
-  _placeholder?: GroupedAtomicProps
-  _selection?: GroupedAtomicProps
 }
 
 export interface Configuration {
@@ -593,7 +565,7 @@ export interface Meta {
   /**
    * @example
    * --hover -> hover
-   * --befor -> befor
+   * --before -> before
    */
   pseudo?: string
 
@@ -673,4 +645,65 @@ export interface Options {
   handled?: boolean
 
   props?: any
+}
+
+declare module '@fower/atomic-props' {
+  export interface AtomicProps {
+    /**
+     * if Atomic Prop is conflict with others, you can use this ignore Fower Atomic Prop, And it will be pass to inner component.
+     *
+     * ```tsx
+     * import React, { FC } from 'react'
+     * import { styled } from '@fower/styled'
+     *
+     * interface TestProps {
+     *   toCenter: string
+     * }
+     *
+     * const Test: FC<TestProp> = ({ toCenter, className }) => {
+     *    return <Box className={className}>{toCenter}</Box>
+     * }
+     *
+     * const StyledTest = styled(Test)
+     *
+     * // toCenter prop will be handled by Fower. And convert it to className prop.
+     * <StyledTest toCenter />
+     *
+     * // toCenter prop will be handled by Test Component.
+     * <StyledTest toCenter excludedProps={['toCenter']} />
+     * ```
+     */
+    excludedProps?: string[]
+
+    /**
+     * CSS Props
+     *
+     * Like style prop, but you can do more.
+     *
+     * Fower will auto add a className to element and parse css prop`s value to a css string, then add it to style element.
+     *
+     * @example
+     * ```tsx
+     * <Box css={
+     *  {
+     *     transition: 'all 0.3s',
+     *     '::after': {
+     *        content: '""',
+     *        display: 'block',
+     *      },
+     *     '>span': {
+     *        color: 'red',
+     *     },
+     *     '.dot': {
+     *        '.text': {
+     *           color: 'yellow',
+     *           fontSize: '12px',
+     *        },
+     *     }
+     *  }
+     * }></Box>
+     * ```
+     */
+    css?: ((props: any) => CSSObject) | CSSObject
+  }
 }

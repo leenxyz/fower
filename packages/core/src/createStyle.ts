@@ -1,14 +1,10 @@
 import { Parser } from './parser'
-import { FowerCSSProperties, PostfixAtomicProps } from './typings'
+import { FowerCSSProperties } from './typings'
 import { AtomicProps } from '@fower/atomic-props'
 import { CSSProperties } from 'react'
 
 export function createStyle(
-  ...args: (
-    | keyof Omit<AtomicProps, keyof PostfixAtomicProps>
-    | ({} & string)
-    | FowerCSSProperties
-  )[]
+  ...args: (keyof AtomicProps | ({} & string) | FowerCSSProperties)[]
 ): CSSProperties {
   const props = args.reduce<any>((result, cur) => {
     if (typeof cur === 'string') return { ...result, [cur]: true }
