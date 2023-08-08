@@ -1,5 +1,18 @@
 # @fower/remax
 
+## 1.86.0
+
+### Minor Changes
+
+- improve types
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/core@1.86.0
+  - @fower/preset-remax@1.86.0
+  - @fower/styled@1.86.0
+
 ## 1.85.0
 
 ### Minor Changes

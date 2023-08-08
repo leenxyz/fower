@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-font-family",
-  "version": "1.85.0",
+  "version": "1.86.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
