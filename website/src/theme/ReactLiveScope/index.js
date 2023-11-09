@@ -120,7 +120,6 @@ const Wrapper = (props) => {
   )
 }
 
-// 兼容 taro、remax demo报错
 const View = styled('div')
 const Image = styled('img')
 const Text = styled('span')

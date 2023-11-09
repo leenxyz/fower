@@ -43,52 +43,6 @@ Compared with inline style, "Atomic props" has many advantages:
 
 - **Style reuse**, using inline styles, it is easy to quickly expand the code, using "Atomic props", the code size will not expand too much as the project grows.
 
-## Use in HTML elements
-
-Atomic Props can also be used directly in html elements. In other words, you can directly add Atomic Props to html tags, the code is similar to the following:
-
-```jsx
-<div p6 textXL bgRed200>
-  Use fower in HTML tag
-</div>
-```
-
-To use Atomic Props in html elements, you should add a babel preset `@fower/babel-preset-fower` to the project by configuring babel.
-
-```json title=".babelrc"
-{
-  "presets": ["@fower/babel-preset-fower"]
-}
-```
-
-Then, you can use Atomic Props in HTML elements:
-
-```jsx
-import React from 'react'
-
-export default () => {
-  return (
-    <div p6 textXL bgRed200>
-      Use fower with Babel Preset
-    </div>
-  )
-}
-```
-
-Note that if you want to get TypeScript type hints, you need to extend the attribute types of HTML by creating a new `d.ts` file in the project root directory, you can name it `index.d.ts`, the code is as follows:
-
-```jsx title="index.d.ts"
-import 'react'
-import { AtomicProps } from '@fower/atomic-props';
-
-declare module 'react' {
-  interface HTMLAttributes<T> extends AtomicProps {}
-}
-
-```
-
-![hint](/img/Intellisense.png)
-
 ## Example source code
 
 You can view the example source code in github: [examples/use-with-react](https://github.com/forsigner/fower/tree/master/examples/example-react)

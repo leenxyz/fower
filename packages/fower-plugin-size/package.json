@@ -22,6 +22,10 @@
   },
   "author": "forsigner",
   "module": "dist/fower-plugin-size.esm.js",
+
+  "devDependencies": {
+    "@fower/colors": "workspace:*"
+  },
   "dependencies": {
     "@fower/atomic-props": "workspace:*",
     "@fower/core": "workspace:*",

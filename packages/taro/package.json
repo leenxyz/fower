@@ -20,6 +20,7 @@
   "module": "dist/taro.esm.js",
   "dependencies": {
     "@fower/core": "workspace:*",
+    "@fower/atomic-props": "workspace:*",
     "@fower/preset-taro": "workspace:*",
     "@fower/styled": "workspace:*"
   },

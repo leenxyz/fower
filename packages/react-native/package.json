@@ -22,6 +22,7 @@
     "react": ">=16"
   },
   "dependencies": {
+    "@fower/atomic-props": "workspace:*",
     "@fower/core": "workspace:*",
     "@fower/preset-react-native": "workspace:*",
     "@fower/styled": "workspace:*"

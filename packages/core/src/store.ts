@@ -92,7 +92,7 @@ export class Store {
       this.config = { ...this.config, ...config } as any
     } else {
       this.config = deepmerge(this.config, config) as any
-      // TODO: need improve, 这个是特殊的
+      // TODO: need improve, this a special key
       if (config.objectPropKeys) {
         this.config.objectPropKeys = config.objectPropKeys
       }

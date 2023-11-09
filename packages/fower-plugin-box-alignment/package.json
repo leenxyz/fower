@@ -22,6 +22,9 @@
   },
   "author": "forsigner",
   "module": "dist/fower-plugin-box-alignment.esm.js",
+  "devDependencies": {
+    "@fower/colors": "workspace:*"
+  },
   "dependencies": {
     "@fower/atomic-props": "workspace:*",
     "@fower/core": "workspace:*",

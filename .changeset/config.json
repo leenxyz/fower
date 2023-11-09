@@ -12,7 +12,6 @@
     "example-nextjs",
     "example-taro",
     "@fower/example-react-native-expo",
-    "@fower/example-remax",
     "@fower/website"
   ]
 }

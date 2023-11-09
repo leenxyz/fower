@@ -22,13 +22,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
-      items: [
-        'use-with-react',
-        'use-with-rn',
-        'use-with-taro',
-        'use-with-remax',
-        // 'use-with-vanilla',
-      ],
+      items: ['use-with-react', 'use-with-rn', 'use-with-taro'],
     },
     {
       type: 'category',
@@ -105,12 +99,9 @@ const sidebars = {
     'packages/react',
     'packages/core',
     'packages/styled',
-    // 'packages/vue',
     'packages/react-native',
     'packages/taro',
     'packages/types',
-    // 'packages/babel-preset-fower',
-    // 'packages/vue-template-compiler',
     // 'packages/preset-web',
     // 'packages/preset-web-rem',
     // 'packages/preset-react-native',
@@ -256,7 +247,6 @@ const sidebars = {
       items: ['fill', 'stroke', 'stroke-width'],
     },
   ],
+}
 
-};
-
-module.exports = sidebars;
+module.exports = sidebars

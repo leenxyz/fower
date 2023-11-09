@@ -1,5 +1,5 @@
-import { upFirst } from '@fower/utils'
 import {
+  upFirst,
   isEmptyObj,
   objectToClassName,
   jsKeyToCssKey,

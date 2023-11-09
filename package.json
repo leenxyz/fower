@@ -4,7 +4,7 @@
   "private": true,
   "description": "A style library for rapid UI development.",
   "scripts": {
-    "build": "pnpm build:types && turbo run build --filter=./packages/*",
+    "build": "turbo run build --filter=./packages/*",
     "build:types": "turbo run build:types --filter=./packages/*",
     "build:web": "turbo run build --scope=web",
     "clean": "turbo run clean && rm -rf node_modules",

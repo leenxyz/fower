@@ -1,4 +1,4 @@
-import { FowerPlugin, FowerColor, ResponsiveValue } from "@fower/core"
+import { FowerPlugin, FowerColor, ResponsiveValue } from '@fower/core'
 import * as CSS from 'csstype'
 declare const _default: () => FowerPlugin
 export default _default
