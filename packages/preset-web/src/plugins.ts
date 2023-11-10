@@ -28,7 +28,6 @@ import fontWeight from 'fower-plugin-font-weight'
 import zIndex from 'fower-plugin-z-index'
 import outline from 'fower-plugin-outline'
 import cursor from 'fower-plugin-cursor'
-import debug from 'fower-plugin-debug'
 import transform from 'fower-plugin-transform'
 import transition from 'fower-plugin-transition'
 import userSelect from 'fower-plugin-user-select'
@@ -43,7 +42,6 @@ import wordBreak from 'fower-plugin-word-break'
 
 export const plugins = [
   appearance(),
-  debug(),
   gradient(),
   background(),
   border(),
