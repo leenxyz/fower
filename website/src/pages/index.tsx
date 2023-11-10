@@ -117,7 +117,7 @@ function Home() {
   return (
     <Layout title={tagline} description={tagline}>
       <div className={styles.container}>
-        <Box className="toBetween flexDirection-row">
+        <Box className="toBetween flexDirection-row flex">
           <Box>
             <Box className="leadingNone fontExtrabold textLeft" style={{ fontSize: 68 }}>
               A utility-first CSS in JS library for rapid UI development

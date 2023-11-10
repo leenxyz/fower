@@ -11,11 +11,12 @@ const code = `<div toCenterY p3 w-240 bgWhite rounded2XL shadowMD>
     <span gray800>Atomic CSS in JS</span>
   </div>
 </div>`
+
 export function HomeDemo() {
   return (
     <div className="home-demo">
-      <Box className="bgOrange100 p6 roundedTopLarge toCenter flex">
-        <Box className="toCenterY p3 w-240 bgWhite rounded2XL shadowMD">
+      <Box className="bgOrange100 roundedTopLarge toCenter flex" style={{ padding: 24 }}>
+        <Box className="toCenterY  w-240 bgWhite rounded2XL shadowMD flex" style={{ padding: 16 }}>
           <img className="circle-48" src="/img/logo.png" />
           <Box className="ml-10">
             <Box className="textLeft textXL fontBold">Fower</Box>
