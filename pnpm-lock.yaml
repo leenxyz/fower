@@ -386,22 +386,6 @@ importers:
         specifier: workspace:*
         version: link:../utils
 
-  packages/fower-plugin-box-alignment:
-    dependencies:
-      '@fower/atomic-props':
-        specifier: workspace:*
-        version: link:../atomic-props
-      '@fower/core':
-        specifier: workspace:*
-        version: link:../core
-      '@fower/utils':
-        specifier: workspace:*
-        version: link:../utils
-    devDependencies:
-      '@fower/colors':
-        specifier: workspace:*
-        version: link:../colors
-
   packages/fower-plugin-box-sizing:
     dependencies:
       '@fower/atomic-props':
@@ -930,9 +914,6 @@ importers:
       fower-plugin-border:
         specifier: workspace:*
         version: link:../fower-plugin-border
-      fower-plugin-box-alignment:
-        specifier: workspace:*
-        version: link:../fower-plugin-box-alignment
       fower-plugin-color:
         specifier: workspace:*
         version: link:../fower-plugin-color
@@ -1023,9 +1004,6 @@ importers:
       fower-plugin-border:
         specifier: workspace:*
         version: link:../fower-plugin-border
-      fower-plugin-box-alignment:
-        specifier: workspace:*
-        version: link:../fower-plugin-box-alignment
       fower-plugin-box-sizing:
         specifier: workspace:*
         version: link:../fower-plugin-box-sizing
@@ -1140,9 +1118,6 @@ importers:
       fower-plugin-border:
         specifier: workspace:*
         version: link:../fower-plugin-border
-      fower-plugin-box-alignment:
-        specifier: workspace:*
-        version: link:../fower-plugin-box-alignment
       fower-plugin-box-sizing:
         specifier: workspace:*
         version: link:../fower-plugin-box-sizing

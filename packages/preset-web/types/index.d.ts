@@ -2,7 +2,6 @@
 /// <reference types="fower-plugin-appearance" />
 /// <reference types="fower-plugin-background" />
 /// <reference types="fower-plugin-border" />
-/// <reference types="fower-plugin-box-alignment" />
 /// <reference types="fower-plugin-box-sizing" />
 /// <reference types="fower-plugin-color" />
 /// <reference types="fower-plugin-container" />

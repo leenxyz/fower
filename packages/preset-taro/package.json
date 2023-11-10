@@ -26,7 +26,6 @@
     "@fower/core": "workspace:*",
     "fower-plugin-background": "workspace:*",
     "fower-plugin-border": "workspace:*",
-    "fower-plugin-box-alignment": "workspace:*",
     "fower-plugin-box-sizing": "workspace:*",
     "fower-plugin-color": "workspace:*",
     "fower-plugin-cursor": "workspace:*",

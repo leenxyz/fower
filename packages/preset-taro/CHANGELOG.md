@@ -13,7 +13,6 @@
   - @fower/core@1.86.0
   - fower-plugin-background@1.86.0
   - fower-plugin-border@1.86.0
-  - fower-plugin-box-alignment@1.86.0
   - fower-plugin-box-sizing@1.86.0
   - fower-plugin-color@1.86.0
   - fower-plugin-cursor@1.86.0
@@ -58,7 +57,6 @@
   - @fower/core@1.85.0
   - fower-plugin-background@1.85.0
   - fower-plugin-border@1.85.0
-  - fower-plugin-box-alignment@1.85.0
   - fower-plugin-box-sizing@1.85.0
   - fower-plugin-color@1.85.0
   - fower-plugin-cursor@1.85.0
@@ -103,7 +101,6 @@
   - @fower/core@1.84.0
   - fower-plugin-background@1.84.0
   - fower-plugin-border@1.84.0
-  - fower-plugin-box-alignment@1.84.0
   - fower-plugin-box-sizing@1.84.0
   - fower-plugin-color@1.84.0
   - fower-plugin-cursor@1.84.0
@@ -148,7 +145,6 @@
   - @fower/core@1.83.0
   - fower-plugin-background@1.83.0
   - fower-plugin-border@1.83.0
-  - fower-plugin-box-alignment@1.83.0
   - fower-plugin-box-sizing@1.83.0
   - fower-plugin-color@1.83.0
   - fower-plugin-cursor@1.83.0
@@ -193,7 +189,6 @@
   - @fower/core@1.82.0
   - fower-plugin-background@1.82.0
   - fower-plugin-border@1.82.0
-  - fower-plugin-box-alignment@1.82.0
   - fower-plugin-box-sizing@1.82.0
   - fower-plugin-color@1.82.0
   - fower-plugin-cursor@1.82.0
@@ -238,7 +233,6 @@
   - @fower/core@1.81.0
   - fower-plugin-background@1.81.0
   - fower-plugin-border@1.81.0
-  - fower-plugin-box-alignment@1.81.0
   - fower-plugin-box-sizing@1.81.0
   - fower-plugin-color@1.81.0
   - fower-plugin-cursor@1.81.0
@@ -283,7 +277,6 @@
   - @fower/core@1.80.0
   - fower-plugin-background@1.80.0
   - fower-plugin-border@1.80.0
-  - fower-plugin-box-alignment@1.80.0
   - fower-plugin-box-sizing@1.80.0
   - fower-plugin-color@1.80.0
   - fower-plugin-cursor@1.80.0
@@ -325,7 +318,6 @@
   - @fower/core@1.79.4
   - fower-plugin-background@1.79.4
   - fower-plugin-border@1.79.4
-  - fower-plugin-box-alignment@1.79.4
   - fower-plugin-box-sizing@1.79.4
   - fower-plugin-color@1.79.4
   - fower-plugin-cursor@1.79.4
@@ -367,7 +359,6 @@
   - @fower/core@1.79.3
   - fower-plugin-background@1.79.3
   - fower-plugin-border@1.79.3
-  - fower-plugin-box-alignment@1.79.3
   - fower-plugin-box-sizing@1.79.3
   - fower-plugin-color@1.79.3
   - fower-plugin-cursor@1.79.3
@@ -409,7 +400,6 @@
   - @fower/core@1.79.2
   - fower-plugin-background@1.79.2
   - fower-plugin-border@1.79.2
-  - fower-plugin-box-alignment@1.79.2
   - fower-plugin-box-sizing@1.79.2
   - fower-plugin-color@1.79.2
   - fower-plugin-cursor@1.79.2
@@ -451,7 +441,6 @@
   - @fower/core@1.79.1
   - fower-plugin-background@1.79.1
   - fower-plugin-border@1.79.1
-  - fower-plugin-box-alignment@1.79.1
   - fower-plugin-box-sizing@1.79.1
   - fower-plugin-color@1.79.1
   - fower-plugin-cursor@1.79.1
@@ -496,7 +485,6 @@
   - @fower/core@1.79.0
   - fower-plugin-background@1.79.0
   - fower-plugin-border@1.79.0
-  - fower-plugin-box-alignment@1.79.0
   - fower-plugin-box-sizing@1.79.0
   - fower-plugin-color@1.79.0
   - fower-plugin-cursor@1.79.0
@@ -541,7 +529,6 @@
   - @fower/core@1.78.0
   - fower-plugin-background@1.78.0
   - fower-plugin-border@1.78.0
-  - fower-plugin-box-alignment@1.78.0
   - fower-plugin-box-sizing@1.78.0
   - fower-plugin-color@1.78.0
   - fower-plugin-cursor@1.78.0
@@ -585,7 +572,6 @@
   - @fower/core@1.77.0
   - fower-plugin-background@1.77.0
   - fower-plugin-border@1.77.0
-  - fower-plugin-box-alignment@1.77.0
   - fower-plugin-box-sizing@1.77.0
   - fower-plugin-color@1.77.0
   - fower-plugin-cursor@1.77.0
@@ -629,8 +615,6 @@
   - @fower/core@1.76.0
   - fower-plugin-background@1.76.0
   - fower-plugin-border@1.76.0
-  - fower-plugin-box-alignment@1.76.0
-  - fower-plugin-box-sizing@1.76.0
   - fower-plugin-color@1.76.0
   - fower-plugin-cursor@1.76.0
   - fower-plugin-debug@1.76.0
@@ -670,7 +654,6 @@
   - @fower/core@1.75.7
   - fower-plugin-background@1.75.7
   - fower-plugin-border@1.75.7
-  - fower-plugin-box-alignment@1.75.7
   - fower-plugin-box-sizing@1.75.7
   - fower-plugin-color@1.75.7
   - fower-plugin-cursor@1.75.7
@@ -711,7 +694,6 @@
   - @fower/core@1.75.6
   - fower-plugin-background@1.75.6
   - fower-plugin-border@1.75.6
-  - fower-plugin-box-alignment@1.75.6
   - fower-plugin-box-sizing@1.75.6
   - fower-plugin-color@1.75.6
   - fower-plugin-cursor@1.75.6
@@ -752,7 +734,6 @@
   - @fower/core@1.75.5
   - fower-plugin-background@1.75.5
   - fower-plugin-border@1.75.5
-  - fower-plugin-box-alignment@1.75.5
   - fower-plugin-box-sizing@1.75.5
   - fower-plugin-color@1.75.5
   - fower-plugin-cursor@1.75.5
@@ -793,7 +774,6 @@
   - @fower/core@1.75.4
   - fower-plugin-background@1.75.4
   - fower-plugin-border@1.75.4
-  - fower-plugin-box-alignment@1.75.4
   - fower-plugin-box-sizing@1.75.4
   - fower-plugin-color@1.75.4
   - fower-plugin-cursor@1.75.4
@@ -834,7 +814,6 @@
   - @fower/core@1.75.3
   - fower-plugin-background@1.75.3
   - fower-plugin-border@1.75.3
-  - fower-plugin-box-alignment@1.75.3
   - fower-plugin-box-sizing@1.75.3
   - fower-plugin-color@1.75.3
   - fower-plugin-cursor@1.75.3
@@ -875,7 +854,6 @@
   - @fower/core@1.75.2
   - fower-plugin-background@1.75.2
   - fower-plugin-border@1.75.2
-  - fower-plugin-box-alignment@1.75.2
   - fower-plugin-box-sizing@1.75.2
   - fower-plugin-color@1.75.2
   - fower-plugin-cursor@1.75.2
@@ -916,7 +894,6 @@
   - @fower/core@1.75.1
   - fower-plugin-background@1.75.1
   - fower-plugin-border@1.75.1
-  - fower-plugin-box-alignment@1.75.1
   - fower-plugin-box-sizing@1.75.1
   - fower-plugin-color@1.75.1
   - fower-plugin-cursor@1.75.1
@@ -960,7 +937,6 @@
   - @fower/core@1.75.0
   - fower-plugin-background@1.75.0
   - fower-plugin-border@1.75.0
-  - fower-plugin-box-alignment@1.75.0
   - fower-plugin-box-sizing@1.75.0
   - fower-plugin-color@1.75.0
   - fower-plugin-cursor@1.75.0
