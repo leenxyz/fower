@@ -1,5 +1,5 @@
 import React, { forwardRef, PropsWithChildren, ComponentProps, createElement } from 'react'
-import { store, Parser, As } from '@fower/core'
+import { fowerStore, Parser, As } from '@fower/core'
 import { AtomicProps } from '@fower/atomic-props'
 
 export interface BoxComponent<T extends As, P = {}> {
@@ -21,7 +21,7 @@ export const Box: BoxComponent<'div', {}> = forwardRef((props, ref) => {
   const parser = new Parser(rest)
   const parsedProps = parser.getParsedProps()
 
-  const { inline } = store.config
+  const { inline } = fowerStore.config
 
   if (inline) {
     if (Array.isArray(rest.style)) {

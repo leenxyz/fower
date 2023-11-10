@@ -5,7 +5,6 @@ export * from './createStyle'
 export * from './keyframes'
 export * from './injectGlobalStyle'
 export * from './atom'
-export * from './store'
 export * from './sheet'
 export * from './typings'
 export { Parser } from './parser'
@@ -22,5 +21,7 @@ injectGlobalStyle({
 })
 
 const { setConfig, getConfig, setTheme, getTheme, setMode, getMode, addAtom, composeAtom } = store
+
+export const fowerStore = store
 
 export { setConfig, getConfig, setTheme, getTheme, setMode, getMode, addAtom, composeAtom }

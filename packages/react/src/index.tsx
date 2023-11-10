@@ -1,10 +1,10 @@
 import React from 'react'
-import { setConfig, styleSheet, store } from '@fower/core'
+import { setConfig, styleSheet, fowerStore } from '@fower/core'
 import presetWeb from '@fower/preset-web'
 
 setConfig(presetWeb)
 
-const getAtomIds = store.getAtomIds
+const getAtomIds = fowerStore.getAtomIds
 
 export { AtomicProps } from '@fower/atomic-props'
 export * from '@fower/core'

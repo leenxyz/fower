@@ -1,4 +1,4 @@
-import { setConfig, store, Parser, Atom } from '@fower/core'
+import { setConfig, fowerStore, Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
@@ -19,7 +19,7 @@ test('isMatch', () => {
 test('init', () => {
   init!({})
   init!({})
-  expect(store.compositions.get('foo')).toBeFalsy() // TODO:
+  expect(fowerStore.compositions.get('foo')).toBeFalsy() // TODO:
 })
 
 test('animateNone', () => {

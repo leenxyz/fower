@@ -1,4 +1,4 @@
-import { store } from '@fower/core'
+import { fowerStore } from '@fower/core'
 import { useState, useEffect } from 'react'
 interface Result {
   mode: string
@@ -6,17 +6,17 @@ interface Result {
 }
 
 export function useMode(): Result {
-  const [state, setState] = useState<string>(store.getMode())
+  const [state, setState] = useState<string>(fowerStore.getMode())
 
   useEffect(() => {
     const cacheMode = localStorage.getItem('fower-mode')
-    if (cacheMode && cacheMode !== store.config.mode.currentMode) {
+    if (cacheMode && cacheMode !== fowerStore.config.mode.currentMode) {
       setMode(cacheMode)
     }
   }, [])
   function setMode(mode: string) {
     setState(mode)
-    store.setMode(mode)
+    fowerStore.setMode(mode)
   }
 
   return { mode: state, setMode } as Result

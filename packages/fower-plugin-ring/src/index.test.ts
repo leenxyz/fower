@@ -1,10 +1,10 @@
-import { setConfig, store, Parser, Atom } from '@fower/core'
+import { setConfig, fowerStore, Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
 setConfig(presetWeb)
 
-const { colors } = store.config.theme
+const { colors } = fowerStore.config.theme
 const { isMatch, handleAtom } = plugin()
 const parser = new Parser({})
 

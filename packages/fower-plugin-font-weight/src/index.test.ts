@@ -1,4 +1,4 @@
-import { setConfig, store, Parser, Atom } from '@fower/core'
+import { setConfig, fowerStore, Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
@@ -32,5 +32,5 @@ test('fontExtrabold', () => {
     }),
     parser,
   )
-  expect(atom.style.fontWeight).toEqual(store.theme.fontWeights.extrabold)
+  expect(atom.style.fontWeight).toEqual(fowerStore.theme.fontWeights.extrabold)
 })

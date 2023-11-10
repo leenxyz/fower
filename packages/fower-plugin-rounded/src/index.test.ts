@@ -1,4 +1,4 @@
-import { setConfig, store, Parser, Atom } from '@fower/core'
+import { setConfig, fowerStore, Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
@@ -32,7 +32,7 @@ test('rounded', () => {
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderRadius).toEqual(fowerStore.theme.radii['md'])
 })
 
 test('roundedMedium', () => {
@@ -43,7 +43,7 @@ test('roundedMedium', () => {
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderRadius).toEqual(fowerStore.theme.radii['md'])
 })
 
 test('roundedFull', () => {
@@ -54,7 +54,7 @@ test('roundedFull', () => {
     }),
     parser,
   )
-  expect(atom.style.borderRadius).toEqual(store.theme.radii.full)
+  expect(atom.style.borderRadius).toEqual(fowerStore.theme.radii.full)
 })
 
 test('roundedTopMedium', () => {
@@ -66,8 +66,8 @@ test('roundedTopMedium', () => {
     parser,
   )
 
-  expect(atom.style.borderTopLeftRadius).toEqual(store.theme.radii['md'])
-  expect(atom.style.borderTopRightRadius).toEqual(store.theme.radii['md'])
+  expect(atom.style.borderTopLeftRadius).toEqual(fowerStore.theme.radii['md'])
+  expect(atom.style.borderTopRightRadius).toEqual(fowerStore.theme.radii['md'])
 })
 
 test('roundedTopRight={8}', () => {

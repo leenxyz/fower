@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import { store, Parser } from '@fower/core'
+import { fowerStore, Parser } from '@fower/core'
 
 /**
  * JSX Pragma
@@ -16,7 +16,7 @@ export function jsx(element: string, props: any = {}, ...children: any[]) {
 
   const parser = new Parser(props)
   const parsedProps: any = parser.getParsedProps()
-  const { inline } = store.config
+  const { inline } = fowerStore.config
 
   if (inline) {
     if (Array.isArray(props.style)) {

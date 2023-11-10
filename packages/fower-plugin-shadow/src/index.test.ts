@@ -1,4 +1,4 @@
-import { setConfig, store, Parser, Atom } from '@fower/core'
+import { setConfig, fowerStore, Parser, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
@@ -31,7 +31,7 @@ test('shadow', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows.md)
+  expect(atom.style.boxShadow).toEqual(fowerStore.theme.shadows.md)
 })
 
 test('shadowMD', () => {
@@ -42,7 +42,7 @@ test('shadowMD', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows.md)
+  expect(atom.style.boxShadow).toEqual(fowerStore.theme.shadows.md)
 })
 
 test('shadowNone', () => {
@@ -53,5 +53,5 @@ test('shadowNone', () => {
     }),
     parser,
   )
-  expect(atom.style.boxShadow).toEqual(store.theme.shadows.none)
+  expect(atom.style.boxShadow).toEqual(fowerStore.theme.shadows.none)
 })

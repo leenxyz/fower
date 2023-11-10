@@ -1,4 +1,4 @@
-import { store } from '@fower/core'
+import { fowerStore } from '@fower/core'
 import plugin from '.'
 
 const { isMatch, init } = plugin()
@@ -9,8 +9,8 @@ test('isMatch', () => {
 })
 
 test('container', () => {
-  expect(store.compositions.get('container')).toBeFalsy()
+  expect(fowerStore.compositions.get('container')).toBeFalsy()
   init!({})
   init!({})
-  expect(store.compositions.get('container')).toBeTruthy()
+  expect(fowerStore.compositions.get('container')).toBeTruthy()
 })

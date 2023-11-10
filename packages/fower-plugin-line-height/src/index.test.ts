@@ -1,4 +1,4 @@
-import { setConfig, Parser, store, Atom } from '@fower/core'
+import { setConfig, Parser, fowerStore, Atom } from '@fower/core'
 import { presetWeb } from '@fower/preset-web'
 import plugin from '.'
 
@@ -33,7 +33,7 @@ test('leadingTight', () => {
     }),
     parser,
   )
-  expect(atom.style.lineHeight).toEqual(store.theme.lineHeights.tight)
+  expect(atom.style.lineHeight).toEqual(fowerStore.theme.lineHeights.tight)
 })
 
 test('leadingNone', () => {
@@ -44,7 +44,7 @@ test('leadingNone', () => {
     }),
     parser,
   )
-  expect(atom.style.lineHeight).toEqual(store.theme.lineHeights.none)
+  expect(atom.style.lineHeight).toEqual(fowerStore.theme.lineHeights.none)
 })
 
 test('leadingFoo should be no style', () => {

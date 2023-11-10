@@ -1,4 +1,4 @@
-import { FowerPlugin, store } from '@fower/core'
+import { FowerPlugin, fowerStore } from '@fower/core'
 
 export function isMatch(key: string) {
   return /^container$/i.test(key)
@@ -10,7 +10,7 @@ export default (): FowerPlugin => {
     isMatch,
     init() {
       if (inited) return
-      store.composeAtom('container', {
+      fowerStore.composeAtom('container', {
         'w-100p': true,
         'maxW-640px--sm': true,
         'maxW-768px--md': true,
