@@ -43,7 +43,6 @@
   - fower-plugin-rounded@1.86.0
   - fower-plugin-shadow@1.86.0
   - fower-plugin-size@1.86.0
-  - fower-plugin-space@1.86.0
   - fower-plugin-svg@1.86.0
   - fower-plugin-text-align@1.86.0
   - fower-plugin-text-decoration@1.86.0
@@ -100,7 +99,6 @@
   - fower-plugin-rounded@1.85.0
   - fower-plugin-shadow@1.85.0
   - fower-plugin-size@1.85.0
-  - fower-plugin-space@1.85.0
   - fower-plugin-svg@1.85.0
   - fower-plugin-text-align@1.85.0
   - fower-plugin-text-decoration@1.85.0
@@ -157,7 +155,6 @@
   - fower-plugin-rounded@1.84.0
   - fower-plugin-shadow@1.84.0
   - fower-plugin-size@1.84.0
-  - fower-plugin-space@1.84.0
   - fower-plugin-svg@1.84.0
   - fower-plugin-text-align@1.84.0
   - fower-plugin-text-decoration@1.84.0
@@ -214,7 +211,6 @@
   - fower-plugin-rounded@1.83.0
   - fower-plugin-shadow@1.83.0
   - fower-plugin-size@1.83.0
-  - fower-plugin-space@1.83.0
   - fower-plugin-svg@1.83.0
   - fower-plugin-text-align@1.83.0
   - fower-plugin-text-decoration@1.83.0
@@ -271,7 +267,6 @@
   - fower-plugin-rounded@1.82.0
   - fower-plugin-shadow@1.82.0
   - fower-plugin-size@1.82.0
-  - fower-plugin-space@1.82.0
   - fower-plugin-svg@1.82.0
   - fower-plugin-text-align@1.82.0
   - fower-plugin-text-decoration@1.82.0
@@ -328,7 +323,6 @@
   - fower-plugin-rounded@1.81.0
   - fower-plugin-shadow@1.81.0
   - fower-plugin-size@1.81.0
-  - fower-plugin-space@1.81.0
   - fower-plugin-svg@1.81.0
   - fower-plugin-text-align@1.81.0
   - fower-plugin-text-decoration@1.81.0
@@ -385,7 +379,6 @@
   - fower-plugin-rounded@1.80.0
   - fower-plugin-shadow@1.80.0
   - fower-plugin-size@1.80.0
-  - fower-plugin-space@1.80.0
   - fower-plugin-svg@1.80.0
   - fower-plugin-text-align@1.80.0
   - fower-plugin-text-decoration@1.80.0
@@ -439,7 +432,6 @@
   - fower-plugin-rounded@1.79.4
   - fower-plugin-shadow@1.79.4
   - fower-plugin-size@1.79.4
-  - fower-plugin-space@1.79.4
   - fower-plugin-svg@1.79.4
   - fower-plugin-text-align@1.79.4
   - fower-plugin-text-decoration@1.79.4
@@ -493,7 +485,6 @@
   - fower-plugin-rounded@1.79.3
   - fower-plugin-shadow@1.79.3
   - fower-plugin-size@1.79.3
-  - fower-plugin-space@1.79.3
   - fower-plugin-svg@1.79.3
   - fower-plugin-text-align@1.79.3
   - fower-plugin-text-decoration@1.79.3
@@ -547,7 +538,6 @@
   - fower-plugin-rounded@1.79.2
   - fower-plugin-shadow@1.79.2
   - fower-plugin-size@1.79.2
-  - fower-plugin-space@1.79.2
   - fower-plugin-svg@1.79.2
   - fower-plugin-text-align@1.79.2
   - fower-plugin-text-decoration@1.79.2
@@ -601,7 +591,6 @@
   - fower-plugin-rounded@1.79.1
   - fower-plugin-shadow@1.79.1
   - fower-plugin-size@1.79.1
-  - fower-plugin-space@1.79.1
   - fower-plugin-svg@1.79.1
   - fower-plugin-text-align@1.79.1
   - fower-plugin-text-decoration@1.79.1
@@ -658,7 +647,6 @@
   - fower-plugin-rounded@1.79.0
   - fower-plugin-shadow@1.79.0
   - fower-plugin-size@1.79.0
-  - fower-plugin-space@1.79.0
   - fower-plugin-svg@1.79.0
   - fower-plugin-text-align@1.79.0
   - fower-plugin-text-decoration@1.79.0
@@ -714,7 +702,6 @@
   - fower-plugin-rounded@1.78.0
   - fower-plugin-shadow@1.78.0
   - fower-plugin-size@1.78.0
-  - fower-plugin-space@1.78.0
   - fower-plugin-svg@1.78.0
   - fower-plugin-text-align@1.78.0
   - fower-plugin-text-decoration@1.78.0
@@ -770,7 +757,6 @@
   - fower-plugin-rounded@1.77.0
   - fower-plugin-shadow@1.77.0
   - fower-plugin-size@1.77.0
-  - fower-plugin-space@1.77.0
   - fower-plugin-svg@1.77.0
   - fower-plugin-text-align@1.77.0
   - fower-plugin-text-decoration@1.77.0
@@ -826,7 +812,6 @@
   - fower-plugin-rounded@1.76.0
   - fower-plugin-shadow@1.76.0
   - fower-plugin-size@1.76.0
-  - fower-plugin-space@1.76.0
   - fower-plugin-svg@1.76.0
   - fower-plugin-text-align@1.76.0
   - fower-plugin-text-decoration@1.76.0
@@ -879,7 +864,6 @@
   - fower-plugin-rounded@1.75.7
   - fower-plugin-shadow@1.75.7
   - fower-plugin-size@1.75.7
-  - fower-plugin-space@1.75.7
   - fower-plugin-svg@1.75.7
   - fower-plugin-text-align@1.75.7
   - fower-plugin-text-decoration@1.75.7
@@ -932,7 +916,6 @@
   - fower-plugin-rounded@1.75.6
   - fower-plugin-shadow@1.75.6
   - fower-plugin-size@1.75.6
-  - fower-plugin-space@1.75.6
   - fower-plugin-svg@1.75.6
   - fower-plugin-text-align@1.75.6
   - fower-plugin-text-decoration@1.75.6
@@ -985,7 +968,6 @@
   - fower-plugin-rounded@1.75.5
   - fower-plugin-shadow@1.75.5
   - fower-plugin-size@1.75.5
-  - fower-plugin-space@1.75.5
   - fower-plugin-svg@1.75.5
   - fower-plugin-text-align@1.75.5
   - fower-plugin-text-decoration@1.75.5
@@ -1038,7 +1020,6 @@
   - fower-plugin-rounded@1.75.4
   - fower-plugin-shadow@1.75.4
   - fower-plugin-size@1.75.4
-  - fower-plugin-space@1.75.4
   - fower-plugin-svg@1.75.4
   - fower-plugin-text-align@1.75.4
   - fower-plugin-text-decoration@1.75.4
@@ -1091,7 +1072,6 @@
   - fower-plugin-rounded@1.75.3
   - fower-plugin-shadow@1.75.3
   - fower-plugin-size@1.75.3
-  - fower-plugin-space@1.75.3
   - fower-plugin-svg@1.75.3
   - fower-plugin-text-align@1.75.3
   - fower-plugin-text-decoration@1.75.3
@@ -1144,7 +1124,6 @@
   - fower-plugin-rounded@1.75.2
   - fower-plugin-shadow@1.75.2
   - fower-plugin-size@1.75.2
-  - fower-plugin-space@1.75.2
   - fower-plugin-svg@1.75.2
   - fower-plugin-text-align@1.75.2
   - fower-plugin-text-decoration@1.75.2
@@ -1197,7 +1176,6 @@
   - fower-plugin-rounded@1.75.1
   - fower-plugin-shadow@1.75.1
   - fower-plugin-size@1.75.1
-  - fower-plugin-space@1.75.1
   - fower-plugin-svg@1.75.1
   - fower-plugin-text-align@1.75.1
   - fower-plugin-text-decoration@1.75.1
@@ -1253,7 +1231,6 @@
   - fower-plugin-rounded@1.75.0
   - fower-plugin-shadow@1.75.0
   - fower-plugin-size@1.75.0
-  - fower-plugin-space@1.75.0
   - fower-plugin-svg@1.75.0
   - fower-plugin-text-align@1.75.0
   - fower-plugin-text-decoration@1.75.0

@@ -735,18 +735,6 @@ importers:
         specifier: workspace:*
         version: link:../colors
 
-  packages/fower-plugin-space:
-    dependencies:
-      '@fower/atomic-props':
-        specifier: workspace:*
-        version: link:../atomic-props
-      '@fower/core':
-        specifier: workspace:*
-        version: link:../core
-      '@fower/utils':
-        specifier: workspace:*
-        version: link:../utils
-
   packages/fower-plugin-svg:
     dependencies:
       '@fower/atomic-props':
@@ -1199,9 +1187,6 @@ importers:
       fower-plugin-size:
         specifier: workspace:*
         version: link:../fower-plugin-size
-      fower-plugin-space:
-        specifier: workspace:*
-        version: link:../fower-plugin-space
       fower-plugin-svg:
         specifier: workspace:*
         version: link:../fower-plugin-svg

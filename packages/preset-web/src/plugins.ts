@@ -29,7 +29,6 @@ import zIndex from 'fower-plugin-z-index'
 import outline from 'fower-plugin-outline'
 import cursor from 'fower-plugin-cursor'
 import debug from 'fower-plugin-debug'
-import space from 'fower-plugin-space'
 import transform from 'fower-plugin-transform'
 import transition from 'fower-plugin-transition'
 import userSelect from 'fower-plugin-user-select'
@@ -76,7 +75,6 @@ export const plugins = [
   zIndex(),
   cursor(),
   outline(),
-  space(),
   transform(),
   transition(),
   userSelect(),
