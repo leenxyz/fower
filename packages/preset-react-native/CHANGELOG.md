@@ -1,5 +1,43 @@
 # @fower/preset-react-native
 
+## 2.0.0
+
+### Major Changes
+
+- 2.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/colors@2.0.0
+  - @fower/core@2.0.0
+  - fower-plugin-background@2.0.0
+  - fower-plugin-border@2.0.0
+  - fower-plugin-color@2.0.0
+  - fower-plugin-cursor@2.0.0
+  - fower-plugin-display@2.0.0
+  - fower-plugin-flexbox@2.0.0
+  - fower-plugin-font-family@2.0.0
+  - fower-plugin-font-style@2.0.0
+  - fower-plugin-font-weight@2.0.0
+  - fower-plugin-gap@2.0.0
+  - fower-plugin-grid@2.0.0
+  - fower-plugin-layout@2.0.0
+  - fower-plugin-line-height@2.0.0
+  - fower-plugin-margin@2.0.0
+  - fower-plugin-opacity@2.0.0
+  - fower-plugin-outline@2.0.0
+  - fower-plugin-overflow@2.0.0
+  - fower-plugin-padding@2.0.0
+  - fower-plugin-position@2.0.0
+  - fower-plugin-rounded@2.0.0
+  - fower-plugin-shadow@2.0.0
+  - fower-plugin-size@2.0.0
+  - fower-plugin-text-align@2.0.0
+  - fower-plugin-text-size@2.0.0
+  - fower-plugin-text-transform@2.0.0
+  - fower-plugin-z-index@2.0.0
+
 ## 1.86.0
 
 ### Minor Changes

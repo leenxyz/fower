@@ -1,5 +1,18 @@
 # fower-plugin-opacity
 
+## 2.0.0
+
+### Major Changes
+
+- 2.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@2.0.0
+  - @fower/core@2.0.0
+  - @fower/utils@2.0.0
+
 ## 1.86.0
 
 ### Minor Changes

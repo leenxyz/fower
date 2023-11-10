@@ -1,5 +1,16 @@
 # @fower/css-object-processor
 
+## 2.0.0
+
+### Major Changes
+
+- 2.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/utils@2.0.0
+
 ## 1.86.0
 
 ### Minor Changes

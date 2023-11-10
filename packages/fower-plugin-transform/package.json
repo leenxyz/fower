@@ -1,6 +1,6 @@
 {
   "name": "fower-plugin-transform",
-  "version": "1.86.0",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "types/index.d.ts",

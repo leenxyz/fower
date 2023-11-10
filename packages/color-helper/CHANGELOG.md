@@ -1,5 +1,11 @@
 # @fower/color-helper
 
+## 2.0.0
+
+### Major Changes
+
+- 2.0
+
 ## 1.86.0
 
 ### Minor Changes

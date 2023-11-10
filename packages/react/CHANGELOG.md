@@ -1,5 +1,21 @@
 # @fower/react
 
+## 2.0.0
+
+### Major Changes
+
+- 2.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@2.0.0
+  - @fower/core@2.0.0
+  - @fower/css-object-processor@2.0.0
+  - @fower/preset-web@2.0.0
+  - @fower/styled@2.0.0
+  - @fower/utils@2.0.0
+
 ## 1.86.0
 
 ### Minor Changes
