@@ -38,7 +38,6 @@ import placeholder from 'fower-plugin-placeholder'
 import gradient from 'fower-plugin-gradient'
 import ring from 'fower-plugin-ring'
 import svg from 'fower-plugin-svg'
-import container from 'fower-plugin-container'
 import animation from 'fower-plugin-animation'
 import wordBreak from 'fower-plugin-word-break'
 
@@ -83,7 +82,6 @@ export const plugins = [
   placeholder(),
   ring(),
   svg(),
-  container(),
   animation(),
   wordBreak(),
 ]

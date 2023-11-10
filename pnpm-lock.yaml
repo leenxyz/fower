@@ -416,18 +416,6 @@ importers:
         specifier: workspace:*
         version: link:../utils
 
-  packages/fower-plugin-container:
-    dependencies:
-      '@fower/atomic-props':
-        specifier: workspace:*
-        version: link:../atomic-props
-      '@fower/core':
-        specifier: workspace:*
-        version: link:../core
-      '@fower/utils':
-        specifier: workspace:*
-        version: link:../utils
-
   packages/fower-plugin-cursor:
     dependencies:
       '@fower/atomic-props':
@@ -1112,9 +1100,6 @@ importers:
       fower-plugin-color:
         specifier: workspace:*
         version: link:../fower-plugin-color
-      fower-plugin-container:
-        specifier: workspace:*
-        version: link:../fower-plugin-container
       fower-plugin-cursor:
         specifier: workspace:*
         version: link:../fower-plugin-cursor

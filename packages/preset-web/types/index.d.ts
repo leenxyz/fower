@@ -4,7 +4,6 @@
 /// <reference types="fower-plugin-border" />
 /// <reference types="fower-plugin-box-sizing" />
 /// <reference types="fower-plugin-color" />
-/// <reference types="fower-plugin-container" />
 /// <reference types="fower-plugin-display" />
 /// <reference types="fower-plugin-flexbox" />
 /// <reference types="fower-plugin-gradient" />

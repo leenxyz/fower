@@ -31,7 +31,6 @@
     "fower-plugin-border": "workspace:*",
     "fower-plugin-box-sizing": "workspace:*",
     "fower-plugin-color": "workspace:*",
-    "fower-plugin-container": "workspace:*",
     "fower-plugin-cursor": "workspace:*",
     "fower-plugin-debug": "workspace:*",
     "fower-plugin-display": "workspace:*",
