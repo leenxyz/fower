@@ -1,15 +1,15 @@
-import { Box } from '@fower/react';
+import { Box } from '@fower/react'
 
-export default () => {
+export default function App() {
   return (
-    <Box spaceY10>
-      <Box spaceY-10>
+    <Box gap10>
+      <Box gap-10>
         <Box bgOrange400 rounded-8 h-60 block></Box>
         <Box bgOrange400 rounded-8 h-60 block></Box>
         <Box bgOrange400 rounded-8 h-60 block></Box>
       </Box>
 
-      <Box white spaceX2>
+      <Box white gap2>
         <Box bgOrange400 rounded-8 p4 inline>
           A
         </Box>
@@ -21,7 +21,7 @@ export default () => {
         </Box>
       </Box>
 
-      <Box white spaceX2>
+      <Box white gap2>
         <Box bgOrange400 rounded-8 p4 inlineBlock>
           A
         </Box>
@@ -33,8 +33,8 @@ export default () => {
         </Box>
       </Box>
 
-      <Box spaceY2>
-        <Box white spaceX2 flex bgOrange100 p4>
+      <Box gap2>
+        <Box white gap2 flex bgOrange100 p4>
           <Box bgOrange400 rounded-8 p4>
             A
           </Box>
@@ -46,7 +46,7 @@ export default () => {
           </Box>
         </Box>
 
-        <Box white spaceX2 flex bgOrange100 p4>
+        <Box white gap2 flex bgOrange100 p4>
           <Box bgOrange400 rounded-8 p4>
             A
           </Box>
@@ -59,8 +59,8 @@ export default () => {
         </Box>
       </Box>
 
-      <Box spaceX2>
-        <Box white spaceX2 inlineFlex bgOrange100 p4>
+      <Box gap2>
+        <Box white gap2 inlineFlex bgOrange100 p4>
           <Box bgOrange400 rounded-8 p4>
             A
           </Box>
@@ -72,7 +72,7 @@ export default () => {
           </Box>
         </Box>
 
-        <Box white spaceX2 inlineFlex bgOrange100 p4>
+        <Box white gap2 inlineFlex bgOrange100 p4>
           <Box bgOrange400 rounded-8 p4>
             A
           </Box>
@@ -85,5 +85,5 @@ export default () => {
         </Box>
       </Box>
     </Box>
-  );
-};
+  )
+}

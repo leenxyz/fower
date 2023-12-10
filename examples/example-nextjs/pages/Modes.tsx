@@ -25,7 +25,7 @@ setConfig({
 export default function App() {
   const { mode, setMode } = useMode()
   return (
-    <Box h-400 roundedLG p4 column toCenter spaceY3 bgWhite>
+    <Box h-400 roundedLG p4 column toCenter gap3 bgWhite>
       <Box
         as="button"
         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
@@ -44,7 +44,7 @@ export default function App() {
       <Box text2XL black red400--red blue400--blue text6XL--large>
         Multiple theme mode
       </Box>
-      <Box toCenter spaceX2 black>
+      <Box toCenter gap2 black>
         <Box as="label" toCenter>
           <input
             type="radio"

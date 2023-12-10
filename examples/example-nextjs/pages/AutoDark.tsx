@@ -31,7 +31,7 @@ export default function App() {
   return (
     <Box h-400 roundedLG bgGray100--L2 p4>
       {/* <Box red600>40 Lorem ipsum dolor sit amet</Box> */}
-      <Box column toCenter spaceY3 gray800 textCenter>
+      <Box column toCenter gap3 gray800 textCenter>
         <Box
           as="button"
           onClick={toggleMode}

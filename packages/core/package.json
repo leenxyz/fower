@@ -31,7 +31,6 @@
     "string-hash": "^1.1.3"
   },
   "devDependencies": {
-    "@types/string-hash": "^1.1.1",
-    "tsup": "^6.5.0"
+    "@types/string-hash": "^1.1.1"
   }
 }

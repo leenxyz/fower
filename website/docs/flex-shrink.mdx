@@ -14,7 +14,7 @@ Atomic props for controlling how flex items shrink.
 Use `flexShrink={1}` to allow a flex item to shrink if needed.
 
 ```jsx live
-<Box spaceX3 row>
+<Box gap3 row>
   <Box bgOrange400 p4 w-100></Box>
   <Box bgOrange500 p4 flexShrink={1} w-600>
     Shrink
@@ -28,7 +28,7 @@ Use `flexShrink={1}` to allow a flex item to shrink if needed.
 Use `flexShrink={0}` to prevent a flex item from shrinking.
 
 ```jsx live
-<Box spaceX3 row>
+<Box gap3 row>
   <Box bgOrange400 p4 w-100></Box>
   <Box bgOrange500 p4 flexShrink={0} w-600>
     Not Shrink

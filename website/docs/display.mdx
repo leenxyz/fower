@@ -19,7 +19,7 @@ title: Display
 Use `block` props to create a block-level element.
 
 ```jsx live
-<Box spaceY-10>
+<Box gap-10>
   <Box bgOrange400 rounded-8 h-60 block></Box>
   <Box bgOrange400 rounded-8 h-60 block></Box>
   <Box bgOrange400 rounded-8 h-60 block></Box>
@@ -31,7 +31,7 @@ Use `block` props to create a block-level element.
 Use `inline` props to create an inline element.
 
 ```jsx live
-<Box white spaceX2>
+<Box white gap2>
   <Box bgOrange400 rounded-8 p4 inline>
     A
   </Box>
@@ -49,7 +49,7 @@ Use `inline` props to create an inline element.
 Use `inlineBlock` props to create an inline block-level element.
 
 ```jsx live
-<Box white spaceX2>
+<Box white gap2>
   <Box bgOrange400 rounded-8 p4 inlineBlock>
     A
   </Box>
@@ -67,8 +67,8 @@ Use `inlineBlock` props to create an inline block-level element.
 Use `flex` props to create a block-level flex container.
 
 ```jsx live
-<Box spaceY2>
-  <Box white spaceX2 flex bgOrange100 p4>
+<Box gap2>
+  <Box white gap2 flex bgOrange100 p4>
     <Box bgOrange400 rounded-8 p4>
       A
     </Box>
@@ -80,7 +80,7 @@ Use `flex` props to create a block-level flex container.
     </Box>
   </Box>
 
-  <Box white spaceX2 flex bgOrange100 p4>
+  <Box white gap2 flex bgOrange100 p4>
     <Box bgOrange400 rounded-8 p4>
       A
     </Box>
@@ -99,8 +99,8 @@ Use `flex` props to create a block-level flex container.
 Use `inlineFlex` props to create an inline flex container.
 
 ```jsx live
-<Box spaceX2>
-  <Box white spaceX2 inlineFlex bgOrange100 p4>
+<Box gap2>
+  <Box white gap2 inlineFlex bgOrange100 p4>
     <Box bgOrange400 rounded-8 p4>
       A
     </Box>
@@ -112,7 +112,7 @@ Use `inlineFlex` props to create an inline flex container.
     </Box>
   </Box>
 
-  <Box white spaceX2 inlineFlex bgOrange100 p4>
+  <Box white gap2 inlineFlex bgOrange100 p4>
     <Box bgOrange400 rounded-8 p4>
       A
     </Box>
@@ -167,7 +167,7 @@ Use `grid` props to create a grid container.
 Use `hidden` props to set an element to `display: none`.
 
 ```jsx live
-<Box white spaceX2>
+<Box white gap2>
   <Box bgOrange400 rounded-8 p4 hidden>
     A
   </Box>
@@ -185,7 +185,7 @@ Use `hidden` props to set an element to `display: none`.
 if the preset atomic props can not be satisfied，you can use `display` props.
 
 ```jsx live
-<Box spaceY-10>
+<Box gap-10>
   <Box bgOrange400 rounded-8 square-100 display="inline-grid"></Box>
   <Box bgOrange400 rounded-8 square-100 display="table"></Box>
 </Box>

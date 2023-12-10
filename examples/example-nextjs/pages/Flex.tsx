@@ -4,7 +4,7 @@ export default function App() {
   return (
     <Box>
       <Box as="h2">Row</Box>
-      <Box spaceX3 row>
+      <Box gap3 row>
         <Box bgOrange400 p10>
           A
         </Box>
@@ -18,7 +18,7 @@ export default function App() {
 
       <Box as="h2">Column</Box>
       <Box
-        spaceY3
+        gap3
         column
         css={{
           //
@@ -63,7 +63,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Flex Initial</Box>
-      <Box spaceX3 flexInitial>
+      <Box gap3 flexInitial>
         <Box bgOrange400 p10>
           Short
         </Box>
@@ -73,7 +73,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Flex Initial</Box>
-      <Box spaceX3 flexInitial>
+      <Box gap3 flexInitial>
         <Box bgOrange400 p4>
           Short
         </Box>
@@ -87,7 +87,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Flex None</Box>
-      <Box spaceX3 flexInitial>
+      <Box gap3 flexInitial>
         <Box bgOrange400 p4 flex={1}>
           Item that can grow or shrink if needed
         </Box>
@@ -100,7 +100,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Grow</Box>
-      <Box spaceX3 row>
+      <Box gap3 row>
         <Box bgOrange400 p4>
           Normal
         </Box>
@@ -113,7 +113,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Not Grow</Box>
-      <Box spaceX3 row>
+      <Box gap3 row>
         <Box bgOrange400 p4 flexGrow={1}>
           Grow
         </Box>
@@ -126,7 +126,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Shrink</Box>
-      <Box spaceX3 row>
+      <Box gap3 row>
         <Box bgOrange400 p4 w-100></Box>
         <Box bgOrange500 p4 flexShrink={1} w-600>
           Shrink
@@ -135,7 +135,7 @@ export default function App() {
       </Box>
 
       <Box as="h2">Not Shrink</Box>
-      <Box spaceX3 row>
+      <Box gap3 row>
         <Box bgOrange400 p4 w-100></Box>
         <Box bgOrange500 p4 flexShrink={0} w-600>
           Not Shrink
@@ -144,21 +144,21 @@ export default function App() {
       </Box>
 
       <Box as="h2">No wrap</Box>
-      <Box spaceX3 row flexNowrap>
+      <Box gap3 row flexNowrap>
         <Box bgOrange400 m2 p4 w-300></Box>
         <Box bgOrange500 m2 p4 w-300></Box>
         <Box bgOrange400 m2 p4 w-300></Box>
       </Box>
 
       <Box as="h2">wrap</Box>
-      <Box spaceX3 row flexWrap>
+      <Box gap3 row flexWrap>
         <Box bgOrange400 m2 p4 w-300></Box>
         <Box bgOrange500 m2 p4 w-300></Box>
         <Box bgOrange400 m2 p4 w-300></Box>
       </Box>
 
       <Box as="h2">wrap reverse</Box>
-      <Box spaceX3 row flexWrapReverse>
+      <Box gap3 row flexWrapReverse>
         <Box bgOrange400 m2 p4 w-300></Box>
         <Box bgOrange500 m2 p4 w-300></Box>
         <Box bgOrange400 m2 p4 w-300></Box>

@@ -2,7 +2,7 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box p10 spaceX3 toCenter>
+    <Box p10 gap3 toCenter>
       <Box square20 rounded bgGradientX={['red400', 'yellow400']} />
 
       <Box

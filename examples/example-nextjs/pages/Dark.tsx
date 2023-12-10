@@ -29,7 +29,7 @@ export default () => {
       <Box _dark={['green200']} red200>
         40 Lorem ipsum dolor sit amet
       </Box>
-      <Box column toCenter spaceY3 gray800 white--dark textCenter>
+      <Box column toCenter gap3 gray800 white--dark textCenter>
         <Box
           as="button"
           onClick={toggleMode}

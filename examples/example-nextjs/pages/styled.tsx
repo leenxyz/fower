@@ -21,7 +21,7 @@ export default function Styled() {
   //   </Box>
   // );
   return (
-    <Box toCenter h-100vh spaceX3 flexWrap>
+    <Box toCenter h-100vh gap3 flexWrap>
       <Text p3 bgYellow200 gray700>
         styled text~~
       </Text>

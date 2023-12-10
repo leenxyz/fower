@@ -64,7 +64,7 @@ export default function IndexPage() {
   const [colorMode, setColorMode] = useState('default')
   return (
     <Box p10>
-      <Box toCenter gray500--dark spaceX2 flexWrap gap-10>
+      <Box toCenter gray500--dark gap2 flexWrap gap-10>
         {pages.map((i) => (
           <Link key={i} href={'/' + i}>
             {i}

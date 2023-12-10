@@ -23,7 +23,7 @@ function App() {
   }
   return (
     <Box h-300 roundedLG bgGray800--dark bgOrange100 p4 toCenter>
-      <Box column toCenter spaceY3 gray800 white--dark textCenter>
+      <Box column toCenter gap3 gray800 white--dark textCenter>
         <Box
           as="button"
           onClick={toggleMode}
@@ -61,7 +61,7 @@ function App() {
   }
   return (
     <Box h-400 roundedLG bgGray800--dark bgOrange100 p4>
-      <Box column toCenter spaceY3 gray800 orange200--dark textCenter>
+      <Box column toCenter gap3 gray800 orange200--dark textCenter>
         <Box
           as="button"
           onClick={toggleMode}
@@ -125,11 +125,11 @@ function App() {
   const { mode, setMode } = useMode()
 
   return (
-    <Box h-400 roundedLG p4 column toCenter spaceY3>
+    <Box h-400 roundedLG p4 column toCenter gap3>
       <Box text2XL red400--red blue400--blue text6XL--large>
         Multiple theme mode
       </Box>
-      <Box toCenter spaceX2>
+      <Box toCenter gap2>
         <Box as="label" toCenter>
           <input
             type="radio"

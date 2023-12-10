@@ -37,25 +37,25 @@ export default () => {
         </Box>
       </Box>
 
-      <Box spaceX-10 row debugChildren>
+      <Box gap-10 row debugChildren>
         <Box bgBlue200 square-100>
-          spaceX-10
+          gap-10
         </Box>
         <Box bgBlue200 square-100>
-          spaceX-10
+          gap-10
         </Box>
         <Box bgBlue200 square-100>
-          spaceX-10
+          gap-10
         </Box>
       </Box>
 
-      <Box spaceY-10 column debugChildren>
-        <Box square-100>spaceY-10</Box>
+      <Box gap-10 column debugChildren>
+        <Box square-100>gap-10</Box>
         <Box bgBlue200 square-100>
-          spaceY-10
+          gap-10
         </Box>
         <Box bgBlue200 square-100>
-          spaceY-10
+          gap-10
         </Box>
       </Box>
     </Box>

@@ -25,7 +25,7 @@ test('kebab', () => {
   expect(kebab('aBc')).toEqual('a-bc')
   expect(kebab('fooBar')).toEqual('foo-bar')
   expect(kebab('FooBar')).toEqual('foo-bar')
-  expect(kebab('spaceX-1')).toEqual('space-x-1')
+  expect(kebab('gap-1')).toEqual('space-x-1')
   expect(kebab('p0')).toEqual('p0')
 })
 

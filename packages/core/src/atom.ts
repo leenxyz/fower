@@ -8,7 +8,7 @@ const invalidProps = ['excludedProps']
 export { Options, Meta }
 
 /**
- * @example p2,mx4,left10,spaceX4...
+ * @example p2,mx4,left10,gap4...
  * @example p-20,opacity-80
  */
 export const digitReg =
@@ -307,7 +307,7 @@ export class Atom {
     const isSpace = /^([a-z]+)(\d+)$/i.test(this.key)
 
     /**
-     *  match props link: m4,mx2,mt9, spaceX4...
+     *  match props link: m4,mx2,mt9, gap4...
      *  to m4 -> [ key: m, value: 4 ]
      *  to m-20 -> [ key: m, value: 20 ]
      *  to m-20px -> [ key: m, value: '20px' ]

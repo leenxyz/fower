@@ -2,7 +2,7 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box spaceX3>
+    <Box gap3>
       <Box as="select" appearanceNone>
         <option>red</option>
         <option>green</option>

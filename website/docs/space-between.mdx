@@ -7,15 +7,15 @@ Atomic props for controlling the space between child elements.
 
 | Atomic Props   | CSS Properties                                 |
 | -------------- | ---------------------------------------------- |
-| spaceX-{value} | >\*:not(:last-child) { margin-right: {value}}  |
-| spaceY-{value} | >\*:not(:last-child) { margin-bottom: {value}} |
+| gap-{value} | >\*:not(:last-child) { margin-right: {value}}  |
+| gap-{value} | >\*:not(:last-child) { margin-bottom: {value}} |
 
 ## Add horizontal space between children
 
-Control the horizontal space between elements using the `spaceX-{value}` props.
+Control the horizontal space between elements using the `gap-{value}` props.
 
 ```jsx live
-<Box spaceX-10 row>
+<Box gap-10 row>
   <Box bgOrange400 rounded-8 square-100></Box>
   <Box bgOrange400 rounded-8 square-100></Box>
   <Box bgOrange400 rounded-8 square-100></Box>
@@ -24,10 +24,10 @@ Control the horizontal space between elements using the `spaceX-{value}` props.
 
 ## Add vertical space between children
 
-Control the vertical space between elements using the spaceY-{value} props.
+Control the vertical space between elements using the gap-{value} props.
 
 ```jsx live
-<Box spaceY-10 column>
+<Box gap-10 column>
   <Box bgOrange400 rounded-8 h-60></Box>
   <Box bgOrange400 rounded-8 h-60></Box>
   <Box bgOrange400 rounded-8 h-60></Box>

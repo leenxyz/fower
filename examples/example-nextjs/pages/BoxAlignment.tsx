@@ -3,74 +3,74 @@ import { Box } from '@fower/react';
 export default () => {
   return (
     <Box>
-      <Box spaceY4>
+      <Box gap4>
         <Box as="h2">JustifyContent</Box>
-        <Box flex spaceX4 justifyContent="flex-start">
+        <Box flex gap4 justifyContent="flex-start">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
 
-        <Box flex spaceX4 justifyContent="center">
+        <Box flex gap4 justifyContent="center">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
 
-        <Box flex spaceX4 justifyContent="flex-end">
+        <Box flex gap4 justifyContent="flex-end">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
 
-        <Box flex spaceX4 justifyContent="space-between">
+        <Box flex gap4 justifyContent="space-between">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
 
-        <Box flex spaceX4 justifyContent="space-around">
+        <Box flex gap4 justifyContent="space-around">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
 
-        <Box flex spaceX4 justifyContent="space-evenly">
+        <Box flex gap4 justifyContent="space-evenly">
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
           <Box bgOrange400 square-100></Box>
         </Box>
       </Box>
-      <Box spaceY4>
+      <Box gap4>
         <Box as="h2">Align Items</Box>
-        <Box flex spaceX4 alignItems="flex-start">
+        <Box flex gap4 alignItems="flex-start">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py8></Box>
           <Box bgOrange400 w-100 py6></Box>
         </Box>
-        <Box flex spaceX4 alignItems="center">
+        <Box flex gap4 alignItems="center">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py8></Box>
           <Box bgOrange400 w-100 py6></Box>
         </Box>
-        <Box flex spaceX4 alignItems="flex-end">
+        <Box flex gap4 alignItems="flex-end">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py8></Box>
           <Box bgOrange400 w-100 py6></Box>
         </Box>
-        <Box flex spaceX4 alignItems="baseline">
+        <Box flex gap4 alignItems="baseline">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py8></Box>
           <Box bgOrange400 w-100 py6></Box>
         </Box>
-        <Box flex spaceX4 alignItems="stretch">
+        <Box flex gap4 alignItems="stretch">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py8></Box>
           <Box bgOrange400 w-100 py6></Box>
         </Box>
       </Box>
 
-      <Box spaceY4>
+      <Box gap4>
         <Box as="h2">Align Content</Box>
         <Box flexWrap="wrap" bgOrange100 w-350 h-280 alignContent="flex-start">
           <Box m2 bgOrange400 square-100></Box>
@@ -134,29 +134,29 @@ export default () => {
         </Box>
       </Box>
 
-      <Box spaceY4>
+      <Box gap4>
         <Box as="h2">Align Self</Box>
-        <Box flex spaceX4 alignItems="stretch">
+        <Box flex gap4 alignItems="stretch">
           <Box bgOrange400 w-100 py6></Box>
           <Box bgOrange400 w-100 py4 alignSelf="flex-start"></Box>
           <Box bgOrange400 w-100 py8></Box>
         </Box>
-        <Box flex spaceX4 alignItems="stretch">
+        <Box flex gap4 alignItems="stretch">
           <Box bgOrange400 w-100 py6></Box>
           <Box bgOrange400 w-100 py4 alignSelf="center"></Box>
           <Box bgOrange400 w-100 py8></Box>
         </Box>
-        <Box flex spaceX4 alignItems="stretch">
+        <Box flex gap4 alignItems="stretch">
           <Box bgOrange400 w-100 py6></Box>
           <Box bgOrange400 w-100 py4 alignSelf="flex-end"></Box>
           <Box bgOrange400 w-100 py8></Box>
         </Box>
-        <Box flex spaceX4 alignItems="stretch">
+        <Box flex gap4 alignItems="stretch">
           <Box bgOrange400 w-100 py6></Box>
           <Box bgOrange400 w-100 py4 alignSelf="auto"></Box>
           <Box bgOrange400 w-100 py8></Box>
         </Box>
-        <Box flex spaceX4 h-80 alignItems="center">
+        <Box flex gap4 h-80 alignItems="center">
           <Box bgOrange400 w-100 py4></Box>
           <Box bgOrange400 w-100 py4 alignSelf="stretch"></Box>
           <Box bgOrange400 w-100 py4></Box>

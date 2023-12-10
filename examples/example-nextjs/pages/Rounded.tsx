@@ -2,8 +2,8 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box p20 spaceY10>
-      <Box spaceX2 toCenter>
+    <Box p20 gap10>
+      <Box gap2 toCenter>
         <Box square20 bgOrange400 roundedSM />
         <Box square20 bgOrange400 roundedMD />
         <Box square20 bgOrange400 roundedLG />
@@ -11,7 +11,7 @@ export default () => {
         <Box square20 bgOrange400 rounded2XL />
         <Box square20 bgOrange400 rounded3XL />
       </Box>
-      <Box toCenter spaceX3 flexWrap>
+      <Box toCenter gap3 flexWrap>
         <Box square20 bgOrange400 rounded></Box>
         <Box square20 bgOrange400 roundedTop={0}></Box>
         <Box square20 bgOrange400 roundedSM></Box>

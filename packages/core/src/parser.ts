@@ -19,7 +19,7 @@ type Dict = Record<string, any>
 const colorKeys = ['color', 'backgroundColor', 'borderColor']
 
 /**
- * @example p2,mx4,left10,spaceX4...
+ * @example p2,mx4,left10,gap4...
  * @example p-20,opacity-80
  */
 export const digitReg =

@@ -21,7 +21,7 @@ export default () => {
         </Box>
       </Box>
 
-      <Box white textCenter spaceY2>
+      <Box white textCenter gap2>
         <Box toLeft>
           <Box w={1 / 2} bgOrange400 py-10>
             w={'{1 / 2}'}

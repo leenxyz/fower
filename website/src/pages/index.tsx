@@ -128,7 +128,7 @@ function Home() {
               </Translate>
             </Box>
 
-            <Box className={styles.wrapLink} spaceX2>
+            <Box className={styles.wrapLink} gap2>
               <Link
                 style={{ background: 'black', cursor: 'pointer' }}
                 className={clsx(

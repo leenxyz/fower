@@ -2,7 +2,7 @@ import { Box } from '@fower/react'
 
 export default function App() {
   return (
-    <Box toCenter column spaceY-100>
+    <Box toCenter column gap-100>
       <Box animateSpin square20 rounded2XL bgGradientX={['red400', 'orange400']} />
 
       <Box flex square3 relative>
@@ -18,11 +18,11 @@ export default function App() {
       </Box>
 
       <Box border borderBlue300 shadow roundedMedium p4 w-100p mx-auto>
-        <Box animatePulse flex spaceX4>
+        <Box animatePulse flex gap4>
           <Box roundedFull bgBlue400 h12 w12></Box>
-          <Box flex-1 spaceY4 py1>
+          <Box flex-1 gap4 py1>
             <Box h4 bgBlue400 rounded></Box>
-            <Box spaceY2>
+            <Box gap2>
               <Box h4 bgBlue400 rounded></Box>
               <Box h4 bgBlue400 rounded></Box>
             </Box>

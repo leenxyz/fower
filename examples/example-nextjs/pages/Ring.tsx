@@ -2,7 +2,7 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box toCenter h-100vh spaceX3 flexWrap>
+    <Box toCenter h-100vh gap3 flexWrap>
       <Box as="input" formInput ringRed200-3 borderRed400 />
 
       <Box as="input" formInput ringRed200-3--focus borderRed400--focus />

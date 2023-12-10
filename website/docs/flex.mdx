@@ -15,7 +15,7 @@ title: Flex
 Use `flexInitial` props to allow a flex item to shrink but not grow, taking into account its initial size.
 
 ```jsx live
-<Box row spaceX3 flexInitial>
+<Box row gap3 flexInitial>
   <Box bgOrange400 p10>
     Short
   </Box>
@@ -26,7 +26,7 @@ Use `flexInitial` props to allow a flex item to shrink but not grow, taking into
 ```
 
 ```jsx live
-<Box row spaceX3 flexInitial>
+<Box row gap3 flexInitial>
   <Box bgOrange400 p4>
     Short
   </Box>
@@ -45,7 +45,7 @@ Use `flexInitial` props to allow a flex item to shrink but not grow, taking into
 Use `flexNone` props to prevent a flex item from growing or shrinking.
 
 ```jsx live
-<Box row spaceX3 flexInitial>
+<Box row gap3 flexInitial>
   <Box bgOrange400 p4 flex={1}>
     Item that can grow or shrink if needed
   </Box>
@@ -63,7 +63,7 @@ Use `flexNone` props to prevent a flex item from growing or shrinking.
 Use `flex={value}` to set any flex value.
 
 ```jsx live
-<Box row spaceX3 row>
+<Box row gap3 row>
   <Box bgOrange400 p4 flex={1}></Box>
   <Box bgOrange500 p4 flex={2}></Box>
   <Box bgOrange400 p4 flex={1}></Box>

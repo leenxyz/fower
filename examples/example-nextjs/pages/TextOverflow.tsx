@@ -2,7 +2,7 @@ import { Box } from '@fower/react';
 
 export default () => {
   return (
-    <Box spaceY2>
+    <Box gap2>
       <Box w-200 textLG truncate>
         Lorem ipsum dolor sit amet
       </Box>

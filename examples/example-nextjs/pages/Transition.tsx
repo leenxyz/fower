@@ -3,7 +3,7 @@ import { AtomicProps } from '@fower/atomic-props';
 
 export default () => {
   return (
-    <Box toCenter h-100vh spaceX10>
+    <Box toCenter h-100vh gap10>
       <Box
         square20
         bgOrange400
