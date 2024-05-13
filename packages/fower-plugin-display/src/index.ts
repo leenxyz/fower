@@ -8,6 +8,7 @@ export function isDisplayKey(key: string) {
 
 export function toStyle(key: string, value: any): any {
   if (key === 'hidden') return { display: 'none' }
+  if (key === 'inline') return { display: 'inline' }
 
   /** display */
   if (key === 'display') return { display: value }
