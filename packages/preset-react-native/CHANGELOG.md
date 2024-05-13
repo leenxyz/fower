@@ -1,5 +1,43 @@
 # @fower/preset-react-native
 
+## 2.1.0
+
+### Minor Changes
+
+- improve auto dark mode
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/colors@2.1.0
+  - @fower/core@2.1.0
+  - fower-plugin-background@2.1.0
+  - fower-plugin-border@2.1.0
+  - fower-plugin-color@2.1.0
+  - fower-plugin-cursor@2.1.0
+  - fower-plugin-display@2.1.0
+  - fower-plugin-flexbox@2.1.0
+  - fower-plugin-font-family@2.1.0
+  - fower-plugin-font-style@2.1.0
+  - fower-plugin-font-weight@2.1.0
+  - fower-plugin-gap@2.1.0
+  - fower-plugin-grid@2.1.0
+  - fower-plugin-layout@2.1.0
+  - fower-plugin-line-height@2.1.0
+  - fower-plugin-margin@2.1.0
+  - fower-plugin-opacity@2.1.0
+  - fower-plugin-outline@2.1.0
+  - fower-plugin-overflow@2.1.0
+  - fower-plugin-padding@2.1.0
+  - fower-plugin-position@2.1.0
+  - fower-plugin-rounded@2.1.0
+  - fower-plugin-shadow@2.1.0
+  - fower-plugin-size@2.1.0
+  - fower-plugin-text-align@2.1.0
+  - fower-plugin-text-size@2.1.0
+  - fower-plugin-text-transform@2.1.0
+  - fower-plugin-z-index@2.1.0
+
 ## 2.0.0
 
 ### Major Changes

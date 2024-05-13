@@ -1,5 +1,18 @@
 # fower-plugin-gradient
 
+## 2.1.0
+
+### Minor Changes
+
+- improve auto dark mode
+
+### Patch Changes
+
+- Updated dependencies
+  - @fower/atomic-props@2.1.0
+  - @fower/core@2.1.0
+  - @fower/utils@2.1.0
+
 ## 2.0.0
 
 ### Major Changes
