@@ -69,9 +69,21 @@ export default (): FowerPlugin => {
     isMatch,
     handleAtom(atom, parser) {
       atom.style = toStyle(atom, parser)
-      if (isBorderColor(atom.key)) {
+
+      let is = isBorderColor(atom.key)
+
+      if (atom.style.borderColor) {
+        const value = atom.style.borderColor
+
+        const colors: any = parser.config.theme.colors
+
+        if (colors[value]) is = true
+      }
+
+      if (is) {
         atom.type = 'borderColor'
       }
+
       return atom
     },
   }
