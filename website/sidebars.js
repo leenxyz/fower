@@ -22,7 +22,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Getting Started',
-      items: ['use-with-react', 'use-with-rn', 'use-with-taro'],
+      items: ['use-with-react', 'use-with-rn'],
     },
     {
       type: 'category',
@@ -100,7 +100,6 @@ const sidebars = {
     'packages/core',
     'packages/styled',
     'packages/react-native',
-    'packages/taro',
     'packages/types',
     // 'packages/preset-web',
     // 'packages/preset-react-native',
