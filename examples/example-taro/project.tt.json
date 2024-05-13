@@ -1,9 +1,0 @@
-{
-  "miniprogramRoot": "./",
-  "projectname": "example-taro",
-  "appid": "testAppId",
-  "setting": {
-    "es6": false,
-    "minified": false
-  }
-}
